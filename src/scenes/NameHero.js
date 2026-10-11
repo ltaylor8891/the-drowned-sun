@@ -1,6 +1,7 @@
 import { Input } from '../systems/input.js';
 import { state, newGame } from '../systems/state.js';
 import { addChar, deleteChar, finalizeName, GRID, DONE_CELL, MAX_NAME } from '../systems/naming.js';
+import { applyPlus } from '../systems/ngplus.js';
 import { sfx } from '../systems/audio.js';
 import { FONT, panel } from '../ui/widgets.js';
 
@@ -10,7 +11,7 @@ const NAV_KEYS = { up: ['UP'], down: ['DOWN'], left: ['LEFT'], right: ['RIGHT'],
 // Hero naming: type on the keyboard, or pick letters with arrows/D-pad and Enter/A. data: { classId }
 export class NameHero extends Phaser.Scene {
   constructor() { super('NameHero'); }
-  init(data) { this.classId = data.classId; }
+  init(data) { this.classId = data.classId; this.plus = data.plus ?? null; }
 
   create() {
     this.inp = new Input(this, NAV_KEYS);
@@ -79,6 +80,7 @@ export class NameHero extends Phaser.Scene {
   start() {
     state.heroName = finalizeName(this.name);
     newGame(this.classId, this.classes);
+    if (this.plus) applyPlus(state, this.plus, this.cache.json.get('items'));
     this.scene.start('Overworld');
   }
 
@@ -86,7 +88,7 @@ export class NameHero extends Phaser.Scene {
     const i = this.inp;
     const press = (a) => i.pressed(a);
     const [up, down, left, right, ok, back] = ['up', 'down', 'left', 'right', 'confirm', 'cancel'].map(press);
-    if (back) return this.scene.start('NewGame');
+    if (back) return this.scene.start('NewGame', { plus: this.plus });
     if (up) this.row = (this.row + GRID.length - 1) % GRID.length;
     if (down) this.row = (this.row + 1) % GRID.length;
     if (left) this.col = (this.col + GRID[this.row].length - 1) % GRID[this.row].length;

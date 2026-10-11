@@ -3,6 +3,7 @@ import { state } from '../systems/state.js';
 import { saves } from '../systems/storage.js';
 import { restore, summarize, formatPlaytime } from '../systems/save.js';
 import { FONT, panel } from '../ui/widgets.js';
+import { plusLabel } from '../systems/ngplus.js';
 
 // Save/load slot picker. data: { mode: 'save' | 'load', overlay: boolean }
 // Loading also offers the autosave (slot 0); saving only offers the three manual slots.
@@ -15,16 +16,24 @@ export class Slots extends Phaser.Scene {
     this.scene.bringToTop();
     this.ready = false;
     this.index = 0;
-    this.slotIds = this.mode === 'load' ? [0, 1, 2, 3] : [1, 2, 3];
+    this.slotIds = this.mode === 'save' ? [1, 2, 3] : [0, 1, 2, 3];
     this.add.rectangle(0, 0, 1280, 720, 0x05070f, this.overlay ? 0.85 : 1).setOrigin(0);
-    this.add.text(640, 50, this.mode === 'save' ? 'SAVE GAME' : 'LOAD GAME', { ...FONT, fontSize: '44px', color: '#ffd76a' }).setOrigin(0.5);
+    this.add.text(640, 50, this.mode === 'save' ? 'SAVE GAME' : this.mode === 'plus' ? 'NEW GAME+' : 'LOAD GAME', { ...FONT, fontSize: '44px', color: '#ffd76a' }).setOrigin(0.5);
     this.status = this.add.text(640, 664, 'Enter: choose    Esc: back', { ...FONT, fontSize: '22px', color: '#9aa4c0' }).setOrigin(0.5);
     this.rows = [];
-    this.refreshSummaries().then(() => { this.draw(); this.ready = true; });
+    this.refreshSummaries().then(() => {
+      if (this.mode === 'plus') { // only finished saves can seed a New Game+
+        const keep = this.slotIds.map((_, i) => i).filter((i) => this.sums[i]?.complete);
+        this.slotIds = keep.map((i) => this.slotIds[i]); this.sums = keep.map((i) => this.sums[i]); this.datas = keep.map((i) => this.datas[i]);
+        this.status.setText(keep.length ? 'Choose a finished save to carry forward.    Esc: back' : 'No finished saves yet.    Esc: back');
+      }
+      this.draw(); this.ready = true;
+    });
   }
 
   async refreshSummaries() {
     const datas = await Promise.all(this.slotIds.map((s) => saves.load(s)));
+    this.datas = datas;
     this.sums = datas.map((d) => (d ? summarize(d) : null));
   }
 
@@ -35,7 +44,7 @@ export class Slots extends Phaser.Scene {
       const y = 100 + i * 128, s = this.sums[i], sel = i === this.index;
       const box = panel(this, 190, y, 900, 112);
       box.setStrokeStyle(sel ? 5 : 2, sel ? 0xffd76a : 0x6a7390);
-      const head = this.add.text(220, y + 12, (slot === 0 ? 'Autosave' : `Slot ${slot}`) + (s?.complete ? '   ★ The sun has risen' : ''), { ...FONT, fontSize: '24px', color: slot === 0 ? '#7fd8ff' : '#ffd76a' });
+      const head = this.add.text(220, y + 12, (slot === 0 ? 'Autosave' : `Slot ${slot}`) + (s?.complete ? '   ★ The sun has risen' : '') + (s?.plus ? `   ${plusLabel(s.plus)}` : ''), { ...FONT, fontSize: '24px', color: slot === 0 ? '#7fd8ff' : '#ffd76a' });
       const body = this.add.text(220, y + 48, s
         ? `${s.name} the ${s.cls[0].toUpperCase() + s.cls.slice(1)}   Lv ${s.level}   Chapter ${s.chapter}\n${formatPlaytime(s.playtime)} played   ${new Date(s.savedAt).toLocaleString()}`
         : 'Empty', { ...FONT, fontSize: '21px', color: s ? '#ffffff' : '#6c7388', lineSpacing: 6 });
@@ -52,10 +61,12 @@ export class Slots extends Phaser.Scene {
     const i = this.input2;
     const n = this.slotIds.length;
     if (i.pressed('cancel')) return this.close();
+    if (!n) return;
     if (i.pressed('up')) { this.index = (this.index + n - 1) % n; this.draw(); }
     if (i.pressed('down')) { this.index = (this.index + 1) % n; this.draw(); }
     if (!i.pressed('confirm')) return;
     const slot = this.slotIds[this.index];
+    if (this.mode === 'plus') { this.scene.start('NewGame', { plus: this.datas[this.index] }); return; }
     this.ready = false;
     if (this.mode === 'save') {
       saves.save(slot, state).then(async () => {

@@ -9,6 +9,7 @@ import { settings } from '../systems/settings.js';
 import { merchantToday, pickLocation, dateKey } from '../systems/merchant.js';
 import { saves } from '../systems/storage.js';
 import { sfx, music, trackForMap } from '../systems/audio.js';
+import { plusLabel } from '../systems/ngplus.js';
 import { DialogueBox, FONT } from '../ui/widgets.js';
 import { QuestTracker } from '../ui/QuestTracker.js';
 import { isActive as jobActive } from '../systems/jobs.js';
@@ -271,7 +272,7 @@ export class Overworld extends Phaser.Scene {
 
   updateHud() {
     const h = state.hero;
-    this.hudMain.setText(`${h.name} the ${this.classes[h.classId].name}   Lv ${h.level}   Gold ${state.gold}`);
+    this.hudMain.setText(`${h.name} the ${this.classes[h.classId].name}   Lv ${h.level}   Gold ${state.gold}${state.ngPlus ? `   ${plusLabel(state.ngPlus)}` : ''}`);
     this.xpBar.width = 220 * (h.level >= MAX_LEVEL ? 1 : h.xp / xpToNext(h.level));
     this.hudXp.setText(h.level >= MAX_LEVEL ? 'MAX' : `XP ${h.xp}/${xpToNext(h.level)}`);
     this.hudVitals.setText(state.party.map((m) => `${m.name.slice(0, 12).padEnd(12)} Lv${String(m.level).padStart(2)}  HP ${m.hp}/${m.maxHp}  MP ${m.mp}/${m.maxMp}`).join('\n'));

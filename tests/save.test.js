@@ -21,7 +21,7 @@ function sampleState() {
     pos: { x: 7, y: 8 }, playtime: 3725, fleeGrace: 123, map: 'net_shed', facing: 'down',
     opened: { shed_back: true }, inventory: { potion: 2, brine_key: 1 },
     bestiary: { seen: { green_slime: true, gelboar: true }, kills: { green_slime: 3, gelboar: 1 } }, eventsDone: { maren_intro: true, scene_intro: true },
-    tempDefeated: {}, pendingScene: null, jobs: { active: ['miner'], xp: { miner: 30 } }, upgrades: { ridge_sabre: 2 }, runes: { ridge_sabre: ['ember'] }, meal: { id: 'hearty_stew', name: 'Hearty Stew', battles: 2, statuses: [{ status: 'defenseUp', turns: 4 }] }, saveId: 'abc123', merchant: { bought: { emberbrand: true }, visits: 2, stock: { date: '2026-10-11', ids: ['emberbrand'] } },
+    tempDefeated: {}, pendingScene: null, jobs: { active: ['miner'], xp: { miner: 30 } }, upgrades: { ridge_sabre: 2 }, runes: { ridge_sabre: ['ember'] }, meal: { id: 'hearty_stew', name: 'Hearty Stew', battles: 2, statuses: [{ status: 'defenseUp', turns: 4 }] }, ngPlus: 0, saveId: 'abc123', merchant: { bought: { emberbrand: true }, visits: 2, stock: { date: '2026-10-11', ids: ['emberbrand'] } },
   };
 }
 

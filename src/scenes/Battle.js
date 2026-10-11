@@ -42,10 +42,10 @@ export class BattleScene extends Phaser.Scene {
     const meal = useMeal(state); // the Cook job's meal
     if (meal) for (const u of party) for (const m of meal.statuses) addStatus(u, m.status, m.turns);
     this.creatureData = cache.get('creatures');
-    const enemies = buildEnemies(this.data0.creatures, this.creatureData);
+    const enemies = buildEnemies(this.data0.creatures, this.creatureData, state.ngPlus);
     music(enemies.some((e) => e.def0?.boss) ? 'boss' : 'battle');
     recordSeen(state, this.data0.creatures);
-    this.battle = new Battle({ party, enemies, abilities: this.abilities, statuses: this.statuses, items: this.items, creatures: this.creatureData, inventory: state.inventory, purse: state, noFlee: !!this.data0.noFlee, potency: perkEffects(state, cache.get('jobs'), 'alchemist').potency ?? 0 });
+    this.battle = new Battle({ party, enemies, abilities: this.abilities, statuses: this.statuses, items: this.items, creatures: this.creatureData, inventory: state.inventory, purse: state, noFlee: !!this.data0.noFlee, ng: state.ngPlus, potency: perkEffects(state, cache.get('jobs'), 'alchemist').potency ?? 0 });
 
     this.shown = new Map(); // unit -> hp currently displayed (events carry hpAfter so bars move step by step)
     this.views = new Map();

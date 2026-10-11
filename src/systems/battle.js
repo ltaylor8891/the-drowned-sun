@@ -4,6 +4,7 @@
 //        if (!t.skip) action = player menu | battle.autoAction(actor)
 //        events = battle.resolve(actor, action)
 // Event shape: { text, target?, amount?, heal?, miss?, down?, spawn?, actor? }
+import { scaleDef } from './ngplus.js';
 import * as M from './battleMath.js';
 import { addStatus, removeStatus, clearStatuses, tickEnd, incapacitated, has, NEGATIVE } from './statuses.js';
 import { applyItem, remove as removeItem } from './inventory.js';
@@ -27,12 +28,13 @@ export function makeUnit(def, side, id, creatureId = null) {
   };
 }
 
-export function buildEnemies(ids, creatures) {
-  return ids.map((cid, i) => makeUnit(creatures[cid], 'enemy', `${cid}#${i}`, cid));
+export function buildEnemies(ids, creatures, ng = 0) {
+  return ids.map((cid, i) => makeUnit(scaleDef(creatures[cid], ng), 'enemy', `${cid}#${i}`, cid));
 }
 
 export class Battle {
-  constructor({ party, enemies, abilities = {}, statuses = {}, items = {}, creatures = {}, inventory = {}, purse = { gold: 0 }, rng = Math.random, noFlee = false, potency = 0 }) {
+  constructor({ party, enemies, abilities = {}, statuses = {}, items = {}, creatures = {}, inventory = {}, purse = { gold: 0 }, rng = Math.random, noFlee = false, potency = 0, ng = 0 }) {
+    this.ng = ng; // New Game+ level: scales summoned minions like everything else
     this.potency = potency; // the Alchemist's boost to potions used
     Object.assign(this, { party, enemies, abilities, statuses, items, creatures, inventory, purse, rng, noFlee });
     this.round = 0;
@@ -488,7 +490,7 @@ export class Battle {
 
   // A summoner calls a minion (worth half XP, no gold or drops) if there is room.
   effSummon(actor, e, ev) {
-    const def = this.creatures[e.creature];
+    const def = scaleDef(this.creatures[e.creature], this.ng);
     if (!def || this.enemies.filter(alive).length >= MAX_ENEMIES) { ev.push({ text: 'But nothing happened.' }); return; }
     const hp = Math.max(1, Math.floor(def.hp * (e.hpFrac ?? 1)));
     const minion = makeUnit({ ...def, hp, maxHp: def.hp, gold: 0, xp: Math.floor(def.xp / 2), drops: [] }, 'enemy', `${e.creature}+${this.enemies.length}`, e.creature);

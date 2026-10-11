@@ -5,12 +5,13 @@ const ORDER = ['warrior', 'mage', 'scout', 'acolyte'];
 
 export class NewGame extends Phaser.Scene {
   constructor() { super('NewGame'); }
+  init(data) { this.plus = data?.plus ?? null; }
   create() {
     this.input2 = new Input(this);
     this.classes = this.cache.json.get('classes');
     this.sel = 0;
     this.add.text(640, 90, 'THE DROWNED SUN', { ...FONT, fontSize: '64px', color: '#ffd76a' }).setOrigin(0.5);
-    this.add.text(640, 150, 'Choose your class', { ...FONT, fontSize: '24px' }).setOrigin(0.5);
+    this.add.text(640, 150, this.plus ? 'New Game+: choose your class' : 'Choose your class', { ...FONT, fontSize: '24px' }).setOrigin(0.5);
     this.tabs = ORDER.map((id, i) => this.add.text(240 + i * 270, 230, this.classes[id].name, { ...FONT, fontSize: '32px' }).setOrigin(0.5));
     panel(this, 240, 290, 800, 300);
     this.desc = this.add.text(270, 310, '', { ...FONT, fontSize: '24px', wordWrap: { width: 740 } });
@@ -29,6 +30,6 @@ export class NewGame extends Phaser.Scene {
     if (i.pressed('left')) { this.sel = (this.sel + 3) % 4; this.refresh(); }
     if (i.pressed('right')) { this.sel = (this.sel + 1) % 4; this.refresh(); }
     if (i.pressed('cancel')) this.scene.start('Title');
-    if (i.pressed('confirm')) this.scene.start('NameHero', { classId: ORDER[this.sel] });
+    if (i.pressed('confirm')) this.scene.start('NameHero', { classId: ORDER[this.sel], plus: this.plus });
   }
 }

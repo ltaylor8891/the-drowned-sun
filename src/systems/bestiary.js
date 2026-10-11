@@ -58,7 +58,7 @@ export function rollDrops(units, creatures, rng, st, hero, items, classes, bonus
   for (const u of units) {
     const def = creatures[u.creatureId];
     if (!def?.drops || u.hp > 0) continue;
-    const first = !(kills[u.creatureId] > 0) && !done.has(u.creatureId);
+    const first = !(kills[u.creatureId] > (st.bestiary.base?.[u.creatureId] ?? 0)) && !done.has(u.creatureId); // New Game+ counts kills from its own start
     done.add(u.creatureId);
     const got = [];
     for (const d of def.drops) if (rng() < (d.chance >= 1 ? 1 : Math.min(0.95, d.chance * (1 + bonus)))) got.push(d.item);

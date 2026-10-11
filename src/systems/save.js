@@ -8,7 +8,7 @@ export function snapshot(state, now = Date.now()) {
     heroName: state.heroName, opened: state.opened, inventory: state.inventory, heroClass: state.heroClass, party: state.party,
     chapter: state.chapter, gold: state.gold, flags: state.flags, defeated: state.defeated,
     dialogue: state.dialogue, pos: state.pos, playtime: state.playtime, bestiary: state.bestiary, eventsDone: state.eventsDone,
-    jobs: state.jobs, upgrades: state.upgrades, runes: state.runes, meal: state.meal, saveId: state.saveId, merchant: state.merchant,
+    ngPlus: state.ngPlus ?? 0, jobs: state.jobs, upgrades: state.upgrades, runes: state.runes, meal: state.meal, saveId: state.saveId, merchant: state.merchant,
   }));
 }
 
@@ -33,12 +33,13 @@ export function restore(state, data) {
     heroName: data.heroName, heroClass: data.heroClass, party: partyOf(data), chapter: data.chapter,
     gold: data.gold, flags: data.flags, defeated: data.defeated, dialogue: data.dialogue ?? {},
     bestiary: data.bestiary ?? { seen: {}, kills: {} }, eventsDone: data.eventsDone ?? {}, jobs: data.jobs ?? { active: [], xp: {} }, upgrades: data.upgrades ?? {}, runes: data.runes ?? {}, meal: data.meal ?? null, saveId: data.saveId ?? Math.random().toString(36).slice(2, 10), merchant: data.merchant ?? { bought: {}, visits: 0, stock: null }, tempDefeated: {}, pendingScene: null,
+    ngPlus: data.ngPlus ?? 0,
     pos: data.pos ?? null, map: data.map ?? 'brinewick', opened: data.opened ?? {}, inventory: data.inventory ?? {}, facing: 'down', playtime: data.playtime ?? 0, fleeGrace: 0,
   });
 }
 
 export function summarize(data) {
-  return { name: data.heroName, cls: data.heroClass, level: partyOf(data)[0].level, chapter: data.chapter, savedAt: data.savedAt, playtime: data.playtime ?? 0, complete: !!data.flags?.gameComplete };
+  return { name: data.heroName, cls: data.heroClass, level: partyOf(data)[0].level, chapter: data.chapter, savedAt: data.savedAt, playtime: data.playtime ?? 0, complete: !!data.flags?.gameComplete, plus: data.ngPlus ?? 0 };
 }
 
 export function formatPlaytime(seconds) {

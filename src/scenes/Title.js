@@ -13,9 +13,20 @@ export class Title extends Phaser.Scene {
     this.add.text(640, 225, 'The sun is dimming. Something in your palm is burning.', { ...FONT, fontSize: '22px', color: '#9aa4c0' }).setOrigin(0.5);
     // A star under the subtitle once any save has finished the game.
     Promise.all([0, 1, 2, 3].map((s) => saves.load(s).catch(() => null))).then((all) => {
-      if (all.some((d) => d && summarize(d).complete)) this.add.text(640, 262, '★  The sun has risen  ★', { ...FONT, fontSize: '22px', color: '#ffd76a' }).setOrigin(0.5);
+      if (all.some((d) => d && summarize(d).complete)) {
+        this.add.text(640, 262, '★  The sun has risen  ★', { ...FONT, fontSize: '22px', color: '#ffd76a' }).setOrigin(0.5);
+        this.makeMenu(true);
+      }
     }).catch(() => {});
-    this.menu = new ListMenu(this, 540, 360, [{ label: 'New Game', id: 'new' }, { label: 'Load Game', id: 'load' }, { label: 'Options', id: 'options' }], { gap: 48 });
+    this.makeMenu(false);
+  }
+  // The menu gains a New Game+ entry once any save has finished the game.
+  makeMenu(plus) {
+    const keep = this.menu?.index ?? 0;
+    this.menu?.destroy();
+    const items = [{ label: 'New Game', id: 'new' }, ...(plus ? [{ label: 'New Game+', id: 'plus' }] : []), { label: 'Load Game', id: 'load' }, { label: 'Options', id: 'options' }];
+    this.menu = new ListMenu(this, 540, 330, items, { gap: 48 });
+    this.menu.index = Math.min(keep, items.length - 1); this.menu.refresh();
   }
   update() {
     const i = this.input2;
@@ -24,6 +35,7 @@ export class Title extends Phaser.Scene {
     if (i.pressed('confirm')) {
       const id = this.menu.current().id;
       if (id === 'new') this.scene.start('NewGame');
+      else if (id === 'plus') this.scene.start('Slots', { mode: 'plus', overlay: false });
       else if (id === 'options') this.scene.start('Options');
       else this.scene.start('Slots', { mode: 'load', overlay: false });
     }

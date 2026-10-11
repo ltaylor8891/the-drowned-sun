@@ -1,0 +1,1452 @@
+{
+  "npcs": {
+    "szazz_vorn": {
+      "name": "Water-Warden Szazz Vorn",
+      "role": "keeper of the city's water rights",
+      "personality": "dry, anxious, secretly proud of every drop she guards",
+      "voice": "measures everything in cups and cisterns; hisses faintly on long words",
+      "events": [
+        {
+          "id": "szazz_intro",
+          "when": {
+            "notFlag": "talkedSzazz"
+          },
+          "set": [
+            "talkedSzazz"
+          ],
+          "say": [
+            "A traveller from the ridge, with a glowing palm. Szazz Vorn, Water-Warden. I wish I could offer you a drink without counting the cups.",
+            "Nine days ago the water gate stopped. The river that feeds our oasis comes through an old sluice beneath the north wall, and something has choked it with a pillar and an iron wheel. We are living on what is in the cisterns, and the cisterns are going green.",
+            "A troll the size of a hay-cart took the sluice room. It wears a tax collector's chain and mutters about the Queen's water. Go through the north gate and break its hold, and I will open every cistern in Khesh-Ura to you."
+          ]
+        },
+        {
+          "id": "szazz_report",
+          "when": {
+            "flag": "trollDefeated",
+            "notFlag": "reportedSzazz"
+          },
+          "set": [
+            "reportedSzazz",
+            "chapter_6_done",
+            "scorch_road_open"
+          ],
+          "say": [
+            "Do you hear that? That roaring in the walls? That is the river coming home. I have not heard a sound so beautiful in nine days.",
+            "A glass seal with the Queen's crown on it? Then it is true: Ismerel is taxing the very water. She holds a shard of the sun in her labyrinth east of here, and she believes everything the sun touches is hers.",
+            "Take this, and the thanks of Khesh-Ura, and my writ for the east gate. The Scorch Road runs from our wall to the Redwater Waystation, and the lizardfolk warbands are thick on it. Rest, buy steel, and go carefully."
+          ],
+          "gold": 600,
+          "give": {
+            "hi_ether": 2,
+            "phoenix_plume": 2,
+            "khesh_writ": 1
+          },
+          "autosave": true,
+          "banner": "Chapter 6 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "sv01",
+          "text": "Three cups to cook with, one cup to wash, and half a cup that nobody mentions. That is how a city survives a dry spell."
+        },
+        {
+          "id": "sv02",
+          "text": "I have counted every cistern in Khesh-Ura twice. The numbers do not improve with counting."
+        },
+        {
+          "id": "sv03",
+          "text": "My grandmother said water has a memory. It remembers who gave it to the thirsty and who sold it."
+        },
+        {
+          "id": "sv04",
+          "text": "The oasis is older than the walls. The walls are older than the Queen. The Queen is older than her manners."
+        },
+        {
+          "id": "sv05",
+          "text": "Qeth sells waterskins at a fair price. Mirra's cistern inn keeps the coolest rooms. Between them, I sleep a little."
+        },
+        {
+          "id": "sv06",
+          "text": "When the sun dimmed, the dunes cooled by a degree. That was the first year the date palms bore fruit twice."
+        },
+        {
+          "id": "sv07",
+          "text": "You carry a blade the way a drover carries a stick. Good. Troll hide takes a firm hand.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "sv08",
+          "text": "A spell-caster. Could you coax rain from a clear sky? No? Then at least do not set the palms alight.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "sv09",
+          "text": "Light feet, sharp eyes. The sluice has two side tunnels and a rotten ladder. Treat the ladder rudely.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "sv10",
+          "text": "A healer! The cisterns have brought us fevers of every flavour. Haddar can show you where the sick are kept.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "sv11",
+          "text": "Every child in the city can recite the water laws before they can count. It is the only way to teach them thrift."
+        },
+        {
+          "id": "sv12",
+          "text": "The old priests built the sluice to a design nobody now understands. It is either genius or an accident that lasted."
+        },
+        {
+          "id": "sv13",
+          "text": "Doros Vell the caravaneer says the tax road has doubled its tolls. I say it is not a road, it is a pickpocket with a map."
+        },
+        {
+          "id": "sv14",
+          "text": "Young Pip took a header into the pool this week and surfaced grinning. I cannot decide whether to scold him or hire him to test the depth."
+        },
+        {
+          "id": "sv15",
+          "text": "The green in the cisterns is only algae. Mostly only algae. I keep repeating that until it feels true."
+        },
+        {
+          "id": "sv16",
+          "text": "Reth keeps the gate and keeps his opinions to himself. A rare combination in a guard."
+        },
+        {
+          "id": "sv17",
+          "text": "There is a belief that the first drop of any flood belongs to the one who prays for it. I have prayed for nine days."
+        },
+        {
+          "id": "sv18",
+          "text": "If you pass the sluice's lower stairs, mind the damp. The stones have a taste for ankles."
+        },
+        {
+          "id": "sv19",
+          "text": "Go through the north gate, and mind the whelps. They are the troll's children, and they bite like gossip.",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "sv20",
+          "text": "The wheel has turned? I can hear the river in my teeth. Give me a moment before I say anything sensible.",
+          "when": {
+            "flag": "trollDefeated",
+            "notFlag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "sv21",
+          "text": "The cisterns are filling. Nobody has stopped smiling since noon, and half the city is soaked to the knees.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "sv22",
+          "text": "Hunter Master Kiss'a wants a word with anyone brave. Sandtusk has taken another drover's cart this week.",
+          "when": {
+            "flag": "huntAsked",
+            "notFlag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "sv23",
+          "text": "Sandtusk is dead? Then the eastern route is quiet for the first time in a generation. Drovers will weep with relief.",
+          "when": {
+            "flag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "sv24",
+          "text": "A city that remembers its debts will outlast a queen that forgets hers. Keep that thought for the road.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        }
+      ]
+    },
+    "qeth_arun": {
+      "name": "Bazaar-Keeper Qeth Arun",
+      "role": "owner of the Khesh-Ura Bazaar",
+      "personality": "polished, patient, dryly funny; never raises his voice",
+      "voice": "haggling idioms and weights-and-measures proverbs",
+      "events": [
+        {
+          "id": "qeth_delivery",
+          "when": {
+            "hasItem": "crate_khesh",
+            "notFlag": "deliveredKhesh"
+          },
+          "set": [
+            "deliveredKhesh"
+          ],
+          "say": [
+            "A crate from Orla Tarn, sealed in green wax. Ha! She has sent the good dye after all. Tell her the receipt is signed, and that Qeth Arun owes her a favour and a very small apology.",
+            "Here, for your trouble, and for carrying it so faithfully through the dunes."
+          ],
+          "take": {
+            "crate_khesh": 1
+          },
+          "gold": 250,
+          "give": {
+            "hi_potion": 1
+          }
+        },
+        {
+          "id": "qeth_intro",
+          "when": {
+            "notFlag": "metQeth"
+          },
+          "set": [
+            "metQeth"
+          ],
+          "say": [
+            "Welcome, welcome. Qeth Arun, keeper of the Bazaar. Everything here was made by hand, and priced by mind.",
+            "Steel from our own forges: swords, axes, staves, bows, daggers and maces, with plate, leather, silk and robes to match. Sandsilk is our pride. It is lighter than a rumour and harder to cut than a promise.",
+            "Take your time. Haste is the only thing I charge extra for."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "qa01",
+          "text": "The first lesson of a bazaar: never name your price first. The second lesson: do not look at the thing you want."
+        },
+        {
+          "id": "qa02",
+          "text": "A good scale is honest in two ways. It weighs fairly, and it admits when it has not been told everything."
+        },
+        {
+          "id": "qa03",
+          "text": "My father sold carpets. My mother sold secrets. I sell steel, which is a little of both."
+        },
+        {
+          "id": "qa04",
+          "text": "Steel remembers heat the way people remember insults. Quench it slowly, and it forgives you."
+        },
+        {
+          "id": "qa05",
+          "text": "Waterskins by the door, powders in the glass jars, and anything that rattles on the high shelf is not for sale."
+        },
+        {
+          "id": "qa06",
+          "text": "Copper tells you what a thing costs. Silver tells you what it is worth. Gold tells you who is buying."
+        },
+        {
+          "id": "qa07",
+          "text": "Steel plate in your size? Of course. We keep a stock for sword-bearers. They come in cheerful and leave serious.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "qa08",
+          "text": "The sunweave robe is spun from three threads and one superstition. Wear it before dawn for best effect.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "qa09",
+          "text": "A bow, a dagger, a jacket that weighs nothing. You look like a person who dislikes being heavy.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "qa10",
+          "text": "Maces for the devout. Blessing is optional, but I have noticed that blessed maces sell faster.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "qa11",
+          "text": "Doros Vell sells me wool and complaints in equal measure. I buy the wool."
+        },
+        {
+          "id": "qa12",
+          "text": "The old smith who forged my first anvil sleeps under the date palms. I leave him a cup of oil each solstice."
+        },
+        {
+          "id": "qa13",
+          "text": "There is a rare trader who walks these roads on three days of the week. I have never seen his cart in my bazaar. I am ashamed to say I am jealous."
+        },
+        {
+          "id": "qa14",
+          "text": "I price my plate by the pound and my robes by the compliment. Both approaches confuse the competition."
+        },
+        {
+          "id": "qa15",
+          "text": "Pip asked if he could try the steel dagger. I said yes. He asked if he could keep it. I said we would discuss it in ten years."
+        },
+        {
+          "id": "qa16",
+          "text": "Never haggle on an empty stomach. Never agree to anything with a cousin's brother."
+        },
+        {
+          "id": "qa17",
+          "text": "Each blade in this shop was tested on a melon. The melons were very understanding."
+        },
+        {
+          "id": "qa18",
+          "text": "The Queen's tax collectors price my goods in glass. Glass! I price my goods in steel and spite."
+        },
+        {
+          "id": "qa19",
+          "text": "Szazz says the water gate is choked, and my dye vats are the first to suffer. The cloth this month is the colour of regret.",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "qa20",
+          "text": "The river is back? My vats will be blue by supper. I will be very rich and very damp.",
+          "when": {
+            "flag": "trollDefeated"
+          }
+        },
+        {
+          "id": "qa21",
+          "text": "You carry Sandtusk's tusk? I would give a month's profit for a single look. Do not tell my wife.",
+          "when": {
+            "hasItem": "sandtusk_tusk"
+          }
+        },
+        {
+          "id": "qa22",
+          "text": "Hask's old gold has begun to appear in the market. It has a peculiar shine. Where it came from is nobody's business.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "qa23",
+          "text": "Nobody who values a shipment travels the east road now. Buy your gear here and leave with it in one piece.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "qa24",
+          "text": "Grumblehide's maul is the stuff of tavern stories. If it exists, you would be the first to prove it.",
+          "when": {
+            "notFlag": "grumblehideDefeated"
+          }
+        }
+      ]
+    },
+    "mirra_seshk": {
+      "name": "Mirra Seshk",
+      "role": "keeper of the Cool Cistern Inn",
+      "personality": "warm, nosy, brisk; mothers every guest regardless of age",
+      "voice": "kitchen talk, cool-room metaphors, a joke at the end of every third sentence",
+      "events": [
+        {
+          "id": "mirra_intro",
+          "when": {
+            "notFlag": "metMirra"
+          },
+          "set": [
+            "metMirra"
+          ],
+          "say": [
+            "Come in out of that sun! Mirra Seshk, keeper of the Cool Cistern. The rooms are built over the old cistern, and they stay cold in any heat.",
+            "Thirty coins a night, and the water is free while the river runs. I am telling you now so you do not ask later."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "ms01",
+          "text": "Cold rooms, hot stew, and a bell on the door that rings whenever a thief walks in. It has not rung in a decade. I suspect it is broken."
+        },
+        {
+          "id": "ms02",
+          "text": "I have fed dukes, drovers and dead-tired heroes. The heroes always eat twice as much."
+        },
+        {
+          "id": "ms03",
+          "text": "Eat before you sleep, and sleep before you fight. It is not a proverb. It is my mother's voice."
+        },
+        {
+          "id": "ms04",
+          "text": "The cistern under the floor sings in the early morning. Guests think it is ghosts. It is only pipes, but I do not correct them."
+        },
+        {
+          "id": "ms05",
+          "text": "I make a date-and-pepper stew that cures anything but regret. For regret I serve a second portion."
+        },
+        {
+          "id": "ms06",
+          "text": "Every bed has a clean blanket. Every blanket has a mended hole. The holes are decorations, I tell the guests."
+        },
+        {
+          "id": "ms07",
+          "text": "A fighter, with that jaw? Sit. I will bring you something heavy and starchy.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ms08",
+          "text": "A spell-caster. Nobody touch the lamps. Last wizard to stay here made them sing for three days.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ms09",
+          "text": "Scouts always eat standing at the window. I have stopped putting out the second chair.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ms10",
+          "text": "A priest at last! You may bless my stew pots. They have been feeling neglected.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ms11",
+          "text": "Pip sleeps in my pantry some nights. I pretend I do not know. He pretends he is not there."
+        },
+        {
+          "id": "ms12",
+          "text": "The caravaneers argue over breakfast, the guards argue over dinner, and nobody argues over lunch. That is why lunch is my best meal."
+        },
+        {
+          "id": "ms13",
+          "text": "My great-aunt claimed the sun used to rise gold, not copper. I told her the dimming was not that old. She said she knew what she saw."
+        },
+        {
+          "id": "ms14",
+          "text": "I keep a jar of salt from Brinewick on the high shelf. A guest gave it to me. It makes the stew taste like a long coast."
+        },
+        {
+          "id": "ms15",
+          "text": "Hunters come in with muddy boots and scratched arms and eat like wolves. I have a soft spot for them. Do not tell them."
+        },
+        {
+          "id": "ms16",
+          "text": "Ishan has a table by the east window. He writes all night and eats nothing. I put bread by his elbow. It vanishes, which is the only proof I have that he lives."
+        },
+        {
+          "id": "ms17",
+          "text": "When the river stopped I rationed my soup. The guests thought I had gone mean. I had gone careful. Different things."
+        },
+        {
+          "id": "ms18",
+          "text": "A nightcap is a cup of warm milk and a bit of sage. Do not ask for anything stronger. This is a respectable house."
+        },
+        {
+          "id": "ms19",
+          "text": "You are going to the water gate? Take two meat pies. Troll country makes a body hungry.",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "ms20",
+          "text": "The taps are running! I have been standing at the kitchen sink for an hour, just listening.",
+          "when": {
+            "flag": "trollDefeated"
+          }
+        },
+        {
+          "id": "ms21",
+          "text": "Szazz was in earlier with a face like a wet plum, smiling. I have not seen her smile since spring.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "ms22",
+          "text": "Kiss'a sat at the corner table all week, staring at her claws. Sandtusk took the last of them. I give her extra rice.",
+          "when": {
+            "flag": "huntAsked",
+            "notFlag": "tuskReturned"
+          }
+        },
+        {
+          "id": "ms23",
+          "text": "The boar's tusk is hanging in the lodge? Then Kiss'a will finally sleep through the night. I will bake her something.",
+          "when": {
+            "flag": "tuskReturned"
+          }
+        },
+        {
+          "id": "ms24",
+          "text": "Whatever road you take next, come back for dinner. The stew improves with age, and so do I.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        }
+      ]
+    },
+    "kissa_dren": {
+      "name": "Hunter Master Kiss'a Dren",
+      "role": "master of the Hunters' Lodge",
+      "personality": "taciturn, proud, haunted by one beast she has not yet killed",
+      "voice": "short sentences, tracking terms, a pause where an apology should be",
+      "events": [
+        {
+          "id": "kissa_ask",
+          "when": {
+            "notFlag": "huntAsked"
+          },
+          "set": [
+            "huntAsked"
+          ],
+          "say": [
+            "Kiss'a Dren. Hunter Master. The lodge predates the city wall, and it has buried more members than the wall has lost stones.",
+            "There is a boar, east of the road, in a hollow of baked clay. The drovers call it Sandtusk. It has killed three hunting parties, and it took these two claws from my left hand. I do not forget it, and it does not forget me.",
+            "Kill it and bring me the tusk. The Hunters will teach you our craft in return: better tracking, richer drops, and a nose for hybrids. And we will not call it charity."
+          ]
+        },
+        {
+          "id": "kissa_return",
+          "when": {
+            "hasItem": "sandtusk_tusk",
+            "notFlag": "tuskReturned"
+          },
+          "set": [
+            "tuskReturned",
+            "job_hunter_unlocked"
+          ],
+          "say": [
+            "The tusk. Rust at the root, curved, and the nick near the tip. That is the one. That is the mark I made twenty years ago.",
+            "Sit. The Hunters will teach you the craft. Choose Jobs from my menu to take it up, and it will serve you well in every wild place from here to the sea.",
+            "Take this. And I will say, once: thank you."
+          ],
+          "take": {
+            "sandtusk_tusk": 1
+          },
+          "gold": 400,
+          "give": {
+            "hi_potion": 3,
+            "phoenix_plume": 1
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "kd01",
+          "text": "A track tells you three things: how big, how old, and how angry. Learn to read all three before you follow."
+        },
+        {
+          "id": "kd02",
+          "text": "Do not run from a boar. Do not stand and fight a boar. Do something else entirely, and keep a tree between you."
+        },
+        {
+          "id": "kd03",
+          "text": "Hunting is ninety parts waiting and ten parts regret. The waiting is the better part."
+        },
+        {
+          "id": "kd04",
+          "text": "I lost these claws to Sandtusk at the age of nineteen. I have not hunted without a bandage since."
+        },
+        {
+          "id": "kd05",
+          "text": "The lodge hangs a tusk for every apprentice who comes home alive. It is a short wall."
+        },
+        {
+          "id": "kd06",
+          "text": "Wind first. Then ground. Then eyes. Anyone who starts with eyes ends up with a bad story."
+        },
+        {
+          "id": "kd07",
+          "text": "A blade-bearer. Then learn to stand still. Most of my pupils with swords die from impatience.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "kd08",
+          "text": "A spell-caster can drop a boar from a hundred paces. A pity about the smell afterwards.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "kd09",
+          "text": "A scout. You already walk like a hunter, with all the smugness of one. Sit down. I will take it out of you.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "kd10",
+          "text": "A healer on a hunt is worth ten bows. Come with us in autumn. The apprentices fall out of trees.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "kd11",
+          "text": "Do not name the beast you hunt. Naming makes it kin. Kin are harder to kill."
+        },
+        {
+          "id": "kd12",
+          "text": "A tusk, a hide, a gland. Everything on a boar has a buyer. The best parts are the ones you cannot sell."
+        },
+        {
+          "id": "kd13",
+          "text": "Hybrids smell different. Sweet and wrong, like fruit that has gone to wine. A Hunter's nose can find them in a dry wind."
+        },
+        {
+          "id": "kd14",
+          "text": "The old Guild of Hunters swore never to hunt a thing that could speak. We keep the oath. It is hard to tell, some mornings."
+        },
+        {
+          "id": "kd15",
+          "text": "Pip wants to be an apprentice. I told him he needs to grow. He asked how tall. I said taller than the boar. He is measuring."
+        },
+        {
+          "id": "kd16",
+          "text": "Doros Vell sells bad rope and good tobacco. I buy the tobacco."
+        },
+        {
+          "id": "kd17",
+          "text": "A single clear print in clay is worth ten sightings. Clay remembers. Sand forgets."
+        },
+        {
+          "id": "kd18",
+          "text": "I once tracked a ram for six days across the glass dunes. It was a statue. I will not discuss it."
+        },
+        {
+          "id": "kd19",
+          "text": "If you are going after the troll at the water gate, hit it with fire. They knit back together otherwise.",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "kd20",
+          "text": "Sandtusk waits at the far end of the hollow. Go at midday. It sleeps with one ear open.",
+          "when": {
+            "flag": "huntAsked",
+            "notFlag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "kd21",
+          "text": "You came back with the tusk. I did not think anyone would. I am still trying to decide how to feel.",
+          "when": {
+            "flag": "tuskerDefeated",
+            "notFlag": "tuskReturned"
+          }
+        },
+        {
+          "id": "kd22",
+          "text": "A new Hunter, taught by the Lodge. Tell them my name when you fight. They will respect it.",
+          "when": {
+            "flag": "tuskReturned"
+          }
+        },
+        {
+          "id": "kd23",
+          "text": "The ogre-boar thing in the sand warren has eaten two scouts. Take a friend, and a sword that likes lightning.",
+          "when": {
+            "notFlag": "grumblehideDefeated"
+          }
+        },
+        {
+          "id": "kd24",
+          "text": "The warren is clear? Then the sand is quiet. That is the best compliment I know how to pay.",
+          "when": {
+            "flag": "grumblehideDefeated"
+          }
+        }
+      ]
+    },
+    "doros_vell": {
+      "name": "Caravan Master Doros Vell",
+      "role": "caravan leader stranded by the tax road",
+      "personality": "gregarious, long-suffering, forever mid-complaint",
+      "voice": "road metaphors, loud sighs, prices recited like psalms",
+      "events": [],
+      "lines": [
+        {
+          "id": "dv01",
+          "text": "Forty camels, nine drovers, and one very shy accountant. That is a caravan. That is also a funeral for profit."
+        },
+        {
+          "id": "dv02",
+          "text": "I have walked the Scorch Road thirty-one times. The tolls have doubled twice. The camels have not noticed, but the accountant has."
+        },
+        {
+          "id": "dv03",
+          "text": "Spices to the east, glass to the west, and nobody wants what I carry in the middle. That is the trade."
+        },
+        {
+          "id": "dv04",
+          "text": "My first camel was named Tuesday. My second was named Tuesday Again. I have lost count since."
+        },
+        {
+          "id": "dv05",
+          "text": "You can tell a good merchant by his boots. They are worn on the outside, never on the inside."
+        },
+        {
+          "id": "dv06",
+          "text": "Qeth buys my wool. Mirra buys my pepper. Szazz buys my silence. Nobody buys my stories, which is a shame."
+        },
+        {
+          "id": "dv07",
+          "text": "A swordsman! I would hire you to guard the caravan, but you cost more than the cargo.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "dv08",
+          "text": "A mage. I once carried a crate of living lightning across the dunes. It paid well and smelled worse.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "dv09",
+          "text": "A scout. Tell me, is the east pass clear? No? Then I will not ask again until I have cheaper insurance.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "dv10",
+          "text": "A healer. I will pay you in dates to look at the lead camel's hoof. He limps with a martyr's air.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "dv11",
+          "text": "In the dunes, the stars are the only honest map. Do not trust a map that is drawn on anything but sky."
+        },
+        {
+          "id": "dv12",
+          "text": "A rare trader works these roads three days a week and never sells me wool. I find that deeply insulting."
+        },
+        {
+          "id": "dv13",
+          "text": "I carried silk once for a queen. She sent it back because the weave was not loud enough. The weave was not loud enough for anyone."
+        },
+        {
+          "id": "dv14",
+          "text": "The old priests used to light braziers along the road at dusk. Every one went dark the year the sun dimmed. Travel has not been the same."
+        },
+        {
+          "id": "dv15",
+          "text": "Pip keeps stealing my dates and returning the pits. I cannot decide if it is insulting or courteous."
+        },
+        {
+          "id": "dv16",
+          "text": "Never trust an honest toll collector. They are either very new or very stupid."
+        },
+        {
+          "id": "dv17",
+          "text": "A caravan is a town on legs, and the only difference is that the legs complain."
+        },
+        {
+          "id": "dv18",
+          "text": "My father told me: if the road is quiet, it is waiting. I have never known him to be wrong, and I have known him to be tedious."
+        },
+        {
+          "id": "dv19",
+          "text": "The water gate is shut and my camels are drinking from a thimble. If someone clears it, I will name my next camel after them.",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "dv20",
+          "text": "The river runs again! The camels have been bellowing at the fountain like it owes them money.",
+          "when": {
+            "flag": "trollDefeated"
+          }
+        },
+        {
+          "id": "dv21",
+          "text": "The Scorch Road is closed to anything with wheels. Warbands everywhere. I will wait for a clear day and a braver accountant.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "dv22",
+          "text": "Sandtusk took two of my drovers last winter. I would give a full cart of silk to see that boar dead.",
+          "when": {
+            "flag": "huntAsked",
+            "notFlag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "dv23",
+          "text": "You killed Sandtusk? Then I owe you a cart of silk. Come to the bazaar tomorrow and I will have it ready.",
+          "when": {
+            "flag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "dv24",
+          "text": "Hask once tried to buy my entire caravan for a promise. I told him I only took coin. He took offence. I took a different road.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        }
+      ]
+    },
+    "ishan_pell": {
+      "name": "Scribe Ishan Pell",
+      "role": "city archivist and chronicler",
+      "personality": "gentle, scatterbrained, devout about footnotes",
+      "voice": "dates and citations; trails off mid-sentence into another thought",
+      "events": [],
+      "lines": [
+        {
+          "id": "ip01",
+          "text": "The Temple of Ahn-Solis stood for nine hundred years, fell in one night, and has been the subject of six thousand arguments since. I have read four thousand of them."
+        },
+        {
+          "id": "ip02",
+          "text": "I keep the archives of Khesh-Ura in a cellar with a very leaky roof. The books have learned patience."
+        },
+        {
+          "id": "ip03",
+          "text": "The oasis was founded by a sun-priest named Haddar Moss the Elder. The current Haddar claims no relation. I have the family tree."
+        },
+        {
+          "id": "ip04",
+          "text": "The old priests wrote on baked clay because they said paper was too easy to forget. I now agree."
+        },
+        {
+          "id": "ip05",
+          "text": "Queen Ismerel first appears in the records forty years ago, as a minor magistrate. Eleven years later she is the Queen. There is a gap in the paperwork."
+        },
+        {
+          "id": "ip06",
+          "text": "Fifty years of dimming, and not one of my predecessors wrote a clear account of the first night. They all stopped halfway through the sentence."
+        },
+        {
+          "id": "ip07",
+          "text": "A warrior. I will note that. There is a lovely passage in the old chronicles on the Knight-Captains of the Dawn.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ip08",
+          "text": "A mage! May I copy your spellbook? No? I would settle for a single glyph. One. Just a small one.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ip09",
+          "text": "A scout. The old maps of the dunes were drawn by scouts, and every one has an annotation in the margin that says 'ask the locals'.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ip10",
+          "text": "A healer. Haddar keeps the oldest remedies. I keep the oldest recipes. We argue about which is which.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ip11",
+          "text": "The shrine in the plaza is older than the city. The records say it was moved. They do not say who moved it."
+        },
+        {
+          "id": "ip12",
+          "text": "There is a footnote in the Gloam chronicle that reads: the lamp was not meant for the hand but for the heart. I have wondered about it for twelve years."
+        },
+        {
+          "id": "ip13",
+          "text": "The lizardfolk keep a calendar of the water. Every drop that enters the city is entered in a ledger. It is the finest piece of accounting I have ever seen."
+        },
+        {
+          "id": "ip14",
+          "text": "Mirra feeds me bread when I forget to eat. I have written her into three footnotes already."
+        },
+        {
+          "id": "ip15",
+          "text": "I once found a letter in the archives addressed to 'the one who bears the mark'. It was dated three hundred years ago. It was blank."
+        },
+        {
+          "id": "ip16",
+          "text": "The Zenith shard is mentioned in the old liturgy as 'the noon that does not move'. I used to find that a pretty phrase."
+        },
+        {
+          "id": "ip17",
+          "text": "A caravan master told me that glass dunes appear where the Queen's shard has burned the sand. I wrote it down. I wish I had not."
+        },
+        {
+          "id": "ip18",
+          "text": "I cannot decide whether history is a river or a well. Today I lean toward well. It is deeper, and you can fall in."
+        },
+        {
+          "id": "ip19",
+          "text": "A troll in the water gate. I have a record of one in the year of the Seven Floods. It also sat on a wheel, and it also got removed.",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "ip20",
+          "text": "The seal you found in the sluice, with the crown and the sun? May I make a rubbing? I shall frame it beside the founding charter.",
+          "when": {
+            "flag": "trollDefeated"
+          }
+        },
+        {
+          "id": "ip21",
+          "text": "The river is back, and I have already filled a full page about the occasion. I am sorry to say the ink was damp when I started.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "ip22",
+          "text": "You hold the Dawn-shard, they say. There is a hymn that mentions it. Verse three. I will not recite it. It is rather sad.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "ip23",
+          "text": "Sandtusk has a page of its own in the Hunters' ledger. Eleven entries. All of them ended the same way, until yours.",
+          "when": {
+            "flag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "ip24",
+          "text": "I am writing a history of the heroes of this age. I would like to put your name in a footnote, if that is acceptable.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        }
+      ]
+    },
+    "pip_squeak": {
+      "name": "Pip",
+      "role": "street urchin and self-appointed tour guide",
+      "personality": "scrappy, cheerful, relentless, certain he is an adult",
+      "voice": "run-on sentences, boasts, 'I heard that from someone important'",
+      "events": [],
+      "lines": [
+        {
+          "id": "pq01",
+          "text": "I am nine and a half and I know everything. Ask me anything. Except about the Queen. She is scary."
+        },
+        {
+          "id": "pq02",
+          "text": "I fell in the oasis yesterday and came out with a fish in my pocket. Nobody believes me. The fish is not talking."
+        },
+        {
+          "id": "pq03",
+          "text": "Mirra gives me soup when she thinks I am not looking. I am always looking. It is a good system."
+        },
+        {
+          "id": "pq04",
+          "text": "The plaza fountain used to run higher. Everyone says so. I think someone is skimming the splash."
+        },
+        {
+          "id": "pq05",
+          "text": "Doros has forty camels and I have named all of them. Seven are called Greg. I do not know why."
+        },
+        {
+          "id": "pq06",
+          "text": "I am going to be a Hunter when I am older. Or a merchant. Or a scribe who hunts. I am flexible."
+        },
+        {
+          "id": "pq07",
+          "text": "That is a very big sword. May I carry it, only to the fountain? I will return it. Probably.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "pq08",
+          "text": "Can you do magic? Do the one with fire! Not on me! On the fountain. Actually, no, not the fountain.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "pq09",
+          "text": "You look like someone who climbs things. I climb things too! I climbed the north gate once. Reth shouted for an hour.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "pq10",
+          "text": "Are you a healer? My cat has a cough. He is not really mine, but I think he likes me.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "pq11",
+          "text": "I found a coin in the sand yesterday. It had a sun on one side and a crown on the other. I think it is cursed. I kept it."
+        },
+        {
+          "id": "pq12",
+          "text": "Haddar tells me stories about the old priests. I like the ones where somebody turns into a bird."
+        },
+        {
+          "id": "pq13",
+          "text": "Ishan has so many books that he sleeps on them. I tried. They are not comfortable. I do not recommend it."
+        },
+        {
+          "id": "pq14",
+          "text": "Everyone says do not go near the boar hollow. So of course I walked to the edge. It smelled like wet sock. I left quickly."
+        },
+        {
+          "id": "pq15",
+          "text": "Kiss'a lets me polish the tusks on the lodge wall. I do it very slowly. It is my favourite job."
+        },
+        {
+          "id": "pq16",
+          "text": "The oasis has a bottom! I touched it. It is slimy. Do not tell Szazz."
+        },
+        {
+          "id": "pq17",
+          "text": "My favourite smell is baking bread, and my second favourite is rain on hot sand. I have only smelled the second one twice."
+        },
+        {
+          "id": "pq18",
+          "text": "A trader with a yellow cart gave me a sweet once. It tasted of a place I have never been. I think I miss it."
+        },
+        {
+          "id": "pq19",
+          "text": "The water has stopped coming from the tap! Mirra says it is the troll. I think it is the troll's cousin. Do you know any trolls?",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "pq20",
+          "text": "The taps work! I stood under the fountain and got completely soaked! Reth shouted. I did it again!",
+          "when": {
+            "flag": "trollDefeated"
+          }
+        },
+        {
+          "id": "pq21",
+          "text": "You killed the troll! Everyone says so! Can I see it? No? Fine. Tell me about its teeth.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "pq22",
+          "text": "Kiss'a has been staring at the boar poster for a week. I think she is brave. And a bit scary.",
+          "when": {
+            "flag": "huntAsked",
+            "notFlag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "pq23",
+          "text": "Sandtusk is DEAD? Everyone is saying it! I wish I had seen it! Tell me exactly how the tusk came off.",
+          "when": {
+            "flag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "pq24",
+          "text": "I am going to follow you on your adventure. Do not tell Mirra. Just kidding. She has already packed me a lunch.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        }
+      ]
+    },
+    "haddar_moss": {
+      "name": "Haddar Moss",
+      "role": "keeper of the plaza shrine",
+      "personality": "ancient, kind, a little vague, terrifyingly perceptive",
+      "voice": "slow, warm; speaks in the future perfect; calls everyone 'little lamp'",
+      "events": [
+        {
+          "id": "haddar_intro",
+          "when": {
+            "notFlag": "metHaddar"
+          },
+          "set": [
+            "metHaddar"
+          ],
+          "say": [
+            "Little lamp. You carry the mark. I have been waiting for someone to carry it past this fountain for forty years.",
+            "That pillar beside me is a Dawn Shrine, one of a handful that still answer. At the first rising of a new strength, when you are ready, it will let you choose a path. Knight or berserker, wise or wild. The path will be yours for good.",
+            "But it will test you first. An echo of the path will stand in the light and ask if you are worthy. It is not cruel. It is only honest. Come to me if you wish to know more."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "hm01",
+          "text": "I was the shrine-keeper's apprentice when the sun still rose gold. I do not remember what gold looked like. Only that it was warmer."
+        },
+        {
+          "id": "hm02",
+          "text": "A shrine does not give you power. It gives you a mirror, and the mirror asks what you intend to do with what you already are."
+        },
+        {
+          "id": "hm03",
+          "text": "I have swept this plaza every morning for sixty years. The dust has never once thanked me."
+        },
+        {
+          "id": "hm04",
+          "text": "The first priests of Ahn-Solis chose their paths by trial. Some became healers. Some became blades. All became humble."
+        },
+        {
+          "id": "hm05",
+          "text": "When you stand before the pillar, you will feel it listening. That is not magic. That is the sun, remembering you."
+        },
+        {
+          "id": "hm06",
+          "text": "Your mark pulses when you are near. I wonder if it is glad. Marks can be glad, you know."
+        },
+        {
+          "id": "hm07",
+          "text": "A warrior's path splits into shield and fury. Neither is better. The shield asks who you protect. The fury asks what you will not forgive.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "hm08",
+          "text": "A mage's path splits into the four winds and the long night. One teaches reverence. The other teaches debt.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "hm09",
+          "text": "A scout's path splits into the hunter and the thief. They have more in common than they would ever admit.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "hm10",
+          "text": "A healer's path splits into light and growth. One mends. One regrows. Both ask for patience.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "hm11",
+          "text": "The echo you face is built from your own party. Do not hate it. It is only the shape of who you could become."
+        },
+        {
+          "id": "hm12",
+          "text": "I keep a lamp lit in the shrine at night. It is a small act. Small acts are how the old gods were kept."
+        },
+        {
+          "id": "hm13",
+          "text": "The Queen's soldiers came once and asked me to move the pillar. I asked them to lift it themselves. They were not able."
+        },
+        {
+          "id": "hm14",
+          "text": "Pip sits by the shrine on hot afternoons. He says he is guarding it. I let him. He falls asleep in the first ten minutes."
+        },
+        {
+          "id": "hm15",
+          "text": "There are four shards, little lamp. Dawn, Zenith, Dusk, Ember. The Dawn-shard is in your keeping. The others are far away and asleep."
+        },
+        {
+          "id": "hm16",
+          "text": "Ishan collects my sayings for his chronicle. I try to say something wise each morning. Some mornings I only say good morning."
+        },
+        {
+          "id": "hm17",
+          "text": "The shrine remembers every traveller who has stood before it. I have long since stopped being jealous."
+        },
+        {
+          "id": "hm18",
+          "text": "There will come a day, little lamp, when the mark is no longer a burden. I do not know what comes after that. I would not trade the not-knowing."
+        },
+        {
+          "id": "hm19",
+          "text": "The sluice is the city's heart, and it is choked. A heart that stops is a heart that waits to be mended.",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "hm20",
+          "text": "I heard the river return. I put down my broom and wept. It was a good weep. A warm one.",
+          "when": {
+            "flag": "trollDefeated"
+          }
+        },
+        {
+          "id": "hm21",
+          "text": "You have already touched the pillar once, I think. You carry its light on you. Walk the road gently.",
+          "when": {
+            "flag": "evolved_hero"
+          }
+        },
+        {
+          "id": "hm22",
+          "text": "The Dawn Chapel is free of its chains? Then the old shrine there will sing again. Tell Tobiel the news. He wept when it fell.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "hm23",
+          "text": "Hunters come to the shrine before they track. Kiss'a never did. Now she does. I like to think that was your doing.",
+          "when": {
+            "flag": "tuskReturned"
+          }
+        },
+        {
+          "id": "hm24",
+          "text": "The east is dark, little lamp, and the dark is not empty. But you carry a small bright thing, and that is how it has always begun.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        }
+      ]
+    },
+    "reth_garrin": {
+      "name": "Gate-Captain Reth Garrin",
+      "role": "captain of the north gate watch",
+      "personality": "laconic, vigilant, inexplicably fond of puns",
+      "voice": "military shorthand and deadpan wordplay",
+      "events": [],
+      "lines": [
+        {
+          "id": "rg01",
+          "text": "Reth Garrin. Gate-Captain. I keep the gate, the gate keeps me. We understand each other."
+        },
+        {
+          "id": "rg02",
+          "text": "Eleven men on the watch, nine of them awake. Not bad for midday."
+        },
+        {
+          "id": "rg03",
+          "text": "Nobody enters the sluice road without my say. Nobody leaves it without a story. I enjoy the second rule more."
+        },
+        {
+          "id": "rg04",
+          "text": "I keep a log of every visitor. Yesterday's page reads: nobody, nobody, nobody, a goat. The goat has stayed."
+        },
+        {
+          "id": "rg05",
+          "text": "If you must climb the gate, do it quietly. If you must climb it loudly, do it fast. If you must climb it drunk, do it elsewhere."
+        },
+        {
+          "id": "rg06",
+          "text": "The watch song has seventeen verses and no chorus. Nobody remembers past verse four, and that is considered a mercy."
+        },
+        {
+          "id": "rg07",
+          "text": "A fighter, then. Keep your blade sheathed inside the walls. Out there, I give you leave to ruin it.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "rg08",
+          "text": "A mage. I will log you as 'volatile, courteous'. It is the best entry I have ever written.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "rg09",
+          "text": "A scout. If you find a quicker route to the sluice that is not a hole in my wall, tell me. I will plug it.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "rg10",
+          "text": "A healer. The infirmary is two doors left of the lodge. Several of my men are very brave and very coughing.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "rg11",
+          "text": "Pip has tried to sneak past me eleven times. He has failed eleven times. I wrote him a certificate of persistence."
+        },
+        {
+          "id": "rg12",
+          "text": "The Queen's tax men came to the gate last month. I asked them for their papers. They had none. They left looking confused."
+        },
+        {
+          "id": "rg13",
+          "text": "Why did the gate captain cross the road? To check the other side was properly guarded."
+        },
+        {
+          "id": "rg14",
+          "text": "I sleep four hours a night, in two-hour pieces. It is not a lifestyle. It is a job."
+        },
+        {
+          "id": "rg15",
+          "text": "The old watchtower leans a degree to the east. I tell the new recruits it is on purpose."
+        },
+        {
+          "id": "rg16",
+          "text": "Doros Vell stands at my gate every morning and asks if the road is clear. I tell him yes. It has not been clear in ten years."
+        },
+        {
+          "id": "rg17",
+          "text": "My rule: keep the dunes in front of you at all times. They look still. They are not."
+        },
+        {
+          "id": "rg18",
+          "text": "Ishan wrote a ballad about the gate watch. It rhymes 'gate' with 'weight' and nothing else. I am quietly proud."
+        },
+        {
+          "id": "rg19",
+          "text": "The troll at the sluice is large, wet, and foul. I would send my men, but I like my men.",
+          "when": {
+            "flag": "talkedSzazz",
+            "notFlag": "trollDefeated"
+          }
+        },
+        {
+          "id": "rg20",
+          "text": "You cleared the sluice? Then the gate watch owes you a round. I would offer water, but I would rather offer wine.",
+          "when": {
+            "flag": "trollDefeated"
+          }
+        },
+        {
+          "id": "rg21",
+          "text": "The seal has the Queen's mark? Then the Queen is the troll's employer. I will put that in the log. In red.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "rg22",
+          "text": "If you go to the boar hollow, leave a note at my desk. Not out of caution. Out of paperwork.",
+          "when": {
+            "flag": "huntAsked",
+            "notFlag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "rg23",
+          "text": "Sandtusk's tusk! I salute it, and the hand that earned it. I do not salute often. I am a little out of practice.",
+          "when": {
+            "flag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "rg24",
+          "text": "A rare trader was by the gate earlier, selling odd gear from a cart. I did not buy. My wife says that is a character flaw.",
+          "when": {
+            "merchantToday": true
+          }
+        }
+      ]
+    }
+  }
+}

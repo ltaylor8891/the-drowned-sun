@@ -1,0 +1,374 @@
+{
+  "paladin": {
+    "name": "Paladin",
+    "tier": 3,
+    "from": "knight",
+    "inherit": "knight",
+    "desc": "A knight made radiant. Every blow mends its wielder and every ally is shielded.",
+    "weapons": [
+      "sword",
+      "mace"
+    ],
+    "armour": [
+      "heavy"
+    ],
+    "stats": {
+      "hp": 110,
+      "mp": 26,
+      "atk": 16,
+      "def": 18,
+      "mag": 4,
+      "spd": 6
+    },
+    "color": "0xcfd8e6",
+    "growth": {
+      "hp": 7.58,
+      "mp": 1.75,
+      "atk": 1.87,
+      "mag": 0.35,
+      "spd": 0.7,
+      "def": 1.63
+    },
+    "skills": [
+      {
+        "id": "holy_bastion",
+        "level": 45
+      },
+      {
+        "id": "judgement_blade",
+        "level": 52
+      }
+    ],
+    "spells": [],
+    "passive": {
+      "radiance": 0.15
+    },
+    "signature": "Radiance: heals for 15% of the damage you deal with weapon blows."
+  },
+  "warlord": {
+    "name": "Warlord",
+    "tier": 3,
+    "from": "berserker",
+    "inherit": "berserker",
+    "desc": "A rage that learned to lead. The banner makes the whole party fight like berserkers.",
+    "weapons": [
+      "axe",
+      "sword"
+    ],
+    "armour": [
+      "heavy",
+      "medium"
+    ],
+    "stats": {
+      "hp": 96,
+      "mp": 20,
+      "atk": 26,
+      "def": 6,
+      "mag": 3,
+      "spd": 9
+    },
+    "color": "0xb23a2a",
+    "growth": {
+      "hp": 7.72,
+      "mp": 1.78,
+      "atk": 1.9,
+      "mag": 0.36,
+      "spd": 0.71,
+      "def": 1.66
+    },
+    "skills": [
+      {
+        "id": "war_banner",
+        "level": 45
+      },
+      {
+        "id": "titan_cleave",
+        "level": 52
+      }
+    ],
+    "spells": [],
+    "passive": {
+      "crit": 0.08
+    },
+    "signature": "Banner: raises the party's attack and speed. +8% critical chance."
+  },
+  "archmage": {
+    "name": "Archmage",
+    "tier": 3,
+    "from": "elementalist",
+    "inherit": "elementalist",
+    "desc": "Two elements braided into one. Weaknesses hurt far more.",
+    "weapons": [
+      "staff"
+    ],
+    "armour": [
+      "robe"
+    ],
+    "stats": {
+      "hp": 43,
+      "mp": 65,
+      "atk": 6,
+      "def": 6,
+      "mag": 26,
+      "spd": 10
+    },
+    "color": "0xe0582a",
+    "growth": {
+      "hp": 4.16,
+      "mp": 4.16,
+      "atk": 0.59,
+      "mag": 2.38,
+      "spd": 0.95,
+      "def": 0.59
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "fusion_bolt",
+        "level": 45
+      },
+      {
+        "id": "elemental_ruin",
+        "level": 52
+      }
+    ],
+    "passive": {
+      "weakBonus": 0.4
+    },
+    "signature": "Fusion: elemental weaknesses hurt 40% more."
+  },
+  "lich": {
+    "name": "Lich",
+    "tier": 3,
+    "from": "necromancer",
+    "inherit": "necromancer",
+    "desc": "Death declined, with interest. Spells feed the caster.",
+    "weapons": [
+      "staff",
+      "dagger"
+    ],
+    "armour": [
+      "robe",
+      "light"
+    ],
+    "stats": {
+      "hp": 53,
+      "mp": 56,
+      "atk": 6,
+      "def": 5,
+      "mag": 21,
+      "spd": 8
+    },
+    "color": "0x5a3a7a",
+    "growth": {
+      "hp": 4.08,
+      "mp": 4.08,
+      "atk": 0.58,
+      "mag": 2.33,
+      "spd": 0.93,
+      "def": 0.58
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "death_coil",
+        "level": 45
+      },
+      {
+        "id": "grave_wail",
+        "level": 52
+      }
+    ],
+    "passive": {
+      "spellDrain": 0.3
+    },
+    "signature": "Siphon: damaging spells heal you for 30% of the damage."
+  },
+  "beastmaster": {
+    "name": "Beastmaster",
+    "tier": 3,
+    "from": "ranger",
+    "inherit": "ranger",
+    "desc": "The wild comes when called. Beasts fall faster to every shot.",
+    "weapons": [
+      "bow",
+      "dagger"
+    ],
+    "armour": [
+      "light",
+      "medium"
+    ],
+    "stats": {
+      "hp": 64,
+      "mp": 24,
+      "atk": 16,
+      "def": 7,
+      "mag": 5,
+      "spd": 19
+    },
+    "color": "0x2f8a4a",
+    "growth": {
+      "hp": 5.59,
+      "mp": 1.75,
+      "atk": 1.63,
+      "mag": 0.58,
+      "spd": 1.75,
+      "def": 0.93
+    },
+    "skills": [
+      {
+        "id": "wild_volley",
+        "level": 45
+      },
+      {
+        "id": "alpha_strike",
+        "level": 52
+      }
+    ],
+    "spells": [],
+    "passive": {
+      "beastBonus": 0.4
+    },
+    "signature": "Beast Lore: 40% more damage to boars, wolves, spiders and bats."
+  },
+  "assassin": {
+    "name": "Assassin",
+    "tier": 3,
+    "from": "rogue",
+    "inherit": "rogue",
+    "desc": "Every strike is chosen. Blows land where they hurt most.",
+    "weapons": [
+      "dagger",
+      "bow"
+    ],
+    "armour": [
+      "light"
+    ],
+    "stats": {
+      "hp": 58,
+      "mp": 20,
+      "atk": 16,
+      "def": 5,
+      "mag": 6,
+      "spd": 22
+    },
+    "color": "0x2a2a40",
+    "growth": {
+      "hp": 5.7,
+      "mp": 1.78,
+      "atk": 1.66,
+      "mag": 0.59,
+      "spd": 1.78,
+      "def": 0.95
+    },
+    "skills": [
+      {
+        "id": "shadow_flurry",
+        "level": 45
+      },
+      {
+        "id": "killing_blow",
+        "level": 52
+      }
+    ],
+    "spells": [],
+    "passive": {
+      "crit": 0.2
+    },
+    "signature": "Keen Edge: +20% critical chance."
+  },
+  "high_priest": {
+    "name": "High Priest",
+    "tier": 3,
+    "from": "cleric",
+    "inherit": "cleric",
+    "desc": "The dawn given a voice. Healing is vast, and the fallen may rise.",
+    "weapons": [
+      "mace",
+      "staff"
+    ],
+    "armour": [
+      "medium",
+      "robe"
+    ],
+    "stats": {
+      "hp": 76,
+      "mp": 50,
+      "atk": 8,
+      "def": 11,
+      "mag": 17,
+      "spd": 10
+    },
+    "color": "0xf4ecc8",
+    "growth": {
+      "hp": 5.83,
+      "mp": 3.26,
+      "atk": 1.05,
+      "mag": 1.87,
+      "spd": 0.93,
+      "def": 1.17
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "divine_aegis",
+        "level": 45
+      },
+      {
+        "id": "resurrection",
+        "level": 52
+      }
+    ],
+    "passive": {
+      "healBonus": 0.35
+    },
+    "signature": "Devotion: healing spells restore 35% more."
+  },
+  "archdruid": {
+    "name": "Archdruid",
+    "tier": 3,
+    "from": "druid",
+    "inherit": "druid",
+    "desc": "The wood in a robe. Life returns over time and the earth answers.",
+    "weapons": [
+      "staff",
+      "mace"
+    ],
+    "armour": [
+      "medium",
+      "light"
+    ],
+    "stats": {
+      "hp": 65,
+      "mp": 51,
+      "atk": 8,
+      "def": 7,
+      "mag": 15,
+      "spd": 11
+    },
+    "color": "0x7a8a3a",
+    "growth": {
+      "hp": 5.94,
+      "mp": 3.33,
+      "atk": 1.07,
+      "mag": 1.9,
+      "spd": 0.95,
+      "def": 1.19
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "verdant_rebirth",
+        "level": 45
+      },
+      {
+        "id": "nature_wrath",
+        "level": 52
+      }
+    ],
+    "passive": {
+      "healBonus": 0.2
+    },
+    "signature": "Regrowth: healing is 20% stronger."
+  }
+}

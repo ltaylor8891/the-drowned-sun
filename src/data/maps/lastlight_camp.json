@@ -1,0 +1,340 @@
+{
+ "id": "lastlight_camp",
+ "name": "Last Light Camp",
+ "tileSize": 40,
+ "legend": {
+  "#": {
+   "name": "tree",
+   "color": "0x1f4d2b",
+   "solid": true
+  },
+  ".": {
+   "name": "grass",
+   "color": "0x3f7d3a",
+   "solid": false
+  },
+  ",": {
+   "name": "path",
+   "color": "0xb59a6a",
+   "solid": false
+  },
+  "~": {
+   "name": "water",
+   "color": "0x2a5d9a",
+   "solid": true
+  },
+  "S": {
+   "name": "salt",
+   "color": "0xe6e2d3",
+   "solid": false
+  },
+  "H": {
+   "name": "house",
+   "color": "0x8a5a3a",
+   "solid": true
+  },
+  "D": {
+   "name": "door",
+   "color": "0x3b2412",
+   "solid": false
+  },
+  "f": {
+   "name": "floor",
+   "color": "0x9a7b52",
+   "solid": false
+  },
+  "w": {
+   "name": "wall",
+   "color": "0x4a3a2a",
+   "solid": true
+  },
+  "r": {
+   "name": "rug",
+   "color": "0x7a2f2f",
+   "solid": false
+  },
+  "W": {
+   "name": "labyrinth wall",
+   "color": "0xd8d0c0",
+   "solid": true
+  },
+  "j": {
+   "name": "jetty",
+   "color": "0x8b6b43",
+   "solid": false
+  },
+  "m": {
+   "name": "mud",
+   "color": "0x5b4a2c",
+   "solid": false
+  },
+  "y": {
+   "name": "reeds",
+   "color": "0x4c7a3f",
+   "solid": true
+  },
+  "c": {
+   "name": "cave floor",
+   "color": "0x4a4458",
+   "solid": false
+  },
+  "R": {
+   "name": "rock",
+   "color": "0x2c2833",
+   "solid": true
+  },
+  "k": {
+   "name": "shelf",
+   "color": "0x6a4a2a",
+   "solid": true
+  },
+  "F": {
+   "name": "ford",
+   "color": "0x6fa0d0",
+   "solid": false
+  },
+  "d": {
+   "name": "dirt",
+   "color": "0x8a7350",
+   "solid": false
+  },
+  "p": {
+   "name": "palisade",
+   "color": "0x5a3d1e",
+   "solid": true
+  },
+  "t": {
+   "name": "tent",
+   "color": "0x9a4a3a",
+   "solid": true
+  },
+  "o": {
+   "name": "fire pit",
+   "color": "0xd35400",
+   "solid": true
+  },
+  "a": {
+   "name": "sand",
+   "color": "0xd9b779",
+   "solid": false
+  },
+  "X": {
+   "name": "canyon wall",
+   "color": "0x8a4b2a",
+   "solid": true
+  },
+  "P": {
+   "name": "palm",
+   "color": "0x2f7a3a",
+   "solid": true
+  },
+  "B": {
+   "name": "sandstone",
+   "color": "0x8a5f3a",
+   "solid": true
+  },
+  "z": {
+   "name": "paving",
+   "color": "0xc9a36a",
+   "solid": false
+  },
+  "N": {
+   "name": "pine",
+   "color": "0x163a2c",
+   "solid": true
+  },
+  "n": {
+   "name": "needles",
+   "color": "0x4a6a5a",
+   "solid": false
+  },
+  "i": {
+   "name": "ice",
+   "color": "0xbfe0ee",
+   "solid": false
+  },
+  "e": {
+   "name": "elven path",
+   "color": "0xc8d4d8",
+   "solid": false
+  },
+  "E": {
+   "name": "elven wall",
+   "color": "0x8aa49c",
+   "solid": true
+  },
+  "v": {
+   "name": "obsidian floor",
+   "color": "0x2a2535",
+   "solid": false
+  },
+  "V": {
+   "name": "obsidian wall",
+   "color": "0x1c1826",
+   "solid": true
+  },
+  "q": {
+   "name": "statue",
+   "color": "0x7a7a88",
+   "solid": true
+  },
+  "G": {
+   "name": "glass",
+   "color": "0x9ad8e0",
+   "solid": false
+  },
+  "g": {
+   "name": "glass wall",
+   "color": "0x3a7a90",
+   "solid": true
+  }
+ },
+ "rows": [
+  "XXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXX",
+  "Xaaaaaaaaaaaaaaa,aaaaaaaaaaaaaaX",
+  "XaaatttttattaBBB,BBBattatttttaaX",
+  "XaaattDttattaBBB,BBBattattDttaaX",
+  "Xaaaaa,aaaaaaaaa,aaaaaaaaa,aaaaX",
+  "Xaaaaa,aaaaaaaaa,aaaaaaaaa,aaaaX",
+  "X,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,X",
+  "XaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaX",
+  "XaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaX",
+  ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+  "XaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaX",
+  "XPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaX",
+  "XaaPPPaaaaoaaaGGGGGaaaoaaaaPPPaX",
+  "XaaPPPaaaaaaaaGGGGGaaaaaaaaPPPaX",
+  "XaaPPPaaaaaaaaGGGGGaaaaaaaaPPPaX",
+  "XaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaX",
+  "XaaaaaaaPaaaaaaaaaaaaaaaaaaaaaaX",
+  "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+ ],
+ "spawn": {
+  "x": 1,
+  "y": 9
+ },
+ "npcs": [
+  {
+   "id": "jessamy_rook",
+   "dialogue": "lastlight",
+   "x": 17,
+   "y": 8,
+   "color": "0xc07a3a"
+  },
+  {
+   "id": "thessaly_wren",
+   "dialogue": "lastlight",
+   "x": 8,
+   "y": 8,
+   "color": "0xb0c0e0"
+  },
+  {
+   "id": "brask",
+   "dialogue": "lastlight",
+   "x": 24,
+   "y": 10,
+   "color": "0x8a5a3a"
+  },
+  {
+   "id": "dellis_hearth",
+   "dialogue": "lastlight",
+   "x": 12,
+   "y": 11,
+   "color": "0xd0b090"
+  },
+  {
+   "id": "piers_lowe",
+   "dialogue": "lastlight",
+   "x": 27,
+   "y": 8,
+   "color": "0x7a9ab0"
+  },
+  {
+   "id": "anwen_lorne",
+   "dialogue": "lastlight",
+   "x": 20,
+   "y": 11,
+   "color": "0xe0e0f0"
+  }
+ ],
+ "savePoints": [
+  {
+   "x": 14,
+   "y": 7
+  }
+ ],
+ "doors": [
+  {
+   "x": 6,
+   "y": 3,
+   "to": "lastlight_store",
+   "tx": 6,
+   "ty": 7,
+   "facing": "up"
+  },
+  {
+   "x": 26,
+   "y": 3,
+   "to": "lastlight_inn",
+   "tx": 6,
+   "ty": 7,
+   "facing": "up"
+  },
+  {
+   "x": 0,
+   "y": 9,
+   "to": "labyrinth_road",
+   "tx": 30,
+   "ty": 9,
+   "facing": "left"
+  },
+  {
+   "x": 31,
+   "y": 9,
+   "to": "labyrinth_halls",
+   "tx": 16,
+   "ty": 16,
+   "facing": "up",
+   "locked": true,
+   "id": "labyrinth_gate_open",
+   "key": "mirror_key",
+   "lockedText": "The labyrinth gate is sealed by a lock of mirrored glass. Rhea Corvane has the key."
+  },
+  {
+   "x": 16,
+   "y": 0,
+   "to": "frost_road",
+   "tx": 16,
+   "ty": 16,
+   "facing": "up",
+   "locked": true,
+   "id": "frostwake_road_open",
+   "key": "frost_token",
+   "lockedText": "The north road is unlit and unmarked. Captain Rook keeps the lantern that guides travellers through the Frostwake."
+  }
+ ],
+ "chests": [
+  {
+   "id": "light_chest1",
+   "x": 2,
+   "y": 16,
+   "items": {
+    "hi_potion": 3,
+    "clear_tea": 2
+   }
+  },
+  {
+   "id": "light_chest2",
+   "x": 29,
+   "y": 16,
+   "gold": 900
+  }
+ ],
+ "enemies": [],
+ "scenes": [
+  {
+   "id": "arrive_lastlight",
+   "on": "enter"
+  }
+ ]
+}

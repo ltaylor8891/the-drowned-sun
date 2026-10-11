@@ -1,0 +1,38 @@
+{
+  "scenes": {
+    "arrive_rootmere": {
+      "when": { "notFlag": "reachedRootmere" },
+      "lines": [
+        { "n": "", "t": "Beyond the wood, the trees open onto a lake as flat and white as a plate. A ring of low timber houses squats along its shore, smoke rising from every chimney in a thin, straight line." },
+        { "n": "", "t": "This is Rootmere. The ice is thick enough to walk on, and children are doing exactly that, in coats too big for them, sliding and yelling. After the silence of Silverhush, it is a startling, happy noise." },
+        { "n": "", "t": "On the far shore, rising out of the frost like a ruined cathedral, stands a ring of enormous trees, their trunks twisted together. Something very old is sleeping in the middle of them. The mark in your hand is not sure it likes the idea." }
+      ],
+      "set": ["reachedRootmere"],
+      "chapter": 12,
+      "autosave": true,
+      "banner": "Chapter 12: Rootmere"
+    },
+    "elder_intro": {
+      "when": { "notFlag": "elderSeen" },
+      "lines": [
+        { "n": "", "t": "The shrine is a vault of ice and root. Above, trunks the width of houses arch together to form a ceiling, and between them hangs a canopy of frozen leaves that tinkle like glass in a draught." },
+        { "n": "", "t": "At the centre, on a mound of black roots, stands a tree that is also a man. Its bark is grey with frost, and its eyes are two points of pale light. At its feet is a ring of ash, and in the ash, the footprint of a very small boot." },
+        { "n": "The Elder Treant", "t": "Little warm thing. A pale man stood here and fed my first root a drop of dusk. It has forgotten what spring is. Everything it forgets, I forget, and soon I will forget what I am." },
+        { "n": "{hero}", "t": "Then let me help you remember." },
+        { "n": "The Elder Treant", "t": "Help? Little warm thing, I am the last guard of this place. I do not know how to be helped. I know only how to hold." }
+      ],
+      "set": ["elderSeen"]
+    },
+    "elder_down": {
+      "when": { "notFlag": "elderSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Elder Treant sinks into its roots, and the frost on its bark cracks and falls away like a shed skin. Underneath, green is showing, a single bright thread of it, running up the trunk." },
+        { "n": "The Elder Treant", "t": "I remember. Rain. Warm rain, on a day with a gold sky. Thank you, small light. The pale man went east, to the moonlit moor where the night never ends. He carries a lamp that drinks. He means to feed it the last sunset." },
+        { "n": "", "t": "In the ash at the base of the roots lies the pale man's boot-print, and next to it a tiny, perfect drop of amber light. It is a sliver of the Dusk shard, left behind by accident. It hums against your palm." },
+        { "n": "{hero}", "t": "Hollowmoor. He is gathering all the dusk he can find." }
+      ],
+      "set": ["elderSceneDone"],
+      "gold": 1500
+    }
+  }
+}

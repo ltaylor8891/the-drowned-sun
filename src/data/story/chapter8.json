@@ -1,0 +1,47 @@
+{
+  "scenes": {
+    "arrive_perch": {
+      "when": { "notFlag": "reachedPerch" },
+      "lines": [
+        { "n": "", "t": "Perch clings to the lip of a red sandstone cliff, a stack of flat roofs and rope bridges strung together like laundry. Below, a sheer drop. Above, a sky full of wheeling dark shapes." },
+        { "n": "", "t": "Windchimes of bone and brass rattle from every eave. The villagers glance up whenever the chimes change pitch, the way sailors glance at a darkening sea." },
+        { "n": "", "t": "At the heart of the village a stone hearth smokes under a canvas awning, and a very large woman in a flour-white apron is bellowing at a pot." }
+      ],
+      "set": ["reachedPerch"],
+      "chapter": 8,
+      "autosave": true,
+      "banner": "Chapter 8: The Harpy Cliffs"
+    },
+    "tombs_enter": {
+      "when": { "notFlag": "tombsEntered" },
+      "lines": [
+        { "n": "", "t": "The Whisper Tombs are cold, and the cold has a sound. Somewhere deep in the stone, a hundred voices are saying the same prayer, very softly, over and over." },
+        { "n": "", "t": "Rows of sun-priests lie in carved niches, their hands folded over discs of cracked gold. A few of them sit up as you pass." },
+        { "n": "{hero}", "t": "They are still praying. They never stopped." }
+      ],
+      "set": ["tombsEntered"]
+    },
+    "matron_intro": {
+      "when": { "notFlag": "matronSeen" },
+      "lines": [
+        { "n": "", "t": "The cliff narrows to a ledge, and the ledge opens onto a vast nest of woven bones, driftwood and gleaming glass. Eggs the size of barrels lie in rows, each one wrapped in a nest of feathers." },
+        { "n": "", "t": "Above them, wings folded like a cloak, crouches a harpy twice the height of a man. A circlet of green glass sits on her brow, wired through the skull." },
+        { "n": "Harpy Matron", "t": "Little earthbound thing. You walk into my nest with a light in your hand. Do you know what that light is worth to a mother who must keep her children warm?" },
+        { "n": "{hero}", "t": "Whatever the Queen promised you, it was a lie." },
+        { "n": "Harpy Matron", "t": "Queen? I serve no queen. I serve the egg. Sing, my daughters. Sing the earthbound to sleep." }
+      ],
+      "set": ["matronSeen"]
+    },
+    "matron_down": {
+      "when": { "notFlag": "matronSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Matron folds her wings and sinks to her knees in her own nest. The circlet slides from her brow and rings on the stone, cracked straight through." },
+        { "n": "Harpy Matron", "t": "It was cold. It has been cold for fifty years. The Queen's glass gave the eggs warmth, and all I had to give her was the dawn. I did not know it was yours." },
+        { "n": "", "t": "She lays a single speckled egg in your hands, still warm. The circlet's cracked glass clears, and for a moment it holds a tiny, bright, unmoving sun." },
+        { "n": "{hero}", "t": "She was keeping the eggs warm with a sliver of the Zenith. The Queen is feeding the whole desert on pieces of the sun." }
+      ],
+      "set": ["matronSceneDone"],
+      "gold": 600
+    }
+  }
+}

@@ -1,0 +1,343 @@
+{
+ "id": "upper_works",
+ "name": "The Upper Works",
+ "tileSize": 40,
+ "legend": {
+  "#": {
+   "name": "tree",
+   "color": "0x1f4d2b",
+   "solid": true
+  },
+  ".": {
+   "name": "grass",
+   "color": "0x3f7d3a",
+   "solid": false
+  },
+  ",": {
+   "name": "path",
+   "color": "0xb59a6a",
+   "solid": false
+  },
+  "~": {
+   "name": "water",
+   "color": "0x2a5d9a",
+   "solid": true
+  },
+  "S": {
+   "name": "salt",
+   "color": "0xe6e2d3",
+   "solid": false
+  },
+  "H": {
+   "name": "house",
+   "color": "0x8a5a3a",
+   "solid": true
+  },
+  "D": {
+   "name": "door",
+   "color": "0x3b2412",
+   "solid": false
+  },
+  "f": {
+   "name": "floor",
+   "color": "0x9a7b52",
+   "solid": false
+  },
+  "w": {
+   "name": "wall",
+   "color": "0x4a3a2a",
+   "solid": true
+  },
+  "r": {
+   "name": "rug",
+   "color": "0x7a2f2f",
+   "solid": false
+  },
+  "W": {
+   "name": "labyrinth wall",
+   "color": "0xd8d0c0",
+   "solid": true
+  },
+  "j": {
+   "name": "jetty",
+   "color": "0x8b6b43",
+   "solid": false
+  },
+  "m": {
+   "name": "mud",
+   "color": "0x5b4a2c",
+   "solid": false
+  },
+  "y": {
+   "name": "reeds",
+   "color": "0x4c7a3f",
+   "solid": true
+  },
+  "c": {
+   "name": "cave floor",
+   "color": "0x4a4458",
+   "solid": false
+  },
+  "R": {
+   "name": "rock",
+   "color": "0x2c2833",
+   "solid": true
+  },
+  "k": {
+   "name": "shelf",
+   "color": "0x6a4a2a",
+   "solid": true
+  },
+  "F": {
+   "name": "ford",
+   "color": "0x6fa0d0",
+   "solid": false
+  },
+  "d": {
+   "name": "dirt",
+   "color": "0x8a7350",
+   "solid": false
+  },
+  "p": {
+   "name": "palisade",
+   "color": "0x5a3d1e",
+   "solid": true
+  },
+  "t": {
+   "name": "tent",
+   "color": "0x9a4a3a",
+   "solid": true
+  },
+  "o": {
+   "name": "fire pit",
+   "color": "0xd35400",
+   "solid": true
+  },
+  "a": {
+   "name": "sand",
+   "color": "0xd9b779",
+   "solid": false
+  },
+  "X": {
+   "name": "canyon wall",
+   "color": "0x8a4b2a",
+   "solid": true
+  },
+  "P": {
+   "name": "palm",
+   "color": "0x2f7a3a",
+   "solid": true
+  },
+  "B": {
+   "name": "sandstone",
+   "color": "0x8a5f3a",
+   "solid": true
+  },
+  "z": {
+   "name": "paving",
+   "color": "0xc9a36a",
+   "solid": false
+  },
+  "N": {
+   "name": "pine",
+   "color": "0x163a2c",
+   "solid": true
+  },
+  "n": {
+   "name": "needles",
+   "color": "0x4a6a5a",
+   "solid": false
+  },
+  "i": {
+   "name": "ice",
+   "color": "0xbfe0ee",
+   "solid": false
+  },
+  "e": {
+   "name": "elven path",
+   "color": "0xc8d4d8",
+   "solid": false
+  },
+  "E": {
+   "name": "elven wall",
+   "color": "0x8aa49c",
+   "solid": true
+  },
+  "v": {
+   "name": "obsidian floor",
+   "color": "0x2a2535",
+   "solid": false
+  },
+  "V": {
+   "name": "obsidian wall",
+   "color": "0x1c1826",
+   "solid": true
+  },
+  "q": {
+   "name": "statue",
+   "color": "0x7a7a88",
+   "solid": true
+  },
+  "G": {
+   "name": "glass",
+   "color": "0x9ad8e0",
+   "solid": false
+  },
+  "g": {
+   "name": "glass wall",
+   "color": "0x3a7a90",
+   "solid": true
+  }
+ },
+ "rows": [
+  "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+  "RRcccRccccRRRccccRcRcccccRcccccR",
+  "RRRccccRRccccccRcccRRcRcRcRccccR",
+  "RccccccccccRccccRcRccRccccRccccR",
+  "RRcccccccRccccccccccccRccccccccR",
+  "RccccccccccRcccccRccccccRccccRcR",
+  "RRRRcRcRRcccccccccRccRcRcccccRcR",
+  "RcccccRRRRcccRRcccRccRccccccRccR",
+  "RcccccccccRcccRRRRcRcccRcccRcccR",
+  ",cccccccccccRccccccRRRccRcRccccR",
+  "RccccRRcccccRRccRccRRcccRccccccR",
+  "RRcRccccccRRccRcccRcccccccRcccRR",
+  "RcccRcRcccRRRcccRcccRccccccRRRRR",
+  "RccccRccRRcRccccRcccccccRcccRcRR",
+  "RcccccccccRcccccccRccccRcccccccR",
+  "RcccccccccccRcccccccccccRccccccR",
+  "RcRccRccRccRccRcccRccRcccccccccR",
+  "RRRRRRRRRRRRRRRRDRRRRRRRRRRRRRRR"
+ ],
+ "spawn": {
+  "x": 1,
+  "y": 9
+ },
+ "npcs": [],
+ "savePoints": [
+  {
+   "x": 3,
+   "y": 8
+  }
+ ],
+ "doors": [
+  {
+   "x": 0,
+   "y": 9,
+   "to": "lanternmoor",
+   "tx": 30,
+   "ty": 10,
+   "facing": "left"
+  },
+  {
+   "x": 16,
+   "y": 17,
+   "to": "lower_shafts",
+   "tx": 16,
+   "ty": 1,
+   "facing": "down"
+  }
+ ],
+ "chests": [
+  {
+   "id": "up_ore",
+   "x": 4,
+   "y": 3,
+   "items": {
+    "iron_ore": 3
+   }
+  },
+  {
+   "id": "up_potions",
+   "x": 28,
+   "y": 15,
+   "items": {
+    "potion": 2,
+    "antidote": 2
+   }
+  },
+  {
+   "id": "up_gold",
+   "x": 29,
+   "y": 3,
+   "gold": 120
+  }
+ ],
+ "enemies": [
+  {
+   "id": "up_1",
+   "creatures": [
+    "bandit_digger",
+    "bandit_brute"
+   ],
+   "x": 8,
+   "y": 9,
+   "respawn": true
+  },
+  {
+   "id": "up_2",
+   "creatures": [
+    "bandit_digger",
+    "bandit_digger",
+    "giant_bat"
+   ],
+   "x": 14,
+   "y": 4,
+   "respawn": true
+  },
+  {
+   "id": "up_3",
+   "creatures": [
+    "bandit_brute",
+    "giant_bat",
+    "giant_bat"
+   ],
+   "x": 22,
+   "y": 12,
+   "respawn": true
+  },
+  {
+   "id": "up_4",
+   "creatures": [
+    "bandit_digger",
+    "bandit_brute",
+    "dire_bat"
+   ],
+   "x": 26,
+   "y": 6,
+   "respawn": true
+  }
+ ],
+ "clearFlags": [
+  {
+   "flag": "upperCleared",
+   "enemies": [
+    "up_1",
+    "up_2",
+    "up_3",
+    "up_4"
+   ]
+  }
+ ],
+ "scenes": [],
+ "nodes": [
+  {
+   "id": "upper_works_ore1",
+   "x": 9,
+   "y": 2,
+   "tier": 1
+  },
+  {
+   "id": "upper_works_ore2",
+   "x": 20,
+   "y": 5,
+   "tier": 1
+  },
+  {
+   "id": "upper_works_ore3",
+   "x": 26,
+   "y": 14,
+   "tier": 1
+  }
+ ]
+}

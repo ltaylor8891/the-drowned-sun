@@ -1,0 +1,1523 @@
+{
+  "npcs": {
+    "marlo_ketch": {
+      "name": "Foreman Ketch",
+      "role": "foreman of the Sedge Mines",
+      "personality": "harried, gruff, fiercely responsible for his crew",
+      "voice": "shift bells and lamp counts; clipped practical orders",
+      "events": [
+        {
+          "id": "ketch_intro",
+          "when": {
+            "notFlag": "talkedKetch"
+          },
+          "set": [
+            "talkedKetch"
+          ],
+          "say": [
+            "You're the one Ned Quayle sent word about. Good. Marlo Ketch, foreman, for what that title's worth today.",
+            "Eleven days back, a crew with black-gallows badges marched in with picks and a map. They sealed the Upper Works and started digging for the old sunstone seam. Hask's doing. We were told to leave or be buried.",
+            "That I could have borne. Then their digging broke into the Lower Shafts, and out came the spiders. They've taken the lower levels and they're climbing. Half my crew is in the canteen with the shakes.",
+            "Break the dig crew in the Upper Works. Then go down and deal with whatever's nesting. And see Bruna Stonehand at the Guildhall. The shafts are hers to speak for."
+          ]
+        },
+        {
+          "id": "ketch_report",
+          "when": {
+            "flag": [
+              "matriarchDefeated",
+              "upperCleared"
+            ],
+            "notFlag": "reportedKetch"
+          },
+          "set": [
+            "reportedKetch",
+            "chapter_4_done"
+          ],
+          "say": [
+            "The nest is dead? And the diggers broken? Give me a moment. I've been holding my breath for eleven days.",
+            "That stone chip. Warm, isn't it? Perrin Voss will want to see it. Then he'll want to take it apart. Don't let him.",
+            "The cart tracks lead north, to Gallowkeep. The old Dawn chapel on the ridge. That's where Hask has made his seat. Take this, and take the thanks of forty lamps."
+          ],
+          "gold": 400,
+          "give": {
+            "hi_potion": 2,
+            "ether": 2
+          },
+          "autosave": true,
+          "banner": "Chapter 4 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "mk01",
+          "text": "Shift bells at six, noon and six again. If you hear a fourth bell, that's a cave-in."
+        },
+        {
+          "id": "mk02",
+          "text": "Twenty years I've run these works. Rock doesn't care how long. Rock only cares how careful."
+        },
+        {
+          "id": "mk03",
+          "text": "I count my crew by lamp. Each morning, forty lamps. Yesterday, twenty-six."
+        },
+        {
+          "id": "mk04",
+          "text": "Bruna thinks I'm too cautious. I think Bruna is too brave. Between us we balance, like a lopsided seesaw."
+        },
+        {
+          "id": "mk05",
+          "text": "Jessa sells the best pit-ropes this side of Tallow Ford. She also sells the worst. Check the knots."
+        },
+        {
+          "id": "mk06",
+          "text": "Perrin Voss says the seam under us is older than the temple. I told him that's lovely, now please stop tapping my beams."
+        },
+        {
+          "id": "mk07",
+          "text": "Good shoulders. I could use a pair for hauling rubble. The pay is low and the dust is thick.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mk08",
+          "text": "A mage, eh? Can you hold up a ceiling? No? Then please don't cast anything near the supports.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mk09",
+          "text": "A scout will do well down there. Quiet feet, sharp eyes. Spiders hate being surprised, and so do I.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mk10",
+          "text": "A healer is worth a whole shift here. Cough, crush or spider bite, we've seen all three this month.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mk11",
+          "text": "Never whistle in a mine. The old miners say it calls the dark. I say it wastes breath. We agree on the result."
+        },
+        {
+          "id": "mk12",
+          "text": "The tramway used to run twice a day. Now the carts sit rusting. Hask's men shot out the signals."
+        },
+        {
+          "id": "mk13",
+          "text": "Hester's husband took the final shift in the Lower Shafts. She asked me every morning for a month. Then she stopped asking."
+        },
+        {
+          "id": "mk14",
+          "text": "If you come across picks marked with a K, they're mine. Bring them back. I'm sentimental about steel."
+        },
+        {
+          "id": "mk15",
+          "text": "The Upper Works lie past the east gate. Expect Hask's diggers and bats. The bats came for the lamplight.",
+          "when": {
+            "flag": "talkedKetch",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "mk16",
+          "text": "The diggers are broken? I heard the picks go quiet. Now the stairs down. Take antidotes. Many.",
+          "when": {
+            "flag": "upperCleared",
+            "notFlag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "mk17",
+          "text": "You've been below? Don't tell me what you saw. Tell me when you've killed it.",
+          "when": {
+            "flag": "lowerReached",
+            "notFlag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "mk18",
+          "text": "The nest is dead? Then the lower levels can reopen. Bruna will weep, though she'll deny it.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "mk19",
+          "text": "I'm hoping for forty lamps again by Friday. Mind the north pass. Gallowkeep is no place for a hat.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "mk20",
+          "text": "Hask's maps, you say? Bring me one. I want to know where he thinks my mine ends.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "mk21",
+          "text": "A new nest in the seep cavern, they said. Cleared? Good. That cave always smelled of pickled onions.",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "mk22",
+          "text": "Bruna has her guild in order again. I can see the effort in her shoulders. She won't thank you aloud, but she means it.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    },
+    "bruna_stonehand": {
+      "name": "Bruna Stonehand",
+      "role": "master of the Miners' Guild",
+      "personality": "stern, exacting, quietly proud",
+      "voice": "sparse; speaks of listening to rock and respecting veins",
+      "events": [
+        {
+          "id": "bruna_ask",
+          "when": {
+            "notFlag": "minerAsked"
+          },
+          "set": [
+            "minerAsked"
+          ],
+          "say": [
+            "Quiet. Sit. Mining isn't noise. Mining is listening. Most of what a miner does is listen.",
+            "The Lower Shafts have been closed since the collapse, eight years back. Now the spiders hold them. I want those shafts cleared. Every nest, every brood, and whatever commands them. Come back when it's done.",
+            "Do that, and the Guild will take you on as a pupil. You'll learn to read a seam, swing a pick, and wake sleeping ore. Not today. Today, the spiders."
+          ]
+        },
+        {
+          "id": "bruna_return",
+          "when": {
+            "flag": "shaftsCleared",
+            "notFlag": "minerReturned"
+          },
+          "set": [
+            "minerReturned",
+            "job_miner_unlocked"
+          ],
+          "say": [
+            "It's quiet below. I can feel it in the floor. You did it.",
+            "Here is the Guild's fee, with thanks. The Guild owes you a seam. To take up the pick, pick the Jobs entry from my menu, then swing at the glittering rock in any cave. It fills in again as the seasons turn."
+          ],
+          "gold": 150,
+          "give": {
+            "hi_potion": 1
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "bs01",
+          "text": "Rock speaks. Most people are too busy talking to hear it."
+        },
+        {
+          "id": "bs02",
+          "text": "A good miner is half engineer, half gambler, and entirely stubborn."
+        },
+        {
+          "id": "bs03",
+          "text": "Forty years in the dark taught me three things. Check the beams, trust the pick, and never trust the optimist."
+        },
+        {
+          "id": "bs04",
+          "text": "Marlo calls me reckless. I call him a very careful man who owes me a rope."
+        },
+        {
+          "id": "bs05",
+          "text": "The Guild charter is nine hundred years old. The first article reads: Bring everyone back up."
+        },
+        {
+          "id": "bs06",
+          "text": "Cob Brindle taught me my first knot. I still use it. He still complains about the cut of my hat."
+        },
+        {
+          "id": "bs07",
+          "text": "You carry steel well. Remember, steel breaks. Rock waits.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "bs08",
+          "text": "A mage. We've a saying: sparks in the dark are invitations. Choose your light carefully.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "bs09",
+          "text": "Light feet. Good. A scout who hears the rock settle is worth a dozen shouting guards.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "bs10",
+          "text": "A healer. The Guild keeps a chaplain at the pit-head. He's old. He would be pleased to see you.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "bs11",
+          "text": "Sunstone isn't ore. It's older than ore. It glows because it remembers something. I don't ask what."
+        },
+        {
+          "id": "bs12",
+          "text": "Perrin Voss measures the seam. I listen to it. Between us we have a complete picture, and neither of us admits it."
+        },
+        {
+          "id": "bs13",
+          "text": "A pick is a promise. You strike where you intend to, and the rock answers."
+        },
+        {
+          "id": "bs14",
+          "text": "Hester asked me last spring if the shafts would ever reopen. I said I'd see to it. I have not forgotten."
+        },
+        {
+          "id": "bs15",
+          "text": "The Lower Shafts lie below the Upper Works. Take the stairs at the south end, and mind the silk.",
+          "when": {
+            "flag": "talkedKetch",
+            "notFlag": "shaftsCleared"
+          }
+        },
+        {
+          "id": "bs16",
+          "text": "Hask's crew broke through a sealed wall. Our ancestors sealed it for a reason. I never learned the reason. I have a guess now.",
+          "when": {
+            "flag": "upperCleared",
+            "notFlag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "bs17",
+          "text": "The brood-mother has to be killed. Cut one nest and she raises another. Go to the heart.",
+          "when": {
+            "flag": "lowerReached",
+            "notFlag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "bs18",
+          "text": "The nest is dead. I felt the rock settle. That is the sound of a mine remembering how to be a mine.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "bs19",
+          "text": "North to Gallowkeep, the foreman says. It was a chapel. Now it's a fortress. Nothing sacred stays untouched.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "bs20",
+          "text": "The Guild will remember you. We keep long memories. Longer than our lamps.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "bs21",
+          "text": "A creature in the seep cavern, glowing, and now gone? Good. I never trusted that water.",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "bs22",
+          "text": "The shafts are open. I walked them this morning. It's the first time my boots have felt level in a decade.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    },
+    "odo_wick": {
+      "name": "Odo Wick",
+      "role": "innkeeper of The Lantern & Pick",
+      "personality": "slow, sleepy, droll",
+      "voice": "long pauses; lamp-oil and wick puns; yawns mid-sentence",
+      "greet": [
+        "Mm. Welcome. A bed's fourteen coins. The blankets are warm. Mostly. Sometimes.",
+        "Come in out of the dark. Not that you'll find it brighter in here. I'm saving oil."
+      ],
+      "bye": [
+        "Mind the lamp on the way out. It bites.",
+        "Come back when you're tired. Which, by the look of you, is soon."
+      ],
+      "lines": [
+        {
+          "id": "ow01",
+          "text": "Mm. Welcome. The inn's called The Lantern & Pick because the lantern was cheaper than a second pick."
+        },
+        {
+          "id": "ow02",
+          "text": "I keep forty lamps lit at night. One for each miner. When one goes out, I... mm. When one goes out, I fill it."
+        },
+        {
+          "id": "ow03",
+          "text": "I've had miners sleep here for twenty years. They all snore in the key of the mine."
+        },
+        {
+          "id": "ow04",
+          "text": "Gerta's stew is the only reason half this town stays upright. I only supply the bowls."
+        },
+        {
+          "id": "ow05",
+          "text": "Bruna drinks one cup of dark tea every morning. She tells me it's for her lungs. It's for her pride."
+        },
+        {
+          "id": "ow06",
+          "text": "Pib trims my wicks for a copper a day. He's the only person in Lanternmoor who isn't afraid of the dark."
+        },
+        {
+          "id": "ow07",
+          "text": "A fighter. We could use one to carry the barrels up. Mm. The barrels are shy.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ow08",
+          "text": "A mage. Can you warm a bed? No? Mm. Pity. Mine are cold in a very traditional way.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ow09",
+          "text": "A scout. Take the window room. It looks out over the gate. You'll see anyone coming. Mm. Or going.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ow10",
+          "text": "A healer. Bless the day. I've a cough in room two, a limp in room three, and a ghost in room four.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ow11",
+          "text": "Some miner left a chest by the hearth in my care. I don't ask. Mm. I probably should."
+        },
+        {
+          "id": "ow12",
+          "text": "Cob sits by my fire each night and retells his oldest tale. I know where he pauses. I gasp on cue."
+        },
+        {
+          "id": "ow13",
+          "text": "Jessa pays me in rivets. I have eleven hundred rivets. Mm. I'm building something. I haven't decided what."
+        },
+        {
+          "id": "ow14",
+          "text": "A good inn is quiet, warm, and mostly forgettable. Mm. I've achieved two of those."
+        },
+        {
+          "id": "ow15",
+          "text": "Eleven days without a shift going down. The beds are full of people who have nowhere to be. Mm. They're excellent customers.",
+          "when": {
+            "flag": "reachedLanternmoor",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "ow16",
+          "text": "Hask's crew is finished? The picking has ended, and sleep came easier. First time in days.",
+          "when": {
+            "flag": "upperCleared"
+          }
+        },
+        {
+          "id": "ow17",
+          "text": "You went below. Mm. And you came back. That's the part I like most about heroes.",
+          "when": {
+            "flag": "lowerReached"
+          }
+        },
+        {
+          "id": "ow18",
+          "text": "The nest is dead. The miners are buying rounds. I've run out of bowls. Mm. Splendid problem.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "ow19",
+          "text": "North, then. Take an extra blanket. The Ridge Pass nights are... mm. Long.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "ow20",
+          "text": "When you pass through again, I'll hold the best bed for you. The one without the ghost.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "ow21",
+          "text": "A shining thing out in the seep, gone? Mm. I was sure that was just the damp.",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "ow22",
+          "text": "The Guild has reopened the shafts. The lamps are back to forty. I slept through the whole night. Mm.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        },
+        {
+          "id": "ow23",
+          "text": "A trader with one of everything has set up somewhere nearby. Ask around the street corners before the sun gets high.",
+          "when": {
+            "merchantToday": true
+          }
+        }
+      ]
+    },
+    "jessa_rivet": {
+      "name": "Jessa Rivet",
+      "role": "tinker and shopkeeper of Rivet & Rope",
+      "personality": "quick, inventive, always mid-repair",
+      "voice": "fast patter; gadget talk; fixes things while talking",
+      "greet": [
+        "Oh, hello! Hold this. No, hold the other end. There. Now, what are you after?",
+        "Browse! Everything's labelled. Except the thing that's labelled wrong. Don't buy that."
+      ],
+      "bye": [
+        "Mind the springs on the way out! They bite!",
+        "Come back if anything breaks. Or if you break anything. I fix both."
+      ],
+      "lines": [
+        {
+          "id": "jr01",
+          "text": "If it's broken, I'll fix it. If it's not broken, I'll improve it until it is."
+        },
+        {
+          "id": "jr02",
+          "text": "A rivet in time saves nine. I've decided that's a proverb. It wasn't. Now it is."
+        },
+        {
+          "id": "jr03",
+          "text": "I pay Odo in rivets for room and board. He keeps asking for something else. I keep telling him rivets are better."
+        },
+        {
+          "id": "jr04",
+          "text": "Perrin Voss wants me to build a thing that listens to rock. I've built three. They all say the same thing. Mind your head."
+        },
+        {
+          "id": "jr05",
+          "text": "Marlo says my ropes are overpriced. They are. They're also the only ones that haven't broken."
+        },
+        {
+          "id": "jr06",
+          "text": "Pib brings me bat wings. I don't know what I'm meant to do with bat wings. I've started a collection."
+        },
+        {
+          "id": "jr07",
+          "text": "A sword! Single-edged, balanced for the arm. Let me look at that grip. Ooh. Tighten, tighten.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "jr08",
+          "text": "A mage. Could you produce a light that doesn't flicker? I own a lamp that sulks.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "jr09",
+          "text": "A scout! Those boots are all wrong for tunnels. Stand still. I'll fix them while you complain.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "jr10",
+          "text": "A healer. Wonderful. Two clients today: one mashed thumb, one mashed pride.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "jr11",
+          "text": "Delver's gear is shorter, lighter, and louder than surface gear. Quiet is a luxury, underground. Everything echoes."
+        },
+        {
+          "id": "jr12",
+          "text": "I built a clock once that ran backwards. It was never wrong about when I'd be late."
+        },
+        {
+          "id": "jr13",
+          "text": "Gerta bakes bread that doubles as a hammer. I've sold six as paperweights."
+        },
+        {
+          "id": "jr14",
+          "text": "Spiders hate lamplight, but they love lantern oil. Odd, isn't it? Think of the shop window."
+        },
+        {
+          "id": "jr15",
+          "text": "Antidotes are half-price to anybody going below. Marlo made me promise. I'm now regretting the promise.",
+          "when": {
+            "flag": "talkedKetch",
+            "notFlag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "jr16",
+          "text": "The Upper Works diggers use rope from my stock. I'll thank you to bring back the ends. They're expensive.",
+          "when": {
+            "flag": "talkedKetch",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "jr17",
+          "text": "Silk! Real spider silk! I'll buy any you find. Sixteen coins a hank. Don't haggle, it's a fair price.",
+          "when": {
+            "flag": "lowerReached"
+          }
+        },
+        {
+          "id": "jr18",
+          "text": "The brood-mother is dead? Hurrah! I'll slash the rope prices to half. For an hour.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "jr19",
+          "text": "North to Gallowkeep? Take extra rope. And a hook. And a hat with a lamp on it. I have one.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "jr20",
+          "text": "When you come back I'll have the Mark Seven finished. It's a pocket-sized listening-trumpet. Still a prototype.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "jr21",
+          "text": "Oozeglass! A staff of clear gel! Where did you get it? Never mind. May I look?",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "jr22",
+          "text": "Bruna has her Guild again. She's ordered four hundred new pick-heads. I'm very rich and very tired.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    },
+    "pib": {
+      "name": "Pib",
+      "role": "lamp-boy",
+      "personality": "bright, curious, unafraid of the dark",
+      "voice": "hums while talking; lamp and flame imagery; asks about shiny things",
+      "lines": [
+        {
+          "id": "pb01",
+          "text": "I trim the lamps! Forty of them, twice a day, with scissors the size of my hand."
+        },
+        {
+          "id": "pb02",
+          "text": "Everyone says the dark is scary. I think the dark is just the light taking a nap."
+        },
+        {
+          "id": "pb03",
+          "text": "I collect bat wings. They're good for nothing, but they're soft. Soft is very rare underground."
+        },
+        {
+          "id": "pb04",
+          "text": "Odo pays me a copper a day. I save it in a jar. I'm going to buy a lamp of my very own."
+        },
+        {
+          "id": "pb05",
+          "text": "Jessa taught me how to wind a spring. She also taught me how to un-wind one. That part was louder."
+        },
+        {
+          "id": "pb06",
+          "text": "Gerta gives me the end of every loaf. The end's the best part. It's chewy and loyal."
+        },
+        {
+          "id": "pb07",
+          "text": "Is that a real sword? Can it cut a lamp-wick? Not that I'd ask it to. I'd just like to know.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "pb08",
+          "text": "Can you make a flame without a wick? Show me! Show me! Oh, please. I'll trim all your lamps for a week.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "pb09",
+          "text": "You walk like a bat flies. Quiet, sideways, and mostly in the dark. I'd like to learn that.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "pb10",
+          "text": "My finger's pinched. It's not bad. It's mostly pride. Could you make it feel better? A little?",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "pb11",
+          "text": "Cob says there are things in the deep older than the mine. I asked him what. He said, not yet."
+        },
+        {
+          "id": "pb12",
+          "text": "Hester lets me light the lamp at her door every night. It's her husband's lamp. It's the biggest one."
+        },
+        {
+          "id": "pb13",
+          "text": "Torvin counts the bats that go in and out of the gate. He's got a little notebook. He's very serious."
+        },
+        {
+          "id": "pb14",
+          "text": "When I grow up I'll be a deep-diver. Not a miner. A diver. Into the dark, with a lamp, and a rope, and snacks."
+        },
+        {
+          "id": "pb15",
+          "text": "The mine's closed and I've nothing to do! I've trimmed every lamp four times. They look very tidy.",
+          "when": {
+            "flag": "reachedLanternmoor",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "pb16",
+          "text": "I heard the picks stop in the Upper Works. It got so quiet I could hear the lamps hum.",
+          "when": {
+            "flag": "upperCleared"
+          }
+        },
+        {
+          "id": "pb17",
+          "text": "You went down the stairs? Was it dark? Was it really dark? I want to know how dark.",
+          "when": {
+            "flag": "lowerReached"
+          }
+        },
+        {
+          "id": "pb18",
+          "text": "The big spider's dead! Everybody's cheering. I'm going to trim every lamp twice, to celebrate.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "pb19",
+          "text": "You're going north? Take a lamp. I'll lend you one. Don't lose it. It's the one with the yellow handle.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "pb20",
+          "text": "When you come back, tell me about the mountains. I've never seen one with the sun on it.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "pb21",
+          "text": "Something glowing in the seep cavern is gone? I always thought it was a lamp. I wanted to meet its keeper.",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "pb22",
+          "text": "The shafts are open! I'll be allowed to light the deep lamps again. Bruna says I'm old enough. I'm eleven.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    },
+    "cob_brindle": {
+      "name": "Cob Brindle",
+      "role": "retired miner",
+      "personality": "wistful, wheezing, gently funny",
+      "voice": "slow, regretful humour; cave-in stories told sideways",
+      "lines": [
+        {
+          "id": "cb01",
+          "text": "Forty-one years down the mine. Forty-one years, and I still haven't got used to the dark. It's got used to me."
+        },
+        {
+          "id": "cb02",
+          "text": "Black lung's a slow thief. It takes a breath a year. I've a few left, and I'm spending them on you."
+        },
+        {
+          "id": "cb03",
+          "text": "I was caught in the cave-in eight winters ago. I came out. Eleven didn't. I count them each morning, with my tea."
+        },
+        {
+          "id": "cb04",
+          "text": "Bruna was my apprentice once. She's better than I was. I told her so. She told me to stop wheezing."
+        },
+        {
+          "id": "cb05",
+          "text": "Gerta's soup is thick enough to stand a spoon in. Some mornings I stand the spoon in and just look at it."
+        },
+        {
+          "id": "cb06",
+          "text": "Never trust a beam that doesn't creak. A silent beam is a beam with plans."
+        },
+        {
+          "id": "cb07",
+          "text": "A fighter. We had a few in the old days. They always hit the wall too hard and the roof came down.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "cb08",
+          "text": "A mage. I knew one. He lit the whole tunnel once. It was beautiful. Then he lit the gas. We don't talk about it.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "cb09",
+          "text": "A scout. You'll do. Spiders hate a quiet step. So do I, truth be told, at my age.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "cb10",
+          "text": "A healer. My chest might thank you. It wheezes in a very polite way.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "cb11",
+          "text": "Pib trims the lamps like they're loved ones. I'd have hired him for the shafts if the shafts hadn't closed."
+        },
+        {
+          "id": "cb12",
+          "text": "Hester's husband Jonas was the best hand I ever worked with. He sang off-key. The rock liked it."
+        },
+        {
+          "id": "cb13",
+          "text": "The Lower Shafts have a vault at the very bottom. We called it the Chapel. Pale stone, glowing, like milk in a cup."
+        },
+        {
+          "id": "cb14",
+          "text": "If you find a miner's whistle down there, leave it. Some of us whistled once, long ago. The dark still remembers."
+        },
+        {
+          "id": "cb15",
+          "text": "Hask's men have done a lot of digging for something that was never theirs. Mines keep their own accounts.",
+          "when": {
+            "flag": "reachedLanternmoor",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "cb16",
+          "text": "The diggers are broken? Good. I was worried the beams would give. They looked ready to sigh.",
+          "when": {
+            "flag": "upperCleared"
+          }
+        },
+        {
+          "id": "cb17",
+          "text": "You've been down below. I can smell the silk on your coat. It's a smell I'd hoped never to meet again.",
+          "when": {
+            "flag": "lowerReached"
+          }
+        },
+        {
+          "id": "cb18",
+          "text": "The brood's dead. A good day. I'll drink a very small, very respectful cup of tea.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "cb19",
+          "text": "You'll want the north road. It's a hard climb. Take your time. Time's the one thing the mountain respects.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "cb20",
+          "text": "If you pass the Chapel on your way out, say a word for the eleven. They'd never ask. I'm asking.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "cb21",
+          "text": "Something glowing and gluey in the seep? I always told Marlo that cave wasn't right. Nobody listens to an old man.",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "cb22",
+          "text": "The Guild's reopening the shafts. I'll walk down on the first day. At my pace, it'll be the second.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    },
+    "hester_daunt": {
+      "name": "Hester Daunt",
+      "role": "miner's widow",
+      "personality": "quiet, steady, grief held like a tool",
+      "voice": "plain, unhurried; speaks of work to avoid speaking of loss",
+      "lines": [
+        {
+          "id": "hd01",
+          "text": "Hester Daunt. I mend sacks for the Guild. It's honest work. It keeps my hands from being empty."
+        },
+        {
+          "id": "hd02",
+          "text": "My husband was Jonas. He was on the last crew to go below. I light his lamp every night. Pib helps. He thinks it's a game."
+        },
+        {
+          "id": "hd03",
+          "text": "I don't cry any more. The tears came out one winter and never found their way back. Don't be sorry. It's the way of things."
+        },
+        {
+          "id": "hd04",
+          "text": "Gerta brings me bread on Sundays. She never knocks. She leaves it on the step and walks away. Good people don't speak."
+        },
+        {
+          "id": "hd05",
+          "text": "Bruna comes by in spring and asks if I need anything. I say no. She says she knows. We both feel better."
+        },
+        {
+          "id": "hd06",
+          "text": "Jonas hummed while he worked. Out of tune, off the beat. I'd know the sound anywhere. I sometimes still hear it."
+        },
+        {
+          "id": "hd07",
+          "text": "A strong back. Jonas had one. He carried a whole rock-fall once, they say, for three breaths. Long enough.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "hd08",
+          "text": "A mage. Jonas distrusted anything he couldn't hit with a pick. But he liked a good light, I'll say that.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "hd09",
+          "text": "A scout. Jonas liked a quiet worker. He said quiet people do the most work and make the least fuss.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "hd10",
+          "text": "A healer. If you've time, say a word over the old lamp on my step. It doesn't need to be long.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "hd11",
+          "text": "The old Chapel at the bottom of the Lower Shafts is where Jonas liked to eat his lunch. The stone glows there. It's warm."
+        },
+        {
+          "id": "hd12",
+          "text": "Perrin Voss asked me once what Jonas thought of the glowing seam. I told him Jonas thought it was good company."
+        },
+        {
+          "id": "hd13",
+          "text": "Cob wheezes on my step on his way to the inn. I think it's to check I'm still here. I'm still here."
+        },
+        {
+          "id": "hd14",
+          "text": "If the shafts reopen, I'll walk down once. Not for him. For me. To see if the lamp reaches."
+        },
+        {
+          "id": "hd15",
+          "text": "The spiders took the Lower Shafts the very week the crew went in. I'd like to think they didn't suffer. I'd like to think a lot of things.",
+          "when": {
+            "flag": "reachedLanternmoor",
+            "notFlag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "hd16",
+          "text": "You're going below. Bring back anything with a K or a J scratched on it. Jonas marked his picks with a J.",
+          "when": {
+            "flag": "talkedKetch",
+            "notFlag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "hd17",
+          "text": "The diggers are gone. The mine's gone quiet. I walked to the gate this morning and listened.",
+          "when": {
+            "flag": "upperCleared"
+          }
+        },
+        {
+          "id": "hd18",
+          "text": "The brood's dead. I don't feel joy. I feel something like a door unlatching. A small, steady click.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "hd19",
+          "text": "You'll be leaving. Thank you. Not for the spiders. For asking my name, when most people just nod.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "hd20",
+          "text": "If you find your way to the old chapel on the ridge, light a candle. They'd burn them there for the miners, once.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "hd21",
+          "text": "That odd creature down in the seep is dead? Jonas never liked that cave. He said it hummed. I never believed him.",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "hd22",
+          "text": "The Lower Shafts are open again. I went to the gate at dawn and looked down the stairs. I stayed on the top step. I will go in, soon.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    },
+    "perrin_voss": {
+      "name": "Professor Perrin Voss",
+      "role": "visiting geologist",
+      "personality": "excitable, pedantic, tactless but kind",
+      "voice": "geological jargon; trailing enthusiasm; corrects himself aloud",
+      "lines": [
+        {
+          "id": "pv01",
+          "text": "Perrin Voss. Professor. Well, adjunct. Well, the person who measures rocks. Do mind the sample trays."
+        },
+        {
+          "id": "pv02",
+          "text": "This seam is sunstone. It's not an ore. It's a residue. Something very bright once passed through, and the stone remembers."
+        },
+        {
+          "id": "pv03",
+          "text": "Sunstone has a half-life. Not in the nuclear sense, in the poetic one. It dims as the sun dims. I think they're connected."
+        },
+        {
+          "id": "pv04",
+          "text": "Bruna listens to the rock. I measure it. Together we know a great deal, and neither of us will say so."
+        },
+        {
+          "id": "pv05",
+          "text": "Jessa built me a vibration-meter from a spring and a spoon. It's accurate to within a spoon. I'm delighted."
+        },
+        {
+          "id": "pv06",
+          "text": "Gerta feeds me twice a day, whether I ask or not. I've gained nine pounds and a deep respect for dumplings."
+        },
+        {
+          "id": "pv07",
+          "text": "Your steel's an iron-carbon alloy, I'd say. Chain-mail rings, riveted. Honest metallurgy. Pre-industrial but sound.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "pv08",
+          "text": "A mage! Do you find sunstone resonates with your arcane focus? Hold this. No, don't. No. Hold it. Don't hold it.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "pv09",
+          "text": "A scout! I need someone to bring me a sample from the Lower Shafts. Don't touch the glow. Or do. Describe it.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "pv10",
+          "text": "A healer. Does sunstone have therapeutic properties? Don't say yes. Say maybe. I'd write a grant for maybe.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "pv11",
+          "text": "The veins run north to south, deepening toward the ridge. There's a source somewhere up there. A point of origin."
+        },
+        {
+          "id": "pv12",
+          "text": "Cob says the seam hums. I measured it. It does. A very low note, below hearing. Like a held breath."
+        },
+        {
+          "id": "pv13",
+          "text": "Pib collects bat wings. I asked him to collect me rocks. He brought me bat wings. I've taken them as a compromise."
+        },
+        {
+          "id": "pv14",
+          "text": "I've catalogued two hundred and eleven kinds of dust in the Upper Works. Not one is boring."
+        },
+        {
+          "id": "pv15",
+          "text": "Hask's diggers are tearing the seam out in chunks. It's vandalism. It's also a terrific amount of data. I'm conflicted.",
+          "when": {
+            "flag": "reachedLanternmoor",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "pv16",
+          "text": "Your hand! The glow in your palm has the same spectrum as the seam. Don't move. No, move. Just move slowly. Fascinating.",
+          "when": {
+            "flag": "talkedKetch"
+          }
+        },
+        {
+          "id": "pv17",
+          "text": "The upper seam's safe? Splendid. I'll go and measure. Escorted. Preferably by someone large.",
+          "when": {
+            "flag": "upperCleared"
+          }
+        },
+        {
+          "id": "pv18",
+          "text": "The vault's cleared? And the seam's dimmed? That means the source moved. North. Toward the ridge. Gallowkeep.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "pv19",
+          "text": "You have a sunstone chip? May I see it? Gently. Is it warm? Oh. Oh. It's pulsing in time with you.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "pv20",
+          "text": "I'll write it all up. The monograph will be called Sunstone and Its Discontents. It will sell four copies.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "pv21",
+          "text": "A hybrid in the seep cavern! A true chimera! Do you have a sample? Even a scale? No? Pity. A small, hypothetical scale?",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "pv22",
+          "text": "The lower seam is accessible again. I've booked a descent. In writing. With a sherpa. A very patient sherpa.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    },
+    "torvin_bale": {
+      "name": "Watchman Torvin Bale",
+      "role": "gate watchman",
+      "personality": "terse, superstitious, secretly soft",
+      "voice": "counts things aloud; omens; very short sentences",
+      "lines": [
+        {
+          "id": "tb01",
+          "text": "Torvin Bale. Gate watch. Forty-one bats in, thirty-nine out. Two unaccounted."
+        },
+        {
+          "id": "tb02",
+          "text": "Bats fly widdershins when the weather turns. Today they flew clockwise. I don't like it."
+        },
+        {
+          "id": "tb03",
+          "text": "I carry a lucky stone. It's grey. It's also unlucky, if you hold it wrong. I hold it right."
+        },
+        {
+          "id": "tb04",
+          "text": "Pib asks me to count the bats with him. I let him. He gets the numbers wrong. I let him."
+        },
+        {
+          "id": "tb05",
+          "text": "Gerta sends me a pie every evening. I pretend I didn't ask. I did. The pie knows."
+        },
+        {
+          "id": "tb06",
+          "text": "Marlo says the gate is a symbol. I say the gate is a gate. We argue over tea."
+        },
+        {
+          "id": "tb07",
+          "text": "A fighter. Good. Stand left of the gate. Left is lucky. Right is where the bats go.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "tb08",
+          "text": "A mage. Nothing bright near the gate. Bats love light. So do worse things.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "tb09",
+          "text": "A scout. You'll see the Upper Works from the east ledge. Stay low. Count the lamps. Report the numbers.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "tb10",
+          "text": "A healer. Odo's cough could use you. Mine too. Mine's a small cough. A watchman's cough.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "tb11",
+          "text": "Three bats at the gate means rain. Five means visitors. Seven means trouble. I counted nine yesterday."
+        },
+        {
+          "id": "tb12",
+          "text": "Hester walks to the gate every morning. Doesn't speak. Just listens. I stand aside. It's the least I can do."
+        },
+        {
+          "id": "tb13",
+          "text": "Never cross the threshold left-foot-first. Old miners' rule. I follow it. Don't ask what happens if you don't."
+        },
+        {
+          "id": "tb14",
+          "text": "Cob once told me the dark has a heartbeat. I said I'd rather it didn't. He said it doesn't care what I'd rather."
+        },
+        {
+          "id": "tb15",
+          "text": "The east gate's boarded. Hask's chalk mark's on the planks. They'll come back for it. Count on it.",
+          "when": {
+            "flag": "reachedLanternmoor",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "tb16",
+          "text": "You want through the gate? Fine. Left foot first. And take a lamp. Dark's hungry down there.",
+          "when": {
+            "flag": "talkedKetch",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "tb17",
+          "text": "The diggers are broken. The picks have stopped. I counted the silence. It was long.",
+          "when": {
+            "flag": "upperCleared"
+          }
+        },
+        {
+          "id": "tb18",
+          "text": "The bats have gone. Every one. First time in twenty years I've had nothing to count.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "tb19",
+          "text": "North pass. Fourteen turns, nine steep. I've counted. Take food. Take a friend. Take both.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "tb20",
+          "text": "I'll keep the gate. Whatever happens up north, someone should count the ones who come back.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "tb21",
+          "text": "The seep cavern's quiet. I used to hear drips there. Seventeen a minute. Now, nothing. I miss them.",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "tb22",
+          "text": "The shafts are open. Lamps going down in line. I counted them. All of them came back up.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    },
+    "gerta_skillet": {
+      "name": "Gerta Skillet",
+      "role": "canteen cook",
+      "personality": "loud, maternal, uncompromising about food",
+      "voice": "bellows orders to eat; speaks in recipes and portions",
+      "lines": [
+        {
+          "id": "gs01",
+          "text": "Sit! Eat! You look like a wet rag in boots. Bowl in front of you, spoon in your hand. Go."
+        },
+        {
+          "id": "gs02",
+          "text": "Lanternmoor runs on three things: lamplight, stubbornness, and my dumplings. Only one of those's tasty."
+        },
+        {
+          "id": "gs03",
+          "text": "I've fed this mine four thousand shifts. Never missed a one. Not once. Not even the day of the collapse."
+        },
+        {
+          "id": "gs04",
+          "text": "Cob won't eat anything but soup. I don't blame him. I make good soup. I make it for him on principle."
+        },
+        {
+          "id": "gs05",
+          "text": "Pib steals the heel of every loaf. I leave it out on purpose. He thinks he's quick. I think he's growing."
+        },
+        {
+          "id": "gs06",
+          "text": "Perrin Voss asked me to cook with sunstone dust. I said over my dead body. He said, interesting, and wrote it down."
+        },
+        {
+          "id": "gs07",
+          "text": "A fighter. You'll want the beef. And the dumplings. And the other beef. And pie. Sit.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "gs08",
+          "text": "A mage, all skin and bones. Three bowls, no argument. Magic doesn't cook itself.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "gs09",
+          "text": "A scout, light as a spoon. You'll want the stew. And bread. And a second bread. For emergencies.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "gs10",
+          "text": "A healer. You'll need your strength. It's lamb tonight. Don't tell Odo, he'll want a share.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "gs11",
+          "text": "Hester doesn't eat enough. I leave bread on her step. She pretends she doesn't see. I pretend I don't see her pretending."
+        },
+        {
+          "id": "gs12",
+          "text": "Torvin eats a pie a night and counts the crusts. He's never once got the number right. I never correct him."
+        },
+        {
+          "id": "gs13",
+          "text": "Jessa tried to sell me a dumpling-shaping machine. I said, my hands have been shaping dumplings for forty years. She walked away. Pale."
+        },
+        {
+          "id": "gs14",
+          "text": "A cup of tea before a shift, a cup of tea after. That's the whole secret to a long life. And dumplings."
+        },
+        {
+          "id": "gs15",
+          "text": "Half my crew's in here with the shakes and nothing to do. I'm cooking for sixty. Eleven days now. My arms hurt.",
+          "when": {
+            "flag": "reachedLanternmoor",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "gs16",
+          "text": "You're going to fight Hask's diggers? Eat first. Dumplings, bread, pie. Fighting on an empty stomach's for fools.",
+          "when": {
+            "flag": "talkedKetch",
+            "notFlag": "upperCleared"
+          }
+        },
+        {
+          "id": "gs17",
+          "text": "The diggers are done? Good. I'll bake a hundred rolls. Marlo will complain about the cost. I'll bake a hundred and one.",
+          "when": {
+            "flag": "upperCleared"
+          }
+        },
+        {
+          "id": "gs18",
+          "text": "The brood-mother's dead! Everyone's hungry now, funny how that works. I'm making pie from the pantry's dark corners.",
+          "when": {
+            "flag": "matriarchDefeated"
+          }
+        },
+        {
+          "id": "gs19",
+          "text": "North? Take bread. Take two cheeses. Take the good knife. I'm not joking about the knife.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "gs20",
+          "text": "When you return I'll make you a dumpling shaped like a hero. It'll look like a lump. It'll taste like glory.",
+          "when": {
+            "flag": "reportedKetch"
+          }
+        },
+        {
+          "id": "gs21",
+          "text": "A glowing gluey thing in the seep? A pie of mine did that once, left too long in the larder.",
+          "when": {
+            "flag": "oozeweaverDefeated"
+          }
+        },
+        {
+          "id": "gs22",
+          "text": "The shafts are open. The crew will want lunch at noon sharp. I've been peeling potatoes since dawn. Bless this day.",
+          "when": {
+            "flag": "minerReturned"
+          }
+        }
+      ]
+    }
+  }
+}

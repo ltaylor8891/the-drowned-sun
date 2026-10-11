@@ -1,0 +1,3414 @@
+{
+  "power_strike": {
+    "name": "Power Strike",
+    "kind": "skill",
+    "cost": 3,
+    "target": "enemy",
+    "desc": "A heavy blow.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.6
+      }
+    ]
+  },
+  "shield_bash": {
+    "name": "Shield Bash",
+    "kind": "skill",
+    "cost": 4,
+    "target": "enemy",
+    "desc": "A bash that may stun.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.5
+      }
+    ]
+  },
+  "cleave": {
+    "name": "Cleave",
+    "kind": "skill",
+    "cost": 6,
+    "target": "allEnemies",
+    "desc": "Strikes every enemy.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.75
+      }
+    ]
+  },
+  "war_cry": {
+    "name": "War Cry",
+    "kind": "skill",
+    "cost": 5,
+    "target": "allAllies",
+    "desc": "Raises the party's attack.",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "last_stand": {
+    "name": "Last Stand",
+    "kind": "skill",
+    "cost": 8,
+    "target": "enemy",
+    "desc": "Hits harder the lower your HP.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.4,
+        "missingHpBonus": 1.6
+      }
+    ]
+  },
+  "ember": {
+    "name": "Ember",
+    "kind": "spell",
+    "cost": 3,
+    "target": "enemy",
+    "desc": "A small fire.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 12,
+        "element": "fire"
+      }
+    ]
+  },
+  "frost_shard": {
+    "name": "Frost Shard",
+    "kind": "spell",
+    "cost": 3,
+    "target": "enemy",
+    "desc": "A shard of ice.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 12,
+        "element": "ice"
+      }
+    ]
+  },
+  "spark": {
+    "name": "Spark",
+    "kind": "spell",
+    "cost": 4,
+    "target": "enemy",
+    "desc": "A bolt of lightning.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 14,
+        "element": "lightning"
+      }
+    ]
+  },
+  "stone_spike": {
+    "name": "Stone Spike",
+    "kind": "spell",
+    "cost": 6,
+    "target": "enemy",
+    "desc": "Earth erupts beneath a foe.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 20,
+        "element": "earth"
+      }
+    ]
+  },
+  "mana_surge": {
+    "name": "Mana Surge",
+    "kind": "skill",
+    "cost": 0,
+    "target": "self",
+    "desc": "Recover some MP.",
+    "effects": [
+      {
+        "type": "restoreMp",
+        "frac": 0.35
+      }
+    ]
+  },
+  "quick_shot": {
+    "name": "Quick Shot",
+    "kind": "skill",
+    "cost": 2,
+    "target": "enemy",
+    "desc": "A fast, accurate shot.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.25
+      }
+    ]
+  },
+  "pin": {
+    "name": "Pin",
+    "kind": "skill",
+    "cost": 3,
+    "target": "enemy",
+    "desc": "Pins a foe, slowing it.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.7
+      }
+    ]
+  },
+  "double_strike": {
+    "name": "Double Strike",
+    "kind": "skill",
+    "cost": 5,
+    "target": "enemy",
+    "desc": "Two quick hits.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.85,
+        "hits": 2
+      }
+    ]
+  },
+  "smoke_pellet": {
+    "name": "Smoke Pellet",
+    "kind": "skill",
+    "cost": 6,
+    "target": "allEnemies",
+    "desc": "Slows every enemy.",
+    "effects": [
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.8
+      }
+    ]
+  },
+  "poison_tip": {
+    "name": "Poison Tip",
+    "kind": "skill",
+    "cost": 4,
+    "target": "enemy",
+    "desc": "A poisoned strike.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.9
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.9
+      }
+    ]
+  },
+  "mend": {
+    "name": "Mend",
+    "kind": "spell",
+    "cost": 3,
+    "target": "ally",
+    "desc": "Heals one ally.",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 25
+      }
+    ]
+  },
+  "smite": {
+    "name": "Smite",
+    "kind": "spell",
+    "cost": 4,
+    "target": "enemy",
+    "desc": "Holy light.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 14,
+        "element": "light"
+      }
+    ]
+  },
+  "purify": {
+    "name": "Purify",
+    "kind": "spell",
+    "cost": 3,
+    "target": "ally",
+    "desc": "Cures ailments.",
+    "effects": [
+      {
+        "type": "cleanse"
+      }
+    ]
+  },
+  "blessing": {
+    "name": "Blessing",
+    "kind": "spell",
+    "cost": 6,
+    "target": "allAllies",
+    "desc": "Raises the party's defence.",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "revive": {
+    "name": "Revive",
+    "kind": "spell",
+    "cost": 10,
+    "target": "deadAlly",
+    "desc": "Revives a fallen ally.",
+    "effects": [
+      {
+        "type": "revive",
+        "hpFrac": 0.3
+      }
+    ]
+  },
+  "poison_bite": {
+    "name": "Poison Bite",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.6
+      }
+    ]
+  },
+  "web": {
+    "name": "Web",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.9
+      }
+    ]
+  },
+  "steal_gold": {
+    "name": "Steal Gold",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.6
+      },
+      {
+        "type": "steal"
+      }
+    ]
+  },
+  "drain_bite": {
+    "name": "Drain Bite",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      },
+      {
+        "type": "drain",
+        "frac": 0.5
+      }
+    ]
+  },
+  "charge": {
+    "name": "Charge",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.8
+      },
+      {
+        "type": "exposeSelf"
+      }
+    ]
+  },
+  "stomp": {
+    "name": "Stomp",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.7
+      }
+    ]
+  },
+  "gel_spawn": {
+    "name": "Gel Spawn",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "green_slime",
+        "hpFrac": 0.6
+      }
+    ]
+  },
+  "goblin_fire": {
+    "name": "Spit Fire",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 10,
+        "element": "fire"
+      }
+    ]
+  },
+  "goblin_mend": {
+    "name": "Crude Mending",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "ally",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 14
+      }
+    ]
+  },
+  "rally": {
+    "name": "Rally Cry",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allAllies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "call_goblins": {
+    "name": "Call Goblins",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "goblin_scout",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "webbed_pilfer": {
+    "name": "Webbed Pilfer",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.7
+      },
+      {
+        "type": "steal"
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.8
+      }
+    ]
+  },
+  "howl": {
+    "name": "Howl",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "dire_wolf",
+        "hpFrac": 0.6
+      }
+    ]
+  },
+  "rend": {
+    "name": "Rend",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.5
+      }
+    ]
+  },
+  "frenzy": {
+    "name": "Frenzy",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "bandit_tonic": {
+    "name": "Swig of Tonic",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 70
+      }
+    ]
+  },
+  "heavy_blow": {
+    "name": "Heavy Blow",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.35
+      }
+    ]
+  },
+  "dirty_trick": {
+    "name": "Dirty Trick",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.9
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.7
+      }
+    ]
+  },
+  "shriek_pack": {
+    "name": "Shriek Pack",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "giant_bat",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "web_all": {
+    "name": "Web Burst",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.7
+      }
+    ]
+  },
+  "brood": {
+    "name": "Brood Call",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "cave_spider",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "acid_spit": {
+    "name": "Acid Spit",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.9
+      }
+    ]
+  },
+  "acid_web": {
+    "name": "Acid Web",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.9
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.8
+      }
+    ]
+  },
+  "bat_screech": {
+    "name": "Screech",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.5
+      }
+    ]
+  },
+  "orc_war_cry": {
+    "name": "War Cry",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allAllies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "skull_crack": {
+    "name": "Skull Crack",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.4
+      }
+    ]
+  },
+  "gorrak_cleave": {
+    "name": "Warchief's Sweep",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      }
+    ]
+  },
+  "call_orcs": {
+    "name": "Call the Warband",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "orc_grunt",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "berserk": {
+    "name": "Berserk",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "tusk_warcry": {
+    "name": "Tusk Warcry",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.6
+      },
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "gallows_swing": {
+    "name": "Gallows Swing",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      }
+    ]
+  },
+  "whistle": {
+    "name": "Whistle",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "collared_wolf",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "shard_burst": {
+    "name": "Shard Burst",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 30,
+        "element": "light"
+      }
+    ]
+  },
+  "hask_tonic": {
+    "name": "Hask's Tonic",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 300
+      }
+    ]
+  },
+  "guard_stance": {
+    "name": "Guard Stance",
+    "kind": "skill",
+    "cost": 4,
+    "target": "self",
+    "desc": "Take the blows meant for your allies for a few turns.",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "guarding"
+      },
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "crusader_strike": {
+    "name": "Crusader Strike",
+    "kind": "skill",
+    "cost": 6,
+    "target": "enemy",
+    "desc": "A blessed blow that may stun.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.9
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      }
+    ]
+  },
+  "sunder": {
+    "name": "Sunder",
+    "kind": "skill",
+    "cost": 8,
+    "target": "enemy",
+    "desc": "Breaks armour as well as bone.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 2.2
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 1
+      }
+    ]
+  },
+  "bulwark": {
+    "name": "Bulwark",
+    "kind": "skill",
+    "cost": 10,
+    "target": "allAllies",
+    "desc": "Raises the party's defence, and you step in front.",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "defenseUp"
+      },
+      {
+        "type": "buffSelf",
+        "status": "guarding"
+      }
+    ]
+  },
+  "rage": {
+    "name": "Rage",
+    "kind": "skill",
+    "cost": 4,
+    "target": "self",
+    "desc": "Attack rises, defence falls.",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      },
+      {
+        "type": "buffSelf",
+        "status": "defenseDown"
+      }
+    ]
+  },
+  "reckless_swing": {
+    "name": "Reckless Swing",
+    "kind": "skill",
+    "cost": 6,
+    "target": "enemy",
+    "desc": "Hits harder the more hurt you are.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 2.2,
+        "missingHpBonus": 0.8
+      }
+    ]
+  },
+  "whirlwind": {
+    "name": "Whirlwind",
+    "kind": "skill",
+    "cost": 9,
+    "target": "allEnemies",
+    "desc": "A spinning strike at everything near.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.1
+      }
+    ]
+  },
+  "bloodlust": {
+    "name": "Bloodlust",
+    "kind": "skill",
+    "cost": 8,
+    "target": "enemy",
+    "desc": "Strikes and drinks the wound.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.8
+      },
+      {
+        "type": "drain",
+        "frac": 0.35
+      }
+    ]
+  },
+  "cataclysm": {
+    "name": "Cataclysm",
+    "kind": "skill",
+    "cost": 16,
+    "target": "allEnemies",
+    "desc": "The ground cracks. Some foes stagger.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.7
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.25
+      }
+    ]
+  },
+  "fire_storm": {
+    "name": "Fire Storm",
+    "kind": "spell",
+    "cost": 12,
+    "target": "allEnemies",
+    "desc": "Fire on every foe.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 40,
+        "element": "fire"
+      }
+    ]
+  },
+  "blizzard": {
+    "name": "Blizzard",
+    "kind": "spell",
+    "cost": 14,
+    "target": "allEnemies",
+    "desc": "Ice on every foe.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 44,
+        "element": "ice"
+      }
+    ]
+  },
+  "thunder_spear": {
+    "name": "Thunder Spear",
+    "kind": "spell",
+    "cost": 12,
+    "target": "enemy",
+    "desc": "A javelin of lightning.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 95,
+        "element": "lightning"
+      }
+    ]
+  },
+  "quake": {
+    "name": "Quake",
+    "kind": "spell",
+    "cost": 18,
+    "target": "allEnemies",
+    "desc": "The earth rolls under every foe.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 55,
+        "element": "earth"
+      }
+    ]
+  },
+  "meteor": {
+    "name": "Meteor",
+    "kind": "spell",
+    "cost": 22,
+    "target": "enemy",
+    "desc": "A burning stone from the sky.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 150,
+        "element": "fire"
+      }
+    ]
+  },
+  "drain_touch": {
+    "name": "Drain Touch",
+    "kind": "spell",
+    "cost": 8,
+    "target": "enemy",
+    "desc": "Steals life.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 55
+      },
+      {
+        "type": "drain",
+        "frac": 0.5
+      }
+    ]
+  },
+  "plague_cloud": {
+    "name": "Plague Cloud",
+    "kind": "spell",
+    "cost": 10,
+    "target": "allEnemies",
+    "desc": "Poisons every foe.",
+    "effects": [
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.9
+      }
+    ]
+  },
+  "curse_word": {
+    "name": "Curse Word",
+    "kind": "spell",
+    "cost": 8,
+    "target": "enemy",
+    "desc": "Weakens a foe's strikes.",
+    "effects": [
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.85
+      }
+    ]
+  },
+  "bone_spear": {
+    "name": "Bone Spear",
+    "kind": "spell",
+    "cost": 14,
+    "target": "enemy",
+    "desc": "A lance of bone.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 120
+      }
+    ]
+  },
+  "soul_harvest": {
+    "name": "Soul Harvest",
+    "kind": "spell",
+    "cost": 20,
+    "target": "allEnemies",
+    "desc": "Reaps every foe and feeds on it.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 60
+      },
+      {
+        "type": "drain",
+        "frac": 0.3
+      }
+    ]
+  },
+  "aimed_shot": {
+    "name": "Aimed Shot",
+    "kind": "skill",
+    "cost": 5,
+    "target": "enemy",
+    "desc": "A slow, certain shot.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 2.1
+      }
+    ]
+  },
+  "snare_trap": {
+    "name": "Snare Trap",
+    "kind": "skill",
+    "cost": 7,
+    "target": "enemy",
+    "desc": "A hidden trap that may stun.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.6
+      }
+    ]
+  },
+  "volley": {
+    "name": "Volley",
+    "kind": "skill",
+    "cost": 9,
+    "target": "allEnemies",
+    "desc": "Arrows at everything.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1
+      }
+    ]
+  },
+  "hunters_mark": {
+    "name": "Hunter's Mark",
+    "kind": "skill",
+    "cost": 8,
+    "target": "enemy",
+    "desc": "Marks a foe: its guard drops.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 1
+      }
+    ]
+  },
+  "rain_of_arrows": {
+    "name": "Rain of Arrows",
+    "kind": "skill",
+    "cost": 16,
+    "target": "allEnemies",
+    "desc": "The sky turns to arrows.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      }
+    ]
+  },
+  "backstab": {
+    "name": "Backstab",
+    "kind": "skill",
+    "cost": 5,
+    "target": "enemy",
+    "desc": "Straight between the plates.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 2
+      }
+    ]
+  },
+  "pickpocket": {
+    "name": "Pickpocket",
+    "kind": "skill",
+    "cost": 6,
+    "target": "enemy",
+    "desc": "Hit and lift a few coins.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1
+      },
+      {
+        "type": "steal"
+      }
+    ]
+  },
+  "venom_blade": {
+    "name": "Venom Blade",
+    "kind": "skill",
+    "cost": 7,
+    "target": "enemy",
+    "desc": "A poisoned cut.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 1
+      }
+    ]
+  },
+  "shadow_step": {
+    "name": "Shadow Step",
+    "kind": "skill",
+    "cost": 8,
+    "target": "self",
+    "desc": "Quicker and sharper for a few turns.",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "haste"
+      },
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "death_mark": {
+    "name": "Death Mark",
+    "kind": "skill",
+    "cost": 14,
+    "target": "enemy",
+    "desc": "A single, terrible strike.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 3.2
+      }
+    ]
+  },
+  "greater_heal": {
+    "name": "Greater Heal",
+    "kind": "spell",
+    "cost": 8,
+    "target": "ally",
+    "desc": "Heals one ally greatly.",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 100
+      }
+    ]
+  },
+  "holy_light": {
+    "name": "Holy Light",
+    "kind": "spell",
+    "cost": 14,
+    "target": "allAllies",
+    "desc": "Heals the whole party.",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 55
+      }
+    ]
+  },
+  "sanctuary": {
+    "name": "Sanctuary",
+    "kind": "spell",
+    "cost": 12,
+    "target": "allAllies",
+    "desc": "Raises defence and cures ailments.",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "defenseUp"
+      },
+      {
+        "type": "cleanse"
+      }
+    ]
+  },
+  "divine_wrath": {
+    "name": "Divine Wrath",
+    "kind": "spell",
+    "cost": 16,
+    "target": "allEnemies",
+    "desc": "Holy fire on every foe.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 55,
+        "element": "light"
+      }
+    ]
+  },
+  "grace": {
+    "name": "Grace",
+    "kind": "spell",
+    "cost": 22,
+    "target": "allAllies",
+    "desc": "A great healing for the whole party.",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 130
+      }
+    ]
+  },
+  "regrowth": {
+    "name": "Regrowth",
+    "kind": "spell",
+    "cost": 6,
+    "target": "ally",
+    "desc": "Heals a little each turn.",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "regen"
+      }
+    ]
+  },
+  "entangle": {
+    "name": "Entangle",
+    "kind": "spell",
+    "cost": 9,
+    "target": "allEnemies",
+    "desc": "Roots slow every foe.",
+    "effects": [
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.85
+      }
+    ]
+  },
+  "thorn_lash": {
+    "name": "Thorn Lash",
+    "kind": "spell",
+    "cost": 10,
+    "target": "enemy",
+    "desc": "Thorns and bark.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 85,
+        "element": "earth"
+      }
+    ]
+  },
+  "bloom": {
+    "name": "Bloom",
+    "kind": "spell",
+    "cost": 14,
+    "target": "allAllies",
+    "desc": "The party mends gradually and ailments clear.",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "regen"
+      },
+      {
+        "type": "cleanse"
+      }
+    ]
+  },
+  "wild_surge": {
+    "name": "Wild Surge",
+    "kind": "spell",
+    "cost": 20,
+    "target": "allEnemies",
+    "desc": "The wild answers. Some foes fall asleep.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 70,
+        "element": "earth"
+      },
+      {
+        "type": "status",
+        "status": "sleep",
+        "chance": 0.35
+      }
+    ]
+  },
+  "echo_strike": {
+    "name": "Echo Strike",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.7
+      }
+    ]
+  },
+  "echo_mend": {
+    "name": "Echo Mend",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 320
+      }
+    ]
+  },
+  "echo_burst": {
+    "name": "Echo Burst",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 20
+      }
+    ]
+  },
+  "echo_hex": {
+    "name": "Echo Hex",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 20
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.8
+      }
+    ]
+  },
+  "echo_drain": {
+    "name": "Echo Drain",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 40
+      },
+      {
+        "type": "drain",
+        "frac": 0.5
+      }
+    ]
+  },
+  "echo_volley": {
+    "name": "Echo Volley",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      }
+    ]
+  },
+  "echo_venom": {
+    "name": "Echo Venom",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 1
+      }
+    ]
+  },
+  "echo_entangle": {
+    "name": "Echo Roots",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.8
+      }
+    ]
+  },
+  "echo_rage": {
+    "name": "Echo Rage",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "rally_cry": {
+    "name": "Rally",
+    "kind": "skill",
+    "cost": 8,
+    "target": "allAllies",
+    "desc": "A rousing shout that heals the party.",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 90
+      }
+    ]
+  },
+  "ogre_stomp": {
+    "name": "Ogre Stomp",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.7
+      }
+    ]
+  },
+  "ogre_hex": {
+    "name": "Ogre Hex",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 22
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.8
+      }
+    ]
+  },
+  "ogre_mend": {
+    "name": "Ogre Mend",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "ally",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 100
+      }
+    ]
+  },
+  "troll_regen": {
+    "name": "Troll Regrowth",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "regen"
+      }
+    ]
+  },
+  "troll_rage": {
+    "name": "Troll Rage",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "boulder_slam": {
+    "name": "Boulder Slam",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.8
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.4
+      }
+    ]
+  },
+  "tusker_gore": {
+    "name": "Gore",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.9
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.6
+      }
+    ]
+  },
+  "dust_cloud": {
+    "name": "Dust Cloud",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.6
+      }
+    ]
+  },
+  "trampling_charge": {
+    "name": "Trampling Charge",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.2
+      }
+    ]
+  },
+  "spear_thrust": {
+    "name": "Spear Thrust",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.3
+      }
+    ]
+  },
+  "spear_volley": {
+    "name": "Spear Volley",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      }
+    ]
+  },
+  "sun_hex": {
+    "name": "Sun Hex",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 24
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.8
+      }
+    ]
+  },
+  "heat_mend": {
+    "name": "Heat Mend",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "ally",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 130
+      }
+    ]
+  },
+  "sun_flare": {
+    "name": "Sun Flare",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 22
+      }
+    ]
+  },
+  "tail_sting": {
+    "name": "Tail Sting",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.2
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.85
+      }
+    ]
+  },
+  "tail_slam": {
+    "name": "Tail Slam",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.7
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.35
+      }
+    ]
+  },
+  "warlord_banner": {
+    "name": "Warlord Banner",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allAllies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "call_warband": {
+    "name": "Call the Warband",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "lizard_skirmisher",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "web_sting": {
+    "name": "Web Sting",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.3
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.9
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.8
+      }
+    ]
+  },
+  "lullaby": {
+    "name": "Lullaby",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "status",
+        "status": "sleep",
+        "chance": 0.4
+      }
+    ]
+  },
+  "siren_call": {
+    "name": "Siren Call",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "status",
+        "status": "charm",
+        "chance": 0.6
+      }
+    ]
+  },
+  "gale_dive": {
+    "name": "Gale Dive",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.9
+      }
+    ]
+  },
+  "call_flock": {
+    "name": "Call the Flock",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "harpy_scout",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "talon_rake": {
+    "name": "Talon Rake",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.4
+      }
+    ]
+  },
+  "sonic_screech": {
+    "name": "Sonic Screech",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 18
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      },
+      {
+        "type": "status",
+        "status": "sleep",
+        "chance": 0.3
+      }
+    ]
+  },
+  "grave_hex": {
+    "name": "Grave Hex",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 26
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.8
+      }
+    ]
+  },
+  "bone_mend": {
+    "name": "Bone Mend",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "ally",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 150
+      }
+    ]
+  },
+  "bone_volley": {
+    "name": "Bone Volley",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      }
+    ]
+  },
+  "bone_guard": {
+    "name": "Bone Guard",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "harden": {
+    "name": "Harden",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "seismic_stomp": {
+    "name": "Seismic Stomp",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.15
+      }
+    ]
+  },
+  "glass_shards": {
+    "name": "Glass Shards",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.7
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.4
+      }
+    ]
+  },
+  "sentinel_beam": {
+    "name": "Sentinel Beam",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 34
+      }
+    ]
+  },
+  "summon_guardian": {
+    "name": "Awaken Guardian",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "clay_golem",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "golem_repair": {
+    "name": "Self-Repair",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 420
+      }
+    ]
+  },
+  "bone_barrage": {
+    "name": "Bone Barrage",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.9
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.2
+      }
+    ]
+  },
+  "gore_charge": {
+    "name": "Gore Charge",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.8
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      }
+    ]
+  },
+  "labyrinth_roar": {
+    "name": "Labyrinth Roar",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.6
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.4
+      }
+    ]
+  },
+  "axe_sweep": {
+    "name": "Axe Sweep",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1
+      }
+    ]
+  },
+  "seer_hex": {
+    "name": "Seer Hex",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 30
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.8
+      }
+    ]
+  },
+  "glass_ward": {
+    "name": "Glass Ward",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "ally",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "king_stampede": {
+    "name": "Royal Stampede",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.1
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.25
+      }
+    ]
+  },
+  "zenith_flare": {
+    "name": "Zenith Flare",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 30
+      }
+    ]
+  },
+  "zenith_spear": {
+    "name": "Zenith Spear",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 60
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      }
+    ]
+  },
+  "idol_ward": {
+    "name": "Idol Ward",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      },
+      {
+        "type": "buffSelf",
+        "status": "regen"
+      }
+    ]
+  },
+  "glass_chorus": {
+    "name": "Glass Chorus",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "glass_golem",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "zenith_overload": {
+    "name": "Zenith Overload",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 50
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.4
+      }
+    ]
+  },
+  "solar_curse": {
+    "name": "Solar Curse",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 28
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.9
+      }
+    ]
+  },
+  "volley_storm": {
+    "name": "Volley Storm",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      }
+    ]
+  },
+  "moon_arrow": {
+    "name": "Moon Arrow",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.7
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.3
+      }
+    ]
+  },
+  "star_bolt": {
+    "name": "Star Bolt",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 56
+      }
+    ]
+  },
+  "moon_veil": {
+    "name": "Moon Veil",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "elder_mend": {
+    "name": "Elder Mend",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "ally",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 190
+      }
+    ]
+  },
+  "rangers_call": {
+    "name": "Ranger's Call",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "elf_archer",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "warden_slash": {
+    "name": "Warden Slash",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.6
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.25
+      }
+    ]
+  },
+  "wraith_touch": {
+    "name": "Wraith Touch",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 46
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.7
+      }
+    ]
+  },
+  "spectral_wail": {
+    "name": "Spectral Wail",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 26
+      },
+      {
+        "type": "status",
+        "status": "sleep",
+        "chance": 0.3
+      }
+    ]
+  },
+  "hush_song": {
+    "name": "The Hush",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "status",
+        "status": "sleep",
+        "chance": 0.4
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.5
+      }
+    ]
+  },
+  "root_snare": {
+    "name": "Root Snare",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.2
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.8
+      }
+    ]
+  },
+  "bark_skin": {
+    "name": "Bark Skin",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "verdant_regrowth": {
+    "name": "Verdant Regrowth",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "regen"
+      }
+    ]
+  },
+  "sap_heal": {
+    "name": "Sap Heal",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "ally",
+    "desc": "",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 230
+      }
+    ]
+  },
+  "thorn_barrage": {
+    "name": "Thorn Barrage",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      }
+    ]
+  },
+  "elder_slam": {
+    "name": "Elder Slam",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.9
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      }
+    ]
+  },
+  "awaken_saplings": {
+    "name": "Awaken Saplings",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "sapling_treant",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "frost_breath": {
+    "name": "Frost Breath",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 38
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.4
+      }
+    ]
+  },
+  "lunar_slash": {
+    "name": "Lunar Slash",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.7
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.3
+      }
+    ]
+  },
+  "howl_pack": {
+    "name": "Howl of the Pack",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "werewolf_prowler",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "moon_howl": {
+    "name": "Moon Howl",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.7
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      }
+    ]
+  },
+  "lord_cleave": {
+    "name": "Lord's Cleave",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.1
+      }
+    ]
+  },
+  "full_moon": {
+    "name": "Full Moon",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      },
+      {
+        "type": "buffSelf",
+        "status": "haste"
+      }
+    ]
+  },
+  "life_leech": {
+    "name": "Life Leech",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 48
+      },
+      {
+        "type": "drain",
+        "frac": 0.6
+      }
+    ]
+  },
+  "chill_touch": {
+    "name": "Chill Touch",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 44
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.6
+      }
+    ]
+  },
+  "banshee_wail": {
+    "name": "Banshee Wail",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 32
+      },
+      {
+        "type": "status",
+        "status": "sleep",
+        "chance": 0.35
+      }
+    ]
+  },
+  "phase_out": {
+    "name": "Phase Out",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "basilisk_bite": {
+    "name": "Basilisk Bite",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.1
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.4
+      }
+    ]
+  },
+  "stone_gaze": {
+    "name": "Stone Gaze",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 24
+      },
+      {
+        "type": "status",
+        "status": "petrify",
+        "chance": 0.3
+      }
+    ]
+  },
+  "gorgon_stare": {
+    "name": "Gorgon Stare",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 16
+      },
+      {
+        "type": "status",
+        "status": "petrify",
+        "chance": 0.12
+      }
+    ]
+  },
+  "tail_sweep": {
+    "name": "Tail Sweep",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.85
+      }
+    ]
+  },
+  "dark_slash": {
+    "name": "Dark Slash",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.1
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.3
+      }
+    ]
+  },
+  "shadow_strike": {
+    "name": "Shadow Strike",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.7
+      }
+    ]
+  },
+  "soul_cleave": {
+    "name": "Soul Cleave",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 70
+      },
+      {
+        "type": "drain",
+        "frac": 0.5
+      }
+    ]
+  },
+  "black_bolt": {
+    "name": "Black Bolt",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 34
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.3
+      }
+    ]
+  },
+  "commander_cleave": {
+    "name": "Commander's Cleave",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.15
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.25
+      }
+    ]
+  },
+  "night_oath": {
+    "name": "Night Oath",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "cursed_edge": {
+    "name": "Cursed Edge",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.9
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.7
+      }
+    ]
+  },
+  "call_squires": {
+    "name": "Call the Squires",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "dark_squire",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "dusk_decree": {
+    "name": "Dusk Decree",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 40
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.7
+      }
+    ]
+  },
+  "rune_pulse": {
+    "name": "Rune Pulse",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 48
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.5
+      }
+    ]
+  },
+  "rune_ward": {
+    "name": "Rune Ward",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "wight_touch": {
+    "name": "Wight's Touch",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 66
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.5
+      },
+      {
+        "type": "drain",
+        "frac": 0.4
+      }
+    ]
+  },
+  "grave_chill": {
+    "name": "Grave Chill",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 38
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.4
+      }
+    ]
+  },
+  "holy_bastion": {
+    "name": "Holy Bastion",
+    "kind": "skill",
+    "cost": 14,
+    "target": "allAllies",
+    "desc": "A wall of light: the party is guarded and mended.",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "defenseUp"
+      },
+      {
+        "type": "heal",
+        "power": 70
+      }
+    ]
+  },
+  "judgement_blade": {
+    "name": "Judgement Blade",
+    "kind": "skill",
+    "cost": 16,
+    "target": "enemy",
+    "desc": "A blow of pure verdict that may stun.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 3.1
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.4
+      }
+    ]
+  },
+  "war_banner": {
+    "name": "War Banner",
+    "kind": "skill",
+    "cost": 14,
+    "target": "allAllies",
+    "desc": "Raise the banner: the party strikes harder and faster.",
+    "effects": [
+      {
+        "type": "buff",
+        "status": "attackUp"
+      },
+      {
+        "type": "buff",
+        "status": "haste"
+      }
+    ]
+  },
+  "titan_cleave": {
+    "name": "Titan Cleave",
+    "kind": "skill",
+    "cost": 20,
+    "target": "allEnemies",
+    "desc": "A sweep that breaks shields and nerve alike.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 2.2
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.5
+      }
+    ]
+  },
+  "fusion_bolt": {
+    "name": "Fusion Bolt",
+    "kind": "spell",
+    "cost": 28,
+    "target": "enemy",
+    "desc": "Fire and ice braided into one bolt.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 120,
+        "element": "fire"
+      },
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 120,
+        "element": "ice"
+      }
+    ]
+  },
+  "elemental_ruin": {
+    "name": "Elemental Ruin",
+    "kind": "spell",
+    "cost": 34,
+    "target": "allEnemies",
+    "desc": "Storm and quake on every foe.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 120,
+        "element": "lightning"
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.4
+      }
+    ]
+  },
+  "death_coil": {
+    "name": "Death Coil",
+    "kind": "spell",
+    "cost": 24,
+    "target": "enemy",
+    "desc": "A coil of grave-cold that feeds the caster.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 170
+      },
+      {
+        "type": "drain",
+        "frac": 0.5
+      }
+    ]
+  },
+  "grave_wail": {
+    "name": "Grave Wail",
+    "kind": "spell",
+    "cost": 30,
+    "target": "allEnemies",
+    "desc": "A wail from beyond. Some foes fall under a curse.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 100
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.5
+      }
+    ]
+  },
+  "wild_volley": {
+    "name": "Wild Volley",
+    "kind": "skill",
+    "cost": 18,
+    "target": "allEnemies",
+    "desc": "Poisoned arrows on every foe.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.9
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.4
+      }
+    ]
+  },
+  "alpha_strike": {
+    "name": "Alpha Strike",
+    "kind": "skill",
+    "cost": 16,
+    "target": "enemy",
+    "desc": "The hunter becomes the beast.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 3.2
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.6
+      }
+    ]
+  },
+  "shadow_flurry": {
+    "name": "Shadow Flurry",
+    "kind": "skill",
+    "cost": 16,
+    "target": "enemy",
+    "desc": "Three cuts from three directions.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.3,
+        "hits": 3
+      }
+    ]
+  },
+  "killing_blow": {
+    "name": "Killing Blow",
+    "kind": "skill",
+    "cost": 18,
+    "target": "enemy",
+    "desc": "One cut, aimed with care.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 4.2,
+        "missingHpBonus": 0.5
+      }
+    ]
+  },
+  "divine_aegis": {
+    "name": "Divine Aegis",
+    "kind": "spell",
+    "cost": 28,
+    "target": "allAllies",
+    "desc": "A great light heals and shields the party.",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 160
+      },
+      {
+        "type": "buff",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "resurrection": {
+    "name": "Resurrection",
+    "kind": "spell",
+    "cost": 30,
+    "target": "deadAlly",
+    "desc": "Calls a fallen ally back almost whole.",
+    "effects": [
+      {
+        "type": "revive",
+        "hpFrac": 0.8
+      }
+    ]
+  },
+  "verdant_rebirth": {
+    "name": "Verdant Rebirth",
+    "kind": "spell",
+    "cost": 26,
+    "target": "allAllies",
+    "desc": "The wild mends the party over time.",
+    "effects": [
+      {
+        "type": "heal",
+        "power": 100
+      },
+      {
+        "type": "buff",
+        "status": "regen"
+      },
+      {
+        "type": "cleanse"
+      }
+    ]
+  },
+  "nature_wrath": {
+    "name": "Nature's Wrath",
+    "kind": "spell",
+    "cost": 30,
+    "target": "allEnemies",
+    "desc": "The forest remembers every wrong.",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 115,
+        "element": "earth"
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      }
+    ]
+  }
+}

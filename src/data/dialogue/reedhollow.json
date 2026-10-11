@@ -1,0 +1,1822 @@
+{
+  "npcs": {
+    "ned_quayle": {
+      "name": "Harbourmaster Quayle",
+      "role": "harbourmaster of Reedhollow",
+      "personality": "wry, weary, quietly stubborn",
+      "voice": "dry understatement; rope, tide and cargo metaphors",
+      "events": [
+        {
+          "id": "ned_intro",
+          "when": {
+            "notFlag": "talkedNed"
+          },
+          "set": [
+            "talkedNed"
+          ],
+          "say": [
+            "Mind the planks. The third from the post is a liar. You'll be the one from Tallow Ford. The Reeve's letter beat you here by a day. Four pages, mostly about biscuits.",
+            "Here's the trouble. Bandits took the toll dock six weeks back. Hask's men, under a black gallows. Five coin a head to cross the river, ten for goods, and the ferry's theirs now. Nobody crosses, nobody trades. Reedhollow starves politely.",
+            "And the wolves. A grey brute they call Greyfang leads packs through the reed-beds. Three cutters bitten, one missing. I've never seen wolves behave like that. As though they were being aimed.",
+            "Clear the dock. Find the wolf. And if you've any sense, bring company. There are folk in town with a score to settle against Hask. Talk to them."
+          ]
+        },
+        {
+          "id": "ned_report",
+          "when": {
+            "flag": [
+              "tollCleared",
+              "greyfangDefeated"
+            ],
+            "notFlag": "reportedNed"
+          },
+          "set": [
+            "reportedNed",
+            "chapter_3_done"
+          ],
+          "say": [
+            "The dock open, the wolf dead, and the ledger in your hands. I'd say I'm speechless, but it'd be a lie. I'm never speechless. I'm just short of adjectives.",
+            "Gallowkeep. A stronghold north, through the Sedge Mines. That's where the river's money went. That's where Hask sits counting it.",
+            "Take the town's thanks, and a purse from the harbour chest. And do mind the mines. The tramway's old and the dark has opinions."
+          ],
+          "gold": 300,
+          "give": {
+            "hi_potion": 2,
+            "ether": 2
+          },
+          "autosave": true,
+          "banner": "Chapter 3 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "nq01",
+          "text": "Mind the planks. The third from the post is a liar."
+        },
+        {
+          "id": "nq02",
+          "text": "Reedhollow rests on forty thousand pilings and one very stubborn decision never to move."
+        },
+        {
+          "id": "nq03",
+          "text": "I keep the tide tables on that wall. Nobody reads them. The river does its own arithmetic."
+        },
+        {
+          "id": "nq04",
+          "text": "Harbourmaster is a grand title for a man who mostly counts rope."
+        },
+        {
+          "id": "nq05",
+          "text": "Gus's eel pie weighs more than most of my cargo. I've considered licensing it as ballast."
+        },
+        {
+          "id": "nq06",
+          "text": "Nell keeps the town's accounts and mine. She says I owe the harbour three coins. I say the harbour owes me a holiday."
+        },
+        {
+          "id": "nq07",
+          "text": "A fighter's stance, that. We keep a militia of seven, and four of them are Hob's cousins.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "nq08",
+          "text": "Mages are rare on the river. The last one tried to part the water. We still have the bruises on the pier.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "nq09",
+          "text": "A scout! Tilda calls herself one. She trips over her own boasting.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "nq10",
+          "text": "A healer? Fenna will want to meet you. She'll want to feed you as well. Be firm.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "nq11",
+          "text": "The ferry used to run every hour. Now it doesn't run at all. Now it's a very expensive raft owned by bandits."
+        },
+        {
+          "id": "nq12",
+          "text": "Hob swears the wolves know where the cutters sleep. I say wolves can't read schedules. Hob says these ones learned."
+        },
+        {
+          "id": "nq13",
+          "text": "Fenna tends the lamp on the hill. She says it's the last of the old temple oil. I say it's very good oil."
+        },
+        {
+          "id": "nq14",
+          "text": "The Reeve of Tallow Ford writes long letters. I read them mostly for the weather reports."
+        },
+        {
+          "id": "nq15",
+          "text": "The dock lies south-east, past the street's last house. The ferry's tied up like a prisoner.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "nq16",
+          "text": "The dock's clear? I can see the ferry from here. It's moving. I may need to sit down.",
+          "when": {
+            "flag": "tollCleared",
+            "notFlag": "reportedNed"
+          }
+        },
+        {
+          "id": "nq17",
+          "text": "Greyfang is dead? The cutters can work again. Hob is already looking for a boat to celebrate in.",
+          "when": {
+            "flag": "greyfangDefeated",
+            "notFlag": "reportedNed"
+          }
+        },
+        {
+          "id": "nq18",
+          "text": "A ledger marked for Gallowkeep, you say? That's Hask's stronghold, days north. I'd heard the name. I'd hoped it was a rumour.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "nq19",
+          "text": "No more tolls. The reed boats are crossing again. I'll have to repaint the sign. It says RUSTY now, for some reason.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "nq20",
+          "text": "Gallowkeep lies north through the Sedge Mines. Take the old tramway. And wear a hat; the roof leaks.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "nq21",
+          "text": "Someone cleared the culvert, I hear. Tilda says it howled like a ghost with a head cold.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "nq22",
+          "text": "Travelling company now? Good. Roads look shorter with someone to complain to.",
+          "when": {
+            "flag": "companion1Chosen"
+          }
+        }
+      ]
+    },
+    "fenna_thorne": {
+      "name": "Fenna Thorne",
+      "role": "keeper of the last temple lamp",
+      "personality": "gentle, cryptic, patient as old wax",
+      "voice": "soft riddles; light and oil imagery; calls the hero 'child'",
+      "events": [
+        {
+          "id": "fenna_intro",
+          "when": {
+            "notFlag": "fennaAsked"
+          },
+          "set": [
+            "fennaAsked"
+          ],
+          "say": [
+            "Come into the light, child. Closer. Hold out your left hand.",
+            "There. The lamp has leaned toward you since you crossed the bridge. It does not do that for tax collectors.",
+            "Ahn-Solis had four great lamps, one for each sunshard. This is the last that still burns, and it burns low. Bring me three glowreed, from the river road or the Wolfwood, and I can feed it enough to share a spark with you."
+          ]
+        },
+        {
+          "id": "fenna_return",
+          "when": {
+            "flag": "fennaAsked",
+            "itemCount": {
+              "glowreed": 3
+            },
+            "notFlag": "fennaDone"
+          },
+          "set": [
+            "fennaDone"
+          ],
+          "say": [
+            "Three stems, bright as the day they were planted. Thank you, child.",
+            "Watch the lamp. See it brighten? It's pointing north, toward a place where the earth has been hurt. The Sedge Mines. The first shard may lie near.",
+            "Take this. A small flame, borrowed. When the dark is deepest, hold it up. It cannot fight, but it remembers how to shine."
+          ],
+          "take": {
+            "glowreed": 3
+          },
+          "gold": 100,
+          "give": {
+            "temple_lamp": 1
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "ft01",
+          "text": "Come into the light, child. It's kinder than it looks."
+        },
+        {
+          "id": "ft02",
+          "text": "I've kept this lamp sixty years. The oil is older than I am, and the wick has outlasted every complaint."
+        },
+        {
+          "id": "ft03",
+          "text": "The old temple had four great lamps, one for each sunshard. Mine is a small cousin of those. A cousin with a temper."
+        },
+        {
+          "id": "ft04",
+          "text": "I tell the village the lamp is for sailors. It is. It's for something else as well, but nobody has asked."
+        },
+        {
+          "id": "ft05",
+          "text": "Ysolde Tallow and I wrote letters for thirty years. She writes of candles, I write of oil. We never agree on wicks."
+        },
+        {
+          "id": "ft06",
+          "text": "Mother Ruck brings me soup every Thursday. She calls it charity. It is perfectly good spy-work."
+        },
+        {
+          "id": "ft07",
+          "text": "A broad back, a sword, and a glow you haven't told me about. You carry more than you know.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ft08",
+          "text": "A mage. The old priests studied light with the same hunger. Hunger isn't always a mistake.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ft09",
+          "text": "A scout. The old pilgrims walked light too. They sang as they went, to keep the shadows from listening.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ft10",
+          "text": "A healer. I wonder whether the old hymns taught you. Hum me three notes. Humming is a kind of prayer.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ft11",
+          "text": "Nell sells the finest lamp-wick for miles. Keep it quiet that I said so. She'd raise the price."
+        },
+        {
+          "id": "ft12",
+          "text": "Gus hangs a lantern in the Anchor's window every night. A fisherman's superstition. I'd keep it. Superstitions are fossilised faith."
+        },
+        {
+          "id": "ft13",
+          "text": "Reeds that glow are called glowreed. They grow near old hurts. The river remembers what the land forgets."
+        },
+        {
+          "id": "ft14",
+          "text": "When the sun first dimmed, the lamp flickered once. Then it burned steady. It has been waiting since."
+        },
+        {
+          "id": "ft15",
+          "text": "The toll-men never climb the hill. They say the lamp makes their teeth ache.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "ft16",
+          "text": "The dock is free? Good. The ferries carry my oil from the south. Oil has been scarce this month.",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "ft17",
+          "text": "The grey wolf is gone. I heard the howling stop. A strange silence, as though something let go.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "ft18",
+          "text": "Go gently, child. The road north is long, and the sun is shorter each year.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "ft19",
+          "text": "The lamp leans toward you still. Keep it close. Light prefers company.",
+          "when": {
+            "flag": "fennaDone"
+          }
+        },
+        {
+          "id": "ft20",
+          "text": "Glowreed grows by the river road and in the Wolfwood. Three stems will do, and a quiet hour.",
+          "when": {
+            "flag": "fennaAsked",
+            "notFlag": "fennaDone"
+          }
+        },
+        {
+          "id": "ft21",
+          "text": "The thing in the culvert is dead? I knew it. The lamp told me. Two sorrows fused into one body.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "ft22",
+          "text": "Your friend stands close to you. Good. The mark in your palm brightens when you are not alone.",
+          "when": {
+            "flag": "companion1Chosen"
+          }
+        }
+      ]
+    },
+    "gus_pellam": {
+      "name": "Gus Pellam",
+      "role": "innkeeper of The Drowned Anchor",
+      "personality": "booming, jovial, fond of puns",
+      "voice": "fish and eel puns; loud laughter; food first",
+      "greet": [
+        "Welcome to the Drowned Anchor! A bed's twelve coins, and the eel is on the house. Not the whole eel. A slice.",
+        "Sit! Eat! Sleep! Pay! In whichever order makes you happiest."
+      ],
+      "bye": [
+        "Come back when you're hungry. Or damp. Or both.",
+        "Mind the doorstep. It's full of fish."
+      ],
+      "lines": [
+        {
+          "id": "gp01",
+          "text": "Welcome to the Drowned Anchor! Named for what the last owner did to the last anchor."
+        },
+        {
+          "id": "gp02",
+          "text": "Eel pie, eel stew, eel on a stick. If you don't care for eel, there's more eel."
+        },
+        {
+          "id": "gp03",
+          "text": "My grandfather ran this place fifty years. He never once told me the recipe. He told me where to dig for it. I've found three bones."
+        },
+        {
+          "id": "gp04",
+          "text": "Hear that gurgle? That's the river. Hear the louder gurgle? That's Hob after four pints."
+        },
+        {
+          "id": "gp05",
+          "text": "Nell says I owe her for last winter's candles. I say candles are an investment in atmosphere."
+        },
+        {
+          "id": "gp06",
+          "text": "Ned drinks tea here, never anything stronger. He says the river is strong enough for both of them."
+        },
+        {
+          "id": "gp07",
+          "text": "A sword-wielder! Excellent. The cellar rats have grown bold. I'd pay in pie.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "gp08",
+          "text": "A mage! Can you chill a barrel? The beer's warm, the eels are warm, and tempers are warm.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "gp09",
+          "text": "A scout, I'd wager. Light feet, wary eyes. Sit by the wall; you'll like the view of the door.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "gp10",
+          "text": "A healer. Bless you. I've a customer with a cough, a customer with a limp, and a customer with a grudge.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "gp11",
+          "text": "There's a chest by the wall. The previous owner left it. I've never opened it. It might be eels."
+        },
+        {
+          "id": "gp12",
+          "text": "Mother Ruck's lived here since before my father. She drinks warm milk and sells everyone's secrets."
+        },
+        {
+          "id": "gp13",
+          "text": "Tilda eats here and never pays. Then she brings me news. The news is worth it. Mostly."
+        },
+        {
+          "id": "gp14",
+          "text": "Hob's cousin Pip sleeps in the stable. Everyone's cousin sleeps somewhere in Reedhollow."
+        },
+        {
+          "id": "gp15",
+          "text": "Going after the Toll Captain? Good. I've paid a coin a day to a woman who has never delivered a thing.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "gp16",
+          "text": "The toll dock is clear! First free pint of the year, on the house. Don't tell anyone. They'll ask for two.",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "gp17",
+          "text": "The Alpha's dead! The wolves have gone quiet. I haven't heard a howl in hours, and I miss it. A little.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "gp18",
+          "text": "Fill your pack and fill your belly. The road north has no pies.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "gp19",
+          "text": "If you meet Hask, tell him Gus Pellam says the toll was five coin and one meal. He owes me a meal.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "gp20",
+          "text": "The culvert thing is dead? Tilda says it screamed like a kettle. I'm having a drink for the kettle.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "gp21",
+          "text": "Your friend ate three pies and said nothing. I like that. Reedhollow thrives on quiet appetites.",
+          "when": {
+            "flag": "companion1Chosen"
+          }
+        },
+        {
+          "id": "gp22",
+          "text": "The Captain's down? She owed me forty coins. I'll never see it. I'll tell the story forever.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "gp23",
+          "text": "The tinker who sells strange charms is about today, so the ferrymen say. Grab a coin purse and a short temper for haggling.",
+          "when": {
+            "merchantToday": true
+          }
+        }
+      ]
+    },
+    "nell_brackwater": {
+      "name": "Nell Brackwater",
+      "role": "shopkeeper of Brackwater Chandlery",
+      "personality": "sharp, exact, secretly fair",
+      "voice": "bookkeeping; percentages; clipped sentences",
+      "greet": [
+        "Prices are on the shelf. Haggling is in the contract, under 'Disappointment'.",
+        "Browse. Touch nothing you won't buy. I count everything twice."
+      ],
+      "bye": [
+        "Receipts are optional. Honesty isn't.",
+        "Close the door. Damp costs me money."
+      ],
+      "lines": [
+        {
+          "id": "nb01",
+          "text": "The books don't lie. People do. That's why I keep the books."
+        },
+        {
+          "id": "nb02",
+          "text": "Everything has a price. Even free advice. I'm giving you three coins' worth right now."
+        },
+        {
+          "id": "nb03",
+          "text": "Tobiah Crake in Brinewick owes me eleven coins from a spring transaction. I forgave him. Not the eleven coins."
+        },
+        {
+          "id": "nb04",
+          "text": "Reeds, rope and rumour. Those are the three things Reedhollow trades in. I only sell two."
+        },
+        {
+          "id": "nb05",
+          "text": "Ned says I'm tight with money. I say the river rewards the tight and drowns the generous."
+        },
+        {
+          "id": "nb06",
+          "text": "Gus buys lamp-wick from me by the barrel. The Anchor has never been brighter, nor his accounts darker."
+        },
+        {
+          "id": "nb07",
+          "text": "Gaff swords and reed-bound shields. Practical gear for people who plan to live.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "nb08",
+          "text": "Marshwood staves hum faintly, and I've never known why. I've decided it's a feature.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "nb09",
+          "text": "Light armour sells quickest to your kind. Quick sellers, quick buyers, quick to vanish.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "nb10",
+          "text": "Maces, mostly. The river breeds a certain sort of pilgrim, and they like blunt things.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "nb11",
+          "text": "I mark everything up forty per cent. Not greed. Tradition. Greed would be fifty."
+        },
+        {
+          "id": "nb12",
+          "text": "Hob's account runs eleven pages. All of it wolf-related. I'm beginning to believe him."
+        },
+        {
+          "id": "nb13",
+          "text": "Tilda pays in gossip, which I value at par and then discount for accuracy."
+        },
+        {
+          "id": "nb14",
+          "text": "I weigh every coin twice. Once for fairness, once for nerves."
+        },
+        {
+          "id": "nb15",
+          "text": "The toll-men have halved my trade. I raised my prices to compensate. That hasn't helped. Customers can't count, but they can leave.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "nb16",
+          "text": "Dock cleared, trade restored, prices stay. Business principles, you understand.",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "nb17",
+          "text": "The wolf's gone? I'll restock the cutters' knives. They bought every one in a week of terror.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "nb18",
+          "text": "North, then? I have good boots in the back. Not on the shelf, because they're the only good pair.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "nb19",
+          "text": "Come back with a story and I might knock off a coin. A small coin. A very small coin.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "nb20",
+          "text": "The Captain's ledger would make fascinating reading. Bring me a copy if you can. Professional curiosity.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "nb21",
+          "text": "A rare monster under the culvert? I'd have loved the inventory. Imagine what the fangs weigh.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "nb22",
+          "text": "Two of you now? Then you'll need twice the rope. I'll sell the second coil at cost. Ish.",
+          "when": {
+            "flag": "companion1Chosen"
+          }
+        }
+      ]
+    },
+    "hob_tanner": {
+      "name": "Hob Tanner",
+      "role": "reed-cutter",
+      "personality": "fatalistic, dry, loyal to his crew",
+      "voice": "short flat sentences; river weather; understated dread",
+      "lines": [
+        {
+          "id": "ht01",
+          "text": "Reeds don't care who cuts them. They grow back. It's the only decent work in Reedhollow."
+        },
+        {
+          "id": "ht02",
+          "text": "Forty years cutting. Seen the river flood nine times and the tax-men come eleven. Floods are kinder."
+        },
+        {
+          "id": "ht03",
+          "text": "Wolves never came into the beds till this spring. Now they come every dusk, as if they'd been told where to look."
+        },
+        {
+          "id": "ht04",
+          "text": "My cousin Pip took a bite to the shoulder. He says it was a very big dog. I say wolf. We're both too proud to agree."
+        },
+        {
+          "id": "ht05",
+          "text": "Gus's pie is a kindness. His beer is a crime. I take both."
+        },
+        {
+          "id": "ht06",
+          "text": "Mother Ruck knitted me a scarf last winter. Eight feet long. I wore it twice, then used it as a bandage."
+        },
+        {
+          "id": "ht07",
+          "text": "Good arms. If you want honest work between dragons, there's reeds.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ht08",
+          "text": "Can you dry a reed-bed on command? No? Then you're no use at this trade.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ht09",
+          "text": "Light step. You'd cut quietly. Loud cutting scares the heron, and the heron talks.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ht10",
+          "text": "A healer would be welcome in the beds. Three men with bites, and a fourth with opinions.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ht11",
+          "text": "The wolves come from the Wolfwood, off the river road to the north. There's a path through the pines. I wouldn't take it without a good axe."
+        },
+        {
+          "id": "ht12",
+          "text": "Fenna says glowreed grows in the dark places by the road. I've seen it. I took it for a ghost."
+        },
+        {
+          "id": "ht13",
+          "text": "Tilda runs messages faster than any horse. Runs her mouth faster too."
+        },
+        {
+          "id": "ht14",
+          "text": "Nell charges me for knives, then again to sharpen them. A fair system, if you're Nell."
+        },
+        {
+          "id": "ht15",
+          "text": "Go carefully in the Wolfwood. The big one sits on a boulder, watching. I've seen its eyes at dusk. They're not wolf eyes.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "ht16",
+          "text": "Dock's free? Good. Now the beds. We lost a week's cutting to the grey one.",
+          "when": {
+            "flag": "tollCleared",
+            "notFlag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "ht17",
+          "text": "The wolf's dead? Right. I'll bring the knives out. First time in a month I'll cut without looking over my shoulder.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "ht18",
+          "text": "Funny thing. Pip says the wolf wore a collar. Iron links. Somebody chained that beast, then let it go.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "ht19",
+          "text": "North, is it? Take a walking stick. The tramway's rotten in places. The reeds up there bite.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "ht20",
+          "text": "If you meet my other cousin on your travels, he's the one with the hat and the debts.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "ht21",
+          "text": "The culvert's quiet now. I used to hear it screech at night and put my pillow over my head. I've no pillow left to blame.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "ht22",
+          "text": "Two on the road beats one. Three is a crowd, four a festival.",
+          "when": {
+            "flag": "companion1Chosen"
+          }
+        }
+      ]
+    },
+    "mother_ruck": {
+      "name": "Mother Ruck",
+      "role": "village elder and knitter",
+      "personality": "sly, warm, endlessly observant",
+      "voice": "marsh sayings; knitting asides; calls everyone dear",
+      "lines": [
+        {
+          "id": "mr01",
+          "text": "Come closer, dear. I don't bite. I only knit near people and remember things."
+        },
+        {
+          "id": "mr02",
+          "text": "When the river runs brown the fish speak low. When it runs clear the gossips speak loud. This year it's clear."
+        },
+        {
+          "id": "mr03",
+          "text": "Seventy years in Reedhollow. I've outlived three Harbourmasters, two floods and one husband. The husband was the worst."
+        },
+        {
+          "id": "mr04",
+          "text": "Ned thinks I don't see him sneaking Gus's pie into his pockets. I see everything. I knit about it."
+        },
+        {
+          "id": "mr05",
+          "text": "Fenna and I played cards for forty years. She cheats. I let her. It's the only reason she visits."
+        },
+        {
+          "id": "mr06",
+          "text": "Nell keeps accounts. I keep memories. The memories pay better."
+        },
+        {
+          "id": "mr07",
+          "text": "A sturdy one. My Harold was sturdy. Then he sat on a wasps' nest. Do be careful, dear.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mr08",
+          "text": "Magic, is it? Fenna says magic was once a kind of listening. I never listened. I mostly talked.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mr09",
+          "text": "A quiet one. Quiet ones hear everything. I'd have you at my table, dear. I'd pay in biscuits.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mr10",
+          "text": "A healer, bless you. My knees say nothing, but my elbow screams in the rain.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mr11",
+          "text": "Tilda swears a drain under the river road howls at night. I told her it's the wind. She says wind doesn't scream your name."
+        },
+        {
+          "id": "mr12",
+          "text": "Hob is a good man who thinks he's a bad poet. He's neither. He's a reed-cutter."
+        },
+        {
+          "id": "mr13",
+          "text": "Gus's eel pie is a war crime. I eat two slices every Thursday."
+        },
+        {
+          "id": "mr14",
+          "text": "Never trust a ferryman who doesn't whistle, and never trust a tax-man who does."
+        },
+        {
+          "id": "mr15",
+          "text": "Those toll-men have no manners. One stepped on my cat. The cat stepped back. Hard.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "mr16",
+          "text": "The dock's clear! I knitted a flag. It's grey and shapeless. It says FREE, in wool.",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "mr17",
+          "text": "The wolf's gone? Good. Pip's hurt, Hob's fretting, and the cutters can finally nap in peace.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "mr18",
+          "text": "You'll be off north? Take a scarf. I've seven. Seven, because I don't care to count.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "mr19",
+          "text": "If you come back with stories, I'll have tea ready. And biscuits. And a very sharp ear.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "mr20",
+          "text": "The Captain's finished? She was the worst. Her mother was the same. Rotten apples fall near a rotten tree.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "mr21",
+          "text": "The culvert's silent. I slept nine hours. I dreamt of cabbages. I'm cross about it.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "mr22",
+          "text": "You've got a friend now, dear. Don't lose them to the marsh. The marsh keeps what it takes.",
+          "when": {
+            "flag": "companion1Chosen"
+          }
+        }
+      ]
+    },
+    "tilda_quick": {
+      "name": "Tilda Quick",
+      "role": "courier",
+      "personality": "fast-talking, restless, quietly kind",
+      "voice": "river slang; run-on sentences; boasts about speed",
+      "lines": [
+        {
+          "id": "tq01",
+          "text": "Name's Tilda, and I've been everywhere twice. Mostly by accident."
+        },
+        {
+          "id": "tq02",
+          "text": "Fastest courier on the river. Slowest when someone asks about my fees."
+        },
+        {
+          "id": "tq03",
+          "text": "I run messages for Ned, Nell, Gus and Fenna. I run away from Hob. He wants me to carry reeds."
+        },
+        {
+          "id": "tq04",
+          "text": "Roads are overrated. I prefer rooftops, jetties, and anything with a bad reputation."
+        },
+        {
+          "id": "tq05",
+          "text": "Avoid the toll dock. Unless you like paying five coin to be insulted."
+        },
+        {
+          "id": "tq06",
+          "text": "Mags in Brinewick still owes me a favour. I once rowed her ferry through a storm. She cried. Then she raised my fee."
+        },
+        {
+          "id": "tq07",
+          "text": "Strong back, steady feet. You'd make a solid courier, if you could lose the armour and the dignity.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "tq08",
+          "text": "A mage! Can you teleport? No? Pity. I'd hire you for the long routes.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "tq09",
+          "text": "Another runner! We should race. Winner buys pie. Loser tells Gus the truth about his eels.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "tq10",
+          "text": "A healer. Handy. Couriers collect blisters, bites and bruises in about that order.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "tq11",
+          "text": "There's a culvert south of the river road. Water drains out, and so does a lot of screaming. Bats, wolves, something in between. I only went in once."
+        },
+        {
+          "id": "tq12",
+          "text": "I once found a pie under a floorboard in the Anchor. Twenty years old. Gus claims it was a fossil."
+        },
+        {
+          "id": "tq13",
+          "text": "Hask's men keep a ledger system, I hear. Every toll, every crate, every bribe. I'd steal it if I could carry it."
+        },
+        {
+          "id": "tq14",
+          "text": "Fenna's lamp makes my eyes water. In a good way. Like standing near a very honest person."
+        },
+        {
+          "id": "tq15",
+          "text": "The Captain keeps her ledger at the end of the dock. Take it, if you can. It's the only honest thing she owns.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "captainDefeated"
+          }
+        },
+        {
+          "id": "tq16",
+          "text": "You got the ledger! Show me. No, don't. I'd steal it. I can't help myself.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "tq17",
+          "text": "The dock's open! I ran across it twice, just for the feeling.",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "tq18",
+          "text": "The wolf's down? Good. I've been cutting through the Wolfwood for weeks to dodge the dock. Never taking the pines again.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "tq19",
+          "text": "Heading north? Take the tramway. Slow, but nobody collects tolls on rotten planks.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "tq20",
+          "text": "If you see Hask, tell him I said hello. Then run. Not because I said it. Because he's Hask.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "tq21",
+          "text": "The thing in the culvert's gone? I'll never hear that scream at night again. I'm almost sad. It kept me running.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "tq22",
+          "text": "Company, eh? Good. A runner needs a partner who can keep up. I mean, I don't have one. But I'd like to.",
+          "when": {
+            "flag": "companion1Chosen"
+          }
+        }
+      ]
+    },
+    "brannoc": {
+      "name": "Brannoc Hale",
+      "role": "disgraced former gate warden",
+      "personality": "gruff, guilt-ridden, dryly funny",
+      "voice": "dour understatement; shield and wall metaphors",
+      "events": [
+        {
+          "id": "brannoc_intro5",
+          "when": {
+            "flag": "reachedGallowkeep",
+            "notFlag": "met_brannoc"
+          },
+          "set": [
+            "met_brannoc"
+          ],
+          "say": [
+            "Ridgewatch camp. A cold wind and a colder purpose. If you need a shield for the ridge, I am already carrying one.",
+            "Say the word and I will stand in front of you."
+          ]
+        },
+        {
+          "id": "brannoc_intro",
+          "when": {
+            "notFlag": "met_brannoc"
+          },
+          "set": [
+            "met_brannoc"
+          ],
+          "say": [
+            "You're looking at me. Everyone does. Big, scarred, standing in the rain. It's the face of someone who made a mistake.",
+            "I was warden of the Hollow Gate, north of here. A bandit king rode through with ten wagons and a purse. I took the purse. He called himself Hask. That purse bought my pension and cost me my honour.",
+            "I've been trying to buy it back with work ever since. If you're going after Hask, I'll carry the shield. Just ask."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "bh01",
+          "text": "Brannoc Hale. Former gate warden. Currently a puddle with opinions."
+        },
+        {
+          "id": "bh02",
+          "text": "Twenty years I carried a shield. It never once asked me a question. That's why I liked it."
+        },
+        {
+          "id": "bh03",
+          "text": "Rain's good for thinking. It gets inside your helmet and talks sense."
+        },
+        {
+          "id": "bh04",
+          "text": "I can fight, I can lift, and I can stand still very convincingly. I'm told that last one is a talent."
+        },
+        {
+          "id": "bh05",
+          "text": "Gus gave me a pie. I ate it. Then I apologised to the pie. It didn't deserve me."
+        },
+        {
+          "id": "bh06",
+          "text": "Six years I've avoided Hask. He's avoided me. We've both been very polite about it."
+        },
+        {
+          "id": "bh07",
+          "text": "A mage. A quiet one, I hope. The last mage I travelled with narrated everything.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "bh08",
+          "text": "A scout. Good. I'm a noisy man, and I'll need someone to cover my footsteps.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "bh09",
+          "text": "A healer. Excellent. I get hit a lot. It's a choice.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "bh10",
+          "text": "Hilde Brant in Brinewick wrote me once. I never opened it. I'm told it was warm. I'm afraid of warm letters."
+        },
+        {
+          "id": "bh11",
+          "text": "I know the Hollow Gate better than my own front door. I wouldn't set foot in it for twenty gold now."
+        },
+        {
+          "id": "bh12",
+          "text": "Ned says the Toll Captain is called Vane. She and I served under the same sergeant. She was better at hiding it."
+        },
+        {
+          "id": "bh13",
+          "text": "A wall is just a decision to be stubborn. I'm very good at walls."
+        },
+        {
+          "id": "bh14",
+          "text": "If I ever take my helmet off, don't be alarmed. It's just my face."
+        },
+        {
+          "id": "bh15",
+          "text": "Ned wants the dock cleared. I'd go. I'd also want someone to tell me it isn't a mistake.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "bh16",
+          "text": "The dock's clear. I'd like to say I didn't hold my breath. I did.",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "bh17",
+          "text": "A wolf in a collar. That's Hask's work. He has a way with collars. And chains. And people.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "bh18",
+          "text": "North, then. Through the mines to Gallowkeep. I know the gate. I know the man. I'd rather know neither.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "bh19",
+          "text": "The Captain's ledger. Send to Gallowkeep. I know that handwriting. It's on my old pension paper.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "bh20",
+          "text": "Something screamed under the culvert and now it's gone. Pity. I've heard worse company.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "bh21",
+          "text": "Ridgewatch. A camp of tired soldiers under a chapel full of Hask's chains. I know the smell. It is the smell of a wall holding on.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "bh22",
+          "text": "Captain Ysra reminds me of my old commander. She counts her men every night. I stopped counting mine years ago.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "bh23",
+          "text": "Up there is the gate I should have held. I will not fail it twice. Let me carry the shield through that yard.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "bh24",
+          "text": "Gorrak's orcs don't scare me. Hask's smile does. A man who smiles while he buys a gate is a man who plans to sell it.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        }
+      ]
+    },
+    "iselle": {
+      "name": "Iselle Varn",
+      "role": "scholar of sunken-temple glyphs",
+      "personality": "anxious, brilliant, secretly brave",
+      "voice": "parenthetical footnotes; apologies; precise vocabulary",
+      "events": [
+        {
+          "id": "iselle_intro5",
+          "when": {
+            "flag": "reachedGallowkeep",
+            "notFlag": "met_iselle"
+          },
+          "set": [
+            "met_iselle"
+          ],
+          "say": [
+            "I came to Ridgewatch because the glyphs came here. (Note: so did you. That cannot be an accident.)",
+            "Please ask, before I talk myself out of offering. (Footnote: I will.)"
+          ]
+        },
+        {
+          "id": "iselle_intro",
+          "when": {
+            "notFlag": "met_iselle"
+          },
+          "set": [
+            "met_iselle"
+          ],
+          "say": [
+            "Oh! Hello. I wasn't, that is, I was reading. (See note: I am always reading.) You're the traveller from Tallow Ford with the... hand.",
+            "Sorry. Fenna lets me study the lamp. It leans toward you. That is, toward the hand. It's extremely rude of me to stare. (Footnote: I am staring.)",
+            "I've spent four years decoding sunken-temple glyphs from rubbings. They say the sun was a vessel. A person, even. I don't know what that means. I'd very much like to find out. If you'd have me."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "iv01",
+          "text": "Iselle Varn, scholar. Well, scholar-ish. Well, someone with a great many notebooks."
+        },
+        {
+          "id": "iv02",
+          "text": "I annotate everything. Last week I annotated a sandwich. It had three footnotes and a bibliography."
+        },
+        {
+          "id": "iv03",
+          "text": "The temple glyphs run left to right, then right to left. A scribe's joke, I think. Or an apology."
+        },
+        {
+          "id": "iv04",
+          "text": "I get nervous in crowds. Not from fear. Crowds simply don't have indexes."
+        },
+        {
+          "id": "iv05",
+          "text": "Fenna lets me read by her lamplight. In return I dust the shelves. I'm a terrible duster. She's a patient woman."
+        },
+        {
+          "id": "iv06",
+          "text": "Mother Ruck keeps giving me biscuits. I eat them to be polite. They have the texture of regret."
+        },
+        {
+          "id": "iv07",
+          "text": "A fighter? Good, good. I'd like to stand behind someone broad and take notes.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "iv08",
+          "text": "A scout. You'll see what I miss. I miss quite a lot. (Footnote: I'm missing several footnotes now.)",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "iv09",
+          "text": "A healer! Do you know the Dawn Litany? I've only read it. Never heard it sung.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "iv10",
+          "text": "The glyph for sun and the glyph for hand are the same, in the oldest rubbings. I'm trying very hard not to look at your hand."
+        },
+        {
+          "id": "iv11",
+          "text": "Nell won't sell me ink on credit. She says scholars are poor risks. She's right, but it's rude."
+        },
+        {
+          "id": "iv12",
+          "text": "I can cast a few spells. Mostly small ones. Mostly when I'm embarrassed. Embarrassment is a surprisingly good fuel."
+        },
+        {
+          "id": "iv13",
+          "text": "Ned thinks I'm a spy. I told him I'm a scholar. He said that's what a spy would say. I'm hurt, and slightly flattered."
+        },
+        {
+          "id": "iv14",
+          "text": "Whenever I read a map, the world rearranges itself. It's very inconvenient."
+        },
+        {
+          "id": "iv15",
+          "text": "Toll dock, wolves, bandits. (Footnote: I'm very scared.) But I'd go, if you asked. I'd just walk behind you.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "iv16",
+          "text": "The dock's clear! I watched from the hill. I'd never admit I shut my eyes. Every time.",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "iv17",
+          "text": "A collared wolf. I'd like to study the links. They're stamped. That's a smith's mark. We could trace it.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "iv18",
+          "text": "North, then. Sedge Mines. The glyphs on the old tramway are the oldest I've read. May I come? I'll be very quiet. (Footnote: I won't.)",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "iv19",
+          "text": "Fenna gave you the lamp! I read the inscription on its base. It says Carry Me. I think that's the loveliest instruction I've ever read.",
+          "when": {
+            "flag": "fennaDone"
+          }
+        },
+        {
+          "id": "iv20",
+          "text": "Send to Gallowkeep, over and over. It reads like a prayer. A very bad one.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "iv21",
+          "text": "The chapel's east window (see note: it faces the sunrise, deliberately) is a sunstone lens. Hask has been aiming it. At what, I cannot say.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "iv22",
+          "text": "I counted the glyphs on the camp's old gate. They match the Sedge seam. (Footnote: I have never been so alarmed by a coincidence.)",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "iv23",
+          "text": "Captain Ysra asked if I could read the chapel's inscriptions from here. I said yes, then no, then possibly. She gave me tea.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "iv24",
+          "text": "If you take me up the ridge, I promise to keep my apologies to a minimum. (Footnote: I do not promise this.)",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        }
+      ]
+    },
+    "tam": {
+      "name": "Tam Quillon",
+      "role": "smuggler's kid and river runner",
+      "personality": "cheerful, cocky, fiercely loyal",
+      "voice": "boasts; quick patter; underworld slang",
+      "events": [
+        {
+          "id": "tam_intro5",
+          "when": {
+            "flag": "reachedGallowkeep",
+            "notFlag": "met_tam"
+          },
+          "set": [
+            "met_tam"
+          ],
+          "say": [
+            "Ridgewatch! Everyone here is tired, tidy and very, very armed. My kind of place, probably.",
+            "Pick me, and the next toll is on me. Metaphorically."
+          ]
+        },
+        {
+          "id": "tam_intro",
+          "when": {
+            "notFlag": "met_tam"
+          },
+          "set": [
+            "met_tam"
+          ],
+          "say": [
+            "Well, well! A hero! I knew someone would come. Name's Tam, best runner on the river. Don't tell Tilda.",
+            "I know every ferry, every back-channel, every toll-dodge between here and the Sedge. Six weeks I've been dodging Hask's men. Got a very good sense of where they aren't.",
+            "I'd like to see the dock cleared. I'd like to see Hask in a ditch. And I'd like a share of whatever's in that ledger. Ask, and I'm in."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "tm01",
+          "text": "I'm Tam Quillon, smuggler's kid. Retired. By which I mean unemployed."
+        },
+        {
+          "id": "tm02",
+          "text": "Born on a barge. Moving by the time I could walk. Haven't stopped since."
+        },
+        {
+          "id": "tm03",
+          "text": "Dad said never carry what you can't outrun. I took it to heart. I run from everything now."
+        },
+        {
+          "id": "tm04",
+          "text": "I know a path through the reeds no tax-man's ever found. It's mostly mud. And snakes. And regret."
+        },
+        {
+          "id": "tm05",
+          "text": "Gus lets me sleep in the stable. I pay by fixing the roof. The roof is a lie."
+        },
+        {
+          "id": "tm06",
+          "text": "Tilda thinks she's faster than me. She isn't. But she's louder, and sometimes that's enough."
+        },
+        {
+          "id": "tm07",
+          "text": "A fighter! Great. I'll scout, you smash, and we split the loot. Seventy-thirty. In my favour.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "tm08",
+          "text": "A mage! Can you make a distraction? Bright lights, big noises? My favourite kind of magic.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "tm09",
+          "text": "A healer. Perfect. I get scrapes. I get a lot of scrapes. It's part of the trade.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "tm10",
+          "text": "I once smuggled a whole cheese through a toll gate. In a hat. A very large hat."
+        },
+        {
+          "id": "tm11",
+          "text": "The Toll Captain has guards on every pier. But there's a gap by the crates, third plank from the end. I'd show you, if you asked."
+        },
+        {
+          "id": "tm12",
+          "text": "Ned says smuggling's a crime. I say it's a lifestyle. He says that's what a smuggler would say."
+        },
+        {
+          "id": "tm13",
+          "text": "Hask's crew took my boat. Renamed it Revenue. I'd like it back. And a very long conversation."
+        },
+        {
+          "id": "tm14",
+          "text": "If you need something found, I'm your person. If you need something lost, I'm still your person. I'm very flexible."
+        },
+        {
+          "id": "tm15",
+          "text": "The toll dock's the place to start. I'd go in the back. Less singing, more sneaking.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "tm16",
+          "text": "Dock's clear! I can go home! Well, I haven't got a home. But I can go to the dock!",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "tm17",
+          "text": "The wolf's dead? I always wondered how a beast that size learned to avoid traps. Now I know. Someone was teaching it.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "tm18",
+          "text": "North? The Sedge Mines? I know the back way. It's wet. And low. And I'm not telling you the rest.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "tm19",
+          "text": "The Captain had my boat's papers in that ledger. I'll want those back. Don't read them. They're embarrassing.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "tm20",
+          "text": "The screaming thing's dead? Ha! I knew it would get what it deserved. I'm lying, I was hiding in the reeds.",
+          "when": {
+            "flag": "shriekwolfDefeated"
+          }
+        },
+        {
+          "id": "tm21",
+          "text": "A war camp! Nice and loud and nobody asking where I got my boots. I like it already.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "tm22",
+          "text": "I scouted the ridge pass before dawn. Two boars, a lot of orcs, and one very rude crow. Easy.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "tm23",
+          "text": "Captain Ysra offered me a place in the Guard. I said I work for tips. She said that is what the Guard pays in. Tempting.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "tm24",
+          "text": "Gallowkeep has a back wall, and every back wall has a loose stone. Take me, and I will find it.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        }
+      ]
+    },
+    "odalys": {
+      "name": "Odalys Reeve",
+      "role": "sun-priestess of a burned chapel",
+      "personality": "calm, blunt, secretly funny",
+      "voice": "measured sentences; hymn fragments; bone-dry humour",
+      "events": [
+        {
+          "id": "odalys_intro5",
+          "when": {
+            "flag": "reachedGallowkeep",
+            "notFlag": "met_odalys"
+          },
+          "set": [
+            "met_odalys"
+          ],
+          "say": [
+            "Ridgewatch camp. The tents face the chapel as if in prayer. They are not far wrong.",
+            "Ask, and I will carry the lantern."
+          ]
+        },
+        {
+          "id": "odalys_intro",
+          "when": {
+            "notFlag": "met_odalys"
+          },
+          "set": [
+            "met_odalys"
+          ],
+          "say": [
+            "You have the look of someone who doesn't believe in luck. Good. Neither do I. I believe in tide tables and the quiet kind of prayer.",
+            "I was a sun-priestess at the Cinder Chapel until it burned. Nine years ago. I've walked the shorelines since, singing the Dawn Litany to the sea. The sea is a poor audience, but it doesn't heckle.",
+            "Fenna says the lamp bends your way. I'd like to see where it points. If you'll have me."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "od01",
+          "text": "Odalys Reeve. Priestess, healer, and, as it turns out, easily bored."
+        },
+        {
+          "id": "od02",
+          "text": "The old litany has a hundred and seven verses. I know ninety-three. The other fourteen were in a chapel that burned."
+        },
+        {
+          "id": "od03",
+          "text": "I don't pray for victory. I pray for the people who are about to be hurt, and the ones who are about to do it."
+        },
+        {
+          "id": "od04",
+          "text": "Nell sells me candles at cost. She calls it a donation. I call it a tax on faith."
+        },
+        {
+          "id": "od05",
+          "text": "I've healed six broken arms, four fevers, and one very persistent hiccup. The hiccup nearly beat me."
+        },
+        {
+          "id": "od06",
+          "text": "Mother Ruck gave me a scarf. Thirty feet long. I wear it as a stole. The bishops would faint."
+        },
+        {
+          "id": "od07",
+          "text": "A warrior. Good. I've yet to meet one who didn't need healing within the hour.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "od08",
+          "text": "A mage. I've seen fire cast by priests and by wizards. The wizards' is usually louder.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "od09",
+          "text": "A scout. You and I will get along. We both prefer silence to speeches, and doors to altars.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "od10",
+          "text": "Do you believe the sun is dying? I don't. I believe it's waiting. For us, perhaps. Or for an answer to a very old question."
+        },
+        {
+          "id": "od11",
+          "text": "Ansel in Brinewick sends me hymn fragments by post. His handwriting is dreadful. The hymns are lovely."
+        },
+        {
+          "id": "od12",
+          "text": "Fenna's lamp is older than the chapel I served. I asked where it came from. She said, from wherever you left it."
+        },
+        {
+          "id": "od13",
+          "text": "I laugh at funerals. I can't help it. The dead would have wanted it. They'd have wanted it louder."
+        },
+        {
+          "id": "od14",
+          "text": "I wear grey because it's forgiving. White shows blood, black shows dust. Grey keeps secrets."
+        },
+        {
+          "id": "od15",
+          "text": "The bandits tax pilgrims too. Five coin to cross a river in prayer. I told the Captain that's a sin. She said it's a fee.",
+          "when": {
+            "flag": "talkedNed",
+            "notFlag": "tollCleared"
+          }
+        },
+        {
+          "id": "od16",
+          "text": "The dock's clear. I said a prayer for the Captain's hands. They were never going to hold much.",
+          "when": {
+            "flag": "tollCleared"
+          }
+        },
+        {
+          "id": "od17",
+          "text": "The wolf wore iron. I've seen that collar before, in a chapel basement. Hask's people were there, and they weren't praying.",
+          "when": {
+            "flag": "greyfangDefeated"
+          }
+        },
+        {
+          "id": "od18",
+          "text": "North through the mines. Gallowkeep was the old Dawn chapel. It's where Hask hides what he stole.",
+          "when": {
+            "flag": "reportedNed"
+          }
+        },
+        {
+          "id": "od19",
+          "text": "The lamp tilts your way now. I feel it too, in my left hand. A small warmth, like a prayer answered slowly.",
+          "when": {
+            "flag": "fennaDone"
+          }
+        },
+        {
+          "id": "od20",
+          "text": "Send to Gallowkeep. I knew it. The chapel where I trained. It isn't a ruin any more. It's a fortress.",
+          "when": {
+            "flag": "captainDefeated"
+          }
+        },
+        {
+          "id": "od21",
+          "text": "Gallowkeep. I knew that chapel as a girl. The altar, the east window, the cold flagstones. I would know the creak of the door in my sleep.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "od22",
+          "text": "Brother Tobiel and I traded psalms last night. He has a better voice. I have a better memory. It was an even match.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "od23",
+          "text": "Hask has turned a place of morning into a place of chains. I intend to walk through it and light a candle.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        },
+        {
+          "id": "od24",
+          "text": "I will go with you. A chapel that was burned once deserves a witness who remembers the hymn.",
+          "when": {
+            "flag": "reachedGallowkeep"
+          }
+        }
+      ]
+    }
+  }
+}

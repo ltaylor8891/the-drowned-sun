@@ -1,0 +1,1573 @@
+{
+  "npcs": {
+    "arlo_vask": {
+      "name": "Arlo Vask",
+      "role": "master blacksmith",
+      "personality": "terse, proud, grumbling",
+      "voice": "few words; forge and iron metaphors",
+      "greet": [
+        "Look at the rack. Buy something or leave. Lovely weather for neither.",
+        "Iron's hot. So's my temper. Pick one."
+      ],
+      "bye": [
+        "Mind the door. It's heavier than it looks.",
+        "Come back when that edge dulls. It will."
+      ],
+      "events": [
+        {
+          "id": "arlo_ask",
+          "when": {
+            "notFlag": "hammerAsked"
+          },
+          "set": [
+            "hammerAsked"
+          ],
+          "say": [
+            "Hm. Customer. I've stock, but no hammer. A smith with no hammer is a poet with no pen.",
+            "Goblins took it. The tongs, too, and the apprentice's lunch. Their chief's hung my sign over his gate, I hear.",
+            "Bring the hammer back. It has a black handle, and a notch where I dropped it on my father's foot. I'll pay. And I'll teach you the forge, once my own shop is in order."
+          ]
+        },
+        {
+          "id": "arlo_return",
+          "when": {
+            "hasItem": "smith_hammer",
+            "notFlag": "hammerReturned"
+          },
+          "set": [
+            "hammerReturned",
+            "job_blacksmith_unlocked"
+          ],
+          "say": [
+            "The notch. The black grip. That's it. That's my hammer.",
+            "Hm. I'm not a talker. Take this, and the coin. The forge is yours to learn: choose Jobs when you talk to me. Two trades at a time, mind. Bring me iron ore and gold, and I'll let you work the anvil. Not today. Today, I hit things."
+          ],
+          "take": {
+            "smith_hammer": 1
+          },
+          "gold": 120,
+          "give": {
+            "hi_potion": 1
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "av01",
+          "text": "Steel remembers every blow. So do I. Speak up or buy something."
+        },
+        {
+          "id": "av02",
+          "text": "Iron is honest. It does as it's told and shows you every mistake. People could learn from it."
+        },
+        {
+          "id": "av03",
+          "text": "Don't touch the blade. Don't touch the handle. Don't touch the cat. The cat has a temper."
+        },
+        {
+          "id": "av04",
+          "text": "My father taught me one rule: never quench in a hurry. I've lost three swords learning why."
+        },
+        {
+          "id": "av05",
+          "text": "Tobiah says hello? Of course he does. Did he charge you for it? He charges for greetings."
+        },
+        {
+          "id": "av06",
+          "text": "Cousin Tobiah sells my work for double and tells folk it's his. I let him. The family eats."
+        },
+        {
+          "id": "av07",
+          "text": "A good edge isn't sharp, it's patient. Anyone can sharpen. Few can wait."
+        },
+        {
+          "id": "av08",
+          "text": "Bram next door says soot is bad for the lungs. I say lungs are bad for soot."
+        },
+        {
+          "id": "av09",
+          "text": "That arm's been swinging steel a while. Good. A blade wants a partner, not a master.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "av10",
+          "text": "Staves are a carpenter's work, mostly. I do the ferrule. Sorry. Did I interrupt an arcane thought?",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "av11",
+          "text": "Daggers, now. Light, fast, no room for error. I like a customer who respects thin metal.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "av12",
+          "text": "Maces. Honest work. You hit a thing and it stops. I wish more jobs were like that.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "av13",
+          "text": "Goblins don't smelt. They scrap. Whatever they've taken, they'll beat into something worse."
+        },
+        {
+          "id": "av14",
+          "text": "Ysolde next door borrows my bellows after dark. Don't tell her I know. She hums while she works."
+        },
+        {
+          "id": "av15",
+          "text": "I forged the Ford's weathervane. It points the wrong way on purpose. Keeps the wind guessing."
+        },
+        {
+          "id": "av16",
+          "text": "Grindle's old sword hangs on my wall. He swears it's killed a hundred men. It's killed four rabbits and one very surprised door."
+        },
+        {
+          "id": "av17",
+          "text": "Still no hammer. I've been shaping nails with a rock. The nails are insulted.",
+          "when": {
+            "flag": "hammerAsked",
+            "notFlag": "hammerReturned"
+          }
+        },
+        {
+          "id": "av18",
+          "text": "So you found the camp. Check the tents. Goblins hoard whatever shines, and my hammer shines.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "av19",
+          "text": "The chief's dead? Good. I'll sleep tonight. That quarry wants cleaning, and so does every goblin's bedroll.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "av20",
+          "text": "The Reeve says you're bound for Reedhollow. Carry good iron. The marsh rusts everything but spite.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "av21",
+          "text": "The hammer rings true again. First strike goes on a nail, second on your blade, should you want one.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        },
+        {
+          "id": "av22",
+          "text": "Someone's cleared the web hollow? I'd heard something nested there, all fang and silk. I've a few ideas for that fang.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "av23",
+          "text": "Quality costs. Don't complain to me. Complain to the iron."
+        }
+      ]
+    },
+    "corwin_pask": {
+      "name": "Reeve Corwin Pask",
+      "role": "reeve of Tallow Ford",
+      "personality": "fussy, decent, buried in procedure",
+      "voice": "committee language; triplicate; polite understatement",
+      "events": [
+        {
+          "id": "corwin_intro",
+          "when": {
+            "notFlag": "talkedCorwin"
+          },
+          "set": [
+            "talkedCorwin"
+          ],
+          "say": [
+            "Ah! A visitor. Welcome to Tallow Ford. Do mind the floor; it was waxed this morning, by committee.",
+            "I'll be brief, as the Ford is under attack. Goblins. Not the usual three-sheep-and-a-grudge sort. An organised camp, east off the North Road, under a self-styled Chief who has taken over the old quarry.",
+            "Our watch is eleven people, four of them on leave. I can offer a modest bounty, a letter of thanks, and my personal gratitude, which is considerable.",
+            "Find the camp. Stop the Chief. The Ford will remember it, or at least minute it."
+          ]
+        },
+        {
+          "id": "corwin_report",
+          "when": {
+            "flag": "chiefDefeated",
+            "notFlag": "reportedCorwin"
+          },
+          "set": [
+            "reportedCorwin",
+            "chapter_2_done"
+          ],
+          "say": [
+            "The Chief is dead? And that is his crown on my table? I... excuse me, I shall need to sit. Committees have convened for less.",
+            "A tide-chart, with sites marked in red. Reedhollow circled. And Hask, you say. The Bogwarden. Hm.",
+            "This lies beyond the Ford's remit, but not beyond its conscience. Take the bounty. And these, from the town chest, for the road."
+          ],
+          "gold": 250,
+          "give": {
+            "hi_potion": 2
+          },
+          "autosave": true,
+          "banner": "Chapter 2 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "cp01",
+          "text": "Welcome to Tallow Ford. Please observe the sign: no loitering, no unlicensed whistling, no goats."
+        },
+        {
+          "id": "cp02",
+          "text": "The Ford has been in continuous administration for two hundred and eleven years. We've lost no minutes. Several pens, but no minutes."
+        },
+        {
+          "id": "cp03",
+          "text": "I keep the ledger in triplicate. One for the Hall, one for the archive, and one for the mice."
+        },
+        {
+          "id": "cp04",
+          "text": "Tallow Ford was founded by candlemakers and cattle drovers. The drovers won the argument; the candlemakers won the money."
+        },
+        {
+          "id": "cp05",
+          "text": "I've been Reeve eleven years. Nine were quiet. The other two I spent in committee."
+        },
+        {
+          "id": "cp06",
+          "text": "Alder Kemp commands the watch. Alder will tell you it's understaffed. Alder is correct, though I'd prefer it quieter."
+        },
+        {
+          "id": "cp07",
+          "text": "A fighter. Splendid. The watch could use another pair of shoulders. We pay in biscuits and sincere thanks.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "cp08",
+          "text": "A magic-user. Do mention to the committee that you can light a lamp from across the room. It would be a great saving.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "cp09",
+          "text": "A scout. The Ford sorely needs one, I'm told. I was told by a scout. It may have been a pitch.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "cp10",
+          "text": "A healer! Ysolde will be delighted. She speaks of the old sun-priests constantly. Be kind. She's lonely.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "cp11",
+          "text": "Tobiah of Brinewick writes me monthly about salt prices. His handwriting is a menace and so are the prices."
+        },
+        {
+          "id": "cp12",
+          "text": "A word about the inn: Dessa's singing is unlicensed. The Hall has yet to find a bylaw to stop it. We keep looking."
+        },
+        {
+          "id": "cp13",
+          "text": "Marta's sheep are the Ford's finest. Eleven stolen last week. I've drafted a very stern letter."
+        },
+        {
+          "id": "cp14",
+          "text": "The ford is shallow. The river is deep. Please don't be confused by this. Many have been."
+        },
+        {
+          "id": "cp23",
+          "text": "The river was surveyed after the second flood. The survey is lost. The river remains, regrettably, accurate."
+        },
+        {
+          "id": "cp24",
+          "text": "Visitors are asked to sign the guest book. It has not been signed since spring. I take it as a sign of the times."
+        },
+        {
+          "id": "cp15",
+          "text": "The camp lies east of the North Road. Take the branch near the second milestone. I've marked it on no map, in case the goblins read.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "cp16",
+          "text": "You've found the camp? Splendid. Please don't burn anything. The paperwork is unbearable.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "cp17",
+          "text": "The Chief is dead! I've called an emergency session. Attendance is excellent. The biscuits are gone.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "cp18",
+          "text": "I've struck 'goblin menace' from the agenda. Item four is now 'celebration, modest.'",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "cp19",
+          "text": "Reedhollow lies north by the river road. I'll write ahead. My letters are slow, but unmistakably official.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "cp20",
+          "text": "When you're famous, the Ford may erect a plaque. I've drafted the wording. It's long.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "cp21",
+          "text": "Arlo's hammer is back and the Ford rings again. The committee can resume at noon. Hear that? That's civilisation.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        },
+        {
+          "id": "cp22",
+          "text": "A hybrid in the old hollow? I'd heard rumours of cobwebs. Rumours, I tell the Hall, aren't evidence. Evidence, apparently, is a fang.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        }
+      ]
+    },
+    "dessa_quill": {
+      "name": "Dessa Quill",
+      "role": "innkeeper of The Fiddle & Ford",
+      "personality": "theatrical, generous, a little vain",
+      "voice": "stage metaphors; dramatic asides; darling",
+      "greet": [
+        "Darling, welcome to The Fiddle & Ford! A bed is fifteen coins. The drama is gratis.",
+        "Come in, come in! The stage is cold but the stew is warm."
+      ],
+      "bye": [
+        "Exit, stage left! Mind the stool.",
+        "Parting is such sweet sorrow. Do pay on your way out."
+      ],
+      "lines": [
+        {
+          "id": "dq01",
+          "text": "I was a leading lady once. Three plays, one enormous hat, and a standing ovation from a cow."
+        },
+        {
+          "id": "dq02",
+          "text": "Every guest is an audience, and every audience gets a performance. I do the stew in three acts."
+        },
+        {
+          "id": "dq03",
+          "text": "Lio plays the fiddle in the corner for his supper. Technically for mine. We've agreed to differ."
+        },
+        {
+          "id": "dq04",
+          "text": "The rooms upstairs are named after plays. The Tragic Room has a leak. The Comedy Room has a ghost."
+        },
+        {
+          "id": "dq05",
+          "text": "Grindle drinks here nightly and tells the same story. I know every pause. I do the gasp for him."
+        },
+        {
+          "id": "dq06",
+          "text": "A good innkeeper is half hostess, half hearth, half mediator. Yes, that's three halves. I was always better at drama than arithmetic."
+        },
+        {
+          "id": "dq07",
+          "text": "A hero in the making, with that shoulder line! I once played Saint George. The dragon was Marta's goat.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "dq08",
+          "text": "A mage! Do you do effects? I'd kill for a good puff of smoke in the third act. Metaphorically. Mostly.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "dq09",
+          "text": "A scout. Quiet, observant, nobody's fool. You'd have been the perfect murderer in Act Two.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "dq10",
+          "text": "A healer. You'd be marvellous as the gentle nun. Don't worry, in my plays the nun always wins.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "dq11",
+          "text": "The north room has a window over the ford. Some guests swear they see candles drifting on the water at night."
+        },
+        {
+          "id": "dq12",
+          "text": "Bram's tonic is lovely and disgusting. I serve it to guests who argue. They leave quicker."
+        },
+        {
+          "id": "dq13",
+          "text": "Ysolde lights a candle in my window every dusk. Silly, sweet thing. I pretend it's for the ambience."
+        },
+        {
+          "id": "dq14",
+          "text": "A chest sits in the corner of the common room. It isn't mine. Nobody has claimed it. What a lovely mystery."
+        },
+        {
+          "id": "dq15",
+          "text": "The Reeve called you in, did he? Marvellous! A hero! I shall name a soup after you. It will be mostly onion, I'm afraid.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "dq16",
+          "text": "Back from the camp? Gracious, you smell like a pantomime. Hot water's free. The dignity costs extra.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "dq17",
+          "text": "The Chief is dead! Oh, the ballad Lio will write. Seventeen verses and one rhyme for 'goblin'.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "dq18",
+          "text": "Everybody's buying drinks for whoever beat the Chief. That's you, darling. Please take a bow.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "dq19",
+          "text": "Reedhollow! A wretched, charming place, full of reeds and rogues. Keep a firm grip on your purse and a firmer one on your dignity.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "dq20",
+          "text": "Come back and tell me everything. I shall put it in a play. You will be played by someone far taller.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "dq21",
+          "text": "A web-spun monster in the hollow? Wonderful theatre! I'd have given it a monologue.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "dq22",
+          "text": "Arlo's hammering again! The whole street is humming. Music, darling. Real music.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        },
+        {
+          "id": "dq23",
+          "text": "Someone is selling odd, enchanted gear off a cart this afternoon. Nobody will tell me where. That is how I know it is good.",
+          "when": {
+            "merchantToday": true
+          }
+        }
+      ]
+    },
+    "bram_thistlewick": {
+      "name": "Bram Thistlewick",
+      "role": "apothecary, Thistle & Tonic",
+      "personality": "fussy, anxious, devoted to his craft",
+      "voice": "herb lists; hygiene warnings; 'my dear'",
+      "greet": [
+        "Ah, my dear, do mind the ginger root. It bites.",
+        "Welcome! Nothing here is contaminated. Probably. Please touch nothing."
+      ],
+      "bye": [
+        "Do wash your hands, my dear!",
+        "Safe journeys. And steep it for exactly four minutes."
+      ],
+      "lines": [
+        {
+          "id": "bt01",
+          "text": "Nothing in here is contaminated. Probably. Please touch nothing while I verify."
+        },
+        {
+          "id": "bt02",
+          "text": "Feverfew for fever, comfrey for bruises, eyebright for eyes. I wanted to make a rhyme but the Latin wouldn't scan."
+        },
+        {
+          "id": "bt03",
+          "text": "I steep my tea for exactly four minutes. Three is weak. Five, and the leaves grow opinionated."
+        },
+        {
+          "id": "bt04",
+          "text": "Marta brings me dandelion roots every season. She calls it a gift. I call it an inventory."
+        },
+        {
+          "id": "bt05",
+          "text": "A tonic is merely a medicine with marketing. Mine has a lovely label and a dreadful taste."
+        },
+        {
+          "id": "bt06",
+          "text": "My late mother said the best cure for any ill was a clean cup and a clean conscience. She was a brilliant apothecary and a terrible cook."
+        },
+        {
+          "id": "bt07",
+          "text": "Warriors always ask for the stronger tonic. The stronger tonic is just the weaker one with an attitude.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "bt08",
+          "text": "A mage! Do you know a good preserving charm? I've a shelf of lavender that's been dying slowly since spring.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "bt09",
+          "text": "Scouts, so quick to dart in and dart out. I do like it. Fewer questions, fewer broken bottles.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "bt10",
+          "text": "A healer! A colleague! May I show you my notes on ginger? Forty-three pages. On ginger.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "bt11",
+          "text": "Poison is a simple matter of dosage. Antidotes, on the other hand, are a matter of timing. Carry some."
+        },
+        {
+          "id": "bt12",
+          "text": "The goblins stole my second-best cauldron. They're welcome to it. They'll never get the smell out."
+        },
+        {
+          "id": "bt13",
+          "text": "Ysolde's wax makes the finest salve base. I've told her. She smiled politely and went back to dreaming."
+        },
+        {
+          "id": "bt14",
+          "text": "Spider venom, in small doses, is a marvellous muscle relaxant. In large doses it's a marvellous funeral."
+        },
+        {
+          "id": "bt15",
+          "text": "Off to fight goblins? Take extra antidotes. Goblin spit stings but doesn't poison. The spiders around here, however, do.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "bt16",
+          "text": "Camp-smell on your boots! Don't track it across my floor. I've just disinfected. Twice.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "bt17",
+          "text": "The Chief is gone? Oh, marvellous. I can reopen the herb garden east of the road. It's been closed six weeks.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "bt18",
+          "text": "A hero's discount on tonics: none. But I can offer a lecture on hydration, free of charge.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "bt19",
+          "text": "Reedhollow's marshes breed a nasty fever. Boil your water, my dear, and boil your doubts.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "bt20",
+          "text": "Bring back marsh-lily if you see any. I'll pay in tonics. Or in affectionate gossip, if you prefer.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "bt21",
+          "text": "A spider-goblin? Magnificent! I'd have loved a sample. Even a small, ethically sourced one.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "bt22",
+          "text": "Arlo's back to hammering, so I can set my clock by the noise. Four thumps to the hour.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        }
+      ]
+    },
+    "lio_fenn": {
+      "name": "Lio Fenn",
+      "role": "travelling bard",
+      "personality": "playful, flirtatious, rhyme-obsessed",
+      "voice": "couplets; musical asides; showmanship",
+      "events": [
+        {
+          "id": "lio_tip",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "lioTip"
+          },
+          "set": [
+            "lioTip"
+          ],
+          "say": [
+            "You've seen the camp? Then hear this verse, free of charge: 'Where tents are tall and fires flare, the best things lie in the chests, with care.'",
+            "A coin for luck, and a promise: sing it back to me when you return."
+          ],
+          "gold": 15
+        }
+      ],
+      "lines": [
+        {
+          "id": "lf01",
+          "text": "A song for a stranger, a story for a friend, a ballad for a hero, and a bill at the end."
+        },
+        {
+          "id": "lf02",
+          "text": "I travel by fiddle and sleep by the fire, and every fine town gets a verse and a lyre."
+        },
+        {
+          "id": "lf03",
+          "text": "Dessa says I owe her six suppers. I say I paid in melody. She says melody isn't currency. We've never agreed."
+        },
+        {
+          "id": "lf04",
+          "text": "I'm composing a song about a ford. It rhymes with lord and with bored. I'm having trouble finding a hero."
+        },
+        {
+          "id": "lf05",
+          "text": "Ansel in Brinewick sings the old hymns slower than I'd dare. We swapped verses once. I won the meter."
+        },
+        {
+          "id": "lf06",
+          "text": "Alder's marching song has eleven verses and no chorus. I told him. He said that's what makes it a march."
+        },
+        {
+          "id": "lf07",
+          "text": "Armour and iron, sword in the light! A ballad should sing of a hero's fight. Mind if I write you in?",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "lf08",
+          "text": "A mage on the road! Teach me a chord that shimmers, and I'll teach you a rhyme that glimmers.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "lf09",
+          "text": "A scout, they say, moves like a hush. I'd write a verse, but it might cause a rush.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "lf10",
+          "text": "A healer! The dearest of heroes. A ballad for the one who stitches the others back together.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "lf11",
+          "text": "I once played for a king who hated music. He paid me double to stop. I've been trying to repeat it ever since."
+        },
+        {
+          "id": "lf12",
+          "text": "Tuck wants a song about him killing a goblin. Tuck has never seen a goblin. I told him to add a dragon for the meter."
+        },
+        {
+          "id": "lf13",
+          "text": "The hush before a battle is the best part of any ballad. Everything after is cleaning up."
+        },
+        {
+          "id": "lf14",
+          "text": "Grindle's stories improve with every telling. I've learned to nod at the right pauses. It saves wear on the lute."
+        },
+        {
+          "id": "lf15",
+          "text": "I hear you're off to scatter goblins. May I follow and take notes? From a safe distance. A very safe distance.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "lf16",
+          "text": "You've been to the camp? How does it smell? For the verse, I mean. I've rhymed quarry with sorry. It isn't working.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "lf17",
+          "text": "The Chief is slain! Let me strike a chord. 'The Ford is free, the goblins flee, and the hero, I hear, drinks tea.'",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "lf18",
+          "text": "I've written six verses already. I'll add a seventh when I know your name properly.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "lf19",
+          "text": "Reedhollow next? They'll love the song. Or throw things. Either way, a reaction is a review.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "lf20",
+          "text": "When you return I'll have the whole ballad finished. It's currently seventy per cent chorus.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "lf21",
+          "text": "A web-spun beast! A shimmering fang! If only I'd been there with a lute and a fast horse.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "lf22",
+          "text": "Arlo's hammer rings again! There's a rhythm in it. I've borrowed it. Don't tell him.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        }
+      ]
+    },
+    "tuck": {
+      "name": "Tuck",
+      "role": "village boy",
+      "personality": "boastful, brave on the surface, secretly scared",
+      "voice": "tall boasts that unravel mid-sentence; 'okay but'",
+      "lines": [
+        {
+          "id": "tk01",
+          "text": "Someday I'll be the greatest goblin hunter ever! I've already seen three. Well, one. Well, a shadow that might've been one."
+        },
+        {
+          "id": "tk02",
+          "text": "I told that goblin, I said, you'll never get past me! And it ran away. Okay it wasn't there. But if it was!"
+        },
+        {
+          "id": "tk03",
+          "text": "Dad says I can't go past the milestone. I went past the milestone. Only a little. It was very big out there."
+        },
+        {
+          "id": "tk04",
+          "text": "I've got a sword. It's wooden. But I painted it silver. Silver's very powerful against goblins. Probably."
+        },
+        {
+          "id": "tk05",
+          "text": "Marta's chickens are scared of me. I take that as respect."
+        },
+        {
+          "id": "tk06",
+          "text": "Alder says I'm too young for the watch. I said I'm eleven and a half. He said that's still eleven."
+        },
+        {
+          "id": "tk07",
+          "text": "Whoa, real armour! Can I try it on? Just the helmet? I'll give it right back. Probably.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "tk08",
+          "text": "Wait, can you really shoot fire from your hands? Do it. Please. Just a small one. On Alder's boots.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "tk09",
+          "text": "You're a scout? I'm a scout too! I mean, I hide behind the hay a lot. It's basically the same.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "tk10",
+          "text": "My knee's skinned. It's a battle wound. It was a goat.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "tk11",
+          "text": "Grindle says I'm the bravest kid in the Ford. He says it every time he wants me to fetch his pipe."
+        },
+        {
+          "id": "tk12",
+          "text": "A goblin wearing a spoon crown is the Chief. I heard it from my cousin. Who heard it from a bird."
+        },
+        {
+          "id": "tk13",
+          "text": "I know a secret. There's a hollow off the road, west, past the pond. Spiders! Big ones! I only went in a little bit."
+        },
+        {
+          "id": "tk14",
+          "text": "Lio's making a song about me. It's called 'The Ballad of Someone Brave.' I said that's me. He said it's whoever it is."
+        },
+        {
+          "id": "tk15",
+          "text": "You're going to fight the Chief? Take me! I'll carry your bag! I'll carry it far! Okay, as far as the milestone.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "tk16",
+          "text": "You saw the camp? Was it huge? Did they have a catapult? Dad says goblins have catapults. Do you think that's true?",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "tk17",
+          "text": "You killed the Chief?! Did you use your sword? Was there lots of blood? Okay not lots. A medium amount?",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "tk18",
+          "text": "I'm putting your name on my wall. Right under 'Tuck, Hunter'. Don't tell anybody that's the only name on the wall.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "tk19",
+          "text": "You're leaving? Bring me a souvenir! A claw! Or a button! A claw. A claw's better.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "tk20",
+          "text": "When I'm grown I'll be a hunter and I'll find you. You'll be old and I'll say, remember me? And you'll say no, but you will.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "tk21",
+          "text": "You killed the spider-goblin?! I heard a rumour. It's a very big thing in a very big web. I told Dad. He told me to go to bed.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "tk22",
+          "text": "Arlo got his hammer back! I knew it'd turn up. I said it. Out loud. Nobody heard me.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        }
+      ]
+    },
+    "alder_kemp": {
+      "name": "Sergeant Alder Kemp",
+      "role": "captain of the Ford Watch",
+      "personality": "weary, sarcastic, quietly protective",
+      "voice": "deadpan; counts everything in sheep and tea",
+      "lines": [
+        {
+          "id": "ak01",
+          "text": "Sergeant Alder Kemp, Ford Watch. Eleven of us. Four on leave, two on tea, one asleep. I count myself as the other three."
+        },
+        {
+          "id": "ak02",
+          "text": "Raids come in threes. One goblin to steal, one to distract, and one to take the credit. The third's always the worst."
+        },
+        {
+          "id": "ak03",
+          "text": "I measure danger in sheep. Zero missing, a quiet week. Eleven missing, I'm filing paperwork."
+        },
+        {
+          "id": "ak04",
+          "text": "The Reeve wants a patrol schedule in triplicate. I told him goblins don't read schedules. He said quite, but the Hall does."
+        },
+        {
+          "id": "ak05",
+          "text": "Marta's sheepdog is better trained than half my recruits. He also has better references."
+        },
+        {
+          "id": "ak06",
+          "text": "I don't mind goblins. I mind goblins with an organisation. Chiefs and flags and banners. That's how you know it's serious."
+        },
+        {
+          "id": "ak07",
+          "text": "You've got the build. If you ever want a steady job, the Watch always has a spare cot. And a lot of tea.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ak08",
+          "text": "A mage. Do something about the goblins' fires. Or the paperwork. I'll take either.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ak09",
+          "text": "You move like someone who's walked a lot of dark roads. The Watch could use eyes like that.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ak10",
+          "text": "A healer on the road. Good. Ours left for a quiet life in a monastery. Smart person.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ak11",
+          "text": "Tuck keeps sneaking past the milestone. I strung a rope across it. He walked around the rope. Clever, I'll give him that."
+        },
+        {
+          "id": "ak12",
+          "text": "Dessa says the Watch drinks too much. We drink exactly as much as the job requires. Which is a lot."
+        },
+        {
+          "id": "ak13",
+          "text": "Lio put me in a song. I'm the dour one in the second verse. I've chosen to be flattered."
+        },
+        {
+          "id": "ak14",
+          "text": "If you see a goblin with a spoon on its head, don't laugh. That's the chief's idea of a helmet. Laugh after."
+        },
+        {
+          "id": "ak15",
+          "text": "The Reeve's put you on the case? Good. I'd go myself but someone has to count the sheep.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "ak16",
+          "text": "You've seen the camp? How many tents? I'll mark it down. In ink, so it can't be argued with.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "ak17",
+          "text": "The chief's down. I'm going to sit. It's been a long season. I'm going to sit for a very long time.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "ak18",
+          "text": "First quiet night in a month. I don't trust it. I'll check the walls twice, then once more for luck.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "ak19",
+          "text": "North to Reedhollow? Keep to the road. The marsh looks flat but it's mostly hungry.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "ak20",
+          "text": "If you meet Bogwarden Hask, tell him the Ford Watch is waiting. Politely. With our eleven best swords.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "ak21",
+          "text": "Something in the hollow has gone quiet. I'll note it. Quiet hollow: suspicious, then relieved.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "ak22",
+          "text": "Arlo's hammer is back? Splendid. I can finally sharpen my spear without a lecture.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        }
+      ]
+    },
+    "marta_oakes": {
+      "name": "Marta Oakes",
+      "role": "sheep farmer",
+      "personality": "earthy, plainspoken, fiercely loyal",
+      "voice": "weather and livestock proverbs; practical",
+      "lines": [
+        {
+          "id": "mo01",
+          "text": "Morning's for working, noon's for complaining, evening's for sheep. I'm well into the second part."
+        },
+        {
+          "id": "mo02",
+          "text": "A good flock's like a good friend: loud, a bit smelly, and right where you left them. Until the goblins came."
+        },
+        {
+          "id": "mo03",
+          "text": "I've farmed this bank thirty years. Never had to count my sheep twice. Now I count four times and still come up short."
+        },
+        {
+          "id": "mo04",
+          "text": "My old mum said rain on a Tuesday means trouble by Friday. It rained Tuesday. Friday brought goblins."
+        },
+        {
+          "id": "mo05",
+          "text": "Bram wants my dandelions. I want his tonic. We trade even, and both of us complain."
+        },
+        {
+          "id": "mo06",
+          "text": "Ysolde buys my tallow. She says it burns purer than any wax. I think she's being polite to a farmer."
+        },
+        {
+          "id": "mo07",
+          "text": "Look at those arms! If you wanted a day's honest work, I've a stack of hay and a very rude ram.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mo08",
+          "text": "A magician? Could you spell the ram into docility? Or at least into silence?",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mo09",
+          "text": "Quiet one, eh? Good. The sheep like a quiet hand. They don't like me. I shout.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mo10",
+          "text": "A healer! Have a look at my ram's knee. He pretends it's nothing, but I see him limp.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mo11",
+          "text": "Alder keeps asking me to sign for stolen sheep. I told him I'd sign the day I find them."
+        },
+        {
+          "id": "mo12",
+          "text": "Tuck helps with the flock. By which I mean he chases them. Loudly. They're getting fitter."
+        },
+        {
+          "id": "mo13",
+          "text": "The goblins took eleven. They left the ram. Even a goblin has some sense of self-preservation."
+        },
+        {
+          "id": "mo14",
+          "text": "Grindle's old sword is a fine tool for a farm. For cutting twine. And the occasional carrot."
+        },
+        {
+          "id": "mo15",
+          "text": "The Reeve sent you after the goblins? Good. If you see my sheep, they're the ones with the blue ribbon.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "mo16",
+          "text": "The camp has my sheep? Alive? Bring them home and I'll pay you in cheese. It's good cheese.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "mo17",
+          "text": "The Chief's gone? Then the sheep might return. They might not. Sheep aren't known for loyalty.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "mo18",
+          "text": "I'll have my fences mended by dusk. And a very long talk with the ram about discipline.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "mo19",
+          "text": "North, is it? Eat well and walk slow. A traveller in a hurry misses the good fences and the bad bogs.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "mo20",
+          "text": "If you pass a field of reeds, say hello to my cousin Edda. She doesn't talk much. She's mostly cattle.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "mo21",
+          "text": "A spider-goblin in the hollow? I always thought those webs were rumours. Now I'll sleep with one boot on.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "mo22",
+          "text": "Arlo's got his hammer back. That means my plough gets fixed by spring. Sheep first, plough second, politics last.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        }
+      ]
+    },
+    "ysolde_tallow": {
+      "name": "Ysolde Tallow",
+      "role": "candlemaker",
+      "personality": "dreamy, gentle, haunted by old stories",
+      "voice": "soft; light, wax and flame imagery",
+      "lines": [
+        {
+          "id": "yt01",
+          "text": "A candle is a small promise that the dark will end. I make a great many promises. It's an honest living."
+        },
+        {
+          "id": "yt02",
+          "text": "My grandmother dipped candles for the old sun-temple. She said the priests burned them in rows, to remember the dawn."
+        },
+        {
+          "id": "yt03",
+          "text": "The sun is dimmer every year. Candle sales are up. I feel dreadful about it. I keep making them anyway."
+        },
+        {
+          "id": "yt04",
+          "text": "Beeswax smells of summers I can barely remember. Tallow smells of honest work. I like them both, in different moods."
+        },
+        {
+          "id": "yt05",
+          "text": "Arlo lets me use his bellows after dark. He thinks I don't know he leaves them out for me."
+        },
+        {
+          "id": "yt06",
+          "text": "Dessa leaves her window open for my candles. I light one at dusk. She pretends it's for the ambience."
+        },
+        {
+          "id": "yt07",
+          "text": "Heavy boots and a steady stride. You'd carry a candle well. It's the carrying that's hard, not the lighting.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "yt08",
+          "text": "A mage! Do you ever light a flame from nothing? I envy you. I need a wick, some wax, and a long afternoon.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "yt09",
+          "text": "A scout, walking in the dark. May I give you a candle? Small, stub-ended. Good for a pocket, and for courage.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "yt10",
+          "text": "A healer! The old priests carried small lamps. They believed a gentle light heals as well as any herb.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "yt11",
+          "text": "Bram tells me my wax makes the best salve base. I told him I make candles. He said yes, and also medicine."
+        },
+        {
+          "id": "yt12",
+          "text": "Tuck stole a candle stub once. I pretended not to see. He's been polishing it ever since."
+        },
+        {
+          "id": "yt13",
+          "text": "In the temple songs, the sun was a flame a god carried across the sky. I asked Ansel once if that was true. He said no. And yes."
+        },
+        {
+          "id": "yt14",
+          "text": "A candle burns best when no one's watching. People hold their breath too much. The flame hates it."
+        },
+        {
+          "id": "yt15",
+          "text": "The goblins stole four dozen candles. I'd rather they'd taken the tallow. Candles are made to be used, not hoarded.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "yt16",
+          "text": "The camp is lit by a great fire in the quarry? I've wondered why the nights smell of smoke and mutton.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "yt17",
+          "text": "The Chief is gone. I lit eleven candles tonight, one for each stolen sheep. It felt like the right number.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "yt18",
+          "text": "Your hand glows, doesn't it? Even by day. I can see it. I won't mention it again. Candlemakers know when to be quiet.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "yt19",
+          "text": "Take a candle for the road. Not for light. For company. A flame is a surprisingly good listener.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "yt20",
+          "text": "In Reedhollow there's a lamp-keeper called Fenna who still burns the old temple oil. Tell her Ysolde remembers.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "yt21",
+          "text": "I heard something in the hollow stopped singing. I always thought it sounded like a lullaby. I'm sorry for whatever it was.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "yt22",
+          "text": "Arlo's hammer is ringing again. It makes the evening sound like a small, busy heartbeat.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        }
+      ]
+    },
+    "grindle_haskell": {
+      "name": "Old Grindle",
+      "role": "retired soldier of the Ford Company",
+      "personality": "boastful, kindly, forgetful about everything but old fights",
+      "voice": "war stories that grow; calls the hero 'recruit'",
+      "events": [
+        {
+          "id": "grindle_tip",
+          "when": {
+            "notFlag": "grindleTip"
+          },
+          "set": [
+            "grindleTip"
+          ],
+          "say": [
+            "Hold up, recruit. Take these. Antidotes. The spiders west of the pond don't fight fair.",
+            "If you want a real scrap, find the hollow where the road bends west. A web-thing's nested there, half goblin, half horror. I've seen the glow of its eyes. I did not go in. That's strategy, not fear."
+          ],
+          "give": {
+            "antidote": 2
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "gh01",
+          "text": "Recruit! Sit. Listen. I fought eleven wolves single-handed once. Twelve, if you count the one behind the barn."
+        },
+        {
+          "id": "gh02",
+          "text": "My sword is called Thistledown. It's killed four rabbits, one door, and a very ambitious sheep."
+        },
+        {
+          "id": "gh03",
+          "text": "I marched with the old Ford Company. Three hundred strong. We were famous for our boots."
+        },
+        {
+          "id": "gh04",
+          "text": "Never fight uphill, never drink downwind, never trust a goblin offering you soup."
+        },
+        {
+          "id": "gh05",
+          "text": "Back in my day we fought dragons. Well. A large lizard. Well. A medium lizard, but it breathed."
+        },
+        {
+          "id": "gh06",
+          "text": "Marta says my stories grow with each retelling. I told her that's why they call them tall tales."
+        },
+        {
+          "id": "gh07",
+          "text": "Armour like that! I'd have killed for armour like that in my day. Well. I did kill, but in worse armour.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "gh08",
+          "text": "A mage! We had one in the Company. Blew up a barn. We named the crater after him.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "gh09",
+          "text": "A scout. Good. In my day a scout was worth a company. Cheaper too, and fewer demands.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "gh10",
+          "text": "A healer. In the Company ours was the only one we never argued with. Largely because she had the knives.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "gh11",
+          "text": "A goblin's no fool, recruit. A goblin's got teeth, a grudge, and a good sense of what you've left unguarded."
+        },
+        {
+          "id": "gh12",
+          "text": "Spiders are what you ought to fear. The pond road has a hollow with webs the size of barn doors."
+        },
+        {
+          "id": "gh13",
+          "text": "Alder owes me three pints and a pike. I haven't forgotten. I remember debts better than names."
+        },
+        {
+          "id": "gh14",
+          "text": "Lio wants to write a song about me. I told him I'd rather have a drink. He wrote the song anyway."
+        },
+        {
+          "id": "gh15",
+          "text": "Going after the chief? Mind the shamans. They heal their mates. Drop the healers first or you'll be fighting till supper.",
+          "when": {
+            "flag": "talkedCorwin",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "gh16",
+          "text": "That camp has a gate. Keep in the shadow of the palisade and strike at the pairs. Don't take the whole camp at once, recruit.",
+          "when": {
+            "flag": "campFound",
+            "notFlag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "gh17",
+          "text": "The Chief's dead? Good riddance. He nicked my second-best hat last spring. I'd like it back, if it's lying about.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "gh18",
+          "text": "A toast to the one who broke the camp! I'd stand but my knee has other plans.",
+          "when": {
+            "flag": "chiefDefeated"
+          }
+        },
+        {
+          "id": "gh19",
+          "text": "Reedhollow's tricky. Bandits, ferrymen, and reeds tall as a spear. Stay alert, recruit.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "gh20",
+          "text": "When I was your age I'd have been halfway there already. When I was your age I was also a great deal more foolish.",
+          "when": {
+            "flag": "reportedCorwin"
+          }
+        },
+        {
+          "id": "gh21",
+          "text": "You killed the web-thing in the hollow? Show me the fang. Gently. I want to hold it, then pretend I've seen bigger.",
+          "when": {
+            "flag": "webgoblinDefeated"
+          }
+        },
+        {
+          "id": "gh22",
+          "text": "Arlo's hammer is back? Good. I owe him a new sword-grip. And a tooth, long story.",
+          "when": {
+            "flag": "hammerReturned"
+          }
+        }
+      ]
+    }
+  }
+}

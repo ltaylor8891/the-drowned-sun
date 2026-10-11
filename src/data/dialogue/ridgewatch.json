@@ -1,0 +1,1262 @@
+{
+  "npcs": {
+    "ysra_dunmere": {
+      "name": "Captain Ysra Dunmere",
+      "role": "commander of the Ridge Guard",
+      "personality": "weary, exact, quietly kind to anyone under her command",
+      "voice": "muster rolls and watch rotations; short orders that end in thanks",
+      "events": [
+        {
+          "id": "ysra_intro",
+          "when": {
+            "notFlag": "talkedYsra"
+          },
+          "set": [
+            "talkedYsra"
+          ],
+          "say": [
+            "Ysra Dunmere, Captain of the Ridge Guard. You have the lamp-hand. Marlo Ketch sent a pigeon ahead, so I know why you are here.",
+            "Gallowkeep was a chapel once. Now it is Hask's fortress, held by an orc warband he bought with silver and a promise. The warchief is called Gorrak. He sits in the courtyard and he has not lost a duel in nine years.",
+            "Beyond the courtyard is the chapel itself. Hask is inside. I would give my pension to see him dragged out, but I have forty soldiers and he has chains. You have a light. Go up the ridge, and come back to me when it is over."
+          ]
+        },
+        {
+          "id": "ysra_report",
+          "when": {
+            "flag": [
+              "warchiefDefeated",
+              "haskDefeated"
+            ],
+            "notFlag": "reportedYsra"
+          },
+          "set": [
+            "reportedYsra",
+            "chapter_5_done"
+          ],
+          "say": [
+            "Both gone? The warchief and the warden, in one afternoon. I will need a moment. I have been holding this line for four winters.",
+            "I will have the gallows cut from the chapel roof tonight. Every soldier in camp asked to hold the rope. I let them.",
+            "Take the purse, and the thanks of the Ridge Guard. Then come out into the yard. Hask's charts show something you ought to see."
+          ],
+          "gold": 500,
+          "give": {
+            "phoenix_plume": 2,
+            "hi_ether": 2
+          },
+          "autosave": true,
+          "banner": "Chapter 5 complete",
+          "scene": "act1_end"
+        }
+      ],
+      "lines": [
+        {
+          "id": "ys01",
+          "text": "The muster roll says forty. I count thirty-one. I do not ask where the other nine are, because I know."
+        },
+        {
+          "id": "ys02",
+          "text": "Four winters I have held this ridge. The wind does not break a soldier. The waiting does."
+        },
+        {
+          "id": "ys03",
+          "text": "Wynn thinks I am too hard on the recruits. I am hard because the ridge is harder."
+        },
+        {
+          "id": "ys04",
+          "text": "Bodil sells honest steel, if you can bear her talking. Mattis patches what steel cuts. Between them, a camp survives."
+        },
+        {
+          "id": "ys05",
+          "text": "Every dawn I climb the wall and look at the chapel. Every dawn it is still there. I count that as a small defeat."
+        },
+        {
+          "id": "ys06",
+          "text": "A good commander knows when to ask for help. I ask for yours. It tastes like medicine."
+        },
+        {
+          "id": "ys07",
+          "text": "A blade-bearer! Wynn will want to spar you. Say no. He bruises.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ys08",
+          "text": "A spell-caster. We lost our last one to the river. Mind the wards on the north tents; they are older than they look.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ys09",
+          "text": "A scout, good. Fen Aldous on the lookout post wants someone to argue sightlines with. Be kind. He has had nobody to talk to for a week.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ys10",
+          "text": "A healer in the field is worth a squad. Tobiel is keen to shake your hand. He prays louder than he fights.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ys11",
+          "text": "The orcs are not mindless. They are hired. A hired soldier fights until the pay stops looking like enough."
+        },
+        {
+          "id": "ys12",
+          "text": "Letta keeps the last four horses behind the cookfires. They are the only things on this ridge that still trust us."
+        },
+        {
+          "id": "ys13",
+          "text": "I wrote to the Crown three times. The first reply asked who I was. The second asked why. The third has not come."
+        },
+        {
+          "id": "ys14",
+          "text": "Dree walked into camp with his hands up and a bandit's brand on his arm. I could have hanged him. I gave him a spoon instead."
+        },
+        {
+          "id": "ys15",
+          "text": "Whatever the lamp is, it is not a weapon. It is an answer to a question I am afraid to hear."
+        },
+        {
+          "id": "ys16",
+          "text": "Take the pass slowly. The ridge boars charge anything that moves, and the orcs charge anything that does not."
+        },
+        {
+          "id": "ys17",
+          "text": "The chapel was named for the sunrise. I came here as a girl to see the dawn light through the east window. I have not seen it since."
+        },
+        {
+          "id": "ys18",
+          "text": "I read the dispatches every night. Tonight's said nothing, which is itself a dispatch."
+        },
+        {
+          "id": "ys19",
+          "text": "Gorrak holds the courtyard, and the courtyard holds the gate. Break one and you open the others.",
+          "when": {
+            "flag": "talkedYsra",
+            "notFlag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "ys20",
+          "text": "Gorrak is down? I felt the ground change. Thirty-one soldiers just stood a little straighter.",
+          "when": {
+            "flag": "warchiefDefeated",
+            "notFlag": "reportedYsra"
+          }
+        },
+        {
+          "id": "ys21",
+          "text": "Hask is the last piece. Without him, the warband scatters to the hills and the Crown can pretend it won.",
+          "when": {
+            "flag": "warchiefDefeated",
+            "notFlag": "haskDefeated"
+          }
+        },
+        {
+          "id": "ys22",
+          "text": "A second companion has joined you? Good. The road ahead is made of long marches and short tempers.",
+          "when": {
+            "flag": "companion2Chosen",
+            "notFlag": "reportedYsra"
+          }
+        },
+        {
+          "id": "ys23",
+          "text": "You have the dawn shard? Keep it close and keep it quiet. Half the camp will want to touch it.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "ys24",
+          "text": "The south road is long, and you will not have a ridge guard behind you. Remember that we stood here.",
+          "when": {
+            "flag": "reportedYsra"
+          }
+        }
+      ]
+    },
+    "bodil_crank": {
+      "name": "Quartermaster Bodil Crank",
+      "role": "keeper of the camp stores",
+      "personality": "talkative, shrewd, secretly generous with every rusty soldier",
+      "voice": "inventory counts and haggling asides; counts things under her breath",
+      "events": [
+        {
+          "id": "bodil_intro",
+          "when": {
+            "notFlag": "metBodil"
+          },
+          "set": [
+            "metBodil"
+          ],
+          "say": [
+            "Customers! Real ones! Bodil Crank, quartermaster, supplier of everything that wasn't nailed down at the last muster.",
+            "I've got sabres, axes, staves, bows, knives and maces, all ridge-forged, plus plate and leathers for the sort of person who enjoys not bleeding. Phoenix plumes too, when the traders find them.",
+            "Don't ask where the plumes come from. I don't know. I'd rather keep it that way."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "bc01",
+          "text": "Forty-one sacks of oats. Forty-one! Where did the other nine go? I'm counting again."
+        },
+        {
+          "id": "bc02",
+          "text": "Sixty-two bowstrings, sixty-two! Then why does every archer complain of a short string?"
+        },
+        {
+          "id": "bc03",
+          "text": "A bargain is a conversation, not a battle. You win it by listening and then not talking."
+        },
+        {
+          "id": "bc04",
+          "text": "My father sold salt. My mother sold sorrow. I sell neither, and I make twice as much."
+        },
+        {
+          "id": "bc05",
+          "text": "Hi-potions are on the shelf by the lamp. The lamp is not for sale, thank you for asking."
+        },
+        {
+          "id": "bc06",
+          "text": "A fine sabre, ridge-forged, tempered in snowmelt. I'll let it go for what it's worth, plus a little for my pride."
+        },
+        {
+          "id": "bc07",
+          "text": "That plate will turn an orc's cleaver. It will not turn an orc's temper.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "bc08",
+          "text": "Staves, three kinds. Take the one that hums, and leave the one that mutters.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "bc09",
+          "text": "Ridge knives and ridge leathers, quiet as a cat in a library. A scout's best friend and worst expense.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "bc10",
+          "text": "Maces for the faithful. Bless the head before you swing, if you must. It doesn't affect the price.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "bc11",
+          "text": "Wynn owes me eleven coppers and a boot-lace. I've never seen a man dodge so politely."
+        },
+        {
+          "id": "bc12",
+          "text": "I keep a chalk tally on the tent pole. It is the most honest book in the camp."
+        },
+        {
+          "id": "bc13",
+          "text": "The stew's gone thin this month. I told the cook to add more water. He said that was the problem."
+        },
+        {
+          "id": "bc14",
+          "text": "Dree asked for a job counting nails. I gave him one. He counted them twice. Honest as a rake."
+        },
+        {
+          "id": "bc15",
+          "text": "A whetstone, a rag and a prayer. That's all the maintenance a blade needs. The prayer is optional."
+        },
+        {
+          "id": "bc16",
+          "text": "Letta's horses eat better than the recruits. I've stopped pretending that's unfair."
+        },
+        {
+          "id": "bc17",
+          "text": "If you find a crate stamped with a wheat-sheaf, bring it back. That's mine. The rest is yours."
+        },
+        {
+          "id": "bc18",
+          "text": "I once sold a cracked helm to a man who died of old age. I consider that a successful sale."
+        },
+        {
+          "id": "bc19",
+          "text": "Gorrak's warband loots by the barrel, so any barrel you find in the courtyard is probably stolen from me.",
+          "when": {
+            "flag": "talkedYsra",
+            "notFlag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "bc20",
+          "text": "Gorrak is dead? Or sulking? Either way, my prices just came down a copper.",
+          "when": {
+            "flag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "bc21",
+          "text": "The chapel's cleared. I'm putting in an order for good candles. We've had enough of the dark.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "bc22",
+          "text": "Mattis is short of venom and wings alike, and I can't stock either one. If you come across some, send them his way.",
+          "when": {
+            "flag": "mattisAsked",
+            "notFlag": "mattisDone"
+          }
+        },
+        {
+          "id": "bc23",
+          "text": "The Ridge Guard thanks you, and so does the stores ledger. Both are in the black for once.",
+          "when": {
+            "flag": "reportedYsra"
+          }
+        },
+        {
+          "id": "bc24",
+          "text": "South of here the road thins out. Buy plumes while I have them. The dunes don't sell resurrection."
+        }
+      ]
+    },
+    "mattis_ohr": {
+      "name": "Surgeon Mattis Ohr",
+      "role": "camp surgeon",
+      "personality": "gentle, brisk, allergic to complaining patients",
+      "voice": "clinical shorthand with an unexpected warmth; counts breaths and bandages",
+      "events": [
+        {
+          "id": "mattis_ask",
+          "when": {
+            "notFlag": "mattisAsked"
+          },
+          "set": [
+            "mattisAsked"
+          ],
+          "say": [
+            "Surgeon Mattis Ohr. You need a bed or you need a lecture. I prescribe both, in that order.",
+            "Actually, I need a favour. My tonic stocks are bare. Two vials of spider venom and two bat wings, and I can brew enough hask-tonic to carry the whole guard through winter.",
+            "The ridge has plenty of orcs and boars. The cave rats down the pass keep bat roosts. Venom you may have to ask the Sedge spiders for. Bring them when you can."
+          ]
+        },
+        {
+          "id": "mattis_done",
+          "when": {
+            "flag": "mattisGathered",
+            "notFlag": "mattisDone"
+          },
+          "set": [
+            "mattisDone"
+          ],
+          "say": [
+            "Spider venom and bat wings, and fresh. Oh, you are going to make an old surgeon weep.",
+            "Watch. A pinch of this, a drop of that, and the whole thing smells of cinnamon. Do not ask why. It is better that way.",
+            "Take these. They are worth more than the coin. Hask's men won't last long against a camp with proper tonic."
+          ],
+          "take": {
+            "spider_venom": 2,
+            "bat_wing": 2
+          },
+          "gold": 200,
+          "give": {
+            "hi_potion": 3,
+            "phoenix_plume": 1
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "mo01",
+          "text": "Twelve cots, nine patients, two prayers. The numbers are better than yesterday's."
+        },
+        {
+          "id": "mo02",
+          "text": "A surgeon's job is not to heal. It is to give the body time to remember how."
+        },
+        {
+          "id": "mo03",
+          "text": "My mother wanted me to be a baker. Dough heals nothing, but it does smell nice."
+        },
+        {
+          "id": "mo04",
+          "text": "Tobiel prays beside every cot. I've stopped telling him to wash his hands first. I wash them after."
+        },
+        {
+          "id": "mo05",
+          "text": "The bed's free. Eighteen coins buys a night and a blanket and a very short sermon on posture."
+        },
+        {
+          "id": "mo06",
+          "text": "If it's black and spreading, come see me. If it's red and weeping, come see me. If it's green, come see me faster."
+        },
+        {
+          "id": "mo07",
+          "text": "Sword-arms are my best customers. They take a blow so another fellow doesn't. I do the mending.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mo08",
+          "text": "A mage with burned fingertips? Spare me. Either wear gloves or find a gentler spell.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mo09",
+          "text": "Scouts bring me splinters and sprains. They climb everything and apologise to nothing.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mo10",
+          "text": "Another healer! Sit. Have tea. Tell me what you do for fevers, and don't lie.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mo11",
+          "text": "Pain is information. I'd like it to tell me less, and more clearly."
+        },
+        {
+          "id": "mo12",
+          "text": "Dree came in with a bad ankle and a worse conscience. I could only treat one of them."
+        },
+        {
+          "id": "mo13",
+          "text": "Letta's mare kicked me last spring. I have never respected a patient more."
+        },
+        {
+          "id": "mo14",
+          "text": "A clean cut is a kindness. A ragged one is a lesson. The ridge teaches mostly ragged."
+        },
+        {
+          "id": "mo15",
+          "text": "If anyone offers you a miracle cure for a thing, hold your purse tightly and walk away slowly."
+        },
+        {
+          "id": "mo16",
+          "text": "Honey, boiled linen, and a firm hand. That's the whole of the healing arts, apart from the Latin."
+        },
+        {
+          "id": "mo17",
+          "text": "Quartermaster Bodil sells hi-potions at a fair price. I buy them at a fair price. Put together we are a fair business."
+        },
+        {
+          "id": "mo18",
+          "text": "I had a wife once who said I loved bandages more than people. She was half right."
+        },
+        {
+          "id": "mo19",
+          "text": "Wynn walked in with an arrow in his shoulder, refusing a seat. I sat him anyway. He fainted. The seat did the rest.",
+          "when": {
+            "flag": "talkedYsra"
+          }
+        },
+        {
+          "id": "mo20",
+          "text": "The hask-tonic is brewing. It smells of cinnamon and regret.",
+          "when": {
+            "flag": "mattisDone"
+          }
+        },
+        {
+          "id": "mo21",
+          "text": "Venom and bat wings. If you've found them, show me. If you haven't, don't look so guilty.",
+          "when": {
+            "flag": "mattisAsked",
+            "notFlag": "mattisDone"
+          }
+        },
+        {
+          "id": "mo22",
+          "text": "Gorrak's warband cut the road for a month. My herb supplies are mostly rumour now.",
+          "when": {
+            "flag": "talkedYsra",
+            "notFlag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "mo23",
+          "text": "Hask's dead? Then there will be a great many tired people in my tent tonight. Good. Tired is a sign of living.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "mo24",
+          "text": "Whatever you carry, whatever you are, you are welcome in this tent. That is the whole of my oath.",
+          "when": {
+            "flag": "reportedYsra"
+          }
+        }
+      ]
+    },
+    "fen_aldous": {
+      "name": "Lookout Fen Aldous",
+      "role": "ridge lookout",
+      "personality": "lonely, observant, prone to long digressions about the weather",
+      "voice": "sightlines and wind directions; describes everything as distance and angle",
+      "events": [],
+      "lines": [
+        {
+          "id": "fa01",
+          "text": "North by north-west the chapel. Four hundred paces to the courtyard wall, six hundred to the gate. I've counted so often I dream in paces."
+        },
+        {
+          "id": "fa02",
+          "text": "The wind turns at noon. Every day. If you can wait until then, every arrow flies true."
+        },
+        {
+          "id": "fa03",
+          "text": "They light a signal fire on the chapel roof each dusk. Green means all is well. Red means they're hungry."
+        },
+        {
+          "id": "fa04",
+          "text": "I was a shepherd in the dales before the war. Same job, different flock, worse smell."
+        },
+        {
+          "id": "fa05",
+          "text": "My eyes are good to a mile and a half. That's not boasting. It's a curse."
+        },
+        {
+          "id": "fa06",
+          "text": "Ysra says look. I look. That is all the discipline there is, and also, somehow, all the loneliness."
+        },
+        {
+          "id": "fa07",
+          "text": "A bruiser! Walk the east flank. The orcs don't expect anything heavier than a goat there.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "fa08",
+          "text": "I once saw a mage call lightning over a valley. It left a glass road. I still can't decide if it was beautiful.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "fa09",
+          "text": "Another sharp-eyed one! Tell me: what do you see on the southern ridge? No, don't tell me. Let me guess.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "fa10",
+          "text": "A priest on the ridge. The wind carries a prayer farther than a shout. Say yours early, before the orcs hear.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "fa11",
+          "text": "A white-feathered hawk circles the chapel. It's not Hask's. It's older than the wall."
+        },
+        {
+          "id": "fa12",
+          "text": "I counted ninety orcs yesterday, ninety-four today. Either they're breeding or they're hiding."
+        },
+        {
+          "id": "fa13",
+          "text": "On a clear night I can see lamps in Lanternmoor from here. Small, yellow, like sleeping fireflies."
+        },
+        {
+          "id": "fa14",
+          "text": "Dree once rode with them. He knows where the guards stand. I trust a man who has stood both sides."
+        },
+        {
+          "id": "fa15",
+          "text": "Letta's horses whicker at midnight. Something comes down the pass at midnight. I haven't decided what."
+        },
+        {
+          "id": "fa16",
+          "text": "If you hear three horn blasts from the ridge, run. If you hear one, listen. If you hear none, worry."
+        },
+        {
+          "id": "fa17",
+          "text": "There's a cave to the west of the pass, hidden in the rocks. Pit-sounds come from it, and wet tusk-clacks. Nobody goes near."
+        },
+        {
+          "id": "fa18",
+          "text": "The sky tonight is the colour of a bruise healing. Tomorrow will be clear."
+        },
+        {
+          "id": "fa19",
+          "text": "The warchief paces the courtyard at dusk. He walks the same loop, like a caged dog. Strike while he is mid-turn.",
+          "when": {
+            "flag": "talkedYsra",
+            "notFlag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "fa20",
+          "text": "The courtyard's quiet. No pacing. I can't tell if I'm relieved or bereft.",
+          "when": {
+            "flag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "fa21",
+          "text": "The chapel signal fire is out. First time in four years. I'm not sure what to do with my evenings.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "fa22",
+          "text": "A tusked beast in the western cave. I'd call it a boar, but it stands wrong. Half orc, I think.",
+          "when": {
+            "notFlag": "tuskrenderDefeated"
+          }
+        },
+        {
+          "id": "fa23",
+          "text": "The tusked thing is dead? Then the cave is quiet. I'll sleep a little tonight.",
+          "when": {
+            "flag": "tuskrenderDefeated"
+          }
+        },
+        {
+          "id": "fa24",
+          "text": "Walk south. I'll keep watching the ridge. Somebody ought to. It might as well be me.",
+          "when": {
+            "flag": "reportedYsra"
+          }
+        },
+        {
+          "id": "fa25",
+          "text": "A cart is crawling along the roads below, painted yellow and rattling. I spotted it from the tower. That would be the rare trader.",
+          "when": {
+            "merchantToday": true
+          }
+        }
+      ]
+    },
+    "wynn_harker": {
+      "name": "Sergeant Wynn Harker",
+      "role": "drill sergeant",
+      "personality": "loud, bruised, proudly sentimental about his recruits",
+      "voice": "parade-ground bellows that soften mid-sentence; counts in fives",
+      "events": [],
+      "lines": [
+        {
+          "id": "wh01",
+          "text": "Five, ten, fifteen! You hold a spear like a lady holds a teacup. Again!"
+        },
+        {
+          "id": "wh02",
+          "text": "Sergeant Harker, twenty years in uniform, three of them upright. Mind the bruises, they're ceremonial."
+        },
+        {
+          "id": "wh03",
+          "text": "A recruit asked me why we drill. I told him: so your hands know what your head forgets under fear."
+        },
+        {
+          "id": "wh04",
+          "text": "Mattis says I need rest. I say I'll rest when the ridge does. We'll both be waiting a while."
+        },
+        {
+          "id": "wh05",
+          "text": "Shield-wall at the left, spear at the right, panic in the middle. That's the formation."
+        },
+        {
+          "id": "wh06",
+          "text": "The Captain doesn't shout. I shout for her. Division of labour."
+        },
+        {
+          "id": "wh07",
+          "text": "A real fighter! Spar a round with me? Mattis says no. I say a short round.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "wh08",
+          "text": "A mage! Mind the recruits. They faint at fireballs. The last one fainted at a candle.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "wh09",
+          "text": "Scouts: quick feet and quicker lies. Teach my lot to lie convincingly and the first round is mine.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "wh10",
+          "text": "A priest to bless the line. Do it before the charge, please. Afterwards is bad for morale.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "wh11",
+          "text": "Two Ridge Guard graves in the east field. I say a word for each at dawn. Short words, but heartfelt."
+        },
+        {
+          "id": "wh12",
+          "text": "Dree can't hold a sword straight, but he can hold a line. Different talent, rarer."
+        },
+        {
+          "id": "wh13",
+          "text": "A soldier's boots are his only honest friends. Oil them."
+        },
+        {
+          "id": "wh14",
+          "text": "Bodil lends me whetstones, I lend her recruits, nobody pays. It works better than the Crown's system."
+        },
+        {
+          "id": "wh15",
+          "text": "I once held a bridge against three hundred. For ten minutes. Then I swam."
+        },
+        {
+          "id": "wh16",
+          "text": "Orcs hit hard and think slow. Make them think. Fall back, make them follow, then turn."
+        },
+        {
+          "id": "wh17",
+          "text": "Letta teaches my recruits to ride on a donkey with a limp. Terrible plan. They've never fallen off since."
+        },
+        {
+          "id": "wh18",
+          "text": "Every soldier I train I mean to see grey. Most I don't. I train them anyway."
+        },
+        {
+          "id": "wh19",
+          "text": "The Captain says you're headed up the ridge. Take the boars on the left; they charge but they tire.",
+          "when": {
+            "flag": "talkedYsra",
+            "notFlag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "wh20",
+          "text": "Gorrak's yard is yours? Then my lads will march to the gate by morning. I'll try to look surprised.",
+          "when": {
+            "flag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "wh21",
+          "text": "Hask is dead and the ridge is quiet. Five, ten, fifteen. I'm teaching them to sit down.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "wh22",
+          "text": "Mattis has the hask-tonic brewing. I have never wanted to be wounded so badly.",
+          "when": {
+            "flag": "mattisDone"
+          }
+        },
+        {
+          "id": "wh23",
+          "text": "A third of my recruits want to follow you south. I told them no. One climbed over the wall anyway.",
+          "when": {
+            "flag": "reportedYsra"
+          }
+        },
+        {
+          "id": "wh24",
+          "text": "Walk well. Fight well. And if you must run, run in a straight line, which is faster.",
+          "when": {
+            "flag": "companion2Chosen"
+          }
+        }
+      ]
+    },
+    "brother_tobiel": {
+      "name": "Brother Tobiel",
+      "role": "camp chaplain",
+      "personality": "earnest, soft-spoken, secretly terrified of the chapel above",
+      "voice": "gentle liturgical phrases; apologises to the dead in passing",
+      "events": [],
+      "lines": [
+        {
+          "id": "bt01",
+          "text": "Brother Tobiel, chaplain to the Ridge Guard. I pray for the living and apologise to the dead."
+        },
+        {
+          "id": "bt02",
+          "text": "I trained at that chapel. Third pew from the front, left side. I still know which board creaks."
+        },
+        {
+          "id": "bt03",
+          "text": "Hask put a gallows where the bell was. I rang that bell every morning for nine years."
+        },
+        {
+          "id": "bt04",
+          "text": "The sun rises, the sun falls, the sun rises again. That is the entire faith, and it is plenty."
+        },
+        {
+          "id": "bt05",
+          "text": "I give each soldier a pebble before the march. A pebble is small. It reminds them they are not."
+        },
+        {
+          "id": "bt06",
+          "text": "Mattis says my prayers are too long. I say his bandages are too tight. We bless each other."
+        },
+        {
+          "id": "bt07",
+          "text": "A warrior's faith is the shield. Mine is a candle. Both burn, in different ways.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "bt08",
+          "text": "A mage walks closer to the mysteries than I do. I envy and fear you in equal weight.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "bt09",
+          "text": "A scout, praying? Don't hide it. The quiet ones pray best.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "bt10",
+          "text": "A fellow of the sun! Your hands are steadier than mine. Teach me the third blessing, please.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "bt11",
+          "text": "The lamp in your hand is warm, yes? It was in the chapel once. I recognise the pulse."
+        },
+        {
+          "id": "bt12",
+          "text": "Dree knelt in the mud yesterday and wept. I did not ask. I only held the lantern."
+        },
+        {
+          "id": "bt13",
+          "text": "Odalys of the Cinder Chapel, they say, is nearby. I'd love to hear her read the evening psalm."
+        },
+        {
+          "id": "bt14",
+          "text": "I bury the fallen. It is my duty and my small tragedy. The ridge soil is thin and stony."
+        },
+        {
+          "id": "bt15",
+          "text": "Fear is not the opposite of faith. Faith is walking anyway. Everything else is theology."
+        },
+        {
+          "id": "bt16",
+          "text": "There is a prayer for travellers. It begins: may your boots be dry. It ends: may you return."
+        },
+        {
+          "id": "bt17",
+          "text": "Letta's mare is named Hallelujah. I find this inappropriate and endearing in equal measure."
+        },
+        {
+          "id": "bt18",
+          "text": "When I close my eyes I still see the east window at dawn, gold on grey stone. Hask took it. I want it back."
+        },
+        {
+          "id": "bt19",
+          "text": "The chapel is a dead place now, but not a faithless one. Go gently, and speak softly at the altar.",
+          "when": {
+            "flag": "talkedYsra",
+            "notFlag": "haskDefeated"
+          }
+        },
+        {
+          "id": "bt20",
+          "text": "Gorrak's yard is quiet. The orcs have dropped their blades. Strange to hear silence.",
+          "when": {
+            "flag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "bt21",
+          "text": "Hask is gone. I should rejoice. I find only that I am tired, and that the bell is silent.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "bt22",
+          "text": "May the dawn find you wherever the road leads. I will keep a candle burning for the lamp-bearer.",
+          "when": {
+            "flag": "reportedYsra"
+          }
+        },
+        {
+          "id": "bt23",
+          "text": "A sun-priestess among your companions? Then the road will be well-lit.",
+          "when": {
+            "flag": "companion2Chosen"
+          }
+        },
+        {
+          "id": "bt24",
+          "text": "Mattis brews the tonic and I add the blessing. Put together, we make one full remedy and one full embarrassment.",
+          "when": {
+            "flag": "mattisDone"
+          }
+        }
+      ]
+    },
+    "dree": {
+      "name": "Dree",
+      "role": "bandit defector",
+      "personality": "nervous, self-deprecating, painfully eager to be useful",
+      "voice": "half-finished apologies; speaks in lowered tones as if overheard",
+      "events": [],
+      "lines": [
+        {
+          "id": "dr01",
+          "text": "I'm Dree. I used to be one of them. Not proud. Please don't tell the sergeant I said that out loud."
+        },
+        {
+          "id": "dr02",
+          "text": "The brand on my arm is a gallows with a rope. They burn it on whoever swears. I swore at fifteen."
+        },
+        {
+          "id": "dr03",
+          "text": "Captain Ysra gave me a spoon. A spoon! No one has ever given me anything that wasn't a debt."
+        },
+        {
+          "id": "dr04",
+          "text": "I count nails for Bodil. I count them twice. I like having a number come out the same way twice."
+        },
+        {
+          "id": "dr05",
+          "text": "Hask is charming. That's the worst of him. Even now I want to tell you he was kind."
+        },
+        {
+          "id": "dr06",
+          "text": "They won't let me hold a sword. I think that's wise. I'd drop it and apologise."
+        },
+        {
+          "id": "dr07",
+          "text": "A fighter, you? Gorrak will like you. He likes a good swing before he breaks it.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "dr08",
+          "text": "Hask keeps a mage in the chapel cellars. I never saw her face. Only the green light under the door.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "dr09",
+          "text": "Scouts! The back wall of the courtyard has a loose stone. Third from the corner. Don't ask how I know.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "dr10",
+          "text": "A healer. Hask hated healers. He said they undid his work. I thought it was funny then.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "dr11",
+          "text": "The orcs aren't loyal to him. They're loyal to the pay. If the pay stops, so does the warband."
+        },
+        {
+          "id": "dr12",
+          "text": "There was a blacksmith in the courtyard once. Hask took his hammer. I've felt guilty about that hammer for a year."
+        },
+        {
+          "id": "dr13",
+          "text": "I remember the tune the chaplain used to ring on the bell. I whistle it sometimes. It makes the wall less dark."
+        },
+        {
+          "id": "dr14",
+          "text": "Brother Tobiel forgave me before I finished the confession. I think he'd forgive anyone. It's a bit unsettling."
+        },
+        {
+          "id": "dr15",
+          "text": "Fen says I should speak louder. Wynn says I should speak less. I split the difference and say nothing."
+        },
+        {
+          "id": "dr16",
+          "text": "Letta let me feed the grey mare. She bit me. I felt, for the first time, accepted."
+        },
+        {
+          "id": "dr17",
+          "text": "The cellar under the chapel has a locked door. I never saw what was behind it. I never wanted to."
+        },
+        {
+          "id": "dr18",
+          "text": "If you ever see a bandit with a green scarf, tell him Dree says sorry. He'll know."
+        },
+        {
+          "id": "dr19",
+          "text": "Gorrak sits on his wagon-seat throne and polishes his sword. It's the only thing he does that looks gentle.",
+          "when": {
+            "flag": "talkedYsra",
+            "notFlag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "dr20",
+          "text": "You beat Gorrak? I'd have bet my spoon against it. Now I owe someone a spoon.",
+          "when": {
+            "flag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "dr21",
+          "text": "Hask is dead. I should feel free. Instead I feel mostly like a man who forgot what to do with his hands.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "dr22",
+          "text": "Mattis wants venom and bat wings. I could fetch the bat wings but the cave smells of old mutton.",
+          "when": {
+            "flag": "mattisAsked",
+            "notFlag": "mattisDone"
+          }
+        },
+        {
+          "id": "dr23",
+          "text": "They gave me a pardon. A real one, with a seal. I'm hanging it above my cot and pretending not to stare.",
+          "when": {
+            "flag": "reportedYsra"
+          }
+        },
+        {
+          "id": "dr24",
+          "text": "Whatever you're carrying south, I hope it's lighter than what I carried. Take care of your hands.",
+          "when": {
+            "flag": "companion2Chosen"
+          }
+        }
+      ]
+    },
+    "letta_marrow": {
+      "name": "Letta Marrow",
+      "role": "horse handler",
+      "personality": "weathered, practical, more patient with animals than people",
+      "voice": "stable proverbs and horse-sense; describes folk as breeds",
+      "events": [],
+      "lines": [
+        {
+          "id": "lm01",
+          "text": "Four horses left on this ridge. Hallelujah, Biscuit, Duchess and the one who bites. His name is Gerald."
+        },
+        {
+          "id": "lm02",
+          "text": "A horse doesn't lie. It flinches or it doesn't. Folk could learn."
+        },
+        {
+          "id": "lm03",
+          "text": "Keep your voice low near the mare. She remembers the orcs' shouting. She hasn't forgiven them."
+        },
+        {
+          "id": "lm04",
+          "text": "I've mucked out stables from the coast to the Crown road. The smell is the same. The people are not."
+        },
+        {
+          "id": "lm05",
+          "text": "Oats, hay and quiet. That's the whole philosophy of the stable, and also, I think, of a good life."
+        },
+        {
+          "id": "lm06",
+          "text": "Wynn's recruits ride like sacks of grain. Gently, I explain. Firmly, I explain again."
+        },
+        {
+          "id": "lm07",
+          "text": "You've a warrior's stance. Horses respect it. They don't obey it, but they respect it.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "lm08",
+          "text": "Don't cast near the horses. Last time a mage did, Duchess jumped the fence and ate a haystack in protest.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "lm09",
+          "text": "A scout can ride bareback. I can tell by how you walk. You'd suit Biscuit, if he liked you.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "lm10",
+          "text": "A healer! Gerald has a limp I'd like checked. He'll bite you. It's worth the bite.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "lm11",
+          "text": "I found a gold button in the pass last week. Orc livery, with a boar crest. I'd bet it came off a captain."
+        },
+        {
+          "id": "lm12",
+          "text": "Dree is learning to groom. He's gentle, and he apologises to the horses. They like him better than most."
+        },
+        {
+          "id": "lm13",
+          "text": "Fen sits on the lookout with his binoculars and mutters about weather. I bring him tea. He bites at the cup."
+        },
+        {
+          "id": "lm14",
+          "text": "A horse can smell fear from a long way off. And a longer way off, it can smell kindness."
+        },
+        {
+          "id": "lm15",
+          "text": "Ridge boars are not wild pigs. They are wild pigs who have been disappointed. Never turn your back."
+        },
+        {
+          "id": "lm16",
+          "text": "The tusk pit to the west is old. Wolves, boars, orcs, and something else. The horses won't walk past it."
+        },
+        {
+          "id": "lm17",
+          "text": "If you find a pony in the south, buy it. Ponies are underrated. They're the best of both worlds."
+        },
+        {
+          "id": "lm18",
+          "text": "Bodil sells saddles by the pound. I've never bought one. I make my own. They last twice as long."
+        },
+        {
+          "id": "lm19",
+          "text": "Gorrak's warband stole two of my horses last winter. The horses came back by themselves, in a week. They were embarrassed.",
+          "when": {
+            "flag": "talkedYsra",
+            "notFlag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "lm20",
+          "text": "The yard is quiet. The horses sensed it before I did. They all lay down at once.",
+          "when": {
+            "flag": "warchiefDefeated"
+          }
+        },
+        {
+          "id": "lm21",
+          "text": "The chapel is clear. Letta Marrow says she'll take a horse up there tomorrow. Hallelujah, if she's willing.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "lm22",
+          "text": "I can't spare a horse for your journey. I wish I could. The dunes are no place for walking.",
+          "when": {
+            "flag": "reportedYsra"
+          }
+        },
+        {
+          "id": "lm23",
+          "text": "A new companion? Good. A horse takes four; a hero takes at least three. It's the same arithmetic.",
+          "when": {
+            "flag": "companion2Chosen"
+          }
+        },
+        {
+          "id": "lm24",
+          "text": "Gerald has taken to Mattis' tonic. He smells of cinnamon now. Nobody has bitten him since.",
+          "when": {
+            "flag": "mattisDone"
+          }
+        }
+      ]
+    }
+  }
+}

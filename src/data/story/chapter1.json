@@ -1,0 +1,36 @@
+{
+  "scenes": {
+    "intro": {
+      "when": { "notFlag": "sawIntro" },
+      "lines": [
+        { "n": "", "t": "Brinewick sits at the edge of the Hollow Sea, where the last of the salt pans meet the last of the road." },
+        { "n": "", "t": "The sun has been dimming since before you were born. Tonight it hangs low and pale, like a coin seen through water." },
+        { "n": "", "t": "Your left palm has itched since dusk. Now, as the light fails, something under the skin begins to glow." },
+        { "n": "{hero}", "t": "...What is this?" },
+        { "n": "", "t": "Across the path, Elder Maren Salt has stopped raking. She is staring at your hand." }
+      ],
+      "set": ["sawIntro"],
+      "autosave": true,
+      "banner": "Chapter 1: Brinewick"
+    },
+    "boss_intro": {
+      "when": { "notFlag": "boarSeen" },
+      "lines": [
+        { "n": "", "t": "The mud ahead is churned flat and dark. Tusk marks scar every tree trunk at the height of your chest." },
+        { "n": "", "t": "Something huge shifts in the wallow. A mound of reeds and clay stands up and becomes a boar the size of a cart." },
+        { "n": "", "t": "Its small eyes settle on the glow in your palm. It lowers its head." }
+      ],
+      "set": ["boarSeen"]
+    },
+    "boar_down": {
+      "when": { "notFlag": "boarSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Great Mire Boar sinks into its wallow with a long, wet sigh." },
+        { "n": "", "t": "Where its tusk raked the stone, a thread of pale light glows, the same light as your palm, and then fades." },
+        { "n": "{hero}", "t": "It was guarding something. Or running from it." },
+        { "n": "", "t": "Brinewick will want to hear this. Elder Maren is waiting." }
+      ],
+      "set": ["boarSceneDone"]
+    }
+  }
+}

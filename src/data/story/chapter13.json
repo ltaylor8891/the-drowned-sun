@@ -1,0 +1,48 @@
+{
+  "scenes": {
+    "moor_enter": {
+      "when": { "notFlag": "moorEntered" },
+      "lines": [
+        { "n": "", "t": "The road leaves the trees and the sky closes like a lid. There is no sunset here, only a long, slow dimming that never quite finishes. A thin moon hangs low in the east, and under it the heath rolls away in grey waves." },
+        { "n": "", "t": "Pale lamps stand along the road at intervals, each on a post of black iron. Their light is the colour of ash, and it does not reach the ground. Between them, things move in the dark: a flicker, a rustle, the long, low note of something howling a very long way off." },
+        { "n": "", "t": "You cannot see more than a few strides in any direction. The lantern in your hand makes a small, steady circle, and the dark waits politely at its edge." }
+      ],
+      "set": ["moorEntered"]
+    },
+    "arrive_lanternhold": {
+      "when": { "notFlag": "reachedLanternHold" },
+      "lines": [
+        { "n": "", "t": "A light shows ahead, a real one, warm and yellow, and then a hundred more. Lantern Hold sits in a bowl of the moor, ringed with posts, and on every post burns an honest flame. The village glows like a coal in the middle of a cold fire." },
+        { "n": "", "t": "Children carry long poles with wicks on the end, trimming each lamp as you pass. Nobody wastes oil, and nobody lets a single flame go out. A woman in a leather apron meets you at the gate with her hands out, as if to check you are warm." },
+        { "n": "", "t": "Beyond the village the moor swells into a dark rise, and on its crest a ring of tall grey stones. The pale lamps run up toward them like a path of dying stars. Something at the top is listening." }
+      ],
+      "set": ["reachedLanternHold"],
+      "chapter": 13,
+      "autosave": true,
+      "banner": "Chapter 13: Hollowmoor"
+    },
+    "lord_intro": {
+      "when": { "notFlag": "lordSeen" },
+      "lines": [
+        { "n": "", "t": "The stone ring is a hundred feet across, and in its centre a single pale lamp burns on a post of black iron. It is bigger than the others, and its light is thicker. It is not shining outward. It is drinking." },
+        { "n": "", "t": "Between the stones, on a heap of grey pelts, sits a man who is not quite a man. He is broad and bent, wrapped in a cloak of silver-streaked fur, and his hands end in long, curved claws. A crown of old iron sits crooked on his brow." },
+        { "n": "Lord Garrow Thane", "t": "A light-bearer, come to the moor. How rare. The pale lord told me you would come. He said you would be warm, and he said you would be wrong." },
+        { "n": "{hero}", "t": "He took your lordship, and he left you with a leash. Let it go." },
+        { "n": "Lord Garrow Thane", "t": "It is not a leash. It is a moon. And I am very, very hungry." }
+      ],
+      "set": ["lordSeen"]
+    },
+    "lord_down": {
+      "when": { "notFlag": "lordSceneDone" },
+      "lines": [
+        { "n": "", "t": "Garrow falls to his knees, and the great lamp gutters and goes dark. The moor goes dark with it, utterly, and then the moon breaks through the cloud, thin and white and clean, and shows the heath in silver." },
+        { "n": "", "t": "The claws shrink. The fur falls away in handfuls, grey as ash, and underneath is a gaunt, tired, ordinary man with a lord's ring on his hand and tears on his face." },
+        { "n": "Garrow Thane", "t": "Thirty years. Thirty years under that lamp, and I did not know I could stop. The pale man said the sun could not be saved, so he would make a night worth living in. He took what the moor held of dusk and carried it to Keep Vael, to the old fortress on the black cliffs." },
+        { "n": "Garrow Thane", "t": "The Dark Knight Commander holds the gate for him. And there is a shrine in the keep, an old one, that answers to your light. Be careful. The pale man will be waiting. He is not a liar. That is the worst of him." },
+        { "n": "{hero}", "t": "Keep Vael. Then the Chancellor is close." }
+      ],
+      "set": ["lordSceneDone"],
+      "gold": 2000
+    }
+  }
+}

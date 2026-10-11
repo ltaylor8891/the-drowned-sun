@@ -1,0 +1,591 @@
+{
+  "boar": [
+    "mire_boar"
+  ],
+  "goblin_pack": [
+    "goblin_scout",
+    "goblin_scout",
+    "goblin_scout"
+  ],
+  "wolf_pack": [
+    "wolf",
+    "wolf",
+    "wolf"
+  ],
+  "spider_nest": [
+    "giant_spider",
+    "giant_spider"
+  ],
+  "slime_pit": [
+    "green_slime",
+    "green_slime"
+  ],
+  "bat_swarm": [
+    "giant_bat",
+    "giant_bat",
+    "giant_bat"
+  ],
+  "mixed_raid": [
+    "goblin_scout",
+    "wolf",
+    "giant_bat",
+    "green_slime"
+  ],
+  "pans_slime_single": [
+    "green_slime"
+  ],
+  "pans_slime_pair": [
+    "green_slime",
+    "green_slime"
+  ],
+  "marsh_boar_single": [
+    "marsh_boar"
+  ],
+  "boss_great_boar": [
+    "mire_boar"
+  ],
+  "hybrid_gelboar": [
+    "gelboar"
+  ],
+  "road_goblin_single": [
+    "goblin_scout"
+  ],
+  "road_goblin_pair": [
+    "goblin_scout",
+    "goblin_scout"
+  ],
+  "road_goblin_shaman": [
+    "goblin_scout",
+    "goblin_shaman"
+  ],
+  "road_goblin_trio": [
+    "goblin_scout",
+    "goblin_scout",
+    "goblin_shaman"
+  ],
+  "camp_gang": [
+    "goblin_scout",
+    "goblin_shaman",
+    "goblin_scout"
+  ],
+  "boss_goblin_chief": [
+    "goblin_chief"
+  ],
+  "hybrid_webgoblin": [
+    "webgoblin"
+  ],
+  "river_wolf_pair": [
+    "wolf",
+    "wolf"
+  ],
+  "river_wolf_pack": [
+    "wolf",
+    "wolf",
+    "dire_wolf"
+  ],
+  "river_bandit_pair": [
+    "bandit_cutpurse",
+    "bandit_brute"
+  ],
+  "toll_gang": [
+    "bandit_cutpurse",
+    "bandit_cutpurse",
+    "bandit_brute"
+  ],
+  "boss_bandit_captain": [
+    "bandit_captain"
+  ],
+  "boss_greyfang": [
+    "alpha_wolf"
+  ],
+  "hybrid_shriekwolf": [
+    "shriekwolf"
+  ],
+  "tram_spider_pair": [
+    "giant_spider",
+    "cave_spider"
+  ],
+  "tram_bat_swarm": [
+    "giant_bat",
+    "giant_bat",
+    "dire_bat"
+  ],
+  "upper_diggers": [
+    "bandit_digger",
+    "bandit_brute",
+    "giant_bat"
+  ],
+  "lower_spider_nest": [
+    "cave_spider",
+    "cave_spider",
+    "giant_spider"
+  ],
+  "lower_brood": [
+    "giant_spider",
+    "giant_spider",
+    "cave_spider"
+  ],
+  "boss_spider_matriarch": [
+    "spider_matriarch"
+  ],
+  "hybrid_oozeweaver": [
+    "oozeweaver"
+  ],
+  "ridge_orc_pair": [
+    "orc_grunt",
+    "orc_grunt"
+  ],
+  "ridge_orc_band": [
+    "orc_grunt",
+    "orc_brute",
+    "orc_grunt"
+  ],
+  "ridge_boar_pair": [
+    "ridge_boar",
+    "ridge_boar"
+  ],
+  "courtyard_band": [
+    "orc_brute",
+    "orc_grunt",
+    "orc_grunt"
+  ],
+  "chapel_guard": [
+    "gallows_guard",
+    "gallows_guard"
+  ],
+  "boss_orc_warchief": [
+    "orc_warchief"
+  ],
+  "boss_hask": [
+    "bogwarden_hask"
+  ],
+  "hybrid_tuskrender": [
+    "tuskrender"
+  ],
+  "trial_knight": [
+    "trial_knight"
+  ],
+  "trial_berserker": [
+    "trial_berserker"
+  ],
+  "trial_elementalist": [
+    "trial_elementalist"
+  ],
+  "trial_necromancer": [
+    "trial_necromancer"
+  ],
+  "trial_ranger": [
+    "trial_ranger"
+  ],
+  "trial_rogue": [
+    "trial_rogue"
+  ],
+  "trial_cleric": [
+    "trial_cleric"
+  ],
+  "trial_druid": [
+    "trial_druid"
+  ],
+  "dune_ogre_pair": [
+    "ogre_thug",
+    "ogre_thug"
+  ],
+  "dune_boar_pair": [
+    "dune_boar",
+    "dune_boar"
+  ],
+  "dune_troll_pack": [
+    "troll_whelp",
+    "troll_whelp",
+    "ogre_thug"
+  ],
+  "canyon_band": [
+    "ogre_mauler",
+    "ogre_thug",
+    "ogre_shaman"
+  ],
+  "canyon_trolls": [
+    "cave_troll",
+    "troll_whelp",
+    "troll_whelp"
+  ],
+  "gate_guard": [
+    "cave_troll",
+    "ogre_mauler"
+  ],
+  "gate_whelps": [
+    "troll_whelp",
+    "troll_whelp",
+    "troll_whelp"
+  ],
+  "hollow_boars": [
+    "dune_boar",
+    "dune_boar",
+    "dune_boar"
+  ],
+  "boss_troll_brute": [
+    "troll_brute"
+  ],
+  "boss_sandtusk": [
+    "sandtusk"
+  ],
+  "hybrid_grumblehide": [
+    "grumblehide"
+  ],
+  "road_lizard_pair": [
+    "lizard_spearman",
+    "lizard_skirmisher"
+  ],
+  "road_warband": [
+    "lizard_skirmisher",
+    "lizard_skirmisher",
+    "lizard_shaman"
+  ],
+  "road_scorpions": [
+    "dune_scorpion",
+    "dune_scorpion"
+  ],
+  "road_stingers": [
+    "sand_stinger",
+    "sand_stinger",
+    "sand_stinger"
+  ],
+  "road_mixed": [
+    "lizard_spearman",
+    "dune_scorpion",
+    "stonetail_scorpion"
+  ],
+  "fort_guard": [
+    "lizard_spearman",
+    "lizard_spearman",
+    "lizard_shaman"
+  ],
+  "fort_elite": [
+    "stonetail_scorpion",
+    "stonetail_scorpion"
+  ],
+  "fort_patrol": [
+    "lizard_spearman",
+    "lizard_skirmisher",
+    "lizard_skirmisher"
+  ],
+  "boss_lizard_warlord": [
+    "lizard_warlord"
+  ],
+  "hybrid_spidertail": [
+    "spidertail"
+  ],
+  "cliff_flock": [
+    "harpy_scout",
+    "harpy_scout",
+    "harpy_songstress"
+  ],
+  "cliff_talons": [
+    "harpy_razorwing",
+    "harpy_razorwing"
+  ],
+  "cliff_mixed": [
+    "harpy_razorwing",
+    "harpy_songstress",
+    "harpy_scout"
+  ],
+  "cliff_scouts": [
+    "harpy_scout",
+    "harpy_scout",
+    "harpy_scout"
+  ],
+  "tomb_patrol": [
+    "skeleton_soldier",
+    "skeleton_soldier",
+    "skeleton_archer"
+  ],
+  "tomb_crypt": [
+    "skeleton_soldier",
+    "skeleton_archer",
+    "skeleton_priest"
+  ],
+  "tomb_archers": [
+    "skeleton_archer",
+    "skeleton_archer",
+    "skeleton_priest"
+  ],
+  "tomb_guard": [
+    "skeleton_soldier",
+    "skeleton_soldier",
+    "skeleton_soldier"
+  ],
+  "boss_harpy_matron": [
+    "harpy_matron"
+  ],
+  "hybrid_screechwing": [
+    "screechwing"
+  ],
+  "glass_clay_pair": [
+    "clay_golem",
+    "clay_golem"
+  ],
+  "glass_stone_pair": [
+    "stone_golem",
+    "clay_golem"
+  ],
+  "glass_shard_pack": [
+    "glass_golem",
+    "glass_golem",
+    "clay_golem"
+  ],
+  "glass_heavy": [
+    "stone_golem",
+    "stone_golem"
+  ],
+  "temple_guard": [
+    "stone_golem",
+    "glass_golem",
+    "clay_golem"
+  ],
+  "temple_wardens": [
+    "clay_golem",
+    "clay_golem",
+    "stone_golem"
+  ],
+  "temple_glass": [
+    "glass_golem",
+    "glass_golem",
+    "glass_golem"
+  ],
+  "boss_golem_sentinel": [
+    "golem_sentinel"
+  ],
+  "hybrid_bonegolem": [
+    "bonegolem"
+  ],
+  "road_minotaur_pair": [
+    "minotaur_grunt",
+    "minotaur_grunt"
+  ],
+  "road_minotaur_band": [
+    "minotaur_axeman",
+    "minotaur_grunt",
+    "minotaur_seer"
+  ],
+  "road_minotaur_axes": [
+    "minotaur_axeman",
+    "minotaur_axeman"
+  ],
+  "maze_patrol": [
+    "minotaur_grunt",
+    "minotaur_grunt",
+    "minotaur_seer"
+  ],
+  "maze_warband": [
+    "minotaur_axeman",
+    "minotaur_grunt",
+    "minotaur_seer"
+  ],
+  "maze_guard": [
+    "minotaur_axeman",
+    "minotaur_axeman",
+    "minotaur_seer"
+  ],
+  "maze_hunters": [
+    "minotaur_grunt",
+    "minotaur_grunt",
+    "minotaur_axeman"
+  ],
+  "boss_minotaur_king": [
+    "minotaur_king"
+  ],
+  "boss_queen_ismerel": [
+    "queen_ismerel"
+  ],
+  "hybrid_ironhorn": [
+    "ironhorn"
+  ],
+  "frost_archers": [
+    "elf_archer",
+    "elf_archer",
+    "elf_archer"
+  ],
+  "frost_mages": [
+    "elf_mage",
+    "elf_mage",
+    "elf_warden"
+  ],
+  "frost_patrol": [
+    "elf_warden",
+    "elf_archer",
+    "elf_mage"
+  ],
+  "frost_wardens": [
+    "elf_warden",
+    "elf_warden",
+    "elf_mage"
+  ],
+  "keep_guard": [
+    "dark_squire",
+    "dark_squire",
+    "dark_templar"
+  ],
+  "keep_casters": [
+    "elf_mage",
+    "elf_mage",
+    "elf_archer"
+  ],
+  "keep_elite": [
+    "elf_warden",
+    "elf_warden",
+    "elf_archer"
+  ],
+  "boss_elf_captain": [
+    "elf_captain"
+  ],
+  "hybrid_wraithbound": [
+    "wraithbound"
+  ],
+  "wood_saplings": [
+    "sapling_treant",
+    "sapling_treant",
+    "sapling_treant"
+  ],
+  "wood_grove": [
+    "grove_treant",
+    "sapling_treant",
+    "mossback_treant"
+  ],
+  "wood_pair": [
+    "grove_treant",
+    "grove_treant"
+  ],
+  "wood_mossbacks": [
+    "mossback_treant",
+    "mossback_treant",
+    "sapling_treant"
+  ],
+  "shrine_guard": [
+    "grove_treant",
+    "mossback_treant",
+    "sapling_treant"
+  ],
+  "shrine_ancients": [
+    "grove_treant",
+    "grove_treant",
+    "sapling_treant"
+  ],
+  "shrine_thicket": [
+    "sapling_treant",
+    "sapling_treant",
+    "mossback_treant"
+  ],
+  "boss_elder_treant": [
+    "elder_treant"
+  ],
+  "hybrid_barkhide": [
+    "barkhide"
+  ],
+  "moor_wisps": [
+    "hollow_wisp",
+    "hollow_wisp",
+    "moor_wraith"
+  ],
+  "moor_banshees": [
+    "banshee",
+    "banshee",
+    "hollow_wisp"
+  ],
+  "moor_pack": [
+    "werewolf_prowler",
+    "werewolf_prowler",
+    "werewolf_howler"
+  ],
+  "moor_brutes": [
+    "werewolf_brute",
+    "werewolf_prowler"
+  ],
+  "moor_haunt": [
+    "moor_wraith",
+    "banshee",
+    "werewolf_prowler"
+  ],
+  "depths_wraiths": [
+    "moor_wraith",
+    "moor_wraith",
+    "banshee"
+  ],
+  "depths_pack": [
+    "werewolf_brute",
+    "werewolf_howler",
+    "werewolf_prowler"
+  ],
+  "depths_mixed": [
+    "werewolf_brute",
+    "moor_wraith",
+    "hollow_wisp"
+  ],
+  "boss_werewolf_lord": [
+    "werewolf_lord"
+  ],
+  "hybrid_moonfang": [
+    "moonfang"
+  ],
+  "cliff_hatchlings": [
+    "basilisk_hatchling",
+    "basilisk_hatchling",
+    "basilisk_hatchling"
+  ],
+  "cliff_basilisks": [
+    "cliff_basilisk",
+    "basilisk_hatchling"
+  ],
+  "cliff_squires": [
+    "dark_squire",
+    "dark_squire",
+    "dark_knight"
+  ],
+  "cliff_patrol": [
+    "dark_knight",
+    "ashscale_basilisk"
+  ],
+  "cliff_nest": [
+    "ashscale_basilisk",
+    "basilisk_hatchling",
+    "basilisk_hatchling"
+  ],
+  "keep_knights": [
+    "dark_knight",
+    "dark_knight",
+    "dark_templar"
+  ],
+  "keep_mixed": [
+    "dark_knight",
+    "cliff_basilisk",
+    "dark_squire"
+  ],
+  "keep_gaze": [
+    "ashscale_basilisk",
+    "ashscale_basilisk",
+    "dark_squire"
+  ],
+  "halls_elite": [
+    "dark_knight",
+    "dark_templar",
+    "dark_templar"
+  ],
+  "vault_haunt": [
+    "hollow_wisp",
+    "banshee",
+    "hollow_wisp"
+  ],
+  "catacomb_haunt": [
+    "moor_wraith",
+    "dark_squire",
+    "banshee"
+  ],
+  "boss_dark_commander": [
+    "dark_commander"
+  ],
+  "boss_rune_wraith": [
+    "rune_wraith"
+  ],
+  "hybrid_gravewight": [
+    "gravewight"
+  ]
+}

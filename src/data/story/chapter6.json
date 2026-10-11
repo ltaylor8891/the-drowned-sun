@@ -1,0 +1,57 @@
+{
+  "scenes": {
+    "arrive_khesh": {
+      "when": { "notFlag": "reachedKheshCity" },
+      "lines": [
+        { "n": "", "t": "Khesh-Ura rises from the red dunes like a bowl of green water set on a table of rust. Palms ring a deep oasis, and every roof is tiled in the colour of old brass." },
+        { "n": "", "t": "Lizardfolk drovers lead long-necked beasts through the gate, tongues flicking at the air. The air itself is dry enough to crackle, and the sun overhead is a pale coin." },
+        { "n": "", "t": "In the plaza, a stone pillar the colour of dawn stands beside the fountain. The mark in your palm gives a small, pleased pulse." }
+      ],
+      "set": ["reachedKheshCity"],
+      "chapter": 6,
+      "autosave": true,
+      "banner": "Chapter 6: Khesh-Ura"
+    },
+    "troll_intro": {
+      "when": { "notFlag": "trollSeen" },
+      "lines": [
+        { "n": "", "t": "The sluice chamber is dim and wet, and it stinks of rotting weed. A great iron wheel has been jammed with a felled pillar, and the river beyond it is only a thin trickle." },
+        { "n": "", "t": "Something green and heavy sits on the wheel, chewing. It has a tax collector's chain around its neck, and a sack of coins in its lap that it is using as a pillow." },
+        { "n": "Troll Brute", "t": "Queen's water. Queen's rules. Little shiny one want to drink, little shiny one pay." },
+        { "n": "{hero}", "t": "The city is thirsty. Move the pillar." },
+        { "n": "Troll Brute", "t": "Brute move you instead." }
+      ],
+      "set": ["trollSeen"]
+    },
+    "troll_down": {
+      "when": { "notFlag": "trollSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Troll Brute slumps against the wheel and does not get up. The weed on its shoulders curls and goes grey." },
+        { "n": "", "t": "You put your shoulder to the felled pillar, and with a groan of old iron it rolls aside. Behind it, water begins to roar." },
+        { "n": "", "t": "In the troll's sack, among the coins, is a little glass seal stamped with a crown and a sun, and a single line of writing: By order of Her Brilliance Ismerel, who holds the Zenith." },
+        { "n": "{hero}", "t": "Another shard. And a queen who already has it." }
+      ],
+      "set": ["trollSceneDone"],
+      "gold": 350
+    },
+    "tusker_intro": {
+      "when": { "notFlag": "tuskerSeen" },
+      "lines": [
+        { "n": "", "t": "The Boar Hollow is a bowl of baked clay, littered with old bones and the splintered shafts of spears. Wallows ring the walls, each one churned deep." },
+        { "n": "", "t": "At the far end, half-lit by a shaft of sun, stands a boar the size of a wagon. One tusk is snapped. The other is curved like a scimitar and stained rust-red at the root." },
+        { "n": "", "t": "It lifts its head and looks at you with eyes the colour of old amber. It has been waiting for hunters for a very long time." }
+      ],
+      "set": ["tuskerSeen"]
+    },
+    "tusker_down": {
+      "when": { "notFlag": "tuskerSceneDone" },
+      "lines": [
+        { "n": "", "t": "Sandtusk goes down on its knees, and then on its side, with a sound like a falling wall. The dust takes a long time to settle." },
+        { "n": "", "t": "The great curved tusk has come loose where you struck it. It is rust-red at the root, as the stories said, and heavier than it looks." },
+        { "n": "{hero}", "t": "It was only protecting its hollow. I wonder who taught it to hate hunters." },
+        { "n": "", "t": "You take the tusk as proof. Kiss'a will want to see it." }
+      ],
+      "set": ["tuskerSceneDone"]
+    }
+  }
+}

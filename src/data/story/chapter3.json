@@ -1,0 +1,53 @@
+{
+  "scenes": {
+    "arrive_reedhollow": {
+      "when": { "notFlag": "reachedReedhollow" },
+      "lines": [
+        { "n": "", "t": "Reedhollow stands on stilts above a slow brown river, its boardwalks stitched together with rope and stubbornness." },
+        { "n": "", "t": "A hand-painted sign on the first post reads TOLL: FIVE COIN PER HEAD. Someone has crossed out HEAD and written ARM." },
+        { "n": "", "t": "At the harbour office, a man in a salt-stained coat is arguing with nobody in particular. He sees you and stops." }
+      ],
+      "set": ["reachedReedhollow"],
+      "chapter": 3,
+      "autosave": true,
+      "banner": "Chapter 3: Reedhollow"
+    },
+    "captain_intro": {
+      "when": { "notFlag": "captainSeen" },
+      "lines": [
+        { "n": "", "t": "The boards of the Toll Dock groan under barrels stamped with a black gallows." },
+        { "n": "", "t": "A broad woman in a captain's coat counts coins into a ledger. She does not look up." },
+        { "n": "Toll Captain", "t": "Five coin a head. Ten for anyone glowing. Hask's orders. Pay, or be paid back." }
+      ],
+      "set": ["captainSeen"]
+    },
+    "captain_down": {
+      "when": { "notFlag": "captainSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Toll Captain sags against her barrels. The ledger slides from her hand." },
+        { "n": "", "t": "Page after page of numbers. At the foot of each page, the same three words: SEND TO GALLOWKEEP." },
+        { "n": "{hero}", "t": "Hask isn't just taxing the river. He's paying for something." }
+      ],
+      "set": ["captainSceneDone"]
+    },
+    "greyfang_intro": {
+      "when": { "notFlag": "greyfangSeen" },
+      "lines": [
+        { "n": "", "t": "The pines thin into a trampled clearing ringed with bones. The wolves behind you go silent." },
+        { "n": "", "t": "A grey wolf the size of a pony stands on a boulder, ribs scarred by old iron." },
+        { "n": "", "t": "It looks at you. It looks at your hand. It throws back its head and howls." }
+      ],
+      "set": ["greyfangSeen"]
+    },
+    "greyfang_down": {
+      "when": { "notFlag": "greyfangSceneDone" },
+      "lines": [
+        { "n": "", "t": "Greyfang drops to his knees, then to his side. The pack scatters into the trees without a sound." },
+        { "n": "", "t": "Half-buried in the fur at his neck: a collar of iron links, and a tag stamped with a black gallows." },
+        { "n": "{hero}", "t": "He wasn't wild. Somebody chained him, then let him loose on the reed-cutters." },
+        { "n": "", "t": "The marshes will be safer for a while. But whoever sent him is still out there." }
+      ],
+      "set": ["greyfangSceneDone"]
+    }
+  }
+}

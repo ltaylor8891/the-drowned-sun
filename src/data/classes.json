@@ -1,0 +1,225 @@
+{
+  "warrior": {
+    "name": "Warrior",
+    "tier": 1,
+    "desc": "High HP and defence. Swords, axes, heavy armour.",
+    "weapons": [
+      "sword",
+      "axe"
+    ],
+    "armour": [
+      "heavy"
+    ],
+    "stats": {
+      "hp": 70,
+      "mp": 20,
+      "atk": 14,
+      "def": 10,
+      "mag": 3,
+      "spd": 7
+    },
+    "color": "0xc0392b",
+    "growth": {
+      "hp": 6.5,
+      "mp": 1.5,
+      "atk": 1.6,
+      "mag": 0.3,
+      "spd": 0.6,
+      "def": 1.4
+    },
+    "skills": [
+      {
+        "id": "power_strike",
+        "level": 1
+      },
+      {
+        "id": "shield_bash",
+        "level": 4
+      },
+      {
+        "id": "cleave",
+        "level": 8
+      },
+      {
+        "id": "war_cry",
+        "level": 12
+      },
+      {
+        "id": "last_stand",
+        "level": 16
+      }
+    ],
+    "spells": [],
+    "startGear": {
+      "weapon": "rusty_sword",
+      "armor": "worn_mail"
+    }
+  },
+  "mage": {
+    "name": "Mage",
+    "tier": 1,
+    "desc": "Low HP, high magic. Staves, robes. Elemental spells.",
+    "weapons": [
+      "staff"
+    ],
+    "armour": [
+      "robe"
+    ],
+    "stats": {
+      "hp": 38,
+      "mp": 40,
+      "atk": 5,
+      "def": 4,
+      "mag": 14,
+      "spd": 8
+    },
+    "color": "0x8e44ad",
+    "growth": {
+      "hp": 3.5,
+      "mp": 3.5,
+      "atk": 0.5,
+      "mag": 2.0,
+      "spd": 0.8,
+      "def": 0.5
+    },
+    "skills": [
+      {
+        "id": "mana_surge",
+        "level": 14
+      }
+    ],
+    "spells": [
+      {
+        "id": "ember",
+        "level": 1
+      },
+      {
+        "id": "frost_shard",
+        "level": 3
+      },
+      {
+        "id": "spark",
+        "level": 6
+      },
+      {
+        "id": "stone_spike",
+        "level": 10
+      }
+    ],
+    "startGear": {
+      "weapon": "gnarled_staff",
+      "armor": "frayed_robe"
+    }
+  },
+  "scout": {
+    "name": "Scout",
+    "tier": 1,
+    "desc": "Fast and accurate. Bows, daggers, light armour.",
+    "weapons": [
+      "bow",
+      "dagger"
+    ],
+    "armour": [
+      "light"
+    ],
+    "stats": {
+      "hp": 50,
+      "mp": 18,
+      "atk": 11,
+      "def": 6,
+      "mag": 5,
+      "spd": 14
+    },
+    "color": "0x27ae60",
+    "growth": {
+      "hp": 4.8,
+      "mp": 1.5,
+      "atk": 1.4,
+      "mag": 0.5,
+      "spd": 1.5,
+      "def": 0.8
+    },
+    "skills": [
+      {
+        "id": "quick_shot",
+        "level": 1
+      },
+      {
+        "id": "pin",
+        "level": 4
+      },
+      {
+        "id": "double_strike",
+        "level": 8
+      },
+      {
+        "id": "smoke_pellet",
+        "level": 12
+      },
+      {
+        "id": "poison_tip",
+        "level": 16
+      }
+    ],
+    "spells": [],
+    "startGear": {
+      "weapon": "chipped_dagger",
+      "armor": "rag_vest"
+    }
+  },
+  "acolyte": {
+    "name": "Acolyte",
+    "tier": 1,
+    "desc": "Healing and support. Maces, medium armour.",
+    "weapons": [
+      "mace"
+    ],
+    "armour": [
+      "medium"
+    ],
+    "stats": {
+      "hp": 54,
+      "mp": 32,
+      "atk": 8,
+      "def": 7,
+      "mag": 11,
+      "spd": 9
+    },
+    "color": "0xf1c40f",
+    "growth": {
+      "hp": 5.0,
+      "mp": 2.8,
+      "atk": 0.9,
+      "mag": 1.6,
+      "spd": 0.8,
+      "def": 1.0
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "mend",
+        "level": 1
+      },
+      {
+        "id": "smite",
+        "level": 3
+      },
+      {
+        "id": "purify",
+        "level": 7
+      },
+      {
+        "id": "blessing",
+        "level": 11
+      },
+      {
+        "id": "revive",
+        "level": 16
+      }
+    ],
+    "startGear": {
+      "weapon": "dented_mace",
+      "armor": "patched_tunic"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "scenes": {
+    "arrive_mirrorfall": {
+      "when": { "notFlag": "reachedMirrorfall" },
+      "lines": [
+        { "n": "", "t": "The dunes end in a sheet of glass, miles wide, smooth as a frozen lake. Where the sand ran hot and the wind ran dry, now everything shines, and everything throws the sun back at you." },
+        { "n": "", "t": "Mirrorfall stands at the edge of it, a camp of tents and sandstone huts with every window shuttered against the glare. Diggers in dark goggles file out each morning with picks and brushes, and file back each night with dust in their hair." },
+        { "n": "", "t": "At the centre of the glass, half-buried, a great dome of pale stone breaks the surface like the top of a skull. A line of glowing sigils runs across it, and the mark in your palm answers every one." }
+      ],
+      "set": ["reachedMirrorfall"],
+      "chapter": 9,
+      "autosave": true,
+      "banner": "Chapter 9: The Glass Temple"
+    },
+    "sentinel_intro": {
+      "when": { "notFlag": "sentinelSeen" },
+      "lines": [
+        { "n": "", "t": "The inner hall is the size of a cathedral, and every wall is a mirror. Your own reflection walks beside you in a hundred panes, each one carrying the glow in its palm." },
+        { "n": "", "t": "At the far end, on a dais of seven steps, stands a figure of stone and glass the height of three men. Its eyes are two discs of white light. It does not breathe, but it turns its head as you approach." },
+        { "n": "Golem Sentinel", "t": "BEARER. IDENTIFY. SEVEN HUNDRED YEARS I HAVE WAITED FOR THE LAMP. YOU ARE NOT THE FIRST TO WEAR THE MARK. YOU ARE THE FIRST TO REACH ME." },
+        { "n": "{hero}", "t": "I only want the mirror. Stand aside." },
+        { "n": "Golem Sentinel", "t": "THE MIRROR IS FOR THE WORTHY. PROVE IT. STONE DOES NOT YIELD TO WORDS." }
+      ],
+      "set": ["sentinelSeen"]
+    },
+    "sentinel_down": {
+      "when": { "notFlag": "sentinelSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Sentinel kneels, and its eyes dim from white to a soft gold. The glow in the panes goes out, one by one, and then they all light together, bright as dawn." },
+        { "n": "Golem Sentinel", "t": "THE MARK IS A KEY, NOT A WOUND. THE QUEEN'S SHARD ANSWERS TO IT. SHE HAS BEEN DRAWING ON YOUR LIGHT FROM FAR AWAY, THROUGH THE MIRRORS. THAT IS WHY IT BURNS." },
+        { "n": "", "t": "In the central pane, a picture forms. A maze of pale walls under a white sun, and at its centre a throne of glass, and a woman in a crown with a sliver of the sky in her hand. She turns, as if she sees you, and smiles." },
+        { "n": "{hero}", "t": "Ismerel. The labyrinth. She knew we were coming all along." }
+      ],
+      "set": ["sentinelSceneDone"],
+      "gold": 900
+    }
+  }
+}

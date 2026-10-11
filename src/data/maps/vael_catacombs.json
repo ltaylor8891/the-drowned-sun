@@ -1,0 +1,269 @@
+{
+ "id": "vael_catacombs",
+ "name": "The Vael Catacombs",
+ "tileSize": 40,
+ "legend": {
+  "#": {
+   "name": "tree",
+   "color": "0x1f4d2b",
+   "solid": true
+  },
+  ".": {
+   "name": "grass",
+   "color": "0x3f7d3a",
+   "solid": false
+  },
+  ",": {
+   "name": "path",
+   "color": "0xb59a6a",
+   "solid": false
+  },
+  "~": {
+   "name": "water",
+   "color": "0x2a5d9a",
+   "solid": true
+  },
+  "S": {
+   "name": "salt",
+   "color": "0xe6e2d3",
+   "solid": false
+  },
+  "H": {
+   "name": "house",
+   "color": "0x8a5a3a",
+   "solid": true
+  },
+  "D": {
+   "name": "door",
+   "color": "0x3b2412",
+   "solid": false
+  },
+  "f": {
+   "name": "floor",
+   "color": "0x9a7b52",
+   "solid": false
+  },
+  "w": {
+   "name": "wall",
+   "color": "0x4a3a2a",
+   "solid": true
+  },
+  "r": {
+   "name": "rug",
+   "color": "0x7a2f2f",
+   "solid": false
+  },
+  "W": {
+   "name": "labyrinth wall",
+   "color": "0xd8d0c0",
+   "solid": true
+  },
+  "j": {
+   "name": "jetty",
+   "color": "0x8b6b43",
+   "solid": false
+  },
+  "m": {
+   "name": "mud",
+   "color": "0x5b4a2c",
+   "solid": false
+  },
+  "y": {
+   "name": "reeds",
+   "color": "0x4c7a3f",
+   "solid": true
+  },
+  "c": {
+   "name": "cave floor",
+   "color": "0x4a4458",
+   "solid": false
+  },
+  "R": {
+   "name": "rock",
+   "color": "0x2c2833",
+   "solid": true
+  },
+  "k": {
+   "name": "shelf",
+   "color": "0x6a4a2a",
+   "solid": true
+  },
+  "F": {
+   "name": "ford",
+   "color": "0x6fa0d0",
+   "solid": false
+  },
+  "d": {
+   "name": "dirt",
+   "color": "0x8a7350",
+   "solid": false
+  },
+  "p": {
+   "name": "palisade",
+   "color": "0x5a3d1e",
+   "solid": true
+  },
+  "t": {
+   "name": "tent",
+   "color": "0x9a4a3a",
+   "solid": true
+  },
+  "o": {
+   "name": "fire pit",
+   "color": "0xd35400",
+   "solid": true
+  },
+  "a": {
+   "name": "sand",
+   "color": "0xd9b779",
+   "solid": false
+  },
+  "X": {
+   "name": "canyon wall",
+   "color": "0x8a4b2a",
+   "solid": true
+  },
+  "P": {
+   "name": "palm",
+   "color": "0x2f7a3a",
+   "solid": true
+  },
+  "B": {
+   "name": "sandstone",
+   "color": "0x8a5f3a",
+   "solid": true
+  },
+  "z": {
+   "name": "paving",
+   "color": "0xc9a36a",
+   "solid": false
+  },
+  "N": {
+   "name": "pine",
+   "color": "0x163a2c",
+   "solid": true
+  },
+  "n": {
+   "name": "needles",
+   "color": "0x4a6a5a",
+   "solid": false
+  },
+  "i": {
+   "name": "ice",
+   "color": "0xbfe0ee",
+   "solid": false
+  },
+  "e": {
+   "name": "elven path",
+   "color": "0xc8d4d8",
+   "solid": false
+  },
+  "E": {
+   "name": "elven wall",
+   "color": "0x8aa49c",
+   "solid": true
+  },
+  "v": {
+   "name": "obsidian floor",
+   "color": "0x2a2535",
+   "solid": false
+  },
+  "V": {
+   "name": "obsidian wall",
+   "color": "0x1c1826",
+   "solid": true
+  },
+  "q": {
+   "name": "statue",
+   "color": "0x7a7a88",
+   "solid": true
+  },
+  "G": {
+   "name": "glass",
+   "color": "0x9ad8e0",
+   "solid": false
+  },
+  "g": {
+   "name": "glass wall",
+   "color": "0x3a7a90",
+   "solid": true
+  }
+ },
+ "rows": [
+  "RRRRRRRRRRRRRRRR",
+  "RccccRRccccccccR",
+  "RccccRRccccccccR",
+  "RccccccccccccccR",
+  "RccccccccccccccR",
+  "RcRRcccccccccccR",
+  "RcRRcccccccRRRcR",
+  "RccccccccccRRRcR",
+  "RccccccccccccccR",
+  "RRRRRRRDRRRRRRRR"
+ ],
+ "spawn": {
+  "x": 7,
+  "y": 8
+ },
+ "npcs": [],
+ "savePoints": [],
+ "doors": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "keep_courtyard",
+   "tx": 3,
+   "ty": 16,
+   "facing": "up"
+  }
+ ],
+ "chests": [
+  {
+   "id": "catacomb_chest",
+   "x": 13,
+   "y": 2,
+   "items": {
+    "hi_potion": 6,
+    "hi_ether": 5,
+    "phoenix_plume": 3,
+    "stone_salve": 3
+   }
+  },
+  {
+   "id": "catacomb_locked",
+   "x": 2,
+   "y": 3,
+   "hidden": true,
+   "lock": 5,
+   "gold": 5600,
+   "items": {
+    "grand_elixir": 4,
+    "rune_dust": 6
+   }
+  }
+ ],
+ "enemies": [
+  {
+   "id": "vc_1",
+   "creatures": [
+    "moor_wraith",
+    "dark_squire",
+    "banshee"
+   ],
+   "x": 4,
+   "y": 7,
+   "respawn": true
+  },
+  {
+   "id": "gravewight",
+   "creatures": [
+    "gravewight"
+   ],
+   "x": 8,
+   "y": 3,
+   "flag": "gravewightDefeated",
+   "rare": true
+  }
+ ],
+ "scenes": []
+}

@@ -1,0 +1,1291 @@
+{
+  "npcs": {
+    "tamsin_oake": {
+      "name": "Wind-Warden Tamsin Oake",
+      "role": "headwoman of Perch",
+      "personality": "lean, sun-cured, endlessly patient with the sky and short with everyone else",
+      "voice": "weather readings, rope-knot metaphors, an eye always on the horizon",
+      "events": [
+        {
+          "id": "tamsin_intro",
+          "when": {
+            "notFlag": "talkedTamsin"
+          },
+          "set": [
+            "talkedTamsin"
+          ],
+          "say": [
+            "Tamsin Oake, Wind-Warden of Perch. Marrak sent word you were coming. Sit, if the chair holds, and listen to what the wind has been saying.",
+            "The harpies of the high cliffs were never friendly, but they were never hungry. For forty years we left them salt fish on the ledge at midsummer, and they left our herders alone. This spring a new matron took the nest above the village, and she wears a circlet of green glass.",
+            "Now they strip the goat-paths and steal sheep and, worst of all, they sing. Half my villagers will not sleep without wax in their ears. Climb the cliffs, break the matron's hold, and I will see you rewarded. And speak to Mama Brindle in the Cooks' Hall before you go. She has been waiting for a hero with a strong stomach."
+          ]
+        },
+        {
+          "id": "tamsin_report",
+          "when": {
+            "flag": "matronDefeated",
+            "notFlag": "reportedTamsin"
+          },
+          "set": [
+            "reportedTamsin",
+            "chapter_8_done",
+            "glass_road_open"
+          ],
+          "say": [
+            "The singing has stopped. I felt it in my teeth, like a bell taken out of a tower. The whole village is on its roofs, listening to nothing.",
+            "A shard-fragment of the Zenith, you say, set in a circlet of glass. And the Queen sells it to anyone who will pay in loyalty. I took the Queen for a robber. She is a pedlar of the sun.",
+            "Take this purse, with Perch's gratitude. This glass token opens the south road, down through the glass dunes to Mirrorfall, where the diggers have found something under the sand. Tell no one I helped, or everyone will ask me for favours."
+          ],
+          "gold": 800,
+          "give": {
+            "hi_potion": 4,
+            "hi_ether": 3,
+            "phoenix_plume": 2,
+            "clear_tea": 3,
+            "glass_token": 1
+          },
+          "autosave": true,
+          "banner": "Chapter 8 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "to01",
+          "text": "The wind turns three times a day on this cliff. I log the turns in a book. It is the only honest diary in Perch."
+        },
+        {
+          "id": "to02",
+          "text": "A knot you can trust takes ten years to learn and ten seconds to forget. I teach the knots to the young, and the forgetting to the old."
+        },
+        {
+          "id": "to03",
+          "text": "The bridges here are older than the village. We repair them every spring. We have never once found out who built them."
+        },
+        {
+          "id": "to04",
+          "text": "I measure rain by the ache in my left knee. It has been right twice this year and wrong every other time."
+        },
+        {
+          "id": "to05",
+          "text": "Kell keeps the ropes, Yvaine keeps the bones, Brindle keeps the soup. I keep the peace, and I would trade the peace for a bowl of soup."
+        },
+        {
+          "id": "to06",
+          "text": "After the dimming, the updrafts weakened. The hawks flew lower, the harpies flew hungrier, and we all learned to look up more often."
+        },
+        {
+          "id": "to07",
+          "text": "A fighter. The cliff path is narrow. A shield on the left, a sword on the right, and your back flat against the stone.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "to08",
+          "text": "A mage. A little lightning goes a long way on a harpy. They shake it off like water, and then they fall off the cliff.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "to09",
+          "text": "A scout. If you climb the east face, mind the loose slate. If you climb the west, mind the harpies. If you climb neither, mind me.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "to10",
+          "text": "A healer. Their songs will put your whole party to sleep. Clear tea wakes the sleeper, and a good slap wakes the rest.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "to11",
+          "text": "The old priests called the harpies sky-singers. I used to take it for a joke. Now I wonder if it was a warning."
+        },
+        {
+          "id": "to12",
+          "text": "Quill is a harpy with one wing, and she lives on my porch. She has never harmed a villager. I believe harpies are people, and I have the scars to prove I tried to argue otherwise."
+        },
+        {
+          "id": "to13",
+          "text": "The rare trader has visited Perch once. He sold me a lamp that burns without oil. I keep it in the cellar. It makes the mice nervous."
+        },
+        {
+          "id": "to14",
+          "text": "The nest on the high ledge is as old as the village. My grandmother said the first matron was a girl who fell and learned to fly."
+        },
+        {
+          "id": "to15",
+          "text": "The Whisper Tombs sit off the road's southern fork. The old sun-priests sleep there, and not all of them sleep soundly. I have not been inside since my husband's funeral."
+        },
+        {
+          "id": "to16",
+          "text": "Marigold sings in the evenings. Even the harpies pause on the wing. I cannot tell whom to worry about."
+        },
+        {
+          "id": "to17",
+          "text": "There is a saying in Perch: never trust the calm. A calm sky is only a sky that has not decided."
+        },
+        {
+          "id": "to18",
+          "text": "I once climbed to the high ledge as a girl on a dare. A harpy looked at me, and I looked at her. We both agreed to forget it."
+        },
+        {
+          "id": "to19",
+          "text": "The path to the high nest starts at the east edge of the village. It climbs through four harpy flocks. Do not hurry, and do not look down.",
+          "when": {
+            "flag": "talkedTamsin",
+            "notFlag": "matronDefeated"
+          }
+        },
+        {
+          "id": "to20",
+          "text": "The sky is quiet. I keep looking at it as if it might change its mind. Perhaps it will, and perhaps I will enjoy the wait.",
+          "when": {
+            "flag": "matronDefeated"
+          }
+        },
+        {
+          "id": "to21",
+          "text": "The singing has stopped, and the children are playing in the open for the first time since spring. I have missed the sound of shouting.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        },
+        {
+          "id": "to22",
+          "text": "Mama Brindle's contest was meant for a feast day. The harpies ruined the guest list. Perhaps you can help her salvage the menu.",
+          "when": {
+            "flag": "cookAsked",
+            "notFlag": "cookDone"
+          }
+        },
+        {
+          "id": "to23",
+          "text": "The Screechwing in the bat roost north of the road is a bad omen. A harpy with a bat's lungs. Stay away unless you must.",
+          "when": {
+            "notFlag": "screechwingDefeated"
+          }
+        },
+        {
+          "id": "to24",
+          "text": "You came a long way for a small, high village. Whatever happens in the labyrinth, Perch will remember who stood on this ledge.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        }
+      ]
+    },
+    "mama_brindle": {
+      "name": "Mama Brindle",
+      "role": "master cook of Perch",
+      "personality": "loud, huge-hearted, ferociously proud of every pot",
+      "voice": "cooking metaphors, bellows, affectionate insults, and a sample spoon in every sentence",
+      "events": [
+        {
+          "id": "brindle_ask",
+          "when": {
+            "notFlag": "cookAsked"
+          },
+          "set": [
+            "cookAsked"
+          ],
+          "say": [
+            "There you are! Mama Brindle, master cook of Perch, and you look like you have not had a decent meal since the coast. Sit! Eat! Do not argue with the spoon!",
+            "Every year, on the first full moon after harvest, Perch holds the Cliff Cook-Off. Four villages send their best, and the winner gets the Golden Ladle. I have won it nine years in a row, and I intend to win it a tenth, in spite of the harpies.",
+            "I need two harpy eggs, the fresh kind, and two pinches of bone dust from the old tombs south of the road. Bring them to me and I will teach you the cooking trade, the proper kind, with campfires and spice and a very sharp knife."
+          ]
+        },
+        {
+          "id": "brindle_done",
+          "when": {
+            "flag": "cookGathered",
+            "notFlag": "cookDone"
+          },
+          "set": [
+            "cookDone",
+            "job_cook_unlocked"
+          ],
+          "say": [
+            "Eggs! Bone dust! Oh, you are a treasure and a menace. Give me those and sit down before you fall over.",
+            "Watch. Egg, dust, a pinch of spice, a prayer. Stir twice clockwise and once the other way. That is the Cook's art, apart from the other nine hundred parts.",
+            "Now you are a cook, or you will be when you take the job from my menu. Light any camp fire, and the pot will do the rest. And here, for the first stew, a little something to start your pantry."
+          ],
+          "take": {
+            "harpy_egg": 2,
+            "bone_dust": 2
+          },
+          "gold": 500,
+          "give": {
+            "sand_date": 4,
+            "desert_spice": 3,
+            "hi_potion": 2
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "mb01",
+          "text": "A good stew is patience, salt and a little bit of fear. Without the fear, nobody stirs."
+        },
+        {
+          "id": "mb02",
+          "text": "I have cooked for kings, drovers, and one very rude goat. The goat had the best manners."
+        },
+        {
+          "id": "mb03",
+          "text": "Never trust a cook who does not eat their own food. Never trust a cook who eats only their own food."
+        },
+        {
+          "id": "mb04",
+          "text": "Sand dates for sweetness, desert spice for sin. That is the entire pantry of the dunes."
+        },
+        {
+          "id": "mb05",
+          "text": "A meal at the campfire lasts a few battles. A meal at my table lasts a lifetime. I have never been quite able to explain the difference."
+        },
+        {
+          "id": "mb06",
+          "text": "I make an omelette from harpy eggs that has been known to make grown soldiers weep. It is not the eggs. It is the memory of the nest."
+        },
+        {
+          "id": "mb07",
+          "text": "A fighter. You want a stew that sits like a boulder. I know exactly the one.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mb08",
+          "text": "A mage. Thin broth, strong spice, and no onions near the staff. I have seen what an onion does to a spell.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mb09",
+          "text": "A scout. You want a light meal that does not slow your feet. Skewers! Hot, tangy, and gone in thirty seconds.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mb10",
+          "text": "A healer. You heal, I feed. Between us the world is almost tolerable.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mb11",
+          "text": "I learned to cook from my grandmother, who learned from a travelling saint, who learned from a soldier who had run out of rations. We cook out of necessity and out of love."
+        },
+        {
+          "id": "mb12",
+          "text": "Bone broth is the oldest recipe I know. It was served in the great Sun-Temple on the day it sank. Nobody finished the bowl."
+        },
+        {
+          "id": "mb13",
+          "text": "Ferdie sells me spice at a ridiculous price. I pay it, because he also sells me excellent gossip."
+        },
+        {
+          "id": "mb14",
+          "text": "Kell eats three bowls of everything and never gains an ounce. I have given up trying to understand him."
+        },
+        {
+          "id": "mb15",
+          "text": "Quill the harpy sits on my windowsill and watches me cook. She does not eat meat, but she always seems to enjoy the smell."
+        },
+        {
+          "id": "mb16",
+          "text": "Yvaine comes in every night for tea and asks me to taste the dust. No idea why. I taste it anyway."
+        },
+        {
+          "id": "mb17",
+          "text": "Marigold sings while I stir. The soup tastes better. I have never told her, because she would take a bow."
+        },
+        {
+          "id": "mb18",
+          "text": "A rare trader came by once and traded me a jar of star-salt. I put it in the stew. The stew glowed. Not advised."
+        },
+        {
+          "id": "mb19",
+          "text": "Go, go! Collect your eggs and your dust. The eggs are in the nests above the village, and the dust is in the tombs south of the road. And bring me back alive, or I will be very cross.",
+          "when": {
+            "flag": "cookAsked",
+            "notFlag": "cookGathered"
+          }
+        },
+        {
+          "id": "mb20",
+          "text": "You have the eggs and the dust? Come here, come here, and let us see what a hero can do with a wooden spoon.",
+          "when": {
+            "flag": "cookGathered",
+            "notFlag": "cookDone"
+          }
+        },
+        {
+          "id": "mb21",
+          "text": "The Golden Ladle is mine again. Ten years in a row. I tell you, a campfire cook is worth any five kitchen cooks.",
+          "when": {
+            "flag": "cookDone"
+          }
+        },
+        {
+          "id": "mb22",
+          "text": "The harpies are gone from the east ledge? Then the eggs will be easier to gather next year. I will plan a feast, a real one, with dancing.",
+          "when": {
+            "flag": "matronDefeated"
+          }
+        },
+        {
+          "id": "mb23",
+          "text": "You have a Cook's hands, at last. Light a fire, take a pot, and eat well on the road. That is all the art there is.",
+          "when": {
+            "flag": "job_cook_unlocked"
+          }
+        },
+        {
+          "id": "mb24",
+          "text": "Whatever the Queen is doing to the sun, I will keep the pot warm. That is the only thing a cook can do, and sometimes the only thing that matters.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        }
+      ]
+    },
+    "ferdie_plum": {
+      "name": "Ferdie Plum",
+      "role": "keeper of Perch Provisions",
+      "personality": "round, jovial, a connoisseur of rumours",
+      "voice": "price-list patter, gossip delivered as a favour, and sample-sized portions of everything",
+      "events": [
+        {
+          "id": "ferdie_delivery",
+          "when": {
+            "hasItem": "crate_perch",
+            "notFlag": "deliveredPerch"
+          },
+          "set": [
+            "deliveredPerch"
+          ],
+          "say": [
+            "A crate for Ferdie Plum! Mine, mine, all mine! Archibald, come here, we have mail! Spice and a very fancy lantern, if I know Orla.",
+            "Here is your receipt, signed and sealed. Tell the Guildmaster the donkey sends his regards."
+          ],
+          "take": {
+            "crate_perch": 1
+          },
+          "gold": 250,
+          "give": {
+            "clear_tea": 1
+          }
+        },
+        {
+          "id": "ferdie_intro",
+          "when": {
+            "notFlag": "metFerdie"
+          },
+          "set": [
+            "metFerdie"
+          ],
+          "say": [
+            "Ferdie Plum, provisioner to the heights. If it can be carried up a cliff, I have carried it.",
+            "Potions, ethers, clear tea for sleep and charm, spice and dates for the cooking trade. No gear, I am afraid. The goats object to heavy loads."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "fp01",
+          "text": "Everything I sell has been carried up three hundred steps by a donkey named Archibald. He sends his regards."
+        },
+        {
+          "id": "fp02",
+          "text": "Clear tea is the most underrated thing on the shelf. A harpy song can put a party in a coma, and a cup of tea can undo it."
+        },
+        {
+          "id": "fp03",
+          "text": "Desert spice is thirty coins a pinch. I would sell it for twenty, but then I could not afford the donkey."
+        },
+        {
+          "id": "fp04",
+          "text": "Sand dates are the cheapest sweet thing in the dunes. The second cheapest is gossip, and I sell that for free."
+        },
+        {
+          "id": "fp05",
+          "text": "My ledger lists every customer who ever bought a potion. Seven of them never returned. I light a candle for each."
+        },
+        {
+          "id": "fp06",
+          "text": "A shopkeeper learns three things: what people say they want, what they want, and what they will pay for. The third is always smaller."
+        },
+        {
+          "id": "fp07",
+          "text": "A fighter. You will want the hi-potions in bulk. I give a discount for bulk. The discount is a smile.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "fp08",
+          "text": "A mage. Ethers, ethers, and a spare ether. I keep a shelf for your kind. It is the high one.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "fp09",
+          "text": "A scout. You carry light, so you buy light. Clear tea, a few antidotes, and a very small bag of dates.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "fp10",
+          "text": "A healer. Stock up on clear tea, in case someone sleeps in battle and someone else wakes up crying.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "fp11",
+          "text": "A man bought a hundred pinches of spice last month and asked if I had more. I did not ask what he was cooking. I do not want to know."
+        },
+        {
+          "id": "fp12",
+          "text": "Mama Brindle is down eleven coppers and a pot of soup against me. I collect the soup. I have forgotten the coppers."
+        },
+        {
+          "id": "fp13",
+          "text": "Kell comes in every Tuesday for rope. He buys it, he coils it, and he sells it back to me on Thursday. I suspect it is a hobby."
+        },
+        {
+          "id": "fp14",
+          "text": "Yvaine buys a pound of chalk each week. She says it is for the tombs. I say it is for the pastries. She has not corrected me."
+        },
+        {
+          "id": "fp15",
+          "text": "Marigold pays me in songs. I have been reimbursed with eleven ballads and a lullaby. I am up on the deal."
+        },
+        {
+          "id": "fp16",
+          "text": "A rare trader's cart once rolled right up the cliff road. I have never seen anything like it. I did not buy a thing, and I regret it daily."
+        },
+        {
+          "id": "fp17",
+          "text": "The harpies steal my sacks of flour. They never take the sugar. Which means either they hate sweet things or they are saving it for later."
+        },
+        {
+          "id": "fp18",
+          "text": "Quill the harpy stops by the shop to browse. She never buys. I give her a free sample every time and she takes it with great dignity."
+        },
+        {
+          "id": "fp19",
+          "text": "If you are climbing to the matron's nest, buy clear tea. Her daughters sing to put you to sleep, and a sleeper does not wake in time for lunch.",
+          "when": {
+            "flag": "talkedTamsin",
+            "notFlag": "matronDefeated"
+          }
+        },
+        {
+          "id": "fp20",
+          "text": "The matron is gone? I will celebrate with a ten-percent discount for about a minute and a half. Do not tell Tamsin.",
+          "when": {
+            "flag": "matronDefeated"
+          }
+        },
+        {
+          "id": "fp21",
+          "text": "Bone dust, harpy eggs. Both for the Cook-Off? Brindle will be unbearable. Buy a spare ladle while you are here.",
+          "when": {
+            "flag": "cookAsked",
+            "notFlag": "cookDone"
+          }
+        },
+        {
+          "id": "fp22",
+          "text": "A glass-sealed order, you say? Never touch the stuff. A man in my village touched one and woke up with a crown on his head. A very small crown.",
+          "when": {
+            "hasItem": "ismerel_writ"
+          }
+        },
+        {
+          "id": "fp23",
+          "text": "A Screechwing in the roost! My cousin heard it from the road and has not spoken since. I think he is fine. I think he is just thinking.",
+          "when": {
+            "notFlag": "screechwingDefeated"
+          }
+        },
+        {
+          "id": "fp24",
+          "text": "I hope the road ahead is kind. I hope it is full of donkeys. Most of all, I hope it is full of paying customers.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        }
+      ]
+    },
+    "rosamund_teague": {
+      "name": "Rosamund Teague",
+      "role": "keeper of the Updraft Inn",
+      "personality": "drowsy, kind, never quite finishing a sentence",
+      "voice": "gentle, trailing off; talks about sleep, pillows and wind through shutters",
+      "events": [
+        {
+          "id": "rosamund_intro",
+          "when": {
+            "notFlag": "metRosamund"
+          },
+          "set": [
+            "metRosamund"
+          ],
+          "say": [
+            "Oh. A guest. Rosamund Teague, of the Updraft. The beds are very, very soft, and the shutters rattle only when the harpies sing.",
+            "Fifty coins a night, I think. Or fifty-five. Brindle will tell you. I am sure it is fifty."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "rt01",
+          "text": "Every bed in the Updraft is stuffed with goose-down, and nothing else in Perch arrives without trouble."
+        },
+        {
+          "id": "rt02",
+          "text": "The wind blows through the chimney in a lovely low tone. Guests think it is a ghost. I do not tell them it is only the chimney."
+        },
+        {
+          "id": "rt03",
+          "text": "I once slept for three days straight after a harpy sang under my window. Tamsin said it was the best I had looked in years."
+        },
+        {
+          "id": "rt04",
+          "text": "The rooms are named for winds. The east room is Sirocco. The west room is Zephyr. The north room is Grumpy. I like Grumpy best."
+        },
+        {
+          "id": "rt05",
+          "text": "There is a trick to waking up. You do not open your eyes first. You open your mind first, very slowly, like a shutter."
+        },
+        {
+          "id": "rt06",
+          "text": "I have never been awake for a sunrise. They tell me it was golden once. I believe them. I believe most things before breakfast."
+        },
+        {
+          "id": "rt07",
+          "text": "A fighter. Two pillows, I think. One for the head. One for the sword.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "rt08",
+          "text": "A mage. I put a basin of water by your bed. In case you set the sheets on fire. Do not worry. It happens.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "rt09",
+          "text": "A scout. The window faces the cliff. The door faces the corridor. The wall faces nothing. You will be quite comfortable.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "rt10",
+          "text": "A healer. There is a fever in the village. Do you mind, after supper? I would be very grateful, in the morning, I think.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "rt11",
+          "text": "A jar of honey sits by the door for the harpy who visits. She never comes in. She watches the honey. I think she is shy."
+        },
+        {
+          "id": "rt12",
+          "text": "Kell sleeps on the roof in summer. He says the ropes are comfortable. I told him he would fall. He said he never has. I worry."
+        },
+        {
+          "id": "rt13",
+          "text": "Yvaine drinks her tea very slowly. I think she is listening to something. I do not ask. It is kinder."
+        },
+        {
+          "id": "rt14",
+          "text": "A lantern that never goes out hangs in my cellar. A man gave it to me. I do not remember his face. It is a fine lantern."
+        },
+        {
+          "id": "rt15",
+          "text": "Marigold sings me to sleep sometimes. She stands on the porch and sings softly. I am asleep before the second verse."
+        },
+        {
+          "id": "rt16",
+          "text": "Mama Brindle sends up a pot of soup each night. Nobody told me why. I think she is afraid I will forget to eat."
+        },
+        {
+          "id": "rt17",
+          "text": "There is a loose board on the landing. It sings when you step on it. I have decided that is a feature."
+        },
+        {
+          "id": "rt18",
+          "text": "Sometimes I dream of a very large bird, and in the dream I am not afraid. I wake up and the shutters are rattling."
+        },
+        {
+          "id": "rt19",
+          "text": "Bound for the high nest, are you? A bed will be waiting, I think. Soft, warm and very near the door.",
+          "when": {
+            "flag": "talkedTamsin",
+            "notFlag": "matronDefeated"
+          }
+        },
+        {
+          "id": "rt20",
+          "text": "No more singing at dawn. I woke up on my own this morning, which I had stopped believing was possible.",
+          "when": {
+            "flag": "matronDefeated"
+          }
+        },
+        {
+          "id": "rt21",
+          "text": "I made a pot of honey tea for the whole village. It was very sweet. I forgot the tea. I think it was still a success.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        },
+        {
+          "id": "rt22",
+          "text": "Brindle says you are going to be a cook. How lovely. The fire is lit. The kettle is on. I think it is.",
+          "when": {
+            "flag": "cookDone"
+          }
+        },
+        {
+          "id": "rt23",
+          "text": "A rare trader slept here once. He paid in a tiny jar of dreams. I use them on nights when I cannot sleep. They taste of mint.",
+          "when": {
+            "merchantToday": true
+          }
+        },
+        {
+          "id": "rt24",
+          "text": "Come back, if the road allows. The bed will be warm. The window will be open a crack. I will pretend I did not notice.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        }
+      ]
+    },
+    "kell_rope": {
+      "name": "Kell Rope",
+      "role": "bridge-keeper and rope-tender",
+      "personality": "wiry, quiet, quick to grin and slow to speak",
+      "voice": "knot names, tension and slack, and a climber's ease with heights",
+      "events": [],
+      "lines": [
+        {
+          "id": "kr01",
+          "text": "A good rope is a promise. A bad rope is a lie that waits. I check every rope in Perch each dawn."
+        },
+        {
+          "id": "kr02",
+          "text": "The bowline is the king of knots. The clove hitch is its fool. I know a knot for every occasion, and one for funerals."
+        },
+        {
+          "id": "kr03",
+          "text": "I have fallen eleven times. Ten were short. One was not. I do not discuss the one."
+        },
+        {
+          "id": "kr04",
+          "text": "There are ninety-one bridges in Perch. I have crossed each one more times than I have breathed. Do not ask me to prove it."
+        },
+        {
+          "id": "kr05",
+          "text": "Never look down when you cross. Never look up either. Look at the next plank and nothing else. That is the whole religion."
+        },
+        {
+          "id": "kr06",
+          "text": "Tamsin pays me in goat cheese and fine advice. The cheese is better."
+        },
+        {
+          "id": "kr07",
+          "text": "A fighter. You are heavy, and heavy folk like the stone path better than the bridges. They are right.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "kr08",
+          "text": "A mage. Please do not cast anything near the ropes. The last wizard to try turned a bridge into a staircase of ash.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "kr09",
+          "text": "A scout. We could use you on the high face. Light feet, sure hands, and a short memory for fear.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "kr10",
+          "text": "A healer. If you ever climb with me, bring a salve for the blisters. A rope tells the truth about your hands.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "kr11",
+          "text": "The harpies nest on the north face, above the third bridge. I have a rope that reaches the lower ledge. Nobody has used it in a year."
+        },
+        {
+          "id": "kr12",
+          "text": "The earliest bridges were vine and prayer, laid down by priests. The vine rotted. The prayer held. Ask me which one I trust."
+        },
+        {
+          "id": "kr13",
+          "text": "Quill once flew me to the far ledge when a rope snapped. She does not fly well, with the one wing. I do not mention it. She is very proud."
+        },
+        {
+          "id": "kr14",
+          "text": "Yvaine pays me to lower her into the tombs on a line. She comes up with dust on her hair and a smile. I never ask what she finds."
+        },
+        {
+          "id": "kr15",
+          "text": "Marigold sings while I work. I tie better knots when she sings. I have tried singing myself. The knots come out worse."
+        },
+        {
+          "id": "kr16",
+          "text": "Ferdie sells good rope. I buy it, coil it, and sell it back. It keeps the rope honest."
+        },
+        {
+          "id": "kr17",
+          "text": "A rare trader once offered me a rope that never frayed. I said no. I said it very slowly. I think about it every night."
+        },
+        {
+          "id": "kr18",
+          "text": "In winter the ropes freeze, and the bridges ring. It is the loveliest noise in Perch, and it means we have a problem."
+        },
+        {
+          "id": "kr19",
+          "text": "The path to the nest is steep, and the harpies attack from above. Keep to the stone, keep your shield high, and keep moving.",
+          "when": {
+            "flag": "talkedTamsin",
+            "notFlag": "matronDefeated"
+          }
+        },
+        {
+          "id": "kr20",
+          "text": "The matron is down, and the ropes hang quiet after a long season of wind. I ran every line this morning just to check. They held.",
+          "when": {
+            "flag": "matronDefeated"
+          }
+        },
+        {
+          "id": "kr21",
+          "text": "The east ledge is clear. I will rig a new bridge to the nest, so the children can see the eggs from a safe distance.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        },
+        {
+          "id": "kr22",
+          "text": "You plan to climb to the bat roost? There is a rope on the north face. Take it if you must. Do not fall. I will not forgive you.",
+          "when": {
+            "notFlag": "screechwingDefeated"
+          }
+        },
+        {
+          "id": "kr23",
+          "text": "A Screechwing is dead? Then my sister can sleep again. She lives near the roost. She will cry, and then she will bake.",
+          "when": {
+            "flag": "screechwingDefeated"
+          }
+        },
+        {
+          "id": "kr24",
+          "text": "If you ever need a rope, ask. If you ever need a bridge, ask twice. If you ever need a miracle, ask Tamsin.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        }
+      ]
+    },
+    "yvaine_ash": {
+      "name": "Sister Yvaine Ash",
+      "role": "bone-reader and tomb scholar",
+      "personality": "pale, precise, cheerfully morbid",
+      "voice": "archaeological shorthand and a calm fondness for the dead",
+      "events": [],
+      "lines": [
+        {
+          "id": "ya01",
+          "text": "The Whisper Tombs hold the bodies of three hundred sun-priests. They lie in niches, in the order they died, with a prayer under each tongue."
+        },
+        {
+          "id": "ya02",
+          "text": "The dead do not rest here. They keep a vigil, patiently, for a dawn that has not come. It is the saddest thing I have ever studied."
+        },
+        {
+          "id": "ya03",
+          "text": "Bone dust is not a cruelty. It is just what is left after the prayers are done. I collect it for the cooks, who put it in bread. Nobody has complained."
+        },
+        {
+          "id": "ya04",
+          "text": "Each priest was buried with a gold disc, a sun in miniature. Most are cracked now. A few are still faintly warm."
+        },
+        {
+          "id": "ya05",
+          "text": "The skeletons in the tombs are not monsters. They are priests who forgot to stop. I treat them gently, and strike them hard. Both are forms of respect."
+        },
+        {
+          "id": "ya06",
+          "text": "Light and fire hurt them. They were priests of the sun, and the sun is the one thing they can no longer bear. It is a very cruel irony."
+        },
+        {
+          "id": "ya07",
+          "text": "A fighter. Do not strike the sun-priests on the head. It is rude, and also ineffective. Aim for the ribs.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ya08",
+          "text": "A mage. Light and fire are the best remedy. Ice they resist. They have been cold since before the Gloam.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ya09",
+          "text": "A scout. The archers in the tombs are the dangerous ones. They do not tire, they do not sleep, and they never miss twice.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ya10",
+          "text": "A healer. Light spells hurt them, but a quiet prayer may help. I have seen a skeleton lower its sword at the right words.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ya11",
+          "text": "I found an inscription in the lowest crypt. It said: the light was not lost. It was given. I have thought about it every night since."
+        },
+        {
+          "id": "ya12",
+          "text": "The sun-priests vowed to keep the Temple's flame alive until the last dawn. They failed, and they went on trying. I admire that more than I can say."
+        },
+        {
+          "id": "ya13",
+          "text": "I once found a priest whose disc was still warm. I put it on my own chest and felt a heartbeat that was not mine. I did not tell Tamsin."
+        },
+        {
+          "id": "ya14",
+          "text": "Kell lowers me into the crypts on a rope. He is very patient with a person who talks to skeletons."
+        },
+        {
+          "id": "ya15",
+          "text": "Mama Brindle asks for bone dust every season. She says it makes the broth. I think it makes the broth sad. I do not say so."
+        },
+        {
+          "id": "ya16",
+          "text": "A very old priest named Orrin lies in the northernmost niche. His disc was blank. I believe he gave away his light before he died."
+        },
+        {
+          "id": "ya17",
+          "text": "Marigold sings in the tombs sometimes, very softly. The skeletons stop to listen. I am not certain whether it is music or memory."
+        },
+        {
+          "id": "ya18",
+          "text": "The last Chancellor of Ahn-Solis was entombed in the south wing. I have not found him. I think he is not there."
+        },
+        {
+          "id": "ya19",
+          "text": "The tombs open off the southern branch of the road, past the second milestone. The entrance is a cleft in the red stone. Do not go in without light.",
+          "when": {
+            "notFlag": "tombsEntered"
+          }
+        },
+        {
+          "id": "ya20",
+          "text": "You have been in the tombs. I can tell. You smell of old incense and new regret. Did the priests speak to you?",
+          "when": {
+            "flag": "tombsEntered"
+          }
+        },
+        {
+          "id": "ya21",
+          "text": "The matron is gone, and the glass circlet with her. I should like to examine it. Part of the Zenith itself. A decade of study would be a fair price for an hour.",
+          "when": {
+            "flag": "matronDefeated"
+          }
+        },
+        {
+          "id": "ya22",
+          "text": "You have the mark. The old priests wrote of it. They called it the vessel. I did not know what that meant until I saw your palm.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        },
+        {
+          "id": "ya23",
+          "text": "Bone dust, for the Cook-Off? I will lend you a satchel. Take only what you need. The priests do not mind. They never have.",
+          "when": {
+            "flag": "cookAsked",
+            "notFlag": "cookGathered"
+          }
+        },
+        {
+          "id": "ya24",
+          "text": "Whatever you decide to do about the sun, do it with care. I have read the last words of three hundred priests. They all said the same thing: do not hurry.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        }
+      ]
+    },
+    "quill": {
+      "name": "Quill",
+      "role": "a one-winged harpy who lives in the village",
+      "personality": "shy, dignified, deeply curious about humans",
+      "voice": "short, careful sentences; words arranged like feathers",
+      "events": [],
+      "lines": [
+        {
+          "id": "qu01",
+          "text": "I have one wing. The other was a gift of the cliff. I am told it was a long fall. I do not remember."
+        },
+        {
+          "id": "qu02",
+          "text": "The flock does not speak to me. I am the one who stayed. In Perch, I am the one who came."
+        },
+        {
+          "id": "qu03",
+          "text": "Your hands are very small. Your voices are very small. I do not understand how you are not afraid of everything."
+        },
+        {
+          "id": "qu04",
+          "text": "I do not sing. The songs of my kin are for the egg. I hum, when I am alone. Tamsin does not mind."
+        },
+        {
+          "id": "qu05",
+          "text": "Humans eat soup. Why, I cannot say. It is warm water with regrets. I find it fascinating."
+        },
+        {
+          "id": "qu06",
+          "text": "The mother of the flock is called the Matron. She was good once. She hatched seven clutches in one season. The cold made her fierce."
+        },
+        {
+          "id": "qu07",
+          "text": "A fighter. I have seen your kind charge the cliff. It is very brave and very loud. I admire it from the roof.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "qu08",
+          "text": "A mage. You have light in your fingers. My kin would call that a gift, or a theft. I have not decided.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "qu09",
+          "text": "A scout. You walk as if the air is a floor. I used to walk that way. Before the fall.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "qu10",
+          "text": "A healer. My wing aches in the cold. Could you, perhaps, if you are not busy? I would not ask, but the nights are long.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "qu11",
+          "text": "The green glass the Matron wears is not hers. It was given. My kin say it is warm. I think it is hungry."
+        },
+        {
+          "id": "qu12",
+          "text": "I sit on Brindle's windowsill and watch her cook. It is the closest I have felt to a nest in a long time."
+        },
+        {
+          "id": "qu13",
+          "text": "Kell once carried me up the cliff when my wing failed. I have never forgotten. I would carry him, but I am not strong enough."
+        },
+        {
+          "id": "qu14",
+          "text": "Marigold sings in a voice that sounds like my kin, but without the sleep. I come to the porch to listen. She does not mind."
+        },
+        {
+          "id": "qu15",
+          "text": "The bat-roost is north of the road. There is a thing there that is a little like us, and a little like them. I do not go near it. It remembers me."
+        },
+        {
+          "id": "qu16",
+          "text": "The eggs are warmer than they should be. The Matron's glass is feeding them. Something is wrong, and I do not know who to tell."
+        },
+        {
+          "id": "qu17",
+          "text": "I once found a feather by the well. It was not mine. It was longer, and silver. I put it in Tamsin's window. She keeps it."
+        },
+        {
+          "id": "qu18",
+          "text": "A pedlar of rare things left me a tiny bell. When I ring it, the wind answers. I ring it only on very quiet days."
+        },
+        {
+          "id": "qu19",
+          "text": "Tamsin says you will climb to the nest. I will not go with you. But I will watch. And I will hum.",
+          "when": {
+            "flag": "talkedTamsin",
+            "notFlag": "matronDefeated"
+          }
+        },
+        {
+          "id": "qu20",
+          "text": "The nest is silent. My kin will wake and not know the song. I wonder if they will be sad, or only very tired.",
+          "when": {
+            "flag": "matronDefeated"
+          }
+        },
+        {
+          "id": "qu21",
+          "text": "The Matron lives? You did not kill her? Thank you. She is still my mother, in the way that matters.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        },
+        {
+          "id": "qu22",
+          "text": "The Screechwing is dead. It was a hurt thing. I hope it rests. I hope the air is kind.",
+          "when": {
+            "flag": "screechwingDefeated"
+          }
+        },
+        {
+          "id": "qu23",
+          "text": "A strange egg lies in the Cooks' Hall. It is warm. I think it will hatch. I have asked Brindle to be gentle.",
+          "when": {
+            "flag": "cookDone"
+          }
+        },
+        {
+          "id": "qu24",
+          "text": "You carry a sun in your hand. I will remember it. When I fly again, I will fly toward it.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        }
+      ]
+    },
+    "marigold_finch": {
+      "name": "Marigold Finch",
+      "role": "village bard",
+      "personality": "warm, theatrical, easily moved to tears and to laughter",
+      "voice": "sing-song asides, rhyming couplets she cannot resist, and dramatic pauses",
+      "events": [],
+      "lines": [
+        {
+          "id": "mf01",
+          "text": "I sing on the porch each evening, for the village and the wind. The wind pays better. It never leaves."
+        },
+        {
+          "id": "mf02",
+          "text": "A song is a sentence that has learned to fly. I have taught three thousand sentences to fly. Two crashed."
+        },
+        {
+          "id": "mf03",
+          "text": "Perch has forty-one songs, and I know all of them. Forty are about cliffs. One is about soup."
+        },
+        {
+          "id": "mf04",
+          "text": "A good ballad needs three things: a hero, a loss, and a very long last note. I have never managed the last one."
+        },
+        {
+          "id": "mf05",
+          "text": "The harpies sing in a scale that does not exist. I have tried to write it down. The paper curls."
+        },
+        {
+          "id": "mf06",
+          "text": "Tamsin says I should save my voice. I say a voice unspent is a voice wasted. We have a cordial feud."
+        },
+        {
+          "id": "mf07",
+          "text": "A fighter. I shall write a ballad for you, a rousing one. It will have seventeen verses, and one will rhyme with sword.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mf08",
+          "text": "Ah, a spell-weaver. The star-songs that open doors: I know only the first line. I am afraid of the second.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mf09",
+          "text": "A scout. Your footsteps have a melody. Light, quick, and a little bit sad. I shall hum your footsteps.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mf10",
+          "text": "A healer. My throat is sore and my heart is heavier. If you have a hymn for either, I would be glad to learn it.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mf11",
+          "text": "I once sang a song to a harpy, and she sang one back. We did not understand each other. It was the best conversation I ever had."
+        },
+        {
+          "id": "mf12",
+          "text": "Brindle hums while she cooks. It is flat. I would never tell her. It is the best flat note in the world."
+        },
+        {
+          "id": "mf13",
+          "text": "Quill listens from the roof. She does not sing, but I can hear her breathing in rhythm. It is a lovely accompaniment."
+        },
+        {
+          "id": "mf14",
+          "text": "Yvaine asked me to sing in the tombs. The skeletons stopped to listen. I felt, for a moment, like a priest."
+        },
+        {
+          "id": "mf15",
+          "text": "Kell whistles when he ties a knot. It is always the same three notes. I have built a whole symphony around them, in my head."
+        },
+        {
+          "id": "mf16",
+          "text": "A rare trader paid me in a single silver note, bottled in a vial. I have not dared to open it. I suspect it is the loveliest sound anywhere."
+        },
+        {
+          "id": "mf17",
+          "text": "The sun dims by a hair every year, and I write a verse for each. I have fifty verses now. I will not finish the song until the sun does."
+        },
+        {
+          "id": "mf18",
+          "text": "There is an old lullaby in the dunes. It begins: sleep, little spark, the dark is only a blanket. I never learned the rest."
+        },
+        {
+          "id": "mf19",
+          "text": "I shall sing for you when you climb. The wind will carry it. The harpies may listen, and may not. Either way, it will make a fine verse.",
+          "when": {
+            "flag": "talkedTamsin",
+            "notFlag": "matronDefeated"
+          }
+        },
+        {
+          "id": "mf20",
+          "text": "The nest is silent, and I have a new song. It has no words, only a very long last note. I think, at last, I have written it.",
+          "when": {
+            "flag": "matronDefeated"
+          }
+        },
+        {
+          "id": "mf21",
+          "text": "Perch is singing again. All forty-two songs. I added one about you. It is mostly about soup. I hope you do not mind.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        },
+        {
+          "id": "mf22",
+          "text": "Brindle says you are a cook now. I shall write a ballad called The Hero and the Ladle. It will be very short and very loud.",
+          "when": {
+            "flag": "cookDone"
+          }
+        },
+        {
+          "id": "mf23",
+          "text": "The Screechwing's call is gone from the north. I did not like it. It sounded like a song sung backward, by someone in pain.",
+          "when": {
+            "flag": "screechwingDefeated"
+          }
+        },
+        {
+          "id": "mf24",
+          "text": "If you ever hear a ballad about a traveller with a glowing hand, know that I wrote it. And that the last note is for you.",
+          "when": {
+            "flag": "reportedTamsin"
+          }
+        }
+      ]
+    }
+  }
+}

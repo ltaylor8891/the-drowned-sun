@@ -1,0 +1,37 @@
+{
+  "scenes": {
+    "arrive_waystation": {
+      "when": { "notFlag": "reachedWaystation" },
+      "lines": [
+        { "n": "", "t": "The Scorch Road ends, or pauses, at a ring of canvas tents huddled round a dry stone well. Camels kneel in the lee of the tents with their eyes shut against the glare." },
+        { "n": "", "t": "Redwater Waystation. A painted sign promises water, shade and honest weights. Somebody has scratched through the word honest and written fair-ish above it." },
+        { "n": "", "t": "To the north, over a ridge of sunbaked stone, a squat fort flies a green banner. Every traveller in the camp glances at it once, and then carefully does not look again." }
+      ],
+      "set": ["reachedWaystation"],
+      "chapter": 7,
+      "autosave": true,
+      "banner": "Chapter 7: The Scorch Road"
+    },
+    "warlord_intro": {
+      "when": { "notFlag": "warlordSeen" },
+      "lines": [
+        { "n": "", "t": "The fort's inner hall is lined with stacked chests, each stamped with a glass seal. At the far end, on a raised dais of sandstone, a tall lizardfolk in green-lacquered armour sits with a spear across his knees." },
+        { "n": "Warlord Vesh-Kar", "t": "Another coin-giver, or another thief? It makes no difference. On the Queen's road, every traveller pays one tenth of everything they carry." },
+        { "n": "{hero}", "t": "Even the light?" },
+        { "n": "Warlord Vesh-Kar", "t": "Especially the light. Ismerel tells me that glow in your palm is hers by right. Show it to me, little traveller. I would like to see what she is so afraid of." }
+      ],
+      "set": ["warlordSeen"]
+    },
+    "warlord_down": {
+      "when": { "notFlag": "warlordSceneDone" },
+      "lines": [
+        { "n": "", "t": "Vesh-Kar sinks to one knee, planting his spear to hold himself upright. The green banner above the dais sags and falls." },
+        { "n": "Warlord Vesh-Kar", "t": "A tenth of the sun. That was the writ. I thought it a figure of speech, until I saw her hold it. The Queen is not collecting taxes. She is collecting the dawn." },
+        { "n": "", "t": "He takes a sealed document from his belt and lets it drop at your feet. Glass, crown and sun, as before. Then he lies still, and the warband lays down its spears, one by one." },
+        { "n": "{hero}", "t": "The Zenith shard. She is drinking it dry, and the whole road is the straw." }
+      ],
+      "set": ["warlordSceneDone"],
+      "gold": 500
+    }
+  }
+}

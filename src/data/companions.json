@@ -1,0 +1,6 @@
+{
+  "brannoc": { "name": "Brannoc Hale", "classId": "warrior", "color": "0xb04a3a", "blurb": "Gruff ex-gate guard seeking to atone." },
+  "iselle": { "name": "Iselle Varn", "classId": "mage", "color": "0x9a5fc0", "blurb": "Anxious scholar-prodigy who talks in footnotes." },
+  "tam": { "name": "Tam Quillon", "classId": "scout", "color": "0x3fae6a", "blurb": "Cheerful smuggler's kid who knows every ferry." },
+  "odalys": { "name": "Odalys Reeve", "classId": "acolyte", "color": "0xe0c040", "blurb": "Calm sun-priestess with a hidden sense of humour." }
+}

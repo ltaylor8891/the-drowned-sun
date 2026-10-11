@@ -1,0 +1,44 @@
+{
+  "scenes": {
+    "arrive_lanternmoor": {
+      "when": { "notFlag": "reachedLanternmoor" },
+      "lines": [
+        { "n": "", "t": "Lanternmoor clings to a hillside of grey rock, every doorway hung with a lamp that has not been allowed to go out." },
+        { "n": "", "t": "The mine mouth at the east end of the street is boarded shut. A black gallows is chalked across the planks, with a fresh crack in the chalk where something has pushed from inside." },
+        { "n": "", "t": "Miners sit on the steps with their hands wrapped round tin cups, not drinking. Nobody has been below in eleven days." }
+      ],
+      "set": ["reachedLanternmoor", "reachedSedgeMines"],
+      "chapter": 4,
+      "autosave": true,
+      "banner": "Chapter 4: The Sedge Mines"
+    },
+    "lower_enter": {
+      "when": { "notFlag": "lowerReached" },
+      "lines": [
+        { "n": "", "t": "The stairs end in a cavern draped with white. Silk hangs from every beam, thick as sailcloth, and it moves though there is no wind." },
+        { "n": "", "t": "Somewhere ahead, many small legs are tapping on stone. The tapping stops as you step onto the floor." },
+        { "n": "{hero}", "t": "They know we're here." }
+      ],
+      "set": ["lowerReached"]
+    },
+    "matriarch_intro": {
+      "when": { "notFlag": "matriarchSeen" },
+      "lines": [
+        { "n": "", "t": "The tunnel opens into a vault the size of a chapel. At its centre, a seam of pale stone glows in the rock like a vein of milk." },
+        { "n": "", "t": "Something the colour of old bruises hangs above it, wrapped in layers of silk. It unfolds one leg, then another, then eight." },
+        { "n": "", "t": "The glow in the seam answers the glow in your palm. The Matriarch lowers herself from the ceiling, and hisses." }
+      ],
+      "set": ["matriarchSeen"]
+    },
+    "matriarch_down": {
+      "when": { "notFlag": "matriarchSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Spider Matriarch folds in on herself like a closing hand. The silk falls away, strand by strand." },
+        { "n": "", "t": "The seam beneath her pulses once, bright as a lamp, and then dims to a faint thread. Fresh cart tracks lead out of the vault, north." },
+        { "n": "{hero}", "t": "Hask took what was here. The spiders only guarded what was left." },
+        { "n": "", "t": "In the dust, a single chip of the pale stone is still warm. You pocket it." }
+      ],
+      "set": ["matriarchSceneDone"]
+    }
+  }
+}

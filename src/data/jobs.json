@@ -1,0 +1,1024 @@
+{
+  "xpTable": [
+    0,
+    20,
+    50,
+    100,
+    170,
+    260,
+    380,
+    540,
+    740,
+    1000
+  ],
+  "maxActive": 2,
+  "jobs": {
+    "blacksmith": {
+      "name": "Blacksmith",
+      "unlockFlag": "job_blacksmith_unlocked",
+      "master": "Arlo Vask",
+      "hint": "A smith in Tallow Ford lost his hammer to goblins.",
+      "desc": "Temper gear at a forge, and hammer out new pieces from ore.",
+      "perks": [
+        {
+          "level": 1,
+          "text": "Temper gear up to +1 at a forge.",
+          "effects": {
+            "temperCap": 1
+          }
+        },
+        {
+          "level": 2,
+          "text": "Forge costs 5% less.",
+          "effects": {
+            "discount": 0.05
+          }
+        },
+        {
+          "level": 3,
+          "text": "Temper up to +2. Recipe: Smith-forged weapons.",
+          "effects": {
+            "temperCap": 1
+          }
+        },
+        {
+          "level": 4,
+          "text": "Forge costs 5% less.",
+          "effects": {
+            "discount": 0.05
+          }
+        },
+        {
+          "level": 5,
+          "text": "Temper up to +3.",
+          "effects": {
+            "temperCap": 1
+          }
+        },
+        {
+          "level": 6,
+          "text": "Forge costs 5% less. Recipe: Smith-forged armour.",
+          "effects": {
+            "discount": 0.05
+          }
+        },
+        {
+          "level": 7,
+          "text": "Temper up to +4.",
+          "effects": {
+            "temperCap": 1
+          }
+        },
+        {
+          "level": 8,
+          "text": "Forge costs 5% less.",
+          "effects": {
+            "discount": 0.05
+          }
+        },
+        {
+          "level": 9,
+          "text": "Temper up to +5. Recipe: Masterwork weapons.",
+          "effects": {
+            "temperCap": 1
+          }
+        },
+        {
+          "level": 10,
+          "text": "Forge costs 10% less.",
+          "effects": {
+            "discount": 0.1
+          }
+        }
+      ],
+      "recipes": [
+        {
+          "id": "smith_blade",
+          "level": 3,
+          "gold": 120,
+          "items": {
+            "iron_ore": 4
+          }
+        },
+        {
+          "id": "smith_staff",
+          "level": 3,
+          "gold": 120,
+          "items": {
+            "iron_ore": 4
+          }
+        },
+        {
+          "id": "smith_bow",
+          "level": 3,
+          "gold": 120,
+          "items": {
+            "iron_ore": 4
+          }
+        },
+        {
+          "id": "smith_mace",
+          "level": 3,
+          "gold": 120,
+          "items": {
+            "iron_ore": 4
+          }
+        },
+        {
+          "id": "smith_plate",
+          "level": 6,
+          "gold": 150,
+          "items": {
+            "iron_ore": 5,
+            "silver_ore": 1
+          }
+        },
+        {
+          "id": "smith_robe",
+          "level": 6,
+          "gold": 150,
+          "items": {
+            "iron_ore": 5,
+            "silver_ore": 1
+          }
+        },
+        {
+          "id": "smith_jacket",
+          "level": 6,
+          "gold": 150,
+          "items": {
+            "iron_ore": 5,
+            "silver_ore": 1
+          }
+        },
+        {
+          "id": "smith_leathers",
+          "level": 6,
+          "gold": 150,
+          "items": {
+            "iron_ore": 5,
+            "silver_ore": 1
+          }
+        },
+        {
+          "id": "master_blade",
+          "level": 9,
+          "gold": 600,
+          "items": {
+            "iron_ore": 6,
+            "silver_ore": 3
+          }
+        },
+        {
+          "id": "master_staff",
+          "level": 9,
+          "gold": 600,
+          "items": {
+            "iron_ore": 6,
+            "silver_ore": 3
+          }
+        },
+        {
+          "id": "master_bow",
+          "level": 9,
+          "gold": 600,
+          "items": {
+            "iron_ore": 6,
+            "silver_ore": 3
+          }
+        },
+        {
+          "id": "master_mace",
+          "level": 9,
+          "gold": 600,
+          "items": {
+            "iron_ore": 6,
+            "silver_ore": 3
+          }
+        }
+      ]
+    },
+    "miner": {
+      "name": "Miner",
+      "unlockFlag": "job_miner_unlocked",
+      "master": "Bruna Stonehand",
+      "hint": "The Sedge Mines need clearing of their nest.",
+      "desc": "Dig ore nodes in caves and mines. Nodes fill in again each chapter.",
+      "perks": [
+        {
+          "level": 1,
+          "text": "Dig ore nodes for iron ore.",
+          "effects": {}
+        },
+        {
+          "level": 2,
+          "text": "Dig one extra ore.",
+          "effects": {
+            "yield": 1
+          }
+        },
+        {
+          "level": 3,
+          "text": "Gems sometimes turn up in the rock.",
+          "effects": {
+            "gemChance": 0.15
+          }
+        },
+        {
+          "level": 4,
+          "text": "Silver ore sometimes turns up.",
+          "effects": {
+            "silverChance": 0.35
+          }
+        },
+        {
+          "level": 5,
+          "text": "Dig one extra ore.",
+          "effects": {
+            "yield": 1
+          }
+        },
+        {
+          "level": 6,
+          "text": "More gems. Sapphires appear.",
+          "effects": {
+            "gemChance": 0.1,
+            "gemTier": 1
+          }
+        },
+        {
+          "level": 7,
+          "text": "More silver ore.",
+          "effects": {
+            "silverChance": 0.2
+          }
+        },
+        {
+          "level": 8,
+          "text": "Dig one extra ore.",
+          "effects": {
+            "yield": 1
+          }
+        },
+        {
+          "level": 9,
+          "text": "More gems. Ember opals appear.",
+          "effects": {
+            "gemChance": 0.1,
+            "gemTier": 1
+          }
+        },
+        {
+          "level": 10,
+          "text": "Rich veins: every dig yields one more.",
+          "effects": {
+            "yield": 1
+          }
+        }
+      ]
+    },
+    "hunter": {
+      "name": "Hunter",
+      "unlockFlag": "job_hunter_unlocked",
+      "master": "Hunter Master Kiss'a",
+      "hint": "Someone in Khesh-Ura speaks of a legendary boar.",
+      "desc": "Better drops, more gold from beasts, and a sharper nose for rare hybrids.",
+      "perks": [
+        {
+          "level": 1,
+          "text": "Beast bounty: 10% more gold from boars, wolves, spiders and bats.",
+          "effects": {
+            "goldBeast": 0.1
+          }
+        },
+        {
+          "level": 2,
+          "text": "Drop chances rise by 5%.",
+          "effects": {
+            "dropBonus": 0.05
+          }
+        },
+        {
+          "level": 3,
+          "text": "Hybrids are a little more likely to appear (+1%).",
+          "effects": {
+            "hybridBoost": 0.01
+          }
+        },
+        {
+          "level": 4,
+          "text": "Drop chances rise by 5%.",
+          "effects": {
+            "dropBonus": 0.05
+          }
+        },
+        {
+          "level": 5,
+          "text": "Beast bounty: another 10% gold from beasts.",
+          "effects": {
+            "goldBeast": 0.1
+          }
+        },
+        {
+          "level": 6,
+          "text": "Drop chances rise by 5%.",
+          "effects": {
+            "dropBonus": 0.05
+          }
+        },
+        {
+          "level": 7,
+          "text": "Hybrids more likely (+1%).",
+          "effects": {
+            "hybridBoost": 0.01
+          }
+        },
+        {
+          "level": 8,
+          "text": "Drop chances rise by 5%.",
+          "effects": {
+            "dropBonus": 0.05
+          }
+        },
+        {
+          "level": 9,
+          "text": "Hybrids more likely (+2%).",
+          "effects": {
+            "hybridBoost": 0.02
+          }
+        },
+        {
+          "level": 10,
+          "text": "Master hunter: drop chances rise by 10%.",
+          "effects": {
+            "dropBonus": 0.1
+          }
+        }
+      ]
+    },
+    "cook": {
+      "name": "Cook",
+      "unlockFlag": "job_cook_unlocked",
+      "master": "Mama Brindle",
+      "hint": "A cook in the cliff village needs help with a contest.",
+      "desc": "Cook and eat a meal at any campfire. A meal gives the whole party a buff at the start of the next few battles.",
+      "perks": [
+        {
+          "level": 1,
+          "text": "Cook meals at campfires (the fire pits in camps).",
+          "effects": {}
+        },
+        {
+          "level": 2,
+          "text": "Meals last one turn longer.",
+          "effects": {
+            "durationBonus": 1
+          }
+        },
+        {
+          "level": 3,
+          "text": "Recipe: Harpy Omelette.",
+          "effects": {}
+        },
+        {
+          "level": 4,
+          "text": "Meals last one battle longer.",
+          "effects": {
+            "battlesBonus": 1
+          }
+        },
+        {
+          "level": 5,
+          "text": "Recipe: Bone Broth.",
+          "effects": {}
+        },
+        {
+          "level": 6,
+          "text": "Meals last one turn longer.",
+          "effects": {
+            "durationBonus": 1
+          }
+        },
+        {
+          "level": 7,
+          "text": "Recipe: Sunfire Curry.",
+          "effects": {}
+        },
+        {
+          "level": 8,
+          "text": "Meals last one battle longer.",
+          "effects": {
+            "battlesBonus": 1
+          }
+        },
+        {
+          "level": 9,
+          "text": "Thrifty: a 25% chance the ingredients are not used up.",
+          "effects": {
+            "thrift": 0.25
+          }
+        },
+        {
+          "level": 10,
+          "text": "Recipe: Cliff Feast. Meals last two turns longer.",
+          "effects": {
+            "durationBonus": 2
+          }
+        }
+      ],
+      "recipes": [
+        {
+          "id": "hearty_stew",
+          "name": "Hearty Stew",
+          "level": 1,
+          "ingredients": {
+            "sand_date": 2,
+            "desert_spice": 1
+          },
+          "statuses": [
+            {
+              "status": "defenseUp",
+              "turns": 4
+            }
+          ],
+          "battles": 3,
+          "desc": "Defence up at the start of each battle."
+        },
+        {
+          "id": "spiced_skewers",
+          "name": "Spiced Skewers",
+          "level": 2,
+          "ingredients": {
+            "scorpion_stinger": 1,
+            "desert_spice": 1
+          },
+          "statuses": [
+            {
+              "status": "attackUp",
+              "turns": 4
+            }
+          ],
+          "battles": 3,
+          "desc": "Attack up at the start of each battle."
+        },
+        {
+          "id": "harpy_omelette",
+          "name": "Harpy Omelette",
+          "level": 3,
+          "ingredients": {
+            "harpy_egg": 2,
+            "desert_spice": 1
+          },
+          "statuses": [
+            {
+              "status": "regen",
+              "turns": 5
+            }
+          ],
+          "battles": 3,
+          "desc": "Regen at the start of each battle."
+        },
+        {
+          "id": "bone_broth",
+          "name": "Bone Broth",
+          "level": 5,
+          "ingredients": {
+            "bone_dust": 2,
+            "sand_date": 1
+          },
+          "statuses": [
+            {
+              "status": "defenseUp",
+              "turns": 5
+            },
+            {
+              "status": "regen",
+              "turns": 5
+            }
+          ],
+          "battles": 3,
+          "desc": "Defence up and regen."
+        },
+        {
+          "id": "sunfire_curry",
+          "name": "Sunfire Curry",
+          "level": 7,
+          "ingredients": {
+            "troll_sinew": 1,
+            "desert_spice": 2
+          },
+          "statuses": [
+            {
+              "status": "attackUp",
+              "turns": 5
+            },
+            {
+              "status": "haste",
+              "turns": 4
+            }
+          ],
+          "battles": 3,
+          "desc": "Attack up and haste."
+        },
+        {
+          "id": "cliff_feast",
+          "name": "Cliff Feast",
+          "level": 10,
+          "ingredients": {
+            "harpy_egg": 2,
+            "troll_sinew": 1,
+            "sand_date": 3,
+            "desert_spice": 2
+          },
+          "statuses": [
+            {
+              "status": "attackUp",
+              "turns": 6
+            },
+            {
+              "status": "defenseUp",
+              "turns": 6
+            },
+            {
+              "status": "haste",
+              "turns": 5
+            },
+            {
+              "status": "regen",
+              "turns": 6
+            }
+          ],
+          "battles": 5,
+          "desc": "Everything at once."
+        }
+      ]
+    },
+    "merchant": {
+      "name": "Merchant",
+      "unlockFlag": "job_merchant_unlocked",
+      "master": "Guildmaster Orla Tarn",
+      "hint": "A guildmaster at Mirrorfall wants a crate delivered to three towns.",
+      "desc": "A better head for prices: you pay less when buying and get more when selling, in every shop.",
+      "perks": [
+        {
+          "level": 1,
+          "text": "Sell prices rise by 4%.",
+          "effects": {
+            "sellBonus": 0.04
+          }
+        },
+        {
+          "level": 2,
+          "text": "Buy prices fall by 3%.",
+          "effects": {
+            "buyDiscount": 0.03
+          }
+        },
+        {
+          "level": 3,
+          "text": "Sell prices rise by 4%.",
+          "effects": {
+            "sellBonus": 0.04
+          }
+        },
+        {
+          "level": 4,
+          "text": "Buy prices fall by 3%.",
+          "effects": {
+            "buyDiscount": 0.03
+          }
+        },
+        {
+          "level": 5,
+          "text": "Sell prices rise by 4%.",
+          "effects": {
+            "sellBonus": 0.04
+          }
+        },
+        {
+          "level": 6,
+          "text": "Buy prices fall by 3%.",
+          "effects": {
+            "buyDiscount": 0.03
+          }
+        },
+        {
+          "level": 7,
+          "text": "Sell prices rise by 4%.",
+          "effects": {
+            "sellBonus": 0.04
+          }
+        },
+        {
+          "level": 8,
+          "text": "Buy prices fall by 3%.",
+          "effects": {
+            "buyDiscount": 0.03
+          }
+        },
+        {
+          "level": 9,
+          "text": "Sell prices rise by 4%.",
+          "effects": {
+            "sellBonus": 0.04
+          }
+        },
+        {
+          "level": 10,
+          "text": "Master trader: buy prices fall by another 3%.",
+          "effects": {
+            "buyDiscount": 0.03
+          }
+        }
+      ]
+    },
+    "scholar": {
+      "name": "Scholar",
+      "unlockFlag": "job_scholar_unlocked",
+      "master": "Archivist Selwyn Ashgrove",
+      "hint": "An archivist in an elven library has lost three books.",
+      "desc": "Learn from every fight: bonus XP, and in battle you can read what a foe is weak to and resists.",
+      "perks": [
+        {
+          "level": 1,
+          "text": "Battle XP rises by 3%.",
+          "effects": {
+            "xpBonus": 0.03
+          }
+        },
+        {
+          "level": 2,
+          "text": "Battle XP rises by 3%.",
+          "effects": {
+            "xpBonus": 0.03
+          }
+        },
+        {
+          "level": 3,
+          "text": "Scan: choosing a target shows what it is weak to.",
+          "effects": {
+            "weakReveal": 1
+          }
+        },
+        {
+          "level": 4,
+          "text": "Battle XP rises by 3%.",
+          "effects": {
+            "xpBonus": 0.03
+          }
+        },
+        {
+          "level": 5,
+          "text": "Battle XP rises by 3%.",
+          "effects": {
+            "xpBonus": 0.03
+          }
+        },
+        {
+          "level": 6,
+          "text": "Deep scan: you also see what it resists.",
+          "effects": {
+            "resistReveal": 1
+          }
+        },
+        {
+          "level": 7,
+          "text": "Battle XP rises by 3%.",
+          "effects": {
+            "xpBonus": 0.03
+          }
+        },
+        {
+          "level": 8,
+          "text": "Battle XP rises by 3%.",
+          "effects": {
+            "xpBonus": 0.03
+          }
+        },
+        {
+          "level": 9,
+          "text": "Battle XP rises by 3%.",
+          "effects": {
+            "xpBonus": 0.03
+          }
+        },
+        {
+          "level": 10,
+          "text": "Master scholar: battle XP rises by 4%.",
+          "effects": {
+            "xpBonus": 0.04
+          }
+        }
+      ]
+    },
+    "treasure_hunter": {
+      "name": "Treasure Hunter",
+      "unlockFlag": "job_treasure_unlocked",
+      "master": "Guildmaster Garrick Fell",
+      "hint": "A guild-master in the frozen north wants a dead explorer's map followed.",
+      "desc": "Hidden chests show up near you, locked chests can be picked at your level, and chests give a little more gold.",
+      "perks": [
+        {
+          "level": 1,
+          "text": "Detect: hidden chests show up within 3 tiles. Pick locks of level 1.",
+          "effects": {
+            "detect": 3
+          }
+        },
+        {
+          "level": 2,
+          "text": "Chests give 5% more gold.",
+          "effects": {
+            "lootBonus": 0.05
+          }
+        },
+        {
+          "level": 3,
+          "text": "Detect radius +1. Pick locks of level 3.",
+          "effects": {
+            "detect": 1
+          }
+        },
+        {
+          "level": 4,
+          "text": "Chests give 5% more gold.",
+          "effects": {
+            "lootBonus": 0.05
+          }
+        },
+        {
+          "level": 5,
+          "text": "Detect radius +1. Pick locks of level 5.",
+          "effects": {
+            "detect": 1
+          }
+        },
+        {
+          "level": 6,
+          "text": "Chests give 5% more gold.",
+          "effects": {
+            "lootBonus": 0.05
+          }
+        },
+        {
+          "level": 7,
+          "text": "Detect radius +1.",
+          "effects": {
+            "detect": 1
+          }
+        },
+        {
+          "level": 8,
+          "text": "Chests give 5% more gold.",
+          "effects": {
+            "lootBonus": 0.05
+          }
+        },
+        {
+          "level": 9,
+          "text": "Detect radius +2.",
+          "effects": {
+            "detect": 2
+          }
+        },
+        {
+          "level": 10,
+          "text": "Master thief: chests give 10% more gold.",
+          "effects": {
+            "lootBonus": 0.1
+          }
+        }
+      ]
+    },
+    "enchanter": {
+      "name": "Enchanter",
+      "unlockFlag": "job_enchanter_unlocked",
+      "master": "Rune-Wright Tamsin Orrel",
+      "hint": "A rune-wright at Ashfall wants a rune stone taken from the wraith that guards it.",
+      "desc": "Set runes into weapons and armour at a rune table. More levels mean more runes, more sockets and cheaper work.",
+      "perks": [
+        {
+          "level": 1,
+          "text": "Rune table: one weapon socket. Runes of level 1.",
+          "effects": {
+            "weaponSlots": 1,
+            "runeLevel": 1
+          }
+        },
+        {
+          "level": 2,
+          "text": "One armour socket. Runes of level 2.",
+          "effects": {
+            "armorSlots": 1,
+            "runeLevel": 1
+          }
+        },
+        {
+          "level": 3,
+          "text": "Runes of level 3.",
+          "effects": {
+            "runeLevel": 1
+          }
+        },
+        {
+          "level": 4,
+          "text": "A second weapon socket.",
+          "effects": {
+            "weaponSlots": 1
+          }
+        },
+        {
+          "level": 5,
+          "text": "Runes of level 4. Rune work costs 10% less.",
+          "effects": {
+            "runeLevel": 1,
+            "runeDiscount": 0.1
+          }
+        },
+        {
+          "level": 6,
+          "text": "A second armour socket.",
+          "effects": {
+            "armorSlots": 1
+          }
+        },
+        {
+          "level": 7,
+          "text": "Rune work costs 10% less.",
+          "effects": {
+            "runeDiscount": 0.1
+          }
+        },
+        {
+          "level": 8,
+          "text": "A third weapon socket.",
+          "effects": {
+            "weaponSlots": 1
+          }
+        },
+        {
+          "level": 9,
+          "text": "Runes of level 5.",
+          "effects": {
+            "runeLevel": 1
+          }
+        },
+        {
+          "level": 10,
+          "text": "Master enchanter: rune work costs 20% less.",
+          "effects": {
+            "runeDiscount": 0.2
+          }
+        }
+      ]
+    },
+    "alchemist": {
+      "name": "Alchemist",
+      "unlockFlag": "job_alchemist_unlocked",
+      "master": "(unknown)",
+      "hint": "Three rare ingredients are wanted.",
+      "desc": "Brew potions with greater potency.",
+      "planned": true,
+      "perks": [
+        {
+          "level": 1,
+          "text": "Brew potions with greater potency.",
+          "effects": {}
+        }
+      ]
+    },
+    "fisher": {
+      "name": "Fisher",
+      "unlockFlag": "job_fisher_unlocked",
+      "master": "(unknown)",
+      "hint": "A famous fish waits in deep water.",
+      "desc": "Fishing, with rare catches.",
+      "planned": true,
+      "perks": [
+        {
+          "level": 1,
+          "text": "Fishing, with rare catches.",
+          "effects": {}
+        }
+      ]
+    }
+  },
+  "runes": {
+    "ember": {
+      "name": "Ember Rune",
+      "slot": "weapon",
+      "level": 1,
+      "gold": 1200,
+      "dust": 2,
+      "effect": {
+        "element": "fire"
+      },
+      "desc": "Fire damage. Bites wraiths and sears treants."
+    },
+    "frost": {
+      "name": "Frost Rune",
+      "slot": "weapon",
+      "level": 1,
+      "gold": 1200,
+      "dust": 2,
+      "effect": {
+        "element": "ice"
+      },
+      "desc": "Ice damage. Basilisks hate it."
+    },
+    "storm": {
+      "name": "Storm Rune",
+      "slot": "weapon",
+      "level": 2,
+      "gold": 1800,
+      "dust": 3,
+      "effect": {
+        "element": "lightning"
+      },
+      "desc": "Lightning damage."
+    },
+    "gaia": {
+      "name": "Gaia Rune",
+      "slot": "weapon",
+      "level": 2,
+      "gold": 1800,
+      "dust": 3,
+      "effect": {
+        "element": "earth"
+      },
+      "desc": "Earth damage."
+    },
+    "keen": {
+      "name": "Keen Rune",
+      "slot": "weapon",
+      "level": 3,
+      "gold": 2400,
+      "dust": 4,
+      "effect": {
+        "crit": 0.08
+      },
+      "desc": "+8% critical chance."
+    },
+    "leech": {
+      "name": "Leech Rune",
+      "slot": "weapon",
+      "level": 4,
+      "gold": 3200,
+      "dust": 5,
+      "effect": {
+        "drain": 0.1
+      },
+      "desc": "Heals for 10% of weapon damage."
+    },
+    "silver": {
+      "name": "Silver Rune",
+      "slot": "weapon",
+      "level": 5,
+      "gold": 4000,
+      "dust": 6,
+      "effect": {
+        "silver": true
+      },
+      "desc": "Counts as silver: hurts werewolves and ghosts."
+    },
+    "ward": {
+      "name": "Ward Rune",
+      "slot": "armor",
+      "level": 2,
+      "gold": 1800,
+      "dust": 3,
+      "effect": {
+        "immune": [
+          "poison",
+          "sleep"
+        ]
+      },
+      "desc": "Immune to poison and sleep."
+    },
+    "sage": {
+      "name": "Sage Rune",
+      "slot": "armor",
+      "level": 3,
+      "gold": 2400,
+      "dust": 4,
+      "effect": {
+        "xpBonus": 0.1
+      },
+      "desc": "+10% XP from battles."
+    },
+    "stoneward": {
+      "name": "Stoneward Rune",
+      "slot": "armor",
+      "level": 5,
+      "gold": 4000,
+      "dust": 6,
+      "effect": {
+        "immune": [
+          "petrify",
+          "curse"
+        ]
+      },
+      "desc": "Immune to petrify and curse."
+    }
+  }
+}

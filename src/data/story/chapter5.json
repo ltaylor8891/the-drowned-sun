@@ -1,0 +1,168 @@
+{
+  "scenes": {
+    "arrive_ridgewatch": {
+      "when": {
+        "notFlag": "reachedGallowkeep"
+      },
+      "lines": [
+        {
+          "n": "",
+          "t": "Ridgewatch is a camp of patched canvas pitched in the lee of a broken wall. Cookfires burn low, and every tent faces north, toward the ridge."
+        },
+        {
+          "n": "",
+          "t": "Above the camp, black against the grey sky, the old Dawn chapel squats on its hilltop. A gallows has been raised on the roof, and something swings from it in the wind."
+        },
+        {
+          "n": "",
+          "t": "A sentry waves you toward the largest tent. The sign above it reads: Captain Dunmere, Ridge Guard. The sign is spelled wrongly, and nobody has had time to fix it."
+        }
+      ],
+      "set": [
+        "reachedGallowkeep"
+      ],
+      "chapter": 5,
+      "autosave": true,
+      "banner": "Chapter 5: Gallowkeep"
+    },
+    "warchief_intro": {
+      "when": {
+        "notFlag": "warchiefSeen"
+      },
+      "lines": [
+        {
+          "n": "",
+          "t": "The courtyard is trampled to mud and bone-chips. Orcs lounge between stacked barrels, and they stop talking as you cross the threshold."
+        },
+        {
+          "n": "",
+          "t": "The largest of them rises from a throne made of three wagon seats lashed together. A greatsword the size of a door leans against his knee."
+        },
+        {
+          "n": "Warchief Gorrak",
+          "t": "Hask paid for this yard. Hask paid in silver, and in the promise of a sunken city to loot. I do not know what you are, little glowing thing. But you will not walk through my gate."
+        }
+      ],
+      "set": [
+        "warchiefSeen"
+      ]
+    },
+    "warchief_down": {
+      "when": {
+        "notFlag": "warchiefSceneDone"
+      },
+      "lines": [
+        {
+          "n": "",
+          "t": "Gorrak sinks to one knee and plants his sword in the mud. The orcs behind him drop their weapons, one by one, without being told."
+        },
+        {
+          "n": "Warchief Gorrak",
+          "t": "Hask said the glow would pass to a worthy hand. I thought he lied. I was wrong. Go. The chapel door is not barred."
+        },
+        {
+          "n": "",
+          "t": "He pulls a tusk-shaped token from his belt and tosses it at your feet. Then he sits down heavily, and waves the rest of his warband away from the gate."
+        }
+      ],
+      "set": [
+        "warchiefSceneDone"
+      ],
+      "give": {
+        "gallows_token": 1
+      }
+    },
+    "hask_intro": {
+      "when": {
+        "notFlag": "haskSeen"
+      },
+      "lines": [
+        {
+          "n": "",
+          "t": "The chapel nave is hung with chains instead of banners. Where the altar stood, a table holds charts of the drowned coast, weighted with spent sunstone."
+        },
+        {
+          "n": "",
+          "t": "A tall man in a warden's coat, turned inside out, looks up from the charts. He has a pleasant face, and he smiles as if you were expected."
+        },
+        {
+          "n": "Hask",
+          "t": "The lamp-bearer, at last. I have been counting the days. Shall we skip the speeches? I have a great many, and none of them will change how this ends."
+        },
+        {
+          "n": "{hero}",
+          "t": "You took the Sedge stone. You chained Greyfang. You emptied the Cinder Chapel. Why?"
+        },
+        {
+          "n": "Hask",
+          "t": "Because the sun sank, and someone ought to pull it back up. Come. Let me show you what I have learned."
+        }
+      ],
+      "set": [
+        "haskSeen"
+      ]
+    },
+    "hask_down": {
+      "when": {
+        "notFlag": "haskSceneDone"
+      },
+      "lines": [
+        {
+          "n": "",
+          "t": "Hask drops his cane and slides down the altar steps. The chains on the walls ring once, softly, like a struck bell."
+        },
+        {
+          "n": "Hask",
+          "t": "Two shards of the dawn, you carry now. One in your palm, and one in that little piece of stone I let you have. There is a third, far south, with the Queen of the Dunes."
+        },
+        {
+          "n": "Hask",
+          "t": "She is not my master. She is not yours either. She is only the one who is still awake."
+        },
+        {
+          "n": "",
+          "t": "His hand opens. A fragment of pale stone, warm as bread, rolls across the flagstones and stops against your boot."
+        },
+        {
+          "n": "{hero}",
+          "t": "He knew he'd lose. He wanted us to carry it south."
+        }
+      ],
+      "set": [
+        "haskSceneDone"
+      ],
+      "give": {
+        "dawn_shard": 1
+      }
+    },
+    "act1_end": {
+      "when": {
+        "notFlag": "act1_done"
+      },
+      "lines": [
+        {
+          "n": "",
+          "t": "The camp is quiet when you come back down from the ridge. A hundred soldiers stand in rows, and nobody cheers."
+        },
+        {
+          "n": "",
+          "t": "Captain Ysra watches the chapel roof, where the gallows has been cut down. For the first time since you arrived, the wind is only wind."
+        },
+        {
+          "n": "Captain Ysra",
+          "t": "Act one of the war is over. Whatever Hask was, we ended it here. But I read his charts. The road south goes through the Khesh Ura dunes, and there is a queen at the end of it."
+        },
+        {
+          "n": "",
+          "t": "The lamp in your palm pulses, once. It is pointing south."
+        }
+      ],
+      "set": [
+        "act1_done",
+        "south_road_open"
+      ],
+      "autosave": true,
+      "banner": "Act 1 complete"
+    }
+  }
+}

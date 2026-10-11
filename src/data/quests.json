@@ -1,0 +1,556 @@
+{
+  "main_ch1": {
+    "title": "The Mark of Brinewick",
+    "type": "main",
+    "steps": [
+      {
+        "text": "Speak with Elder Maren Salt",
+        "flag": "talkedMaren"
+      },
+      {
+        "text": "Hear Old Pell's story on the jetty",
+        "flag": "askedPell"
+      },
+      {
+        "text": "Clear the slimes from the East Salt Pans",
+        "flag": "pansCleared"
+      },
+      {
+        "text": "Hunt the Great Mire Boar in the Mire Marsh",
+        "flag": "boarDefeated"
+      },
+      {
+        "text": "Report back to Maren Salt",
+        "flag": "reportedMaren"
+      },
+      {
+        "text": "Travel north to Tallow Ford",
+        "flag": "reachedTallowFord"
+      }
+    ]
+  },
+  "osk_rake": {
+    "title": "Osk's Lucky Rake",
+    "type": "side",
+    "startFlag": "oskAsked",
+    "steps": [
+      {
+        "text": "Find Osk's lost rake in the East Salt Pans",
+        "flag": "rakeFound"
+      },
+      {
+        "text": "Return the rake to Osk Merrin",
+        "flag": "rakeReturned"
+      }
+    ]
+  },
+  "main_ch2": {
+    "title": "Goblins at the Ford",
+    "type": "main",
+    "startFlag": "reachedTallowFord",
+    "steps": [
+      {
+        "text": "Speak with Reeve Corwin Pask",
+        "flag": "talkedCorwin"
+      },
+      {
+        "text": "Find the goblin camp off the North Road",
+        "flag": "campFound"
+      },
+      {
+        "text": "Defeat the Goblin Chief",
+        "flag": "chiefDefeated"
+      },
+      {
+        "text": "Report back to Reeve Pask",
+        "flag": "reportedCorwin"
+      },
+      {
+        "text": "Travel to Reedhollow",
+        "flag": "reachedReedhollow"
+      }
+    ]
+  },
+  "smith_hammer": {
+    "title": "Arlo's Hammer",
+    "type": "side",
+    "startFlag": "hammerAsked",
+    "steps": [
+      {
+        "text": "Recover Arlo's stolen hammer from the goblin camp",
+        "flag": "hammerFound"
+      },
+      {
+        "text": "Return the hammer to Arlo Vask",
+        "flag": "hammerReturned"
+      }
+    ]
+  },
+  "main_ch3": {
+    "title": "The Toll at Reedhollow",
+    "type": "main",
+    "startFlag": "reachedReedhollow",
+    "steps": [
+      {
+        "text": "Speak with Harbourmaster Ned Quayle",
+        "flag": "talkedNed"
+      },
+      {
+        "text": "Choose a travelling companion",
+        "flag": "companion1Chosen"
+      },
+      {
+        "text": "Clear the bandits from the Toll Dock",
+        "flag": "tollCleared"
+      },
+      {
+        "text": "Track the Alpha Wolf to its den in the Wolfwood",
+        "flag": "greyfangDefeated"
+      },
+      {
+        "text": "Report back to the Harbourmaster",
+        "flag": "reportedNed"
+      },
+      {
+        "text": "Travel to the Sedge Mines",
+        "flag": "reachedSedgeMines"
+      }
+    ]
+  },
+  "fenna_glowreed": {
+    "title": "Fenna's Glowreed",
+    "type": "side",
+    "startFlag": "fennaAsked",
+    "steps": [
+      {
+        "text": "Gather three glowreed from the river road and the Wolfwood",
+        "flag": "glowreedGathered",
+        "items": {
+          "glowreed": 3
+        }
+      },
+      {
+        "text": "Bring the glowreed to Fenna Thorne",
+        "flag": "fennaDone"
+      }
+    ]
+  },
+  "main_ch4": {
+    "title": "The Dig Beneath Lanternmoor",
+    "type": "main",
+    "startFlag": "reachedLanternmoor",
+    "steps": [
+      {
+        "text": "Speak with Foreman Marlo Ketch",
+        "flag": "talkedKetch"
+      },
+      {
+        "text": "Break Hask's dig crew in the Upper Works",
+        "flag": "upperCleared"
+      },
+      {
+        "text": "Descend into the Lower Shafts",
+        "flag": "lowerReached"
+      },
+      {
+        "text": "Defeat the Spider Matriarch",
+        "flag": "matriarchDefeated"
+      },
+      {
+        "text": "Report back to Foreman Ketch",
+        "flag": "reportedKetch"
+      },
+      {
+        "text": "Travel to Gallowkeep (chapter 5, not open yet)",
+        "flag": "reachedGallowkeep"
+      }
+    ]
+  },
+  "miner_shafts": {
+    "title": "Clear the Lower Shafts",
+    "type": "side",
+    "startFlag": "minerAsked",
+    "steps": [
+      {
+        "text": "Clear the Lower Shafts of spiders",
+        "flag": "shaftsCleared"
+      },
+      {
+        "text": "Report to Master Miner Bruna Stonehand",
+        "flag": "minerReturned"
+      }
+    ]
+  },
+  "main_ch5": {
+    "title": "The Black Gallows",
+    "type": "main",
+    "startFlag": "reachedGallowkeep",
+    "steps": [
+      {
+        "text": "Speak with Captain Ysra Dunmere",
+        "flag": "talkedYsra"
+      },
+      {
+        "text": "Choose a second travelling companion",
+        "flag": "companion2Chosen"
+      },
+      {
+        "text": "Break the Orc Warchief's gate at Gallowkeep",
+        "flag": "warchiefDefeated"
+      },
+      {
+        "text": "Confront Bogwarden Hask in the Dawn Chapel",
+        "flag": "haskDefeated"
+      },
+      {
+        "text": "Report back to Captain Dunmere",
+        "flag": "reportedYsra"
+      },
+      {
+        "text": "Travel south to Khesh-Ura",
+        "flag": "reachedKheshCity"
+      }
+    ]
+  },
+  "mattis_tonic": {
+    "title": "The Surgeon's Supplies",
+    "type": "side",
+    "startFlag": "mattisAsked",
+    "steps": [
+      {
+        "text": "Gather two Spider Venom and two Bat Wings for Surgeon Ohr",
+        "flag": "mattisGathered",
+        "items": {
+          "spider_venom": 2,
+          "bat_wing": 2
+        }
+      },
+      {
+        "text": "Bring them to Surgeon Mattis Ohr",
+        "flag": "mattisDone"
+      }
+    ]
+  },
+  "main_ch6": {
+    "title": "The Water Gate",
+    "type": "main",
+    "startFlag": "reachedKheshCity",
+    "steps": [
+      {
+        "text": "Speak with Water-Warden Szazz",
+        "flag": "talkedSzazz"
+      },
+      {
+        "text": "Clear the Troll Brute from the water gate",
+        "flag": "trollDefeated"
+      },
+      {
+        "text": "Report to Water-Warden Szazz",
+        "flag": "reportedSzazz"
+      },
+      {
+        "text": "Take the road east to the Redwater Waystation",
+        "flag": "reachedWaystation"
+      }
+    ]
+  },
+  "hunt_sandtusk": {
+    "title": "The Legend of Sandtusk",
+    "type": "side",
+    "startFlag": "huntAsked",
+    "steps": [
+      {
+        "text": "Find the legendary boar Sandtusk in the Boar Hollow",
+        "flag": "tuskerDefeated"
+      },
+      {
+        "text": "Bring Sandtusk's tusk to Hunter Master Kiss'a",
+        "flag": "tuskReturned"
+      }
+    ]
+  },
+  "main_ch7": {
+    "title": "The Scorch Road",
+    "type": "main",
+    "startFlag": "reachedWaystation",
+    "steps": [
+      {
+        "text": "Speak with Waystation Warden Marrak Sen",
+        "flag": "talkedMarrak"
+      },
+      {
+        "text": "Break Warlord Vesh-Kar's hold on the Toll Fort",
+        "flag": "warlordDefeated"
+      },
+      {
+        "text": "Report to Marrak Sen",
+        "flag": "reportedMarrak"
+      },
+      {
+        "text": "Take the east road to the cliff village of Perch",
+        "flag": "reachedPerch"
+      }
+    ]
+  },
+  "main_ch8": {
+    "title": "The Harpy Cliffs",
+    "type": "main",
+    "startFlag": "reachedPerch",
+    "steps": [
+      {
+        "text": "Speak with Wind-Warden Tamsin Oake",
+        "flag": "talkedTamsin"
+      },
+      {
+        "text": "Climb the cliffs and face the Harpy Matron",
+        "flag": "matronDefeated"
+      },
+      {
+        "text": "Report to Wind-Warden Tamsin Oake",
+        "flag": "reportedTamsin"
+      },
+      {
+        "text": "Follow the south road to Mirrorfall",
+        "flag": "reachedMirrorfall"
+      }
+    ]
+  },
+  "cook_contest": {
+    "title": "The Cliff Cook-Off",
+    "type": "side",
+    "startFlag": "cookAsked",
+    "steps": [
+      {
+        "text": "Gather two Harpy Eggs and two Bone Dust for Mama Brindle",
+        "flag": "cookGathered",
+        "items": {
+          "harpy_egg": 2,
+          "bone_dust": 2
+        }
+      },
+      {
+        "text": "Bring them to Mama Brindle at the Cooks' Hall",
+        "flag": "cookDone"
+      }
+    ]
+  },
+  "main_ch9": {
+    "title": "The Glass Temple",
+    "type": "main",
+    "startFlag": "reachedMirrorfall",
+    "steps": [
+      {
+        "text": "Speak with Dig-Warden Rhea Corvane",
+        "flag": "talkedRhea"
+      },
+      {
+        "text": "Enter the Glass Temple and defeat the Golem Sentinel",
+        "flag": "sentinelDefeated"
+      },
+      {
+        "text": "Report to Dig-Warden Corvane",
+        "flag": "reportedRhea"
+      },
+      {
+        "text": "Take the road east to the Last Light Camp",
+        "flag": "reachedLastLight"
+      }
+    ]
+  },
+  "merchant_route": {
+    "title": "The Three-Town Run",
+    "type": "side",
+    "startFlag": "merchantAsked",
+    "steps": [
+      {
+        "text": "Deliver the crate to Qeth Arun in Khesh-Ura",
+        "flag": "deliveredKhesh"
+      },
+      {
+        "text": "Deliver the crate to Vessa Korr at the Redwater Waystation",
+        "flag": "deliveredWaystation"
+      },
+      {
+        "text": "Deliver the crate to Ferdie Plum in Perch",
+        "flag": "deliveredPerch"
+      },
+      {
+        "text": "Return to Guildmaster Orla Tarn at Mirrorfall",
+        "flag": "merchantDone"
+      }
+    ]
+  },
+  "main_ch10": {
+    "title": "Ismerel's Labyrinth",
+    "type": "main",
+    "startFlag": "reachedLastLight",
+    "steps": [
+      {
+        "text": "Speak with Captain Jessamy Rook",
+        "flag": "talkedJessamy"
+      },
+      {
+        "text": "Fight through the labyrinth and defeat the Minotaur King",
+        "flag": "kingDefeated"
+      },
+      {
+        "text": "Face Queen Ismerel in the Glass Throne",
+        "flag": "queenDefeated"
+      },
+      {
+        "text": "Return to Captain Rook",
+        "flag": "reportedJessamy"
+      },
+      {
+        "text": "Follow the north road to the elven town of Silverhush",
+        "flag": "reachedSilverhush"
+      }
+    ]
+  },
+  "main_ch11": {
+    "title": "The Hush",
+    "type": "main",
+    "startFlag": "reachedSilverhush",
+    "steps": [
+      {
+        "text": "Speak with Speaker Ilvaren Dusk",
+        "flag": "talkedIlvaren"
+      },
+      {
+        "text": "Break the Hush at the Moonwatch Keep: defeat Captain Aelith",
+        "flag": "elfCaptainDefeated"
+      },
+      {
+        "text": "Report to Speaker Ilvaren Dusk",
+        "flag": "reportedIlvaren"
+      },
+      {
+        "text": "Take the east road to the frozen hamlet of Rootmere",
+        "flag": "reachedRootmere"
+      }
+    ]
+  },
+  "scholar_books": {
+    "title": "The Lost Library",
+    "type": "side",
+    "startFlag": "scholarAsked",
+    "steps": [
+      {
+        "text": "Find the three lost tomes: on the forest road, in the Moonwatch Keep and in the Ruined Stacks",
+        "flag": "scholarGathered",
+        "items": {
+          "lost_tome_a": 1,
+          "lost_tome_b": 1,
+          "lost_tome_c": 1
+        }
+      },
+      {
+        "text": "Return the tomes to Archivist Selwyn Ashgrove",
+        "flag": "scholarDone"
+      }
+    ]
+  },
+  "main_ch12": {
+    "title": "The Frozen Shrine",
+    "type": "main",
+    "startFlag": "reachedRootmere",
+    "steps": [
+      {
+        "text": "Speak with Rootwarden Maelis Thorne",
+        "flag": "talkedMaelis"
+      },
+      {
+        "text": "Cross the Rootmere Wood and face the Elder Treant at the Frozen Shrine",
+        "flag": "elderDefeated"
+      },
+      {
+        "text": "Report to Rootwarden Maelis Thorne",
+        "flag": "reportedMaelis"
+      },
+      {
+        "text": "Cross the moor road to Lantern Hold",
+        "flag": "reachedLanternHold"
+      }
+    ]
+  },
+  "explorer_map": {
+    "title": "The Dead Explorer's Map",
+    "type": "side",
+    "startFlag": "mapAsked",
+    "steps": [
+      {
+        "text": "Find the first cache: in the north-east corner of the Rootmere Wood",
+        "flag": "explorerCache1"
+      },
+      {
+        "text": "Find the second cache, under the frost at the Frozen Shrine (south-west corner)",
+        "flag": "explorerCache2"
+      },
+      {
+        "text": "Find the third cache, where the moss sleeps: the Mossy Hollow, north of the wood",
+        "flag": "explorerCache3"
+      },
+      {
+        "text": "Bring the explorer's last journal to Guildmaster Garrick Fell",
+        "flag": "mapDone"
+      }
+    ]
+  },
+  "main_ch13": {
+    "title": "The Moor of Lamps",
+    "type": "main",
+    "startFlag": "reachedLanternHold",
+    "steps": [
+      {
+        "text": "Speak with Lamp-Mother Orsolya Vance",
+        "flag": "talkedOrsolya"
+      },
+      {
+        "text": "Cross Hollowmoor's depths and break Lord Garrow Thane",
+        "flag": "lordDefeated"
+      },
+      {
+        "text": "Report to Lamp-Mother Orsolya Vance",
+        "flag": "reportedOrsolya"
+      },
+      {
+        "text": "Take the western road to Keep Vael",
+        "flag": "reachedAshfall"
+      }
+    ]
+  },
+  "main_ch14": {
+    "title": "The Black Keep",
+    "type": "main",
+    "startFlag": "reachedAshfall",
+    "steps": [
+      {
+        "text": "Speak with Warden-Captain Isolde Marrow",
+        "flag": "talkedIsolde"
+      },
+      {
+        "text": "Break the Dark Knight Commander in Keep Vael",
+        "flag": "commanderDefeated"
+      },
+      {
+        "text": "Report to Warden-Captain Isolde Marrow",
+        "flag": "reportedIsolde"
+      }
+    ]
+  },
+  "enchanter_rune": {
+    "title": "The Rune Stone",
+    "type": "side",
+    "startFlag": "runeAsked",
+    "steps": [
+      {
+        "text": "Find the rune vault below the black cliffs and defeat the Rune Wraith",
+        "flag": "runeWraithDefeated"
+      },
+      {
+        "text": "Bring the rune stone to Tamsin Orrel at Ashfall",
+        "flag": "runeDone"
+      }
+    ]
+  }
+}

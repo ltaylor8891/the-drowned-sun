@@ -1,0 +1,254 @@
+{
+  "salt_and_tackle": {
+    "name": "Salt & Tackle",
+    "stock": [
+      "potion",
+      "antidote",
+      "ether",
+      "bronze_sword",
+      "bronze_axe",
+      "oak_staff",
+      "hunting_bow",
+      "bronze_dagger",
+      "flanged_mace",
+      "bronze_mail",
+      "leather_jerkin",
+      "padded_vest",
+      "wool_robe"
+    ]
+  },
+  "vask_smithy": {
+    "name": "Vask's Smithy",
+    "stock": [
+      "iron_sword",
+      "iron_axe",
+      "ash_staff",
+      "longbow",
+      "iron_dagger",
+      "spiked_mace",
+      "chain_mail",
+      "studded_leather",
+      "ranger_vest",
+      "silk_robe"
+    ]
+  },
+  "thistle_goods": {
+    "name": "Thistle & Tonic",
+    "stock": [
+      "potion",
+      "hi_potion",
+      "antidote",
+      "ether"
+    ]
+  },
+  "brackwater_chandlery": {
+    "name": "Brackwater Chandlery",
+    "stock": [
+      "potion",
+      "hi_potion",
+      "antidote",
+      "ether",
+      "gaff_sword",
+      "river_mace",
+      "marshwood_staff",
+      "eel_dagger",
+      "reedweave_vest",
+      "tarred_coat"
+    ]
+  },
+  "rivet_stores": {
+    "name": "Rivet & Rope",
+    "stock": [
+      "potion",
+      "hi_potion",
+      "antidote",
+      "ether",
+      "cragblade",
+      "pickaxe",
+      "lantern_staff",
+      "delver_bow",
+      "delver_dagger",
+      "tunnel_mace",
+      "miners_leathers",
+      "hardhide_vest",
+      "dust_robe",
+      "rivet_plate"
+    ]
+  },
+  "ridge_quartermaster": {
+    "name": "Ridgewatch Stores",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "ridge_sabre",
+      "ridge_axe",
+      "ridge_staff",
+      "ridge_bow",
+      "ridge_knife",
+      "ridge_mace",
+      "ridge_plate",
+      "ridge_leathers",
+      "ridge_jacket",
+      "ridge_robe"
+    ]
+  },
+  "khesh_bazaar": {
+    "name": "Khesh-Ura Bazaar",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "steel_sword",
+      "steel_axe",
+      "steel_staff",
+      "steel_bow",
+      "steel_dagger",
+      "steel_mace",
+      "steel_plate",
+      "dune_leathers",
+      "sandsilk_jacket",
+      "sunweave_robe",
+      "sand_date",
+      "desert_spice"
+    ]
+  },
+  "waystation_store": {
+    "name": "Redwater Outfitters",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "silvered_sword",
+      "silvered_axe",
+      "silvered_staff",
+      "silvered_bow",
+      "silvered_dagger",
+      "silvered_mace",
+      "silvered_plate",
+      "sunhide_coat",
+      "mirage_jacket",
+      "moonlace_robe",
+      "sand_date",
+      "desert_spice"
+    ]
+  },
+  "perch_store": {
+    "name": "Perch Provisions",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "sand_date",
+      "desert_spice"
+    ]
+  },
+  "mirrorfall_store": {
+    "name": "Lund Glassworks",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "glass_plate",
+      "glasshide_coat",
+      "glassveil_jacket",
+      "glassthread_robe"
+    ]
+  },
+  "lastlight_store": {
+    "name": "Rook & Rune Outfitters",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "runed_sword",
+      "runed_axe",
+      "runed_staff",
+      "runed_bow",
+      "runed_dagger",
+      "runed_mace",
+      "runed_plate",
+      "runed_hide",
+      "runed_cloak",
+      "runed_robe"
+    ]
+  },
+  "silverhush_store": {
+    "name": "Moonthread & Mail",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "sand_date",
+      "desert_spice",
+      "moonsteel_sword",
+      "moonsteel_axe",
+      "moonsteel_staff",
+      "moonsteel_bow",
+      "moonsteel_dagger",
+      "moonsteel_mace",
+      "moonsteel_plate",
+      "moonsteel_hide",
+      "moonsteel_cloak",
+      "moonsteel_robe"
+    ]
+  },
+  "rootmere_store": {
+    "name": "Hollow Log Provisions",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "sand_date",
+      "desert_spice"
+    ]
+  },
+  "lanternhold_store": {
+    "name": "Lamplight Goods",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "silver_oil",
+      "sand_date",
+      "desert_spice"
+    ]
+  },
+  "ashfall_store": {
+    "name": "Ashfall Provisions",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "stone_salve",
+      "rune_dust",
+      "silver_oil"
+    ]
+  }
+}

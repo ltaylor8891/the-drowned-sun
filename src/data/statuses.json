@@ -1,0 +1,86 @@
+{
+  "poison": {
+    "name": "Poison",
+    "abbr": "PSN",
+    "type": "debuff",
+    "turns": 4
+  },
+  "sleep": {
+    "name": "Sleep",
+    "abbr": "SLP",
+    "type": "debuff",
+    "turns": 3
+  },
+  "slow": {
+    "name": "Slow",
+    "abbr": "SLW",
+    "type": "debuff",
+    "turns": 3
+  },
+  "stun": {
+    "name": "Stun",
+    "abbr": "STN",
+    "type": "debuff",
+    "turns": 1
+  },
+  "curse": {
+    "name": "Curse",
+    "abbr": "CRS",
+    "type": "debuff",
+    "turns": 4
+  },
+  "charm": {
+    "name": "Charm",
+    "abbr": "CHM",
+    "type": "debuff",
+    "turns": 2
+  },
+  "petrify": {
+    "name": "Petrify",
+    "abbr": "STO",
+    "type": "debuff",
+    "turns": null
+  },
+  "attackUp": {
+    "name": "Attack Up",
+    "abbr": "ATK+",
+    "type": "buff",
+    "turns": 3
+  },
+  "defenseUp": {
+    "name": "Defence Up",
+    "abbr": "DEF+",
+    "type": "buff",
+    "turns": 3
+  },
+  "haste": {
+    "name": "Haste",
+    "abbr": "HST",
+    "type": "buff",
+    "turns": 3
+  },
+  "defenseDown": {
+    "name": "Defence Down",
+    "abbr": "DEF-",
+    "type": "debuff",
+    "turns": 3
+  },
+  "regen": {
+    "name": "Regen",
+    "abbr": "RGN",
+    "type": "buff",
+    "turns": 4
+  },
+  "guarding": {
+    "name": "Guarding",
+    "abbr": "GRD",
+    "type": "buff",
+    "turns": 3
+  },
+  "silvered": {
+    "name": "Silvered",
+    "abbr": "SLV",
+    "type": "buff",
+    "turns": 6
+  }
+}

@@ -1,0 +1,1608 @@
+{
+  "npcs": {
+    "maren_salt": {
+      "name": "Maren Salt",
+      "role": "village elder and salt-pan matriarch",
+      "personality": "dry, weathered, secretly tender",
+      "voice": "short sentences; salt and tide proverbs; calls the hero 'tide-child'",
+      "events": [
+        {
+          "id": "maren_intro",
+          "when": {
+            "notFlag": "talkedMaren"
+          },
+          "set": [
+            "talkedMaren"
+          ],
+          "say": [
+            "Come here, tide-child. Closer. Give me your hand.",
+            "Hm. So it's true. My grandmother described that glow to me once, over a bowl of fish broth, and I told her to eat her soup.",
+            "I don't know what it means. I know it's wakened the marsh. The Great Mire Boar has trampled our east flats twice this week, and the slimes are boiling out of the pans like bread dough.",
+            "Go and hear Old Pell on the jetty. He saw it come. Then clear the flats, then the marsh. Take your time. Take all of it you can spare, which isn't much."
+          ]
+        },
+        {
+          "id": "maren_report",
+          "when": {
+            "flag": "boarDefeated",
+            "notFlag": "reportedMaren"
+          },
+          "set": [
+            "reportedMaren",
+            "chapter_1_done"
+          ],
+          "say": [
+            "It's down, then. I felt it in the pans. A quiet, like a held breath let out.",
+            "Sit. No, don't tell me. I'd rather guess. Light in the stone, was there? Pale, like yours?",
+            "...I thought so. My grandmother's broth was only half a story. The other half is north, past Tallow Ford. Others of you, maybe. Or others like what's in you.",
+            "Take this. It was my mother's. It's no use in a fight, but the sun on the lid is older than anything I own. And take supplies. Eat them. Don't be noble about it."
+          ],
+          "gold": 100,
+          "give": {
+            "potion": 3,
+            "ether": 1,
+            "salt_locket": 1
+          },
+          "autosave": true,
+          "banner": "Chapter 1 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "m01",
+          "text": "Welcome to Brinewick, tide-child. Mind the pans. They bite boots first and pride second."
+        },
+        {
+          "id": "m02",
+          "text": "I've raked these pans sixty winters. The sun was fatter when I started. You'd have to be old to say so, and I am."
+        },
+        {
+          "id": "m03",
+          "text": "Dorrit at the well says the gulls have left. I say gulls have opinions. Still, they've left."
+        },
+        {
+          "id": "m04",
+          "text": "A wise farmer tests brine with a fingertip. I tested mine with a tongue at twelve. I regret nothing, and my teeth regret everything."
+        },
+        {
+          "id": "m05",
+          "text": "Salt cod and flatbread again tonight. Take it up with the sea."
+        },
+        {
+          "id": "m06",
+          "text": "My knees forecast the weather. They've forecast gloom for forty days running."
+        },
+        {
+          "id": "m07",
+          "text": "Your mother salted her fish too long. Said it kept them honest. You have her stubborn chin."
+        },
+        {
+          "id": "m08",
+          "text": "They say the temple sank because the sun-god tired of being worshipped. Rubbish. Gods don't tire. People do."
+        },
+        {
+          "id": "m09",
+          "text": "If the boar charges, don't be brave. Be loud. Then be brave. It tires after a charge; that's your moment.",
+          "when": {
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "m10",
+          "text": "Old Pell mends nets on the jetty and lies about his catch. Never ask him how big. Ask how many witnesses."
+        },
+        {
+          "id": "m11",
+          "text": "A back like yours is wasted on hauling. Still, the harvest will take it, should you ever want honest work.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "m12",
+          "text": "Book learning, is it? The sea is the oldest book going and nobody's finished it. Don't get too clever to read the weather.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "m13",
+          "text": "Quick feet and a quiet step. You'd have made a fine salt-thief. I mean that kindly. Mostly.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "m14",
+          "text": "A healer is welcome in Brinewick. Every farmer needs one by the third blister.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "m15",
+          "text": "Look behind the net-shed at dawn. The tide leaves things. Sometimes useful things."
+        },
+        {
+          "id": "m16",
+          "text": "I tried teaching the gulls to pay rent. They paid in noise. Hard bargainers."
+        },
+        {
+          "id": "m17",
+          "text": "The boar is down! Pell wept openly. He hasn't wept since the herring shortage.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "m18",
+          "text": "That mark on your palm glows in the shade, I notice. Say nothing. Walk on. The world will tell you what it means.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "m19",
+          "text": "The pans are safe tonight. Don't mistake that for a safe world. It's only one pan.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "m20",
+          "text": "Tallow Ford lies north. Take bread, take a coat, and don't walk alone if you can help it.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "m21",
+          "text": "A sailor once described that mark to me. I called it a drunk's yarn. I owe someone an apology, and I'd rather it weren't you.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "m22",
+          "text": "Come back with every lie you can carry. I'll know which are true.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "m23",
+          "text": "Pell has never once told the truth about a fish. About the boar, he told it plain. That worries me more than the boar does.",
+          "when": {
+            "flag": "askedPell",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "m24",
+          "text": "The flats are quiet now. Slimes don't flee salt without cause. Something drove them in. Look east, into the marsh.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "m25",
+          "text": "Go on, then. The road won't walk itself. And do write, if you can spell. Pell can't, and I've given up.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "m26",
+          "text": "Keep the locket dry. Salt is kind to bread and cruel to silver.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        }
+      ]
+    },
+    "pell_wrack": {
+      "name": "Old Pell",
+      "role": "net-mender and part-time fisher",
+      "personality": "rambling, boastful, secretly honest when frightened",
+      "voice": "tall tales with sudden corrections; calls the hero 'skipper'",
+      "events": [
+        {
+          "id": "pell_intro",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "askedPell"
+          },
+          "set": [
+            "askedPell"
+          ],
+          "say": [
+            "So Maren's sent you to hear it from the horse's mouth. I'm no horse, but I'll do.",
+            "I was setting crab pots at the marsh edge at dusk when the ground shook. Out of the reeds comes a boar the size of a cart. Maybe a bigger cart.",
+            "Here's the odd part, and for once I'm not embroidering. It stopped at the water and stared at the sun until the sun dimmed. Then it plunged back into the mire, and the slimes poured out of the pans behind it like they were following orders.",
+            "If you want that boar, the marsh is east, past the pans. Clear the slimes first. They multiply on the way."
+          ]
+        },
+        {
+          "id": "pell_gift",
+          "when": {
+            "flag": "gelboarDefeated",
+            "notFlag": "pellGift"
+          },
+          "set": [
+            "pellGift"
+          ],
+          "say": [
+            "I heard! That bubbling light in the cove has finally gone out! Ten years I watched it and never once found the nerve.",
+            "Here. Take a few of my old bait coins. They're only tin, but they've never lost a fight with a fish."
+          ],
+          "gold": 50
+        }
+      ],
+      "lines": [
+        {
+          "id": "p01",
+          "text": "Ahoy, skipper! Caught a cod this morning as long as a rowboat. Well. As long as a rowboat's oar. Well. It had a face."
+        },
+        {
+          "id": "p02",
+          "text": "Forty years on this jetty and I've never lost a net. I've mislaid a few. The sea borrowed them."
+        },
+        {
+          "id": "p03",
+          "text": "Hold still, you've got a gull on your shoulder. No? Odd. It was a very convincing gull."
+        },
+        {
+          "id": "p04",
+          "text": "My knots hold anything. Boats, barrels, a bad mood. Ask Maren, she's still wearing one of mine."
+        },
+        {
+          "id": "p05",
+          "text": "Dorrit says I exaggerate. I told her I'd caught two hundred of her opinions and thrown them all back."
+        },
+        {
+          "id": "p06",
+          "text": "Where the pans end, north of the pools, there's a break in the treeline. Behind it lies a cove. I fell into it. Twice. Mind the tide."
+        },
+        {
+          "id": "p07",
+          "text": "Hesper's smoked eel will change your whole opinion of eels. She won't share the recipe. I've offered her a net."
+        },
+        {
+          "id": "p08",
+          "text": "Wren asked if sea monsters have birthdays. I said only the large ones. She's been counting candles ever since."
+        },
+        {
+          "id": "p09",
+          "text": "Shoulders like yours could haul a trawl single-handed. I know a skipper who's short a deckhand, if you ever lose your nerve for adventure.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "p10",
+          "text": "A spell-flinger! Can you boil a kettle from across the room? No? Pity, mine's been cold since Tuesday.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "p11",
+          "text": "Light on your feet, eh? A natural net-thief. I say that with admiration and one eye on my tackle box.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "p12",
+          "text": "A healer! Wonderful. My back has opinions about last winter and none of them are polite.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "p13",
+          "text": "Osk has lost his lucky rake again. I suggested he stop calling it lucky. The luck is clearly elsewhere."
+        },
+        {
+          "id": "p14",
+          "text": "Mags charges double if you whistle on her ferry. Triple if it's a sea shanty."
+        },
+        {
+          "id": "p15",
+          "text": "A tide-chart is an old person's opinion with numbers on it. Mine says the water is behaving strangely."
+        },
+        {
+          "id": "p16",
+          "text": "Never trust a fish that looks at you for too long. Or a person, but fish more."
+        },
+        {
+          "id": "p17",
+          "text": "Maren sent you, did she? Sit, sit. Mind the bucket. It's mostly bait. Mostly.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "askedPell"
+          }
+        },
+        {
+          "id": "p18",
+          "text": "I told it plain, didn't I? About the boar? I even stopped counting its size. That should tell you how big it is.",
+          "when": {
+            "flag": "askedPell",
+            "notFlag": "pansCleared"
+          }
+        },
+        {
+          "id": "p19",
+          "text": "Slimes cleared, you say? Wonderful. They'd taken to napping on my favourite rocks.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "p20",
+          "text": "The great boar is dead and I'm the only person in Brinewick who didn't see it happen. Naturally I'll tell it as if I did.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "p21",
+          "text": "Fish are biting again, which I take as a personal compliment. Or a sign the marsh has gone quiet.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "p22",
+          "text": "You're off north soon, aren't you? Take my best advice: never turn your back on a ferryman, a tide, or a buffet.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "p23",
+          "text": "When you're famous, mention a certain net-mender in your memoirs. Spell it W-R-A-C-K. Say it twice for emphasis.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        }
+      ]
+    },
+    "dorrit_kelp": {
+      "name": "Dorrit Kelp",
+      "role": "well-keeper and village gossip",
+      "personality": "breathless, nosy, warm-hearted",
+      "voice": "whispers, interruptions, 'between you and me'",
+      "lines": [
+        {
+          "id": "d01",
+          "text": "Oh! You startled me. I was only drawing water. And listening. Mostly listening."
+        },
+        {
+          "id": "d02",
+          "text": "Between you and me, Hilde hasn't smiled since the spring festival. Some say a ferryman said something. Mags swears she didn't."
+        },
+        {
+          "id": "d03",
+          "text": "Hesper's stew has seven secret ingredients. I've counted eight. Don't tell her, I'm saving it for leverage."
+        },
+        {
+          "id": "d04",
+          "text": "The gulls left on a Tuesday. All of them. At once. Pell says it was a mood. I say it was a warning."
+        },
+        {
+          "id": "d05",
+          "text": "Wren climbed down the well rope again. I'd scold her, but she brought up a coin forty years old. Whose? Nobody knows."
+        },
+        {
+          "id": "d06",
+          "text": "Osk lost his rake AGAIN. He calls it lucky and then loses it. The rake isn't the problem."
+        },
+        {
+          "id": "d07",
+          "text": "Tobiah prices everything in sevens. Seven coppers, seventy, seven hundred. Superstition. Or a very small joke."
+        },
+        {
+          "id": "d08",
+          "text": "Ansel sang by the well last night. Something about a drowned sunrise. I cried into my bucket. Tell no one."
+        },
+        {
+          "id": "d09",
+          "text": "A fighter! The last one who came through here broke my bucket and left a very nice apology. In chalk. On the well.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "d10",
+          "text": "A spell-caster! Does it make water taste better? Mine's been tasting of coins all week.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "d11",
+          "text": "Oh, you're the quiet kind. I always know the quiet ones. They hear everything. We'd get on splendidly.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "d12",
+          "text": "A healer! Would you look at my elbow? It's been clicking since the thaw. I don't mind, I just worry for the elbow.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "d13",
+          "text": "If you want treasure, watch where Wren plays. That child finds everything. Mostly mud. But everything."
+        },
+        {
+          "id": "d14",
+          "text": "The water has tasted odd this week. Like a coin held in the mouth. I'm sure it's fine. It's definitely fine."
+        },
+        {
+          "id": "d15",
+          "text": "I keep notes on everyone's business. For safety. Not mine, theirs. Fine, mine as well."
+        },
+        {
+          "id": "d16",
+          "text": "I saw lights on the sea last month and told no one. Except you, apparently. I'm hopeless."
+        },
+        {
+          "id": "d17",
+          "text": "A glow in your hand, they say! Don't worry, I won't tell a soul. I've only told six.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "pansCleared"
+          }
+        },
+        {
+          "id": "d18",
+          "text": "The slimes are gone from the flats! Osk wept. He does love a clear row of salt.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "d19",
+          "text": "The boar's dead! Pell insists he watched it fall from the jetty. The jetty can't see the marsh, but I'm not the type to correct people. Much.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "d20",
+          "text": "Maren hasn't scolded anyone all day. I'm frightened. Is she ill? Is it the end of the world?",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "d21",
+          "text": "Maren gave you her mother's locket! I'm not jealous. I'm a little jealous. It's so shiny.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "d22",
+          "text": "When you're gone, who will I tell everything to? The well? The well is a poor listener.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "d23",
+          "text": "Maren's been staring at the horizon from her window. She only does that when she's frightened. Or hungry. It's usually hunger.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "reportedMaren"
+          }
+        },
+        {
+          "id": "d24",
+          "text": "Osk found his rake! No wait, you found it. He's telling everyone it found him. The man has pride.",
+          "when": {
+            "flag": "rakeReturned"
+          }
+        },
+        {
+          "id": "d25",
+          "text": "A packman with seven wheels and no accent is on the roads today. They say his wares glow a bit. I say that's the lamp oil.",
+          "when": {
+            "merchantToday": true
+          }
+        }
+      ]
+    },
+    "hesper_marl": {
+      "name": "Hesper Marl",
+      "role": "innkeeper of The Gull's Rest",
+      "personality": "brisk, bossy, big-hearted",
+      "voice": "orders disguised as hospitality; food metaphors",
+      "greet": [
+        "A bed's ten coins. Hot water's free. Opinions cost extra.",
+        "You look like a person who needs a mattress and a lecture. I only charge for the mattress."
+      ],
+      "bye": [
+        "Mind the step. And the cat.",
+        "Back soon, now. The stew keeps, but I don't."
+      ],
+      "lines": [
+        {
+          "id": "h01",
+          "text": "Wipe your boots, sit, eat. In that order, and in a hurry."
+        },
+        {
+          "id": "h02",
+          "text": "The stew is rabbit and barley. Don't ask about the rabbit. He was old and had a good life."
+        },
+        {
+          "id": "h03",
+          "text": "Ansel's in the corner again, humming. Pays on time, tips in blessings. I'd prefer coin, but a blessing keeps the roof from leaking."
+        },
+        {
+          "id": "h04",
+          "text": "Pell claims the smoked eel was his idea. It was mine. He supplied the eel. Technically the eel was most of the idea."
+        },
+        {
+          "id": "h05",
+          "text": "I've hosted sailors, pilgrims, tax-collectors and one very confused bishop. You I like best so far. Don't let it go to your head."
+        },
+        {
+          "id": "h06",
+          "text": "Mags comes in after every ferry run and orders the same thing. Soup, bread, and a complaint. I bring the complaint first."
+        },
+        {
+          "id": "h07",
+          "text": "A fighter! Good. I'll need that arm to lift the barrel in the cellar. You'll be paid in stew.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "h08",
+          "text": "A mage in my inn! If you set anything on fire, it's a surcharge. If you put it out, it's a discount.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "h09",
+          "text": "A scout. You'll want the window room. Light sleepers get the window room. Heavy sleepers get the floor.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "h10",
+          "text": "A healer? Bless you. Come and look at my knee, when you've sat. The knee has opinions and not a single manner.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "h11",
+          "text": "The cellar door sticks. If you hear thumping, it's the cat. If you hear singing, it's Ansel. If you hear neither, run."
+        },
+        {
+          "id": "h12",
+          "text": "Tobiah's prices are robbery, but he says he's only robbing in sevens. No one's yet proved the difference."
+        },
+        {
+          "id": "h13",
+          "text": "Nothing cures a hard road like a hot meal and an early night. I've given that advice to kings. They never took it either."
+        },
+        {
+          "id": "h14",
+          "text": "There's a chest in the guest room. It isn't locked. Please don't tell the other guests I told you."
+        },
+        {
+          "id": "h15",
+          "text": "If you want a story, ask Wren. If you want the truth, ask Hilde. If you want both, wait for Dorrit to run out of breath."
+        },
+        {
+          "id": "h16",
+          "text": "The roads north have thieves worse than any slime. Sleep with your purse in your boot, and your boot on your foot."
+        },
+        {
+          "id": "h17",
+          "text": "Off to the marsh? Take bread. Take two. Heroes die hungry in all the best stories, and I won't have it in my inn.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "h18",
+          "text": "Slime all down your boots, and you want a bed? I'll need a mop, not a mattress. Ten coins and you scrub the doorstep.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "h19",
+          "text": "Word's already come through. The boar's finished. Sailors are buying drinks they can't afford to celebrate a fight they didn't see.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "h20",
+          "text": "Sleep as long as you like, hero. Don't tell me that's not what you are. Nobody ever believes that line, including the heroes.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "h21",
+          "text": "Maren told me to pack you a lunch. Then she told me to pack you a LOT of lunch. I think she likes you.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "h22",
+          "text": "My door stays open, my stew stays hot, and my prices don't rise for heroes. Mostly.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "h23",
+          "text": "They say a glowing thing in the cove finally stopped bubbling. The folk nearest it have been sleeping better. So have I.",
+          "when": {
+            "flag": "gelboarDefeated"
+          }
+        }
+      ]
+    },
+    "tobiah_crake": {
+      "name": "Tobiah Crake",
+      "role": "shopkeeper of Salt & Tackle",
+      "personality": "flowery, superstitious, shrewd",
+      "voice": "sales patter; counts everything in sevens",
+      "greet": [
+        "Welcome, welcome! Look all you like. Touching costs seven coppers.",
+        "Ah, a customer! My favourite kind of creature. Second to a customer with gold."
+      ],
+      "bye": [
+        "Come again! And tell your friends. Tell your enemies. They need boots too.",
+        "Safe roads. Those are on the house. Everything else is not."
+      ],
+      "lines": [
+        {
+          "id": "t01",
+          "text": "Everything in this shop is priced fairly, honestly, and, where possible, in sevens."
+        },
+        {
+          "id": "t02",
+          "text": "That bronze was hammered by my cousin in Tallow Ford. Hand-hammered, hand-hated, hand-delivered."
+        },
+        {
+          "id": "t03",
+          "text": "A potion a day keeps the undertaker away. Three potions a day and I'm very happy. Seven and I'll carve your name on the counter."
+        },
+        {
+          "id": "t04",
+          "text": "I never open on a Friday the thirteenth. Or the twelfth. Or the fourteenth. The calendar is full of traps."
+        },
+        {
+          "id": "t05",
+          "text": "Hesper buys her salt from me at cost. I pretend to be furious. She pretends to be grateful."
+        },
+        {
+          "id": "t06",
+          "text": "Pell tried to pay me with a fish last month. I took it. The fish was honest. Pell wasn't."
+        },
+        {
+          "id": "t07",
+          "text": "Slime gel, boar tusks, whatever you scrape off your boots. Sell it here and I'll find a use. Or a customer."
+        },
+        {
+          "id": "t08",
+          "text": "A sword is just an argument that ends sooner. This one is a very good argument.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "t09",
+          "text": "A staff? Oak. Salt-hardened. If it doesn't channel anything, it still makes a decent walking stick.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "t10",
+          "text": "A bow! Quiet, tidy, no cleaning. I admire the efficiency. I would still charge you for the arrows.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "t11",
+          "text": "A mace? Honest, blunt, and rarely needs sharpening. Like a good friend. Or a bad one.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "t12",
+          "text": "Pell hasn't opened the boathouse since his wife's funeral. He keeps the key somewhere nobody would look. Which is, naturally, the net shed."
+        },
+        {
+          "id": "t13",
+          "text": "Customers ask for discounts. I give them a smile. It's worth seven coppers and cheaper than the sword."
+        },
+        {
+          "id": "t14",
+          "text": "My late father said a good shopkeeper counts coins by touch. He lost three fingers to that idea."
+        },
+        {
+          "id": "t15",
+          "text": "Marsh bound, are you? Buy armour. I'll even throw in a lecture on how to wear it.",
+          "when": {
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "t16",
+          "text": "Slimes shrug off swords and split into more of themselves. If you can burn them or shock them, do. If you can't, stock up on patience.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "pansCleared"
+          }
+        },
+        {
+          "id": "t17",
+          "text": "Slime gel! A fine find. Sell it to me and I'll pass it to a person who knows a person who pays seven times what I do.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "t18",
+          "text": "The big boar's down, which means boar tusks will flood in by supper. Prices of tusks will drop. Mine will not.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "t19",
+          "text": "Hero's discount! It's the same price, but I say it with great respect.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "t20",
+          "text": "North to Tallow Ford, then? Cousin Arlo runs the smithy there. Tell him Tobiah says hello. Don't tell him what I charge.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "t21",
+          "text": "If you come back rich, I'll sell you a bigger sword. If you come back poor, I'll sell you a smaller one.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "t22",
+          "text": "A glow in the cove has stopped? Well. My candle sales may drop. The ghost-story trade, too.",
+          "when": {
+            "flag": "gelboarDefeated"
+          }
+        }
+      ]
+    },
+    "wren": {
+      "name": "Wren",
+      "role": "village child",
+      "personality": "excitable, curious, fearless",
+      "voice": "run-on sentences, secrets she cannot keep, big plans",
+      "events": [
+        {
+          "id": "wren_gift",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "wrenGift"
+          },
+          "set": [
+            "wrenGift"
+          ],
+          "say": [
+            "Psst! Hold out your hand. No, the one that doesn't glow.",
+            "Here. It's my favourite button. No wait, sorry, that's a potion. I found it in the well. It has a lid, so it's fine."
+          ],
+          "give": {
+            "potion": 1
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "w01",
+          "text": "I'm Wren! I'm nine and three-quarters and I've seen a sea monster. Two, actually. One was a log."
+        },
+        {
+          "id": "w02",
+          "text": "I'm going to be a monster hunter when I grow up. I have a stick. It's a very serious stick."
+        },
+        {
+          "id": "w03",
+          "text": "Pell says there's a cave where the salt flats end. I think there's treasure. I think there's a dragon. I'm not allowed near it."
+        },
+        {
+          "id": "w04",
+          "text": "I tried to teach the well my name. It only learned Wren, Wren, Wren. That's very rude, it's only one Wren."
+        },
+        {
+          "id": "w05",
+          "text": "Hilde let me hold her helmet once. It smelled like pennies. I decided never to be a guard."
+        },
+        {
+          "id": "w06",
+          "text": "Osk is so sad about his rake. I looked everywhere. I found three rakes, a boot, and a very surprised crab."
+        },
+        {
+          "id": "w07",
+          "text": "Tobiah says luck is a choice. I chose to be lucky. So far I've found sixteen buttons."
+        },
+        {
+          "id": "w08",
+          "text": "I know a secret path! Go north on the flats where the trees leave a gap and you reach a glowing cave! Don't tell anyone I told. I told everyone."
+        },
+        {
+          "id": "w09",
+          "text": "You have a SWORD? Can I hold it? Can I hold just the handle? Just the very top of the handle?",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "w10",
+          "text": "Are you a wizard? Can you turn Dorrit into a frog? She'd be so cross. And so loud. Never mind.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "w11",
+          "text": "You move like a cat! I tried to move like a cat. I fell off the jetty. Pell caught me. With a net.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "w12",
+          "text": "Can you heal a scraped knee? It's for a friend. The friend is me. The knee is very brave.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "w13",
+          "text": "Ansel taught me a song about the sun. It goes up, it goes down, it goes plop. I might have changed some of it."
+        },
+        {
+          "id": "w14",
+          "text": "Mags lets me steer the ferry when no one's watching. Everyone's usually watching."
+        },
+        {
+          "id": "w15",
+          "text": "If I had a sword I'd name it Gerald. Gerald the Slayer. Gerald Kindly."
+        },
+        {
+          "id": "w16",
+          "text": "Mum says be careful, Dad says be quick and Maren says be quiet. I tried all three and fell in the pond."
+        },
+        {
+          "id": "w17",
+          "text": "Is it true your hand glows? Can I see? Please? I'll give you a button!",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "pansCleared"
+          }
+        },
+        {
+          "id": "w18",
+          "text": "You beat the slimes? Did they go splat or split? I need details for my records.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "w19",
+          "text": "You beat the BOAR? The GREAT one?! I'm going to tell everyone you did it in one hit.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "w20",
+          "text": "I made you a medal! It's a button with a ribbon. You have to wear it or I'll cry. A little.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "w21",
+          "text": "You're leaving?! Who will I show my stick to? Okay. Good luck. I'll practise.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "w22",
+          "text": "When you come back, bring me a monster tooth. A small one. Medium. Okay a big one.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "w23",
+          "text": "Someone beat the glowing thing in the cave! I heard! Was it you?! Can I touch the gloop?",
+          "when": {
+            "flag": "gelboarDefeated"
+          }
+        }
+      ]
+    },
+    "hilde_brant": {
+      "name": "Corporal Hilde Brant",
+      "role": "village watch",
+      "personality": "clipped, dutiful, dryly funny",
+      "voice": "short military phrasing; numbered rules",
+      "lines": [
+        {
+          "id": "hi01",
+          "text": "Halt. Just kidding. I don't have the authority. I do have an opinion about your boots."
+        },
+        {
+          "id": "hi02",
+          "text": "Eleven years on the watch. Zero invasions. Forty-three unattended goats. The goats are worse."
+        },
+        {
+          "id": "hi03",
+          "text": "Rule one: no drawn weapons inside the village. Rule two: see rule one. Rule three: Pell's fish stories are not evidence."
+        },
+        {
+          "id": "hi04",
+          "text": "I used to patrol the marsh road every dawn. Then the ground began to shake. Now I patrol the village road. Good exercise and nothing's tried to eat me."
+        },
+        {
+          "id": "hi05",
+          "text": "Dorrit tells everyone my business. I told her I once fought a bear. She's repeated it eight times. It was a very aggressive badger."
+        },
+        {
+          "id": "hi06",
+          "text": "Wren keeps trying to join the watch. She has the spirit. Not the height. Or the patience. Or the ability to stand still."
+        },
+        {
+          "id": "hi07",
+          "text": "A blade-bearer. Good. We could use another person who knows which end to hold. Don't draw it in the square.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "hi08",
+          "text": "A mage. Rule four: no fire near the net shed. Rule five: no fire near Pell. Rule six: no fire.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "hi09",
+          "text": "A scout. I'd have you on patrol if the pay weren't an insult. It's mostly stew and the occasional goat.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "hi10",
+          "text": "A healer. Lovely. The watch has never once needed a healer. Or so the paperwork says.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "hi11",
+          "text": "If you face the boar, keep your footing. It's slow to start and quick to charge. Strike when it's spent."
+        },
+        {
+          "id": "hi12",
+          "text": "Slimes shrug off blades. My pike only made one cheerful. Fire or lightning does the job; steel just wobbles them."
+        },
+        {
+          "id": "hi13",
+          "text": "Osk leaves the gate open when he goes raking. I've told him. He apologises. Then he does it again. Apologetically."
+        },
+        {
+          "id": "hi14",
+          "text": "Hesper's stew is the only thing in the village that stays hot through a boar attack. I'd call that heroic."
+        },
+        {
+          "id": "hi15",
+          "text": "Tobiah's blades are fine. His sales patter is a menace."
+        },
+        {
+          "id": "hi16",
+          "text": "Mags says she saw lights over the Hollow Sea last night. Sailors say plenty. I stay at my post and keep my eyes dry."
+        },
+        {
+          "id": "hi17",
+          "text": "Elder Maren says you're cleared for the east gate. Good. I was going to ask for a reason and had none.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "pansCleared"
+          }
+        },
+        {
+          "id": "hi18",
+          "text": "No gurgling from the flats. No bouncing. I'd call it peaceful if it weren't suspicious.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "hi19",
+          "text": "I heard the boar's gone. Relieved. Also a little annoyed. I had a plan. It involved a net, a great deal of rope, and perhaps a goat.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "hi20",
+          "text": "I'll sleep with one eye open tonight. Not from fear. From respect.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "hi21",
+          "text": "Safe road, traveller. Keep to the milestones, don't drink from puddles, and don't trust any ferryman who whistles.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "hi22",
+          "text": "At Tallow Ford, tell them Brinewick's watch says hello. They won't care. Tell them anyway.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "hi23",
+          "text": "A light over the cove and now there isn't one? I'll need a report. A verbal one. I can't read your handwriting.",
+          "when": {
+            "flag": "gelboarDefeated"
+          }
+        }
+      ]
+    },
+    "osk_merrin": {
+      "name": "Osk Merrin",
+      "role": "salt-raker",
+      "personality": "anxious, apologetic, gentle",
+      "voice": "trailing sentences, apologies, self-corrections",
+      "events": [
+        {
+          "id": "osk_ask",
+          "when": {
+            "notFlag": "oskAsked"
+          },
+          "set": [
+            "oskAsked"
+          ],
+          "say": [
+            "Oh, hello. I'm sorry to ask. It's only that I lost my rake, the one with the red ribbon, somewhere out in the east flats. I was running from a slime. Several slimes. I dropped everything.",
+            "If you find it, would you bring it back? I'd give you what I can. It isn't much. It's honest, at least."
+          ]
+        },
+        {
+          "id": "osk_return",
+          "when": {
+            "hasItem": "lucky_rake",
+            "notFlag": "rakeReturned"
+          },
+          "set": [
+            "rakeReturned"
+          ],
+          "say": [
+            "My rake! The ribbon's still on it!",
+            "Please, take this. It isn't enough. It's never enough. Thank you."
+          ],
+          "take": {
+            "lucky_rake": 1
+          },
+          "gold": 60,
+          "give": {
+            "potion": 2
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "o01",
+          "text": "Oh! Sorry. I didn't see you there. I never see anyone. I'm sorry about that too."
+        },
+        {
+          "id": "o02",
+          "text": "I've raked these flats since I could hold a rake. Which is why losing the rake is so, so... sorry, I'm rambling."
+        },
+        {
+          "id": "o03",
+          "text": "Salt wants patience. Rake slowly, dry slowly, sell slowly. I'm very good at the first two."
+        },
+        {
+          "id": "o04",
+          "text": "I think I heard the slimes gurgling behind the pools. Do slimes gurgle? Sorry. I've never asked."
+        },
+        {
+          "id": "o05",
+          "text": "My wife says I worry. I say I'm cautious. She says that's the same thing with extra steps."
+        },
+        {
+          "id": "o06",
+          "text": "Maren says the sun used to be brighter. I wouldn't know. I mostly look at the ground."
+        },
+        {
+          "id": "o07",
+          "text": "I tie ribbons on my rake handles so I can find them. It works wonderfully until I lose the ribbon too."
+        },
+        {
+          "id": "o08",
+          "text": "You carry a lot of steel. I'm sorry. I'm sure it's useful. It's only that I'd feel safer behind it.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "o09",
+          "text": "Is that magic? I've never seen magic. Does it hurt? Sorry. Does it hurt the other person? Even worse. Sorry.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "o10",
+          "text": "You walk so quietly. I'm sorry, that's a compliment. I'm bad at them.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "o11",
+          "text": "A healer! If you've any spare blessings, my left knee would take a small one. Sorry. A large one. Any size!",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "o12",
+          "text": "Dorrit says I talk too much. Do I talk too much? I'll stop. I won't stop."
+        },
+        {
+          "id": "o13",
+          "text": "Hilde says I leave the gate open. I don't think I do. I might. Sorry, Hilde."
+        },
+        {
+          "id": "o14",
+          "text": "Hesper gives me free soup when she hears I've lost a tool. It's been a lot of soup this year."
+        },
+        {
+          "id": "o15",
+          "text": "Wren found a button in my boot last week. I've no idea how it got there. I'm sorry for the button, too."
+        },
+        {
+          "id": "o16",
+          "text": "Tobiah says my rake would sell for seven coppers. I said it's worth a hundred. He said, fine, a hundred and seven."
+        },
+        {
+          "id": "o17",
+          "text": "Would you be heading through the flats, traveller? There are slimes. Please be careful. They bounce.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "pansCleared"
+          }
+        },
+        {
+          "id": "o18",
+          "text": "The flats are clear! Thank you! I can rake again. Once I find my rake. Sorry.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "o19",
+          "text": "They say the boar's dead. I feel terrible about that. It wasn't a bad boar. Just very big. And rude.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "o20",
+          "text": "I'll finally be able to cross the marsh road and cut reeds. I'd bring you some. They're not special. Sorry.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "o21",
+          "text": "Safe travels! Come back. Or don't. But do come back. Sorry. Safe travels.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "o22",
+          "text": "I'll polish my rake daily and never let it out of my sight. Until I lose it again. Sorry. I will not lose it again.",
+          "when": {
+            "flag": "rakeReturned"
+          }
+        }
+      ]
+    },
+    "ansel_dray": {
+      "name": "Ansel Dray",
+      "role": "wandering sun-pilgrim",
+      "personality": "calm, lyrical, quietly sad",
+      "voice": "hymn fragments, riddles, slow cadence",
+      "lines": [
+        {
+          "id": "a01",
+          "text": "Peace upon your path, traveller. May the light find you, and may you not stand in its way."
+        },
+        {
+          "id": "a02",
+          "text": "I walk the shorelines singing the old hymns. The waves are poor listeners, but they keep time."
+        },
+        {
+          "id": "a03",
+          "text": "Once there was a temple on the water, they say, with a roof of beaten gold that caught the dawn and flung it across the sea. Now there is only the sea."
+        },
+        {
+          "id": "a04",
+          "text": "A hymn is a promise. A promise remembered is a lamp. A lamp that is shared is a sunrise. That is arithmetic, in the old tradition."
+        },
+        {
+          "id": "a05",
+          "text": "Hesper feeds me and I sing for her. It is a fair trade, though I suspect she wins."
+        },
+        {
+          "id": "a06",
+          "text": "The sun does not die. It tires, as we do, when no one remembers why it rises."
+        },
+        {
+          "id": "a07",
+          "text": "Wren asked me whether the sun feels pain. I could not answer. I have resolved to ask it, when we meet."
+        },
+        {
+          "id": "a08",
+          "text": "A sword-bearer. The old temple had a guardian much like you: silent, enormous, and dreadfully fond of cats.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "a09",
+          "text": "A weaver of fire and light. The old priests studied the sun with such care that it turned round and studied them back.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "a10",
+          "text": "A quiet-footed one. In the old tales, pilgrims who travelled lightly arrived first and said the least. They were also the hungriest.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "a11",
+          "text": "A healer! Our paths cross. I'll hum you the Dawn Litany, if you've patience for a very long note.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "a12",
+          "text": "At the far margin of the pans, past the pools, I heard something humming. Not a hymn. Something older. Something wet."
+        },
+        {
+          "id": "a13",
+          "text": "A coin at dawn, a coin at dusk. One for the sun and one for the sea. So the pilgrims paid, long ago."
+        },
+        {
+          "id": "a14",
+          "text": "I have never seen the Hollow Sea still. Even on the calmest days, it breathes."
+        },
+        {
+          "id": "a15",
+          "text": "Mags quoted me a price for the crossing. I asked whether she accepted hymns. She said hymns were welcome, at double the fare."
+        },
+        {
+          "id": "a16",
+          "text": "Maren whispered about your palm. Do not be afraid. In the old hymns, that glow has a name. I won't speak it yet. The telling must be earned.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "a17",
+          "text": "The flats feel lighter. Not safer, lighter. As if the sea has exhaled.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "a18",
+          "text": "I heard the boar fall, though I was a mile away. The reeds trembled, and the crows left the marsh in a single black breath.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "a19",
+          "text": "The glow in your hand brightened when the beast fell. Remember that. It wakes in answer to something.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "a20",
+          "text": "You travel north soon. I have walked that road. Keep to the high ground. The low roads remember too much.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "a21",
+          "text": "I will sing for you tonight. Not for protection, hymns are poor armour. For company.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "a22",
+          "text": "The cove has gone quiet. Whatever sang there has stopped. I confess I miss it, as one misses a storm.",
+          "when": {
+            "flag": "gelboarDefeated"
+          }
+        }
+      ]
+    },
+    "mags_tarn": {
+      "name": "Mags Tarn",
+      "role": "ferrywoman",
+      "personality": "blunt, cheerfully mercenary, well-travelled",
+      "voice": "nautical slang; prices for everything",
+      "lines": [
+        {
+          "id": "g01",
+          "text": "Fares up front. Coin or goods. I take hymns at twice the price and compliments at triple."
+        },
+        {
+          "id": "g02",
+          "text": "The ferry runs north to Reedhollow when the tide allows. Which is rarely, and loudly."
+        },
+        {
+          "id": "g03",
+          "text": "Hold the rail and don't whistle. Whistling is bad luck on my boat. Singing is worse. Ansel knows."
+        },
+        {
+          "id": "g04",
+          "text": "Pell wants a share of my takings for moral support. I told him moral support isn't a receipt."
+        },
+        {
+          "id": "g05",
+          "text": "I've ferried bishops, bandits, and one extremely polite goat. The goat tipped best."
+        },
+        {
+          "id": "g06",
+          "text": "Hilde says I'm trouble. I say I'm punctual. We're both a little right."
+        },
+        {
+          "id": "g07",
+          "text": "Big arms. You'd row better than my last two crew combined. One of them was the goat.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "g08",
+          "text": "A mage. Could you make the wind blow where I need it? No? Then you're ballast. Welcome aboard.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "g09",
+          "text": "Sharp eyes. I could use a lookout, if you fancy cold water and no pay.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "g10",
+          "text": "A healer! Bless the boat. Bless the tide. And please bless my knees, which have opinions about stairs.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "g11",
+          "text": "The toll at the Reedhollow dock has been climbing. Bandits collect it. I carry people to the pier. I don't carry them to the shakedown."
+        },
+        {
+          "id": "g12",
+          "text": "Folk say a bandit king runs the marshes up north. Bogwarden Hask. Calls himself that, mostly."
+        },
+        {
+          "id": "g13",
+          "text": "The Hollow Sea's been rough. Lights under the water at night. I tell the passengers it's fish."
+        },
+        {
+          "id": "g14",
+          "text": "Wren steers when she thinks I'm not watching. I let her. Good hands. Terrible sense of direction."
+        },
+        {
+          "id": "g15",
+          "text": "Tobiah sells me rope at cost. In sevens. I never ask why."
+        },
+        {
+          "id": "g16",
+          "text": "I charge more when it rains. Not because it's harder. Because you'll pay."
+        },
+        {
+          "id": "g17",
+          "text": "Maren says you'll want passage north soon. Not yet. The channel's choked with marsh mud till the boar business is done.",
+          "when": {
+            "flag": "talkedMaren",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "g18",
+          "text": "A quiet flat means more salt barges, which means more fares. I'll buy you a drink. Once you've paid for it.",
+          "when": {
+            "flag": "pansCleared",
+            "notFlag": "boarDefeated"
+          }
+        },
+        {
+          "id": "g19",
+          "text": "The boar's dead? Then the mud clears by the next tide. I'll be sailing again by week's end.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "g20",
+          "text": "I've heard heroes always pay double. I'm a firm believer in tradition.",
+          "when": {
+            "flag": "boarDefeated"
+          }
+        },
+        {
+          "id": "g21",
+          "text": "Tallow Ford by road, or Reedhollow by water. I'd say the water, but the road is free and I'm obliged to mention both.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "g22",
+          "text": "When you're famous, put my ferry in the songs. Rhymes with merry, and with very expensive.",
+          "when": {
+            "flag": "reportedMaren"
+          }
+        },
+        {
+          "id": "g23",
+          "text": "Something shining out there in the cove, and now it's gone? Good. It spooked the fish. Spooked fish mean a spooked catch.",
+          "when": {
+            "flag": "gelboarDefeated"
+          }
+        }
+      ]
+    }
+  }
+}

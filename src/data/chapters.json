@@ -1,0 +1,142 @@
+[
+  {
+    "n": 1,
+    "act": 1,
+    "title": "Brinewick",
+    "level": 1,
+    "startMap": "brinewick"
+  },
+  {
+    "n": 2,
+    "act": 1,
+    "title": "Tallow Ford",
+    "level": 5,
+    "startMap": "tallow_ford"
+  },
+  {
+    "n": 3,
+    "act": 1,
+    "title": "Reedhollow",
+    "level": 9,
+    "startMap": "reedhollow"
+  },
+  {
+    "n": 4,
+    "act": 1,
+    "title": "Sedge Mines",
+    "level": 13,
+    "startMap": "lanternmoor"
+  },
+  {
+    "n": 5,
+    "act": 1,
+    "title": "Gallowkeep",
+    "level": 18,
+    "startMap": "ridgewatch_camp"
+  },
+  {
+    "n": 6,
+    "act": 2,
+    "title": "Khesh-Ura",
+    "level": 20,
+    "startMap": "khesh_ura"
+  },
+  {
+    "n": 7,
+    "act": 2,
+    "title": "The Scorch Road",
+    "level": 23,
+    "startMap": "waystation"
+  },
+  {
+    "n": 8,
+    "act": 2,
+    "title": "Harpy Cliffs",
+    "level": 26,
+    "startMap": "perch_village"
+  },
+  {
+    "n": 9,
+    "act": 2,
+    "title": "The Glass Temple",
+    "level": 29,
+    "startMap": "mirrorfall"
+  },
+  {
+    "n": 10,
+    "act": 2,
+    "title": "Ismerel's Labyrinth",
+    "level": 32,
+    "startMap": "lastlight_camp"
+  },
+  {
+    "n": 11,
+    "act": 3,
+    "title": "Silverhush",
+    "level": 36,
+    "startMap": "silverhush"
+  },
+  {
+    "n": 12,
+    "act": 3,
+    "title": "Rootmere",
+    "level": 40,
+    "startMap": "rootmere_hamlet"
+  },
+  {
+    "n": 13,
+    "act": 3,
+    "title": "Hollowmoor",
+    "level": 43,
+    "startMap": "lantern_hold"
+  },
+  {
+    "n": 14,
+    "act": 3,
+    "title": "Keep Vael",
+    "level": 45,
+    "startMap": "ashfall_camp"
+  },
+  {
+    "n": 15,
+    "act": 3,
+    "title": "The Bier Road",
+    "level": 48,
+    "startMap": null
+  },
+  {
+    "n": 16,
+    "act": 4,
+    "title": "The Descent",
+    "level": 50,
+    "startMap": null
+  },
+  {
+    "n": 17,
+    "act": 4,
+    "title": "Cinder Court",
+    "level": 52,
+    "startMap": null
+  },
+  {
+    "n": 18,
+    "act": 4,
+    "title": "The Drowned Choir",
+    "level": 54,
+    "startMap": null
+  },
+  {
+    "n": 19,
+    "act": 4,
+    "title": "The Dragon's Hearth",
+    "level": 55,
+    "startMap": null
+  },
+  {
+    "n": 20,
+    "act": 4,
+    "title": "The Sun-Throne",
+    "level": 56,
+    "startMap": null
+  }
+]

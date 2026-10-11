@@ -1,0 +1,60 @@
+{
+  "npcs": {
+    "odo_pennywhistle": {
+      "name": "Odo Pennywhistle",
+      "role": "travelling trader of rare goods",
+      "personality": "chirpy, canny, never quite telling where he got things",
+      "voice": "market patter, sales pitches, and weather he has just walked through",
+      "greet": [
+        "Ah, a customer with sensible boots! Come, come. Today's wares are tomorrow's regrets.",
+        "Back already? Good. I rather hoped the road would bring you my way.",
+        "Odo Pennywhistle, at your service, and at your price. Mind the lantern.",
+        "Rain in the east, sun in the west, and a good bargain right here. Look about!",
+        "You again. I keep a shelf for people who come twice. It has better stock.",
+        "Ha! The lamp-bearer. I thought I felt a draught of destiny. Buy something.",
+        "Quick, before the other customers arrive. There are none. But quick anyway.",
+        "Fresh from a place I will not name, to a customer I am delighted to name. Hello!"
+      ],
+      "bye": [
+        "Fair winds and full pockets. Find me again, if the days allow.",
+        "Mind the road. And if you see me somewhere odd, that is simply where I am.",
+        "Pleasure doing business. I will pretend I did not enjoy it.",
+        "Off with you, then. Come back on a day that ends in a vowel."
+      ],
+      "events": [
+        { "id": "odo_first", "when": { "notFlag": "metOdo" }, "set": ["metOdo"],
+          "say": [
+            "Hold still, hold still, you strike me as a person who has never been sold something rare. A tragedy, and I am the cure.",
+            "Odo Pennywhistle. I walk the roads on Tuesdays, Thursdays and Sundays. Don't ask what I do the other days. I would only lie, and badly.",
+            "Everything I carry was made to be a little more than it looks. Buy what suits you. I have only one of each, so you cannot say I did not warn you."
+          ] }
+      ],
+      "lines": [
+        { "id": "op01", "text": "Tuesdays, Thursdays, Sundays. I do not keep a diary. The sun tells me where to be." },
+        { "id": "op02", "text": "One of each, always. The second one has a way of disappearing from my cart." },
+        { "id": "op03", "text": "Where do I get my stock? A gentleman never tells. A merchant never remembers." },
+        { "id": "op04", "text": "My cart has seven wheels. Don't count them. I have a superstition about being counted." },
+        { "id": "op05", "text": "A coat with a charm in the lining sells itself. A coat without one needs me to talk, and I am tired." },
+        { "id": "op06", "text": "There is no such thing as a bad bargain. There is only a bargain that has not found its person." },
+        { "id": "op07", "text": "A fighter! I keep my sturdiest pieces for fighters. They bleed less, and so does my conscience.", "when": { "class": ["warrior"] } },
+        { "id": "op08", "text": "A mage! Mind the staves. I once sold one that hummed. It haunted me for a week, and the buyer for longer.", "when": { "class": ["mage"] } },
+        { "id": "op09", "text": "A scout. You have the walk of a customer who counts the exits. I respect that, and price accordingly.", "when": { "class": ["scout"] } },
+        { "id": "op10", "text": "A healer. You will want the elixir. Everyone who wants the elixir wants it too late.", "when": { "class": ["acolyte"] } },
+        { "id": "op11", "text": "Weather today: unreliable. Roads today: worse. Prices today: honest, in the sense that I have never lied about them." },
+        { "id": "op12", "text": "I once sold a dragon's tooth to a man who wanted a toothpick. We both went home happy." },
+        { "id": "op13", "text": "People ask if my goods are cursed. A little, sometimes. But only the good kind of cursed, like a tune you cannot forget." },
+        { "id": "op14", "text": "That glow in your palm. May I look? No? A pity. I would have paid nearly anything." },
+        { "id": "op15", "text": "I have a cousin in the south who sells sand. Everyone laughs. He is richer than I am." },
+        { "id": "op16", "text": "Gold rattles. Silver sings. Copper only complains, and I do not stock complaints." },
+        { "id": "op17", "text": "I never sell the same thing twice to the same buyer. A matter of pride, and of the cart's limited volume." },
+        { "id": "op18", "text": "The road remembers the people who walk it. I try to be forgettable, so it forgets me quickly." },
+        { "id": "op19", "text": "Brinewick. Salt on the wind and a harbour that pretends to be calm. I bought a very good net there once.", "when": { "chapterMax": 1 } },
+        { "id": "op20", "text": "Goblins camped by the ford were bad for trade. I charged them double and they paid in ears.", "when": { "flag": "reportedNed" } },
+        { "id": "op21", "text": "Lanternmoor has stopped lighting its mine. I stopped selling it candles. I felt dreadful, but I did not give them away.", "when": { "flag": "reachedLanternmoor", "notFlag": "reportedKetch" } },
+        { "id": "op22", "text": "The spiders below Lanternmoor are gone? Then the miners will want boots. I am out of boots. I will fetch boots.", "when": { "flag": "matriarchDefeated" } },
+        { "id": "op23", "text": "Gallowkeep is quiet, they say. I crossed the ridge at dawn and the wind was only wind. I almost missed the orcs.", "when": { "flag": "reachedGallowkeep" } },
+        { "id": "op24", "text": "Hask, dead? He owed me for six crates of rope. I will send the bill to the chapel. Someone must have kept it.", "when": { "flag": "haskDefeated" } }
+      ]
+    }
+  }
+}

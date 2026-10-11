@@ -1,0 +1,474 @@
+{
+  "knight": {
+    "name": "Knight",
+    "tier": 2,
+    "from": "warrior",
+    "inherit": "warrior",
+    "desc": "A shield for the party. Guards allies and holds the line.",
+    "weapons": [
+      "sword",
+      "mace"
+    ],
+    "armour": [
+      "heavy"
+    ],
+    "stats": {
+      "hp": 95,
+      "mp": 23,
+      "atk": 13,
+      "def": 15,
+      "mag": 3,
+      "spd": 5
+    },
+    "color": "0x8d6e63",
+    "growth": {
+      "hp": 7.02,
+      "mp": 1.62,
+      "atk": 1.73,
+      "mag": 0.32,
+      "spd": 0.65,
+      "def": 1.51
+    },
+    "skills": [
+      {
+        "id": "guard_stance",
+        "level": 20
+      },
+      {
+        "id": "crusader_strike",
+        "level": 24
+      },
+      {
+        "id": "rally_cry",
+        "level": 28
+      },
+      {
+        "id": "sunder",
+        "level": 33
+      },
+      {
+        "id": "bulwark",
+        "level": 38
+      }
+    ],
+    "spells": [],
+    "passive": {},
+    "signature": "Guard: intercepts single-target blows aimed at allies.",
+    "next": "Paladin"
+  },
+  "berserker": {
+    "name": "Berserker",
+    "tier": 2,
+    "from": "warrior",
+    "inherit": "warrior",
+    "desc": "Reckless and ferocious. Trades defence for devastating attacks.",
+    "weapons": [
+      "axe",
+      "sword"
+    ],
+    "armour": [
+      "heavy",
+      "medium"
+    ],
+    "stats": {
+      "hp": 81,
+      "mp": 17,
+      "atk": 22,
+      "def": 5,
+      "mag": 2,
+      "spd": 7
+    },
+    "color": "0xb71c1c",
+    "growth": {
+      "hp": 7.15,
+      "mp": 1.65,
+      "atk": 1.76,
+      "mag": 0.33,
+      "spd": 0.66,
+      "def": 1.54
+    },
+    "skills": [
+      {
+        "id": "rage",
+        "level": 20
+      },
+      {
+        "id": "reckless_swing",
+        "level": 24
+      },
+      {
+        "id": "whirlwind",
+        "level": 28
+      },
+      {
+        "id": "bloodlust",
+        "level": 33
+      },
+      {
+        "id": "cataclysm",
+        "level": 38
+      }
+    ],
+    "spells": [],
+    "passive": {},
+    "signature": "Rage: attack soars while defence drops.",
+    "next": "Warlord"
+  },
+  "elementalist": {
+    "name": "Elementalist",
+    "tier": 2,
+    "from": "mage",
+    "inherit": "mage",
+    "desc": "Master of the four elements. Hits weaknesses hard.",
+    "weapons": [
+      "staff"
+    ],
+    "armour": [
+      "robe"
+    ],
+    "stats": {
+      "hp": 36,
+      "mp": 56,
+      "atk": 4,
+      "def": 4,
+      "mag": 22,
+      "spd": 8
+    },
+    "color": "0xe67e22",
+    "growth": {
+      "hp": 3.85,
+      "mp": 3.85,
+      "atk": 0.55,
+      "mag": 2.2,
+      "spd": 0.88,
+      "def": 0.55
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "fire_storm",
+        "level": 20
+      },
+      {
+        "id": "blizzard",
+        "level": 24
+      },
+      {
+        "id": "thunder_spear",
+        "level": 28
+      },
+      {
+        "id": "quake",
+        "level": 33
+      },
+      {
+        "id": "meteor",
+        "level": 38
+      }
+    ],
+    "passive": {
+      "weakBonus": 0.25
+    },
+    "signature": "Attunement: elemental weaknesses hurt 25% more.",
+    "next": "Archmage"
+  },
+  "necromancer": {
+    "name": "Necromancer",
+    "tier": 2,
+    "from": "mage",
+    "inherit": "mage",
+    "desc": "Draws life from the living and curses from the grave.",
+    "weapons": [
+      "staff",
+      "dagger"
+    ],
+    "armour": [
+      "robe",
+      "light"
+    ],
+    "stats": {
+      "hp": 45,
+      "mp": 48,
+      "atk": 5,
+      "def": 4,
+      "mag": 17,
+      "spd": 7
+    },
+    "color": "0x4a148c",
+    "growth": {
+      "hp": 3.78,
+      "mp": 3.78,
+      "atk": 0.54,
+      "mag": 2.16,
+      "spd": 0.86,
+      "def": 0.54
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "drain_touch",
+        "level": 20
+      },
+      {
+        "id": "plague_cloud",
+        "level": 24
+      },
+      {
+        "id": "curse_word",
+        "level": 28
+      },
+      {
+        "id": "bone_spear",
+        "level": 33
+      },
+      {
+        "id": "soul_harvest",
+        "level": 38
+      }
+    ],
+    "passive": {
+      "spellDrain": 0.2
+    },
+    "signature": "Siphon: damaging spells heal you for 20% of the damage.",
+    "next": "Lich"
+  },
+  "ranger": {
+    "name": "Ranger",
+    "tier": 2,
+    "from": "scout",
+    "inherit": "scout",
+    "desc": "A hunter of beasts and a setter of traps.",
+    "weapons": [
+      "bow",
+      "dagger"
+    ],
+    "armour": [
+      "light",
+      "medium"
+    ],
+    "stats": {
+      "hp": 54,
+      "mp": 21,
+      "atk": 13,
+      "def": 6,
+      "mag": 4,
+      "spd": 16
+    },
+    "color": "0x1b5e20",
+    "growth": {
+      "hp": 5.18,
+      "mp": 1.62,
+      "atk": 1.51,
+      "mag": 0.54,
+      "spd": 1.62,
+      "def": 0.86
+    },
+    "skills": [
+      {
+        "id": "aimed_shot",
+        "level": 20
+      },
+      {
+        "id": "snare_trap",
+        "level": 24
+      },
+      {
+        "id": "volley",
+        "level": 28
+      },
+      {
+        "id": "hunters_mark",
+        "level": 33
+      },
+      {
+        "id": "rain_of_arrows",
+        "level": 38
+      }
+    ],
+    "spells": [],
+    "passive": {
+      "beastBonus": 0.25
+    },
+    "signature": "Beast Lore: 25% more damage to boars, wolves, spiders and bats.",
+    "next": "Beastmaster"
+  },
+  "rogue": {
+    "name": "Rogue",
+    "tier": 2,
+    "from": "scout",
+    "inherit": "scout",
+    "desc": "Fast, sharp and unfair. Poison, theft and crippling blows.",
+    "weapons": [
+      "dagger",
+      "bow"
+    ],
+    "armour": [
+      "light"
+    ],
+    "stats": {
+      "hp": 48,
+      "mp": 17,
+      "atk": 14,
+      "def": 4,
+      "mag": 4,
+      "spd": 19
+    },
+    "color": "0x37474f",
+    "growth": {
+      "hp": 5.28,
+      "mp": 1.65,
+      "atk": 1.54,
+      "mag": 0.55,
+      "spd": 1.65,
+      "def": 0.88
+    },
+    "skills": [
+      {
+        "id": "backstab",
+        "level": 20
+      },
+      {
+        "id": "pickpocket",
+        "level": 24
+      },
+      {
+        "id": "venom_blade",
+        "level": 28
+      },
+      {
+        "id": "shadow_step",
+        "level": 33
+      },
+      {
+        "id": "death_mark",
+        "level": 38
+      }
+    ],
+    "spells": [],
+    "passive": {
+      "crit": 0.1
+    },
+    "signature": "Keen Edge: +10% critical chance.",
+    "next": "Assassin"
+  },
+  "cleric": {
+    "name": "Cleric",
+    "tier": 2,
+    "from": "acolyte",
+    "inherit": "acolyte",
+    "desc": "A bright healer who mends the party and brings down holy fire.",
+    "weapons": [
+      "mace",
+      "staff"
+    ],
+    "armour": [
+      "medium",
+      "robe"
+    ],
+    "stats": {
+      "hp": 65,
+      "mp": 43,
+      "atk": 7,
+      "def": 9,
+      "mag": 14,
+      "spd": 8
+    },
+    "color": "0xfdd835",
+    "growth": {
+      "hp": 5.4,
+      "mp": 3.02,
+      "atk": 0.97,
+      "mag": 1.73,
+      "spd": 0.86,
+      "def": 1.08
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "greater_heal",
+        "level": 20
+      },
+      {
+        "id": "holy_light",
+        "level": 24
+      },
+      {
+        "id": "sanctuary",
+        "level": 28
+      },
+      {
+        "id": "divine_wrath",
+        "level": 33
+      },
+      {
+        "id": "grace",
+        "level": 38
+      }
+    ],
+    "passive": {
+      "healBonus": 0.2
+    },
+    "signature": "Devotion: healing spells restore 20% more.",
+    "next": "High Priest"
+  },
+  "druid": {
+    "name": "Druid",
+    "tier": 2,
+    "from": "acolyte",
+    "inherit": "acolyte",
+    "desc": "Heals slowly and surely, and the wild fights on their side.",
+    "weapons": [
+      "staff",
+      "mace"
+    ],
+    "armour": [
+      "medium",
+      "light"
+    ],
+    "stats": {
+      "hp": 54,
+      "mp": 44,
+      "atk": 7,
+      "def": 6,
+      "mag": 12,
+      "spd": 9
+    },
+    "color": "0x2e7d32",
+    "growth": {
+      "hp": 5.5,
+      "mp": 3.08,
+      "atk": 0.99,
+      "mag": 1.76,
+      "spd": 0.88,
+      "def": 1.1
+    },
+    "skills": [],
+    "spells": [
+      {
+        "id": "regrowth",
+        "level": 20
+      },
+      {
+        "id": "entangle",
+        "level": 24
+      },
+      {
+        "id": "thorn_lash",
+        "level": 28
+      },
+      {
+        "id": "bloom",
+        "level": 33
+      },
+      {
+        "id": "wild_surge",
+        "level": 38
+      }
+    ],
+    "passive": {
+      "healBonus": 0.1
+    },
+    "signature": "Regrowth: healing over time, and a little extra healing.",
+    "next": "Archdruid"
+  }
+}

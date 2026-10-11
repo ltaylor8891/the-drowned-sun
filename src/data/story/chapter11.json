@@ -1,0 +1,38 @@
+{
+  "scenes": {
+    "arrive_silverhush": {
+      "when": { "notFlag": "reachedSilverhush" },
+      "lines": [
+        { "n": "", "t": "The forest closes over the road like a hand. Pines the size of towers rise on either side, their needles silvered with frost, and every branch holds a little lantern of pale light." },
+        { "n": "", "t": "Silverhush hangs among them, a town of curving white wood and glass, built along the boughs and around the trunks. Rope-bridges glitter with rime. Moon-pools lie in every clearing, as still as coins." },
+        { "n": "", "t": "It is also silent. Not quiet. Silent. Elves cross the bridges with their mouths closed and their eyes down. A child opens her mouth to laugh, and her mother, gently, puts a finger across her lips." }
+      ],
+      "set": ["reachedSilverhush"],
+      "chapter": 11,
+      "autosave": true,
+      "banner": "Chapter 11: Silverhush"
+    },
+    "captain_intro": {
+      "when": { "notFlag": "captainSeen" },
+      "lines": [
+        { "n": "", "t": "The keep's high gallery is lined with banners of moon-silver, every one of them frozen stiff. At the far end stands an elf in white mail with a bow in one hand and a lantern in the other. The lantern burns pale, and nothing about its light is kind." },
+        { "n": "", "t": "She speaks, and it is the first voice you have heard from an elf since the road. It is flat, as if read from a card." },
+        { "n": "Captain Aelith", "t": "The Hush is law. The Hush is peace. The Hush is mercy. You will be silent, or you will be silenced." },
+        { "n": "{hero}", "t": "That lantern is not yours. Put it down." },
+        { "n": "Captain Aelith", "t": "The Hush is law. The Hush is peace." }
+      ],
+      "set": ["captainSeen"]
+    },
+    "captain_down": {
+      "when": { "notFlag": "captainSceneDone" },
+      "lines": [
+        { "n": "", "t": "The lantern slips from Aelith's hand and shatters. The pale light thins, and drifts away into the rafters like breath. For a long moment she stands swaying, and then she draws a ragged breath that sounds almost like a sob." },
+        { "n": "Captain Aelith", "t": "I heard myself. For three months I have heard myself say those words and I could not stop. A man in a pale coat gave me the lantern at the gate. He said it would keep the forest safe." },
+        { "n": "Captain Aelith", "t": "He went north to the frozen shrine at Rootmere, where the old treants keep the first root of the forest. He said he needed a place that remembered a sunrise. Go. Stop him. And tell Speaker Ilvaren that I am myself again." },
+        { "n": "{hero}", "t": "The Chancellor. Always one step ahead, and always carrying a light that is not his." }
+      ],
+      "set": ["captainSceneDone"],
+      "gold": 1000
+    }
+  }
+}

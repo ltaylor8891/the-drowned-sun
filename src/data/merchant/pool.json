@@ -1,0 +1,120 @@
+{
+  "stockSize": 5,
+  "items": [
+    {
+      "id": "hawkeye_bow",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "viper_dagger",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "lifetap_mace",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "sages_rod",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "emberbrand",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "stormhatchet",
+      "minChapter": 3,
+      "maxChapter": 5
+    },
+    {
+      "id": "frostfang_dagger",
+      "minChapter": 3,
+      "maxChapter": 5
+    },
+    {
+      "id": "bloodmoon_mace",
+      "minChapter": 3,
+      "maxChapter": 5
+    },
+    {
+      "id": "dawnguard_bow",
+      "minChapter": 3,
+      "maxChapter": 5
+    },
+    {
+      "id": "tempest_staff",
+      "minChapter": 3,
+      "maxChapter": 5
+    },
+    {
+      "id": "boarward_vest",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "foxhide_jacket",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "wardens_plate",
+      "minChapter": 3,
+      "maxChapter": 5
+    },
+    {
+      "id": "nightsilk_robe",
+      "minChapter": 3,
+      "maxChapter": 5
+    },
+    {
+      "id": "scholars_cloak",
+      "minChapter": 3,
+      "maxChapter": 5
+    },
+    {
+      "id": "grand_elixir",
+      "minChapter": 1,
+      "maxChapter": 5
+    },
+    {
+      "id": "hewers_axe",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "bulwark_mail",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "starweave_robe",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "moonbead_staff",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "sunmark_mace",
+      "minChapter": 1,
+      "maxChapter": 3
+    },
+    {
+      "id": "hi_ether",
+      "minChapter": 1,
+      "maxChapter": 5
+    },
+    {
+      "id": "phoenix_plume",
+      "minChapter": 2,
+      "maxChapter": 5
+    }
+  ]
+}

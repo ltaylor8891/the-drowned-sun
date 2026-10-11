@@ -1,0 +1,1247 @@
+{
+  "npcs": {
+    "marrak_sen": {
+      "name": "Warden Marrak Sen",
+      "role": "keeper of the Redwater Waystation",
+      "personality": "weathered, pragmatic, quietly furious at the Queen's tolls",
+      "voice": "caravan ledgers and well-depth readings; clipped, with long pauses before bad news",
+      "events": [
+        {
+          "id": "marrak_intro",
+          "when": {
+            "notFlag": "talkedMarrak"
+          },
+          "set": [
+            "talkedMarrak"
+          ],
+          "say": [
+            "Marrak Sen, Warden of Redwater. The well is deep, the shade is cheap, and the tolls are not. You have come from Khesh-Ura with a writ in your pocket, so you know the Queen's road is closed to most.",
+            "Three weeks ago a lizardfolk warlord named Vesh-Kar took the old Toll Fort north of here. He stops every caravan and takes a tenth of every cargo, and now it is a tenth of every drop and every grain. We have not had a wagon through in nineteen days.",
+            "Go north over the ridge and break his hold. The road beyond is crawling with scorpions and warbands, so take good steel and plenty of potions. I will keep the well open for you."
+          ]
+        },
+        {
+          "id": "marrak_report",
+          "when": {
+            "flag": "warlordDefeated",
+            "notFlag": "reportedMarrak"
+          },
+          "set": [
+            "reportedMarrak",
+            "chapter_7_done",
+            "cliff_road_open"
+          ],
+          "say": [
+            "The fort's banner is down. Through a spyglass on the ridge I saw the banner drop, and I wept into the lens. Nineteen days, and now it is over.",
+            "That writ you found. 'One tenth of the sun.' I always thought the Queen was a thief. It is worse. She is a collector, and she does not know where to stop.",
+            "Take these supplies and this purse. This brass token opens the east road to Perch, the cliff village, where the old wind-warden has been asking after travellers. Ismerel will hear of this before the week is out."
+          ],
+          "gold": 700,
+          "give": {
+            "hi_potion": 4,
+            "hi_ether": 3,
+            "phoenix_plume": 2,
+            "perch_token": 1
+          },
+          "autosave": true,
+          "banner": "Chapter 7 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "ma01",
+          "text": "The well at Redwater is three hundred feet deep. The old priests dug it by hand, with a prayer between every bucket."
+        },
+        {
+          "id": "ma02",
+          "text": "I keep a ledger of every cart, every camel, every traveller. When the ledger stops growing, I know the road has died."
+        },
+        {
+          "id": "ma03",
+          "text": "Vessa sells honest steel. Noor sells honest beds. I sell honest water. Between the three of us, we are the only honest thing in the dunes."
+        },
+        {
+          "id": "ma04",
+          "text": "A caravan from the east came through last spring with silks and a dead guard. The guard had no wounds. I did not ask."
+        },
+        {
+          "id": "ma05",
+          "text": "The camels are patient animals. They have outlasted two Queens and an unpleasant emperor. Study them."
+        },
+        {
+          "id": "ma06",
+          "text": "I do not drink the first cup from a new well. A habit of my father's. He was right more often than he was kind."
+        },
+        {
+          "id": "ma07",
+          "text": "A fighter. Good. The fort's spearmen hold a shield wall, and a shield wall needs something to break against.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ma08",
+          "text": "A mage. Lizardfolk fear the cold. Frost will drop them where fire only makes them yawn.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ma09",
+          "text": "A scout. The scorpions burrow in the loose sand beyond the second milestone. Walk the stone, not the dune.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ma10",
+          "text": "A healer. Poison is the road's only sure killer. Bring antidotes. Bring many.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ma11",
+          "text": "In summer the stones crack at noon like pistol shots. It scares new drovers half to death."
+        },
+        {
+          "id": "ma12",
+          "text": "Dilly runs messages to Khesh-Ura on foot. Three days there, three days back, and not a word of complaint. I am considering a medal."
+        },
+        {
+          "id": "ma13",
+          "text": "Old Haggar tells stories about the Queen's early days. Half of them are lies. The other half are worse."
+        },
+        {
+          "id": "ma14",
+          "text": "Ellis draws maps of the glass dunes. I told him no one will buy them. He drew another one."
+        },
+        {
+          "id": "ma15",
+          "text": "A rare trader comes through here on certain days. He never buys water. He says it is bad for the stock."
+        },
+        {
+          "id": "ma16",
+          "text": "Sorrel Quist is a lieutenant from Khesh-Ura, here to count the Queen's soldiers. He has counted forty-one. He is not smiling."
+        },
+        {
+          "id": "ma17",
+          "text": "The dry well in the inn's cellar is a joke the first owner made. It has not been funny in sixty years."
+        },
+        {
+          "id": "ma18",
+          "text": "If the fort falls, I will hang a lantern from the ridge. Not for glory. For the camels. They like a signal."
+        },
+        {
+          "id": "ma19",
+          "text": "Vesh-Kar has a wall of spears and a hall of stacked chests. The chests are bait. Do not open them. I mean it. I lost a drover that way.",
+          "when": {
+            "flag": "talkedMarrak",
+            "notFlag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "ma20",
+          "text": "The fort is quiet. Vesh-Kar's warband has scattered into the dunes, and I am going to sit here and enjoy it.",
+          "when": {
+            "flag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "ma21",
+          "text": "The first wagon in nineteen days came through at noon. The driver cried. So did the camel. I did not trust myself to look.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        },
+        {
+          "id": "ma22",
+          "text": "A spider-tailed scorpion in the burrow south of the road? The old drovers swear it is real. They also swear the dunes sing.",
+          "when": {
+            "notFlag": "spidertailDefeated"
+          }
+        },
+        {
+          "id": "ma23",
+          "text": "The beast in the burrow is dead? Then the south stretch of road will be quiet. I will tell the drovers. They will not believe me.",
+          "when": {
+            "flag": "spidertailDefeated"
+          }
+        },
+        {
+          "id": "ma24",
+          "text": "You have a mark that glows, and you saw the Zenith through a window of glass. Whatever you do next, do it before the Queen does.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        }
+      ]
+    },
+    "vessa_korr": {
+      "name": "Quartermaster Vessa Korr",
+      "role": "keeper of Redwater Outfitters",
+      "personality": "sharp, amused, allergic to flattery",
+      "voice": "silver-trade metaphors and understated jokes",
+      "events": [
+        {
+          "id": "vessa_delivery",
+          "when": {
+            "hasItem": "crate_waystation",
+            "notFlag": "deliveredWaystation"
+          },
+          "set": [
+            "deliveredWaystation"
+          ],
+          "say": [
+            "Orla's seal, and Orla's handwriting, and a crate that rattles like a promise. Silver sheeting for the shop, if I am lucky. Signed and stamped.",
+            "Take this for the carry, and tell her I said the next one had better not weigh so much."
+          ],
+          "take": {
+            "crate_waystation": 1
+          },
+          "gold": 250,
+          "give": {
+            "hi_ether": 1
+          }
+        },
+        {
+          "id": "vessa_intro",
+          "when": {
+            "notFlag": "metVessa"
+          },
+          "set": [
+            "metVessa"
+          ],
+          "say": [
+            "Vessa Korr. Outfitter. Welcome to the last honest counter before the glass.",
+            "Silvered gear, if you can afford it: a full run of blades, staves, bows and maces, with plate, hide, mirage-silk and moonlace to match. Silvering is not magic. It is only very good metalwork with a very good story.",
+            "Say what you need; I will name what you can afford. We will meet in the middle and both feel slightly robbed."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "vk01",
+          "text": "Silver does not rust, tarnish slowly, and never complains. In that order, it is the perfect employee."
+        },
+        {
+          "id": "vk02",
+          "text": "A dagger should weigh what a promise weighs. Enough that you remember it, never so much that you cannot lift it."
+        },
+        {
+          "id": "vk03",
+          "text": "I once sold a sword to a man who bought it for the scabbard. He said the sword was a bonus. I respected that."
+        },
+        {
+          "id": "vk04",
+          "text": "Hi-potions on the left shelf. Antidotes in the clay jar. Ethers in the blue jar. Nothing in the red jar. Do not ask about the red jar."
+        },
+        {
+          "id": "vk05",
+          "text": "Every item here was tested by someone who regretted it, so I trust it."
+        },
+        {
+          "id": "vk06",
+          "text": "The Queen's collectors want my stock priced in glass. I price their glass as paperweights."
+        },
+        {
+          "id": "vk07",
+          "text": "Plate for a fighter, sized for someone who plans to survive. I charge extra for foresight.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "vk08",
+          "text": "The moonlace robe never warms up. Mages swear by it. Mages also swear at it. Take your pick.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "vk09",
+          "text": "A mirage jacket and a silvered bow. You will vanish from half the dunes and half my profit.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "vk10",
+          "text": "A silvered mace for the devout. It rings when it strikes true. The ringing is free.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "vk11",
+          "text": "The scorpions here shrug off blades and bite through boots. A good hammer or a cold spell will serve better than a good argument."
+        },
+        {
+          "id": "vk12",
+          "text": "Tessk sells me scorpion stingers and I sell him jars. We both pretend the transaction is a surprise."
+        },
+        {
+          "id": "vk13",
+          "text": "Dilly asked me for a sword. I gave her a broom. She swept the entire shop. I was impressed and slightly threatened."
+        },
+        {
+          "id": "vk14",
+          "text": "If you find a glass scale on the road, do not pocket it. It will cut through the pocket and then through you."
+        },
+        {
+          "id": "vk15",
+          "text": "Marrak pays me in water. I pay Noor in water. Noor pays Marrak in water. We are a closed economy, and it is rather pleasant."
+        },
+        {
+          "id": "vk16",
+          "text": "A rare trader's cart rolled past on the last market day. He did not stop. I do not blame him. My prices are not that bad."
+        },
+        {
+          "id": "vk17",
+          "text": "Ellis once offered a map in place of coin. I said I sold gear, not cartography. He sold me the map for a sword. I came out ahead."
+        },
+        {
+          "id": "vk18",
+          "text": "I keep a single golden coin in the till. It has never been spent. It is my luck, and my last argument."
+        },
+        {
+          "id": "vk19",
+          "text": "Heading for the fort? Buy the antidotes. The scorpions do not play fair, and neither do I, but I charge less.",
+          "when": {
+            "flag": "talkedMarrak",
+            "notFlag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "vk20",
+          "text": "The fort is down? Then my silver will flow again. I may even lower a price. Do not tell anyone.",
+          "when": {
+            "flag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "vk21",
+          "text": "A sealed writ in glass? Hold it up to the light. There is writing inside the seal. It is not the Queen's. It is older.",
+          "when": {
+            "hasItem": "ismerel_writ"
+          }
+        },
+        {
+          "id": "vk22",
+          "text": "Orc steel on the market this month, with a ridge stamp. I wonder where it came from. I wonder who is asking.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        },
+        {
+          "id": "vk23",
+          "text": "Sandtusk's tusk would make a glorious hilt. Do not tell Kiss'a I said that. She would use it on me.",
+          "when": {
+            "flag": "tuskReturned"
+          }
+        },
+        {
+          "id": "vk24",
+          "text": "The road is open and the silver is flowing. You are welcome here any time, provided you pay.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        }
+      ]
+    },
+    "noor_amad": {
+      "name": "Noor Amad",
+      "role": "keeper of the Dry Well Inn",
+      "personality": "quiet, shrewd, kind in small deliberate acts",
+      "voice": "soft-spoken hospitality; compares everything to tea",
+      "events": [
+        {
+          "id": "noor_intro",
+          "when": {
+            "notFlag": "metNoor"
+          },
+          "set": [
+            "metNoor"
+          ],
+          "say": [
+            "Noor Amad. Welcome to the Dry Well. The well is dry, the beds are not.",
+            "Forty coins a night, and mint tea at no charge if you promise to drink it slowly."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "na01",
+          "text": "The first rule of tea: never rush the pour. The second: never rush the guest. The third: never rush the bill."
+        },
+        {
+          "id": "na02",
+          "text": "I serve mint and sage, cardamom and honey. Nobody asks for coffee. Coffee is a rumour out here."
+        },
+        {
+          "id": "na03",
+          "text": "My mother ran the inn before me. She kept a drawer of stranger's letters that never got posted. I kept them. I am still waiting."
+        },
+        {
+          "id": "na04",
+          "text": "The beds are stuffed with desert sage. It keeps the scorpions out and brings strange dreams in."
+        },
+        {
+          "id": "na05",
+          "text": "Guests who snore sleep in the east room. Guests who talk in their sleep sleep in the west. Guests who do both sleep outside."
+        },
+        {
+          "id": "na06",
+          "text": "The Dry Well is named for a joke, a well that holds nothing. Over the years it has held an astonishing number of secrets."
+        },
+        {
+          "id": "na07",
+          "text": "A fighter. I put an extra blanket on your bed. Armour is cold work.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "na08",
+          "text": "A spell-caster. Do not light the candles with a fingertip. The curtains predate the Queen herself.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "na09",
+          "text": "A scout, then. Your window faces the road. Your door faces the back. Those are not accidents.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "na10",
+          "text": "A healer. Please keep a spare vial of antidote under the pillow. Scorpions do not respect locks.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "na11",
+          "text": "Dilly sleeps in the stable and eats in my kitchen. I have not decided whether to send her a bill or a birthday card."
+        },
+        {
+          "id": "na12",
+          "text": "Old Haggar tells the same eleven stories every night. I know every ending. I still laugh in the right places."
+        },
+        {
+          "id": "na13",
+          "text": "Tessk brews a tea out of scorpion venom and honey. He swears it cures anything. It cures hunger, certainly. Usually permanently."
+        },
+        {
+          "id": "na14",
+          "text": "The rare trader likes my cardamom tea. He pays in coin, and he pays in odd little favours. I keep the favours in a jar."
+        },
+        {
+          "id": "na15",
+          "text": "A traveller left a book of poems under his pillow. I read it every winter. I do not know the author. I know his heart."
+        },
+        {
+          "id": "na16",
+          "text": "After the dimming, nights in the dunes turned colder and days turned hotter. It confused the lizardfolk and delighted the scorpions."
+        },
+        {
+          "id": "na17",
+          "text": "Ellis maps the glass dunes by night. He comes back with sand in every pocket and a smile in every mood."
+        },
+        {
+          "id": "na18",
+          "text": "Sorrel Quist drinks his tea cold and complains it is warm. I have stopped arguing. I serve it cold."
+        },
+        {
+          "id": "na19",
+          "text": "Marrak has not smiled in nineteen days. I put an extra spoon of honey in his cup. It made no difference. I do it anyway.",
+          "when": {
+            "flag": "talkedMarrak",
+            "notFlag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "na20",
+          "text": "They say the fort is quiet. The first tea I made after the news tasted different. Better, somehow.",
+          "when": {
+            "flag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "na21",
+          "text": "Marrak actually smiled at breakfast. He tried to hide it behind the teacup. He was not successful.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        },
+        {
+          "id": "na22",
+          "text": "A Khesh-Ura water-writ in your pack? I knew a woman who carried one. She said it opened every door on the road. It did.",
+          "when": {
+            "hasItem": "khesh_writ"
+          }
+        },
+        {
+          "id": "na23",
+          "text": "I hear the scorpions in the south burrow have gone quiet. A good sign. Or a very bad one, depending on who is listening.",
+          "when": {
+            "flag": "spidertailDefeated"
+          }
+        },
+        {
+          "id": "na24",
+          "text": "Whatever waits to the east, a bed will be kept for you here. That is not a promise. It is a habit.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        }
+      ]
+    },
+    "tessk_ray": {
+      "name": "Tessk Ray",
+      "role": "herbalist and scorpion-hunter",
+      "personality": "enthusiastic, absent-minded, endearingly morbid",
+      "voice": "field-guide shorthand; classifies everything he sees",
+      "events": [],
+      "lines": [
+        {
+          "id": "tr01",
+          "text": "Dune scorpion: venom, moderate; temper, poor; resistance to frost, none. Observe, then retreat. That is the entire art."
+        },
+        {
+          "id": "tr02",
+          "text": "Stonetail scorpions shrug off blades. They hate cold, and they hate lightning. Bring a mage or a long lightning rod."
+        },
+        {
+          "id": "tr03",
+          "text": "Lizardfolk are cold-blooded and hate frost more than anything. Fire barely warms them. Ice drops them like stones."
+        },
+        {
+          "id": "tr04",
+          "text": "Sand stingers are fast and fragile. A good strike kills one. A poor strike kills the striker's dignity."
+        },
+        {
+          "id": "tr05",
+          "text": "Rule one of field work: always read the creature before you strike it. The bestiary in your pack tells you what it weakens to."
+        },
+        {
+          "id": "tr06",
+          "text": "I keep forty-one jars of scorpion venom in my tent. Each one is labelled. Eleven of the labels are wrong, and I am too scared to check."
+        },
+        {
+          "id": "tr07",
+          "text": "A fighter. Stonetails will blunt your blade, so favour a weapon with an elemental edge, or switch to your skills.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "tr08",
+          "text": "A mage! Bring frost. Bring lightning. Do not bring fire, unless you enjoy being politely ignored.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "tr09",
+          "text": "A scout. Poison tip is wasted on a scorpion, who is rather proud of its own. Switch to a physical shot, or pin and flee.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "tr10",
+          "text": "A healer! May I observe? I have long hoped to watch an antidote work on a living specimen.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "tr11",
+          "text": "Stinger venom, boiled with desert sage, cures a fever. Stinger venom, boiled without sage, causes a slightly different fever."
+        },
+        {
+          "id": "tr12",
+          "text": "The Spidertail is a rumour, and a very specific one. Scorpion body, spider spinnerets, and a tail that drips both venoms. I have a drawing. It is mostly guesswork."
+        },
+        {
+          "id": "tr13",
+          "text": "I once caught a scorpion with my bare hands. It was the proudest day of my life and the longest week of my recovery."
+        },
+        {
+          "id": "tr14",
+          "text": "Vessa buys my stingers by the dozen and sells them as charms. I do not mind. I only mind that she sells them for more."
+        },
+        {
+          "id": "tr15",
+          "text": "Dilly asked if she could learn herb lore. I told her to start by learning which herbs bite. She nodded and wrote it down."
+        },
+        {
+          "id": "tr16",
+          "text": "In the glass dunes, the scorpions are clear. Beautiful, and vicious. You can see their hearts. Please do not tell Marrak I went there."
+        },
+        {
+          "id": "tr17",
+          "text": "The lizardfolk shamans heal their friends, and that is the reason to fell the shamans first. A healer left standing can undo a good ten minutes."
+        },
+        {
+          "id": "tr18",
+          "text": "Ellis maps, I classify. We have a very civilized argument about whether the dunes are alive. I say yes. He says only on weekends."
+        },
+        {
+          "id": "tr19",
+          "text": "Vesh-Kar is a lizardfolk, and a large one. Ice will bite him, fire will not. And do not fight him in the open: his warband will crowd you.",
+          "when": {
+            "flag": "talkedMarrak",
+            "notFlag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "tr20",
+          "text": "The warlord is down! I would love a sample of his scales. Preferably intact. Preferably while he is not looking.",
+          "when": {
+            "flag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "tr21",
+          "text": "The hybrid is real? I will need to redraw three diagrams and apologize to my wife. Both in the same afternoon.",
+          "when": {
+            "flag": "spidertailDefeated"
+          }
+        },
+        {
+          "id": "tr22",
+          "text": "You felled a boar as big as a wagon? A boar! No venom, no sting, nothing to study. What a waste of a good hunt.",
+          "when": {
+            "flag": "tuskReturned"
+          }
+        },
+        {
+          "id": "tr23",
+          "text": "A creature that exploits your weak points is a danger. A creature that exploits your assumptions is a teacher.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        },
+        {
+          "id": "tr24",
+          "text": "Watch what a creature resists, and you will learn what it fears. That is the first and last lesson of every field guide.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        }
+      ]
+    },
+    "dilly_prout": {
+      "name": "Dilly Prout",
+      "role": "messenger and stable-hand",
+      "personality": "breathless, brave, relentlessly optimistic",
+      "voice": "run-on excitement, running metaphors, and names for every camel",
+      "events": [],
+      "lines": [
+        {
+          "id": "dp01",
+          "text": "I run letters to Khesh-Ura and back, three days each way! I have run the road eighty-four times and only been chased by scorpions twice."
+        },
+        {
+          "id": "dp02",
+          "text": "The trick to running in the dunes is to run on the ridges, not the troughs. The ridges are firm and the troughs are sand soup."
+        },
+        {
+          "id": "dp03",
+          "text": "I name all the camels. Biscuit, Duchess, Sir Reginald, and one who is just called No. He knows why."
+        },
+        {
+          "id": "dp04",
+          "text": "Marrak says I will wear out my boots before I wear out my legs. I say good. I have three more pairs."
+        },
+        {
+          "id": "dp05",
+          "text": "I saw a warband march along the ridge last week. They looked like green beads on a string. Very pretty. Very scary."
+        },
+        {
+          "id": "dp06",
+          "text": "My plan for later: caravan guard, or mapmaker, or both. I am flexible."
+        },
+        {
+          "id": "dp07",
+          "text": "Is that sword genuine? May I hold it a bit? I will only drop it in sand.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "dp08",
+          "text": "Do you do real magic? Can you make a little flame in my hand? Not hot! Just a little! I want to feel it!",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "dp09",
+          "text": "You look like a runner! Do you run in the dunes? Do you run on the ridges? I have so many questions!",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "dp10",
+          "text": "A priest! Can you bless my boots? They are very important boots.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "dp11",
+          "text": "Tessk says every scorpion has a weakness. I asked if I had one. He said, 'Yes, you ask too many questions.'"
+        },
+        {
+          "id": "dp12",
+          "text": "Noor gives me tea with honey when I come back from a long run. It is the best moment of any week."
+        },
+        {
+          "id": "dp13",
+          "text": "Old Haggar spins tales of the Queen in her youth. He says she used to be nice. I do not believe him. Nobody is nice with a sword."
+        },
+        {
+          "id": "dp14",
+          "text": "A coin turned up on the road, stamped with a sun and a crown. I suspect it is haunted, so it lives in my sock."
+        },
+        {
+          "id": "dp15",
+          "text": "Ellis let me draw one line on his map. It is the coast. Well, it is a wiggly line, but it is MY wiggly line."
+        },
+        {
+          "id": "dp16",
+          "text": "The dunes sing sometimes. Low and sad, like a camel humming. Tessk says it is wind. I say it is the dunes being lonely."
+        },
+        {
+          "id": "dp17",
+          "text": "Once a peddler with a canary-coloured wagon gave me a sweet whose flavour belonged to somewhere I have never visited. I miss it anyway."
+        },
+        {
+          "id": "dp18",
+          "text": "Vessa let me polish a silvered dagger. I saw my face in it. I look very brave. I looked more brave than the dagger."
+        },
+        {
+          "id": "dp19",
+          "text": "The fort north of here flies a green banner. When the wind drops, you can hear drums from three miles away. I run faster then.",
+          "when": {
+            "flag": "talkedMarrak",
+            "notFlag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "dp20",
+          "text": "The banner is DOWN! I saw it from the ridge! I ran the whole way back! My legs have forgotten how to stop!",
+          "when": {
+            "flag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "dp21",
+          "text": "Marrak gave me a medal! It is a bottle cap on a string, but it is a MEDAL! I am never taking it off!",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        },
+        {
+          "id": "dp22",
+          "text": "Do you really have a glowing hand? Can I see? Does it hurt? Does it itch? Does it glow when you sneeze?",
+          "when": {
+            "flag": "reachedWaystation"
+          }
+        },
+        {
+          "id": "dp23",
+          "text": "Tessk told me about the Spidertail. A scorpion with spider legs. I stopped sleeping for two nights. Tessk says that is a good sign.",
+          "when": {
+            "notFlag": "spidertailDefeated"
+          }
+        },
+        {
+          "id": "dp24",
+          "text": "I am going to run all the way to the sea one day. Will you tell me about it when you get there? Please?",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        }
+      ]
+    },
+    "old_haggar": {
+      "name": "Old Haggar",
+      "role": "retired caravan guard",
+      "personality": "gruff, nostalgic, a born exaggerator with a soft heart",
+      "voice": "war-story rhythms, 'back in my day', and an unreliable body count",
+      "events": [],
+      "lines": [
+        {
+          "id": "oh01",
+          "text": "I guarded caravans for forty years and lost eleven fingers. I count them in my sleep, and they never add up."
+        },
+        {
+          "id": "oh02",
+          "text": "Back in my day the road was safe, and the Queen was a girl with a quick smile and a very bad sword."
+        },
+        {
+          "id": "oh03",
+          "text": "I once fought nine scorpions with a bent spoon. I was younger. They were smaller. The spoon was sturdier."
+        },
+        {
+          "id": "oh04",
+          "text": "Marrak thinks I tell too many stories. I think Marrak tells too few. Between us we are an average of boredom."
+        },
+        {
+          "id": "oh05",
+          "text": "The first rule of caravan guarding: never be the first, never be the last. Be the one in the middle, slightly ahead."
+        },
+        {
+          "id": "oh06",
+          "text": "I fought beside a wizard once. He turned a scorpion into a teapot. We drank from it for a week. Best tea I ever had."
+        },
+        {
+          "id": "oh07",
+          "text": "A fighter. You hold your blade like a man who has been taught well and corrected rarely. Good. Stay that way.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "oh08",
+          "text": "A mage. In my day, mages wore pointed hats and apologised for them. You have the right posture.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "oh09",
+          "text": "A scout. You walk like my first partner. He died laughing, which is the way he would have wanted it.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "oh10",
+          "text": "A healer. Good. My knees have an opinion about the stairs, and I would like a second opinion.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "oh11",
+          "text": "I remember when Ismerel was only a magistrate. She used to ask for water and say thank you. Now she asks for the sun and does not."
+        },
+        {
+          "id": "oh12",
+          "text": "The glass dunes were sand once. Then one night they were not. I saw it happen from the ridge. A light, a hum, and silence."
+        },
+        {
+          "id": "oh13",
+          "text": "I carried a tax-collector's sack once across the Scorch Road. It weighed more coming back. I did not ask why."
+        },
+        {
+          "id": "oh14",
+          "text": "Dilly reminds me of my youngest. Fast, loud and fond of danger. I give her my best advice. She ignores every word."
+        },
+        {
+          "id": "oh15",
+          "text": "A rare trader gave me a little charm once. It stopped one bad day from happening. I never found out which."
+        },
+        {
+          "id": "oh16",
+          "text": "Noor keeps a bottle of old brandy behind the kettle. She thinks I do not know. I have known for nine years."
+        },
+        {
+          "id": "oh17",
+          "text": "I counted forty-one Queen's soldiers in the last month. Forty-one. In my day a Queen needed four, and a bad temper."
+        },
+        {
+          "id": "oh18",
+          "text": "Tessk says every creature has a weak spot. I say so does every man. Mine is soup."
+        },
+        {
+          "id": "oh19",
+          "text": "Vesh-Kar was a decent soldier once. He served my old captain. Then the Queen found him and gave him a banner. Banners ruin good soldiers.",
+          "when": {
+            "flag": "talkedMarrak",
+            "notFlag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "oh20",
+          "text": "The warlord is down? Good. Though I will say, I pity the man a little. He only did what he was told. That is the oldest sin there is.",
+          "when": {
+            "flag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "oh21",
+          "text": "They put up a lantern on the ridge tonight. First in nineteen days. I wept. Do not repeat that to Marrak.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        },
+        {
+          "id": "oh22",
+          "text": "I heard you killed a troll at Khesh-Ura's water gate. At your age I fought a troll with a ladle. It won.",
+          "when": {
+            "flag": "trollDefeated"
+          }
+        },
+        {
+          "id": "oh23",
+          "text": "The Scorch Road is a long road, and the Queen made it longer. But a road ends where a traveller stops. Do not stop.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        },
+        {
+          "id": "oh24",
+          "text": "Hask, was it? I remember a Hask. He sold me a rope once. It broke. I broke his nose. We were both satisfied.",
+          "when": {
+            "flag": "haskDefeated"
+          }
+        }
+      ]
+    },
+    "ellis_vane": {
+      "name": "Ellis Vane",
+      "role": "cartographer of the glass dunes",
+      "personality": "dreamy, meticulous, obsessive about the colour of sand",
+      "voice": "map legends, compass bearings, and wistful asides about places he has not seen",
+      "events": [],
+      "lines": [
+        {
+          "id": "ev01",
+          "text": "A good map lies about distances but never about direction. A bad map lies about both. A great map lies about what it is for."
+        },
+        {
+          "id": "ev02",
+          "text": "The glass dunes shift every night. I redraw them every morning. I have a shoebox full of drawings that were right for one day only."
+        },
+        {
+          "id": "ev03",
+          "text": "The Scorch Road runs east for forty miles, then bends toward the Queen's labyrinth. Nobody has drawn the last ten miles and returned."
+        },
+        {
+          "id": "ev04",
+          "text": "Sand is not one colour. It is red at dawn, gold at noon, violet at dusk, and the exact shade of regret at night."
+        },
+        {
+          "id": "ev05",
+          "text": "I sketch with charcoal because ink bleeds in the heat. Charcoal forgets nothing and forgives everything."
+        },
+        {
+          "id": "ev06",
+          "text": "I have mapped nine towns, seven roads, forty wells and one lie. The lie is the most popular."
+        },
+        {
+          "id": "ev07",
+          "text": "A fighter. I always draw fighters in the margin, with a little sword. It reassures the reader.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ev08",
+          "text": "A mage. The old star-charts show every bright point as a doorway. I have often hoped to step through one.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ev09",
+          "text": "A scout. Show me your sketch of the road, and I will point out which parts you invented. Everyone invents the middle.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ev10",
+          "text": "A healer. I have a blister the shape of the Hollow Sea. It is a very good map. It is also very sore.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ev11",
+          "text": "The old priests placed their wells along a straight line. Every priest's well lines up with the sunset on a certain day. I have not worked out which."
+        },
+        {
+          "id": "ev12",
+          "text": "Where the glass dunes begin, the compass needle spins. Not wildly. Slowly, patiently, like a dancer waiting for music."
+        },
+        {
+          "id": "ev13",
+          "text": "I have a map of the Queen's labyrinth, drawn from rumour. It has seven walls, a thousand turns, and one very large X. I am told the X is a minotaur."
+        },
+        {
+          "id": "ev14",
+          "text": "Dilly helped me measure the ridges once. She ran them barefoot and shouted the distances back. It was remarkably accurate."
+        },
+        {
+          "id": "ev15",
+          "text": "Noor's inn is on every road map I own. It is the only place a traveller can be sure of finding on a bad day."
+        },
+        {
+          "id": "ev16",
+          "text": "The stars here move faster than anywhere else. I am convinced of it. My assistant says it is the wine."
+        },
+        {
+          "id": "ev17",
+          "text": "Haggar claims he walked to the sea once. There is no sea within five hundred miles. I drew it in anyway. For his sake."
+        },
+        {
+          "id": "ev18",
+          "text": "A rare trader once bought a map of my footprints. He said they were more honest than the roads. I thought that was lovely."
+        },
+        {
+          "id": "ev19",
+          "text": "The Toll Fort stands on a ridge with a sheer drop on three sides. It has one road in and one road out. Choose your moment well.",
+          "when": {
+            "flag": "talkedMarrak",
+            "notFlag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "ev20",
+          "text": "I saw the banner fall through my glass. It looked like a green leaf in autumn. I drew it, in green.",
+          "when": {
+            "flag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "ev21",
+          "text": "The road east is open. I will sketch it as far as the bend, and then I will wait for someone brave to describe the rest.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        },
+        {
+          "id": "ev22",
+          "text": "I have redrawn the Boar Hollow from your description. Did it truly have a ring of wallows? I hope so. It is a lovely detail.",
+          "when": {
+            "flag": "tuskerDefeated"
+          }
+        },
+        {
+          "id": "ev23",
+          "text": "The Sand Warren is on my map, in pencil. I can erase it now, or leave it as a ghost. I prefer ghosts.",
+          "when": {
+            "flag": "grumblehideDefeated"
+          }
+        },
+        {
+          "id": "ev24",
+          "text": "If you reach the labyrinth, send word. I will leave a blank page in my atlas. Fill it in, when you are able.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        }
+      ]
+    },
+    "sorrel_quist": {
+      "name": "Lieutenant Sorrel Quist",
+      "role": "Khesh-Ura patrol officer on observation duty",
+      "personality": "stiff, dutiful, secretly anxious about every decision",
+      "voice": "report-style sentences; ends statements with 'for the record'",
+      "events": [],
+      "lines": [
+        {
+          "id": "sq01",
+          "text": "Lieutenant Sorrel Quist, Khesh-Ura patrol, here to observe and report. I observe a great deal and report very little. For the record."
+        },
+        {
+          "id": "sq02",
+          "text": "I have counted forty-one of the Queen's soldiers on this road in the past month. That is nine more than the last count and thirty-six more than I would like."
+        },
+        {
+          "id": "sq03",
+          "text": "Orders: do not engage, do not be seen, do not be late. I am batting a hundred percent on the second. For the record."
+        },
+        {
+          "id": "sq04",
+          "text": "The Toll Fort has a garrison of sixty lizardfolk and fourteen scorpion handlers. The handlers terrify me more than the garrison."
+        },
+        {
+          "id": "sq05",
+          "text": "I have written four reports this week. The first three were returned for being too cheerful. For the record, I am not cheerful."
+        },
+        {
+          "id": "sq06",
+          "text": "Marrak offers me tea. I decline. Noor offers me tea. I decline. Dilly offers me tea. I accept. She is the only one who pours it hot."
+        },
+        {
+          "id": "sq07",
+          "text": "A fighter. The Khesh-Ura guard would take you. The pay is poor, the hours are worse, and the uniform itches. For the record.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "sq08",
+          "text": "A mage. Please keep your spells outside the camp. The last wizard in the patrol turned my report into a flock of birds. For the record.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "sq09",
+          "text": "A scout. You are a splendid observer, I assume. Please observe quietly. Please observe somewhere else. For the record.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "sq10",
+          "text": "A healer. My sergeant has a cough. He claims it is nothing. He also claims the sky is not blue. For the record.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "sq11",
+          "text": "The Queen's soldiers wear glass pins on their collars. Each pin is a splinter of the Zenith. I would like to know how she gets so many."
+        },
+        {
+          "id": "sq12",
+          "text": "Old Haggar tells me the Queen used to be a magistrate. I have checked. She was a magistrate. Then a treasurer. Then a Queen. The paperwork is suspiciously smooth."
+        },
+        {
+          "id": "sq13",
+          "text": "Ellis maps the dunes. I verify the maps. We disagree on the position of every landmark. It is a cordial relationship."
+        },
+        {
+          "id": "sq14",
+          "text": "A rare trader passes through at intervals. I have noted it. I have no jurisdiction to question him. For the record."
+        },
+        {
+          "id": "sq15",
+          "text": "Szazz writes to me weekly asking for news of the water. My reply is the same each week: wait. I would like to reply with something new."
+        },
+        {
+          "id": "sq16",
+          "text": "I have been in the dunes for fifty-one days and counted every tent in this camp. There are eleven. There were ten yesterday. I have not found the eleventh owner."
+        },
+        {
+          "id": "sq17",
+          "text": "Tessk showed me a drawing of a scorpion with a spider's tail. I filed it under 'hysteria'. For the record."
+        },
+        {
+          "id": "sq18",
+          "text": "The camels in this camp are better-behaved than my recruits. I would swap, if the Guard allowed it. It does not. For the record."
+        },
+        {
+          "id": "sq19",
+          "text": "The Toll Fort is held by Vesh-Kar. I have submitted a request for reinforcements. The reply is expected in the next season. For the record.",
+          "when": {
+            "flag": "talkedMarrak",
+            "notFlag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "sq20",
+          "text": "The fort has fallen. I would like to say I predicted it. For the record, I predicted a different outcome entirely.",
+          "when": {
+            "flag": "warlordDefeated"
+          }
+        },
+        {
+          "id": "sq21",
+          "text": "My report on the Toll Fort has been accepted. It was my first without a correction. I am telling everyone. For the record.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        },
+        {
+          "id": "sq22",
+          "text": "The water gate at Khesh-Ura is open again, I hear. Szazz wrote to me in a handwriting I have never seen. Joyful. For the record.",
+          "when": {
+            "flag": "reportedSzazz"
+          }
+        },
+        {
+          "id": "sq23",
+          "text": "A rare trader's cart was in camp this morning. I did not buy anything. I did, however, write a very detailed report about the cart.",
+          "when": {
+            "merchantToday": true
+          }
+        },
+        {
+          "id": "sq24",
+          "text": "Whatever you do next, I will record it, and I will record it kindly. That is the one thing a report can do. For the record.",
+          "when": {
+            "flag": "reportedMarrak"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2460 @@
+{
+  "potion": {
+    "name": "Potion",
+    "type": "consumable",
+    "hp": 30,
+    "price": 20,
+    "desc": "Restores 30 HP."
+  },
+  "ether": {
+    "name": "Ether",
+    "type": "consumable",
+    "mp": 15,
+    "price": 40,
+    "desc": "Restores 15 MP."
+  },
+  "antidote": {
+    "name": "Antidote",
+    "type": "consumable",
+    "cure": [
+      "poison"
+    ],
+    "price": 15,
+    "desc": "Cures poison."
+  },
+  "slime_gel": {
+    "name": "Slime Gel",
+    "type": "material",
+    "sell": 4,
+    "desc": "Cool, wobbly goo. Smiths and alchemists will want it."
+  },
+  "boar_tusk": {
+    "name": "Boar Tusk",
+    "type": "material",
+    "sell": 14,
+    "desc": "Yellowed and heavy. A smith could do something with it."
+  },
+  "brine_key": {
+    "name": "Brine Key",
+    "type": "key",
+    "desc": "A salt-crusted key. Opens the boathouse door."
+  },
+  "lucky_rake": {
+    "name": "Osk's Lucky Rake",
+    "type": "key",
+    "desc": "A worn salt rake with a ribbon tied to the handle."
+  },
+  "salt_locket": {
+    "name": "Salt Locket",
+    "type": "key",
+    "desc": "Maren's mother's locket. A sun is etched on the lid."
+  },
+  "rusty_sword": {
+    "name": "Rusty Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 2,
+    "price": 10,
+    "desc": "Still has an edge, mostly."
+  },
+  "gnarled_staff": {
+    "name": "Gnarled Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 1,
+    "mag": 2,
+    "price": 10,
+    "desc": "A bent branch that hums when held."
+  },
+  "chipped_dagger": {
+    "name": "Chipped Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 2,
+    "spd": 1,
+    "price": 10,
+    "desc": "Light, quick and slightly embarrassed."
+  },
+  "dented_mace": {
+    "name": "Dented Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 2,
+    "price": 10,
+    "desc": "Has seen better days and worse skulls."
+  },
+  "bronze_sword": {
+    "name": "Bronze Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 5,
+    "price": 90,
+    "desc": "A clean, honest blade."
+  },
+  "bronze_axe": {
+    "name": "Bronze Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 6,
+    "price": 100,
+    "desc": "Heavy, simple, and loud."
+  },
+  "oak_staff": {
+    "name": "Oak Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 1,
+    "mag": 4,
+    "price": 85,
+    "desc": "Salt-hardened oak."
+  },
+  "hunting_bow": {
+    "name": "Hunting Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 5,
+    "price": 90,
+    "desc": "Strung with gut and patience."
+  },
+  "bronze_dagger": {
+    "name": "Bronze Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 4,
+    "spd": 2,
+    "price": 80,
+    "desc": "Quick and wicked."
+  },
+  "flanged_mace": {
+    "name": "Flanged Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 5,
+    "mag": 1,
+    "price": 90,
+    "desc": "Good for persuading stubborn skulls."
+  },
+  "gel_tusk_axe": {
+    "name": "Gelboar Tusk Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 9,
+    "price": 220,
+    "unique": true,
+    "desc": "A tusk grown through with glassy slime."
+  },
+  "slimecord_bow": {
+    "name": "Slimecord Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 8,
+    "spd": 1,
+    "price": 220,
+    "unique": true,
+    "desc": "Strung with stretched, tireless gel."
+  },
+  "gelatin_mace": {
+    "name": "Gelatin Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 7,
+    "mag": 2,
+    "price": 220,
+    "unique": true,
+    "desc": "Wobbles on the swing and hits like a wall."
+  },
+  "slimeglass_robe": {
+    "name": "Slimeglass Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 4,
+    "mag": 5,
+    "price": 240,
+    "unique": true,
+    "desc": "Woven from hardened slime. Sings faintly."
+  },
+  "worn_mail": {
+    "name": "Worn Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 2,
+    "price": 10,
+    "desc": "A few rings short of a shirt."
+  },
+  "frayed_robe": {
+    "name": "Frayed Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 1,
+    "mag": 1,
+    "price": 10,
+    "desc": "Held together by habit."
+  },
+  "rag_vest": {
+    "name": "Rag Vest",
+    "type": "armor",
+    "atype": "light",
+    "def": 1,
+    "spd": 1,
+    "price": 10,
+    "desc": "Quiet, if not warm."
+  },
+  "patched_tunic": {
+    "name": "Patched Tunic",
+    "type": "armor",
+    "atype": "medium",
+    "def": 2,
+    "price": 10,
+    "desc": "More patch than tunic."
+  },
+  "bronze_mail": {
+    "name": "Bronze Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 5,
+    "price": 120,
+    "desc": "Sturdy scale mail."
+  },
+  "leather_jerkin": {
+    "name": "Leather Jerkin",
+    "type": "armor",
+    "atype": "medium",
+    "def": 4,
+    "price": 90,
+    "desc": "Boiled leather, well oiled."
+  },
+  "padded_vest": {
+    "name": "Padded Vest",
+    "type": "armor",
+    "atype": "light",
+    "def": 3,
+    "spd": 1,
+    "price": 80,
+    "desc": "Light and quiet."
+  },
+  "wool_robe": {
+    "name": "Wool Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 2,
+    "mag": 3,
+    "price": 85,
+    "desc": "Warm, and a little charmed."
+  },
+  "hi_potion": {
+    "name": "High Potion",
+    "type": "consumable",
+    "hp": 80,
+    "price": 70,
+    "desc": "Restores 80 HP."
+  },
+  "goblin_ear": {
+    "name": "Goblin Ear",
+    "type": "material",
+    "sell": 6,
+    "desc": "Notched and grubby. A bounty clerk might want it."
+  },
+  "goblin_crown": {
+    "name": "Goblin Crown",
+    "type": "material",
+    "sell": 80,
+    "desc": "A circlet of bent spoons and bone. Dreadful taste, decent silver."
+  },
+  "smith_hammer": {
+    "name": "Arlo's Hammer",
+    "type": "key",
+    "desc": "A well-worn smith's hammer, the handle black with years of grip."
+  },
+  "tide_chart": {
+    "name": "Tide-Chart",
+    "type": "key",
+    "desc": "A waxed chart marked with dig sites. One is circled in red: Reedhollow."
+  },
+  "iron_sword": {
+    "name": "Iron Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 9,
+    "price": 220,
+    "desc": "Heavier, straighter and a good deal meaner."
+  },
+  "iron_axe": {
+    "name": "Iron Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 10,
+    "price": 240,
+    "desc": "Splits wood, shields, and arguments."
+  },
+  "ash_staff": {
+    "name": "Ash Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 2,
+    "mag": 7,
+    "price": 200,
+    "desc": "Pale wood, tight grain, faint hum."
+  },
+  "longbow": {
+    "name": "Longbow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 9,
+    "spd": 1,
+    "price": 220,
+    "desc": "Taller than you, and it shows."
+  },
+  "iron_dagger": {
+    "name": "Iron Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 7,
+    "spd": 3,
+    "price": 190,
+    "desc": "Narrow, quick, and unfussy about where it goes."
+  },
+  "spiked_mace": {
+    "name": "Spiked Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 8,
+    "mag": 2,
+    "price": 220,
+    "desc": "Politely worded persuasion."
+  },
+  "fangblade": {
+    "name": "Fangblade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 12,
+    "price": 330,
+    "desc": "A curved blade grown from a hybrid's fang.",
+    "unique": true
+  },
+  "silkweave_staff": {
+    "name": "Silkweave Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 2,
+    "mag": 9,
+    "price": 330,
+    "desc": "Wrapped in spider silk that hums with static.",
+    "unique": true
+  },
+  "viper_bow": {
+    "name": "Viper Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 11,
+    "spd": 2,
+    "price": 330,
+    "desc": "Strung with silk. Never goes slack.",
+    "unique": true
+  },
+  "cobweb_mace": {
+    "name": "Cobweb Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 10,
+    "mag": 3,
+    "price": 330,
+    "desc": "Strands of silk bind the head tight. Surprisingly heavy.",
+    "unique": true
+  },
+  "chain_mail": {
+    "name": "Chain Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 8,
+    "price": 300,
+    "desc": "Riveted rings. Loud and reliable."
+  },
+  "studded_leather": {
+    "name": "Studded Leather",
+    "type": "armor",
+    "atype": "medium",
+    "def": 7,
+    "price": 240,
+    "desc": "Leather with iron studs set by hand."
+  },
+  "ranger_vest": {
+    "name": "Ranger Vest",
+    "type": "armor",
+    "atype": "light",
+    "def": 6,
+    "spd": 2,
+    "price": 220,
+    "desc": "Dyed green, cut quiet."
+  },
+  "silk_robe": {
+    "name": "Silk Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 4,
+    "mag": 6,
+    "price": 230,
+    "desc": "Surprisingly warm and surprisingly dear."
+  },
+  "spidersilk_vest": {
+    "name": "Spidersilk Vest",
+    "type": "armor",
+    "atype": "light",
+    "def": 7,
+    "spd": 3,
+    "price": 320,
+    "desc": "Woven by something that never stopped weaving.",
+    "unique": true
+  },
+  "glowreed": {
+    "name": "Glowreed",
+    "type": "material",
+    "sell": 10,
+    "desc": "A reed that gives off a faint, steady light. Lamp-keepers prize it."
+  },
+  "wolf_pelt": {
+    "name": "Wolf Pelt",
+    "type": "material",
+    "sell": 14,
+    "desc": "Thick grey fur. A tanner would pay for this."
+  },
+  "greyfang_tooth": {
+    "name": "Greyfang's Tooth",
+    "type": "material",
+    "sell": 90,
+    "desc": "A yellowed fang as long as your hand."
+  },
+  "toll_ledger": {
+    "name": "Toll Ledger",
+    "type": "key",
+    "desc": "A bandit's account book. Every toll collected here is shipped north to Gallowkeep."
+  },
+  "temple_lamp": {
+    "name": "Temple Lamp",
+    "type": "key",
+    "desc": "A small oil lamp, older than anything in Reedhollow. Its flame leans toward your palm."
+  },
+  "gaff_sword": {
+    "name": "Gaff Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 10,
+    "spd": 1,
+    "price": 250,
+    "desc": "A boat-hook blade with a marsh-man's curve."
+  },
+  "river_mace": {
+    "name": "River Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 9,
+    "mag": 2,
+    "price": 240,
+    "desc": "Weighted with river stone."
+  },
+  "marshwood_staff": {
+    "name": "Marshwood Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 2,
+    "mag": 8,
+    "price": 240,
+    "desc": "Black with damp, humming faintly."
+  },
+  "eel_dagger": {
+    "name": "Eelskin Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 8,
+    "spd": 3,
+    "price": 230,
+    "desc": "Grip wrapped in eelskin. Never slips."
+  },
+  "moonfang_sabre": {
+    "name": "Moonfang Sabre",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 15,
+    "spd": 1,
+    "price": 420,
+    "desc": "Curved like a howling mouth.",
+    "unique": true
+  },
+  "shriekwood_staff": {
+    "name": "Shriekwood Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 3,
+    "mag": 12,
+    "price": 420,
+    "desc": "It whistles when you swing it.",
+    "unique": true
+  },
+  "nightwing_bow": {
+    "name": "Nightwing Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 14,
+    "spd": 2,
+    "price": 420,
+    "desc": "Strung with bat-sinew. Eerily quiet.",
+    "unique": true
+  },
+  "howling_mace": {
+    "name": "Howling Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 13,
+    "mag": 4,
+    "price": 420,
+    "desc": "The head howls on the downswing.",
+    "unique": true
+  },
+  "reedweave_vest": {
+    "name": "Reedweave Vest",
+    "type": "armor",
+    "atype": "light",
+    "def": 7,
+    "spd": 2,
+    "price": 260,
+    "desc": "Tight-woven reed over leather. Light and waterproof."
+  },
+  "tarred_coat": {
+    "name": "Tarred Coat",
+    "type": "armor",
+    "atype": "medium",
+    "def": 9,
+    "price": 270,
+    "desc": "Stiff, black, and gloriously rain-proof."
+  },
+  "batleather_vest": {
+    "name": "Batleather Vest",
+    "type": "armor",
+    "atype": "light",
+    "def": 9,
+    "spd": 3,
+    "price": 400,
+    "desc": "Stitched from wing-leather. Pleasantly creepy.",
+    "unique": true
+  },
+  "spider_silk": {
+    "name": "Spider Silk",
+    "type": "material",
+    "sell": 16,
+    "desc": "Strong, fine thread. Weavers and smiths will pay for it."
+  },
+  "spider_venom": {
+    "name": "Spider Venom",
+    "type": "material",
+    "sell": 22,
+    "desc": "A sealed vial of cloudy venom. Alchemists want it."
+  },
+  "bat_wing": {
+    "name": "Bat Wing",
+    "type": "material",
+    "sell": 9,
+    "desc": "Leathery and light."
+  },
+  "iron_ore": {
+    "name": "Iron Ore",
+    "type": "material",
+    "sell": 14,
+    "desc": "A rust-red lump. A smith could do something with it."
+  },
+  "sunstone_chip": {
+    "name": "Sunstone Chip",
+    "type": "key",
+    "desc": "A chip of pale stone that glows faintly in rhythm with your palm."
+  },
+  "cragblade": {
+    "name": "Cragblade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 12,
+    "spd": 1,
+    "price": 330,
+    "desc": "Hammered from mine-iron. Cold even in the sun."
+  },
+  "pickaxe": {
+    "name": "Miner's Pickaxe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 13,
+    "price": 340,
+    "desc": "Built for rock, which is harder than most enemies."
+  },
+  "lantern_staff": {
+    "name": "Lantern Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 2,
+    "mag": 10,
+    "price": 320,
+    "desc": "A lamp-head on an ash shaft. It never goes out."
+  },
+  "delver_bow": {
+    "name": "Delver's Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 12,
+    "spd": 2,
+    "price": 330,
+    "desc": "Short and stiff. Made for tunnels."
+  },
+  "delver_dagger": {
+    "name": "Delver's Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 10,
+    "spd": 4,
+    "price": 300,
+    "desc": "A cutting tool, with opinions."
+  },
+  "tunnel_mace": {
+    "name": "Tunnel Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 11,
+    "mag": 3,
+    "price": 330,
+    "desc": "A stone head and a ringing handle."
+  },
+  "venomfang_sword": {
+    "name": "Venomfang Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 18,
+    "spd": 1,
+    "price": 560,
+    "desc": "A crooked blade grown from a spider's fang.",
+    "unique": true
+  },
+  "oozeglass_staff": {
+    "name": "Oozeglass Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 3,
+    "mag": 15,
+    "price": 560,
+    "desc": "Clear as water. It drips, faintly.",
+    "unique": true
+  },
+  "silkstrike_bow": {
+    "name": "Silkstrike Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 17,
+    "spd": 3,
+    "price": 560,
+    "desc": "Silk-strung. Fires as if it knew where you wanted to hit.",
+    "unique": true
+  },
+  "gluemaul": {
+    "name": "Gluemaul",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 16,
+    "mag": 5,
+    "price": 560,
+    "desc": "The head clings to whatever it strikes.",
+    "unique": true
+  },
+  "miners_leathers": {
+    "name": "Miner's Leathers",
+    "type": "armor",
+    "atype": "medium",
+    "def": 11,
+    "price": 340,
+    "desc": "Thick, scarred and stained with ore dust."
+  },
+  "hardhide_vest": {
+    "name": "Hardhide Vest",
+    "type": "armor",
+    "atype": "light",
+    "def": 9,
+    "spd": 2,
+    "price": 320,
+    "desc": "Boiled hide with brass studs."
+  },
+  "dust_robe": {
+    "name": "Dust Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 6,
+    "mag": 8,
+    "price": 320,
+    "desc": "Grey with ore dust. Warm."
+  },
+  "rivet_plate": {
+    "name": "Rivet Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 13,
+    "price": 380,
+    "desc": "Riveted by someone who hated gaps."
+  },
+  "weavers_wrap": {
+    "name": "Weaver's Wrap",
+    "type": "armor",
+    "atype": "light",
+    "def": 12,
+    "spd": 4,
+    "price": 540,
+    "desc": "Spun and woven by something with too many hands.",
+    "unique": true
+  },
+  "hi_ether": {
+    "name": "High Ether",
+    "type": "consumable",
+    "mp": 45,
+    "price": 110,
+    "desc": "Restores 45 MP."
+  },
+  "phoenix_plume": {
+    "name": "Phoenix Plume",
+    "type": "consumable",
+    "revive": 0.4,
+    "price": 240,
+    "desc": "Revives a fallen ally with 40% HP."
+  },
+  "orc_tooth": {
+    "name": "Orc Tooth",
+    "type": "material",
+    "sell": 28,
+    "desc": "A thick yellow tusk. Orcs wear these as trophies."
+  },
+  "boar_hide": {
+    "name": "Boar Hide",
+    "type": "material",
+    "sell": 26,
+    "desc": "Tough, bristly leather."
+  },
+  "dawn_shard": {
+    "name": "Dawn Shard",
+    "type": "key",
+    "desc": "A lump of pale gold, warm as a hand. The first of the four Sunshards."
+  },
+  "gallows_token": {
+    "name": "Gallows Token",
+    "type": "key",
+    "desc": "A black iron token stamped with a gallows. Hask's men carry them as proof of rank."
+  },
+  "ridge_sabre": {
+    "name": "Ridge Sabre",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 15,
+    "spd": 1,
+    "price": 450,
+    "desc": "Forged in the camp from stolen Gallowkeep iron."
+  },
+  "ridge_axe": {
+    "name": "Ridge Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 16,
+    "price": 460,
+    "desc": "A woodsman's axe turned soldier."
+  },
+  "ridge_staff": {
+    "name": "Ridge Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 3,
+    "mag": 12,
+    "price": 440,
+    "desc": "Pine from the ridge, bound in wire."
+  },
+  "ridge_bow": {
+    "name": "Ridge Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 15,
+    "spd": 2,
+    "price": 450,
+    "desc": "A heavy bow for long shots across the pass."
+  },
+  "ridge_knife": {
+    "name": "Ridge Knife",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 12,
+    "spd": 5,
+    "price": 400,
+    "desc": "Narrow, sharp and ungrateful."
+  },
+  "ridge_mace": {
+    "name": "Ridge Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 14,
+    "mag": 4,
+    "price": 450,
+    "desc": "A heavy head on a short haft."
+  },
+  "tuskrender_greatsword": {
+    "name": "Tuskrender Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 24,
+    "spd": 1,
+    "price": 760,
+    "desc": "A blade grown out of a tusk the size of a plough.",
+    "unique": true
+  },
+  "warhorn_staff": {
+    "name": "Warhorn Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 5,
+    "mag": 19,
+    "price": 760,
+    "desc": "Carved from a horn. It hums on the wind.",
+    "unique": true
+  },
+  "ironhide_bow": {
+    "name": "Ironhide Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 22,
+    "spd": 3,
+    "price": 760,
+    "desc": "Bound in boar-hide that refuses to stretch.",
+    "unique": true
+  },
+  "bonebreaker_mace": {
+    "name": "Bonebreaker Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 21,
+    "mag": 7,
+    "price": 760,
+    "desc": "Heavy, brutal, and utterly sincere.",
+    "unique": true
+  },
+  "ridge_plate": {
+    "name": "Ridge Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 16,
+    "price": 520,
+    "desc": "Forged plate, dented but honest."
+  },
+  "ridge_leathers": {
+    "name": "Ridge Leathers",
+    "type": "armor",
+    "atype": "medium",
+    "def": 14,
+    "price": 470,
+    "desc": "Lined with boar-hide."
+  },
+  "ridge_jacket": {
+    "name": "Ridge Jacket",
+    "type": "armor",
+    "atype": "light",
+    "def": 12,
+    "spd": 3,
+    "price": 460,
+    "desc": "Quiet cloth over a hide lining."
+  },
+  "ridge_robe": {
+    "name": "Ridge Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 8,
+    "mag": 11,
+    "price": 460,
+    "desc": "Heavy wool, warm as a stove."
+  },
+  "tuskhide_mail": {
+    "name": "Tuskhide Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 20,
+    "price": 800,
+    "desc": "Plate backed with the hide of something enormous.",
+    "unique": true
+  },
+  "silver_ore": {
+    "name": "Silver Ore",
+    "type": "material",
+    "sell": 40,
+    "desc": "Pale, heavy and soft. Smiths prize it for fine work."
+  },
+  "garnet": {
+    "name": "Garnet",
+    "type": "material",
+    "sell": 90,
+    "desc": "A dark red gem, rough from the rock."
+  },
+  "sapphire": {
+    "name": "Sapphire",
+    "type": "material",
+    "sell": 220,
+    "desc": "Blue as deep water. Jewellers pay well."
+  },
+  "ember_opal": {
+    "name": "Ember Opal",
+    "type": "material",
+    "sell": 520,
+    "desc": "It glows faintly, like a coal that will not go out."
+  },
+  "smith_blade": {
+    "name": "Smith-forged Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 12,
+    "sell": 180,
+    "desc": "A plain, honest sword, forged by your own hand.",
+    "crafted": true
+  },
+  "smith_staff": {
+    "name": "Smith-forged Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 3,
+    "mag": 10,
+    "sell": 180,
+    "desc": "Ash wound with iron wire.",
+    "crafted": true
+  },
+  "smith_bow": {
+    "name": "Smith-forged Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 12,
+    "spd": 2,
+    "sell": 180,
+    "desc": "Stiff and well-balanced.",
+    "crafted": true
+  },
+  "smith_mace": {
+    "name": "Smith-forged Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 11,
+    "mag": 3,
+    "sell": 180,
+    "desc": "A flanged head on a forged haft.",
+    "crafted": true
+  },
+  "master_blade": {
+    "name": "Masterwork Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 23,
+    "spd": 1,
+    "sell": 420,
+    "desc": "Folded, quenched, and folded again. A smith signs this one.",
+    "crafted": true
+  },
+  "master_staff": {
+    "name": "Masterwork Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 4,
+    "mag": 19,
+    "sell": 420,
+    "desc": "Folded, quenched, and folded again. A smith signs this one.",
+    "crafted": true
+  },
+  "master_bow": {
+    "name": "Masterwork Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 23,
+    "spd": 3,
+    "sell": 420,
+    "desc": "Folded, quenched, and folded again. A smith signs this one.",
+    "crafted": true
+  },
+  "master_mace": {
+    "name": "Masterwork Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 21,
+    "mag": 6,
+    "sell": 420,
+    "desc": "Folded, quenched, and folded again. A smith signs this one.",
+    "crafted": true
+  },
+  "smith_plate": {
+    "name": "Smith-forged Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 13,
+    "sell": 170,
+    "desc": "Cut, fitted and riveted by someone who cares.",
+    "crafted": true
+  },
+  "smith_robe": {
+    "name": "Smith-forged Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 6,
+    "mag": 9,
+    "sell": 170,
+    "desc": "Cut, fitted and riveted by someone who cares.",
+    "crafted": true
+  },
+  "smith_jacket": {
+    "name": "Smith-forged Jacket",
+    "type": "armor",
+    "atype": "light",
+    "def": 10,
+    "spd": 3,
+    "sell": 170,
+    "desc": "Cut, fitted and riveted by someone who cares.",
+    "crafted": true
+  },
+  "smith_leathers": {
+    "name": "Smith-forged Leathers",
+    "type": "armor",
+    "atype": "medium",
+    "def": 11,
+    "sell": 170,
+    "desc": "Cut, fitted and riveted by someone who cares.",
+    "crafted": true
+  },
+  "hawkeye_bow": {
+    "name": "Hawkeye Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 10,
+    "spd": 2,
+    "price": 520,
+    "desc": "Strung with something that was once an eagle feather.",
+    "enchant": {
+      "crit": 0.1
+    },
+    "merchant": true
+  },
+  "viper_dagger": {
+    "name": "Viper Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 9,
+    "spd": 4,
+    "price": 480,
+    "desc": "It finds the gap every time.",
+    "enchant": {
+      "crit": 0.12
+    },
+    "merchant": true
+  },
+  "lifetap_mace": {
+    "name": "Lifetap Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 11,
+    "mag": 3,
+    "price": 560,
+    "desc": "Warm to the touch after a hit.",
+    "enchant": {
+      "drain": 0.1
+    },
+    "merchant": true
+  },
+  "sages_rod": {
+    "name": "Sage's Rod",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 2,
+    "mag": 10,
+    "price": 540,
+    "desc": "Whoever carries it remembers more of what they see.",
+    "enchant": {
+      "xpBonus": 0.1
+    },
+    "merchant": true
+  },
+  "emberbrand": {
+    "name": "Emberbrand",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 12,
+    "price": 600,
+    "desc": "The edge glows a dull orange and never quite cools.",
+    "enchant": {
+      "element": "fire"
+    },
+    "merchant": true
+  },
+  "stormhatchet": {
+    "name": "Stormhatchet",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 17,
+    "price": 900,
+    "desc": "Hair stands up when it is swung.",
+    "enchant": {
+      "element": "lightning"
+    },
+    "merchant": true
+  },
+  "frostfang_dagger": {
+    "name": "Frostfang Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 14,
+    "spd": 4,
+    "price": 880,
+    "desc": "Rimed over, even in summer.",
+    "enchant": {
+      "element": "ice"
+    },
+    "merchant": true
+  },
+  "bloodmoon_mace": {
+    "name": "Bloodmoon Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 16,
+    "mag": 5,
+    "price": 920,
+    "desc": "Red, and always a little damp.",
+    "enchant": {
+      "drain": 0.12
+    },
+    "merchant": true
+  },
+  "dawnguard_bow": {
+    "name": "Dawnguard Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 17,
+    "spd": 3,
+    "price": 920,
+    "desc": "Sighted by someone who never missed a sunrise.",
+    "enchant": {
+      "crit": 0.12
+    },
+    "merchant": true
+  },
+  "tempest_staff": {
+    "name": "Tempest Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 3,
+    "mag": 15,
+    "price": 900,
+    "desc": "The crystal at the tip hums before rain.",
+    "enchant": {
+      "crit": 0.08
+    },
+    "merchant": true
+  },
+  "boarward_vest": {
+    "name": "Boarward Vest",
+    "type": "armor",
+    "atype": "medium",
+    "def": 9,
+    "price": 450,
+    "desc": "Stitched with a charm against bad meat.",
+    "enchant": {
+      "immune": [
+        "poison"
+      ]
+    },
+    "merchant": true
+  },
+  "foxhide_jacket": {
+    "name": "Foxhide Jacket",
+    "type": "armor",
+    "atype": "light",
+    "def": 8,
+    "spd": 3,
+    "price": 450,
+    "desc": "Light on the shoulders, impossible to pin down.",
+    "enchant": {
+      "immune": [
+        "slow"
+      ]
+    },
+    "merchant": true
+  },
+  "wardens_plate": {
+    "name": "Warden's Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 17,
+    "price": 950,
+    "desc": "Gate-warden issue. It does not move unless you do.",
+    "enchant": {
+      "immune": [
+        "stun"
+      ]
+    },
+    "merchant": true
+  },
+  "nightsilk_robe": {
+    "name": "Nightsilk Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 9,
+    "mag": 13,
+    "price": 900,
+    "desc": "Dark and cool, and strangely restful.",
+    "enchant": {
+      "immune": [
+        "sleep"
+      ]
+    },
+    "merchant": true
+  },
+  "scholars_cloak": {
+    "name": "Scholar's Cloak",
+    "type": "armor",
+    "atype": "medium",
+    "def": 15,
+    "price": 940,
+    "desc": "Smells of ink and old libraries.",
+    "enchant": {
+      "xpBonus": 0.12
+    },
+    "merchant": true
+  },
+  "grand_elixir": {
+    "name": "Grand Elixir",
+    "type": "consumable",
+    "hp": 500,
+    "mp": 120,
+    "cure": [
+      "poison",
+      "curse",
+      "slow",
+      "defenseDown"
+    ],
+    "price": 300,
+    "desc": "Restores 500 HP and 120 MP and clears most ailments.",
+    "merchant": true
+  },
+  "hewers_axe": {
+    "name": "Hewer's Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 12,
+    "price": 500,
+    "desc": "Balanced for one more swing than the last man had.",
+    "enchant": {
+      "crit": 0.08
+    },
+    "merchant": true
+  },
+  "bulwark_mail": {
+    "name": "Bulwark Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 11,
+    "price": 520,
+    "desc": "Every ring is stamped with a tiny sun.",
+    "enchant": {
+      "immune": [
+        "curse"
+      ]
+    },
+    "merchant": true
+  },
+  "starweave_robe": {
+    "name": "Starweave Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 6,
+    "mag": 8,
+    "price": 480,
+    "desc": "The weave is a pattern you almost recognise.",
+    "enchant": {
+      "immune": [
+        "curse"
+      ]
+    },
+    "merchant": true
+  },
+  "moonbead_staff": {
+    "name": "Moonbead Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 2,
+    "mag": 9,
+    "price": 500,
+    "desc": "A pale bead rolls at the tip when you are not looking.",
+    "enchant": {
+      "crit": 0.06
+    },
+    "merchant": true
+  },
+  "sunmark_mace": {
+    "name": "Sunmark Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 10,
+    "mag": 2,
+    "price": 470,
+    "desc": "Stamped with a sun that has seen better days.",
+    "enchant": {
+      "xpBonus": 0.08
+    },
+    "merchant": true
+  },
+  "steel_sword": {
+    "name": "Steel Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 21,
+    "spd": 1,
+    "price": 900,
+    "desc": "Khesh-Ura steel, folded in desert heat."
+  },
+  "steel_axe": {
+    "name": "Steel Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 23,
+    "price": 920,
+    "desc": "A broad bearded blade on an ash haft."
+  },
+  "steel_staff": {
+    "name": "Steel-capped Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 3,
+    "mag": 17,
+    "price": 880,
+    "desc": "A glass bead set in a steel cap."
+  },
+  "steel_bow": {
+    "name": "Steel Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 21,
+    "spd": 2,
+    "price": 900,
+    "desc": "Spring steel limbs; it fires like a slammed door."
+  },
+  "steel_dagger": {
+    "name": "Steel Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 17,
+    "spd": 5,
+    "price": 840,
+    "desc": "Slim, bright, and always a little too sharp."
+  },
+  "steel_mace": {
+    "name": "Steel Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 20,
+    "mag": 5,
+    "price": 900,
+    "desc": "A ribbed steel head that rings like a bell."
+  },
+  "steel_plate": {
+    "name": "Steel Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 22,
+    "price": 980,
+    "desc": "Overlapping plates; a lizardfolk smith made them slightly too roomy."
+  },
+  "dune_leathers": {
+    "name": "Dune Leathers",
+    "type": "armor",
+    "atype": "medium",
+    "def": 19,
+    "price": 940,
+    "desc": "Hide cured in salt and dyed the colour of dusk."
+  },
+  "sandsilk_jacket": {
+    "name": "Sandsilk Jacket",
+    "type": "armor",
+    "atype": "light",
+    "def": 16,
+    "spd": 4,
+    "price": 920,
+    "desc": "Weightless, cool and surprisingly hard to cut."
+  },
+  "sunweave_robe": {
+    "name": "Sunweave Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 11,
+    "mag": 16,
+    "price": 930,
+    "desc": "Threads the colour of a low sun."
+  },
+  "grumble_cleaver": {
+    "name": "Grumble Cleaver",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 31,
+    "price": 0,
+    "desc": "A cleaver the size of a door, still warm from the ogre that wielded it.",
+    "unique": true,
+    "sell": 420
+  },
+  "ogrebone_staff": {
+    "name": "Ogrebone Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 4,
+    "mag": 25,
+    "price": 0,
+    "desc": "A femur, wound with silver wire. It hums when it is hungry.",
+    "unique": true,
+    "sell": 420
+  },
+  "tusker_longbow": {
+    "name": "Tusker Longbow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 30,
+    "spd": 4,
+    "price": 0,
+    "desc": "Strung with boar-gut and set with a curved tusk.",
+    "unique": true,
+    "sell": 420
+  },
+  "khesh_maul": {
+    "name": "Maul of Khesh",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 28,
+    "mag": 6,
+    "price": 0,
+    "desc": "A paving stone on a drover's pole. Very simple. Very effective.",
+    "unique": true,
+    "sell": 420
+  },
+  "grumblehide_vest": {
+    "name": "Grumblehide Vest",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 27,
+    "price": 0,
+    "desc": "Ogre hide, hardened. It smells like a barn that lost a war.",
+    "unique": true,
+    "sell": 400
+  },
+  "ogre_tooth": {
+    "name": "Ogre Tooth",
+    "type": "material",
+    "sell": 38,
+    "desc": "Yellow, chipped, and heavier than it looks."
+  },
+  "ogre_hide": {
+    "name": "Ogre Hide",
+    "type": "material",
+    "sell": 44,
+    "desc": "Thick, grey and greasy."
+  },
+  "troll_sinew": {
+    "name": "Troll Sinew",
+    "type": "material",
+    "sell": 52,
+    "desc": "It twitches, faintly, even now."
+  },
+  "sandtusk_tusk": {
+    "name": "Sandtusk Tusk",
+    "type": "key",
+    "desc": "A curved tusk the length of your arm, rust-red at the root."
+  },
+  "silvered_sword": {
+    "name": "Silvered Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 28,
+    "spd": 1,
+    "price": 1500,
+    "desc": "Silver-bright and a little light in the hand, which makes it quicker.",
+    "silvered": true
+  },
+  "silvered_axe": {
+    "name": "Silvered Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 30,
+    "price": 1520,
+    "desc": "A silver edge on a black haft.",
+    "silvered": true
+  },
+  "silvered_staff": {
+    "name": "Silvered Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 4,
+    "mag": 23,
+    "price": 1450,
+    "desc": "Silver wire runs the length of it and hums in the heat.",
+    "silvered": true
+  },
+  "silvered_bow": {
+    "name": "Silvered Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 28,
+    "spd": 3,
+    "price": 1500,
+    "desc": "Silvered limbs that flash a warning before you loose.",
+    "silvered": true
+  },
+  "silvered_dagger": {
+    "name": "Silvered Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 23,
+    "spd": 6,
+    "price": 1400,
+    "desc": "A bright blade that throws a thin line of light.",
+    "silvered": true
+  },
+  "silvered_mace": {
+    "name": "Silvered Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 27,
+    "mag": 7,
+    "price": 1480,
+    "desc": "A silvered head that rings softly on a good strike.",
+    "silvered": true
+  },
+  "silvered_plate": {
+    "name": "Silvered Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 30,
+    "price": 1600,
+    "desc": "Plate dipped in silver and light as it looks."
+  },
+  "sunhide_coat": {
+    "name": "Sunhide Coat",
+    "type": "armor",
+    "atype": "medium",
+    "def": 26,
+    "price": 1520,
+    "desc": "Hide that has learned to shrug off the heat."
+  },
+  "mirage_jacket": {
+    "name": "Mirage Jacket",
+    "type": "armor",
+    "atype": "light",
+    "def": 22,
+    "spd": 5,
+    "price": 1500,
+    "desc": "It shimmers when you move, and so does the eye that follows you."
+  },
+  "moonlace_robe": {
+    "name": "Moonlace Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 15,
+    "mag": 21,
+    "price": 1480,
+    "desc": "Pale lace over cool wool. It never feels warm."
+  },
+  "stinger_blade": {
+    "name": "Stinger Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 37,
+    "spd": 2,
+    "price": 0,
+    "desc": "A sword with a barbed tip, quick as a flick of a tail.",
+    "unique": true,
+    "sell": 620
+  },
+  "webglass_staff": {
+    "name": "Webglass Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 5,
+    "mag": 31,
+    "price": 0,
+    "desc": "A glass rod spun through with spider-silk.",
+    "unique": true,
+    "sell": 620
+  },
+  "spidertail_bow": {
+    "name": "Spidertail Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 36,
+    "spd": 5,
+    "price": 0,
+    "desc": "Strung with a thread that tugs at your fingers.",
+    "unique": true,
+    "sell": 620
+  },
+  "carapace_mace": {
+    "name": "Carapace Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 34,
+    "mag": 8,
+    "price": 0,
+    "desc": "A mace-head of black chitin, polished by a hundred fights.",
+    "unique": true,
+    "sell": 620
+  },
+  "carapace_plate": {
+    "name": "Carapace Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 35,
+    "price": 0,
+    "desc": "Chitin plates, tied with silk.",
+    "unique": true,
+    "sell": 600
+  },
+  "scale_plate": {
+    "name": "Lizard Scale",
+    "type": "material",
+    "sell": 60,
+    "desc": "A broad, glossy scale, warm even in the shade."
+  },
+  "scorpion_stinger": {
+    "name": "Scorpion Stinger",
+    "type": "material",
+    "sell": 70,
+    "desc": "A curved barb that still weeps a little venom."
+  },
+  "chitin_shard": {
+    "name": "Chitin Shard",
+    "type": "material",
+    "sell": 66,
+    "desc": "A black fragment, hard as slate."
+  },
+  "khesh_writ": {
+    "name": "Szazz's Writ",
+    "type": "key",
+    "desc": "A writ of passage signed by Khesh-Ura's Water-Warden. It opens the road east."
+  },
+  "ismerel_writ": {
+    "name": "Ismerel's Writ",
+    "type": "key",
+    "desc": "A glass-sealed order from the Queen, naming a toll of one tenth of the sun."
+  },
+  "sand_date": {
+    "name": "Sand Date",
+    "type": "material",
+    "sell": 6,
+    "desc": "Sticky, sweet and sun-dried.",
+    "price": 18
+  },
+  "desert_spice": {
+    "name": "Desert Spice",
+    "type": "material",
+    "sell": 10,
+    "desc": "A red powder that makes your eyes water politely.",
+    "price": 30
+  },
+  "harpy_egg": {
+    "name": "Harpy Egg",
+    "type": "material",
+    "sell": 45,
+    "desc": "A speckled egg, warm even when it has been out of the nest for hours."
+  },
+  "bone_dust": {
+    "name": "Bone Dust",
+    "type": "material",
+    "sell": 28,
+    "desc": "Grey and fine. It smells of old chalk."
+  },
+  "harpy_feather": {
+    "name": "Harpy Feather",
+    "type": "material",
+    "sell": 40,
+    "desc": "Long, stiff and striped."
+  },
+  "clear_tea": {
+    "name": "Clear Tea",
+    "type": "consumable",
+    "cure": [
+      "sleep",
+      "charm",
+      "curse"
+    ],
+    "price": 120,
+    "desc": "Cures sleep, charm and curse. Bitter, as it should be."
+  },
+  "cliffwing_bow": {
+    "name": "Cliffwing Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 42,
+    "spd": 5,
+    "price": 0,
+    "desc": "Strung with harpy sinew and fletched with their feathers.",
+    "unique": true,
+    "sell": 800
+  },
+  "screech_staff": {
+    "name": "Screechwing Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 6,
+    "mag": 37,
+    "price": 0,
+    "desc": "A bone rod that whines faintly in the wind.",
+    "unique": true,
+    "sell": 800
+  },
+  "talon_blade": {
+    "name": "Talon Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 43,
+    "spd": 3,
+    "price": 0,
+    "desc": "A curved blade that looks, in some light, like a claw.",
+    "unique": true,
+    "sell": 800
+  },
+  "echo_mace": {
+    "name": "Echo Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 40,
+    "mag": 9,
+    "price": 0,
+    "desc": "It rings twice for every blow.",
+    "unique": true,
+    "sell": 800
+  },
+  "featherweave_vest": {
+    "name": "Featherweave Vest",
+    "type": "armor",
+    "atype": "medium",
+    "def": 34,
+    "spd": 3,
+    "price": 0,
+    "desc": "Woven feather-vanes over hide. Light and surprisingly tough.",
+    "unique": true,
+    "sell": 760
+  },
+  "perch_token": {
+    "name": "Waystation Token",
+    "type": "key",
+    "desc": "A brass token stamped with a well. Marrak Sen says it opens the east road."
+  },
+  "glass_plate": {
+    "name": "Glass Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 38,
+    "price": 2100,
+    "desc": "Plate of tempered glass; it rings like a bell and stops most things."
+  },
+  "glasshide_coat": {
+    "name": "Glasshide Coat",
+    "type": "armor",
+    "atype": "medium",
+    "def": 33,
+    "price": 2050,
+    "desc": "Hide laid with glass scales, flexible as a fish."
+  },
+  "glassveil_jacket": {
+    "name": "Glassveil Jacket",
+    "type": "armor",
+    "atype": "light",
+    "def": 27,
+    "spd": 6,
+    "price": 2000,
+    "desc": "A jacket of glass threads that scatters light and blows."
+  },
+  "glassthread_robe": {
+    "name": "Glassthread Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 19,
+    "mag": 26,
+    "price": 2050,
+    "desc": "Spun glass, soft as silk, cold as water."
+  },
+  "ossuary_blade": {
+    "name": "Ossuary Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 50,
+    "spd": 3,
+    "price": 0,
+    "desc": "A blade of fused bone, cold to hold.",
+    "unique": true,
+    "sell": 1000
+  },
+  "crypt_staff": {
+    "name": "Crypt Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 8,
+    "mag": 44,
+    "price": 0,
+    "desc": "A rod of grave-glass with a skull-sized crystal.",
+    "unique": true,
+    "sell": 1000
+  },
+  "grave_bow": {
+    "name": "Grave Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 49,
+    "spd": 6,
+    "price": 0,
+    "desc": "It creaks like a coffin lid before every shot.",
+    "unique": true,
+    "sell": 1000
+  },
+  "tombstone_mace": {
+    "name": "Tombstone Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 47,
+    "mag": 11,
+    "price": 0,
+    "desc": "A small headstone on a long handle. It has someone's name on it.",
+    "unique": true,
+    "sell": 1000
+  },
+  "ossuary_plate": {
+    "name": "Ossuary Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 44,
+    "price": 0,
+    "desc": "Plate of bone and glass, knitted by something patient.",
+    "unique": true,
+    "sell": 950
+  },
+  "golem_core": {
+    "name": "Golem Core",
+    "type": "material",
+    "sell": 90,
+    "desc": "A heavy, humming stone. It is faintly warm."
+  },
+  "glass_shard": {
+    "name": "Glass Shard",
+    "type": "material",
+    "sell": 70,
+    "desc": "A razor-edged fragment, perfectly clear."
+  },
+  "glass_token": {
+    "name": "Perch Token",
+    "type": "key",
+    "desc": "A glass disc stamped with a cliff. Tamsin Oake says it opens the south road."
+  },
+  "crate_khesh": {
+    "name": "Crate for Khesh-Ura",
+    "type": "key",
+    "desc": "A sealed crate addressed to Qeth Arun, Bazaar-Keeper."
+  },
+  "crate_waystation": {
+    "name": "Crate for Redwater",
+    "type": "key",
+    "desc": "A sealed crate addressed to Vessa Korr, Quartermaster."
+  },
+  "crate_perch": {
+    "name": "Crate for Perch",
+    "type": "key",
+    "desc": "A sealed crate addressed to Ferdie Plum, Provisioner."
+  },
+  "runed_sword": {
+    "name": "Runed Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 39,
+    "spd": 1,
+    "price": 3000,
+    "desc": "Runes march down the fuller and hum when you swing."
+  },
+  "runed_axe": {
+    "name": "Runed Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 41,
+    "price": 3050,
+    "desc": "An axe of black iron with a running line of silver runes."
+  },
+  "runed_staff": {
+    "name": "Runed Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 6,
+    "mag": 32,
+    "price": 2900,
+    "desc": "Runes spiral up the shaft and brighten as you cast."
+  },
+  "runed_bow": {
+    "name": "Runed Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 39,
+    "spd": 4,
+    "price": 3000,
+    "desc": "Runes on the grip steady your aim."
+  },
+  "runed_dagger": {
+    "name": "Runed Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 32,
+    "spd": 7,
+    "price": 2800,
+    "desc": "A narrow blade, with a rune for every kill it remembers."
+  },
+  "runed_mace": {
+    "name": "Runed Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 37,
+    "mag": 9,
+    "price": 2950,
+    "desc": "Runes of mending are cut into the flanges."
+  },
+  "runed_plate": {
+    "name": "Runed Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 44,
+    "price": 3200,
+    "desc": "Plate with a rune on every join. Heavy, and very difficult to hurt."
+  },
+  "runed_hide": {
+    "name": "Runed Hide",
+    "type": "armor",
+    "atype": "medium",
+    "def": 38,
+    "price": 3050,
+    "desc": "Hide worked with runes of turning."
+  },
+  "runed_cloak": {
+    "name": "Runed Cloak",
+    "type": "armor",
+    "atype": "light",
+    "def": 32,
+    "spd": 7,
+    "price": 3000,
+    "desc": "A cloak that shrugs off a blow as water sheds rain."
+  },
+  "runed_robe": {
+    "name": "Runed Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 24,
+    "mag": 34,
+    "price": 3050,
+    "desc": "Runes of focus run down both sleeves."
+  },
+  "ironhorn_greatsword": {
+    "name": "Ironhorn Greatsword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 62,
+    "spd": 2,
+    "price": 0,
+    "desc": "A horn-hilted blade that wants to charge.",
+    "unique": true,
+    "sell": 1400
+  },
+  "horned_staff": {
+    "name": "Horned Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 10,
+    "mag": 54,
+    "price": 0,
+    "desc": "A staff tipped with a polished minotaur horn.",
+    "unique": true,
+    "sell": 1400
+  },
+  "bullhorn_bow": {
+    "name": "Bullhorn Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 60,
+    "spd": 6,
+    "price": 0,
+    "desc": "Limbs of horn; it throws like a charging bull.",
+    "unique": true,
+    "sell": 1400
+  },
+  "rampage_mace": {
+    "name": "Rampage Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 58,
+    "mag": 12,
+    "price": 0,
+    "desc": "It hits twice as hard when you are angry.",
+    "unique": true,
+    "sell": 1400
+  },
+  "ironhorn_plate": {
+    "name": "Ironhorn Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 54,
+    "price": 0,
+    "desc": "Plate hammered from a minotaur's own armour.",
+    "unique": true,
+    "sell": 1300
+  },
+  "minotaur_horn": {
+    "name": "Minotaur Horn",
+    "type": "material",
+    "sell": 120,
+    "desc": "A thick curved horn, scored with the maze's turns."
+  },
+  "mirror_key": {
+    "name": "Mirror Key",
+    "type": "key",
+    "desc": "A key of mirrored glass. Rhea Corvane says it opens the road east."
+  },
+  "zenith_shard": {
+    "name": "Zenith Shard",
+    "type": "key",
+    "desc": "A shard of the noon sun, bright and heavy, and warm as a held hand."
+  },
+  "moonsteel_sword": {
+    "name": "Moonsteel Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 46,
+    "spd": 2,
+    "price": 4200,
+    "desc": "A pale blade that keeps the memory of moonlight."
+  },
+  "moonsteel_axe": {
+    "name": "Moonsteel Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 48,
+    "price": 4250,
+    "desc": "A pale axe that never quite dulls."
+  },
+  "moonsteel_staff": {
+    "name": "Moonsteel Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 7,
+    "mag": 38,
+    "price": 4100,
+    "desc": "A staff of pale metal, cold and fine as a harp wire."
+  },
+  "moonsteel_bow": {
+    "name": "Moonsteel Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 46,
+    "spd": 5,
+    "price": 4200,
+    "desc": "An elven bow of pale metal. It sings when drawn."
+  },
+  "moonsteel_dagger": {
+    "name": "Moonsteel Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 38,
+    "spd": 8,
+    "price": 4000,
+    "desc": "A hand-length of moonlight with an edge."
+  },
+  "moonsteel_mace": {
+    "name": "Moonsteel Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 44,
+    "mag": 11,
+    "price": 4150,
+    "desc": "A pale mace that rings gently on impact."
+  },
+  "moonsteel_plate": {
+    "name": "Moonsteel Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 52,
+    "price": 4500,
+    "desc": "Elven plate: light, silver and astonishingly hard."
+  },
+  "moonsteel_hide": {
+    "name": "Moonsteel Hide",
+    "type": "armor",
+    "atype": "medium",
+    "def": 45,
+    "price": 4300,
+    "desc": "Hide stitched with fine moonsteel thread."
+  },
+  "moonsteel_cloak": {
+    "name": "Moonsteel Cloak",
+    "type": "armor",
+    "atype": "light",
+    "def": 38,
+    "spd": 8,
+    "price": 4250,
+    "desc": "A cloak woven with silver wire. It turns water, arrows and eyes."
+  },
+  "moonsteel_robe": {
+    "name": "Moonsteel Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 28,
+    "mag": 40,
+    "price": 4300,
+    "desc": "A robe of moonsteel thread that hums softly in the dark."
+  },
+  "wraith_blade": {
+    "name": "Wraith Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 70,
+    "spd": 3,
+    "price": 0,
+    "desc": "A blade that is only partly there. It cuts the rest.",
+    "unique": true,
+    "sell": 1900
+  },
+  "ghostwood_staff": {
+    "name": "Ghostwood Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 11,
+    "mag": 62,
+    "price": 0,
+    "desc": "A staff of pale wood that whispers in your ear.",
+    "unique": true,
+    "sell": 1900
+  },
+  "silent_bow": {
+    "name": "Silent Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 68,
+    "spd": 7,
+    "price": 0,
+    "desc": "It makes no sound, whether drawn or fired.",
+    "unique": true,
+    "sell": 1900
+  },
+  "lament_mace": {
+    "name": "Lament Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 65,
+    "mag": 14,
+    "price": 0,
+    "desc": "It sounds, very faintly, like a mourner.",
+    "unique": true,
+    "sell": 1900
+  },
+  "wraithbound_mail": {
+    "name": "Wraithbound Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 62,
+    "price": 0,
+    "desc": "Elven mail that has been somewhere cold.",
+    "unique": true,
+    "sell": 1800
+  },
+  "elf_silk": {
+    "name": "Elven Silk",
+    "type": "material",
+    "sell": 140,
+    "desc": "Fine as breath and strong as wire."
+  },
+  "moon_petal": {
+    "name": "Moon Petal",
+    "type": "material",
+    "sell": 110,
+    "desc": "A silver petal that glows faintly at night."
+  },
+  "frost_token": {
+    "name": "Lamplighter Lantern",
+    "type": "key",
+    "desc": "A little brass lantern with a Lamplighter badge. Captain Rook says it will see you through the north road."
+  },
+  "lost_tome_a": {
+    "name": "Lost Tome: Verses of the Hush",
+    "type": "key",
+    "desc": "A water-stained book of elven verses, with one page torn out."
+  },
+  "lost_tome_b": {
+    "name": "Lost Tome: The Archer's Rule",
+    "type": "key",
+    "desc": "A small leather book of archery rules, written by a master."
+  },
+  "lost_tome_c": {
+    "name": "Lost Tome: Names of the Moon",
+    "type": "key",
+    "desc": "A thick, silvered book, half-eaten by damp."
+  },
+  "barkhide_blade": {
+    "name": "Barkhide Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 76,
+    "spd": 3,
+    "price": 0,
+    "desc": "A blade grown, not forged, from a branch that refused to burn.",
+    "unique": true,
+    "sell": 2400
+  },
+  "rootbound_staff": {
+    "name": "Rootbound Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 12,
+    "mag": 68,
+    "price": 0,
+    "desc": "A living root coils round a crystal. It seems to breathe.",
+    "unique": true,
+    "sell": 2400
+  },
+  "thornwood_bow": {
+    "name": "Thornwood Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 74,
+    "spd": 7,
+    "price": 0,
+    "desc": "Thorns line the grip. It bites, and it lets you know.",
+    "unique": true,
+    "sell": 2400
+  },
+  "heartwood_mace": {
+    "name": "Heartwood Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 71,
+    "mag": 15,
+    "price": 0,
+    "desc": "The head is one dense knot of heartwood. It hits like a falling tree.",
+    "unique": true,
+    "sell": 2400
+  },
+  "barkhide_plate": {
+    "name": "Barkhide Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 68,
+    "price": 0,
+    "desc": "Bark armour that flexes with every breath. It has a faint smell of resin.",
+    "unique": true,
+    "sell": 2300
+  },
+  "heartwood_sap": {
+    "name": "Heartwood Sap",
+    "type": "material",
+    "sell": 160,
+    "desc": "Thick amber sap, warm to the touch even in the frost."
+  },
+  "frost_bark": {
+    "name": "Frost Bark",
+    "type": "material",
+    "sell": 130,
+    "desc": "Silver bark that stays cold in a fire."
+  },
+  "root_token": {
+    "name": "Speaker's Seal",
+    "type": "key",
+    "desc": "A small seal of silver bark. Speaker Ilvaren says it will open the east road to Rootmere."
+  },
+  "explorer_map": {
+    "name": "The Explorer's Map",
+    "type": "key",
+    "desc": "A waxed map, smudged with ice and old blood. The margin reads: 'Three caches. One in the wood, one under the frost, one where the moss sleeps.'"
+  },
+  "bryce_key": {
+    "name": "Bryce's Journal",
+    "type": "key",
+    "desc": "A leather journal. The last entry is a single line: the mark is the key."
+  },
+  "silver_oil": {
+    "name": "Silver Oil",
+    "type": "consumable",
+    "status": {
+      "id": "silvered",
+      "turns": 6
+    },
+    "price": 160,
+    "desc": "Coats one ally's weapon in silver for six turns, so it bites ghosts and wolves of the night."
+  },
+  "moonfang_blade": {
+    "name": "Moonfang Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 84,
+    "spd": 4,
+    "price": 0,
+    "desc": "A long fang of silvered bone, set in a hilt of pale wood.",
+    "unique": true,
+    "sell": 3000,
+    "silvered": true
+  },
+  "lunar_staff": {
+    "name": "Lunar Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 13,
+    "mag": 76,
+    "price": 0,
+    "desc": "A staff topped with a disc of white stone that tracks the moon.",
+    "unique": true,
+    "sell": 3000
+  },
+  "howling_bow": {
+    "name": "Howling Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 82,
+    "spd": 8,
+    "price": 0,
+    "desc": "The string sings a low, hollow note when drawn.",
+    "unique": true,
+    "sell": 3000,
+    "silvered": true
+  },
+  "fangbreaker_mace": {
+    "name": "Fangbreaker Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 78,
+    "mag": 17,
+    "price": 0,
+    "desc": "A mace of grey iron, studded with a wolf's teeth.",
+    "unique": true,
+    "sell": 3000,
+    "silvered": true
+  },
+  "moonfang_plate": {
+    "name": "Moonfang Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 74,
+    "price": 0,
+    "desc": "Plate lined with silver wire and pelt. It smells faintly of rain.",
+    "unique": true,
+    "sell": 2900
+  },
+  "moon_pelt": {
+    "name": "Moon Pelt",
+    "type": "material",
+    "sell": 180,
+    "desc": "Thick grey fur with a faint silver shimmer."
+  },
+  "wraith_essence": {
+    "name": "Wraith Essence",
+    "type": "material",
+    "sell": 200,
+    "desc": "A cold, unsteady glow in a stoppered vial."
+  },
+  "moor_lantern": {
+    "name": "Moor Lantern",
+    "type": "key",
+    "desc": "A little brass lantern with a green glass. Maelis Thorne says it will keep you on the path across Hollowmoor."
+  },
+  "stone_salve": {
+    "name": "Stone Salve",
+    "type": "consumable",
+    "cure": [
+      "petrify"
+    ],
+    "price": 220,
+    "desc": "A grey paste that loosens stone-struck flesh."
+  },
+  "rune_dust": {
+    "name": "Rune Dust",
+    "type": "material",
+    "price": 260,
+    "sell": 90,
+    "desc": "Powdered rune-stone. Enchanters set it into gear."
+  },
+  "rune_stone": {
+    "name": "Rune Stone",
+    "type": "key",
+    "desc": "A palm-sized stone that hums when you hold it. Tamsin Orrel wants it."
+  },
+  "vael_gate_key": {
+    "name": "Vael Gate Key",
+    "type": "key",
+    "desc": "A black iron key that opens the postern of Keep Vael."
+  },
+  "vael_pass": {
+    "name": "Vael Pass",
+    "type": "key",
+    "desc": "A wax-sealed token from Lantern Hold. It lets you through the west road toward Keep Vael."
+  },
+  "dark_shard": {
+    "name": "Dark Shard",
+    "type": "material",
+    "sell": 220,
+    "desc": "A chip of black armour that stays cold."
+  },
+  "basilisk_scale": {
+    "name": "Basilisk Scale",
+    "type": "material",
+    "sell": 200,
+    "desc": "A dull grey scale, hard as slate."
+  },
+  "commander_crest": {
+    "name": "Commander's Crest",
+    "type": "material",
+    "sell": 400,
+    "desc": "The crest of the Dark Knight Commander. It hums with a vow."
+  },
+  "wightbane_blade": {
+    "name": "Wightbane Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 90,
+    "spd": 5,
+    "price": 0,
+    "desc": "A pale blade that rings against the dead.",
+    "unique": true,
+    "sell": 3400,
+    "silvered": true
+  },
+  "gravecall_staff": {
+    "name": "Gravecall Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 14,
+    "mag": 82,
+    "price": 0,
+    "desc": "A staff of grave-wood. It listens for answers.",
+    "unique": true,
+    "sell": 3400
+  },
+  "ghostwind_bow": {
+    "name": "Ghostwind Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 88,
+    "spd": 9,
+    "price": 0,
+    "desc": "Arrows loosed from it do not seem to travel; they arrive.",
+    "unique": true,
+    "sell": 3400,
+    "silvered": true
+  },
+  "grave_mace": {
+    "name": "Grave Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 84,
+    "mag": 18,
+    "price": 0,
+    "desc": "A mace of black iron, wrapped in a shroud of silver thread.",
+    "unique": true,
+    "sell": 3400,
+    "silvered": true
+  },
+  "wight_shroud": {
+    "name": "Wight Shroud",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 80,
+    "price": 0,
+    "desc": "A mail shirt that is cold to touch and oddly comforting.",
+    "unique": true,
+    "sell": 3300
+  }
+}

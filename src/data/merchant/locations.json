@@ -1,0 +1,84 @@
+{
+  "locations": [
+    {
+      "map": "brinewick",
+      "x": 16,
+      "y": 9,
+      "minChapter": 1,
+      "name": "the Brinewick market square",
+      "safe": true
+    },
+    {
+      "map": "north_road",
+      "x": 16,
+      "y": 9,
+      "minChapter": 2,
+      "name": "the North Road",
+      "safe": true
+    },
+    {
+      "map": "tallow_ford",
+      "x": 16,
+      "y": 9,
+      "minChapter": 2,
+      "name": "the ford at Tallow Ford",
+      "safe": true
+    },
+    {
+      "map": "river_road",
+      "x": 18,
+      "y": 10,
+      "minChapter": 3,
+      "name": "the river road",
+      "safe": true
+    },
+    {
+      "map": "reedhollow",
+      "x": 16,
+      "y": 9,
+      "minChapter": 3,
+      "name": "the Reedhollow green",
+      "safe": true
+    },
+    {
+      "map": "old_tramway",
+      "x": 15,
+      "y": 8,
+      "minChapter": 4,
+      "name": "the old tramway",
+      "safe": true
+    },
+    {
+      "map": "lanternmoor",
+      "x": 14,
+      "y": 9,
+      "minChapter": 4,
+      "name": "the Lanternmoor street",
+      "safe": true
+    },
+    {
+      "map": "ridge_pass",
+      "x": 16,
+      "y": 7,
+      "minChapter": 5,
+      "name": "the Ridge Pass",
+      "safe": true
+    },
+    {
+      "map": "ridgewatch_camp",
+      "x": 16,
+      "y": 9,
+      "minChapter": 5,
+      "name": "Ridgewatch Camp",
+      "safe": true
+    },
+    {
+      "map": "ashfall_camp",
+      "x": 16,
+      "y": 9,
+      "minChapter": 14,
+      "name": "the Ashfall camp",
+      "safe": true
+    }
+  ]
+}

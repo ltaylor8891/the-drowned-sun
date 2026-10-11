@@ -1,0 +1,43 @@
+{
+  "scenes": {
+    "arrive_ford": {
+      "when": { "notFlag": "reachedTallowFord" },
+      "lines": [
+        { "n": "", "t": "Tallow Ford smells of hot wax and wet stone. Candles burn in every window, though it is barely afternoon." },
+        { "n": "", "t": "Beside the river, a woman is counting sheep. She counts them twice. She does not like the total." },
+        { "n": "", "t": "The Hall's flag hangs at half-mast. Something here has gone badly wrong." }
+      ],
+      "set": ["reachedTallowFord"],
+      "chapter": 2,
+      "autosave": true,
+      "banner": "Chapter 2: Tallow Ford"
+    },
+    "camp_enter": {
+      "when": { "notFlag": "campFound" },
+      "lines": [
+        { "n": "", "t": "The smell hits first: smoke, mutton, and something worse. Goblins have turned an old quarry into a fortress of stolen furniture." },
+        { "n": "", "t": "Somewhere inside, a hammer is ringing. It is not a smith's rhythm. It is a goblin hitting something it should not." }
+      ],
+      "set": ["campFound"]
+    },
+    "chief_intro": {
+      "when": { "notFlag": "chiefSeen" },
+      "lines": [
+        { "n": "", "t": "The Chief's enclosure is built from stolen doors. Dozens of them. Some still have their brass numbers." },
+        { "n": "", "t": "A goblin the size of a barrel rises from a throne made of church pews. It wears a crown of bent spoons." },
+        { "n": "Goblin Chief", "t": "Salt-smell! Mark-smell! Hask said you would come sniffing. Hask said keep the chart. Hask said hit hard!" }
+      ],
+      "set": ["chiefSeen"]
+    },
+    "chief_down": {
+      "when": { "notFlag": "chiefSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Goblin Chief topples off his pew throne. The crown of spoons rolls away, ringing like a dropped pan." },
+        { "n": "", "t": "Tucked in his belt is a waxed chart, folded small, with a red ring around a place called Reedhollow." },
+        { "n": "{hero}", "t": "Hask's dig sites. All of them." },
+        { "n": "", "t": "The marshes to the north are about to get a great deal more dangerous. Reeve Pask will want to hear of it." }
+      ],
+      "set": ["chiefSceneDone"]
+    }
+  }
+}

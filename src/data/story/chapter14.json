@@ -1,0 +1,62 @@
+{
+  "scenes": {
+    "cliffs_enter": {
+      "when": { "notFlag": "cliffsEntered" },
+      "lines": [
+        { "n": "", "t": "The west road climbs out of the lamplight and the land turns black. Cliffs of glassy stone rise on either side, scored with long scars where something heavy has dragged itself, and the wind carries a smell like a struck match." },
+        { "n": "", "t": "There are statues along the road. They are not carved. They have hands raised to shield their faces, and the stone of their eyes is wide open. Whoever they were, they looked at something they should not have." },
+        { "n": "", "t": "Far ahead, above the cliffs, a fortress sits against the sky like a broken tooth. Keep Vael. A single red light burns in its highest window." }
+      ],
+      "set": ["cliffsEntered"]
+    },
+    "arrive_ashfall": {
+      "when": { "notFlag": "reachedAshfall" },
+      "lines": [
+        { "n": "", "t": "A camp huddles in a fold of the cliffs, under a cloth of grey smoke. Tents, a few cookfires, a palisade of black timber. The people here wear the torn tabards of the keep's old garrison, and they watch you come with the careful eyes of those who have stopped expecting rescue." },
+        { "n": "", "t": "A tall woman in dented plate stands up from a campfire and does not quite salute. Behind her the road continues to a postern gate in the cliff wall, black as the inside of a glove. Beyond it the keep waits." }
+      ],
+      "set": ["reachedAshfall"],
+      "chapter": 14,
+      "autosave": true,
+      "banner": "Chapter 14: Keep Vael"
+    },
+    "keep_enter": {
+      "when": { "notFlag": "keepEntered" },
+      "lines": [
+        { "n": "", "t": "The postern closes behind you with a sound like a dropped coffin lid. The courtyard of Keep Vael is paved in glassy black stone, and in it stand dozens of statues, soldiers and servants and one child, all with their faces turned toward the great doors." },
+        { "n": "", "t": "Armoured shapes pace between the statues. They do not look at you at first. When they do, they all look at once." }
+      ],
+      "set": ["keepEntered"]
+    },
+    "commander_intro": {
+      "when": { "notFlag": "commanderSeen" },
+      "lines": [
+        { "n": "", "t": "The throne room is a long black hall with a throne at the far end and a figure standing in front of it, leaning on a sword as tall as a door. His armour is the colour of a night with no moon. A red light burns behind his visor, and there is a banner at his back with a device you almost recognise." },
+        { "n": "Dark Knight Commander", "t": "Light-bearer. The Chancellor said you would come in your own time, and that I should let you. I confess I find that harder than fighting." },
+        { "n": "{hero}", "t": "You held this keep once. You swore to guard it. Who do you guard now?" },
+        { "n": "Dark Knight Commander", "t": "The same people. Only now they are quiet, and they are safe, and none of them will ever be hungry again. The oath did not change. Only the weather." }
+      ],
+      "set": ["commanderSeen"]
+    },
+    "commander_down": {
+      "when": { "notFlag": "commanderSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Commander goes down on one knee, and his sword rings on the stone, and the red light in his visor goes out. The statues in the great hall all shift at once, a sound like a field of reeds in wind, and a crack runs across the black floor from the throne to the door." },
+        { "n": "Dark Knight Commander", "t": "There. The vow is broken. I thought it would feel worse. It feels like setting down a very heavy shield." },
+        { "n": "Dark Knight Commander", "t": "He has gone north, to the Bier Road. A wagon draped in black, and a team of wyverns to draw it, and a rider who has never once been wrong about where to land. The Chancellor means to reach the old mountain and open what sleeps beneath it." },
+        { "n": "Dark Knight Commander", "t": "There is a chapel off the courtyard, and a shrine in it that has been waiting for you since before I took my oath. It answers to the dusk. Go and let it finish what the dawn began." },
+        { "n": "{hero}", "t": "The Bier Road. Then that is where he will make his stand." }
+      ],
+      "set": ["commanderSceneDone"],
+      "gold": 2500
+    },
+    "rune_down": {
+      "when": { "notFlag": "runeSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Rune Wraith comes apart like smoke in a draught. Where it hung, a small grey stone drops to the floor and rolls to your foot, humming softly, warm as a hand." },
+        { "n": "", "t": "You pick it up. The hum steadies, as if it were glad to be held by someone who would carry it home." }
+      ],
+      "set": ["runeSceneDone"]
+    }
+  }
+}

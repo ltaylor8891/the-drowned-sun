@@ -1,0 +1,342 @@
+{
+ "id": "rootmere_hamlet",
+ "name": "Rootmere",
+ "tileSize": 40,
+ "legend": {
+  "#": {
+   "name": "tree",
+   "color": "0x1f4d2b",
+   "solid": true
+  },
+  ".": {
+   "name": "grass",
+   "color": "0x3f7d3a",
+   "solid": false
+  },
+  ",": {
+   "name": "path",
+   "color": "0xb59a6a",
+   "solid": false
+  },
+  "~": {
+   "name": "water",
+   "color": "0x2a5d9a",
+   "solid": true
+  },
+  "S": {
+   "name": "salt",
+   "color": "0xe6e2d3",
+   "solid": false
+  },
+  "H": {
+   "name": "house",
+   "color": "0x8a5a3a",
+   "solid": true
+  },
+  "D": {
+   "name": "door",
+   "color": "0x3b2412",
+   "solid": false
+  },
+  "f": {
+   "name": "floor",
+   "color": "0x9a7b52",
+   "solid": false
+  },
+  "w": {
+   "name": "wall",
+   "color": "0x4a3a2a",
+   "solid": true
+  },
+  "r": {
+   "name": "rug",
+   "color": "0x7a2f2f",
+   "solid": false
+  },
+  "W": {
+   "name": "labyrinth wall",
+   "color": "0xd8d0c0",
+   "solid": true
+  },
+  "j": {
+   "name": "jetty",
+   "color": "0x8b6b43",
+   "solid": false
+  },
+  "m": {
+   "name": "mud",
+   "color": "0x5b4a2c",
+   "solid": false
+  },
+  "y": {
+   "name": "reeds",
+   "color": "0x4c7a3f",
+   "solid": true
+  },
+  "c": {
+   "name": "cave floor",
+   "color": "0x4a4458",
+   "solid": false
+  },
+  "R": {
+   "name": "rock",
+   "color": "0x2c2833",
+   "solid": true
+  },
+  "k": {
+   "name": "shelf",
+   "color": "0x6a4a2a",
+   "solid": true
+  },
+  "F": {
+   "name": "ford",
+   "color": "0x6fa0d0",
+   "solid": false
+  },
+  "d": {
+   "name": "dirt",
+   "color": "0x8a7350",
+   "solid": false
+  },
+  "p": {
+   "name": "palisade",
+   "color": "0x5a3d1e",
+   "solid": true
+  },
+  "t": {
+   "name": "tent",
+   "color": "0x9a4a3a",
+   "solid": true
+  },
+  "o": {
+   "name": "fire pit",
+   "color": "0xd35400",
+   "solid": true
+  },
+  "a": {
+   "name": "sand",
+   "color": "0xd9b779",
+   "solid": false
+  },
+  "X": {
+   "name": "canyon wall",
+   "color": "0x8a4b2a",
+   "solid": true
+  },
+  "P": {
+   "name": "palm",
+   "color": "0x2f7a3a",
+   "solid": true
+  },
+  "B": {
+   "name": "sandstone",
+   "color": "0x8a5f3a",
+   "solid": true
+  },
+  "z": {
+   "name": "paving",
+   "color": "0xc9a36a",
+   "solid": false
+  },
+  "N": {
+   "name": "pine",
+   "color": "0x163a2c",
+   "solid": true
+  },
+  "n": {
+   "name": "needles",
+   "color": "0x4a6a5a",
+   "solid": false
+  },
+  "i": {
+   "name": "ice",
+   "color": "0xbfe0ee",
+   "solid": false
+  },
+  "e": {
+   "name": "elven path",
+   "color": "0xc8d4d8",
+   "solid": false
+  },
+  "E": {
+   "name": "elven wall",
+   "color": "0x8aa49c",
+   "solid": true
+  },
+  "v": {
+   "name": "obsidian floor",
+   "color": "0x2a2535",
+   "solid": false
+  },
+  "V": {
+   "name": "obsidian wall",
+   "color": "0x1c1826",
+   "solid": true
+  },
+  "q": {
+   "name": "statue",
+   "color": "0x7a7a88",
+   "solid": true
+  },
+  "G": {
+   "name": "glass",
+   "color": "0x9ad8e0",
+   "solid": false
+  },
+  "g": {
+   "name": "glass wall",
+   "color": "0x3a7a90",
+   "solid": true
+  }
+ },
+ "rows": [
+  "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+  "NnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnN",
+  "NnnnEEEEEnEEEnEEEEEnEEEnEEEEEnnN",
+  "NnnnEEDEEnEEEnEEDEEnEEEnEEDEEnnN",
+  "NnnnnnennnnnnnnnennnnnnnnnennnnN",
+  "NnnnnnennnnnnnnnennnnnnnnnennnnN",
+  "NeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeN",
+  "NnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnN",
+  "NnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnN",
+  "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "NnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnN",
+  "NnnnnnnnnnnnnniiiiiinnnnnnnnnnnN",
+  "NnnNNNnnonnnnniiiiiinnnnonnNNNnN",
+  "NnnNNNnnnnnnnniiiiiinnnnnnnNNNnN",
+  "NnnNNNnnnnnnnniiiiiinnnnnnnNNNnN",
+  "NnnnnnnnnnnnnniiiiiinnnnnnnnnnnN",
+  "NnnnnnnnnnnnnnnnennnnnnnnnnnnnnN",
+  "NNNNNNNNNNNNNNNNeNNNNNNNNNNNNNNN"
+ ],
+ "spawn": {
+  "x": 1,
+  "y": 9
+ },
+ "npcs": [
+  {
+   "id": "maelis_root",
+   "dialogue": "rootmere",
+   "x": 18,
+   "y": 8,
+   "color": "0x6aa070"
+  },
+  {
+   "id": "tilda_frostfern",
+   "dialogue": "rootmere",
+   "x": 9,
+   "y": 8,
+   "color": "0x90c0a0"
+  },
+  {
+   "id": "ember_oldwick",
+   "dialogue": "rootmere",
+   "x": 22,
+   "y": 11,
+   "color": "0xd07a3a"
+  },
+  {
+   "id": "wren_hallow",
+   "dialogue": "rootmere",
+   "x": 12,
+   "y": 13,
+   "color": "0xb0d0f0"
+  },
+  {
+   "id": "barth_quill",
+   "dialogue": "rootmere",
+   "x": 27,
+   "y": 8,
+   "color": "0xc0a880"
+  }
+ ],
+ "savePoints": [
+  {
+   "x": 14,
+   "y": 7
+  }
+ ],
+ "doors": [
+  {
+   "x": 6,
+   "y": 3,
+   "to": "rootmere_store",
+   "tx": 6,
+   "ty": 7,
+   "facing": "up"
+  },
+  {
+   "x": 16,
+   "y": 3,
+   "to": "explorers_lodge",
+   "tx": 6,
+   "ty": 7,
+   "facing": "up"
+  },
+  {
+   "x": 26,
+   "y": 3,
+   "to": "rootmere_inn",
+   "tx": 6,
+   "ty": 7,
+   "facing": "up"
+  },
+  {
+   "x": 0,
+   "y": 9,
+   "to": "rootmere_wood",
+   "tx": 30,
+   "ty": 9,
+   "facing": "left"
+  },
+  {
+   "x": 31,
+   "y": 9,
+   "to": "frozen_shrine",
+   "tx": 16,
+   "ty": 16,
+   "facing": "up"
+  },
+  {
+   "x": 16,
+   "y": 17,
+   "to": "moor_road",
+   "tx": 16,
+   "ty": 1,
+   "facing": "down",
+   "locked": true,
+   "id": "moor_road_open",
+   "key": "moor_lantern",
+   "lockedText": "The south road is dark and the lamps are out. Rootwarden Maelis keeps the lantern that guides travellers across the moor."
+  }
+ ],
+ "chests": [
+  {
+   "id": "rootmere_chest1",
+   "x": 2,
+   "y": 16,
+   "items": {
+    "hi_potion": 4,
+    "clear_tea": 3
+   }
+  },
+  {
+   "id": "rootmere_hidden",
+   "x": 29,
+   "y": 16,
+   "hidden": true,
+   "lock": 1,
+   "gold": 1100,
+   "items": {
+    "hi_ether": 3
+   }
+  }
+ ],
+ "enemies": [],
+ "scenes": [
+  {
+   "id": "arrive_rootmere",
+   "on": "enter"
+  }
+ ]
+}

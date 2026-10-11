@@ -1,0 +1,72 @@
+{
+  "scenes": {
+    "arrive_lastlight": {
+      "when": { "notFlag": "reachedLastLight" },
+      "lines": [
+        { "n": "", "t": "The glass ends at a wall of white stone a hundred feet tall, and the wall goes on forever in both directions. Set into it is a single gate the colour of old bone, and in front of the gate a ragged camp has been pitched, tent against tent." },
+        { "n": "", "t": "A lantern burns at the top of every tent pole, though it is the middle of the day. The soldiers around them wear the Queen's green, but the badges are torn off, and the sentries at the gate do not look at you as an enemy." },
+        { "n": "", "t": "Beyond the wall, something very large bellows. The tents shiver, and a dozen heads turn toward the sound, and then, carefully, turn back." }
+      ],
+      "set": ["reachedLastLight"],
+      "chapter": 10,
+      "autosave": true,
+      "banner": "Chapter 10: Ismerel's Labyrinth"
+    },
+    "king_intro": {
+      "when": { "notFlag": "kingSeen" },
+      "lines": [
+        { "n": "", "t": "The maze opens into a round arena floored in pale sand. The walls are carved with bulls and suns, and a hundred skulls stare down from niches above the gallery." },
+        { "n": "", "t": "In the centre, kneeling in front of a stone altar, is a minotaur twice the size of any you have faced. A crown of bent glass sits between his horns. He is polishing an axe the size of a door." },
+        { "n": "The Minotaur King", "t": "Little glow-bearer. The Queen said you would come, and I wished it. A hundred years I have waited for something worth the axe." },
+        { "n": "{hero}", "t": "I do not want to fight you. I want the Queen." },
+        { "n": "The Minotaur King", "t": "The Queen is behind me. Everything is behind me. Tell me you are strong, and I will believe you. Show me, and I will remember you." }
+      ],
+      "set": ["kingSeen"]
+    },
+    "king_down": {
+      "when": { "notFlag": "kingSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Minotaur King drops his axe, and the crash rings round the arena like a dropped bell. He sits back on his heels and looks at you, and laughs, a deep, rough, delighted sound." },
+        { "n": "The Minotaur King", "t": "There. A hundred years, and the maze has finally lost someone. Take the door, glow-bearer. She is waiting. She has been waiting longer than I have." },
+        { "n": "", "t": "He lifts a hand toward the north door, and the great stone slides aside. Beyond it, a corridor of glass runs up toward a pale light." }
+      ],
+      "set": ["kingSceneDone"],
+      "gold": 800
+    },
+    "queen_intro": {
+      "when": { "notFlag": "queenSeen" },
+      "lines": [
+        { "n": "", "t": "The throne room is a sphere of mirrors. Every wall, every pillar, every inch of floor throws your light back at you, until the whole chamber is one bright, trembling glow." },
+        { "n": "", "t": "On a throne of fused glass sits a woman in a plain grey dress. Her hair is silver, her face is tired, and a circlet of green stone rests on her brow. Above her, set in a niche of white stone, an idol of a smiling sun holds a sliver of pure light in its open hands." },
+        { "n": "Queen Ismerel", "t": "At last. Do you know how many nights I have watched you through the mirrors? Walking, fighting, sleeping. I have never seen anyone so tired, or so brave." },
+        { "n": "{hero}", "t": "You took a tenth of the sun, from every road and every well. Why?" },
+        { "n": "Queen Ismerel", "t": "Because the sun is dying, and somebody had to keep a little of it alive. I did what had to be done, and I will do it again. Come, bearer. Let us see whose light is brighter." }
+      ],
+      "set": ["queenSeen"]
+    },
+    "queen_down": {
+      "when": { "notFlag": "queenSceneDone" },
+      "lines": [
+        { "n": "", "t": "Ismerel falls to her knees, and the idol above her dims. The sliver of light between its hands trembles, and then drifts down through the air, as if it were weightless, and settles into your palm." },
+        { "n": "", "t": "It sinks into the mark, and the mark flares white, and for one long moment every mirror in the room shows the same thing: a sunrise, vast and gold, over a green and living sea." },
+        { "n": "Queen Ismerel", "t": "It answers to you. It always did. I only held it. A man in pale robes taught me how to pull the light through the mirrors, and told me that it would save the world. He did not tell me it was your light I was drawing." },
+        { "n": "Queen Ismerel", "t": "His name is the Pale Chancellor. He waits in the forest to the north, among the elves. Stop him before he finishes what he began with me. And forgive me, if you can." },
+        { "n": "{hero}", "t": "Two shards now. The Dawn, and the Zenith. And the mark was never a wound." }
+      ],
+      "set": ["queenSceneDone"],
+      "gold": 1500
+    },
+    "act2_end": {
+      "when": { "notFlag": "act2_done" },
+      "lines": [
+        { "n": "", "t": "The camp is quiet when you walk back out of the labyrinth. Rows of soldiers in torn green stand at attention, and the lanterns on the tent poles have gone out, one by one, as if the sun had taken the burden from them." },
+        { "n": "", "t": "Captain Rook salutes. For once nobody is looking at the gate." },
+        { "n": "Captain Rook", "t": "That is the end of the Queen's reign, and the end of the glass. The Pale Chancellor, you said. The elves of the Frostwake are the only ones who might know where he is." },
+        { "n": "", "t": "The two shards in your palm pulse together, gently, like a second heartbeat. This time they point north-west, toward the cold, dark line of a forest on the horizon." }
+      ],
+      "set": ["act2_done"],
+      "autosave": true,
+      "banner": "Act 2 complete"
+    }
+  }
+}

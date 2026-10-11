@@ -1,0 +1,339 @@
+{
+ "id": "labyrinth_halls",
+ "name": "Ismerel's Labyrinth",
+ "tileSize": 40,
+ "legend": {
+  "#": {
+   "name": "tree",
+   "color": "0x1f4d2b",
+   "solid": true
+  },
+  ".": {
+   "name": "grass",
+   "color": "0x3f7d3a",
+   "solid": false
+  },
+  ",": {
+   "name": "path",
+   "color": "0xb59a6a",
+   "solid": false
+  },
+  "~": {
+   "name": "water",
+   "color": "0x2a5d9a",
+   "solid": true
+  },
+  "S": {
+   "name": "salt",
+   "color": "0xe6e2d3",
+   "solid": false
+  },
+  "H": {
+   "name": "house",
+   "color": "0x8a5a3a",
+   "solid": true
+  },
+  "D": {
+   "name": "door",
+   "color": "0x3b2412",
+   "solid": false
+  },
+  "f": {
+   "name": "floor",
+   "color": "0x9a7b52",
+   "solid": false
+  },
+  "w": {
+   "name": "wall",
+   "color": "0x4a3a2a",
+   "solid": true
+  },
+  "r": {
+   "name": "rug",
+   "color": "0x7a2f2f",
+   "solid": false
+  },
+  "W": {
+   "name": "labyrinth wall",
+   "color": "0xd8d0c0",
+   "solid": true
+  },
+  "j": {
+   "name": "jetty",
+   "color": "0x8b6b43",
+   "solid": false
+  },
+  "m": {
+   "name": "mud",
+   "color": "0x5b4a2c",
+   "solid": false
+  },
+  "y": {
+   "name": "reeds",
+   "color": "0x4c7a3f",
+   "solid": true
+  },
+  "c": {
+   "name": "cave floor",
+   "color": "0x4a4458",
+   "solid": false
+  },
+  "R": {
+   "name": "rock",
+   "color": "0x2c2833",
+   "solid": true
+  },
+  "k": {
+   "name": "shelf",
+   "color": "0x6a4a2a",
+   "solid": true
+  },
+  "F": {
+   "name": "ford",
+   "color": "0x6fa0d0",
+   "solid": false
+  },
+  "d": {
+   "name": "dirt",
+   "color": "0x8a7350",
+   "solid": false
+  },
+  "p": {
+   "name": "palisade",
+   "color": "0x5a3d1e",
+   "solid": true
+  },
+  "t": {
+   "name": "tent",
+   "color": "0x9a4a3a",
+   "solid": true
+  },
+  "o": {
+   "name": "fire pit",
+   "color": "0xd35400",
+   "solid": true
+  },
+  "a": {
+   "name": "sand",
+   "color": "0xd9b779",
+   "solid": false
+  },
+  "X": {
+   "name": "canyon wall",
+   "color": "0x8a4b2a",
+   "solid": true
+  },
+  "P": {
+   "name": "palm",
+   "color": "0x2f7a3a",
+   "solid": true
+  },
+  "B": {
+   "name": "sandstone",
+   "color": "0x8a5f3a",
+   "solid": true
+  },
+  "z": {
+   "name": "paving",
+   "color": "0xc9a36a",
+   "solid": false
+  },
+  "N": {
+   "name": "pine",
+   "color": "0x163a2c",
+   "solid": true
+  },
+  "n": {
+   "name": "needles",
+   "color": "0x4a6a5a",
+   "solid": false
+  },
+  "i": {
+   "name": "ice",
+   "color": "0xbfe0ee",
+   "solid": false
+  },
+  "e": {
+   "name": "elven path",
+   "color": "0xc8d4d8",
+   "solid": false
+  },
+  "E": {
+   "name": "elven wall",
+   "color": "0x8aa49c",
+   "solid": true
+  },
+  "v": {
+   "name": "obsidian floor",
+   "color": "0x2a2535",
+   "solid": false
+  },
+  "V": {
+   "name": "obsidian wall",
+   "color": "0x1c1826",
+   "solid": true
+  },
+  "q": {
+   "name": "statue",
+   "color": "0x7a7a88",
+   "solid": true
+  },
+  "G": {
+   "name": "glass",
+   "color": "0x9ad8e0",
+   "solid": false
+  },
+  "g": {
+   "name": "glass wall",
+   "color": "0x3a7a90",
+   "solid": true
+  }
+ },
+ "rows": [
+  "WWWWWWWWWWWWWWWWDWWWWWWWWWWWWWWW",
+  "WzzzzzzzzzzzzzzzzzzzzzzzzzzzzzWW",
+  "WzWzWWWWWzWzzzzzzzzzzWWWWzWWWzWW",
+  "WzWzzzWzzzWzzzzzzzzzzzzzWzzzWzWW",
+  "WzWWWzWzzzWWzzzzzzzzzWWzWWWzWzWW",
+  "WzzzWzzzWzWzzzzzzzzzzzzzzzWzWzWW",
+  "WWWWWWWzWzWzWWzzzzzWWzWWWzWzWWWW",
+  "WzzzzzWzWzWzzzzzzzWzzzWzzzWzzzWW",
+  "WzWWWzWWWzWWWzWWWWWzWWWzWWWWWzWW",
+  "WzzzWzzzzzWzzzWzzzWzzzWzzzzzWzWW",
+  "WWWzWWWWWzWzWWWzWzWWWzWWWWWzWzWW",
+  "WzzzWzzzzzWzzzWzWzzzzzWzzzWzzzWW",
+  "WzWWWWWzWWWWWzWzWWWWWWWzWWWzWzWW",
+  "WzWzzzWzWzzzzzWzzzzzWzzzzzzzWzWW",
+  "WzWzWzWWWzWWWWWWWWWzWzWWWWWWWzWW",
+  "WzzzWzzzzzzzzzzzzzzzWzzzzzzzzzWW",
+  "WWWWWWWWWWWWWWWWzWWWWWWWWWWWWWWW",
+  "WWWWWWWWWWWWWWWWDWWWWWWWWWWWWWWW"
+ ],
+ "spawn": {
+  "x": 16,
+  "y": 16
+ },
+ "npcs": [],
+ "savePoints": [
+  {
+   "x": 23,
+   "y": 11
+  },
+  {
+   "x": 9,
+   "y": 14
+  }
+ ],
+ "doors": [
+  {
+   "x": 16,
+   "y": 17,
+   "to": "lastlight_camp",
+   "tx": 30,
+   "ty": 9,
+   "facing": "left"
+  },
+  {
+   "x": 16,
+   "y": 0,
+   "to": "glass_throne",
+   "tx": 16,
+   "ty": 16,
+   "facing": "up"
+  }
+ ],
+ "chests": [
+  {
+   "id": "maze_gold",
+   "x": 14,
+   "y": 7,
+   "gold": 1400
+  },
+  {
+   "id": "maze_relics",
+   "x": 6,
+   "y": 11,
+   "items": {
+    "hi_potion": 4,
+    "phoenix_plume": 3
+   }
+  },
+  {
+   "id": "maze_hoard",
+   "x": 28,
+   "y": 11,
+   "items": {
+    "hi_ether": 4,
+    "grand_elixir": 2
+   }
+  }
+ ],
+ "enemies": [
+  {
+   "id": "lh_1",
+   "creatures": [
+    "minotaur_grunt",
+    "minotaur_grunt",
+    "minotaur_seer"
+   ],
+   "x": 3,
+   "y": 7,
+   "respawn": true
+  },
+  {
+   "id": "lh_2",
+   "creatures": [
+    "minotaur_axeman",
+    "minotaur_grunt",
+    "minotaur_seer"
+   ],
+   "x": 24,
+   "y": 7,
+   "respawn": true
+  },
+  {
+   "id": "lh_3",
+   "creatures": [
+    "minotaur_axeman",
+    "minotaur_axeman",
+    "minotaur_seer"
+   ],
+   "x": 18,
+   "y": 11,
+   "respawn": true
+  },
+  {
+   "id": "lh_4",
+   "creatures": [
+    "minotaur_grunt",
+    "minotaur_grunt",
+    "minotaur_axeman"
+   ],
+   "x": 21,
+   "y": 14,
+   "respawn": true
+  },
+  {
+   "id": "minotaur_king",
+   "creatures": [
+    "minotaur_king"
+   ],
+   "x": 16,
+   "y": 3,
+   "flag": "kingDefeated",
+   "noFlee": true,
+   "victoryScene": "king_down"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "king_intro",
+   "on": {
+    "x": 14,
+    "y": 6,
+    "w": 5,
+    "h": 1
+   }
+  }
+ ]
+}

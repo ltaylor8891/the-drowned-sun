@@ -1,0 +1,339 @@
+{
+ "id": "scorch_road",
+ "name": "The Scorch Road",
+ "tileSize": 40,
+ "legend": {
+  "#": {
+   "name": "tree",
+   "color": "0x1f4d2b",
+   "solid": true
+  },
+  ".": {
+   "name": "grass",
+   "color": "0x3f7d3a",
+   "solid": false
+  },
+  ",": {
+   "name": "path",
+   "color": "0xb59a6a",
+   "solid": false
+  },
+  "~": {
+   "name": "water",
+   "color": "0x2a5d9a",
+   "solid": true
+  },
+  "S": {
+   "name": "salt",
+   "color": "0xe6e2d3",
+   "solid": false
+  },
+  "H": {
+   "name": "house",
+   "color": "0x8a5a3a",
+   "solid": true
+  },
+  "D": {
+   "name": "door",
+   "color": "0x3b2412",
+   "solid": false
+  },
+  "f": {
+   "name": "floor",
+   "color": "0x9a7b52",
+   "solid": false
+  },
+  "w": {
+   "name": "wall",
+   "color": "0x4a3a2a",
+   "solid": true
+  },
+  "r": {
+   "name": "rug",
+   "color": "0x7a2f2f",
+   "solid": false
+  },
+  "W": {
+   "name": "labyrinth wall",
+   "color": "0xd8d0c0",
+   "solid": true
+  },
+  "j": {
+   "name": "jetty",
+   "color": "0x8b6b43",
+   "solid": false
+  },
+  "m": {
+   "name": "mud",
+   "color": "0x5b4a2c",
+   "solid": false
+  },
+  "y": {
+   "name": "reeds",
+   "color": "0x4c7a3f",
+   "solid": true
+  },
+  "c": {
+   "name": "cave floor",
+   "color": "0x4a4458",
+   "solid": false
+  },
+  "R": {
+   "name": "rock",
+   "color": "0x2c2833",
+   "solid": true
+  },
+  "k": {
+   "name": "shelf",
+   "color": "0x6a4a2a",
+   "solid": true
+  },
+  "F": {
+   "name": "ford",
+   "color": "0x6fa0d0",
+   "solid": false
+  },
+  "d": {
+   "name": "dirt",
+   "color": "0x8a7350",
+   "solid": false
+  },
+  "p": {
+   "name": "palisade",
+   "color": "0x5a3d1e",
+   "solid": true
+  },
+  "t": {
+   "name": "tent",
+   "color": "0x9a4a3a",
+   "solid": true
+  },
+  "o": {
+   "name": "fire pit",
+   "color": "0xd35400",
+   "solid": true
+  },
+  "a": {
+   "name": "sand",
+   "color": "0xd9b779",
+   "solid": false
+  },
+  "X": {
+   "name": "canyon wall",
+   "color": "0x8a4b2a",
+   "solid": true
+  },
+  "P": {
+   "name": "palm",
+   "color": "0x2f7a3a",
+   "solid": true
+  },
+  "B": {
+   "name": "sandstone",
+   "color": "0x8a5f3a",
+   "solid": true
+  },
+  "z": {
+   "name": "paving",
+   "color": "0xc9a36a",
+   "solid": false
+  },
+  "N": {
+   "name": "pine",
+   "color": "0x163a2c",
+   "solid": true
+  },
+  "n": {
+   "name": "needles",
+   "color": "0x4a6a5a",
+   "solid": false
+  },
+  "i": {
+   "name": "ice",
+   "color": "0xbfe0ee",
+   "solid": false
+  },
+  "e": {
+   "name": "elven path",
+   "color": "0xc8d4d8",
+   "solid": false
+  },
+  "E": {
+   "name": "elven wall",
+   "color": "0x8aa49c",
+   "solid": true
+  },
+  "v": {
+   "name": "obsidian floor",
+   "color": "0x2a2535",
+   "solid": false
+  },
+  "V": {
+   "name": "obsidian wall",
+   "color": "0x1c1826",
+   "solid": true
+  },
+  "q": {
+   "name": "statue",
+   "color": "0x7a7a88",
+   "solid": true
+  },
+  "G": {
+   "name": "glass",
+   "color": "0x9ad8e0",
+   "solid": false
+  },
+  "g": {
+   "name": "glass wall",
+   "color": "0x3a7a90",
+   "solid": true
+  }
+ },
+ "rows": [
+  "XXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXX",
+  "XXaaaaaaaaXXXaaa,aaaaaaaaXaaaaaX",
+  "XaaPPaaXaaaaaaaa,aaaXaaaaaaaaaaX",
+  "XaaPPaaaaaaXaXaX,aaaaXaaaaaaaaaX",
+  "XaaPPaaaaXaaaaaa,aaaaaaaaaaaaaaX",
+  "XaaaaaaaaaaaaaaX,aaaaaaaXaXaaaaX",
+  "XXXXaXaaXaaaaaaa,aaaaaaaaaXaaXaX",
+  "XaaaaaaaXaaaaXXa,aXaaaaaaXaaaaaX",
+  "XaaaaaaaaaaaaaXa,aaXaaaXaaaaaaaX",
+  ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+  "XaaaaXaaa,aaaaaaXaaaXaaaaaaaaaaX",
+  "XXaaaaaaa,aaaaaaaaaaaaaaaaaaaaaX",
+  "XaaaXaaaa,aaaaaaXaaaaaaaaaaXXaXX",
+  "XaaaaaaaX,aaaaaaaaaaaaaaPPPPaaXX",
+  "Xaaaaaaaa,aaaaaaaaXaaaaaPPPPaaaX",
+  "Xaaaaaaaa,aaaaaaaaaaaaaaPPPPaaaX",
+  "Xaaaaaaaa,aXaaXaaaXaaXaaaaaaXXaX",
+  "XXXXXXXXX,XXXXXXXXXXXXXXXXXXXXXX"
+ ],
+ "spawn": {
+  "x": 1,
+  "y": 9
+ },
+ "npcs": [],
+ "savePoints": [
+  {
+   "x": 14,
+   "y": 10
+  }
+ ],
+ "doors": [
+  {
+   "x": 0,
+   "y": 9,
+   "to": "khesh_ura",
+   "tx": 30,
+   "ty": 9,
+   "facing": "left"
+  },
+  {
+   "x": 31,
+   "y": 9,
+   "to": "waystation",
+   "tx": 1,
+   "ty": 9,
+   "facing": "right"
+  },
+  {
+   "x": 16,
+   "y": 0,
+   "to": "toll_fort",
+   "tx": 16,
+   "ty": 16,
+   "facing": "up"
+  },
+  {
+   "x": 9,
+   "y": 17,
+   "to": "scorpion_burrow",
+   "tx": 7,
+   "ty": 8,
+   "facing": "up"
+  }
+ ],
+ "chests": [
+  {
+   "id": "scorch_cache1",
+   "x": 4,
+   "y": 14,
+   "items": {
+    "hi_potion": 3,
+    "antidote": 2
+   }
+  },
+  {
+   "id": "scorch_cache2",
+   "x": 28,
+   "y": 3,
+   "gold": 600
+  },
+  {
+   "id": "scorch_cache3",
+   "x": 21,
+   "y": 14,
+   "items": {
+    "hi_ether": 2,
+    "phoenix_plume": 1
+   }
+  }
+ ],
+ "enemies": [
+  {
+   "id": "sr_1",
+   "creatures": [
+    "lizard_spearman",
+    "lizard_skirmisher"
+   ],
+   "x": 12,
+   "y": 5,
+   "respawn": true
+  },
+  {
+   "id": "sr_2",
+   "creatures": [
+    "lizard_skirmisher",
+    "lizard_skirmisher",
+    "lizard_shaman"
+   ],
+   "x": 22,
+   "y": 6,
+   "respawn": true
+  },
+  {
+   "id": "sr_3",
+   "creatures": [
+    "dune_scorpion",
+    "dune_scorpion"
+   ],
+   "x": 6,
+   "y": 12,
+   "respawn": true
+  },
+  {
+   "id": "sr_4",
+   "creatures": [
+    "sand_stinger",
+    "sand_stinger",
+    "sand_stinger"
+   ],
+   "x": 20,
+   "y": 12,
+   "respawn": true
+  },
+  {
+   "id": "sr_5",
+   "creatures": [
+    "lizard_spearman",
+    "dune_scorpion",
+    "stonetail_scorpion"
+   ],
+   "x": 26,
+   "y": 10,
+   "respawn": true
+  }
+ ],
+ "scenes": []
+}

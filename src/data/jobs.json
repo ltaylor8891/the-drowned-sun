@@ -875,30 +875,214 @@
     "alchemist": {
       "name": "Alchemist",
       "unlockFlag": "job_alchemist_unlocked",
-      "master": "(unknown)",
-      "hint": "Three rare ingredients are wanted.",
-      "desc": "Brew potions with greater potency.",
-      "planned": true,
+      "master": "Alchemist Ondrea Sulph",
+      "hint": "An alchemist in the cinder landing wants three rare ingredients from the vents.",
+      "desc": "Brew potions at an alembic from monster parts. Brewed potions work better the higher your level, and every potion you use is stronger.",
       "perks": [
         {
           "level": 1,
-          "text": "Brew potions with greater potency.",
+          "text": "Brew at an alembic. Recipe: Cinder Tonic.",
           "effects": {}
+        },
+        {
+          "level": 2,
+          "text": "Potions you use are 5% stronger. Recipe: Brimstone Ether.",
+          "effects": {
+            "potency": 0.05
+          }
+        },
+        {
+          "level": 3,
+          "text": "Recipe: Hound Draught.",
+          "effects": {}
+        },
+        {
+          "level": 4,
+          "text": "Potions you use are 5% stronger. Recipe: Vent Remedy.",
+          "effects": {
+            "potency": 0.05
+          }
+        },
+        {
+          "level": 5,
+          "text": "Recipe: Sunfire Elixir.",
+          "effects": {}
+        },
+        {
+          "level": 6,
+          "text": "Potions you use are 5% stronger.",
+          "effects": {
+            "potency": 0.05
+          }
+        },
+        {
+          "level": 7,
+          "text": "Recipe: Phoenix Draught.",
+          "effects": {}
+        },
+        {
+          "level": 8,
+          "text": "Potions you use are 5% stronger. Brewing sometimes keeps the ingredients.",
+          "effects": {
+            "potency": 0.05,
+            "thrift": 0.2
+          }
+        },
+        {
+          "level": 9,
+          "text": "Recipe: Grand Brew.",
+          "effects": {}
+        },
+        {
+          "level": 10,
+          "text": "Master alchemist: potions you use are 10% stronger.",
+          "effects": {
+            "potency": 0.1
+          }
+        }
+      ],
+      "recipes": [
+        {
+          "id": "cinder_tonic",
+          "level": 1,
+          "gold": 150,
+          "items": {
+            "imp_horn": 2
+          }
+        },
+        {
+          "id": "brimstone_ether",
+          "level": 2,
+          "gold": 200,
+          "items": {
+            "brimstone": 1,
+            "imp_horn": 1
+          }
+        },
+        {
+          "id": "hound_draught",
+          "level": 3,
+          "gold": 300,
+          "items": {
+            "ember_fang": 2,
+            "imp_horn": 1
+          }
+        },
+        {
+          "id": "vent_remedy",
+          "level": 4,
+          "gold": 350,
+          "items": {
+            "brimstone": 1,
+            "ember_fang": 1
+          }
+        },
+        {
+          "id": "sunfire_elixir",
+          "level": 5,
+          "gold": 600,
+          "items": {
+            "brimstone": 2,
+            "ember_fang": 2,
+            "imp_horn": 2
+          }
+        },
+        {
+          "id": "phoenix_draught",
+          "level": 7,
+          "gold": 800,
+          "items": {
+            "brimstone": 3,
+            "ember_fang": 2
+          }
+        },
+        {
+          "id": "grand_brew",
+          "level": 9,
+          "gold": 1500,
+          "items": {
+            "brimstone": 4,
+            "ember_fang": 3,
+            "imp_horn": 3
+          }
         }
       ]
     },
     "fisher": {
       "name": "Fisher",
       "unlockFlag": "job_fisher_unlocked",
-      "master": "(unknown)",
-      "hint": "A famous fish waits in deep water.",
-      "desc": "Fishing, with rare catches.",
-      "planned": true,
+      "master": "Fisher Corra Netwick",
+      "hint": "A fisher at the Nave Landing is after a famous fish in the flooded nave.",
+      "desc": "Fish at fishing posts: cast, wait for a bite, then stop the cursor in the green. Fish restore HP and MP when eaten; higher levels widen the zone and bring rarer catches.",
       "perks": [
         {
           "level": 1,
-          "text": "Fishing, with rare catches.",
+          "text": "Fish at fishing posts by the water.",
           "effects": {}
+        },
+        {
+          "level": 2,
+          "text": "The catch zone is a little wider.",
+          "effects": {
+            "zone": 0.03
+          }
+        },
+        {
+          "level": 3,
+          "text": "Rare fish bite 25% more often.",
+          "effects": {
+            "rareBoost": 0.25
+          }
+        },
+        {
+          "level": 4,
+          "text": "The catch zone is a little wider.",
+          "effects": {
+            "zone": 0.03
+          }
+        },
+        {
+          "level": 5,
+          "text": "Rare fish bite 25% more often.",
+          "effects": {
+            "rareBoost": 0.25
+          }
+        },
+        {
+          "level": 6,
+          "text": "The catch zone is a little wider.",
+          "effects": {
+            "zone": 0.03
+          }
+        },
+        {
+          "level": 7,
+          "text": "Rare fish bite 25% more often.",
+          "effects": {
+            "rareBoost": 0.25
+          }
+        },
+        {
+          "level": 8,
+          "text": "The catch zone is a little wider.",
+          "effects": {
+            "zone": 0.03
+          }
+        },
+        {
+          "level": 9,
+          "text": "Rare fish bite 25% more often.",
+          "effects": {
+            "rareBoost": 0.25
+          }
+        },
+        {
+          "level": 10,
+          "text": "Master fisher: the widest zone and the best luck.",
+          "effects": {
+            "zone": 0.04,
+            "rareBoost": 0.5
+          }
         }
       ]
     }
@@ -1019,6 +1203,86 @@
         ]
       },
       "desc": "Immune to petrify and curse."
+    },
+    "dawn": {
+      "name": "Dawn Rune",
+      "slot": "weapon",
+      "level": 3,
+      "gold": 2400,
+      "dust": 4,
+      "effect": {
+        "element": "light"
+      },
+      "desc": "Light damage. The bane of vampires, wraiths and demons."
+    },
+    "heartward": {
+      "name": "Heartward Rune",
+      "slot": "armor",
+      "level": 4,
+      "gold": 3200,
+      "dust": 5,
+      "effect": {
+        "immune": [
+          "charm",
+          "sleep"
+        ]
+      },
+      "desc": "Immune to charm and sleep."
+    }
+  },
+  "fishing": {
+    "tables": {
+      "choir_shallows": [
+        {
+          "id": "grey_perch",
+          "weight": 60
+        },
+        {
+          "id": "lamp_eel",
+          "weight": 30,
+          "minLevel": 2
+        },
+        {
+          "id": "bell_trout",
+          "weight": 18,
+          "minLevel": 3
+        },
+        {
+          "id": "glass_carp",
+          "weight": 5,
+          "rare": true,
+          "minLevel": 4
+        }
+      ],
+      "choir_nave": [
+        {
+          "id": "moonscale_pike",
+          "weight": 8,
+          "rare": true,
+          "famous": true,
+          "flag": "pikeCaught",
+          "once": "pikeCaught"
+        },
+        {
+          "id": "grey_perch",
+          "weight": 40
+        },
+        {
+          "id": "lamp_eel",
+          "weight": 36
+        },
+        {
+          "id": "bell_trout",
+          "weight": 24,
+          "minLevel": 3
+        },
+        {
+          "id": "glass_carp",
+          "weight": 8,
+          "rare": true,
+          "minLevel": 4
+        }
+      ]
     }
   }
 }

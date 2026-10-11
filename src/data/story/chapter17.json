@@ -1,0 +1,52 @@
+{
+  "scenes": {
+    "approach_enter": {
+      "when": { "notFlag": "approachEntered" },
+      "lines": [
+        { "n": "", "t": "The iron gate swings inward on a long avenue of black and gold paving, lined with statues of men and women in court dress. Each one holds a glass of something dark. Each one is smiling, faintly, at somebody just behind you." },
+        { "n": "", "t": "Chandeliers of hammered brass hang from nothing, from the cavern ceiling far above, and every candle in them is lit. Somewhere ahead, strings are tuning. It is a very old tune, and it is slightly flat, as if the player had been practising it for a very long time with nobody to hear." }
+      ],
+      "set": ["approachEntered"]
+    },
+    "arrive_alms": {
+      "when": { "notFlag": "reachedAlms" },
+      "lines": [
+        { "n": "", "t": "Just inside the outer ward, between the avenue and the great doors, a low grey almshouse crouches in the shadow of the court like a pup in the lee of a wall. Its windows are shuttered against the music. A thin line of smoke rises from its chimney and bends away from the doors." },
+        { "n": "", "t": "A woman in a faded servant's livery stands on its step with a ring of keys at her belt and a lantern in her hand. She does not smile. She looks at the mark on your hand, then at the door behind her, then at you, and the lines of her face rearrange themselves into something very like hope." }
+      ],
+      "set": ["reachedAlms"],
+      "chapter": 17,
+      "autosave": true,
+      "banner": "Chapter 17: The Cinder Court"
+    },
+    "halls_enter": {
+      "when": { "notFlag": "hallsEntered" },
+      "lines": [
+        { "n": "", "t": "The great doors open on a ballroom the length of a cathedral. A thousand candles burn, and under them the floor is crowded with dancers in the dress of a vanished age, turning in pairs, gliding, perfectly silent. Not one of them casts a shadow. Not one of them has a reflection in the polished floor." },
+        { "n": "", "t": "The dancers do not stop when you enter. They only turn their heads, all together, as a field of flowers turns toward the sun, and their eyes are the red of banked coals." }
+      ],
+      "set": ["hallsEntered"]
+    },
+    "countess_intro": {
+      "when": { "notFlag": "countessSeen" },
+      "lines": [
+        { "n": "", "t": "At the end of the hall a long table is laid for a feast: silver, crystal, white linen, forty places, every one set and every one empty. At its head sits a woman in a gown the colour of old wine, with a crown of pale metal and a glass of something dark at her elbow. She has not touched it. She rises as you approach, and the candles all lean toward her." },
+        { "n": "The Vampire Countess", "t": "The guest of honour. I laid your place a hundred years ago and I have never once let the cutlery tarnish. You have kept me waiting, light-bearer, and I do not mind in the least. A good host learns patience." },
+        { "n": "{hero}", "t": "You have kept this feast going for a century. For whom?" },
+        { "n": "The Vampire Countess", "t": "For anyone who walks in. A feast with no guest is only a funeral for the food. Sit. Eat. Or do not, and we will dance instead. Nyrrh promised me the music would never stop, and he has kept the promise in the only way he could." }
+      ],
+      "set": ["countessSeen"]
+    },
+    "countess_down": {
+      "when": { "notFlag": "countessSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Countess sinks into her chair at the head of the table, as if suddenly very tired, and the crown slides from her brow and rings on the floor. All through the ballroom the music stops. Not tapers off, not fades: stops, like a held breath, and a thousand dancers turn to look at their own empty hands." },
+        { "n": "The Vampire Countess", "t": "There. I had forgotten silence. It is not as bad as I feared. Take the key from my belt. It opens the water-gate to the Drowned Choir. The sunken nave lies beneath the court, and what sings there is not a vampire, and not a ghost, and is very, very old." },
+        { "n": "The Vampire Countess", "t": "We were the temple's feast-house, once. The last banquet of Ahn-Solis was laid on the night the sun went dim, and the cooks and the cantors and the dancers all swore to keep it going until the light came back. Nyrrh took us at our word. That is all this court has ever been: a promise that would not end." },
+        { "n": "{hero}", "t": "Then it ends tonight. Rest. The light is coming back, and I mean to carry it." }
+      ],
+      "set": ["countessSceneDone"],
+      "gold": 4000
+    }
+  }
+}

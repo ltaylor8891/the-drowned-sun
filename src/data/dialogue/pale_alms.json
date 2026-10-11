@@ -1,0 +1,1231 @@
+{
+  "npcs": {
+    "perpetua_quell": {
+      "name": "Almoner Perpetua Quell",
+      "role": "almoner of the Pale Alms and former head housekeeper of the court",
+      "personality": "upright, crisp, immaculately kept; her composure is a starched collar over a very old wound",
+      "voice": "household management as moral philosophy; precise about linen, silver and hours, silent about herself",
+      "events": [
+        {
+          "id": "perpetua_intro",
+          "when": {
+            "notFlag": "talkedAlmoner"
+          },
+          "set": [
+            "talkedAlmoner"
+          ],
+          "say": [
+            "Quell. Almoner of this house, and for forty years before that, head housekeeper of the court you can hear through the wall. I kept its linen, its silver and its ledgers. I could not keep its people. That is why the alms exists.",
+            "A hundred years ago the Countess laid a feast to wait out the dimming. We all swore to keep the candles lit until the light returned. Then Nyrrh answered the oath. The servants who stayed were changed. The servants who ran became my congregation.",
+            "The halls lie east of the pantry. A ballroom, a long table, a crown on the Countess's brow and my old mistress behind it. Strike her down if you must. But do not let her pour you a glass. She pours beautifully, and the glass is never empty."
+          ]
+        },
+        {
+          "id": "perpetua_report",
+          "when": {
+            "flag": "countessDefeated",
+            "notFlag": "reportedAlmoner"
+          },
+          "set": [
+            "reportedAlmoner",
+            "chapter_17_done",
+            "drowned_choir_open"
+          ],
+          "say": [
+            "The music stopped at the stroke of the third watch. I was counting spoons at the time. I put them down in their velvet, one at a time, in order, and then I sat on the floor and could not stand up for an hour.",
+            "A feast ended is a grave opened. I will see the staff of the court buried decently. Those of them who still breathe, I will feed. There are nineteen standing in the east garden this morning, blinking at the light of the lamps. They want bread. I have never been more glad to be asked for anything.",
+            "Take the almshouse's fund, and every remedy on the shelf. Her key opens the water-gate below the ballroom, and the Drowned Choir lies behind it. I was never allowed down there. They say the nave sings of its own accord. May it sing you through."
+          ],
+          "gold": 10000,
+          "give": {
+            "hi_potion": 8,
+            "hi_ether": 8,
+            "phoenix_plume": 6,
+            "grand_elixir": 4,
+            "clear_tea": 4
+          },
+          "autosave": true,
+          "banner": "Chapter 17 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "pq01",
+          "text": "A household runs on small certainties: bread at six, lamps at dusk, the same chair in the same corner. Remove them and the whole house forgets how to stand."
+        },
+        {
+          "id": "pq02",
+          "text": "I polished the court's silver every Thursday for forty years. Each fork I polished still gleams in some dark cupboard, and each has a little of my breath in it."
+        },
+        {
+          "id": "pq03",
+          "text": "The almshouse keeps eleven beds, a copper kettle and a single rule: no guest is asked where they have been. That one rule has been enough for me."
+        },
+        {
+          "id": "pq04",
+          "text": "Do not look a thrall in the eye for longer than a heartbeat. Their gaze is a hook. A charmed arm swings at the nearest friend, and a friend is always nearest."
+        },
+        {
+          "id": "pq05",
+          "text": "Light undoes them. A candle held steady, a lantern, a prayer said with conviction. The old court is a house of shadows, and a house of shadows fears the lamp."
+        },
+        {
+          "id": "pq06",
+          "text": "A vampire's kiss feeds him twice: once on your blood and once on your will. Break the first and the second falls away. Break the second and the first grows tired."
+        },
+        {
+          "id": "pq07",
+          "text": "Swordsman, carry a heartward rune if the Ashfall enchanters will set one. A steady arm is worth ten bandages, and a charmed one is worth a grave.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "pq08",
+          "text": "Caster, the court fears the dawn. If your craft can summon so much as a glow, hurl it. The dancers will scatter like moths.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "pq09",
+          "text": "Scout, there is a servants' stair behind the pantry that comes out behind the third pillar of the ballroom. I used it for forty years to avoid the guests.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "pq10",
+          "text": "Priest, the court has not heard a true blessing in a century. They will hate it, and some of them will weep. Say it anyway.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "pq11",
+          "text": "Fenwick plays the lute by the common room hearth. His is the only music in the alms, small and honest and slightly flat. I cherish it."
+        },
+        {
+          "id": "pq12",
+          "text": "Ysabeau was the Countess's handmaid and carries the scars to prove it. She sits beside the fire and never speaks of those years. I leave it so, and keep the kettle on."
+        },
+        {
+          "id": "pq13",
+          "text": "Captain Brand guards the door with a spear and a cold stare. A thrall tried the latch last week. He learned a hard lesson about doors."
+        },
+        {
+          "id": "pq14",
+          "text": "Sibyl came out of the chapel at dawn and told me the lamps would soon burn gold. I said I hoped she was right. She said it was not a matter of hope."
+        },
+        {
+          "id": "pq15",
+          "text": "Maurice keeps the pantry in order. His shelving follows a system that defeats me, and it is, as far as I can tell, devotional."
+        },
+        {
+          "id": "pq16",
+          "text": "Bess runs the Closed Curtain, an inn with every shutter drawn and every candle shielded. Guests rest easier in a shaded room with the outer world hidden."
+        },
+        {
+          "id": "pq17",
+          "text": "Anselm keeps the chapel bell and rings it at dusk and at dawn. It has a crack in it that gives it a rasp. I would not have it mended."
+        },
+        {
+          "id": "pq18",
+          "text": "A hawker of curios stood at the pantry door in the dead of the third watch and sold me a taper that gives light but never heat. It lights the cellar stair, and nothing has ever come up it."
+        },
+        {
+          "id": "pq19",
+          "text": "The ballroom floor is polished, and a dancer is never where he seems. Wait for the knights to step aside, and strike at the ones who linger.",
+          "when": {
+            "flag": "talkedAlmoner",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "pq20",
+          "text": "A thing prowls the cellar beneath the halls, half hound, half gentleman, with the court's grace and the moor's appetite. It is a bloodmoon stalker, Hollis says. Do not descend without silver.",
+          "when": {
+            "notFlag": "stalkerDefeated"
+          }
+        },
+        {
+          "id": "pq21",
+          "text": "The candles in the court went out one by one at dusk. Each dying flame had a tiny sigh in it. I counted them: nine hundred and sixty. Then I stood in the doorway and said a name for every one.",
+          "when": {
+            "flag": "countessDefeated",
+            "notFlag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "pq22",
+          "text": "The almshouse is crowded with people who have not slept in a bed for a century. They are very quiet, very polite, and a little afraid of the pillows.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "pq23",
+          "text": "You are the guest of honour, they say. Forgive me if I do not curtsy. I curtsied for forty years, and my knees remember every one.",
+          "when": {
+            "flag": "reachedAlms",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "pq24",
+          "text": "Go down to the Choir, and come back when you can. A kettle is on the hob, and a chair is empty by the window, and I keep it warm for you.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        }
+      ]
+    },
+    "fenwick_lark": {
+      "name": "Fenwick Lark",
+      "role": "lutenist who fled the court's orchestra",
+      "personality": "willowy, rueful, tuning a string that is never quite in tune; apologises to his instrument",
+      "voice": "pitches, modes and cadences; describes people as keys and rooms as chords",
+      "events": [],
+      "lines": [
+        {
+          "id": "fl01",
+          "text": "I was second lute in the court's orchestra. We played the same waltz for ninety-one years. It has forty bars and every one of them is burned into my fingers."
+        },
+        {
+          "id": "fl02",
+          "text": "A vampire waltz is in three-four time, but the second beat is a held breath. Dance it wrong and the whole room gasps. I have watched a man die of an early step."
+        },
+        {
+          "id": "fl03",
+          "text": "My lute has a split in the belly, which gives a buzz on the low D. It is the ugliest note I own. I would not part with it for a cathedral."
+        },
+        {
+          "id": "fl04",
+          "text": "Thralls move on the beat. If you step off the beat, they stumble. A very slight stagger, no more, but it is the gap in which one slips a blade."
+        },
+        {
+          "id": "fl05",
+          "text": "The Countess sang once, at the opening of the feast. A low contralto with a catch in it. The whole hall went silent. She has not sung since, and I would trade both my hands to hear it again."
+        },
+        {
+          "id": "fl06",
+          "text": "Music is a form of memory. The court is a form of music. Break the tune and the memories go loose, and the dancers drift off like leaves."
+        },
+        {
+          "id": "fl07",
+          "text": "Swordsman, you march in two-four. Admirable. Try three, and see how the court stumbles. It is a very cheap trick and it works every time.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "fl08",
+          "text": "Caster, a spell has a tempo. Quick spells are quavers, great ones are minims. Pace them against the waltz and the court cannot find its footing.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "fl09",
+          "text": "Scout, creep on the rests. The room breathes on every second beat. A foot set down in that silence is a foot that does not exist.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "fl10",
+          "text": "Priest, will you sing the evening office in the common room? The alms has a very small choir and a very large silence, and the two are not yet acquainted.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "fl11",
+          "text": "Perpetua once threw a ladle at me for playing out of tune. It was a fair decision and a terrible aim. I keep the ladle on the wall as a reminder."
+        },
+        {
+          "id": "fl12",
+          "text": "Ysabeau hums along to my lute on the nights she cannot sleep. She has a very light voice, a thread of silver. She does not know I hear it."
+        },
+        {
+          "id": "fl13",
+          "text": "Captain Brand whistles through his teeth on watch. One note, dead flat, repeated every ten seconds. It is the most reassuring sound I know."
+        },
+        {
+          "id": "fl14",
+          "text": "Sibyl hums hymns in the pantry, all of them in the wrong key. She does not care. The hymns do not seem to either."
+        },
+        {
+          "id": "fl15",
+          "text": "Maurice taps a counting rhythm on the shelves when he works. Four-four, with a limp on the third beat. I have written it down. It is rather good."
+        },
+        {
+          "id": "fl16",
+          "text": "Bess hums a lullaby into the folded sheets. I have never heard its end. I think she has never reached it herself."
+        },
+        {
+          "id": "fl17",
+          "text": "Anselm rings the chapel bell on the dot of dawn. It sounds a minor third, flat, with a rattle on the overtone. I tune my lute to it each morning."
+        },
+        {
+          "id": "fl18",
+          "text": "A hawker once gave me a pitch-pipe that sings a note I cannot name, somewhere between a C and a D. When I blow it, the candles dim. I carry it inside my boot."
+        },
+        {
+          "id": "fl19",
+          "text": "The ballroom orchestra still plays, I am told, though every player has long since fled or died. The music goes on, played by something that does not need a hand.",
+          "when": {
+            "flag": "talkedAlmoner",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "fl20",
+          "text": "Listen, past the wall, in the quiet beat: a melody new to me. It is not the waltz. It is something older, and it is coming from below the halls.",
+          "when": {
+            "flag": "reachedAlms",
+            "notFlag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "fl21",
+          "text": "The music stopped. For a moment I could not breathe, and then my lute rang by itself, a single open string, as clear as a bell. I wept on it and did not wipe the strings.",
+          "when": {
+            "flag": "countessDefeated"
+          }
+        },
+        {
+          "id": "fl22",
+          "text": "I am writing a new waltz for the alms, in four-four, with all the beats alive. It has a very odd rhythm. It is the sound of people learning to walk.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "fl23",
+          "text": "In the cellar, they say, something howls at the full moon, a hound with a gentleman's coat. It howls in tune, which is the most frightening part.",
+          "when": {
+            "notFlag": "stalkerDefeated"
+          }
+        },
+        {
+          "id": "fl24",
+          "text": "Play well, light-bearer, and listen for the rests. A silence in the right place is the loudest thing in the world.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        }
+      ]
+    },
+    "ysabeau_marr": {
+      "name": "Ysabeau Marr",
+      "role": "the Countess's former handmaid",
+      "personality": "poised, scarred, soft-spoken to the point of vanishing; every gesture rehearsed and then, bravely, undone",
+      "voice": "dressing-room intimacy; fabrics, pins and mirrors; says terrible things in the tone of a fitting",
+      "events": [],
+      "lines": [
+        {
+          "id": "ym01",
+          "text": "I pinned her gown for sixty years. Wine-coloured silk, forty-two buttons, and a bodice that took three of us to lace. She never once complained."
+        },
+        {
+          "id": "ym02",
+          "text": "She does not sleep, you see. She sits at her glass in the small hours and watches nothing happen. I held the candle for her. I held it for thirty years."
+        },
+        {
+          "id": "ym03",
+          "text": "The bite is a small thing. A pinch, a warmth, a tilt of the head. It is the days after that are cruel. You wake and the whole world has gone grey."
+        },
+        {
+          "id": "ym04",
+          "text": "Vampires cannot cross a threshold unless they are asked. In the court, that is a mere courtesy. In the alms it is a law, and the latch is in my keeping."
+        },
+        {
+          "id": "ym05",
+          "text": "A court mirror shows only the dress, never the wearer. I learned to read faces in the glass of a spoon. A spoon does not lie."
+        },
+        {
+          "id": "ym06",
+          "text": "She was not cruel. That is what nobody understands. She was lonely, and she loved us in the way a collector loves a very fine set of dolls."
+        },
+        {
+          "id": "ym07",
+          "text": "Swordsman, if she offers you her hand, do not take it. She will be warm, and soft, and she will remember the shape of your pulse.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ym08",
+          "text": "Caster, she is fond of a clever speech. Make her laugh once and she will let you finish a spell. The window is tiny, and I have watched men use it.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ym09",
+          "text": "Scout, the Countess takes the third chair on the left when she dines alone. A little to the side. Aim at the shadow of the chandelier. It falls on her throat.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ym10",
+          "text": "Priest, a true prayer upsets her more than a blow. She flinches and then smiles, as if somebody had reminded her of a very old tune.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ym11",
+          "text": "Perpetua taught me to fold a napkin into nineteen shapes. It is a skill without a use, and the only one I am proud of."
+        },
+        {
+          "id": "ym12",
+          "text": "Fenwick plays the waltz we danced to every night for ninety years. I ask him not to. He plays it softly, and I turn my chair to the wall."
+        },
+        {
+          "id": "ym13",
+          "text": "Captain Brand brought me a thick wool shawl without a word. It smells of woodsmoke and horse. I have not taken it off since."
+        },
+        {
+          "id": "ym14",
+          "text": "Sibyl lights a candle for me at the chapel every dusk. A gold one. I did not ask, and she did not tell. It is the kindest thing I know."
+        },
+        {
+          "id": "ym15",
+          "text": "Maurice lets me sort the buttons in the pantry. I arrange them by size and by colour and by the dress they came from. It is a great comfort."
+        },
+        {
+          "id": "ym16",
+          "text": "Bess brings a warm cloth for my hands in the evening. She does not mention the scars. I would kiss her for it, if I were a different sort of woman."
+        },
+        {
+          "id": "ym17",
+          "text": "Anselm tells me that grief is a bell: it cracks, and it still rings. I told him that was a poor consolation. He said he knew, and rang it."
+        },
+        {
+          "id": "ym18",
+          "text": "A hawker held up a small mirror before me once, and I saw my own face after a century without it. One second. Then it was gone, and so was he."
+        },
+        {
+          "id": "ym19",
+          "text": "Beware the dancers on the third row. They are the Countess's favourites, and they will not strike at you. They will smile, and bow, and ask you to join them.",
+          "when": {
+            "flag": "talkedAlmoner",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "ym20",
+          "text": "She keeps a ring of keys at her belt. Silver, drowned, one longer than the rest. It opens the gate under the ballroom. She never explained what lay below.",
+          "when": {
+            "flag": "reachedAlms",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "ym21",
+          "text": "The corridors are quiet. Nobody is dancing. I stood at my old post by the door of her chamber and held an empty hand where the candle used to be.",
+          "when": {
+            "flag": "countessDefeated"
+          }
+        },
+        {
+          "id": "ym22",
+          "text": "I am learning to cook. Perpetua says my first loaf was a doorstop. She ate it anyway, and I wept, and we both pretended it was the smoke.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "ym23",
+          "text": "A creature stalks the cellar, one the Countess kept for sport. Half hound, half gentleman, and fond of the full moon. She called it Marquis. It does not answer to the name now.",
+          "when": {
+            "notFlag": "stalkerDefeated"
+          }
+        },
+        {
+          "id": "ym24",
+          "text": "Go with my thanks, light-bearer. Whatever you meet below, do not let it call you by your first name. Names are the hooks that pull the deepest.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        }
+      ]
+    },
+    "hollis_brand": {
+      "name": "Captain Hollis Brand",
+      "role": "door-warden of the Pale Alms",
+      "personality": "square, silent, unamused; guards a latch the way other men guard a throne",
+      "voice": "watch-bill terseness: posts, reliefs and latches; no adjectives he cannot defend",
+      "events": [],
+      "lines": [
+        {
+          "id": "hb01",
+          "text": "One door, one latch, one spear. That is the entire garrison of the alms. It has held eleven years, which I call a long campaign."
+        },
+        {
+          "id": "hb02",
+          "text": "Vampires cannot enter unasked. Thralls cannot enter at all. The rest is a matter of discipline and of not opening the door at the wrong knock."
+        },
+        {
+          "id": "hb03",
+          "text": "A vampire's knock is three raps, evenly spaced, in a voice you know. I have heard my mother's knock at that door. I did not open."
+        },
+        {
+          "id": "hb04",
+          "text": "Their weakness is light and the sound of the dawn bell. Anselm rings it at first grey and the whole outer ward goes still. It is the best defence I have."
+        },
+        {
+          "id": "hb05",
+          "text": "A cutting blade is a blunt answer to a vampire. Silver cuts, light burns, and holy water bites. Carry two of the three and the odds improve."
+        },
+        {
+          "id": "hb06",
+          "text": "Never take the cup. Never take the hand. Never take the chair. Three rules, and every man I have lost broke one of them."
+        },
+        {
+          "id": "hb07",
+          "text": "Swordsman, I fought in the keep war and I have a notch in my shield for every knight I buried. A shield should be old. A shield should be ugly.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "hb08",
+          "text": "Caster, there is a lamp in the alms pantry, brass, with a long wick. It burns white. Take it. A weak spell and a bright lamp do the work of a strong one.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "hb09",
+          "text": "Scout, a loose stone sits in the east wall with a gap behind it, wide enough to watch the ballroom door. On sleepless nights I sit there. Mind the draught.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "hb10",
+          "text": "Priest, the chapel bell is yours to ring if you like. A real hand on the rope makes it sound different. Anselm says it sounds more like a sunrise.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "hb11",
+          "text": "Perpetua brings tea at the change of the watch. She never asks whether I want it. It arrives hot and exactly sufficient."
+        },
+        {
+          "id": "hb12",
+          "text": "Fenwick plays a marching tune on his lute at dusk, for my benefit. He gets the tempo wrong on purpose. I pretend not to notice. We are friends."
+        },
+        {
+          "id": "hb13",
+          "text": "Ysabeau stands with me at the door some nights. She does not talk. She keeps her eyes on the dark, and she has a sharper ear for a thrall than any dog."
+        },
+        {
+          "id": "hb14",
+          "text": "Sibyl has set a lantern in the threshold. It burns all night and does not gutter. I once tried to put it out. I did not try again."
+        },
+        {
+          "id": "hb15",
+          "text": "Maurice supplies me with biscuits and a flask of something hot. Neither are my favourites. Both are exactly right. I have not told him so."
+        },
+        {
+          "id": "hb16",
+          "text": "Bess draws the shutters at dusk and checks every latch twice. She is a better sentry than my last three men, and she weighs less than my spear."
+        },
+        {
+          "id": "hb17",
+          "text": "Anselm talks to me about prayer while I stand watch. I do not follow half of it. The sound of his voice helps. It is better than silence."
+        },
+        {
+          "id": "hb18",
+          "text": "A pedlar once offered me a lock that no key could open and no pick could turn. I said the door already had one. He said that one was a lie. I bought it, and I hung it on the inside."
+        },
+        {
+          "id": "hb19",
+          "text": "The halls are crowded. Dozens of dancers, a hundred candles, and a Countess at the far end who has never once lost a duel. Plan your retreat before you plan your advance.",
+          "when": {
+            "flag": "talkedAlmoner",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "hb20",
+          "text": "Something howls under the halls whenever the moon is full. It does not sound like a wolf. It sounds like a man who howled so long he lost the words.",
+          "when": {
+            "notFlag": "stalkerDefeated"
+          }
+        },
+        {
+          "id": "hb21",
+          "text": "No music tonight. I stood at the door an hour listening to nothing. Nothing was the loveliest sound I have heard, and it frightened me.",
+          "when": {
+            "flag": "countessDefeated"
+          }
+        },
+        {
+          "id": "hb22",
+          "text": "The latch is off after eleven years. People wander through the alms after dark, and nobody is afraid. My hands have nowhere to go.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "hb23",
+          "text": "You are the first visitor in eleven years who has asked to be let in and meant it. I opened the door. It did not creak. I took that for a sign.",
+          "when": {
+            "flag": "reachedAlms",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "hb24",
+          "text": "Whatever happens below, the latch will hold. I will make sure of it. Bring me word of the sun when you have it.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        }
+      ]
+    },
+    "sibyl_ardent": {
+      "name": "Sibyl Ardent",
+      "role": "light-priestess who tends the alms chapel's lamps",
+      "personality": "radiant, spare, a little wild-eyed; talks about light the way a gardener talks about an unruly plant",
+      "voice": "wicks, oils and wavelengths of flame; faith as horticulture; unexpected jokes about candles",
+      "events": [],
+      "lines": [
+        {
+          "id": "sa01",
+          "text": "A flame is a very small sun. Pray over it, feed it, shelter it from the draught, and it grows into something the dark has to notice."
+        },
+        {
+          "id": "sa02",
+          "text": "Gold light burns hottest. White light burns cleanest. Red light is a lie, and the court lives by it. I keep a lamp of each colour and I am rude to the red."
+        },
+        {
+          "id": "sa03",
+          "text": "Vampires are not cursed by the sun. They are cursed by the memory of it. A real flame reminds them. A painted one does not. They can always tell."
+        },
+        {
+          "id": "sa04",
+          "text": "Light magic is a courtesy, not a command. Smite, radiant ray, a blessing: each is a polite way of asking the dark to leave."
+        },
+        {
+          "id": "sa05",
+          "text": "A dawn rune on a blade is a drop of morning in a sheath. Seek out the rune-wright. It will make a thrall's skin smoke like frying fat."
+        },
+        {
+          "id": "sa06",
+          "text": "A charmed mind is a dark room with the door ajar. Light under the door, a name spoken loudly, and the whole spell goes pale."
+        },
+        {
+          "id": "sa07",
+          "text": "Swordsman, there is a little oil flask in the chapel with a dab of dawn in it. A touch on the blade makes the dark knights hesitate. It is a very modest miracle.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "sa08",
+          "text": "Caster, learn a light spell, even a feeble one. Against the court it is worth three fire bolts. They drink fire. They hate gold.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "sa09",
+          "text": "Scout, a mirror in the sun will make a thrall flinch. Hold it at an angle and watch them scatter. I have seen it work on a Tuesday.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "sa10",
+          "text": "Priest, we are colleagues in the oldest trade. Pray with me at the lamps tonight. A second voice makes the whole room brighter.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "sa11",
+          "text": "Perpetua trims the chapel wicks herself every Sunday. She tells me they are the one part of the day she can govern. I let her, and the flames are better for it."
+        },
+        {
+          "id": "sa12",
+          "text": "Fenwick tunes his lute against the chapel lamps. They hum a low G when well fed. He swears no other pitch deserves his trust."
+        },
+        {
+          "id": "sa13",
+          "text": "Ysabeau sits in the last pew by the door and does not pray. She only watches the flames. I think she is recalling what a candle once meant to her."
+        },
+        {
+          "id": "sa14",
+          "text": "Captain Brand lends me his lantern for the threshold, reluctantly. He says it is the one warm thing he owns. I tell him that makes two."
+        },
+        {
+          "id": "sa15",
+          "text": "Maurice stocks the alms with candle-ends and a ledger of how many hours each one burned. The ledger is the most devotional document in the house."
+        },
+        {
+          "id": "sa16",
+          "text": "Bess draws the curtains at the inn and I light a taper in every room. She calls it a fire hazard. I call it a sacrament. We have settled on tact."
+        },
+        {
+          "id": "sa17",
+          "text": "Anselm and I share the chapel. He keeps the bell, I keep the flames. He says he is the voice and I am the eyes. I say we are both the hands."
+        },
+        {
+          "id": "sa18",
+          "text": "A hawker of curios sold me a wax stub that burns one drop of gold per hour. I light it each morning and by dusk it is exactly half gone. It has never grown shorter."
+        },
+        {
+          "id": "sa19",
+          "text": "The halls glitter with false light. Every chandelier holds a candle that never melts, and each is a lie. Crossing the floor, remember that real light is the kind that costs you something.",
+          "when": {
+            "flag": "talkedAlmoner",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "sa20",
+          "text": "A lamp in the cellar below the halls has burned since before the court. It gutters near a hybrid, that is, half hound and half gentleman. The flame points toward it.",
+          "when": {
+            "notFlag": "stalkerDefeated"
+          }
+        },
+        {
+          "id": "sa21",
+          "text": "The false candles died together. The ballroom must be dark as a well. Against that dark, my own lamp has never looked so tall.",
+          "when": {
+            "flag": "countessDefeated"
+          }
+        },
+        {
+          "id": "sa22",
+          "text": "The gold lamps lit themselves at dawn. I did not touch them. I stood in the chapel and laughed until I wept, and then I wept until I laughed.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "sa23",
+          "text": "I knew a light-bearer once, a long time ago, a girl with a mark on her hand like yours. She did not live long. She was the last person to trim the wicks of this chapel properly.",
+          "when": {
+            "flag": "reachedAlms"
+          }
+        },
+        {
+          "id": "sa24",
+          "text": "Keep a flame in your heart, light-bearer, and a spare in your pocket. The first is for faith and the second is for the draught.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        }
+      ]
+    },
+    "maurice_tuck": {
+      "name": "Maurice Tuck",
+      "role": "pantry-keeper of the Alms Pantry",
+      "personality": "round, tidy, anxious; counts his stock the way other people count their blessings",
+      "voice": "stock-cupboard litany; tins, jars and sacks arranged by theology",
+      "events": [
+        {
+          "id": "maurice_intro",
+          "when": {
+            "notFlag": "metMaurice"
+          },
+          "set": [
+            "metMaurice"
+          ],
+          "say": [
+            "Tuck. Maurice Tuck. This is the Alms Pantry, and everything on the shelves is for the use of the faithful, the frightened and the occasionally curious.",
+            "Tonics, ether, tea, salve and the rest. The prices are modest and the quantities are fixed. I never overcharge, and I never ever let anyone take more than they can carry. It is how I stay alive."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "mt01",
+          "text": "A good pantry is a map of its owner's fears. Mine holds eleven jars of salt, fourteen of vinegar and a locked drawer of candles for the world's last evening."
+        },
+        {
+          "id": "mt02",
+          "text": "Tins sort by height, sacks by weight, jars by an arrangement I will not explain. It is devotional. It has a name, and the name is Thursday."
+        },
+        {
+          "id": "mt03",
+          "text": "Clear tea cures charm, sleep and curse. No shelf of mine holds anything more useful, and I have held its price steady since the fall. I call that my life's work."
+        },
+        {
+          "id": "mt04",
+          "text": "A phoenix plume costs more than a month's wages. It is worth it. I have seen three men walk out of the cellar on the strength of one feather."
+        },
+        {
+          "id": "mt05",
+          "text": "Rune dust is a luxury. The Ashfall rune-wright says it improves anything it touches. Mine went onto the hinges, and they have never squeaked since."
+        },
+        {
+          "id": "mt06",
+          "text": "My ledger lists three kinds of customer: those who pay, those who owe, and those who are customers no longer. All three get identical politeness."
+        },
+        {
+          "id": "mt07",
+          "text": "Swordsman, there is a tin of boot-grease behind the counter. It is not for sale. It is a gift. A sharp sword needs a quiet foot.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mt08",
+          "text": "Caster, I keep a special gold-flecked ink in the back for copying spells. Very costly, and not for sale. It is lent. Return the bottle, please.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mt09",
+          "text": "Scout, the quietest boots in the north hang on the hook by the door. Soft leather, felt soles. I will let you try them. I will not let you take them.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mt10",
+          "text": "Priest, I save the best candles for the chapel. Tallow for the poor, beeswax for the dead and a very small box of the gold for emergencies. You may have the box.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mt11",
+          "text": "Perpetua audits my stock every month. She runs a finger along each shelf and says nothing. No better review could be wished for."
+        },
+        {
+          "id": "mt12",
+          "text": "Fenwick pays for lute strings in verses. They fill a jar. Several are very good and a few are about me."
+        },
+        {
+          "id": "mt13",
+          "text": "Ysabeau helps me sort buttons and bobbins by a colour code beyond my understanding. It beats mine. I have adopted it."
+        },
+        {
+          "id": "mt14",
+          "text": "Captain Brand takes a biscuit a day and a flask a week. He settles on the first of each month, to the penny, and has never been late."
+        },
+        {
+          "id": "mt15",
+          "text": "Sibyl comes for candle-ends and leaves a very small homily behind. It sits on the shelf beside the soap, and has outlasted most of the soap."
+        },
+        {
+          "id": "mt16",
+          "text": "Bess takes a cask of lamp oil at a time and grumbles about the weight. I suspect the grumbling pleases her more than the oil."
+        },
+        {
+          "id": "mt17",
+          "text": "Anselm buys a single white candle each week and asks me to light it myself. I do, though the reason escapes me. It has become the best moment of my week."
+        },
+        {
+          "id": "mt18",
+          "text": "A hawker of curios left me a jar of salt that never runs out. It sits on the top shelf, untouched. That, I think, is enough."
+        },
+        {
+          "id": "mt19",
+          "text": "Before the halls, stock up: clear tea for the charm, a plume for the worst and a tonic for the rest. A vampire's bite is cheap to treat and very expensive to ignore.",
+          "when": {
+            "flag": "talkedAlmoner",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "mt20",
+          "text": "I have a fresh crate from the court's old larder, labelled in a hand I do not know. Nobody has dared open it. I think it is jam. I hope it is jam.",
+          "when": {
+            "flag": "reachedAlms"
+          }
+        },
+        {
+          "id": "mt21",
+          "text": "Business has doubled since the music stopped. Nineteen new customers, all of them polite, all of them hungry, all of them paying in coins that have not seen light in a century.",
+          "when": {
+            "flag": "countessDefeated"
+          }
+        },
+        {
+          "id": "mt22",
+          "text": "I have added a bread oven to the pantry. It is the first fire the alms has ever owned that was not a lamp. The whole building smells like a miracle.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "mt23",
+          "text": "A cellar beneath the halls holds a hound that dresses like a gentleman. A hybrid, Hollis says. Bring me a fang and I will pay in rune dust. Bring me a collar and the price is open.",
+          "when": {
+            "notFlag": "stalkerDefeated"
+          }
+        },
+        {
+          "id": "mt24",
+          "text": "Safe travels and light packs, light-bearer. The pantry will be here, and so will I. It is the great comfort of being a shelf.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        }
+      ]
+    },
+    "bess_lowry": {
+      "name": "Bess Lowry",
+      "role": "keeper of the Closed Curtain inn",
+      "personality": "small, brisk, lavender-scented; draws shutters the way other people breathe",
+      "voice": "linens, latches and lullabies; every threat answered with a hot-water bottle",
+      "events": [
+        {
+          "id": "bess_intro",
+          "when": {
+            "notFlag": "metBess"
+          },
+          "set": [
+            "metBess"
+          ],
+          "say": [
+            "Bess Lowry. This is the Closed Curtain: one hundred and eighty a night, clean sheets, shuttered windows and a latch on every door. Leave the curtains shut. The reason stays with me.",
+            "A guest sleeps best when the room is dim and the road is out of sight. That is the single luxury I can honestly sell, and the only one anybody here has requested."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "bl01",
+          "text": "An inn worth the name is a fortress with a feather bed. Mine has seventeen latches, nine shutters and a very large cat asleep against the door."
+        },
+        {
+          "id": "bl02",
+          "text": "I iron the sheets with a stone from the fire, warmed on the hob and wrapped in flannel. It keeps the damp out and the nightmares in. Or the other way round."
+        },
+        {
+          "id": "bl03",
+          "text": "The curtains are thick black wool, three layers, with a lining of foil. The foil was Perpetua's idea. It is the best idea she has had since the lamps."
+        },
+        {
+          "id": "bl04",
+          "text": "A charmed sleeper walks at night and tries the latches. I tie a tiny bell to every ankle. That little bell has saved a great many lives."
+        },
+        {
+          "id": "bl05",
+          "text": "I serve milk with honey at bedtime. It does not cure anything. It reminds the guest that there is such a thing as a kitchen and a mother and a morning."
+        },
+        {
+          "id": "bl06",
+          "text": "A person who sleeps well wakes without fear. I have worked at that for eleven years, and my list of successes is short beside my list of beds."
+        },
+        {
+          "id": "bl07",
+          "text": "Swordsman, the bed by the door has a bolster for your blade. A weapon at arm's reach is the only lullaby some men can hear.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "bl08",
+          "text": "Caster, there is a window seat in room four with a thick cushion and a view of nothing. It is good for thinking. It is also good for being left alone.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "bl09",
+          "text": "Scout, room six has a loose board under the rug. It creaks on purpose, to warn me of visitors. It will warn you as well. Use it.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "bl10",
+          "text": "Priest, will you say a blessing on the beds? I have always felt that a blessing on a mattress is the best kind. It goes in deep.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "bl11",
+          "text": "Perpetua sleeps in the pantry among the sacks, on a camp bed with a view of the door. I leave a hot-water bottle on the pillow. It is always cold by morning."
+        },
+        {
+          "id": "bl12",
+          "text": "Fenwick plays me to sleep from the stairwell. I have never asked him to. I simply leave the door ajar, and the tune drifts in, and I am gone."
+        },
+        {
+          "id": "bl13",
+          "text": "Ysabeau takes the corner bed and sleeps facing the wall. I leave a night-lamp. She turns it down, I turn it up, and so the year has gone."
+        },
+        {
+          "id": "bl14",
+          "text": "Captain Brand never sleeps. He sits in the chair by the door with his spear across his knees and stares at the latch. I bring him a blanket and he does not refuse it."
+        },
+        {
+          "id": "bl15",
+          "text": "Sibyl leaves a candle burning in every window. It breaks all my rules and has never singed a curtain. I have given up wondering."
+        },
+        {
+          "id": "bl16",
+          "text": "Maurice sends me pillows from the pantry, stuffed with feathers he finds in the courtyard. They are all different colours and the best pillows I have ever owned."
+        },
+        {
+          "id": "bl17",
+          "text": "Anselm sleeps in the chapel, on the pew third from the front, and swears it is the only bed he trusts. I leave a quilt. By morning it is folded."
+        },
+        {
+          "id": "bl18",
+          "text": "A hawker slept in room two once and left a pillow stuffed with something silver. It never goes flat. It has not been washed, for fear it would sing."
+        },
+        {
+          "id": "bl19",
+          "text": "Sleep well before the halls. A full night's rest is worth two potions, and a good dream is worth a plume. I will have a bed turned down for your return.",
+          "when": {
+            "flag": "talkedAlmoner",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "bl20",
+          "text": "The shutters rattled all night. Something very large walked the outer ward, sniffing. A hound, I think, wearing a coat. It howled once, and every candle in the alms leaned.",
+          "when": {
+            "notFlag": "stalkerDefeated"
+          }
+        },
+        {
+          "id": "bl21",
+          "text": "I opened one curtain tonight, an inch only. The sky was black and the court beyond was black, and after years of dread the black was merely black.",
+          "when": {
+            "flag": "countessDefeated"
+          }
+        },
+        {
+          "id": "bl22",
+          "text": "I have taken down the foil. Every curtain is open. The beds are full and nobody is afraid, and I find myself missing the latches, and I have a hot-water bottle for that.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "bl23",
+          "text": "You are the first guest to request the room with the window. Most want the one without. Take room five: a view of the court and an excellent draught.",
+          "when": {
+            "flag": "reachedAlms"
+          }
+        },
+        {
+          "id": "bl24",
+          "text": "Sleep soundly, light-bearer. The curtains are open and the lamp is lit, and there is a hot stone at the foot of your bed.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        }
+      ]
+    },
+    "anselm_greaves": {
+      "name": "Anselm Greaves",
+      "role": "bell-ringer of the Alms Chapel",
+      "personality": "stooped, gentle, humming; counts the world in strokes of a bell",
+      "voice": "tolling and silence; theology as acoustics; every sentence ends on a faint overtone",
+      "events": [],
+      "lines": [
+        {
+          "id": "ag01",
+          "text": "A bell is a promise that something will happen at a certain time. Dawn, noon, dusk and the hour of the dead. It is the oldest honesty I know."
+        },
+        {
+          "id": "ag02",
+          "text": "The chapel bell has a crack down one side. It rings flat, and sorrowful, and unbearably sincere. I tried once to have it mended. The founder wept, and I stopped."
+        },
+        {
+          "id": "ag03",
+          "text": "Nine strokes for the dawn, three for noon, seven for dusk. The court cannot abide any of them. They flinch at the dawn nine like cattle at a branding iron."
+        },
+        {
+          "id": "ag04",
+          "text": "A vampire's name is a note, a pitch, a place in the scale. If you strike that note with a clean bell, he stumbles. A clean strike, mind. A dirty one only annoys him."
+        },
+        {
+          "id": "ag05",
+          "text": "Light is a sound you can see. Prayer is a light you can hear. I was taught the two were the same and I have never found an exception."
+        },
+        {
+          "id": "ag06",
+          "text": "A true bell has a fundamental and five partials. A false one has only noise. The court has a false bell in the great hall, and it has been ringing for a hundred years."
+        },
+        {
+          "id": "ag07",
+          "text": "Swordsman, a hilt tapped on a stone gives a pitch. A wise man listens before a fight. The cracks in a wall speak the way the cracks in a person do.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ag08",
+          "text": "Caster, there is a spell that rings like a bell, I am told. A clean strike of arcane force that echoes in the bones. If you learn it, tell me. I would very much like to hear.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ag09",
+          "text": "Scout, the dawn bell is a signal. When it strikes the ninth stroke, every thrall in the outer ward falls silent. That is when you move.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ag10",
+          "text": "Priest, ring the bell with me at dawn. Two hands on a rope make a gentler sound. It is a minor third, and it is very near to prayer.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ag11",
+          "text": "Perpetua winds the chapel clock each evening. It runs five minutes slow and she refuses to correct it. She says five minutes is a very small mercy."
+        },
+        {
+          "id": "ag12",
+          "text": "Fenwick tunes to the bell and curses it, and then thanks it, and then tunes again. It is the most devout thing he does."
+        },
+        {
+          "id": "ag13",
+          "text": "Ysabeau sits at the rear of the chapel in the pew by the door. She does not look up when the bell rings. She tilts her head slightly, as if hearing her name."
+        },
+        {
+          "id": "ag14",
+          "text": "Captain Brand takes the bell-rope on full-moon nights, rings once and returns to his post. He says it clears the head. I think it clears the heart."
+        },
+        {
+          "id": "ag15",
+          "text": "Sibyl lights the lamps below the bell. They hum in sympathy, a very faint G. It is the only chord the chapel has ever sounded, and it is the best."
+        },
+        {
+          "id": "ag16",
+          "text": "Maurice sends bell-grease each month in a small tin with a hand-drawn label: For the crack. Nothing has moved me so much as that jar."
+        },
+        {
+          "id": "ag17",
+          "text": "Bess brings a bowl of hot soup after the dusk bell, sits on the step and listens to the echoes. We say nothing. It is the finest conversation of my day."
+        },
+        {
+          "id": "ag18",
+          "text": "A hawker of curios offered me a silver clapper to replace the old one. I declined. He said I would regret it. I regret nothing. The old clapper has a voice."
+        },
+        {
+          "id": "ag19",
+          "text": "The court's great bell has not rung since the night of the feast. It hangs silent in the ballroom roof. If you cross beneath it, do not touch the rope. It is not a decoration.",
+          "when": {
+            "flag": "talkedAlmoner",
+            "notFlag": "countessDefeated"
+          }
+        },
+        {
+          "id": "ag20",
+          "text": "Something howls beneath the halls on every half-hour. I ring the bell between the howls to confuse it. Whether that works is unclear, but it certainly helps me.",
+          "when": {
+            "notFlag": "stalkerDefeated"
+          }
+        },
+        {
+          "id": "ag21",
+          "text": "I rang the dawn bell in the dark, and the court did not flinch for once in a century. I stood on the step with the rope in my hands and sobbed like a child.",
+          "when": {
+            "flag": "countessDefeated"
+          }
+        },
+        {
+          "id": "ag22",
+          "text": "Nineteen voices sang the dawn office this morning, thin and ragged and perfectly in tune. No lovelier sound has reached me. It will outlast the bell, cracked as it is.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        },
+        {
+          "id": "ag23",
+          "text": "The dawn bell is the only weapon the alms has ever possessed. If you hear it from the halls, it means we are safe. If you do not, it means we are not.",
+          "when": {
+            "flag": "reachedAlms"
+          }
+        },
+        {
+          "id": "ag24",
+          "text": "Go with a clear note, light-bearer. And if you must fall silent, let it be a rest and not an ending.",
+          "when": {
+            "flag": "reportedAlmoner"
+          }
+        }
+      ]
+    }
+  }
+}

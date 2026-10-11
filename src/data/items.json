@@ -431,7 +431,7 @@
   "temple_lamp": {
     "name": "Temple Lamp",
     "type": "key",
-    "desc": "A small oil lamp, older than anything in Reedhollow. Its flame leans toward your palm."
+    "desc": "A small oil lamp, older than anything in Reedhollow. Its flame leans toward your palm. Carried in the pack, it lets you see three tiles further on night maps."
   },
   "gaff_sword": {
     "name": "Gaff Sword",
@@ -493,11 +493,15 @@
     "name": "Nightwing Bow",
     "type": "weapon",
     "wtype": "bow",
-    "atk": 14,
-    "spd": 2,
-    "price": 420,
-    "desc": "Strung with bat-sinew. Eerily quiet.",
-    "unique": true
+    "atk": 100,
+    "spd": 10,
+    "price": 0,
+    "desc": "A bow strung with bat-wing sinew. It shoots quieter than the dark.",
+    "unique": true,
+    "sell": 4200,
+    "enchant": {
+      "drain": 0.06
+    }
   },
   "howling_mace": {
     "name": "Howling Mace",
@@ -562,8 +566,9 @@
   },
   "sunstone_chip": {
     "name": "Sunstone Chip",
-    "type": "key",
-    "desc": "A chip of pale stone that glows faintly in rhythm with your palm."
+    "type": "material",
+    "sell": 400,
+    "desc": "A chip of pale stone that glows faintly in rhythm with your palm. Merchants pay well for it."
   },
   "cragblade": {
     "name": "Cragblade",
@@ -2456,5 +2461,666 @@
     "desc": "A mail shirt that is cold to touch and oddly comforting.",
     "unique": true,
     "sell": 3300
+  },
+  "bier_seal": {
+    "name": "Bier Seal",
+    "type": "key",
+    "desc": "A grey wax seal stamped with a closed eye. Isolde Marrow says the Bier Road will let a bearer of this pass."
+  },
+  "dusk_shard": {
+    "name": "Dusk-shard",
+    "type": "key",
+    "desc": "A splinter of the dusk, cold and heavy as a coin of lead. It was given freely, which is the strangest thing about it."
+  },
+  "wyvern_scale": {
+    "name": "Wyvern Scale",
+    "type": "material",
+    "sell": 260,
+    "desc": "A scale the size of a hand, warm as a stove."
+  },
+  "galeforged_blade": {
+    "name": "Galeforged Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 96,
+    "spd": 6,
+    "price": 0,
+    "desc": "A blade whose edge hums in a headwind.",
+    "unique": true,
+    "sell": 3800
+  },
+  "windcaller_staff": {
+    "name": "Windcaller Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 15,
+    "mag": 88,
+    "price": 0,
+    "desc": "A staff of pale ash that bends the air around its tip.",
+    "unique": true,
+    "sell": 3800
+  },
+  "skyreach_bow": {
+    "name": "Skyreach Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 94,
+    "spd": 10,
+    "price": 0,
+    "desc": "Strung with a wyvern tendon; its arrows fall upward before they fall down.",
+    "unique": true,
+    "sell": 3800
+  },
+  "gale_mace": {
+    "name": "Gale Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 90,
+    "mag": 20,
+    "price": 0,
+    "desc": "A mace with a head of fused wing-bone.",
+    "unique": true,
+    "sell": 3800
+  },
+  "galewing_mail": {
+    "name": "Galewing Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 86,
+    "price": 0,
+    "desc": "Mail of overlapping scales that ripple like feathers.",
+    "unique": true,
+    "sell": 3700
+  },
+  "imp_horn": {
+    "name": "Imp Horn",
+    "type": "material",
+    "sell": 120,
+    "desc": "A hooked black horn, warm at the root."
+  },
+  "ember_fang": {
+    "name": "Ember Fang",
+    "type": "material",
+    "sell": 160,
+    "desc": "A hound's fang that glows when you breathe on it."
+  },
+  "brimstone": {
+    "name": "Brimstone",
+    "type": "material",
+    "sell": 180,
+    "desc": "A yellow lump that smells of struck matches."
+  },
+  "vent_salt": {
+    "name": "Vent Salt",
+    "type": "key",
+    "desc": "White crust scraped from a vent. Rare, and bitter on the tongue."
+  },
+  "ember_bloom": {
+    "name": "Ember Bloom",
+    "type": "key",
+    "desc": "A red flower that grows only where the ground breathes fire."
+  },
+  "hellfire_root": {
+    "name": "Hellfire Root",
+    "type": "key",
+    "desc": "A black root that is still faintly hot, pulled from the hollow of an old vent."
+  },
+  "cinder_pass": {
+    "name": "Cinder Pass",
+    "type": "key",
+    "desc": "A scorched iron token. Veyra Dask says it opens the way onward, past the vent fields."
+  },
+  "cinder_tonic": {
+    "name": "Cinder Tonic",
+    "type": "consumable",
+    "hp": 160,
+    "price": 0,
+    "sell": 100,
+    "desc": "A warm amber tonic. Restores 160 HP."
+  },
+  "brimstone_ether": {
+    "name": "Brimstone Ether",
+    "type": "consumable",
+    "mp": 70,
+    "price": 0,
+    "sell": 120,
+    "desc": "A sharp yellow draught. Restores 70 MP."
+  },
+  "hound_draught": {
+    "name": "Hound Draught",
+    "type": "consumable",
+    "hp": 260,
+    "price": 0,
+    "sell": 160,
+    "desc": "A rich red brew. Restores 260 HP."
+  },
+  "vent_remedy": {
+    "name": "Vent Remedy",
+    "type": "consumable",
+    "hp": 120,
+    "cure": [
+      "poison",
+      "curse",
+      "slow",
+      "defenseDown"
+    ],
+    "price": 0,
+    "sell": 180,
+    "desc": "Cures poison, curse, slow and weakened defence, and restores 120 HP."
+  },
+  "sunfire_elixir": {
+    "name": "Sunfire Elixir",
+    "type": "consumable",
+    "hp": 700,
+    "mp": 160,
+    "price": 0,
+    "sell": 300,
+    "desc": "Gold and glowing. Restores 700 HP and 160 MP."
+  },
+  "phoenix_draught": {
+    "name": "Phoenix Draught",
+    "type": "consumable",
+    "revive": 0.6,
+    "price": 0,
+    "sell": 320,
+    "desc": "Revives a fallen ally with 60% HP."
+  },
+  "grand_brew": {
+    "name": "Grand Brew",
+    "type": "consumable",
+    "hp": 1000,
+    "mp": 260,
+    "cure": [
+      "poison",
+      "sleep",
+      "slow",
+      "stun",
+      "curse",
+      "charm",
+      "petrify",
+      "defenseDown"
+    ],
+    "price": 0,
+    "sell": 600,
+    "desc": "The alchemist's masterpiece. Restores 1000 HP and 260 MP and cures every ailment."
+  },
+  "dragonbone_sword": {
+    "name": "Dragonbone Sword",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 56,
+    "spd": 2,
+    "price": 5600,
+    "desc": "A blade of white dragon-bone, light and almost impossible to chip."
+  },
+  "dragonbone_axe": {
+    "name": "Dragonbone Axe",
+    "type": "weapon",
+    "wtype": "axe",
+    "atk": 58,
+    "price": 5650,
+    "desc": "A bearded axe of bone that has never been sharpened."
+  },
+  "dragonbone_staff": {
+    "name": "Dragonbone Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 8,
+    "mag": 46,
+    "price": 5500,
+    "desc": "A staff of fused vertebrae that hums against the magic you push through it."
+  },
+  "dragonbone_bow": {
+    "name": "Dragonbone Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 56,
+    "spd": 6,
+    "price": 5600,
+    "desc": "A bow of rib and sinew with a great draw."
+  },
+  "dragonbone_dagger": {
+    "name": "Dragonbone Dagger",
+    "type": "weapon",
+    "wtype": "dagger",
+    "atk": 46,
+    "spd": 9,
+    "price": 5400,
+    "desc": "A fang the length of a hand, set in a hilt."
+  },
+  "dragonbone_mace": {
+    "name": "Dragonbone Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 53,
+    "mag": 13,
+    "price": 5550,
+    "desc": "A mace headed with a knuckle of old bone."
+  },
+  "dragonbone_plate": {
+    "name": "Dragonbone Plate",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 63,
+    "price": 5900,
+    "desc": "Overlapping plates of bone, warm in cold air and cold in warm."
+  },
+  "dragonbone_hide": {
+    "name": "Dragonbone Hide",
+    "type": "armor",
+    "atype": "medium",
+    "def": 54,
+    "price": 5700,
+    "desc": "Hide studded with scales of bone."
+  },
+  "dragonbone_cloak": {
+    "name": "Dragonbone Cloak",
+    "type": "armor",
+    "atype": "light",
+    "def": 46,
+    "spd": 9,
+    "price": 5650,
+    "desc": "A cloak lined with thin bone-scale that rattles very softly."
+  },
+  "dragonbone_robe": {
+    "name": "Dragonbone Robe",
+    "type": "armor",
+    "atype": "robe",
+    "def": 34,
+    "mag": 48,
+    "price": 5700,
+    "desc": "A robe stitched with dragon-bone thread."
+  },
+  "hexfang_blade": {
+    "name": "Hexfang Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 102,
+    "spd": 6,
+    "price": 0,
+    "desc": "A blade with a curved fang for a guard. It pulls at the life of what it cuts.",
+    "unique": true,
+    "sell": 4200,
+    "enchant": {
+      "drain": 0.06
+    }
+  },
+  "siphon_staff": {
+    "name": "Siphon Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 16,
+    "mag": 96,
+    "price": 0,
+    "desc": "A staff that drinks a little of every spell cast through it and gives it back.",
+    "unique": true,
+    "sell": 4200
+  },
+  "hexward_mace": {
+    "name": "Hexward Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 96,
+    "mag": 22,
+    "price": 0,
+    "desc": "A mace warded against curses. A kind of reverse witchcraft.",
+    "unique": true,
+    "sell": 4200,
+    "enchant": {
+      "immune": [
+        "curse"
+      ]
+    }
+  },
+  "hexbat_hide": {
+    "name": "Hexbat Hide",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 92,
+    "price": 0,
+    "desc": "Armour of dark leather and bone. It folds around you like wings.",
+    "unique": true,
+    "sell": 4100
+  },
+  "choir_key": {
+    "name": "Choir Key",
+    "type": "key",
+    "desc": "A long key of drowned silver, cold to hold. It was taken from the Countess's belt. Perpetua Quell says it opens the gate to the Drowned Choir."
+  },
+  "vampire_fang": {
+    "name": "Vampire Fang",
+    "type": "material",
+    "sell": 260,
+    "desc": "A slender white fang with a groove down its length."
+  },
+  "crimson_fang_blade": {
+    "name": "Crimson Fang Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 110,
+    "spd": 7,
+    "price": 0,
+    "desc": "A blade with a ruby in the crossguard that drinks a little of whatever it cuts.",
+    "unique": true,
+    "sell": 4600,
+    "enchant": {
+      "drain": 0.08
+    }
+  },
+  "bloodtide_staff": {
+    "name": "Bloodtide Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 17,
+    "mag": 104,
+    "price": 0,
+    "desc": "A staff whose crystal moves slowly, like blood in a vein.",
+    "unique": true,
+    "sell": 4600
+  },
+  "scarlet_bow": {
+    "name": "Scarlet Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 108,
+    "spd": 11,
+    "price": 0,
+    "desc": "A bow of red lacquered horn. Its string hums a few notes of a waltz.",
+    "unique": true,
+    "sell": 4600,
+    "enchant": {
+      "drain": 0.08
+    }
+  },
+  "crimson_mace": {
+    "name": "Crimson Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 104,
+    "mag": 24,
+    "price": 0,
+    "desc": "A mace of dark iron with a bead of red glass set in the head.",
+    "unique": true,
+    "sell": 4600,
+    "enchant": {
+      "immune": [
+        "charm"
+      ]
+    }
+  },
+  "bloodsilk_mail": {
+    "name": "Bloodsilk Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 98,
+    "price": 0,
+    "desc": "Mail threaded with red silk. It feels warm against the skin, and rather watchful.",
+    "unique": true,
+    "sell": 4500
+  },
+  "hearth_scroll": {
+    "name": "Sunsong Score",
+    "type": "key",
+    "desc": "A water-stained sheet of music in the temple script: the Sunsong, set for a single voice. The Warden says it can only be sung at the top of the Sun-Throne, by someone who is not afraid of the cost."
+  },
+  "moonscale_pike": {
+    "name": "Moonscale Pike",
+    "type": "key",
+    "desc": "A long silver fish with scales like pale coins. It is still faintly warm. This is the one Corra Netwick has been chasing for thirty years."
+  },
+  "grey_perch": {
+    "name": "Grey Perch",
+    "type": "consumable",
+    "hp": 90,
+    "price": 0,
+    "sell": 40,
+    "desc": "A plain river perch. Restores 90 HP."
+  },
+  "lamp_eel": {
+    "name": "Lamp Eel",
+    "type": "consumable",
+    "hp": 180,
+    "price": 0,
+    "sell": 90,
+    "desc": "An eel that glows faintly along its flank. Restores 180 HP."
+  },
+  "bell_trout": {
+    "name": "Bell Trout",
+    "type": "consumable",
+    "hp": 220,
+    "mp": 40,
+    "price": 0,
+    "sell": 150,
+    "desc": "A silver trout that rings softly when it is shaken. Restores 220 HP and 40 MP."
+  },
+  "glass_carp": {
+    "name": "Glass Carp",
+    "type": "consumable",
+    "hp": 400,
+    "mp": 100,
+    "price": 0,
+    "sell": 500,
+    "desc": "A see-through carp, rare and delicate. Restores 400 HP and 100 MP."
+  },
+  "gargoyle_chip": {
+    "name": "Gargoyle Chip",
+    "type": "material",
+    "sell": 280,
+    "desc": "A flake of grey stone with a tiny fossil of a feather in it."
+  },
+  "gravelhewn_blade": {
+    "name": "Gravelhewn Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 118,
+    "spd": 7,
+    "price": 0,
+    "desc": "A blade hewn from a single slab of choir stone. It hums when struck.",
+    "unique": true,
+    "sell": 5000
+  },
+  "resonant_staff": {
+    "name": "Resonant Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 18,
+    "mag": 112,
+    "price": 0,
+    "desc": "A staff of fluted stone that answers every spell with a low sung note.",
+    "unique": true,
+    "sell": 5000
+  },
+  "stonehawk_bow": {
+    "name": "Stonehawk Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 116,
+    "spd": 12,
+    "price": 0,
+    "desc": "A bow of carved basalt wing-bone. Its arrows fly unnaturally straight.",
+    "unique": true,
+    "sell": 5000
+  },
+  "choirstone_mace": {
+    "name": "Choirstone Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 112,
+    "mag": 26,
+    "price": 0,
+    "desc": "A mace of a single resonant stone. Every blow chimes.",
+    "unique": true,
+    "sell": 5000,
+    "enchant": {
+      "immune": [
+        "sleep"
+      ]
+    }
+  },
+  "gargoylehide_mail": {
+    "name": "Gargoylehide Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 106,
+    "price": 0,
+    "desc": "Mail of grey stone scales that flex like cloth until the moment of a blow.",
+    "unique": true,
+    "sell": 4900
+  },
+  "hearth_key": {
+    "name": "Hearth Key",
+    "type": "key",
+    "desc": "A fist-sized iron key, warm to hold, with a flame cut into the bow. The Warden guarded it for nine centuries. It opens the way to the Dragon's Hearth."
+  },
+  "dragon_scale": {
+    "name": "Dragon Scale",
+    "type": "material",
+    "sell": 320,
+    "desc": "A palm-wide scale, hot as a loaf and red as a coal at its edge."
+  },
+  "shade_cloth": {
+    "name": "Shade Cloth",
+    "type": "material",
+    "sell": 300,
+    "desc": "A scrap of something that is only a shadow when you do not look at it. It holds a faint echo of a voice."
+  },
+  "caldrith_ember": {
+    "name": "Caldrith's Ember",
+    "type": "key",
+    "desc": "A coal of the first fire, given freely by the Elder Dragon. It does not burn the hand that holds it."
+  },
+  "sun_key": {
+    "name": "Sun Key",
+    "type": "key",
+    "desc": "A key of beaten gold, cut like a ray of light. It opens the road to the Sun-Throne."
+  },
+  "wyrmfang_blade": {
+    "name": "Wyrmfang Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 124,
+    "spd": 7,
+    "price": 0,
+    "desc": "A sword ground from a single wyrm fang. The edge glows faintly when danger is near.",
+    "unique": true,
+    "sell": 5400
+  },
+  "emberglass_staff": {
+    "name": "Emberglass Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 18,
+    "mag": 118,
+    "price": 0,
+    "desc": "A staff of glass drawn from the Hearth itself. It is always warm and never melts.",
+    "unique": true,
+    "sell": 5400,
+    "enchant": {
+      "element": "fire"
+    }
+  },
+  "drakewing_bow": {
+    "name": "Drakewing Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 122,
+    "spd": 12,
+    "price": 0,
+    "desc": "A bow strung with a wing tendon. Its arrows crackle faintly in flight.",
+    "unique": true,
+    "sell": 5400
+  },
+  "scalebound_mace": {
+    "name": "Scalebound Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 118,
+    "mag": 28,
+    "price": 0,
+    "desc": "A mace bound in overlapping scales. Every blow carries a little of the dragon.",
+    "unique": true,
+    "sell": 5400,
+    "enchant": {
+      "immune": [
+        "curse"
+      ]
+    }
+  },
+  "wyrmscale_mail": {
+    "name": "Wyrmscale Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 112,
+    "price": 0,
+    "desc": "Mail of dragon scale, overlapped like roof tiles. It sheds flame and flatters nobody.",
+    "unique": true,
+    "sell": 5400
+  },
+  "sunstone": {
+    "name": "Sunstone",
+    "type": "key",
+    "desc": "A coal of true sunlight, small enough to hold in a palm that no longer glows. It is warm all the way through."
+  },
+  "silverglass_blade": {
+    "name": "Silverglass Blade",
+    "type": "weapon",
+    "wtype": "sword",
+    "atk": 130,
+    "spd": 8,
+    "price": 0,
+    "desc": "A blade of silvered glass that shows the wielder their own face, a little braver than they feel.",
+    "unique": true,
+    "sell": 5800,
+    "enchant": {
+      "element": "light"
+    }
+  },
+  "lookingglass_staff": {
+    "name": "Lookingglass Staff",
+    "type": "weapon",
+    "wtype": "staff",
+    "atk": 18,
+    "mag": 124,
+    "price": 0,
+    "desc": "A staff with a polished mirror for a head. Spells leave it brighter than they entered.",
+    "unique": true,
+    "sell": 5800
+  },
+  "veilglass_bow": {
+    "name": "Veilglass Bow",
+    "type": "weapon",
+    "wtype": "bow",
+    "atk": 128,
+    "spd": 13,
+    "price": 0,
+    "desc": "A bow of drawn glass. Its arrows are almost invisible until they land.",
+    "unique": true,
+    "sell": 5800
+  },
+  "mirrorbound_mace": {
+    "name": "Mirrorbound Mace",
+    "type": "weapon",
+    "wtype": "mace",
+    "atk": 124,
+    "mag": 30,
+    "price": 0,
+    "desc": "A mace bound in shards of mirror. Curses glance off it.",
+    "unique": true,
+    "sell": 5800,
+    "enchant": {
+      "immune": [
+        "curse"
+      ]
+    }
+  },
+  "shadeweave_mail": {
+    "name": "Shadeweave Mail",
+    "type": "armor",
+    "atype": "heavy",
+    "def": 118,
+    "price": 0,
+    "desc": "Mail woven from shade cloth, light as breath and hard as a grudge.",
+    "unique": true,
+    "sell": 5800
   }
 }

@@ -1,0 +1,42 @@
+{
+  "scenes": {
+    "descent_enter": {
+      "when": { "notFlag": "descentEntered" },
+      "lines": [
+        { "n": "", "t": "The iron grate swings up on a stair that was cut for something larger than a person. The steps are black and glassy, each one worn into a bowl in the middle by a thousand years of feet that were not shod in leather. Warm air rises from below and carries a taste of struck matches." },
+        { "n": "", "t": "The walls here do not hold torches. They glow. Veins of molten orange run through the black stone like the wiring of some enormous, sleeping machine, and far below, something that might be a bell is tolling very slowly." },
+        { "n": "{hero}", "t": "The mark is warm. It has not been warm since the Glass Dunes. Whatever is down here, it knows me." }
+      ],
+      "set": ["descentEntered"]
+    },
+    "arrive_cinderlanding": {
+      "when": { "notFlag": "reachedCinderlanding" },
+      "lines": [
+        { "n": "", "t": "The stair opens on a cavern ledge above a river of slow fire, and on the ledge, a camp. Tents of scorched canvas, lamps with red glass, a palisade of black timber and iron. Cinderlanding is a place built by people who ran out of every other option and decided to be stubborn about it." },
+        { "n": "", "t": "A woman in a soot-stained coat stands on a crate with a spyglass, counting something on the far bank. She lowers the glass, sees the mark on your hand, and does not look surprised. She looks like someone who has been checking the stair every day for a month." }
+      ],
+      "set": ["reachedCinderlanding"],
+      "chapter": 16,
+      "autosave": true,
+      "banner": "Chapter 16: The Descent"
+    },
+    "packlord_intro": {
+      "when": { "notFlag": "packlordSeen" },
+      "lines": [
+        { "n": "", "t": "The vent fields open out into a vast hall of cracked black rock, and in its middle stands a hound the size of a cart. Its coat is not fur but a running sheet of flame, and its eyes are two white coals. Around it, a pack of lesser hounds lies sprawled in the warm air like dogs before a hearth." },
+        { "n": "", "t": "The Pack-Lord rises. The pack rises with it, all at once, all silent. It lowers its great head until its eyes are level with yours, and it does not growl. It simply breathes, a long slow breath that bends the air and carries the smell of burning hair." }
+      ],
+      "set": ["packlordSeen"]
+    },
+    "packlord_down": {
+      "when": { "notFlag": "packlordSceneDone" },
+      "lines": [
+        { "n": "", "t": "The great hound goes down on its flank with a sigh like a furnace banked for the night. The flame in its coat shrinks to a glow, and then to nothing, and underneath is a large, battered, grey-muzzled dog with a collar of old iron links. The pack comes forward, one by one, and lies down around it." },
+        { "n": "", "t": "On the collar, worn nearly smooth, there is a name in the old temple script. You can read it, which you did not expect: Guardian. The Pack-Lord was a watchdog of Ahn-Solis, set at the head of the stair a thousand years ago. Nyrrh did not make it a monster. He only made it forget what it was guarding." },
+        { "n": "{hero}", "t": "It was a guard dog. The oldest one in the world. And it stayed at its post the whole time." }
+      ],
+      "set": ["packlordSceneDone"],
+      "gold": 3000
+    }
+  }
+}

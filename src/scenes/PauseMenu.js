@@ -5,7 +5,7 @@ import { knownAbilities } from '../systems/party.js';
 import { formatPlaytime } from '../systems/save.js';
 import { usable, applyItem, remove } from '../systems/inventory.js';
 import { SLOTS, canEquip, equipItem, unequipItem, statLine, compareGear, slotOf, temperedItem } from '../systems/equipment.js';
-import { jobProgress, isUnlocked, isActive, toggleJob } from '../systems/jobs.js';
+import { jobProgress, isUnlocked, isActive, toggleJob, perkEffects } from '../systems/jobs.js';
 import { collection } from '../systems/merchant.js';
 import { branchesOf, evolveBlock, TIER2_LEVEL } from '../systems/evolution.js';
 import { enchantText } from '../systems/equipment.js';
@@ -112,7 +112,7 @@ export class PauseMenu extends Phaser.Scene {
 
   useItem(memberIndex) {
     const id = this.pending, m = state.party[memberIndex];
-    const r = applyItem(m, this.items[id]);
+    const r = applyItem(m, this.items[id], perkEffects(state, this.cache.json.get('jobs'), 'alchemist').potency ?? 0);
     if (r.ok) remove(state.inventory, id);
     if (r.ok && usable(state.inventory, this.items).some((e) => e.id === id)) { this.showTargets(id); this.note.setText(`${m.name}: ${r.text}`); }
     else { this.showItems(r.ok ? `${m.name}: ${r.text}` : r.text); }

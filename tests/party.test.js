@@ -71,7 +71,7 @@ test('unitDef carries known abilities for the battle', () => {
 
 // ---------- content data validation
 test('abilities reference valid effects, statuses and targets', () => {
-  const effects = ['damage', 'status', 'buff', 'heal', 'cleanse', 'restoreMp', 'revive', 'drain', 'steal', 'exposeSelf', 'summon', 'buffSelf'];
+  const effects = ['damage', 'status', 'buff', 'heal', 'cleanse', 'restoreMp', 'revive', 'drain', 'steal', 'exposeSelf', 'summon', 'buffSelf', 'drainMp', 'absorb', 'charge'];
   const targets = ['enemy', 'allEnemies', 'ally', 'allAllies', 'deadAlly', 'self'];
   for (const [id, a] of Object.entries(abilities)) {
     assert.ok(targets.includes(a.target), `${id} target`);

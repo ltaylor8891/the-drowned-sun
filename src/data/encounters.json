@@ -565,9 +565,9 @@
     "dark_squire"
   ],
   "halls_elite": [
-    "dark_knight",
-    "dark_templar",
-    "dark_templar"
+    "cinder_wyrm",
+    "hearth_shade",
+    "hearth_shade"
   ],
   "vault_haunt": [
     "hollow_wisp",
@@ -587,5 +587,267 @@
   ],
   "hybrid_gravewight": [
     "gravewight"
+  ],
+  "bier_whelps": [
+    "wyvern_whelp",
+    "wyvern_whelp",
+    "wyvern_whelp"
+  ],
+  "bier_wyverns": [
+    "bier_wyvern",
+    "wyvern_whelp"
+  ],
+  "bier_ashen": [
+    "ashen_wyvern",
+    "wyvern_whelp",
+    "wyvern_whelp"
+  ],
+  "bier_patrol": [
+    "dark_knight",
+    "bier_wyvern"
+  ],
+  "bier_knights": [
+    "dark_knight",
+    "dark_templar",
+    "dark_squire"
+  ],
+  "climb_flock": [
+    "ashen_wyvern",
+    "bier_wyvern"
+  ],
+  "climb_guard": [
+    "dark_knight",
+    "dark_templar",
+    "bier_wyvern"
+  ],
+  "summit_elite": [
+    "dark_knight",
+    "dark_templar",
+    "bier_wyvern"
+  ],
+  "boss_wyvern_rider": [
+    "wyvern_rider"
+  ],
+  "boss_pale_chancellor": [
+    "pale_chancellor"
+  ],
+  "hybrid_galewing": [
+    "galewing"
+  ],
+  "stair_imps": [
+    "cinder_imp",
+    "cinder_imp",
+    "hex_imp"
+  ],
+  "stair_hounds": [
+    "ember_hound",
+    "ember_hound",
+    "ember_hound"
+  ],
+  "stair_demons": [
+    "lesser_demon",
+    "cinder_imp"
+  ],
+  "stair_pack": [
+    "hellhound",
+    "ember_hound",
+    "ember_hound"
+  ],
+  "stair_mixed": [
+    "hearth_drake",
+    "dim_shade",
+    "dim_shade"
+  ],
+  "vent_fiends": [
+    "flame_demon",
+    "brimstone_imp",
+    "cinder_imp"
+  ],
+  "vent_pack": [
+    "hellhound",
+    "cinder_hound",
+    "ember_hound"
+  ],
+  "vent_pit": [
+    "pit_demon",
+    "hex_imp"
+  ],
+  "vent_elite": [
+    "flame_demon",
+    "pit_demon",
+    "brimstone_imp"
+  ],
+  "boss_hellhound_packlord": [
+    "hellhound_packlord"
+  ],
+  "hybrid_hexbat": [
+    "hexbat"
+  ],
+  "approach_thralls": [
+    "vampire_thrall",
+    "vampire_thrall",
+    "vampire_thrall"
+  ],
+  "approach_nobles": [
+    "vampire_noble",
+    "vampire_thrall"
+  ],
+  "approach_knights": [
+    "vampire_knight",
+    "vampire_thrall",
+    "vampire_thrall"
+  ],
+  "approach_mixed": [
+    "vampire_noble",
+    "vampire_knight",
+    "dire_bat"
+  ],
+  "hall_court": [
+    "vampire_noble",
+    "vampire_noble",
+    "vampire_thrall"
+  ],
+  "hall_guard": [
+    "vampire_knight",
+    "vampire_knight",
+    "vampire_noble"
+  ],
+  "hall_elite": [
+    "vampire_knight",
+    "vampire_noble",
+    "vampire_noble"
+  ],
+  "boss_vampire_countess": [
+    "vampire_countess"
+  ],
+  "hybrid_bloodmoon_stalker": [
+    "bloodmoon_stalker"
+  ],
+  "stair_gargoyles": [
+    "chapel_gargoyle",
+    "chapel_gargoyle",
+    "chapel_gargoyle"
+  ],
+  "stair_choir": [
+    "choir_gargoyle",
+    "chapel_gargoyle"
+  ],
+  "stair_bells": [
+    "bell_gargoyle",
+    "chapel_gargoyle",
+    "chapel_gargoyle"
+  ],
+  "stair_song": [
+    "choir_gargoyle",
+    "choir_gargoyle",
+    "chapel_gargoyle"
+  ],
+  "nave_choir": [
+    "choir_gargoyle",
+    "bell_gargoyle",
+    "chapel_gargoyle"
+  ],
+  "nave_bells": [
+    "bell_gargoyle",
+    "bell_gargoyle"
+  ],
+  "nave_elite": [
+    "bell_gargoyle",
+    "bell_gargoyle",
+    "chapel_gargoyle"
+  ],
+  "boss_gargoyle_warden": [
+    "gargoyle_warden"
+  ],
+  "hybrid_livingwall": [
+    "livingwall"
+  ],
+  "stair_whelps": [
+    "hearth_whelp",
+    "hearth_whelp",
+    "hearth_whelp"
+  ],
+  "stair_drakes": [
+    "hearth_drake",
+    "hearth_whelp",
+    "hearth_whelp"
+  ],
+  "stair_shades": [
+    "dim_shade",
+    "dim_shade",
+    "dim_shade"
+  ],
+  "halls_drakes": [
+    "hearth_drake",
+    "hearth_drake",
+    "hearth_whelp"
+  ],
+  "halls_shades": [
+    "hearth_shade",
+    "hearth_shade",
+    "dim_shade"
+  ],
+  "halls_wyrm": [
+    "cinder_wyrm",
+    "hearth_whelp",
+    "hearth_whelp"
+  ],
+  "halls_dread": [
+    "dread_shade",
+    "hearth_shade"
+  ],
+  "boss_elder_dragon": [
+    "elder_dragon"
+  ],
+  "hybrid_infernal_wyrm": [
+    "infernal_wyrm"
+  ],
+  "sun_demons": [
+    "lesser_demon",
+    "lesser_demon",
+    "flame_demon"
+  ],
+  "sun_hounds": [
+    "hellhound",
+    "hellhound",
+    "hellhound"
+  ],
+  "sun_stone": [
+    "bell_gargoyle",
+    "bell_gargoyle"
+  ],
+  "sun_court": [
+    "vampire_knight",
+    "vampire_knight",
+    "vampire_noble"
+  ],
+  "gal_wyrm": [
+    "cinder_wyrm",
+    "pit_demon"
+  ],
+  "gal_dread": [
+    "dread_shade",
+    "dim_shade",
+    "dim_shade"
+  ],
+  "gal_haunt": [
+    "rune_wraith",
+    "vampire_knight"
+  ],
+  "gal_pit": [
+    "pit_demon",
+    "hellhound",
+    "hellhound"
+  ],
+  "gal_elite": [
+    "cinder_wyrm",
+    "hearth_shade",
+    "vampire_noble"
+  ],
+  "boss_nyrrh": [
+    "nyrrh"
+  ],
+  "hybrid_mirror_wraith": [
+    "mirror_wraith"
   ]
 }

@@ -116,6 +116,7 @@ test('quest steps and clear flags point at flags something can set', () => {
     (m.clearFlags ?? []).forEach((c) => settable.add(c.flag));
   }
   for (const s of Object.values(story.scenes)) (s.set ?? []).forEach((f) => settable.add(f));
+  for (const t of Object.values(read('jobs.json').fishing?.tables ?? {})) for (const f of t) if (f.flag) settable.add(f.flag); // set by landing a fish
   for (const d of Object.values(dialogues)) for (const n of Object.values(d.npcs)) for (const e of n.events ?? []) (e.set ?? []).forEach((f) => settable.add(f));
   for (const q of Object.values(quests)) for (const st of q.steps) if (st.items) settable.add(st.flag); // set once the party holds the items
   for (const [id, q] of Object.entries(quests)) {

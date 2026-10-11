@@ -250,5 +250,95 @@
       "rune_dust",
       "silver_oil"
     ]
+  },
+  "mourners_store": {
+    "name": "Mourners' Provisions",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "stone_salve",
+      "silver_oil",
+      "rune_dust"
+    ]
+  },
+  "cinderlanding_store": {
+    "name": "Cinderlanding Outfitters",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "stone_salve",
+      "rune_dust",
+      "dragonbone_sword",
+      "dragonbone_axe",
+      "dragonbone_staff",
+      "dragonbone_bow",
+      "dragonbone_dagger",
+      "dragonbone_mace",
+      "dragonbone_plate",
+      "dragonbone_hide",
+      "dragonbone_cloak",
+      "dragonbone_robe"
+    ]
+  },
+  "pale_alms_store": {
+    "name": "The Alms Pantry",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "stone_salve",
+      "rune_dust"
+    ]
+  },
+  "nave_store": {
+    "name": "Netwick & Tackle",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "stone_salve",
+      "rune_dust"
+    ]
+  },
+  "kindle_store": {
+    "name": "The Banked Fire",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "silver_oil",
+      "rune_dust"
+    ]
+  },
+  "sun_store": {
+    "name": "The Last Stall",
+    "stock": [
+      "hi_potion",
+      "antidote",
+      "hi_ether",
+      "phoenix_plume",
+      "grand_elixir",
+      "clear_tea",
+      "silver_oil",
+      "rune_dust",
+      "stone_salve"
+    ]
   }
 }

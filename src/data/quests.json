@@ -535,6 +535,10 @@
       {
         "text": "Report to Warden-Captain Isolde Marrow",
         "flag": "reportedIsolde"
+      },
+      {
+        "text": "Take the Bier Road to the Mourners' Rest",
+        "flag": "reachedMourners"
       }
     ]
   },
@@ -550,6 +554,182 @@
       {
         "text": "Bring the rune stone to Tamsin Orrel at Ashfall",
         "flag": "runeDone"
+      }
+    ]
+  },
+  "main_ch15": {
+    "title": "The Bier Road",
+    "type": "main",
+    "startFlag": "reachedMourners",
+    "steps": [
+      {
+        "text": "Speak with Abbot Hale Corvane at the Mourners' Rest",
+        "flag": "talkedAbbot"
+      },
+      {
+        "text": "Bring down the Wyvern Rider on the climb",
+        "flag": "riderDefeated"
+      },
+      {
+        "text": "Face the Pale Chancellor at the summit",
+        "flag": "chancellorDefeated"
+      },
+      {
+        "text": "Report to Abbot Hale Corvane",
+        "flag": "reportedAbbot"
+      },
+      {
+        "text": "Descend the stair beyond the Bier Summit to Cinderlanding",
+        "flag": "reachedCinderlanding"
+      }
+    ]
+  },
+  "main_ch16": {
+    "title": "The Descent",
+    "type": "main",
+    "startFlag": "reachedCinderlanding",
+    "steps": [
+      {
+        "text": "Speak with Captain Veyra Dask at Cinderlanding",
+        "flag": "talkedVeyra"
+      },
+      {
+        "text": "Cross the vent fields and break the Hellhound Pack-Lord",
+        "flag": "packlordDefeated"
+      },
+      {
+        "text": "Report to Captain Veyra Dask",
+        "flag": "reportedVeyra"
+      },
+      {
+        "text": "Pass the vent fields to the Pale Alms",
+        "flag": "reachedAlms"
+      }
+    ]
+  },
+  "alchemist_vents": {
+    "title": "Three Rare Ingredients",
+    "type": "side",
+    "startFlag": "alchemistAsked",
+    "steps": [
+      {
+        "text": "Find vent salt on the Descent stair",
+        "flag": "ventSaltFound"
+      },
+      {
+        "text": "Find an ember bloom in the vent fields",
+        "flag": "emberBloomFound"
+      },
+      {
+        "text": "Find a hellfire root in the Ember Hollow",
+        "flag": "hellRootFound"
+      },
+      {
+        "text": "Bring all three to Ondrea Sulph",
+        "flag": "alchemistDone"
+      }
+    ]
+  },
+  "main_ch17": {
+    "title": "The Cinder Court",
+    "type": "main",
+    "startFlag": "reachedAlms",
+    "steps": [
+      {
+        "text": "Speak with Almoner Perpetua Quell",
+        "flag": "talkedAlmoner"
+      },
+      {
+        "text": "Cross the court halls and face the Vampire Countess",
+        "flag": "countessDefeated"
+      },
+      {
+        "text": "Report to Almoner Perpetua Quell",
+        "flag": "reportedAlmoner"
+      },
+      {
+        "text": "Open the water-gate and reach the Nave Landing",
+        "flag": "reachedLanding"
+      }
+    ]
+  },
+  "main_ch18": {
+    "title": "The Drowned Choir",
+    "type": "main",
+    "startFlag": "reachedLanding",
+    "steps": [
+      {
+        "text": "Speak with Cantor-Warden Eilidh Strand",
+        "flag": "talkedCantor"
+      },
+      {
+        "text": "Cross the nave and silence the Gargoyle Warden",
+        "flag": "wardenDefeated"
+      },
+      {
+        "text": "Report to Cantor-Warden Eilidh Strand",
+        "flag": "reportedCantor"
+      },
+      {
+        "text": "Descend the Hearth Stair to Kindle Rest",
+        "flag": "reachedHearth"
+      }
+    ]
+  },
+  "fisher_pike": {
+    "title": "The Famous Fish",
+    "type": "side",
+    "startFlag": "fisherAsked",
+    "steps": [
+      {
+        "text": "Catch the Moonscale Pike at the fishing post in the flooded nave",
+        "flag": "pikeCaught"
+      },
+      {
+        "text": "Bring it to Corra Netwick",
+        "flag": "fisherDone"
+      }
+    ]
+  },
+  "main_ch19": {
+    "title": "The Dragon's Hearth",
+    "type": "main",
+    "startFlag": "reachedHearth",
+    "steps": [
+      {
+        "text": "Speak with Hearth-Matron Ashra Vell",
+        "flag": "talkedMatron"
+      },
+      {
+        "text": "Cross the Hearth Halls and face the Elder Dragon",
+        "flag": "elderDefeated"
+      },
+      {
+        "text": "Report to Hearth-Matron Ashra Vell",
+        "flag": "reportedMatron"
+      },
+      {
+        "text": "Climb the Sun Stair to the last lamp",
+        "flag": "reachedThrone"
+      }
+    ]
+  },
+  "main_ch20": {
+    "title": "The Sun-Throne",
+    "type": "main",
+    "startFlag": "reachedThrone",
+    "steps": [
+      {
+        "text": "Speak with Dawn-Warden Kaer Solenne",
+        "flag": "talkedDawnWarden"
+      },
+      {
+        "text": "Cross the Sun Gallery and face Nyrrh, the Demon Lord",
+        "flag": "nyrrhDefeated"
+      },
+      {
+        "text": "Sing the Sunsong at the Sun-Throne",
+        "flag": "sunRisen"
       }
     ]
   }

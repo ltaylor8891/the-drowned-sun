@@ -1,0 +1,1283 @@
+{
+  "npcs": {
+    "veyra_dask": {
+      "name": "Captain Veyra Dask",
+      "role": "captain of the descent expedition and keeper of the landing",
+      "personality": "weathered, wry, tireless; has an answer for everything except the thing she is actually worried about",
+      "voice": "map-reader's talk: depths, bearings, ropes and rations; calls the lower dark 'the deep' and the camp 'the shelf'",
+      "events": [
+        {
+          "id": "veyra_intro",
+          "when": {
+            "notFlag": "talkedVeyra"
+          },
+          "set": [
+            "talkedVeyra"
+          ],
+          "say": [
+            "Dask. Captain of this shelf and everyone on it. We came down eleven months ago with two hundred souls and a plan to chart the deep. We have ninety-six souls and a plan to leave, and the plan has been postponed.",
+            "The vent fields lie east of here, a hall of cracked rock with the fires running just under the floor. Something huge keeps that hall. It has taken four of my scouts and has never been seen in daylight, since there is no daylight, and the hounds do not mind.",
+            "Break the Pack-Lord and the way to the deep opens. Past the fields there is a court, and a countess, and a door. I would rather not draw maps of what lies behind it. Take salve, take ice, and keep the party close. A lone hound is a nuisance. A hound with its pack becomes a siege."
+          ]
+        },
+        {
+          "id": "veyra_report",
+          "when": {
+            "flag": "packlordDefeated",
+            "notFlag": "reportedVeyra"
+          },
+          "set": [
+            "reportedVeyra",
+            "chapter_16_done",
+            "cinder_court_open"
+          ],
+          "say": [
+            "The fires in the hall dimmed. I watched from the shelf as a long soft fading, like a hearth burning down to coals. Then the pack came padding out of the dark, tails low, and walked straight past my sentries and settled in the camp. A watchdog. A thousand-year-old watchdog. I am ashamed of what I assumed.",
+            "The pass is yours. It is a token of scorched iron that the old guardians used to carry, and it opens the court gate when the keepers behind it are ready. They will not be ready. It will open anyway.",
+            "Take the shelf's purse and our best supplies. Down there the road gets older, and the old things have long memories. Do not let the court give you anything to drink."
+          ],
+          "gold": 9000,
+          "give": {
+            "hi_potion": 8,
+            "hi_ether": 8,
+            "phoenix_plume": 6,
+            "grand_elixir": 4,
+            "stone_salve": 3,
+            "cinder_pass": 1
+          },
+          "autosave": true,
+          "banner": "Chapter 16 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "vd01",
+          "text": "The shelf is forty paces long and twelve wide. In eleven months I have walked it ten thousand times and found a new crack in the floor on every circuit."
+        },
+        {
+          "id": "vd02",
+          "text": "The rope is the whole of our geography. A hundred and sixty fathoms of braided hide, anchored at the stair and paid out by hand. When it ends, so does the map."
+        },
+        {
+          "id": "vd03",
+          "text": "Heat is a clock down here. At every outbreath of the vents we work, and at every inhale we sleep. It keeps no hours of the day and I have grown very fond of it."
+        },
+        {
+          "id": "vd04",
+          "text": "Demons are armour with a temper. Light cracks them and ice does little. Fire is worse than useless, since they drink it and grow pleased."
+        },
+        {
+          "id": "vd05",
+          "text": "Imps steal magic. A caster who feels a draining behind the skull has seconds to act. Kill the imp or reach for an ether, but never simply stand there and be milked."
+        },
+        {
+          "id": "vd06",
+          "text": "A hellhound runs in a pack, and a pack runs on its leader. Cut the strong one early or the weak ones will use him as a shield, which is more tactical than most of my sergeants."
+        },
+        {
+          "id": "vd07",
+          "text": "Swordsman, bring a wide-bladed weapon and good boots. The vent floor cracks in sheets, and a firm stance is worth two potions.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "vd08",
+          "text": "Caster, ice is your friend in the deep. A frost bolt cracks an imp's shell and cools the hounds. Bring plenty of mana. Bring more than that.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "vd09",
+          "text": "Scout, narrow ledges skirt the main hall along the vent fields. A soft tread can win the far side and see the pack well before it sees you.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "vd10",
+          "text": "Priest, a woman in the long tent has been praying to the walls since we arrived. Say a word with her. It would weigh more coming from you.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "vd11",
+          "text": "Ilyan decodes the carvings on the stair wall. He claims they map the whole descent. I claim they are one very long complaint. The argument is unsettled."
+        },
+        {
+          "id": "vd12",
+          "text": "Kest keeps what is left of the camp hounds, three scarred mongrels that learned to love the heat. They hate the Pack-Lord's smell and they sit very still when it blows our way."
+        },
+        {
+          "id": "vd13",
+          "text": "Ruth walks the vent rim at dawn and sings to the cracks. She says they listen. I say they exhale. We are both correct, which is the usual way with Ruth."
+        },
+        {
+          "id": "vd14",
+          "text": "Daro is fourteen and has never seen the sun. He keeps asking its colour. I have given him seven different answers and he believes every one."
+        },
+        {
+          "id": "vd15",
+          "text": "Ondrea Sulph's hut is the only corner of the shelf that smells good: burning sugar and cloves. Nobody has had the heart to ask what is in the pot."
+        },
+        {
+          "id": "vd16",
+          "text": "Torvil runs the outfitters like a ship's chandlery, tidy as a drawer. Whatever is absent from his shelf was never on the manifest, and he says so with a straight face."
+        },
+        {
+          "id": "vd17",
+          "text": "Mabry's inn is called the Ashen Cup and she serves a drink the colour of old copper. It is not, I am told, to be questioned. It is warm. That is its virtue."
+        },
+        {
+          "id": "vd18",
+          "text": "A rare merchant walked the stair last winter with a pack of brass trinkets and not a bead of sweat on him. He sold us a compass that swings toward the nearest open door. It has not erred once."
+        },
+        {
+          "id": "vd19",
+          "text": "The vent fields are the first test. A single hall, a single path, a single large dog. Do not underestimate the dog.",
+          "when": {
+            "flag": "talkedVeyra",
+            "notFlag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "vd20",
+          "text": "Ondrea wants three ingredients from the deep, one from the stair, one from the fields, one from the hollow. It is a fool's errand and I have already told her she may have my blessing. It is all I have to spare.",
+          "when": {
+            "flag": "reachedCinderlanding",
+            "notFlag": "alchemistDone"
+          }
+        },
+        {
+          "id": "vd21",
+          "text": "The camp is awake. People walk out onto the shelf during the sleep-hour and stare at the vent hall. Nobody has told them the news. They simply felt it.",
+          "when": {
+            "flag": "packlordDefeated",
+            "notFlag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "vd22",
+          "text": "The pack sleeps in the lee of the longest tent now. Children set down bowls of scraps. I cannot bring myself to forbid it, and I am no longer sure I wish to.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "vd23",
+          "text": "Past the vent fields there is an overhang, a hollow, where a small thing with wings is said to nest. Part imp, part bat, all malice. Kest calls it a hexbat. The less I think about it, the better I sleep.",
+          "when": {
+            "notFlag": "hexbatDefeated"
+          }
+        },
+        {
+          "id": "vd24",
+          "text": "Good road, light-bearer. Whatever the deep asks of you, remember that the shelf is still here, and the rope is still tied.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        }
+      ]
+    },
+    "ondrea_sulph": {
+      "name": "Ondrea Sulph",
+      "role": "alchemist, keeper of the alembic",
+      "personality": "bright, scorched, brilliantly impatient; apologises to nobody and thanks everybody",
+      "voice": "recipes as incantation: grains, drams, boil-times; an unstoppable talker who loses her thread and finds a better one",
+      "events": [
+        {
+          "id": "ondrea_ask",
+          "when": {
+            "notFlag": "alchemistAsked"
+          },
+          "set": [
+            "alchemistAsked"
+          ],
+          "say": [
+            "Ondrea Sulph, alchemist, and if you touch the red flask I will not be responsible for your eyebrows. Welcome to the hut. Sit. Do not sit there. There.",
+            "Here is my trouble. I can brew the usual: tonics, ethers, a very decent antidote. But I am reaching for something finer, and the finer thing needs three ingredients that grow only where the ground breathes fire. A salt, a flower and a root.",
+            "The salt lies on the stair, the flower in the vent fields, and the root in a hollow under the fields where something with wings has taken up residence. Bring all three and the whole craft is yours. The alembic here will answer your hand, and what it makes will work a little better in it."
+          ]
+        },
+        {
+          "id": "ondrea_done",
+          "when": {
+            "itemCount": {
+              "vent_salt": 1,
+              "ember_bloom": 1,
+              "hellfire_root": 1
+            },
+            "notFlag": "alchemistDone"
+          },
+          "set": [
+            "alchemistDone",
+            "job_alchemist_unlocked"
+          ],
+          "say": [
+            "The salt, the bloom, the root. All three. In one pocket. I think I am going to faint. No. I am going to put the kettle on instead, it is the same thing in a different order.",
+            "Right. The craft. Open your jobs list and take up Alchemist, then bring me monster parts: horns, fangs, brimstone. The alembic does the rest, and the better you get, the harder every potion hits. A tonic in a master's hand is a small miracle.",
+            "And this is for the three of them: a purse, a few horns for practice and a pinch of brimstone. Keep the brimstone away from the horns until you have read the label. What happens otherwise I decline to describe. It is better as a surprise."
+          ],
+          "take": {
+            "vent_salt": 1,
+            "ember_bloom": 1,
+            "hellfire_root": 1
+          },
+          "gold": 2000,
+          "give": {
+            "imp_horn": 4,
+            "brimstone": 3
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "os01",
+          "text": "Alchemy is cooking with a worse safety record. The principle is the same: heat, patience and a willingness to be wrong in an interesting way."
+        },
+        {
+          "id": "os02",
+          "text": "Imp horn gives body to a tonic. Brimstone gives it bite. Ember fang gives it a kick like a mule, and I have the bruises to prove it."
+        },
+        {
+          "id": "os03",
+          "text": "A potion is a promise made in liquid. If the promise is kept, the drinker never notices. If it is broken, they notice for the rest of their short lives."
+        },
+        {
+          "id": "os04",
+          "text": "The alembic dates from before the temple fell. Copper, silver-lined, a little singed at the throat. It has outlived four alchemists and never once lost a drop."
+        },
+        {
+          "id": "os05",
+          "text": "Demon blood will not hold a flame. It fizzes, spits and sulks. I tried to make a lamp of it once. The lamp is still in my hair."
+        },
+        {
+          "id": "os06",
+          "text": "A curse is a thick, sticky sort of ill luck, and it can be thinned. Vent remedy does it in a minute, if the dose is right and the patient is calm."
+        },
+        {
+          "id": "os07",
+          "text": "Swordsman, I can brew you a draught that stiffens the joints against a long march. It tastes of tar. Please spare me requests to improve the flavour. I have tried.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "os08",
+          "text": "Caster, we share more than you suspect. Each of us measures out invisible forces and hopes the sums come out. Sit, I will pour you something cold.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "os09",
+          "text": "Scout, hounds hate the smell of valerian and honey. A pinch in the boot, and they will walk around you as though you were a rock. I speak from experience.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "os10",
+          "text": "Priest, there is no division between healing and brewing. I have always thought of the two as the same craft practised in different robes.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "os11",
+          "text": "Veyra comes in for burn salve twice a week and pretends it is for somebody else. I let her. A captain is allowed one small lie."
+        },
+        {
+          "id": "os12",
+          "text": "Ilyan brings me strange glyph-ink and wants the shade matched. I cannot, but I keep trying. It looks like a fading bruise and it drifts when I look away."
+        },
+        {
+          "id": "os13",
+          "text": "Kest buys liniment for the hounds and refuses to admit it is for his own knees. I hand it over with a straight face and charge him for the hounds."
+        },
+        {
+          "id": "os14",
+          "text": "Ruth asked me for a tincture to quiet the vents. I told her I brew no miracles. She nodded and sat in the corner humming for an hour. The vents were calmer afterwards, and I asked no questions."
+        },
+        {
+          "id": "os15",
+          "text": "Daro sweeps the hut for pennies and sometimes for a drop of something sweet. I let him lick the stirring spoon. Otherwise he would start experimenting on his own."
+        },
+        {
+          "id": "os16",
+          "text": "Torvil sells my brews on the front shelf and keeps a quarter for himself. We have never had a written agreement. It is the most stable partnership I have ever had."
+        },
+        {
+          "id": "os17",
+          "text": "Mabry buys my mulling spice at cost and brews an indecent punch with it. I do not drink at her inn, and I do not allow my staff to either."
+        },
+        {
+          "id": "os18",
+          "text": "A rare trader stopped at my bench once and sold me a single drop of something that glowed. It sits in a thimble. Six months on it burns exactly as bright."
+        },
+        {
+          "id": "os19",
+          "text": "The stair salt grows in a crust at the edge of the vents. You will know it by its taste: bitter, then sweet, then very cold. Do not lick it. Scrape it into a pouch.",
+          "when": {
+            "flag": "alchemistAsked",
+            "notFlag": "ventSaltFound"
+          }
+        },
+        {
+          "id": "os20",
+          "text": "The ember bloom opens only on the outbreath of the vents. Red with a black heart, smelling of cinnamon. Gorgeous, and quite poisonous. Wear gloves.",
+          "when": {
+            "flag": "alchemistAsked",
+            "notFlag": "emberBloomFound"
+          }
+        },
+        {
+          "id": "os21",
+          "text": "The hellfire root is a thick black thing like an old finger, buried in a hollow under the vents. It is guarded by something with wings. I would not go alone, and I would not go unprepared.",
+          "when": {
+            "flag": "alchemistAsked",
+            "notFlag": "hellRootFound"
+          }
+        },
+        {
+          "id": "os22",
+          "text": "The alembic is warming. Bring me horns, fangs and brimstone, and I will show you what my hands have learned. We will make something that sings.",
+          "when": {
+            "flag": "alchemistDone"
+          }
+        },
+        {
+          "id": "os23",
+          "text": "The vent fields are quiet, I hear. A quiet hall says the Pack-Lord is down. It also lets me hear my own pot bubbling, a sound I find I longed for.",
+          "when": {
+            "flag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "os24",
+          "text": "Brew well. A good potion should leave no taste of the person who made it, only the memory of having been looked after.",
+          "when": {
+            "flag": "alchemistDone"
+          }
+        }
+      ]
+    },
+    "torvil_gant": {
+      "name": "Torvil Gant",
+      "role": "keeper of Cinderlanding Outfitters",
+      "personality": "precise, wry, vaguely nautical; stocks his shelves like a ship's hold and talks to them when nobody is looking",
+      "voice": "inventory in fathoms and tons; every price delivered as a bearing and a distance",
+      "events": [
+        {
+          "id": "torvil_intro",
+          "when": {
+            "notFlag": "metTorvil"
+          },
+          "set": [
+            "metTorvil"
+          ],
+          "say": [
+            "Gant. Outfitters. Anything not on the shelf is not in the hold, and anything not in the hold never came down the stair. My list of regrets is short.",
+            "I stock dragonbone, the new tier. White, light and tougher than any steel the old world forged. It comes up from the deep in crates, and it is better than anything above the stair. The price reflects the fathom."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "tg01",
+          "text": "A hold is organised by weight and by need. Heavy things low, urgent things near the hatch. The same applies to a person's pockets."
+        },
+        {
+          "id": "tg02",
+          "text": "Dragonbone does not rust, does not blunt and does not creak. It is the first honest metal I have ever sold, and it is not metal."
+        },
+        {
+          "id": "tg03",
+          "text": "Each crate arrives on a sledge, towed along the stair by four men and one very patient mule. I tip the mule. The men can ask politely."
+        },
+        {
+          "id": "tg04",
+          "text": "A phoenix plume holds a spark in its quill. It is the one thing I stock that I would not sell to a person I did not like."
+        },
+        {
+          "id": "tg05",
+          "text": "Stone salve, clear tea and grand elixir are the three great pillars of any descent. Pack one of each per fighter. I will not be told otherwise."
+        },
+        {
+          "id": "tg06",
+          "text": "I have sold nine hundred ropes and no two alike. A rope tells its owner's story, and it never lies. It frays where he was afraid."
+        },
+        {
+          "id": "tg07",
+          "text": "Swordsman, the dragonbone sword is lighter than your last by a pound. A pound is the difference between a clean parry and a bruised wrist.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "tg08",
+          "text": "Caster, the dragonbone robe is stitched with a thread I cannot name. It sings when you cast and drinks a little of the heat. I recommend it to anyone who sweats.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "tg09",
+          "text": "Scout, the cloak weighs less than a loaf and turns a blade at an angle. I tested it myself. Do not ask me how. I would rather not say.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "tg10",
+          "text": "Priest, the dragonbone mace is balanced for a short arm and a long prayer. It rings at the end of a swing, and I find the ringing devotional.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "tg11",
+          "text": "Veyra signs for her stores without reading the manifest. A compliment, I take it, and I tally everything twice as a courtesy."
+        },
+        {
+          "id": "tg12",
+          "text": "Ondrea owes me nine hundred for flasks. She pays in brews, and the brews always arrive on the day I need them. I have stopped trying to keep the books straight."
+        },
+        {
+          "id": "tg13",
+          "text": "Ilyan buys chalk by the barrel and has not once explained what for. I see the white dust on his boots and decline to ask."
+        },
+        {
+          "id": "tg14",
+          "text": "Kest buys meat for the hounds and a pair of boots for himself each month. The boots never last. The hounds eat better than I do."
+        },
+        {
+          "id": "tg15",
+          "text": "Ruth pays for candles in songs. I own no harp. Her songs fill a drawer, and some of them are very good."
+        },
+        {
+          "id": "tg16",
+          "text": "Daro hauls crates on a commission of half a biscuit each. I would pay more but he refuses. He says the biscuit is part of the work."
+        },
+        {
+          "id": "tg17",
+          "text": "Mabry orders lamp oil in barrels and a particular shade of spice in jars. I deliver. I do not taste. It is the oldest rule in the trade."
+        },
+        {
+          "id": "tg18",
+          "text": "A rare trader gifted me a sextant that measures the depth of a person's patience. I have never taken a reading. I live in fear of the number."
+        },
+        {
+          "id": "tg19",
+          "text": "Before the vent fields, buy tonics and a spare weapon. The hounds go for the arm that holds the sword, and a bitten arm drops a blade in a very final way.",
+          "when": {
+            "flag": "talkedVeyra",
+            "notFlag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "tg20",
+          "text": "The shelf is full of people buying lamps. I sold forty today. Something has shifted in the camp and the cause escapes me, but I will take the margin.",
+          "when": {
+            "flag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "tg21",
+          "text": "Should you stumble on a crate bearing a closed eye, send word. It comes from the old garrison and the contents are a decade overdue.",
+          "when": {
+            "flag": "reachedCinderlanding"
+          }
+        },
+        {
+          "id": "tg22",
+          "text": "The stock list got longer overnight. Seeds, mostly, and a crate of coloured cloth. The camp is making plans, and a plan is a very good customer.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "tg23",
+          "text": "A hexbat roosts south of the fields, and its wing-leather is the finest I have ever handled. If you bring a scrap, I will pay in dragonbone. I am not joking and I am not drunk.",
+          "when": {
+            "notFlag": "hexbatDefeated"
+          }
+        },
+        {
+          "id": "tg24",
+          "text": "Fair seas and good holds, light-bearer. The outfitters will be here when you come back, and I will have rearranged the shelves in your honour.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        }
+      ]
+    },
+    "mabry_coale": {
+      "name": "Mabry Coale",
+      "role": "keeper of the Ashen Cup inn",
+      "personality": "broad, red-cheeked, quick to laugh and quicker to cry; mothers the whole shelf and calls everyone 'pet'",
+      "voice": "inn gossip, tea and old copper drinks; every anecdote has a happy ending she invents on the spot",
+      "events": [
+        {
+          "id": "mabry_intro",
+          "when": {
+            "notFlag": "metMabry"
+          },
+          "set": [
+            "metMabry"
+          ],
+          "say": [
+            "Mabry Coale, pet, and this is the Ashen Cup. A hundred and sixty a night, a pallet by the stove and a cup of copper-red something to settle the nerves. Do not enquire what is in it. It is warm, it is safe, and it is mine.",
+            "The beds are warm from underneath. The vents run below the floor and cold has never found me. Nor has dry, but nobody gets everything."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "mc01",
+          "text": "An inn worth its name keeps a stove at its heart, a window at its back and a story in every drawer. Mine has all three, and a leak I am passing off as a fountain."
+        },
+        {
+          "id": "mc02",
+          "text": "The copper drink is boiled bark and honey and a drop of vent-water. It stains the cup brown and the tongue slightly orange. It is traditional, and I have invented the tradition."
+        },
+        {
+          "id": "mc03",
+          "text": "There are fourteen pallets and a hundred beds' worth of people. I rotate them in shifts. Nobody sleeps alone for more than six hours, and nobody wakes alone."
+        },
+        {
+          "id": "mc04",
+          "text": "A hound's howl well after midnight means the Pack-Lord is restless. A full week of quiet now. I have counted every hour of it, and it frightens me more than the noise."
+        },
+        {
+          "id": "mc05",
+          "text": "Curses wear off with a good night's sleep and a better breakfast. Eggs, if I can get them. Porridge if I cannot. It is the same medicine either way."
+        },
+        {
+          "id": "mc06",
+          "text": "My husband and a cat came down with me. The cat remains, the husband stayed upstairs, and a lantern burns in the sill every night for him regardless."
+        },
+        {
+          "id": "mc07",
+          "text": "Swordsman, I have a long pallet for you by the wall. You can stretch out and lay the blade across your knees. A man who keeps his steel close sleeps like a child.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mc08",
+          "text": "Caster, the room over the stove is the warmest on the shelf. You will want it, pet. A tired mage in a cold bed is a very expensive error.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mc09",
+          "text": "Scout, the roof hatch above bed nine opens on a ledge that overlooks the whole cavern. I leave it unlatched for guests with an eye for the long view.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mc10",
+          "text": "Priest, the camp could do with a blessing on the stove. It has been through three fires and a flood, and I think it is starting to doubt itself.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mc11",
+          "text": "Veyra sleeps four hours a night and drinks the copper stuff cold. I leave a pot of the hot on the stove when she is not looking. It is always empty by dawn."
+        },
+        {
+          "id": "mc12",
+          "text": "Ondrea comes in for a tot of the copper to taste against her own brews. She sniffs, scowls and drinks. No happier critic walks this shelf."
+        },
+        {
+          "id": "mc13",
+          "text": "Kest brings the hounds to sleep under the porch. They are good with the little ones and very rude to the cat. I charge him a scrap of ham a night."
+        },
+        {
+          "id": "mc14",
+          "text": "Ruth sings in the common room at midnight. Soft, tuneless, comforting. The regulars stay awake to listen and fall asleep when she stops."
+        },
+        {
+          "id": "mc15",
+          "text": "Daro sleeps beside the stove with his boots on. He is afraid of the dark, which is a very funny fear to have in a cavern with no daylight at all."
+        },
+        {
+          "id": "mc16",
+          "text": "Ilyan scribbles glyphs on the tablecloth and I have given up washing it. It has become a map. It shows a door I have never seen and I intend to keep it."
+        },
+        {
+          "id": "mc17",
+          "text": "Torvil sends me barrels of lamp oil at cost and a note reading pet. Where he learned the word is beyond me. He may be making fun."
+        },
+        {
+          "id": "mc18",
+          "text": "A rare trader slept in the Ashen Cup's finest bed once and left a hot water bottle that never cools. It lives in my own bed. I have never been warmer, nor more nervous."
+        },
+        {
+          "id": "mc19",
+          "text": "The vent fields are a long trudge and a short life. Sleep here first, pet. A hero with a full night behind him is worth three without.",
+          "when": {
+            "flag": "talkedVeyra",
+            "notFlag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "mc20",
+          "text": "The Pack-Lord's howl stopped at noon. I ran out of the kitchen with a ladle in my hand and stood in the yard. All the hounds in the camp lay down at once. I think I wept.",
+          "when": {
+            "flag": "packlordDefeated",
+            "notFlag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "mc21",
+          "text": "The camp is humming. A man tried to buy a round for the house and I allowed it. A very poor round and a very fine night.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "mc22",
+          "text": "The ember bloom blooms in the vent fields at the turn of the heat. If you find one, pet, tell Ondrea before you pick it. She has strong opinions about picking.",
+          "when": {
+            "flag": "alchemistAsked",
+            "notFlag": "emberBloomFound"
+          }
+        },
+        {
+          "id": "mc23",
+          "text": "There is a thing in the hollow that sings at night, high and thin like a kettle. A hexbat, Kest says. I tell the guests it is the wind. They do not believe me and they do not complain.",
+          "when": {
+            "notFlag": "hexbatDefeated"
+          }
+        },
+        {
+          "id": "mc24",
+          "text": "Sleep soundly, pet. A pallet is always yours here, and a cup of copper, and a lantern in the sill.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        }
+      ]
+    },
+    "ilyan_morrow": {
+      "name": "Ilyan Morrow",
+      "role": "glyph-reader and keeper of the stair's inscriptions",
+      "personality": "stooped, ink-stained, courteously absent; always half-listening to a conversation the walls are having",
+      "voice": "scholarly hedging: probably, I suspect, one reading holds; footnotes spoken aloud",
+      "events": [],
+      "lines": [
+        {
+          "id": "im01",
+          "text": "The stair walls carry glyphs in the temple script, running in a spiral. Read from the top they are a warning. Read from the bottom they are a lullaby."
+        },
+        {
+          "id": "im02",
+          "text": "I have copied four hundred and eleven glyphs and decoded nineteen. The rest resist me. I take it personally. I suspect they take it personally too."
+        },
+        {
+          "id": "im03",
+          "text": "Ahn-Solis built the stair as a pilgrim's way, one step for each day of the old calendar. Three hundred and sixty-five. I have counted twice, and the second count disagrees."
+        },
+        {
+          "id": "im04",
+          "text": "The word for hound in the temple tongue is the same as the word for guardian. It is a very old coincidence and I think it explains a great deal."
+        },
+        {
+          "id": "im05",
+          "text": "Imps are a corruption of an older creature, a messenger. Their cackle is the remains of a greeting. If you listen carefully, they are still saying hello."
+        },
+        {
+          "id": "im06",
+          "text": "I fear the glyphs near the court. They describe a feast and a table and a guest of honour who is not allowed to leave. I should very much like to be wrong."
+        },
+        {
+          "id": "im07",
+          "text": "Swordsman, if you see a glyph shaped like a closed fist, strike near it. It is a weak point in the wall. Whether the wall will thank you is another matter.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "im08",
+          "text": "Caster, a glyph on the third landing answers mana. Touch it and it glows. A rubbing would delight me. Bring a charcoal stick.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "im09",
+          "text": "Scout, the glyphs along the vent rim have been scratched by something with claws, in a pattern. A sketch of it would be worth a month of my pay.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "im10",
+          "text": "Priest, you will recognise the prayer-glyphs at the base of the stair. They are a call to the sun. I believe they were never answered, and I believe somebody kept saying them anyway.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "im11",
+          "text": "Veyra thinks my work a distraction. She has a point. It is also the only thing keeping me upright. I leave that unsaid."
+        },
+        {
+          "id": "im12",
+          "text": "Ondrea brews me an ink that does not fade. My fingers stay black for a week. Never a complaint from me, and never a wash."
+        },
+        {
+          "id": "im13",
+          "text": "Kest's hounds follow me while I copy. They sit on the rubbings. I have stopped objecting, and the rubbings have a few paw prints for authenticity."
+        },
+        {
+          "id": "im14",
+          "text": "Ruth hums the glyph-song as she walks the rim. I did not teach her. She heard it in the stone. I wrote down her version and it is, in several places, better than the original."
+        },
+        {
+          "id": "im15",
+          "text": "Daro runs messages between my desk and Torvil's counter. He cannot read, but he can carry a scrap of paper perfectly. It is a rarer talent than reading."
+        },
+        {
+          "id": "im16",
+          "text": "Torvil asked what the glyphs say. I told him: be careful. He said he knew that already and put a candle on my desk."
+        },
+        {
+          "id": "im17",
+          "text": "Mabry feeds me soup in the small hours when I forget my meals. A bowl appears on my desk beside a very smug cat. I conclude the cat is responsible."
+        },
+        {
+          "id": "im18",
+          "text": "A rare trader examined my rubbings once and offered for the whole stack. I refused. He bowed and left a pencil that writes in whichever language I need. Testing it frightens me."
+        },
+        {
+          "id": "im19",
+          "text": "The stair says the descent has a keeper, a guardian, and that the keeper is not what it seems. I suspect the vent fields hold the answer, and I suspect the answer is sad.",
+          "when": {
+            "flag": "talkedVeyra",
+            "notFlag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "im20",
+          "text": "The glyph for guardian has changed colour. It was black; it is gold. Never before has a glyph changed its mind in front of me, and I find it unsettling and rather lovely.",
+          "when": {
+            "flag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "im21",
+          "text": "The last line on the third landing finally yields. It reads: the dog remembers. I copied it, underlined it and wept onto the rubbing.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "im22",
+          "text": "A glyph in the hollow, if I read it right, names a plant: the hellfire root. It grows from the roots of the world and no one has described it. Ondrea has asked me to look.",
+          "when": {
+            "flag": "alchemistAsked",
+            "notFlag": "hellRootFound"
+          }
+        },
+        {
+          "id": "im23",
+          "text": "Something scratches down in the pit under the fields. A glyph there reads: do not wake the one who hunts in the dark. I have taken it as advice and stayed in my chair.",
+          "when": {
+            "notFlag": "hexbatDefeated"
+          }
+        },
+        {
+          "id": "im24",
+          "text": "Walk well, light-bearer. If you see any glyphs I have missed, send word. I will pay in ink, in tea, or in whatever I happen to be holding at the time.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        }
+      ]
+    },
+    "kest_ember": {
+      "name": "Kest Ember",
+      "role": "houndmaster of the shelf",
+      "personality": "lean, sun-starved, gruffly gentle; speaks to hounds in full sentences and to people in grunts",
+      "voice": "kennel terse; judges people by how animals behave around them",
+      "events": [],
+      "lines": [
+        {
+          "id": "ke01",
+          "text": "A hound knows three things: who feeds it, who fears it and who does neither. It trusts the third. I work at being the third."
+        },
+        {
+          "id": "ke02",
+          "text": "The three on the shelf are called Ash, Coal and Hush. They are mongrels, half-burnt and wholly loyal. They have never once barked at a friend."
+        },
+        {
+          "id": "ke03",
+          "text": "Hellhounds are not evil. They are hot. A hot animal is short-tempered, and a short-tempered animal in a pack is a fire in the roof."
+        },
+        {
+          "id": "ke04",
+          "text": "Ice makes them hesitate. It is no cruelty but a lesson in weather's reverse. A hound that has felt frost is calmer ever after."
+        },
+        {
+          "id": "ke05",
+          "text": "The big one in the vent hall was a pup once. The way it turns its head gives it away. A hound that turns like that was petted by somebody who loved it."
+        },
+        {
+          "id": "ke06",
+          "text": "A pack has an order: leader, second, thirds and strays. Kill the second and the thirds break. Kill the leader and the strays run. Kill the strays and you have wasted your time."
+        },
+        {
+          "id": "ke07",
+          "text": "Swordsman, if a hound goes for your arm, let it. Lift the shield. Its jaw will lock on the rim, and you will have a very surprised dog on the end of your sleeve.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ke08",
+          "text": "Caster, hounds hate sudden noise. A clap, a crack, a short sharp spell. It breaks their rhythm and their rhythm is the only discipline they have.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ke09",
+          "text": "Scout, if you move on all fours near a pack, they will take you for one of their own for about three seconds. It is enough, if you are quick.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ke10",
+          "text": "Priest, Coal has a bad hip and no complaint. A hand on it at night, a murmured word, and it sleeps like a stone. I think the hounds understand prayer.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ke11",
+          "text": "Veyra lets the hounds sleep in her tent when it storms. She claims the warmth is the reason. I think she is lonelier than she shows."
+        },
+        {
+          "id": "ke12",
+          "text": "Ondrea gives me liniment for the hounds' joints. It smells of mint and gunpowder. Ash adores it. The cat does not."
+        },
+        {
+          "id": "ke13",
+          "text": "Ilyan reads to the hounds in the evening. A dry old text about a pilgrim road. They fall asleep before the second chapter. It is the best sedative on the shelf."
+        },
+        {
+          "id": "ke14",
+          "text": "Ruth hums to them on the rim. Coal's ears go flat and his tail thumps once. A hound knows a kind note when it hears one."
+        },
+        {
+          "id": "ke15",
+          "text": "Daro walks the hounds at dawn and brings them back at dusk. He acts the houndmaster. I act as though unaware. We are both happier."
+        },
+        {
+          "id": "ke16",
+          "text": "Torvil sells me bones at a loss. He insists he is fleecing me and I insist he is not. We have been having this argument for eleven months."
+        },
+        {
+          "id": "ke17",
+          "text": "Mabry slips Hush a rasher every morning. I have forbidden it. Hush has not forgiven me and Mabry has not stopped."
+        },
+        {
+          "id": "ke18",
+          "text": "A rare trader offered me a whistle only hounds could hear. Ash looked at the whistle, then at me, then came and sat on my foot. It is kept for emergencies."
+        },
+        {
+          "id": "ke19",
+          "text": "The Pack-Lord will test you in the first minute. It will charge, it will stop, it will see if you flinch. Do not flinch. A flinch is a dinner bell.",
+          "when": {
+            "flag": "talkedVeyra",
+            "notFlag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "ke20",
+          "text": "The pack came out of the fields tonight in a line, heads low, and settled in the lee of my tent. Not one growl. Many hounds have crossed my path and none like these.",
+          "when": {
+            "flag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "ke21",
+          "text": "The old dog is sleeping by my fire. It has a collar older than the camp and a scar from nose to ear. I sat up with it all night, and it did not mind.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "ke22",
+          "text": "A bloom grows in the vent fields that hounds will not walk on. The reason escapes me. Ondrea says it is poison. I suspect they are being polite.",
+          "when": {
+            "flag": "alchemistAsked",
+            "notFlag": "emberBloomFound"
+          }
+        },
+        {
+          "id": "ke23",
+          "text": "The thing in the hollow is not a hound. It is half imp, half bat, and it screams on one note for exactly eleven seconds. I have timed it. The hounds will not go near.",
+          "when": {
+            "notFlag": "hexbatDefeated"
+          }
+        },
+        {
+          "id": "ke24",
+          "text": "Good hunting, light-bearer. If you meet a dog down there that does not growl, give it a pat on my behalf.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        }
+      ]
+    },
+    "ruth_vossberg": {
+      "name": "Ruth Vossberg",
+      "role": "vent-warder who sings to the cracks",
+      "personality": "small, serene, mildly unnerving; speaks to the ground as though it might answer",
+      "voice": "gentle, rhythmic, half-song; weather reports for a place with no weather",
+      "events": [],
+      "lines": [
+        {
+          "id": "rv01",
+          "text": "The vents breathe on a count of nine in and nine out. I have kept time with them for a year, and I have not once been wrong."
+        },
+        {
+          "id": "rv02",
+          "text": "A crack is a mouth that has stopped saying anything. If you sing to it long enough, it will start again, and you will learn something."
+        },
+        {
+          "id": "rv03",
+          "text": "Fire is the oldest song. It begins low, climbs and ends in ash. Everything that burns is practising the same tune."
+        },
+        {
+          "id": "rv04",
+          "text": "Demons hate a steady note held for a long time. It is a form of patience they cannot answer. A hymn, a hum, a single sung syllable drives them mad."
+        },
+        {
+          "id": "rv05",
+          "text": "Imps like a clatter. Their little cackle is a challenge to silence. Be quiet and they lose interest. I have lived on this advice for a year."
+        },
+        {
+          "id": "rv06",
+          "text": "The hounds are not afraid of the dark. They are afraid of forgetting what they were meant to guard. I think that is a very human fear."
+        },
+        {
+          "id": "rv07",
+          "text": "Swordsman, a sword rings when it strikes. Strike true and it is a clear note. Strike wrong and the whole hall will know. Practise on the wall.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "rv08",
+          "text": "Caster, your spells have a pitch. Fire is high, frost is low. Learn the pitches and you will know what a demon will do before it does.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "rv09",
+          "text": "Scout, the quietest step on the vent rim is the third stone from the corner. It neither cracks nor hisses. It is the kindest stone I know.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "rv10",
+          "text": "Priest, sing with me on the rim at dawn. The vents like a second voice. They make a kind of harmony, and nothing in this place comes closer to prayer.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "rv11",
+          "text": "Veyra comes to the rim at night and says nothing. I sing quietly. She stays until she is steadier. We have never once discussed it."
+        },
+        {
+          "id": "rv12",
+          "text": "Ilyan asks me what the vents say. I tell him: nothing, they only breathe. He writes it down, strikes it out and writes it again. A poem, I suspect."
+        },
+        {
+          "id": "rv13",
+          "text": "Kest brings Coal to the rim at dawn. The old dog lies on the warm stones and I sing to its hips. It sighs. The sighing is a harmony."
+        },
+        {
+          "id": "rv14",
+          "text": "Ondrea gave me a tincture of valerian for my throat. It tastes of boots. It works. I have forgiven it for the taste."
+        },
+        {
+          "id": "rv15",
+          "text": "Daro follows me along the rim counting my steps. He is always one out, and he insists the fault is mine."
+        },
+        {
+          "id": "rv16",
+          "text": "Torvil sold me a wooden whistle once. It plays one note, flat. I carry it as a reminder that some things are only meant to be one thing."
+        },
+        {
+          "id": "rv17",
+          "text": "Mabry leaves a cup of the warm copper outside my door each morning. I have never thanked her. She has never asked. It is a very fine arrangement."
+        },
+        {
+          "id": "rv18",
+          "text": "A rare trader once sat on the rim beside me and listened for an hour without a word. When he left, the vents sang a fifth higher for a week. What he did remains a mystery."
+        },
+        {
+          "id": "rv19",
+          "text": "The vent hall rings with a low C. When the Pack-Lord breathes, it drops a half-step. Listen for the drop. It means the beast is about to move.",
+          "when": {
+            "flag": "talkedVeyra",
+            "notFlag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "rv20",
+          "text": "The vents changed key at noon. They went up a whole step and held. I have never heard them hold a note before. I sat on the rim and wept, and the stone was warm.",
+          "when": {
+            "flag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "rv21",
+          "text": "The song of the shelf has a new line. A small bell, far below, tolling one note over and over. It is a summons, and I believe it is for you.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "rv22",
+          "text": "An ember bloom opens when the vent breathes out and closes when it breathes in. If you pick it at the exact turn of the breath, it keeps its scent for a month.",
+          "when": {
+            "flag": "alchemistAsked",
+            "notFlag": "emberBloomFound"
+          }
+        },
+        {
+          "id": "rv23",
+          "text": "A scream rises from the pit every eleven seconds, high, thin and wholly without music. The vents are annoyed with it, and so am I.",
+          "when": {
+            "notFlag": "hexbatDefeated"
+          }
+        },
+        {
+          "id": "rv24",
+          "text": "Walk in tune, light-bearer. If the ground hums back, you are on the right path. If it is silent, stop and listen.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        }
+      ]
+    },
+    "daro_finch": {
+      "name": "Daro Finch",
+      "role": "fourteen-year-old runner who has never seen the sun",
+      "personality": "lanky, restless, bright-eyed; asks every question twice in case the answer changes",
+      "voice": "breathless questions, half-finished plans; counts things to keep from being afraid",
+      "events": [],
+      "lines": [
+        {
+          "id": "df01",
+          "text": "I was born on the shelf. Mum and Dad came down before I was a thought. The sky has never been mine to see. Is it truly as big as they say?"
+        },
+        {
+          "id": "df02",
+          "text": "Eleven steps from my cot to the stove, forty to the palisade and a hundred and ninety to the stair. I count them when I cannot sleep. The numbers are very steady."
+        },
+        {
+          "id": "df03",
+          "text": "They say the sun is yellow. Veyra says gold. Torvil says brass-button brown. It must be all three, with a little green besides."
+        },
+        {
+          "id": "df04",
+          "text": "An imp bit me once. It was only a nibble, but it burned. I held up my finger and showed Ondrea and she put honey on it and said, well done. I do not know for what."
+        },
+        {
+          "id": "df05",
+          "text": "Demons are the big red ones with horns. One stood on the far bank, tall as a house. We stared at each other and neither of us moved. Then it left. We were both being polite, I think."
+        },
+        {
+          "id": "df06",
+          "text": "The hounds are the best part of the shelf. Ash lets me ride on his back if I hold the scruff. He is slow, because he is old, and I am very small."
+        },
+        {
+          "id": "df07",
+          "text": "Swordsman, can I hold your sword? Only for a second. I promise I will not swing it. I only want to know how heavy a hero's weapon is.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "df08",
+          "text": "Caster, what colour is your magic? Is it hot? Cold? Can I touch it? Just a little finger, I promise I will not break it.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "df09",
+          "text": "Scout, can you show me how to climb the palisade without a rope? I have tried and I always fall. I fall very well, but I would like to fall less.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "df10",
+          "text": "Priest, do you know a prayer for courage? Mine is: being brave is being afraid with your chin up. Does that count as a prayer?",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "df11",
+          "text": "Veyra lets me sit on the crate beside her when she watches the far bank. She does not talk. I do not talk. It is the best conversation I have ever had."
+        },
+        {
+          "id": "df12",
+          "text": "Ilyan lets me hold the rubbings while he copies. I cannot read them but I can tell when a line is going to be important. It is in the way the ink pools."
+        },
+        {
+          "id": "df13",
+          "text": "Kest says I have the hands for a houndmaster. I am not sure what that means. He says it is when you can hold something that bites and it does not bite you."
+        },
+        {
+          "id": "df14",
+          "text": "Ruth taught me the vents' count. Nine in, nine out. I do it in my head when fear comes. Very soothing, and very dull."
+        },
+        {
+          "id": "df15",
+          "text": "Ondrea gave me a thimble of something sweet for carrying her flasks. I am saving it. If I drink it, it will be gone, and if I keep it, I can look at it."
+        },
+        {
+          "id": "df16",
+          "text": "Torvil pays me half a biscuit for every crate. I would work for none, but he says a worker should be paid. I think he is lonely too."
+        },
+        {
+          "id": "df17",
+          "text": "Mabry tucks me in even at fourteen. I allow it. It is a kind of courtesy, and she weeps if I refuse."
+        },
+        {
+          "id": "df18",
+          "text": "A rare trader handed over a mirror the size of a coin and told me to raise it to the dark. I did. For a second a blue light shone in it, and then it was gone. It lives in my shoe now."
+        },
+        {
+          "id": "df19",
+          "text": "Are you going to the vent fields? I have been to the edge but not inside. A big dog lives there, and its eyes glow like two lamps. Will you carry a lamp? A proper one?",
+          "when": {
+            "flag": "talkedVeyra",
+            "notFlag": "packlordDefeated"
+          }
+        },
+        {
+          "id": "df20",
+          "text": "The big dog stopped howling! From the palisade I heard it go quiet and nearly fell off! I held on! Veyra says I did well!",
+          "when": {
+            "flag": "packlordDefeated",
+            "notFlag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "df21",
+          "text": "The old dog sleeps by Kest's fire and lets me pat its head. Grey muzzle, eyes like a very tired uncle. Best dog in the world, I would say.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        },
+        {
+          "id": "df22",
+          "text": "Ondrea wants a red flower from the fields. If you find one, may I see it before you hand it over? Flowers are new to me. Looking at one would be nice.",
+          "when": {
+            "flag": "alchemistAsked",
+            "notFlag": "emberBloomFound"
+          }
+        },
+        {
+          "id": "df23",
+          "text": "A scream comes from the pit below the fields. I went close and heard it. It sounds like a kettle and a baby and a very small bat. I ran home.",
+          "when": {
+            "notFlag": "hexbatDefeated"
+          }
+        },
+        {
+          "id": "df24",
+          "text": "When you find the sun, tell me its colour. I will believe whatever you say. My whole life has been spent waiting to be told.",
+          "when": {
+            "flag": "reportedVeyra"
+          }
+        }
+      ]
+    }
+  }
+}

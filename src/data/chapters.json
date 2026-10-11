@@ -102,41 +102,41 @@
     "act": 3,
     "title": "The Bier Road",
     "level": 48,
-    "startMap": null
+    "startMap": "mourners_rest"
   },
   {
     "n": 16,
     "act": 4,
     "title": "The Descent",
     "level": 50,
-    "startMap": null
+    "startMap": "cinderlanding"
   },
   {
     "n": 17,
     "act": 4,
     "title": "Cinder Court",
     "level": 52,
-    "startMap": null
+    "startMap": "pale_alms"
   },
   {
     "n": 18,
     "act": 4,
     "title": "The Drowned Choir",
     "level": 54,
-    "startMap": null
+    "startMap": "nave_landing"
   },
   {
     "n": 19,
     "act": 4,
     "title": "The Dragon's Hearth",
     "level": 55,
-    "startMap": null
+    "startMap": "kindle_rest"
   },
   {
     "n": 20,
     "act": 4,
     "title": "The Sun-Throne",
     "level": 56,
-    "startMap": null
+    "startMap": "sun_landing"
   }
 ]

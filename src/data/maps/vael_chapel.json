@@ -178,6 +178,21 @@
    "color": "0x7a7a88",
    "solid": true
   },
+  "u": {
+   "name": "hellstone floor",
+   "color": "0x3a2326",
+   "solid": false
+  },
+  "U": {
+   "name": "hellstone wall",
+   "color": "0x24141a",
+   "solid": true
+  },
+  "l": {
+   "name": "lava",
+   "color": "0xd2481a",
+   "solid": true
+  },
   "G": {
    "name": "glass",
    "color": "0x9ad8e0",

@@ -12,12 +12,12 @@
             "Our commander was Ser Hadrian Vael. Twenty years at the gate, and not a night's sleep lost over it. The pale lord offered him a place at his table and a promise that no one would ever starve again. Hadrian thought about that for a very long moment, and then he said yes.",
             "Take this key. It opens the postern in the cliff wall, and it is the only door into the keep that the statues have not learned to watch. Go through the courtyard and the halls to the throne. Break him. If you can, break him gently. None of us matched him."
           ], "give": { "vael_gate_key": 1 } },
-        { "id": "isolde_report", "when": { "flag": "commanderDefeated", "notFlag": "reportedIsolde" }, "set": ["reportedIsolde", "chapter_14_done"],
+        { "id": "isolde_report", "when": { "flag": "commanderDefeated", "notFlag": "reportedIsolde" }, "set": ["reportedIsolde", "chapter_14_done", "bier_road_open"],
           "say": [
             "The red light in the high window went dark at the ninth bell. I was on the palisade. Every one of us stopped what we were doing, and the whole camp went silent until one voice began to laugh and could not stop.",
             "Hadrian's vow is broken and his sword is down. That is what I will tell the garrison, and it is true, and it is not the whole truth, and I will let them have the kinder half for tonight.",
-            "Take the camp's purse, and the last of our good tonic. The Bier Road runs north from the black cliffs. A wagon, a wyvern team and a rider who never misses a landing. Keep your eyes up. It is the sky you will be fighting."
-          ], "gold": 5000, "give": { "hi_potion": 6, "hi_ether": 6, "phoenix_plume": 5, "grand_elixir": 3, "stone_salve": 4 }, "autosave": true, "banner": "Chapter 14 complete" }
+            "Take the camp's purse, and the last of our good tonic. The Bier Road runs west from our palisade, and here is the seal that opens the gate. A wagon, a wyvern team and a rider who never misses a landing. Keep your eyes up. It is the sky you will be fighting."
+          ], "gold": 5000, "give": { "hi_potion": 6, "hi_ether": 6, "phoenix_plume": 5, "grand_elixir": 3, "stone_salve": 4, "bier_seal": 1 }, "autosave": true, "banner": "Chapter 14 complete" }
       ],
       "lines": [
         { "id": "im01", "text": "A garrison is a promise made out of men. When the men go, the promise is still standing there, holding a spear." },
@@ -129,7 +129,7 @@
         { "id": "dk08", "text": "Caster, can you do the one where a spark jumps from finger to finger? I tried it with a flint and lost an eyebrow. It grew back, mostly.", "when": { "class": ["mage"] } },
         { "id": "dk09", "text": "Scout, A secret route runs into the keep: a drain behind the kitchen. It smells awful but nobody guards it. Do not tell Isolde I told you.", "when": { "class": ["scout"] } },
         { "id": "dk10", "text": "Priest, will you bless my boots? Not for luck. For fit. I keep growing out of them and I think a blessing might slow it down.", "when": { "class": ["acolyte"] } },
-        { "id": "dk11", "text": "Isolde calls me Squire Kessler when she is cross and Dov when she is not. I like both, and and I am still working out which she means more." },
+        { "id": "dk11", "text": "Isolde calls me Squire Kessler when she is cross and Dov when she is not. I like both, and I am still working out which she means more." },
         { "id": "dk12", "text": "Osric is teaching me to fight left-handed. He says no other lesson teaches how a one-armed man thinks. I keep dropping the sword." },
         { "id": "dk13", "text": "Lysa lets me hold the lantern when she sets bones. It is the most important job in the camp. Do not argue." },
         { "id": "dk14", "text": "Marta gives me the burnt end of the bread. She says it builds character. It also builds a stomach ache, but I have a lot of character." },

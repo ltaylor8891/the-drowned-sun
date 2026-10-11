@@ -7,13 +7,19 @@ export const DEFAULT_BINDINGS = {
   confirm: ['ENTER', 'SPACE'], cancel: ['ESC', 'X'],
 };
 export const RESERVED_KEYS = ['F11'];
+// Controller buttons (W3C standard layout) the player may assign to Confirm and Cancel. The D-pad (12-15) and Start (9) stay fixed.
+export const PAD_ACTIONS = ['confirm', 'cancel'];
+export const DEFAULT_PAD = { confirm: 0, cancel: 1 };
+const PAD_NAMES = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'LT', 'RT', 'Back', 'Start', 'L-stick', 'R-stick'];
+export const padLabel = (i) => PAD_NAMES[i] ?? `Button ${i}`;
+export const padBindable = (i) => Number.isInteger(i) && i >= 0 && i <= 11 && i !== 9;
 export const WINDOW_SIZES = [[1280, 720], [1600, 900], [1920, 1080]];
 
 const clone = (o) => JSON.parse(JSON.stringify(o));
 const clamp01 = (v, d) => (typeof v === 'number' && Number.isFinite(v) ? Math.min(1, Math.max(0, v)) : d);
 
 export function defaultSettings() {
-  return { volume: { master: 0.8, sfx: 1 }, fullscreen: false, windowSize: 0, debugDay: null, bindings: clone(DEFAULT_BINDINGS) };
+  return { volume: { master: 0.8, sfx: 1, music: 0.5 }, pad: { ...DEFAULT_PAD }, fullscreen: false, windowSize: 0, debugDay: null, bindings: clone(DEFAULT_BINDINGS) };
 }
 
 // Accepts untrusted/partial data (e.g. a hand-edited file) and returns valid settings.
@@ -22,6 +28,9 @@ export function mergeSettings(raw) {
   if (!raw || typeof raw !== 'object') return out;
   out.volume.master = clamp01(raw.volume?.master, out.volume.master);
   out.volume.sfx = clamp01(raw.volume?.sfx, out.volume.sfx);
+  out.volume.music = clamp01(raw.volume?.music, out.volume.music);
+  const rp = raw.pad;
+  if (rp && padBindable(rp.confirm) && padBindable(rp.cancel) && rp.confirm !== rp.cancel) out.pad = { confirm: rp.confirm, cancel: rp.cancel };
   out.fullscreen = raw.fullscreen === true;
   out.windowSize = Number.isInteger(raw.windowSize) && raw.windowSize >= 0 && raw.windowSize < WINDOW_SIZES.length ? raw.windowSize : 0;
   out.debugDay = Number.isInteger(raw.debugDay) && raw.debugDay >= 0 && raw.debugDay <= 6 ? raw.debugDay : null;

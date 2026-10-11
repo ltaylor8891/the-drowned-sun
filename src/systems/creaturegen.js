@@ -329,17 +329,150 @@ FAM.basilisk = (p, o) => {
   if (/hatchling/.test(o.id)) p.rect(26, 15, 3, 3, 0xffffff).set(27, 16, 0x161616);
 };
 
+FAM.wyvern = (p, o) => {
+  const { c } = o, d = dark(c, 0.35), l = light(c, 0.25), big = o.size !== 'medium', rider = /rider/.test(o.id), hyb = /galewing/.test(o.id);
+  const wing = hyb ? hueShift(c, 70) : dark(c, 0.15);
+  p.tri(14, 14, 3, 2, 11, 16, wing).tri(14, 14, 11, 16, 20, 15, d).tri(14, 14, 3, 2, 9, 9, light(wing, 0.15));
+  p.line(14, 14, 3, 2, l).line(14, 14, 8, 12, l).line(14, 14, 11, 16, l);
+  for (let i = 0; i < 10; i++) p.set(4 - Math.floor(i * 0.3), 24 + Math.round(Math.sin(i / 2) * 2), i % 2 ? d : c).set(4 - Math.floor(i * 0.3), 25 + Math.round(Math.sin(i / 2) * 2), d);
+  p.tri(0, 26, 4, 22, 3, 28, 0xb8a050);
+  p.rect(10, 25, 3, 6, d).rect(19, 25, 3, 6, d).rect(9, 30, 5, 1, 0x222222).rect(18, 30, 5, 1, 0x222222);
+  p.ell(15, 21, big ? 11 : 9, big ? 6 : 5, c).ell(15, 24, big ? 9 : 7, 2, l);
+  for (let i = 0; i < 6; i++) p.tri(8 + i * 3, 16, 10 + i * 3, 16, 9 + i * 3, 13, d);
+  p.rect(23, 14, 4, 8, c).rect(22, 15, 2, 6, light(c, 0.1)).ell(27, 13, 4, 3, c).rect(29, 14, 4, 3, l).set(32, 14, 0x161616);
+  p.tri(24, 11, 27, 11, 22, 6, 0xe0d8c0).tri(27, 11, 29, 11, 27, 6, 0xe0d8c0);
+  p.set(27, 12, 0xffe84a).set(28, 12, 0x161616).rect(29, 16, 4, 1, 0x7a2020);
+  if (rider) {
+    p.rect(12, 8, 5, 8, 0x2a2a38).ell(14, 6, 3, 3, 0x3a3a4a).rect(12, 5, 5, 2, 0x161620).set(14, 6, 0xff3a3a).set(15, 6, 0xff3a3a).rect(13, 2, 3, 3, 0xc23a3a);
+    p.line(17, 14, 29, 2, 0xb8bcc8).line(17, 15, 29, 3, 0x7a4f2a).tri(28, 0, 31, 3, 29, 3, 0xe8ecf4);
+  }
+  if (hyb) for (const [x, y] of [[6, 6], [24, 4], [2, 18]]) p.set(x, y, 0xffffff).set(x + 1, y, 0xd8ffd8);
+};
+
 FAM.darkknight = (p, o) => {
-  const id = o.id, lead = /commander/.test(id), tem = /templar/.test(id), sq = /squire/.test(id), c = o.c;
+  const id = o.id, lead = /commander/.test(id), chan = /chancellor/.test(id), tem = /templar/.test(id), sq = /squire/.test(id), c = o.c;
   const plate = mix(c, 0x6a6a82, 0.45), trim = lead ? 0xc23a3a : tem ? 0x8a5ad8 : 0x7a7a92;
-  brute(p, o, { sk: plate, bw: lead ? 8 : sq ? 6 : 7, bh: lead ? 11 : 10, legH: 7, headR: lead ? 5 : 4, eye: EYE_RED, mouth: false, armor: plate, weapon: tem ? 'staff' : lead ? 'sword' : sq ? 'sword' : 'axe', helm: dark(c, 0.1), horn: lead || /knight/.test(id) ? 'bull' : null, crownC: null, cloth: dark(c, 0.2),
+  brute(p, o, { sk: plate, bw: lead ? 8 : sq ? 6 : 7, bh: lead ? 11 : 10, legH: 7, headR: lead ? 5 : 4, eye: chan ? 0x9ad8ff : EYE_RED, mouth: false, armor: plate, weapon: tem || chan ? 'staff' : lead ? 'sword' : sq ? 'sword' : 'axe', helm: dark(c, 0.1), horn: lead || /knight/.test(id) ? 'bull' : null, crownC: null, cloth: dark(c, 0.2),
     extra: (q, g) => {
       q.rect(g.cx - 3, g.hy, 7, 2, 0x0a0a12); q.set(g.cx - 2, g.hy, EYE_RED).set(g.cx + 2, g.hy, EYE_RED);
       q.rect(g.cx - 1, g.torsoTop + 3, 3, 3, trim);
       q.rect(g.cx - g.hr - 3, g.torsoTop - 1, 4, 3, trim).rect(g.cx + g.hr, g.torsoTop - 1, 4, 3, trim);
       if (lead) { crown(q, g.cx, g.hy - g.hr - 2, 0x9a9aa8); for (const i of [-6, -3, 3, 6]) q.set(g.cx + i, g.torsoTop + 7, 0xc23a3a); q.line(g.cx - 12, g.torsoTop, g.cx - 10, g.feet, 0x4a1a22).line(g.cx + 12, g.torsoTop, g.cx + 10, g.feet, 0x4a1a22); }
+      if (chan) {
+        q.rect(g.cx - 2, g.hy - g.hr - 6, 5, 6, 0xe8e4f0).rect(g.cx - 1, g.hy - g.hr - 8, 3, 2, 0xe8e4f0).rect(g.cx, g.hy - g.hr - 5, 1, 3, 0xc9a24a);
+        q.line(g.cx - 11, g.torsoTop, g.cx - 9, g.feet, 0xb8b4c8).line(g.cx + 11, g.torsoTop, g.cx + 9, g.feet, 0xb8b4c8).line(g.cx - 10, g.torsoTop, g.cx - 8, g.feet, 0xd8d4e8);
+        for (const i of [-5, 5]) q.ell(g.cx + i, g.torsoTop + 5, 1, 1, 0x9ad8ff);
+      }
       if (tem) q.set(g.cx - 4, g.hy - g.hr - 1, trim).set(g.cx + 4, g.hy - g.hr - 1, trim).set(g.cx, g.hy - g.hr - 2, trim);
     } });
+};
+
+FAM.hellhound = (p, o) => {
+  FAM.wolf(p, o);
+  const fl = [0xff4a1a, 0xff9a2a, 0xffe05a];
+  for (let i = 0; i < 9; i++) { const x = 6 + i * 2, h = 4 + (i % 3) * 2; p.tri(x, 15, x + 3, 15, x + 1.5, 15 - h, fl[i % 3]); }
+  p.tri(2, 18, 6, 18, 3, 8, 0xff6a1a).tri(3, 17, 5, 17, 4, 11, 0xffd24a);
+  p.set(27, 14, 0xff2a2a).set(26, 14, 0xff9a2a).rect(27, 19, 5, 1, 0xff3a1a);
+  if (/packlord/.test(o.id)) { p.tri(22, 12, 25, 12, 23, 3, 0xe0d8c0).tri(26, 12, 29, 12, 28, 4, 0xe0d8c0); for (let i = 0; i < 6; i++) p.set(8 + i * 3, 11, 0xffe05a); }
+};
+
+FAM.imp = (p, o) => {
+  const { c } = o, d = dark(c, 0.35), l = light(c, 0.2);
+  p.tri(10, 12, 2, 4, 9, 20, d).tri(22, 12, 30, 4, 23, 20, d).line(10, 12, 2, 4, l).line(22, 12, 30, 4, l);
+  for (let i = 0; i < 8; i++) p.set(20 + Math.floor(i * 1.2), 25 + Math.round(Math.sin(i / 1.5) * 2), c).set(20 + Math.floor(i * 1.2), 26 + Math.round(Math.sin(i / 1.5) * 2), d);
+  p.tri(28, 22, 31, 24, 28, 28, 0xff5a3a);
+  p.rect(12, 24, 3, 6, d).rect(17, 24, 3, 6, d).rect(11, 30, 4, 1, 0x222222).rect(17, 30, 4, 1, 0x222222);
+  p.ell(16, 19, 6, 6, c).ell(16, 21, 4, 3, l);
+  p.rect(9, 17, 3, 6, c).rect(20, 17, 3, 6, c).set(8, 23, 0x222222).set(23, 23, 0x222222);
+  p.ell(16, 10, 5, 5, c).tri(10, 8, 12, 8, 9, 2, 0xe0d0b0).tri(20, 8, 22, 8, 23, 2, 0xe0d0b0);
+  p.tri(10, 11, 7, 10, 10, 8, c).tri(22, 11, 25, 10, 22, 8, c);
+  p.rect(13, 9, 2, 2, 0xffe84a).rect(17, 9, 2, 2, 0xffe84a).set(14, 10, 0x161616).set(18, 10, 0x161616);
+  p.rect(13, 13, 6, 1, 0x1a0a0a).set(13, 14, 0xffffff).set(18, 14, 0xffffff);
+};
+
+FAM.demon = (p, o) => {
+  const { c } = o, d = dark(c, 0.4);
+  p.tri(7, 14, 0, 2, 9, 24, d).tri(25, 14, 32, 2, 23, 24, d).line(7, 14, 0, 2, light(c, 0.2)).line(25, 14, 32, 2, light(c, 0.2));
+  brute(p, o, { sk: c, bw: /pit|nyrrh/.test(o.id) ? 9 : 7, bh: 10, legH: 7, headR: 5, horn: 'bull', ears: 2, claws: true, tail: 1, tusks: 1, belly: false, eye: 0xffe84a, weapon: /flame/.test(o.id) ? 'staff' : null, cloth: dark(c, 0.15),
+    extra: (q, g) => { for (let i = -4; i <= 4; i += 2) q.set(g.cx + i, g.torsoTop + 4, 0xff7a2a); q.rect(g.cx - 1, g.torsoTop + 2, 3, 6, 0xff5a1a);
+      if (/nyrrh/.test(o.id)) { for (let i = -4; i <= 4; i += 2) { q.rect(g.cx + i, g.hy - g.hr - 3, 1, 3, 0xe8e0c8); q.set(g.cx + i, g.hy - g.hr - 4, 0xffb030); } for (const [x, y] of [[3, 6], [28, 8], [5, 20], [27, 22]]) q.set(x, y, 0xff5a1a).set(x + 1, y, 0xffd04a); } } });
+};
+
+FAM.vampire = (p, o) => {
+  const id = o.id, c = o.c;
+  if (/stalker/.test(id)) {
+    FAM.werewolf(p, { ...o, id: 'stalker', c: 0x8a7a88 });
+    p.set(13, 6, 0xff2a3a).set(18, 6, 0xff2a3a).rect(14, 15, 4, 1, 0x3a0a14);
+    for (const [x, y] of [[5, 12], [26, 14], [8, 4]]) p.set(x, y, 0xc2102a);
+    return;
+  }
+  const skin = 0xe8dfe6, countess = /countess/.test(id), knight = /knight/.test(id), noble = /noble/.test(id);
+  if (countess) {
+    p.tri(8, 13, 24, 13, 31, 31, dark(c, 0.3)).tri(8, 13, 24, 13, 1, 31, dark(c, 0.3));
+    p.tri(10, 13, 22, 13, 27, 30, c).tri(10, 13, 22, 13, 5, 30, c).rect(5, 28, 22, 3, dark(c, 0.4));
+    p.rect(11, 12, 10, 8, c).rect(13, 13, 6, 5, light(c, 0.3)).rect(11, 19, 10, 1, GOLD);
+    p.rect(8, 13, 3, 9, dark(c, 0.15)).rect(21, 13, 3, 9, dark(c, 0.15)).set(9, 22, skin).set(22, 22, skin);
+    p.ell(16, 8, 4, 4, skin).rect(11, 4, 10, 3, 0x161018).rect(11, 6, 2, 9, 0x161018).rect(19, 6, 2, 9, 0x161018);
+    p.set(14, 8, 0xff2a3a).set(18, 8, 0xff2a3a).rect(15, 11, 3, 1, 0xa01030).set(15, 12, 0xffffff).set(17, 12, 0xffffff);
+    crown(p, 16, 2, 0xe8e0d0); p.set(16, 1, 0xff2a3a);
+    p.ell(26, 20, 1, 1, 0xff2a3a); p.line(26, 21, 26, 30, GOLD);
+    return;
+  }
+  brute(p, o, { sk: skin, bw: knight ? 7 : noble ? 5 : 4, bh: knight ? 10 : 9, legH: 8, headR: 4, fangs: true, mouth: false, eye: 0xff2a3a, ears: noble || !knight ? 2 : 0, cloth: knight ? 0x3a2a3a : mix(c, 0x201018, 0.4), armor: knight ? 0x6a5a6a : null, weapon: knight ? 'sword' : noble ? 'staff' : null, helm: knight ? 0x4a3a4a : null,
+    extra: (q, g) => {
+      q.rect(g.cx - g.hr, g.hy - g.hr, g.hr * 2 + 1, 2, 0x161018);
+      const bw = knight ? 7 : noble ? 5 : 4; q.line(g.cx - bw - 3, g.torsoTop - 1, g.cx - bw - 6, g.feet, mix(c, 0x000000, 0.45)).line(g.cx + bw + 3, g.torsoTop - 1, g.cx + bw + 6, g.feet, mix(c, 0x000000, 0.45));
+      q.rect(g.cx - 1, g.hy + g.hr - 2, 1, 1, 0xffffff).rect(g.cx + 1, g.hy + g.hr - 2, 1, 1, 0xffffff);
+      if (noble) q.set(g.cx, g.torsoTop + 3, 0xc2102a).set(g.cx, g.torsoTop + 4, 0xc2102a);
+    } });
+};
+
+FAM.gargoyle = (p, o) => {
+  const { c } = o, d = dark(c, 0.35), l = light(c, 0.22), boss = o.boss, wall = /livingwall/.test(o.id), big = o.size !== 'medium';
+  p.tri(9, 14, 0, 4, 11, 22, d).tri(23, 14, 31, 4, 21, 22, d).line(9, 14, 0, 4, l).line(23, 14, 31, 4, l).line(10, 15, 3, 9, l).line(22, 15, 29, 9, l);
+  p.rect(10, 26, 4, 5, d).rect(18, 26, 4, 5, d).rect(9, 30, 6, 1, 0x222222).rect(17, 30, 6, 1, 0x222222);
+  p.ell(16, 21, big ? 8 : 7, big ? 8 : 7, c).ell(16, 22, 5, 5, l);
+  p.rect(8, 17, 3, 9, c).rect(21, 17, 3, 9, c); for (const x of [8, 10, 21, 23]) p.set(x, 26, 0xe0d8c0);
+  p.ell(16, 11, 5, 5, c).tri(10, 9, 12, 8, 9, 2, d).tri(22, 9, 20, 8, 23, 2, d);
+  p.rect(13, 10, 2, 2, 0xffe84a).rect(17, 10, 2, 2, 0xffe84a).set(14, 11, 0x161616).set(18, 11, 0x161616);
+  p.rect(13, 14, 6, 1, 0x161616).set(14, 15, 0xe8e0d0).set(17, 15, 0xe8e0d0);
+  for (const [x, y] of [[12, 19], [19, 22], [15, 25]]) p.set(x, y, dark(c, 0.5)); // cracks
+  if (/choir/.test(o.id)) p.rect(14, 13, 4, 3, 0x161616).set(15, 14, 0x6a8aff);
+  if (/bell/.test(o.id)) { p.rect(13, 19, 6, 5, 0xc9a24a).rect(14, 24, 4, 1, 0xa88a3a).set(16, 25, 0xe8d070); }
+  if (boss) { crown(p, 16, 4, 0xb8c0d0); for (const x of [6, 25]) p.line(x, 12, x, 25, 0x8a96a8); }
+  if (wall) { p.rect(1, 12, 6, 17, l).rect(25, 12, 6, 17, l); for (const y of [15, 20, 25]) { p.rect(1, y, 6, 1, d); p.rect(25, y, 6, 1, d); } }
+};
+
+FAM.dragon = (p, o) => {
+  const { c } = o, d = dark(c, 0.35), l = light(c, 0.25), id = o.id, whelp = /whelp/.test(id), elder = /elder/.test(id), hyb = /infernal/.test(id), big = !whelp;
+  const wing = hyb ? 0x4a1a5a : dark(c, 0.12), belly = hyb ? 0xa04aa0 : 0xe0b060;
+  p.tri(15, 14, 1, whelp ? 6 : 1, 10, 17, wing).tri(15, 14, 10, 17, 21, 15, d).tri(15, 14, 1, whelp ? 6 : 1, 8, 9, light(wing, 0.15));
+  p.line(15, 14, 1, whelp ? 6 : 1, l).line(15, 14, 7, 12, l).line(15, 14, 10, 17, l);
+  p.tri(0, 27, 6, 23, 5, 29, c).tri(0, 27, 3, 24, 2, 29, d).set(0, 27, hyb ? 0xff5ad0 : 0xff9a3a);
+  p.rect(10, 25, 4, 6, d).rect(20, 25, 4, 6, d).rect(9, 30, 6, 1, 0x222222).rect(19, 30, 6, 1, 0x222222);
+  for (const x of [10, 12, 20, 22]) p.set(x, 30, 0xe8e0c8);
+  p.ell(16, 21, big ? 11 : 8, big ? 6 : 5, c).ell(16, 23, big ? 8 : 6, 3, belly);
+  for (let i = 0; i < 5; i++) p.line(10 + i * 3, 22, 10 + i * 3, 25, dark(belly, 0.2));
+  for (let i = 0; i < (whelp ? 4 : 7); i++) p.tri(8 + i * 3, 16, 10 + i * 3, 16, 9 + i * 3, 12, d);
+  p.rect(22, 14, 4, 8, c).rect(21, 15, 2, 6, light(c, 0.1)).ell(26, 12, 4, 3, c).rect(28, 13, 4, 3, l).set(31, 13, 0x161616);
+  const horn = hyb ? 0x6a2a7a : 0xe0d8c0;
+  p.tri(22, 10, 25, 10, 21, hyb || elder ? 2 : 5, horn).tri(25, 10, 28, 10, 27, hyb || elder ? 2 : 5, horn);
+  p.set(26, 11, hyb ? 0xff5ad0 : 0xffe84a).set(27, 11, 0x161616).rect(28, 15, 4, 1, 0x7a2020);
+  p.rect(29, 15, 2, 1, 0xff9a3a).set(31, 15, 0xffd84a);
+  if (elder) { crown(p, 26, 7, 0xe8c04a); for (let x = 12; x < 21; x += 2) p.set(x, 18, 0xffd84a); for (const [x, y] of [[4, 6], [6, 3], [3, 11]]) p.set(x, y, 0xffa83a); }
+  if (hyb) { p.tri(8, 20, 10, 14, 12, 20, 0x2a0a3a); p.tri(24, 21, 27, 17, 28, 22, 0x2a0a3a); p.set(16, 21, 0xff5ad0).set(17, 21, 0xff5ad0); }
+};
+
+FAM.shade = (p, o) => {
+  const { c } = o, d = dark(c, 0.5), id = o.id, dread = /dread/.test(id), dim = /dim/.test(id);
+  for (let i = 0; i < 12; i++) p.tri(7 + i * 1.6, 21, 11 + i * 1.6, 21, 9 + i * 1.6, 27 + (i % 4) * 1.2, mix(c, 0x000000, 0.4 + (i % 3) * 0.1));
+  p.tri(6, 12, 26, 12, 16, 1, d).rect(7, 10, 18, 13, mix(c, 0x000000, 0.25)).ell(16, 8, 6, 7, d).ell(16, 9, 4, 5, 0x05030c);
+  p.rect(13, 8, 2, 2, dim ? 0xb0a0ff : 0xe8f0ff).rect(18, 8, 2, 2, dim ? 0xb0a0ff : 0xe8f0ff);
+  p.ell(16, 17, 3, 4, 0xb8c8e8).ell(16, 17, 2, 3, 0xe8f4ff).line(14, 15, 17, 20, 0x7a8ab0); // a mirror-shard where the heart should be
+  p.rect(3, 15, 4, 2, c).set(2, 16, light(c, 0.4)).rect(25, 15, 4, 2, c).set(29, 16, light(c, 0.4));
+  if (!dim) for (const [x, y] of [[4, 8], [27, 6], [9, 25], [24, 24]]) p.ell(x, y, 1, 1, light(c, 0.4));
+  if (/mirror/.test(id)) { for (const [x, y, w] of [[2, 9, 3], [27, 11, 3], [4, 22, 2], [26, 24, 3], [15, 28, 2]]) p.rect(x, y, w, 1, 0xe8f4ff).set(x + 1, y + 1, 0x9ab0d8); p.ell(16, 17, 4, 5, 0xe8f4ff); }
+  if (dread) { p.tri(8, 9, 11, 6, 9, 1, 0x8a8aa8).tri(24, 9, 21, 6, 23, 1, 0x8a8aa8); p.rect(12, 13, 8, 1, 0x161628); }
 };
 
 FAM.echo = (p, o) => {

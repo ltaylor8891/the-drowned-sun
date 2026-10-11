@@ -1,0 +1,52 @@
+{
+  "scenes": {
+    "chstair_enter": {
+      "when": { "notFlag": "chstairEntered" },
+      "lines": [
+        { "n": "", "t": "The green bronze gate opens on a stair that goes down into water. Not a flood, exactly. The steps are simply wet, and then wetter, and then they run under a surface so still it looks like glass laid over the stone." },
+        { "n": "", "t": "From far below comes a sound that is almost a hymn. It rises through the water in long, slow swells, a hundred voices holding one note, and every few bars one voice slips out of tune and the whole choir waits for it to find its way back." }
+      ],
+      "set": ["chstairEntered"]
+    },
+    "arrive_landing": {
+      "when": { "notFlag": "reachedLanding" },
+      "lines": [
+        { "n": "", "t": "A landing of lashed timber floats at the foot of the stair, ringed with lanterns, nets and drying racks. Behind it, the nave of the old temple opens out beneath the roof of the world, a hall as tall as a cliff, half under green water, its pillars wearing garlands of weed." },
+        { "n": "", "t": "A woman in an oilskin cassock and a cantor's silver chain stands at the water's edge with a net in one hand and a tuning fork in the other. She taps the fork on her knee, holds it to her ear, and lets it ring. Then she turns, and it is the first time anyone on this landing has smiled at a stranger in months." }
+      ],
+      "set": ["reachedLanding"],
+      "chapter": 18,
+      "autosave": true,
+      "banner": "Chapter 18: The Drowned Choir"
+    },
+    "nave_enter": {
+      "when": { "notFlag": "naveEntered" },
+      "lines": [
+        { "n": "", "t": "The nave is a drowned cathedral. Long channels of black water run between the pillars, and on every pillar and every buttress stands a gargoyle, a thousand stone figures, wings half-folded, mouths half-open, all of them turned the same way, toward the far end where the altar used to be." },
+        { "n": "", "t": "The singing is louder here. It comes from the stone. Each gargoyle's throat is a pipe, and the water moving through them gives every one a note, and together they sing the old hymn of the temple, endlessly, without a single living voice." }
+      ],
+      "set": ["naveEntered"]
+    },
+    "warden_intro": {
+      "when": { "notFlag": "wardenSeen" },
+      "lines": [
+        { "n": "", "t": "At the end of the nave a vast figure sits on the altar steps with its wings folded around it like a cloak. It is made of grey granite and green bronze, and it has a face like a weathered saint's, calm and enormous and utterly worn. A crown of fused bells rests on its brow." },
+        { "n": "The Gargoyle Warden", "t": "A light-bearer. The choir has been counting the hours until you came, and the choir cannot count. Forgive them. They were carved to sing, and they were carved to guard, and they have never been told which of the two to stop doing first." },
+        { "n": "{hero}", "t": "Let me through, Warden. I am going to the Sun-Throne to sing the song you have been holding." },
+        { "n": "The Gargoyle Warden", "t": "Then you will have to sing it past me. I am sorry. I have kept this hall for nine hundred years, and I do not know how to move aside." }
+      ],
+      "set": ["wardenSeen"]
+    },
+    "warden_down": {
+      "when": { "notFlag": "wardenSceneDone" },
+      "lines": [
+        { "n": "", "t": "The Warden's great hand opens and a shower of grey grit falls from the fingers. It leans back against the altar like a man very glad of a chair, and all through the nave, from every pillar and every buttress, the thousand voices stop at once. The silence has a pressure to it, like the moment before a wave." },
+        { "n": "The Gargoyle Warden", "t": "Ah. There. I have waited nine centuries to rest, and I find I am not good at it. Take the score. It lies under the altar, the Sunsong, written out for a single voice. The choir was never meant to sing it. It was meant to keep it, until someone came who could." },
+        { "n": "The Gargoyle Warden", "t": "A caution, light-bearer. The Sunsong does not call the sun. It is the sun's own voice, asked to come home. A vessel that sings it will be heard, and the vessel will be spent. I tell you this because nobody told the cantor who first sang it, and she was my friend." },
+        { "n": "{hero}", "t": "Spent. The mark. All of it. And the next stop is the Dragon's Hearth, where the last piece of the answer is." }
+      ],
+      "set": ["wardenSceneDone"],
+      "gold": 4500
+    }
+  }
+}

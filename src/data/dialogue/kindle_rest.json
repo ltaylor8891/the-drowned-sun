@@ -1,0 +1,1243 @@
+{
+  "npcs": {
+    "ashra_vell": {
+      "name": "Hearth-Matron Ashra Vell",
+      "role": "matron of Kindle Rest and keeper of the hearth-wardens' ledger",
+      "personality": "broad, unhurried, blunt and warm; feeds people before she questions them and never wastes a word on a lie",
+      "voice": "stoker's and baker's speech: banking, kindling, proving, burning down; counts every kindness in loaves",
+      "events": [
+        {
+          "id": "matron_intro",
+          "when": {
+            "notFlag": "talkedMatron"
+          },
+          "set": [
+            "talkedMatron"
+          ],
+          "say": [
+            "Vell. Ashra Vell, matron of Kindle Rest, which is a grand name for forty souls and a lot of soup. I saw the glow from your palm come down the stair before I saw your face. Sit. Eat. Nobody learns the truth on an empty stomach, and tonight there is rather a lot of it on offer.",
+            "Below us lies the Hearth. Under the Hearth lies Caldrith, who has been warming the first fire for nine hundred years, and who has never let a stranger past him without a conversation. Cruelty is no part of him. He is old, and he trusts nothing he has not tested.",
+            "Cross the Hearth Halls and meet him. The drakes will test you first, and the shades after them. Mind the shades: they repeat the last spell cast in their hearing, so a clever mage can lose a fight to their own best trick. Strike the cloaked ones with steel and keep your sorcery for the scaled."
+          ]
+        },
+        {
+          "id": "matron_report",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          },
+          "set": [
+            "reportedMatron",
+            "chapter_19_done",
+            "sun_throne_open"
+          ],
+          "say": [
+            "He gave you the ember. I can smell it on you, the clean smell, like a loaf the moment before the crust cracks. Sit down, and do not argue. You have a face on you like a banked fire, and a banked fire needs feeding.",
+            "I am told he spoke of the price. I shall not pry into what he said. I will say only this: I have known a good many bearers, light-bearer, and none of them was ever the mark. The mark was a lantern. You were always the hand that carried it.",
+            "Here is the kingdom's purse, what is left of it, and every tonic on my shelves. And here is the last key, the Sun Key, kept by the hearth-wardens since the cantor sang. The road to the Sun-Throne lies beyond the Hearth Halls. Go carefully. Come home, if the sun lets you."
+          ],
+          "gold": 12000,
+          "give": {
+            "hi_potion": 8,
+            "hi_ether": 8,
+            "phoenix_plume": 6,
+            "grand_elixir": 4,
+            "clear_tea": 4,
+            "sun_key": 1
+          },
+          "autosave": true,
+          "banner": "Chapter 19 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "av01",
+          "text": "A fire is a promise to stay up. I made mine at eighteen, and I have kept it nine and thirty years. The oven has outlasted three husbands and one bad knee."
+        },
+        {
+          "id": "av02",
+          "text": "Bread proves in the dark, quietly. Most good things do. Remember that when somebody tells you to hurry."
+        },
+        {
+          "id": "av03",
+          "text": "Kindle Rest began as eleven tents and a pot. It is now a village with a ledger, a bell and a very strong opinion about onions."
+        },
+        {
+          "id": "av04",
+          "text": "The wardens' duty is to see that the Hearth is never fed and never starved. A dragon asleep on a fire is a delicate sum. Add one log too many and it wakes in a temper."
+        },
+        {
+          "id": "av05",
+          "text": "My ledger holds every warden's name since the first. I add a line each solstice. Not once has a line been crossed out for cowardice, which beats the royal rolls by a distance."
+        },
+        {
+          "id": "av06",
+          "text": "There is soup on the back burner at all hours. Nobody pays. It is the one rule I enforce with a ladle."
+        },
+        {
+          "id": "av07",
+          "text": "Swordsman, your blade will meet the drakes' scales and ring like a pot. Aim for the soft seam beneath the jaw. A good cook knows where the joint is.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "av08",
+          "text": "Caster, ice is the Hearth's own cure. A drake wrapped in frost forgets the fire in its throat. The shades, though, will hand your spell straight back. Weigh each cast.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "av09",
+          "text": "Scout, the shades cannot copy an arrow. Nobody has taught them the trick. Shoot first and cast nothing.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "av10",
+          "text": "Priest, the shades fear the light as a draught fears a closed door. A blessing that does harm to them is worth three that heal. Take both.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "av11",
+          "text": "Tolliver sits outside my window and complains of the wind every evening. I leave a pie on the sill. He has never once remarked on the pie. Hence my certainty that it works."
+        },
+        {
+          "id": "av12",
+          "text": "Sera claims she is writing the final account of dragons. She has been on the preface for eleven years. I have stopped asking for the rest."
+        },
+        {
+          "id": "av13",
+          "text": "Pip came down the stair as a swaddled baby in a wicker basket, pinned with a scrap that read 'warm'. We kept him warm. He is nine now and fearless of everything but a bath."
+        },
+        {
+          "id": "av14",
+          "text": "Vesper hunts the shades in the lower halls and returns every dawn with fewer words than she left with. A spoonful of honey goes in her tea. The rest I cannot mend."
+        },
+        {
+          "id": "av15",
+          "text": "Maud sells me flour at cost and calls it a kindness. I charge her nothing for the loaves and call it a tax. We are both of us thoroughly satisfied."
+        },
+        {
+          "id": "av16",
+          "text": "Hob lets the inn fire go out at night and relights it at dawn with a coal from my oven. He calls it a tradition. I call it a nuisance with a pleasant face."
+        },
+        {
+          "id": "av17",
+          "text": "Orrin sits by the south channel and tells the lava what time it is. It never answers, yet he stays. Some people simply need an audience."
+        },
+        {
+          "id": "av18",
+          "text": "The Hearth is where the temple first kindled the sun's own flame. Everything above it, the nave, the court, the whole drowned kingdom, was built on top of one fire's good behaviour."
+        },
+        {
+          "id": "av19",
+          "text": "Go and meet Caldrith. He will not hurt you more than he must. Afterwards, tell me whether he is still as sad as he sounds from the stair.",
+          "when": {
+            "flag": "talkedMatron",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "av20",
+          "text": "A hybrid wyrm lurks in the Ember Vault below the halls, a dragon crossed with something from the Descent. Whoever fells it will want a long rest after. And a full ledger.",
+          "when": {
+            "notFlag": "wyrmDefeated"
+          }
+        },
+        {
+          "id": "av21",
+          "text": "You have the ember. Come and sit. I mean it. The Sun Key will keep another hour, and you will not keep at all if you climb with nothing in you.",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          }
+        },
+        {
+          "id": "av22",
+          "text": "Light-bearer, I will keep the oven warm till you return. No lie about it. Whoever walks out of the Sun-Throne will be hungry.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        },
+        {
+          "id": "av23",
+          "text": "You took the stair on a good day. The Hearth was quiet and the drakes were drowsy. You are fortunate. Tomorrow's stair would not have been so kind.",
+          "when": {
+            "flag": "reachedHearth",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "av24",
+          "text": "Go gently, and eat first. A hero who faints on the steps of the Sun-Throne makes a poor ballad.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        }
+      ]
+    },
+    "sera_quill": {
+      "name": "Sera Quill",
+      "role": "loremaster of the hearth-wardens, forever compiling a bestiary of dragons and shades",
+      "personality": "precise, ink-stained and faintly breathless; footnotes her own speech aloud and is delighted by any correction",
+      "voice": "citations, marginalia and 'on the other hand'; every claim comes with its source, every source with a caveat",
+      "events": [],
+      "lines": [
+        {
+          "id": "sq01",
+          "text": "Dragons are, strictly, a family and not a species. Hearth dragons, wind dragons, tide dragons. Caldrith is the last of the hearth line, and I, the last who keeps his notes."
+        },
+        {
+          "id": "sq02",
+          "text": "I have the whole of dragonlore in forty ledgers. Thirty-nine concern what dragons eat. The fortieth concerns what they cannot be made to eat, which is a short volume."
+        },
+        {
+          "id": "sq03",
+          "text": "Footnote: shades are not undead. Footnote to the footnote: neither are they alive. Footnote to the footnote to the footnote: I have stopped sleeping."
+        },
+        {
+          "id": "sq04",
+          "text": "A shade is a cantor's last breath that refused to go. The first ones haunted the temple choir. They mimic because mimicry is all that remained of the craft."
+        },
+        {
+          "id": "sq05",
+          "text": "My quill is cut from a wyrm's feather-spine. Dragons have none, naturally. I mean the spine of an old wing-sail. It is a long story and it ends in a lawsuit."
+        },
+        {
+          "id": "sq06",
+          "text": "Shades echo the final spell they overhear. I proved it with an experiment, a candle and a very patient volunteer. Do not ask what happened to the candle."
+        },
+        {
+          "id": "sq07",
+          "text": "Swordsman, the shades turn aside steel by half. They bleed shadow, not blood. Hit them anyway; steel is the one answer they cannot repeat.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "sq08",
+          "text": "Caster, observe the shade's repertoire. It copies the final spell and no other. Cast a feeble charm last and the shade will cast a feeble charm back, and I'd call that a victory.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "sq09",
+          "text": "Scout, I should love a sketch of the vault door. I hear there are carvings. I would pay in ink, which is my only coin and a poor one.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "sq10",
+          "text": "Priest, would you read me the temple liturgy? My transcription of the Evensong stops mid-verse. I suspect a page was torn out by someone who could not bear the ending.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "sq11",
+          "text": "Ashra feeds me daily. She calls it charity. I call it an unrecorded subsidy of the sciences."
+        },
+        {
+          "id": "sq12",
+          "text": "Tolliver once rode a wyvern across the Bier. He gives conflicting accounts of the flight, which is exactly how an eyewitness behaves, and I treasure each version."
+        },
+        {
+          "id": "sq13",
+          "text": "Pip draws dragons in my margins. Remarkably accurate, if you allow for the extra legs. I leave them. A scholar should be humbled by small critics."
+        },
+        {
+          "id": "sq14",
+          "text": "Vesper will not let me interview her about the shades. She says an interview gives the shades the words. I have been forced to speculate, and speculation is cheap."
+        },
+        {
+          "id": "sq15",
+          "text": "Orrin has been among the shades longest of anyone here. He repeats himself now, a habit he picked up on the stair. Fascinating clinical case. Terribly sad."
+        },
+        {
+          "id": "sq16",
+          "text": "Maud keeps the only ink in the camp in stock. She charges me exactly what it costs her and not a farthing more, which is the only sort of patronage I trust."
+        },
+        {
+          "id": "sq17",
+          "text": "Hob has a coal-black cat named Footnote. I did not name her. I am nevertheless very flattered."
+        },
+        {
+          "id": "sq18",
+          "text": "Strictly speaking, the Hearth is the only place where a dragon can lay an egg that hatches. The old temple knew this. It is why the temple was built on the fire."
+        },
+        {
+          "id": "sq19",
+          "text": "Caldrith will answer a question put correctly. The right question is never the first. I fear you will ask the wrong one, then the right one, and I shall miss both.",
+          "when": {
+            "flag": "talkedMatron",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "sq20",
+          "text": "An Infernal Wyrm sleeps in the vault. Dragon blood and demon fire, the textbook says. I have only ever seen its breath described as a curse in the lungs.",
+          "when": {
+            "notFlag": "wyrmDefeated"
+          }
+        },
+        {
+          "id": "sq21",
+          "text": "You defeated him? Then I shall need an hour. A full account. In order, with measurements, as precisely as your terror permits.",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          }
+        },
+        {
+          "id": "sq22",
+          "text": "I shall publish the account after the sun returns. A work of that kind should be launched in decent light.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        },
+        {
+          "id": "sq23",
+          "text": "You arrived in an extraordinarily fortunate week. The Hearth rarely tolerates so many strangers. I attribute it to your mark.",
+          "when": {
+            "flag": "reachedHearth",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "sq24",
+          "text": "Go well, and write to me from the throne. Even a postcard. I will not mind the scorch marks.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        }
+      ]
+    },
+    "tolliver_ash": {
+      "name": "Tolliver Ash",
+      "role": "retired wyvern-rider and the camp's weatherman",
+      "personality": "weather-beaten, grumbling and sentimental; hates being thanked and cannot stop being useful",
+      "voice": "wind, lift, thermals and lee-side; every opinion is a forecast, every forecast an insult",
+      "events": [],
+      "lines": [
+        {
+          "id": "ta01",
+          "text": "Rode wyverns thirty years. Never once fell off. Fell on, plenty of times. Different thing, and my back will tell you the difference."
+        },
+        {
+          "id": "ta02",
+          "text": "A downdraft in the Hearth smells of hot iron. An updraft smells of bread. Ashra's oven is the best weathervane in the cavern."
+        },
+        {
+          "id": "ta03",
+          "text": "Drakes can't fly. They think they can. I've watched them leap from the ledges for twenty years and land in the soup."
+        },
+        {
+          "id": "ta04",
+          "text": "Never trust a shade. They'll agree with everything you say, and then say it back to you, only worse. Reminds me of my brother."
+        },
+        {
+          "id": "ta05",
+          "text": "Wind's from the east this week. East wind means a hard heart and a long winter. Ask my ex-wife."
+        },
+        {
+          "id": "ta06",
+          "text": "The only thing worse than being grounded is being grounded under an open sky. Camp has an excellent sky. I hate it."
+        },
+        {
+          "id": "ta07",
+          "text": "Swordsman, don't swing at a drake while it's gathering fire. Wait for the breath to build, then hit once, hard, with all you have. It chokes on its own smoke.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ta08",
+          "text": "Caster, a frost spell brings the drake's wings down like a rolled-up map. If you've lightning, save it. Stone and scale don't care, but the gargoyle-folk upstairs would.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ta09",
+          "text": "Scout, the halls are warm updrafts all the way up. Watch where the smoke leans and you'll know where the fresh air sits. Shortest road is always the coolest.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ta10",
+          "text": "Priest, say a prayer for the riders. Forty of us went up in the old days and nine came down. We were told the sun would be back by spring.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ta11",
+          "text": "Ashra leaves a pie on my windowsill. I eat it and say nothing. She says nothing. Best conversation I've had in a decade."
+        },
+        {
+          "id": "ta12",
+          "text": "Sera interviews me weekly about the flight to the Bier. She writes down every word. I embellish. Somewhere a scholar will cite me as an authority."
+        },
+        {
+          "id": "ta13",
+          "text": "Pip wants to fly. I say wait till you're taller. He says that's what you said last year. I did. He's right. Dreadful child."
+        },
+        {
+          "id": "ta14",
+          "text": "Vesper walks the halls at night with a lantern held low. Never heard her step. I flew over a battlefield once with less silence."
+        },
+        {
+          "id": "ta15",
+          "text": "Orrin stood on the ledge for three days listening to the shades and came away repeating everything twice. Terrible price for a listen."
+        },
+        {
+          "id": "ta16",
+          "text": "Maud overcharges me for twine and undercharges me for pins. I think she believes I won't notice. I notice. I let her."
+        },
+        {
+          "id": "ta17",
+          "text": "Hob's bunks are warm all night because the walls are warm. Mind the south wall: a lava vein runs behind it. I lost an eyebrow there."
+        },
+        {
+          "id": "ta18",
+          "text": "I flew over the temple the day the sun went out. Never forget it. Birds dropped from the sky like fruit. I turned back and I've been turning back since."
+        },
+        {
+          "id": "ta19",
+          "text": "When the Elder gathers fire, hit him hard enough and the breath dies in his throat. I saw a rider do it once. He lived. Briefly.",
+          "when": {
+            "flag": "talkedMatron",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "ta20",
+          "text": "Ember Vault holds a big beast, dragon through and through, and something worse in the blood. You'd want your wits sharp, and your potions sharper.",
+          "when": {
+            "notFlag": "wyrmDefeated"
+          }
+        },
+        {
+          "id": "ta21",
+          "text": "You've downed Caldrith. I'll be blessed. Forty riders couldn't, in my day, and here you are with a rucksack and a sunburn.",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          }
+        },
+        {
+          "id": "ta22",
+          "text": "Weather's turning, light-bearer. After nine centuries of grey, I believe it's turning toward us at last.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        },
+        {
+          "id": "ta23",
+          "text": "Take the halls slow. The drakes nest on the ledges and drop like boulders. Look up before you look ahead.",
+          "when": {
+            "flag": "reachedHearth",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "ta24",
+          "text": "Fair winds. If I'm still here when you're back, I'll fly you across the whole sky myself. Bring a cushion.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        }
+      ]
+    },
+    "pip_sparrow": {
+      "name": "Pip Sparrow",
+      "role": "nine-year-old foundling of Kindle Rest and self-appointed friend to every whelp",
+      "personality": "bright, breathless and fearless; asks the question the grown-ups are avoiding and then asks it again",
+      "voice": "short sentences, big feelings, many questions; collects facts like pebbles and hands them over unasked",
+      "events": [],
+      "lines": [
+        {
+          "id": "ps01",
+          "text": "I have a dragon! Well, a whelp. Well, not mine, but she lets me scratch her chin. Her name is Crumb. She bites. Only a little."
+        },
+        {
+          "id": "ps02",
+          "text": "I found this scale on the stair and it's still warm! Do you want it? You can't have it. But you can look."
+        },
+        {
+          "id": "ps03",
+          "text": "Ashra says I came in a basket with a note that said 'warm'. I like that. It's a good first word. Better than 'help'."
+        },
+        {
+          "id": "ps04",
+          "text": "Do you know how to whistle a drake? You go low, then high, then you stop. If they whistle back, you run."
+        },
+        {
+          "id": "ps05",
+          "text": "My favourite colour is whatever colour the fire is that day. Yesterday green. Today the sort of orange you get inside a plum."
+        },
+        {
+          "id": "ps06",
+          "text": "Sera says shades are leftover songs. I think they're lonely. I tried to say hello to one and it said hello back in my own voice. I ran."
+        },
+        {
+          "id": "ps07",
+          "text": "Swordsman, may I lift your sword? A moment, no more. I won't swing it. I'll lift it and think about swinging it.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ps08",
+          "text": "Caster, could you make a flame the size of a plum? Not a big one. Ashra says no big ones.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ps09",
+          "text": "Scout, could you teach me to sneak? I'm very quiet except for my feet and my breathing and sometimes my knees.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ps10",
+          "text": "Priest, do you know any dawn hymns? I've got a little one but it's mostly 'la'. Is that acceptable?",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ps11",
+          "text": "Tolliver let me sit on his saddle once. It smelled like old rope and old rain. I thought I might go up. Then he put me down."
+        },
+        {
+          "id": "ps12",
+          "text": "Sera lets me draw in her margins. She says my dragons have too many legs. I say she hasn't looked at a dragon very hard."
+        },
+        {
+          "id": "ps13",
+          "text": "Vesper never talks. Once she gave me a coin though. A tiny silver one. I hide it in my boot so nobody can borrow it."
+        },
+        {
+          "id": "ps14",
+          "text": "Orrin says things twice. I like it. It's like getting two presents. Hello, hello! See? Brilliant."
+        },
+        {
+          "id": "ps15",
+          "text": "Maud gives me a bun when I'm good. I'm good on Tuesdays, mostly. The buns are very warm and then they are not."
+        },
+        {
+          "id": "ps16",
+          "text": "Hob has a cat called Footnote and she doesn't like me. I think she's jealous. I smell of dragon and she hates it."
+        },
+        {
+          "id": "ps17",
+          "text": "Ashra reads to me when it's dark. Last night was a book about a king who lost his shadow. Today I looked for mine. It was there. Phew."
+        },
+        {
+          "id": "ps18",
+          "text": "If the sun comes back, will it be warmer than the Hearth? I hope so. I want to know what it's like to be warm everywhere."
+        },
+        {
+          "id": "ps19",
+          "text": "Are you going to fight Caldrith? He's very kind. He let me sit on his claw once. I wasn't scared. Only a bit.",
+          "when": {
+            "flag": "talkedMatron",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "ps20",
+          "text": "There's a secret room below the halls with a huge sleeping thing in it. I looked in once. It breathed and the whole wall went purple. I shut the door.",
+          "when": {
+            "notFlag": "wyrmDefeated"
+          }
+        },
+        {
+          "id": "ps21",
+          "text": "Did you win? I knew you would! Did he roar? Was he sad? Is he okay? Did you pass on my hello?",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          }
+        },
+        {
+          "id": "ps22",
+          "text": "When the sun comes back, will you come and tell us? I'll wait on the stair. I'll wait for as long as it takes. I've got a blanket.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        },
+        {
+          "id": "ps23",
+          "text": "You've got a glowing hand! May I look? Not touch. Just look. Oh, that's the prettiest thing I've ever seen, and I've seen lava.",
+          "when": {
+            "flag": "reachedHearth",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "ps24",
+          "text": "Come back soon. I'm saving you a bun. It might go stale. I'll warm it up. That's how it works here.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        }
+      ]
+    },
+    "vesper_dray": {
+      "name": "Vesper Dray",
+      "role": "shade-hunter of the lower halls",
+      "personality": "spare, watchful and dryly funny; speaks softly so nothing can repeat her, and goes quiet whenever she is being observed",
+      "voice": "short, low phrases; hunting terms; every sentence leaves room for a listener to finish it",
+      "events": [],
+      "lines": [
+        {
+          "id": "vd01",
+          "text": "Speak low. They collect words. A shade with a full vocabulary is a shade with an opinion about you."
+        },
+        {
+          "id": "vd02",
+          "text": "I've hunted shades for eleven years. Rule one: say nothing you'd mind hearing again in the dark."
+        },
+        {
+          "id": "vd03",
+          "text": "Shades hate a mirror. They think it's one of their own. A polished shield is the best weapon I own."
+        },
+        {
+          "id": "vd04",
+          "text": "I carry a dull sword because a sharp one rings. The ring gets copied. The copy wakes the next shade."
+        },
+        {
+          "id": "vd05",
+          "text": "A shade's face is whatever you looked like last. Sometimes it's your own. Learn not to look."
+        },
+        {
+          "id": "vd06",
+          "text": "I cast nothing near them. A cantrip is a gift. Give a shade a gift and it will give you a larger one in return."
+        },
+        {
+          "id": "vd07",
+          "text": "Swordsman, steel is cheap and quiet. Carry it in the dark and swing it like an apology. They don't copy a swing.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "vd08",
+          "text": "Caster, learn one spell you'd be glad to meet again. Cast it last. The shade will return it, and you'll know the temper of your own fire.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "vd09",
+          "text": "Scout, you and I could do well. I walk the halls on the soft edge of the stone. Step where I step and nothing speaks.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "vd10",
+          "text": "Priest, the shades fear a plain blessing more than a loud one. Whisper the words. They leave a tell, like a candle snuffing.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "vd11",
+          "text": "Ashra leaves honey tea by my door. Never knocks. If she knocked I'd have to answer, and that sort of kindness would end me."
+        },
+        {
+          "id": "vd12",
+          "text": "Sera wants an interview. I give her a nod. A nod is a lot, from me. She frames it, if I'm any judge."
+        },
+        {
+          "id": "vd13",
+          "text": "Tolliver snores. I hear it from the lower halls. It's the best lullaby I know and the worst sound for a hunter."
+        },
+        {
+          "id": "vd14",
+          "text": "Pip follows me sometimes. I hear the little feet. I walk slower, so he doesn't lose me. He thinks I haven't noticed."
+        },
+        {
+          "id": "vd15",
+          "text": "Orrin was my partner once. A shade took his name and gave him its echo. He speaks twice now. I've stopped hunting where he fell."
+        },
+        {
+          "id": "vd16",
+          "text": "Maud sells me graphite for my nails. It stops them clicking. A hunter whose nails click is a hunter in a grave."
+        },
+        {
+          "id": "vd17",
+          "text": "Hob rents me the cellar bunk. No window. No echo. The best sleep to be had in these caverns, and the only one without a dream."
+        },
+        {
+          "id": "vd18",
+          "text": "The shades gather at the Elder Hearth, where the sound is deepest. They come to listen to the fire. I come to listen to them listening."
+        },
+        {
+          "id": "vd19",
+          "text": "The Elder tests every challenger. Don't heal into his breath. When he draws in, strike hard, then guard. I've watched it done.",
+          "when": {
+            "flag": "talkedMatron",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "vd20",
+          "text": "Something in the vault is bigger than anything I've hunted. A hybrid. Dragon and demon. I mean to hunt it. In a month. When I'm ready.",
+          "when": {
+            "notFlag": "wyrmDefeated"
+          }
+        },
+        {
+          "id": "vd21",
+          "text": "You beat the Elder. The shades went quiet, every last one, for a breath. I thought the halls had died. It was only relief.",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          }
+        },
+        {
+          "id": "vd22",
+          "text": "Now I might sleep. Now there might be a morning for it. You gave me that. I won't say thank you. They'd repeat it.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        },
+        {
+          "id": "vd23",
+          "text": "Walk the halls softly. The shades are patient, and a spell cast carelessly will come home to you at the worst possible hour.",
+          "when": {
+            "flag": "reachedHearth",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "vd24",
+          "text": "Light the way back with the mark. I'll leave a lantern on the stair. Low. So they can't see it.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        }
+      ]
+    },
+    "gaunt_orrin": {
+      "name": "Orrin Gaunt",
+      "role": "former shade-hunter who sits by the south channel",
+      "personality": "gentle, hollow-eyed and patient; has lived so long beside the shades that he repeats his own last words, and finds this faintly funny",
+      "voice": "ends many sentences by saying the last few words again, softly, as though the cavern had spoken them back",
+      "events": [],
+      "lines": [
+        {
+          "id": "go01",
+          "text": "Good day to you. To you. The channel is slow today, today. I like it slow, slow."
+        },
+        {
+          "id": "go02",
+          "text": "I was a hunter once, once. A shade took my last word and kept it, kept it. Now every sentence comes back."
+        },
+        {
+          "id": "go03",
+          "text": "Do not pity me, me. The echo is company. Company is company, company."
+        },
+        {
+          "id": "go04",
+          "text": "The lava has a tide, a tide. Nobody believes me. It rises at dusk and falls at dawn, dawn."
+        },
+        {
+          "id": "go05",
+          "text": "The shades are not cruel, cruel. Only faithful, faithful. They keep whatever you leave with them."
+        },
+        {
+          "id": "go06",
+          "text": "I tell the lava the hour. It never answers, answers. But it listens, listens. I can tell."
+        },
+        {
+          "id": "go07",
+          "text": "Swordsman, a heavy blade is a good friend, friend. Mine was heavy, heavy. I left it in the halls.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "go08",
+          "text": "Caster, say your last spell gently, gently. Whatever you say last, last, they will say after.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "go09",
+          "text": "Scout, step lightly in the halls, halls. Sound lingers there, there, like smoke.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "go10",
+          "text": "Priest, bless me, me. It will come back, back. A blessing returned is a blessing doubled, doubled.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "go11",
+          "text": "Ashra brings me broth, broth. She sits a minute, minute. I think she is lonely, lonely, too."
+        },
+        {
+          "id": "go12",
+          "text": "Sera takes notes, notes. I do not mind, mind. She writes my echo down and calls it research."
+        },
+        {
+          "id": "go13",
+          "text": "Tolliver waves from his bench, bench. I wave back, back. We are both too old to climb."
+        },
+        {
+          "id": "go14",
+          "text": "Pip likes my voice, voice. He says it is like talking to two people, people. He is right."
+        },
+        {
+          "id": "go15",
+          "text": "Vesper was my partner, partner. She still walks my route, route. She leaves the lantern low, low, for me."
+        },
+        {
+          "id": "go16",
+          "text": "Maud sells me soft candles, candles. Hard ones crackle, crackle. A crackle gets copied, copied."
+        },
+        {
+          "id": "go17",
+          "text": "Hob lets me doze beside the hearth, hearth. The snap of the logs is nice, nice. It answers me, me."
+        },
+        {
+          "id": "go18",
+          "text": "The Hearth was lit before words, words. A fire does not echo, echo. That is why I like it, it."
+        },
+        {
+          "id": "go19",
+          "text": "Caldrith is kind, kind. He will hurt you, you, but not for long, long. Trust his kindness, kindness.",
+          "when": {
+            "flag": "talkedMatron",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "go20",
+          "text": "Below the halls, halls, something is asleep, asleep. It dreams of fire and ash, ash. I would not wake it, it.",
+          "when": {
+            "notFlag": "wyrmDefeated"
+          }
+        },
+        {
+          "id": "go21",
+          "text": "I heard the Elder fall, fall. The whole cavern sighed, sighed. Even the echo went quiet, quiet.",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          }
+        },
+        {
+          "id": "go22",
+          "text": "The echoes are softer today, today. Perhaps they know, know. Perhaps they are going home, home.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        },
+        {
+          "id": "go23",
+          "text": "You are new, new. The camp is glad, glad. It has been a long time since a stranger came, came.",
+          "when": {
+            "flag": "reachedHearth",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "go24",
+          "text": "Come back and speak to me, me. I will have one word of my own again, again, by then. I feel it near.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        }
+      ]
+    },
+    "maud_kiln": {
+      "name": "Maud Kiln",
+      "role": "keeper of The Banked Fire, the camp's shop and bakery",
+      "personality": "round, practical and quick-tongued; tallies everything in loaves and cannot help rounding in her customers' favour",
+      "voice": "crust, proof, flour and weight; prices are rounded down and apologised for",
+      "events": [
+        {
+          "id": "maud_intro",
+          "when": {
+            "notFlag": "metMaud"
+          },
+          "set": [
+            "metMaud"
+          ],
+          "say": [
+            "Maud Kiln, and this is The Banked Fire. Potions on the left, bread on the right, and the till in the middle, where the cat can't reach it. You'll find the prices honest and the loaves warmer than they have any right to be.",
+            "If you're short, ask. The hearth-wardens never turned a hungry soul away, and I'm not about to start with a light-bearer. Pay me when the sun's up."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "mk01",
+          "text": "The first rule of a good loaf: don't peek. The second: don't peek. The third is the same, and I mean it."
+        },
+        {
+          "id": "mk02",
+          "text": "Flour comes down the stair on a sled twice a month. The sled has a name. It's Gerald. He's reliable."
+        },
+        {
+          "id": "mk03",
+          "text": "I stock the potions because the dragons won't. A dragon doesn't need a tonic. A person who meets one does."
+        },
+        {
+          "id": "mk04",
+          "text": "A banked fire is a fire put to bed. You rake the ash over it, and it dreams all night, and in the morning there's a coal. Shops work that way too."
+        },
+        {
+          "id": "mk05",
+          "text": "Every loaf I sell is rounded down by a farthing. Every farthing is rounded up by Ashra's ledger. Between us we break even and sleep well."
+        },
+        {
+          "id": "mk06",
+          "text": "Prices never change at The Banked Fire. Not for kings, not for dragons, not for the last sunrise. Fairness is a sort of heat, and it keeps."
+        },
+        {
+          "id": "mk07",
+          "text": "Swordsman, a stout arm and a full pocket are two different things. I can only help with the second. Mind the stock-list.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mk08",
+          "text": "Caster, ethers on the second shelf. Don't ask for a discount. I round everything for you as it is, and I'm a little tired of rounding.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mk09",
+          "text": "Scout, take a dozen buns for the road. They keep. They're nearly as hard as the halls, and a good deal tastier.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mk10",
+          "text": "Priest, you won't find a candle in this shop that hasn't been blessed twice. Once by me, once by Pip, who blesses everything.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mk11",
+          "text": "Ashra eats my buns and blames the oven. I say nothing. Between friends, a lie about bread is a love letter."
+        },
+        {
+          "id": "mk12",
+          "text": "Sera buys ink, quills and sealing wax. Never bread. She says she has no time to chew. I leave a bun at her door every morning."
+        },
+        {
+          "id": "mk13",
+          "text": "Tolliver pays in dried fish he catches off the lower ledges. I don't ask which fish. I don't ask which ledges."
+        },
+        {
+          "id": "mk14",
+          "text": "Pip hovers by the counter on a Tuesday. He thinks I don't see his hand. I leave the smallest bun at the edge on purpose."
+        },
+        {
+          "id": "mk15",
+          "text": "Vesper buys graphite and nothing else. I charge her a copper. She leaves two. We've never brought it up since."
+        },
+        {
+          "id": "mk16",
+          "text": "Orrin takes soft candles and a pinch of salt. He repeats the price and the change. It takes twice as long. I've never been so happy to count."
+        },
+        {
+          "id": "mk17",
+          "text": "Hob buys flour by the sack for the inn's breakfasts. He pretends not to see me rounding it. We've got a system."
+        },
+        {
+          "id": "mk18",
+          "text": "My mother ran a bakery under the Bier. Her flour came from the temple granaries. They say the temple was kind. She said it was merely tidy."
+        },
+        {
+          "id": "mk19",
+          "text": "Caldrith's waiting, love. Take a sack of tonics and a little courage. They weigh nothing and you can't carry too many.",
+          "when": {
+            "flag": "talkedMatron",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "mk20",
+          "text": "The Ember Vault is shut with a rusted chain. I sell the oil that loosens it. Not for you. For the chain's sake.",
+          "when": {
+            "notFlag": "wyrmDefeated"
+          }
+        },
+        {
+          "id": "mk21",
+          "text": "You've beaten the Elder? I'll bake you a loaf the size of a shield. It won't be the best loaf I've baked. But it'll be the biggest.",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          }
+        },
+        {
+          "id": "mk22",
+          "text": "Pay me when the sun's up, love. I mean it. I've kept a tab open for the light-bearer since the day the shop opened.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        },
+        {
+          "id": "mk23",
+          "text": "Fresh buns every dawn, love. Take one for the stair. Hot, salty and no questions. That's The Banked Fire.",
+          "when": {
+            "flag": "reachedHearth",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "mk24",
+          "text": "Bring the sun back warm, will you? I'll want to proof a loaf in it.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        }
+      ]
+    },
+    "hob_ember": {
+      "name": "Hob Ember",
+      "role": "keeper of The Warm Stone, the camp's inn",
+      "personality": "sleepy, kindly and unflappable; moves as slowly as the lava and notices everything",
+      "voice": "warmth, stones, quilts and slow-burning jokes; long pauses, short punchlines",
+      "events": [
+        {
+          "id": "hob_intro",
+          "when": {
+            "notFlag": "metHob"
+          },
+          "set": [
+            "metHob"
+          ],
+          "say": [
+            "Hob. The Warm Stone. A bed on warm rock and a quilt stitched from old tents will cost you 220 gold a night. You'll sleep like a loaf in an oven, and wake up about as crisp.",
+            "No dreams down here, as a rule. The Hearth takes them. If you do dream, tell me at breakfast. I collect them. I have a jar."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "he01",
+          "text": "The beds are carved from living stone. Warm as an armpit. Better than a mattress for the back, worse for the vanity."
+        },
+        {
+          "id": "he02",
+          "text": "I relight the inn fire at first light, using a coal borrowed from Ashra's oven. It's the same fire I lit as a boy. The coal is the thing that's old, not the flame."
+        },
+        {
+          "id": "he03",
+          "text": "My cat Footnote sleeps on the warmest stone. She is not a cat of discretion. She is a cat of principles."
+        },
+        {
+          "id": "he04",
+          "text": "A night's sleep here costs a bit. A bad night costs a good deal more. I've seen both. I'd advise the first."
+        },
+        {
+          "id": "he05",
+          "text": "The walls hum a little, about a B flat. The Hearth is thinking. You get used to it, like a husband's snore."
+        },
+        {
+          "id": "he06",
+          "text": "I don't bar the door. Nobody comes to rob a place that has only quilts. The worst thief we've had stole a pillow and returned it with a note."
+        },
+        {
+          "id": "he07",
+          "text": "Swordsman, there's a heavy bunk by the east wall. Nothing creaks, and the stone is the right warmth for old scars.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "he08",
+          "text": "Caster, mind the glow from the south wall. It sours the dreams a little, but it brightens the spells. A fair swap, I'd say.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "he09",
+          "text": "Scout, the cellar bunk has no windows and no echoes. Vesper swears by it. You'll hear nothing, which is the point.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "he10",
+          "text": "Priest, would you bless the quilts? They've been through a lot of nights, and a few of them were awful.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "he11",
+          "text": "Ashra calls the inn a haven. I call it a kiln with beds. We're both right and she's loudest."
+        },
+        {
+          "id": "he12",
+          "text": "Sera stays up writing until the lamp gutters. I tuck a quilt around her shoulders. She doesn't notice. She never has."
+        },
+        {
+          "id": "he13",
+          "text": "Tolliver booked the same bunk for twenty years and always asks if it's free. It's always free. I always say it's taken."
+        },
+        {
+          "id": "he14",
+          "text": "Pip sleeps in the hay by my stove half the week. I tell Ashra he's a guest. We both know what he is."
+        },
+        {
+          "id": "he15",
+          "text": "Vesper pays in advance and never stays the night. She leaves the coin and the key and goes. I think the coin is for the key's feelings."
+        },
+        {
+          "id": "he16",
+          "text": "Orrin shuffles in near midnight and sits by the fire. I never turn him out. He says goodnight three times. I say it back, and it feels like a blessing."
+        },
+        {
+          "id": "he17",
+          "text": "Maud's flour keeps my pantry full. I trade her a bed for a baker's dozen. It's the only business in Kindle Rest that has never lost a penny."
+        },
+        {
+          "id": "he18",
+          "text": "The Warm Stone was once the Hearth's wardens' dormitory. Nine hundred years of snoring has been absorbed into those walls. That's why the bunks hum."
+        },
+        {
+          "id": "he19",
+          "text": "Rest before the Elder, will you? A tired hero is a hungry dragon's idea of lunch. I'll have the quilts turned down.",
+          "when": {
+            "flag": "talkedMatron",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "he20",
+          "text": "The vault gives off warm air in the night. Lay a palm on the floor and you'll feel a pulse, slow as a sleeper. Better it sleeps on.",
+          "when": {
+            "notFlag": "wyrmDefeated"
+          }
+        },
+        {
+          "id": "he21",
+          "text": "You look flayed. Sit, drink, and take bunk four. It's the warmest, and I've put an extra quilt on it. Don't thank me, I'll blush.",
+          "when": {
+            "flag": "elderDefeated",
+            "notFlag": "reportedMatron"
+          }
+        },
+        {
+          "id": "he22",
+          "text": "When the sun's back I'll prop the door open and see how it feels. I'll probably hate it. I'll do it anyway.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        },
+        {
+          "id": "he23",
+          "text": "Welcome to Kindle Rest. Sleep well, eat well, and don't wake what's sleeping. Those are the house rules, all three.",
+          "when": {
+            "flag": "reachedHearth",
+            "notFlag": "elderDefeated"
+          }
+        },
+        {
+          "id": "he24",
+          "text": "A bunk is yours as long as you want it, light-bearer. Come back warm. I'll keep the fire lit.",
+          "when": {
+            "flag": "reportedMatron"
+          }
+        }
+      ]
+    }
+  }
+}

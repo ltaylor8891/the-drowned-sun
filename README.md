@@ -4,6 +4,8 @@ Play the browser edition: https://ltaylor8891.github.io/the-drowned-sun/
 
 A turn-based adventure RPG. Use a desktop browser with a keyboard or compatible gamepad.
 
+Current release: all 20 chapters, the ending and credits, procedural music, controller button rebinding, and key-item uses (M13 polish). See version.json for the original game revision.
+
 ## Controls
 
 - Arrow keys or WASD: move / choose.

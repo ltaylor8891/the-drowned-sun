@@ -31,6 +31,12 @@ export class Boot extends Phaser.Scene {
       'rootmere_wood', 'rootmere_hamlet', 'frozen_shrine', 'mossy_hollow', 'rootmere_store', 'rootmere_inn', 'explorers_lodge',
       'moor_road', 'lantern_hold', 'moor_depths', 'grave_barrow', 'lanternhold_store', 'lanternhold_inn',
       'black_cliffs', 'ashfall_camp', 'keep_courtyard', 'keep_halls', 'vael_throne', 'vael_chapel', 'rune_vault', 'vael_catacombs', 'ashfall_store', 'ashfall_inn', 'runewright_hut',
+      'bier_road', 'mourners_rest', 'bier_climb', 'bier_summit', 'wyvern_roost', 'mourners_store', 'mourners_inn',
+      'descent_stair', 'cinderlanding', 'vent_fields', 'ember_hollow', 'cinderlanding_store', 'cinderlanding_inn', 'alchemist_hut',
+      'court_approach', 'pale_alms', 'court_halls', 'countess_throne', 'blood_cellar', 'alms_store', 'alms_inn', 'alms_chapel',
+      'choir_stair', 'nave_landing', 'choir_nave', 'sunken_vestry', 'nave_store', 'nave_inn', 'fisher_hut',
+      'hearth_stair', 'kindle_rest', 'hearth_halls', 'elder_hearth', 'ember_vault', 'kindle_store', 'kindle_inn',
+      'sun_stair', 'sun_landing', 'sun_gallery', 'sun_throne', 'mirror_gallery',
       'ridge_pass', 'ridgewatch_camp', 'gallow_courtyard', 'gallow_chapel', 'tusk_pit', 'quartermaster_tent', 'surgeon_tent'];
     for (const id of maps) this.load.json(`map_${id}`, `src/data/maps/${id}.json`);
     this.load.json('shops', 'src/data/shops.json');
@@ -48,6 +54,18 @@ export class Boot extends Phaser.Scene {
     this.load.json('story_ch12', 'src/data/story/chapter12.json');
     this.load.json('story_ch13', 'src/data/story/chapter13.json');
     this.load.json('story_ch14', 'src/data/story/chapter14.json');
+    this.load.json('story_ch15', 'src/data/story/chapter15.json');
+    this.load.json('story_ch16', 'src/data/story/chapter16.json');
+    this.load.json('story_ch17', 'src/data/story/chapter17.json');
+    this.load.json('story_ch18', 'src/data/story/chapter18.json');
+    this.load.json('story_ch19', 'src/data/story/chapter19.json');
+    this.load.json('story_ch20', 'src/data/story/chapter20.json');
+    this.load.json('dialogue_last_lamp', 'src/data/dialogue/last_lamp.json');
+    this.load.json('dialogue_kindle_rest', 'src/data/dialogue/kindle_rest.json');
+    this.load.json('dialogue_drowned_choir', 'src/data/dialogue/drowned_choir.json');
+    this.load.json('dialogue_pale_alms', 'src/data/dialogue/pale_alms.json');
+    this.load.json('dialogue_cinderlanding', 'src/data/dialogue/cinderlanding.json');
+    this.load.json('dialogue_mourners', 'src/data/dialogue/mourners.json');
     this.load.json('dialogue_ashfall', 'src/data/dialogue/ashfall.json');
     this.load.json('dialogue_lanternhold', 'src/data/dialogue/lanternhold.json');
     this.load.json('dialogue_rootmere', 'src/data/dialogue/rootmere.json');

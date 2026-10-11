@@ -1,0 +1,63 @@
+{
+  "scenes": {
+    "bier_enter": {
+      "when": { "notFlag": "bierEntered" },
+      "lines": [
+        { "n": "", "t": "The track west of Ashfall is paved with grey flagstones worn into a shallow trough, the way a path wears when it has carried one slow load for centuries. Old bier-poles lean in heaps at the verges, and every few hundred paces a stone cross has been set into the snow." },
+        { "n": "", "t": "Above the pines, wings turn against the cloud. Wide, leathery, unhurried. They are not circling you. They are circling something further up the road." }
+      ],
+      "set": ["bierEntered"]
+    },
+    "arrive_mourners": {
+      "when": { "notFlag": "reachedMourners" },
+      "lines": [
+        { "n": "", "t": "A halt sits in a hollow of the road, a ring of low houses around a frozen pond, a lantern on every lintel. Pilgrims in grey wool sit by braziers with their hoods up. Nobody here is going anywhere fast. They are all waiting for a cart to pass that has not come this way in a hundred years, and came last week." },
+        { "n": "", "t": "A heavy woman in a white stole stands at the pond's edge, feeding bread to a crow. She looks up as you come in from the snow, and her face does something complicated. It looks like relief, and it looks like an apology." }
+      ],
+      "set": ["reachedMourners"],
+      "chapter": 15,
+      "autosave": true,
+      "banner": "Chapter 15: The Bier Road"
+    },
+    "rider_intro": {
+      "when": { "notFlag": "riderSeen" },
+      "lines": [
+        { "n": "", "t": "The road bends up into a bowl of black rock, and the sky goes dark with a shape. A wyvern lands in the middle of the track in a spray of snow, wings flung wide, and the rider on its back does not dismount. He sits with a lance across his knees and a grey scarf whipping behind him." },
+        { "n": "The Wyvern Rider", "t": "Light-bearer. I fly where the Chancellor points and I land where he asks. I have never missed a landing, and I have never been asked to be kind. Forgive me in advance." },
+        { "n": "{hero}", "t": "Then stay in the air and try. Lightning brings a wyvern down." }
+      ],
+      "set": ["riderSeen"]
+    },
+    "rider_down": {
+      "when": { "notFlag": "riderSceneDone" },
+      "lines": [
+        { "n": "", "t": "The wyvern hits the snow with a long groaning slide and the rider rolls clear, scarf trailing, and does not get up. When you reach him he is lying on his back with his eyes open, looking at the sky he served." },
+        { "n": "The Wyvern Rider", "t": "I always wondered what it would feel like to land badly. It is quieter than I expected. Go up. The bier is at the summit. He will be waiting, and he will be glad to see you. That is the worst of him." }
+      ],
+      "set": ["riderSceneDone"],
+      "gold": 2400
+    },
+    "chancellor_intro": {
+      "when": { "notFlag": "chancellorSeen" },
+      "lines": [
+        { "n": "", "t": "The summit is a flat table of stone in the cloud, and on it a great black bier stands unhitched, its wyvern traces trailing in the snow. A man sits on the edge of the bier with his hands folded. He wears the white of a high priest, but it is a dead white, the white of bone and old paper, and the gold on his stole has gone the colour of tarnish." },
+        { "n": "The Pale Chancellor", "t": "There you are. I have counted your steps since the Glass Dunes. I am the last high priest of Ahn-Solis, and I have kept the temple's vigil alone for nine hundred years, because I could not make myself stop." },
+        { "n": "{hero}", "t": "You serve Nyrrh. You took the dusk and fed it to the pale lamps. Why?" },
+        { "n": "The Pale Chancellor", "t": "Because the sun is dying, child, and no prayer has ever mended a dying thing. I could not save it. So I chose to make the night worth living in. I will not ask you to forgive me. I will ask you to try your best, because I have been waiting a very long time to be told that I was wrong." }
+      ],
+      "set": ["chancellorSeen"]
+    },
+    "chancellor_down": {
+      "when": { "notFlag": "chancellorSceneDone" },
+      "lines": [
+        { "n": "", "t": "He had risen once already, grey and unbroken, and it had not saved him. Now he kneels at last on the bier's edge, and the white of his robes loosens into snow, and the dusk that has held him upright for nine hundred years goes out of him like breath on a cold morning." },
+        { "n": "The Pale Chancellor", "t": "Ah. There. It does not hurt. I had feared it would. Take the Dusk-shard. It is the thing I took from the temple's altar, and I have never been able to put it down. Perhaps you can carry it better." },
+        { "n": "The Pale Chancellor", "t": "You wish to know about the mark on your hand. I will tell you, because no one told me. It is not a curse, and it is not a seal. When the temple fell, the last of its light had to go somewhere. It went into a child, newborn, in a house at Brinewick. You are a vessel, {hero}. You were made out of the last light of Ahn-Solis." },
+        { "n": "The Pale Chancellor", "t": "Nyrrh does not want to kill you. He wants to open you. That is what the Sun-Throne is for. Go down into the Descent if you must, but go knowing what you carry, and who has been waiting for you to arrive." },
+        { "n": "{hero}", "t": "A vessel. The last light. All this time it was not following me. It was in me." }
+      ],
+      "set": ["chancellorSceneDone"],
+      "gold": 3500
+    }
+  }
+}

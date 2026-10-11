@@ -8,9 +8,10 @@ import { digNode, nodeFresh, perkEffects, chestVisible, lockBlock, chestGoldBonu
 import { settings } from '../systems/settings.js';
 import { merchantToday, pickLocation, dateKey } from '../systems/merchant.js';
 import { saves } from '../systems/storage.js';
-import { sfx } from '../systems/audio.js';
+import { sfx, music, trackForMap } from '../systems/audio.js';
 import { DialogueBox, FONT } from '../ui/widgets.js';
 import { QuestTracker } from '../ui/QuestTracker.js';
+import { isActive as jobActive } from '../systems/jobs.js';
 import { makePerson, heroLook, npcLookFor, creatureKey, creatureScale, mapKey, propKey, TILE_PX, portraitKey, creaturePortraitKey } from '../systems/sprites.js';
 
 const DIRS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] };
@@ -24,6 +25,7 @@ export class Overworld extends Phaser.Scene {
     this.input2 = new Input(this);
     const cache = this.cache.json;
     this.map = cache.get(`map_${state.map}`);
+    music(trackForMap(this.map));
     this.classes = cache.get('classes');
     this.items = cache.get('items');
     this.creatures = cache.get('creatures');
@@ -71,6 +73,7 @@ export class Overworld extends Phaser.Scene {
     if (this.map.night) { this.nightG = this.add.graphics().setDepth(15); this.drawNight(this.player.x, this.player.y); }
     this.nodes = (this.map.nodes ?? []).map((n) => ({ ...n, obj: this.add.image(this.px(n.x), this.py(n.y) + 2, propKey(this, 'oreDepleted')).setScale(this.T / 20 * 1.1).setDepth(8) }));
     this.nodes.forEach((n) => this.styleNode(n));
+    this.fishSpots = (this.map.fishing ?? []).map((f) => ({ ...f, obj: this.add.image(this.px(f.x), this.py(f.y) - 2, propKey(this, 'fishPost')).setScale(this.T / 20 * 1.1).setDepth(8) }));
     this.shrines = (this.map.shrines ?? []).map((s) => ({ ...s, obj: this.add.image(this.px(s.x), this.py(s.y) - 4, propKey(this, 'shrine')).setScale(this.T / 20 * 1.1).setDepth(8) }));
     this.shrines.forEach((s) => { s.obj.setAlpha(state.flags[s.requires] ? 1 : 0.45); this.add.text(this.px(s.x), this.py(s.y) - 40, s.tier === 3 ? 'Dusk Shrine' : 'Shrine', { ...FONT, fontSize: '14px', color: '#bfe3ff', stroke: '#000000', strokeThickness: 3 }).setOrigin(0.5).setDepth(12); });
 
@@ -148,7 +151,7 @@ export class Overworld extends Phaser.Scene {
     const sc = this.story.scenes[id];
     if (!sc || state.eventsDone[`scene_${id}`] || !conditionsMet(sc.when, this.ctx())) { done?.(); return; }
     state.eventsDone[`scene_${id}`] = true;
-    this.speak(sc.lines.map((l) => ({ name: sub(l.n), text: sub(l.t) })), () => {
+    this.speak(sc.lines.filter((l) => conditionsMet(l.when, this.ctx())).map((l) => ({ name: sub(l.n), text: sub(l.t) })), () => {
       (sc.set ?? []).forEach((f) => { state.flags[f] = true; });
       if (sc.chapter) state.chapter = sc.chapter;
       if (sc.give || sc.gold) {
@@ -160,6 +163,7 @@ export class Overworld extends Phaser.Scene {
       this.tracker.refresh(state.flags);
       if (sc.autosave) this.autosave();
       if (sc.banner) this.showBanner(sc.banner);
+      if (sc.credits) { this.time.delayedCall(3200, () => this.scene.start('Credits')); return; }
       done?.();
     });
   }
@@ -239,7 +243,7 @@ export class Overworld extends Phaser.Scene {
 
   // Night maps: everything beyond the lantern's radius is swallowed by darkness.
   drawNight(px, py) {
-    const r = this.map.night, g = this.nightG, T = this.T;
+    const r = this.map.night + (state.inventory.temple_lamp ? 3 : 0), g = this.nightG, T = this.T; // the Temple Lamp widens the lantern's reach
     g.clear();
     this.map.rows.forEach((row, y) => [...row].forEach((_, x) => {
       const d = Math.hypot(x - px, y - py);
@@ -287,6 +291,7 @@ export class Overworld extends Phaser.Scene {
   doorAt(x, y) { return this.doors.find((d) => d.x === x && d.y === y); }
   chestAt(x, y) { return this.chests.find((c) => c.x === x && c.y === y && c.shown !== false); }
   nodeAt(x, y) { return this.nodes.find((n) => n.x === x && n.y === y); }
+  fishAt(x, y) { return this.fishSpots?.find((f) => f.x === x && f.y === y); }
   shrineAt(x, y) { return this.shrines.find((s) => s.x === x && s.y === y); }
   enemyAt(x, y) { return this.enemies.find((e) => e.x === x && e.y === y); }
   isLocked(d) { return d?.locked && !state.flags[d.id]; }
@@ -296,7 +301,7 @@ export class Overworld extends Phaser.Scene {
     if (!row || x < 0 || x >= row.length) return true;
     if (this.map.legend[row[x]].solid) return true;
     if (this.isLocked(this.doorAt(x, y))) return true;
-    return this.npcs.some((n) => n.x === x && n.y === y) || this.savePoints.some((s) => s.x === x && s.y === y) || !!this.chestAt(x, y) || !!this.nodeAt(x, y) || !!this.shrineAt(x, y);
+    return this.npcs.some((n) => n.x === x && n.y === y) || this.savePoints.some((s) => s.x === x && s.y === y) || !!this.chestAt(x, y) || !!this.nodeAt(x, y) || !!this.fishAt(x, y) || !!this.shrineAt(x, y);
   }
 
   placeEye() {
@@ -377,12 +382,14 @@ export class Overworld extends Phaser.Scene {
     if (chest) return this.openChest(chest);
     const node = this.nodeAt(tx, ty);
     if (node) return this.openNode(node);
+    const fp = this.fishAt(tx, ty);
+    if (fp) return this.openFishing(fp);
     const shrine = this.shrineAt(tx, ty);
     if (shrine) return this.openShrine(shrine);
     if (this.map.rows[ty]?.[tx] === 'o') return this.openCampfire();
     const npc = this.npcs.find((n) => n.x === tx && n.y === ty);
     if (!npc) return;
-    if (npc.shop || npc.inn || npc.companion || npc.forge || npc.runes || npc.jobs || npc.merchant) return this.openNpcMenu(npc);
+    if (npc.shop || npc.inn || npc.companion || npc.forge || npc.runes || npc.brew || npc.jobs || npc.merchant) return this.openNpcMenu(npc);
     this.talk(npc);
   }
 
@@ -446,6 +453,12 @@ export class Overworld extends Phaser.Scene {
     state.facing = this.facing;
     this.cameras.main.flash(300, 255, 255, 255);
     this.time.delayedCall(350, () => this.scene.start('Battle', { enemyId: `trial_${classId}`, creatures: [`trial_${classId}`], noFlee: true, trial: { memberId, classId } }));
+  }
+
+  openFishing(spot) {
+    if (!jobActive(state, 'fisher')) { this.dialogue.open('', 'Dark water, and the shapes of fish moving under it. You would need to be working as a Fisher to try your luck here.'); return; }
+    this.scene.pause();
+    this.scene.launch('Fishing', { table: spot.table, name: spot.name ?? 'the water' });
   }
 
   openNode(node) {

@@ -1,0 +1,1275 @@
+{
+  "npcs": {
+    "eilidh_strand": {
+      "name": "Cantor-Warden Eilidh Strand",
+      "role": "choir-mistress of the Nave Landing and keeper of the temple's hymnals",
+      "personality": "brine-weathered, brisk, wry; carries a tuning fork like a sidearm and speaks to the tide as to a difficult choir",
+      "voice": "pitch and tempo applied to everything; a vocabulary of fermatas, flats and breath-marks; kind in a clipped, rehearsal-room way",
+      "events": [
+        {
+          "id": "cantor_intro",
+          "when": {
+            "notFlag": "talkedCantor"
+          },
+          "set": [
+            "talkedCantor"
+          ],
+          "say": [
+            "Strand. Cantor-Warden of the Landing, last mistress of the temple choir that still keeps a score. You came down the stair with the mark warm on your palm. Good. I have had the fork out for three days waiting for that exact tone.",
+            "The nave is not what it was. The statues sing, and a statue singing is a statue not sleeping. Somewhere in the hall the Warden keeps the old Sunsong, and its thousand pupils will not let anyone near it. They were carved to guard. They were carved to sing. Neither craft knows how to stop.",
+            "Cross the nave and bring the Warden to rest. Mind the stone: a gargoyle that has just hardened takes half the blow, and a gargoyle that has just stirred does not. Strike on the stir. And take a net, if you like. The famous fish lives in the flooded chancel, and it has been laughing at Corra for thirty years."
+          ]
+        },
+        {
+          "id": "cantor_report",
+          "when": {
+            "flag": "wardenDefeated",
+            "notFlag": "reportedCantor"
+          },
+          "set": [
+            "reportedCantor",
+            "chapter_18_done",
+            "dragon_hearth_open"
+          ],
+          "say": [
+            "The choir stopped mid-bar. All thousand voices, together, without a ragged edge. I stood on the landing with the fork against my cheek and heard it ring a full minute on its own. It was the cleanest note I have ever been given, and it was the note of an ending.",
+            "The Warden gave you the score. Good. Keep it dry. I copied the first line once, as a girl, and was never the same. It is not music. It is closer to a door.",
+            "Take the Landing's fund and all the remedies on the shelf. The way to the Dragon's Hearth lies behind the altar, and here is the hearth key the Warden kept. Go gently, sing true, and do not let anyone tell you the cost is less than it is."
+          ],
+          "gold": 11000,
+          "give": {
+            "hi_potion": 8,
+            "hi_ether": 8,
+            "phoenix_plume": 6,
+            "grand_elixir": 4,
+            "clear_tea": 4,
+            "hearth_key": 1
+          },
+          "autosave": true,
+          "banner": "Chapter 18 complete"
+        }
+      ],
+      "lines": [
+        {
+          "id": "es01",
+          "text": "A choir is a single animal with many throats. It breathes together, errs together and, when it is very good, forgives together."
+        },
+        {
+          "id": "es02",
+          "text": "I tune this fork against the tide each dawn. The water here sits a quarter-tone flat of the world. I have learned to love the flatness."
+        },
+        {
+          "id": "es03",
+          "text": "The nave holds a thousand gargoyles, and each is a pipe, and each pipe has a pitch. Break one and the rest compensate, and the whole hymn leans a hair."
+        },
+        {
+          "id": "es04",
+          "text": "A gargoyle takes half the damage while it is hardened. It hardens on one of its turns and softens on the next. Watch the sequence and spend your best blow on the softening."
+        },
+        {
+          "id": "es05",
+          "text": "Lightning shatters stone along its grain. A bolt through a gargoyle's wing is worth three blades. The Warden fears it most, though it will never say so."
+        },
+        {
+          "id": "es06",
+          "text": "The hymn is called the Evensong, and it has four hundred verses. Nobody alive knows more than twelve. The statues know every one, and they sing them whenever the water rises."
+        },
+        {
+          "id": "es07",
+          "text": "Swordsman, wait for the stir. A blade on hardened granite rings and does little. A blade on a stirring wing goes in to the hilt.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "es08",
+          "text": "Caster, lightning is the cantor's rebuke to stone. One good bolt and a gargoyle forgets its next three notes.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "es09",
+          "text": "Scout, the choir sleeps through a quiet step, but not through a loud one. Treat the nave like a library with a very bad-tempered librarian.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "es10",
+          "text": "Priest, sing the evening office with us at the Landing, if you know it. We are short of tenors, and very short of anyone who believes the words.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "es11",
+          "text": "Ossik poles the ferry between the posts at dawn and hums the bass line without noticing. He has never missed a note. He has never known he was singing."
+        },
+        {
+          "id": "es12",
+          "text": "Marin dives into the nave for brass and bell-metal. She comes up with her ears ringing and a grin like a pike. I have never seen anyone so pleased to be deafened."
+        },
+        {
+          "id": "es13",
+          "text": "Wren is the youngest of my choir and the only one whose voice has not yet cracked. I have promised her the first solo and the last tenor part, and she has not yet realised it is a joke."
+        },
+        {
+          "id": "es14",
+          "text": "Pyle was the temple's sexton. He rings the landing bell, tends the lamps and answers every question with a very long silence. As answers go, it is a decent one."
+        },
+        {
+          "id": "es15",
+          "text": "Nettie keeps the shop and the books. Her sums are the most reliable instrument at the Landing: they have not been out of tune in eleven years."
+        },
+        {
+          "id": "es16",
+          "text": "Brom runs the Tide Cup and serves a cider that tastes of seaweed and apples. It is horrible, and the whole choir is in love with it."
+        },
+        {
+          "id": "es17",
+          "text": "Corra has fished the nave for thirty years and has never once been bitten by anything but her own pride. She will tell you the pike was bigger than a boat."
+        },
+        {
+          "id": "es18",
+          "text": "The water in the nave is warm. Not warm like a bath, warm like a breath. I put my hand in at dawn and it feels, for a second, as though something has put its own hand back."
+        },
+        {
+          "id": "es19",
+          "text": "The hymnals lie in the chancel, across the nave. If you spot a book bound in green bronze, fetch it. It holds the first page of the Evensong, which I know only as a hum.",
+          "when": {
+            "flag": "talkedCantor",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "es20",
+          "text": "Something prowls the old vestry below the south transept: half gargoyle, half golem, a hybrid, says the sexton. It walks like a wall and fights like a siege engine. Go prepared.",
+          "when": {
+            "notFlag": "livingwallDefeated"
+          }
+        },
+        {
+          "id": "es21",
+          "text": "The nave is silent. Pillar after pillar, nothing but the slap of water on stone. Only when the notes stopped did I realise I had been counting them, and now the gaps keep me counting.",
+          "when": {
+            "flag": "wardenDefeated",
+            "notFlag": "reportedCantor"
+          }
+        },
+        {
+          "id": "es22",
+          "text": "I have started the choir on a new hymn, four voices, no statues. It is very bad. It is very alive. Wren hit the high note and the whole Landing clapped.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        },
+        {
+          "id": "es23",
+          "text": "You are the first to cross the nave in a century. The gargoyles let the pilgrims pass, once, because the pilgrims sang. If you can carry a tune, carry it now.",
+          "when": {
+            "flag": "reachedLanding",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "es24",
+          "text": "Go well, and mind the rests. The Hearth is as hot as the nave is cold, and the song lives somewhere between.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        }
+      ]
+    },
+    "corra_netwick": {
+      "name": "Corra Netwick",
+      "role": "fisher of the nave and master of the craft",
+      "personality": "sun-cured, wiry, obsessive; talks to fish as to old enemies and to people as to fish she has yet to land",
+      "voice": "tides, lines, lures and baits; every anecdote is about the one that got away",
+      "events": [
+        {
+          "id": "corra_ask",
+          "when": {
+            "notFlag": "fisherAsked"
+          },
+          "set": [
+            "fisherAsked"
+          ],
+          "say": [
+            "Netwick. Corra to my enemies. Sit on a crate, mind the hooks, and do not say a word about the smell. A fisher's hut is meant to smell. It is how the fish know they are welcome.",
+            "Here is my want. Thirty years back I hooked the Moonscale Pike in the chancel pool. A silver monster long as a rowing boat, scaled like coins from a drowned treasury. It towed me round the nave twice and cut my line on a bell-clapper. It has been my life's quarrel ever since.",
+            "Take a rod from the rack, take up the Fisher's trade, and fish the post in the flooded nave. The pike bites rarely, when the choir hums flat. Bring it to me and everything I know is yours, which is mostly patience with a little cursing."
+          ]
+        },
+        {
+          "id": "corra_done",
+          "when": {
+            "flag": "pikeCaught",
+            "hasItem": "moonscale_pike",
+            "notFlag": "fisherDone"
+          },
+          "set": [
+            "fisherDone",
+            "job_fisher_unlocked"
+          ],
+          "say": [
+            "That is it. That is the pike. Look at the scales, look at the fin, look at that foolish, noble, bitter mouth. Thirty years. I will need to sit down. I will need a very large cup of something very strong.",
+            "A deal is a deal, and a lesson is a lesson. Take up the Fisher's trade from your jobs list, and every post by the water will bend to your hand. Skill widens your luck and thickens the rare catches.",
+            "And here is a purse, and a few good eating-fish for the road. The pike I will keep on a hook above the door. Not to eat. To remember that it won."
+          ],
+          "take": {
+            "moonscale_pike": 1
+          },
+          "gold": 3000,
+          "give": {
+            "glass_carp": 2,
+            "bell_trout": 3,
+            "lamp_eel": 3
+          }
+        }
+      ],
+      "lines": [
+        {
+          "id": "cn01",
+          "text": "A fish is a conversation with something older than you. It says: here I am. You say: so am I. The winner is whoever blinks last."
+        },
+        {
+          "id": "cn02",
+          "text": "Cast, wait, strike. The wait is the whole art. A hurried fisher is a gardener who digs up the seed to see how it is getting on."
+        },
+        {
+          "id": "cn03",
+          "text": "The green zone is your window, and it narrows when you are nervous. Breathe in as the cursor swings, out as it comes back, and strike on the exhale."
+        },
+        {
+          "id": "cn04",
+          "text": "Grey perch is a poor man's supper and a good man's breakfast. Lamp eel glows, bell trout rings. The glass carp is so clear you can read through it, and it is worth a week's wages."
+        },
+        {
+          "id": "cn05",
+          "text": "Rare fish bite on the odd hours, in the half-dark, when the nave hums at its lowest pitch. Fish then, with a patient hand and a steady eye."
+        },
+        {
+          "id": "cn06",
+          "text": "A fisher who talks too much frightens the fish. A fisher who talks too little frightens the neighbours. Aim for a pleasant, slightly sinister muttering."
+        },
+        {
+          "id": "cn07",
+          "text": "Swordsman, a heavy arm is no help at the water. Fish are won by wrists, not shoulders. Practise holding a spoon very still.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "cn08",
+          "text": "Caster, there is a lure that glows in the dark, spun from a candle wick and a pinch of fireflies. It works on lamp eels, and it costs you nothing but patience.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "cn09",
+          "text": "Scout, you have the patience of a heron and the eyes of a hawk. You will be better at this than you know. Stand at the post and do not move.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "cn10",
+          "text": "Priest, the old hymn says a fisher is a kind of shepherd. I have never agreed. A shepherd keeps what he finds. A fisher gives most of it back.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "cn11",
+          "text": "Eilidh hums the same three notes whenever a net comes into view. She calls it a hymn. I call it a warning to the fish. Both of us are right."
+        },
+        {
+          "id": "cn12",
+          "text": "Ossik ferries my catch across the Landing and never takes a cut. I leave him the heads. He claims they make the best broth, and he may be right."
+        },
+        {
+          "id": "cn13",
+          "text": "Marin dives where I fish and herds the fish into my net. She has no idea. I keep quiet, in case she stops."
+        },
+        {
+          "id": "cn14",
+          "text": "Wren wants lessons in the cast. She hurls the line with all her might and loses the hook every time. A drawer of her hooks sits behind the counter, the finest collection on the Landing."
+        },
+        {
+          "id": "cn15",
+          "text": "Pyle drops by at noon to watch me gut a fish. He says nothing, takes a perch and goes. Decades have passed without any warmer friendship for either of us."
+        },
+        {
+          "id": "cn16",
+          "text": "Nettie sells me line at a fair price and bad tea at a very fair price. I buy both. The tea keeps me awake and the line keeps me employed."
+        },
+        {
+          "id": "cn17",
+          "text": "Brom smokes my eels in the back of the Tide Cup. They taste of cedar and old grudges. Of no eel have I ever been prouder."
+        },
+        {
+          "id": "cn18",
+          "text": "Some nights the water goes perfectly still, and the fish rise to look at the roof. I stand on the jetty and look up with them. There is nothing there but dark, and it is quite beautiful."
+        },
+        {
+          "id": "cn19",
+          "text": "The Moonscale Pike lives in the chancel pool, past the Warden's reach on the nave's far side. It bites once a month, if that. When it does, the whole choir falls silent.",
+          "when": {
+            "flag": "fisherAsked",
+            "notFlag": "pikeCaught"
+          }
+        },
+        {
+          "id": "cn20",
+          "text": "Take your time at the post. A rare fish is shy, and it will not bite a nervous line. Wait until the humming flattens, and then cast as if you had nothing to lose.",
+          "when": {
+            "flag": "fisherAsked",
+            "notFlag": "pikeCaught"
+          }
+        },
+        {
+          "id": "cn21",
+          "text": "The nave is quiet and the fish are jumping. Dozens of them, silver in the dark, jumping and falling back as if the water had been waiting for the silence to move.",
+          "when": {
+            "flag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "cn22",
+          "text": "The pike is off the hook above the door and into a glass tank. It sulks magnificently. Happiest it has ever looked, to my eye.",
+          "when": {
+            "flag": "fisherDone"
+          }
+        },
+        {
+          "id": "cn23",
+          "text": "A beast prowls the vestry, a wall with legs, the sexton says. If it comes near the shallows, the fish all dive. It is the worst thing that can happen to a morning.",
+          "when": {
+            "notFlag": "livingwallDefeated"
+          }
+        },
+        {
+          "id": "cn24",
+          "text": "Tight lines, light-bearer. Should a silver shape ever cross dark water, give it a breath before you cast. It may only be the sun, learning to swim.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        }
+      ]
+    },
+    "ossik_tarn": {
+      "name": "Ossik Tarn",
+      "role": "ferryman of the Landing",
+      "personality": "long-armed, laconic, patient as slack water; treats every crossing as a small ceremony",
+      "voice": "poles, currents and soundings; speaks in half-sentences timed to the stroke",
+      "events": [],
+      "lines": [
+        {
+          "id": "ot01",
+          "text": "Eleven strokes to the first post, nineteen to the second. After that the water belongs to the Warden, and I turn back."
+        },
+        {
+          "id": "ot02",
+          "text": "The pole is cut from a single ash. It predates me and has outlasted three ferries. When it breaks I intend to be buried with the splinters."
+        },
+        {
+          "id": "ot03",
+          "text": "The nave floods and drains on a schedule nobody wrote down. I have kept the tally on the underside of my hat for forty years."
+        },
+        {
+          "id": "ot04",
+          "text": "A gargoyle perches on every other pillar. If one turns its head toward the boat, I stop poling and let the current take us. It has never failed."
+        },
+        {
+          "id": "ot05",
+          "text": "Stone-form takes the edge off a blow. I have watched a hundred men learn it the long way. The trick is to wait out the hardening and hit when the creature stirs."
+        },
+        {
+          "id": "ot06",
+          "text": "The water here remembers. If you drop a coin it hums for an hour. If you drop a name it hums for a week."
+        },
+        {
+          "id": "ot07",
+          "text": "Swordsman, there is no use swinging at a hardened statue. It is like arguing with a wall, and the wall has the better case.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ot08",
+          "text": "Caster, stand in the bow. The nave carries sound like a bell, and your spells will ring from end to end. It is the best theatre in the world.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ot09",
+          "text": "Scout, I know a back channel behind the second post, narrow, quiet, and shaded by weed. It comes out behind the pillar where the sexton hides his bottle.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ot10",
+          "text": "Priest, sit in the stern and say the old ferry blessing. It is short. It goes: keep the keel, keep the crew, keep the light. Say it twice for the depth.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ot11",
+          "text": "Eilidh hums bass lines while I pole. I match the rhythm to her humming. She never notices that she is conducting the boat."
+        },
+        {
+          "id": "ot12",
+          "text": "Corra pays me in eels and I accept in eels. We have never agreed a price. It would spoil the game."
+        },
+        {
+          "id": "ot13",
+          "text": "Marin dives off the bow without warning. I wait. She surfaces. She always surfaces. It is the only promise anyone has ever made me and kept."
+        },
+        {
+          "id": "ot14",
+          "text": "Wren asks to steer. I let her hold the pole while I hold her shoulders. She has terrible form and a wonderful grin. We go in circles."
+        },
+        {
+          "id": "ot15",
+          "text": "Pyle rides the ferry once a year, on the anniversary of something he will not name. He brings a candle and no luggage. I leave him alone in the stern."
+        },
+        {
+          "id": "ot16",
+          "text": "Nettie sells me pitch for the hull, always the same price, always the same sniff. It is the most consistent thing in my life."
+        },
+        {
+          "id": "ot17",
+          "text": "Brom serves me a cup of the seaweed cider when the day is done. I dislike it. I drink it. Rituals are not about liking."
+        },
+        {
+          "id": "ot18",
+          "text": "When the tide turns, the nave goes still for the length of a breath. Boats stop, birds stop, fish stop. I take off my hat. It seems the right thing."
+        },
+        {
+          "id": "ot19",
+          "text": "The ferry goes as far as the chancel steps, no farther. Beyond that, you are on stone, and the Warden watches stone the way a cat watches a mouse.",
+          "when": {
+            "flag": "talkedCantor",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "ot20",
+          "text": "A wall walks in the sunken vestry. I heard it from the water, a grinding like a mill with a grudge. I steered wide and will steer wide again.",
+          "when": {
+            "notFlag": "livingwallDefeated"
+          }
+        },
+        {
+          "id": "ot21",
+          "text": "I poled across the nave at dusk and nothing sang. Not a note. The water slapped the hull like applause for a long dead hymn.",
+          "when": {
+            "flag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "ot22",
+          "text": "The ferry runs to the Hearth stairs now. First time in nine hundred years. I have trimmed my hat and sharpened the pole, and I feel faintly ridiculous and entirely ready.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        },
+        {
+          "id": "ot23",
+          "text": "You came in alone and the choir let you pass. That does not happen. Whatever you carry, the stones can hear it.",
+          "when": {
+            "flag": "reachedLanding",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "ot24",
+          "text": "Fair water, light-bearer. I shall be poling the same line and humming the same bass when you return. The nave has taught me that staying is a kind of faith.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        }
+      ]
+    },
+    "marin_cole": {
+      "name": "Marin Cole",
+      "role": "diver who salvages bell-metal from the flooded nave",
+      "personality": "salt-bleached, grinning, a little deaf, and deeply unafraid of anything that cannot out-swim her",
+      "voice": "breath-holds, depths and pressures; shouts slightly because her ears are ringing",
+      "events": [],
+      "lines": [
+        {
+          "id": "mc01",
+          "text": "Twelve fathoms at the deepest point of the nave, and on the floor a bell the size of a house. One touch, and it rang for three days."
+        },
+        {
+          "id": "mc02",
+          "text": "I hold my breath for four minutes. I have a rhythm: count the pillars, name the saints, kick on the seventh. I have never lost my place."
+        },
+        {
+          "id": "mc03",
+          "text": "The water is warm at the bottom. Warmer than it should be. Something down there is breathing, slowly, and I swim around it very politely."
+        },
+        {
+          "id": "mc04",
+          "text": "A gargoyle that falls into the water sinks like a stone, which is exactly what it is. I have a collection of their fallen wings. They make wonderful paperweights."
+        },
+        {
+          "id": "mc05",
+          "text": "The statues turn their heads to follow a diver. I have felt the stare on my neck while I was ten fathoms down. I wave. They never wave back."
+        },
+        {
+          "id": "mc06",
+          "text": "Bell-metal is worth a king's ransom. I pull up a pound each dive and sell it to Nettie for a copper and a smile. The smile is the better deal."
+        },
+        {
+          "id": "mc07",
+          "text": "Swordsman, never fight in armour near open water. A heavy hauberk is a very good anchor, and I have pulled up three men to prove it.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mc08",
+          "text": "Caster, a spell underwater is a thing of beauty. The light spreads in rings, and a fire bolt hisses for a full minute. Do not try it. I did.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mc09",
+          "text": "Scout, there is a drowned stair behind the third pillar that leads to a dry gallery. A good swimmer with a held breath can bypass the whole nave.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mc10",
+          "text": "Priest, there are bones at the bottom, hundreds of them, in rows. Pilgrims, I think. I have been saying the old words over each one, a few per dive.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mc11",
+          "text": "Eilidh calls me up with a tuning fork rung on the jetty. I hear it as a bright little needle through the water, and I follow it like a lamp."
+        },
+        {
+          "id": "mc12",
+          "text": "Corra casts where I dive. I leave her gifts of silver scale, torn off in passing. She swears they are bait. I let her."
+        },
+        {
+          "id": "mc13",
+          "text": "Ossik waits on the surface with a rope and a hat. He never tells me he is worried. He just coils the rope very tidily, over and over."
+        },
+        {
+          "id": "mc14",
+          "text": "Wren wants to dive. I told her to wait until she could hold her breath for two minutes. She has been practising in a bucket. It is the most dedicated and ridiculous thing I have seen."
+        },
+        {
+          "id": "mc15",
+          "text": "Pyle takes the brass I bring up and hangs it in the bell tower. What he does with it he never says. Some nights I hear it ring, and I know it is mine."
+        },
+        {
+          "id": "mc16",
+          "text": "Nettie hands me a towel and a mug of cocoa whenever I surface. Never once have I refused either. Best part of the job."
+        },
+        {
+          "id": "mc17",
+          "text": "Brom mutters at me for dripping on the floor. He fills a bath behind the Tide Cup anyway. I have never washed in a more apologetic tub."
+        },
+        {
+          "id": "mc18",
+          "text": "At the very bottom there is a door. Round, bronze, shut. I put my ear to it once and heard a low voice counting. I came up very fast and said nothing for an hour."
+        },
+        {
+          "id": "mc19",
+          "text": "The Warden stands in the chancel, in the shallows. The water is only knee-deep there. It does not help. Stone does not care how deep the water is.",
+          "when": {
+            "flag": "talkedCantor",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "mc20",
+          "text": "The pike swims beneath the chancel in the clear green. I caught the flash of it, a silver blade in the dark. It eyed me, and I swear it was amused.",
+          "when": {
+            "flag": "fisherAsked",
+            "notFlag": "pikeCaught"
+          }
+        },
+        {
+          "id": "mc21",
+          "text": "Dusk found me diving, and the whole nave lay hushed. Every gargoyle faced the water, waiting. I swam through them like a fish through shadow, and none stirred.",
+          "when": {
+            "flag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "mc22",
+          "text": "I found a coin on the bottom today, gold, stamped with a sun. It is the only gold I have ever kept. It goes round my neck on a thong.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        },
+        {
+          "id": "mc23",
+          "text": "The thing in the vestry has a voice like a quarry. I heard it through the water. It was not angry. It sounded very, very tired of being a wall.",
+          "when": {
+            "notFlag": "livingwallDefeated"
+          }
+        },
+        {
+          "id": "mc24",
+          "text": "Dive deep, light-bearer, and come up slowly. The best air is the air you have to earn.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        }
+      ]
+    },
+    "wren_halloran": {
+      "name": "Wren Halloran",
+      "role": "youngest chorister of the Landing",
+      "personality": "ten years old, fiercely musical, perpetually on the verge of a solo; every worry reduced to a question of pitch",
+      "voice": "excited, run-together, breathless; sings half of every sentence and corrects herself",
+      "events": [],
+      "lines": [
+        {
+          "id": "wh01",
+          "text": "I can sing a high C! Not a good one, but a real one. The cantor calls it a kettle with ambition. I am very proud."
+        },
+        {
+          "id": "wh02",
+          "text": "The Landing is where I was born, and fields are only a rumour to me. Grass I know from a hymn. It said, the green is a hundred hands. The meaning escapes me, but I love it."
+        },
+        {
+          "id": "wh03",
+          "text": "The gargoyles sing every night. I lie in bed and listen. I try to sing the descant over the top. I am nearly always flat, and the gargoyles never mind."
+        },
+        {
+          "id": "wh04",
+          "text": "A gargoyle goes hard, then soft, then hard again, like a held breath. If you count with it, you can tell when to hit. One, two, stone, stir, one, two, stone, stir."
+        },
+        {
+          "id": "wh05",
+          "text": "Lightning is just the sky clearing its throat. The gargoyles hate it. They go quiet and the whole nave listens."
+        },
+        {
+          "id": "wh06",
+          "text": "I want to sing the Sunsong. Everyone says I should not. They say it is not meant for little girls. I say it was not meant for anybody, so I have as much right as anyone."
+        },
+        {
+          "id": "wh07",
+          "text": "Swordsman, can you hum? A hum helps you swing in time. Try it. One two three, hit. Good way to fight a statue, in my view.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "wh08",
+          "text": "Caster, can your spells sing? I would love to hear a fireball in harmony. Can you do a little fizz on the third beat? Please? Just once?",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "wh09",
+          "text": "Scout, I can whistle through my teeth like a hawk. It scares the gulls. Shall I? It is very loud. Cover your ears.",
+          "when": {
+            "class": [
+              "acolyte",
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "wh10",
+          "text": "Priest, will you teach me a real blessing? Cantor Eilidh knows all the songs, but she does not know any of the proper words. You must know some. Please?",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "wh11",
+          "text": "Eilidh gives me a new vowel to practise every morning. Today it was oo. I have been saying oo to the ferry cat for hours. The cat is not impressed."
+        },
+        {
+          "id": "wh12",
+          "text": "Corra lets me hold a rod. I cannot cast it. I just stand and wait and pretend. It is so peaceful that I might be a fisher too, after I am done being a singer."
+        },
+        {
+          "id": "wh13",
+          "text": "Ossik allows me the ferry pole in circles. He claims I have a natural feel for the current. He means I am dizzy, I think. Great fun."
+        },
+        {
+          "id": "wh14",
+          "text": "Marin brought me a piece of bell-metal. When I tap it, it sings an A. It is the nicest present I have ever got. I keep it under my pillow and tap it at night."
+        },
+        {
+          "id": "wh15",
+          "text": "Pyle taught me the landing bell. Three strokes for dawn, seven for dusk, and one for anything he would rather not discuss. I ring the one a lot."
+        },
+        {
+          "id": "wh16",
+          "text": "Nettie hands over a sweet whenever I hit a note. Six since breakfast, and I reckon I have a real career."
+        },
+        {
+          "id": "wh17",
+          "text": "Brom lets me stir the cider on feast days. It smells awful and tastes worse and I love it. No one knows, in case they take my spoon."
+        },
+        {
+          "id": "wh18",
+          "text": "One night I sang into the water and the water sang back. Just for a second. It was a low note, and very kind. I have told nobody. I am telling you."
+        },
+        {
+          "id": "wh19",
+          "text": "The Warden is very big and very sad. From the jetty I watched it sit on the altar steps. I wanted to wave but it seemed rude.",
+          "when": {
+            "flag": "talkedCantor",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "wh20",
+          "text": "Corra says there is a silver fish in the chancel that is older than anyone alive. I am going to ask it for a note. Fish must know something about pitch, living in all that water.",
+          "when": {
+            "flag": "fisherAsked",
+            "notFlag": "pikeCaught"
+          }
+        },
+        {
+          "id": "wh21",
+          "text": "All the gargoyles stopped singing and I heard my own heartbeat! It is in four-four! For years I have practised in six-eight by mistake!",
+          "when": {
+            "flag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "wh22",
+          "text": "Cantor Eilidh gave me the first solo in the new hymn! I hit the note! I did not even faint! I only wobbled a bit and she said wobble is character!",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        },
+        {
+          "id": "wh23",
+          "text": "A monster lives in the vestry, half statue and half giant wall. Afraid? Not really. Well, a little. But I would sing to it if you asked.",
+          "when": {
+            "notFlag": "livingwallDefeated"
+          }
+        },
+        {
+          "id": "wh24",
+          "text": "When you sing the Sunsong, will you sing it loud? So the whole world can hear? I want to be able to say I was there when it started.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        }
+      ]
+    },
+    "pyle_sexton": {
+      "name": "Pyle the Sexton",
+      "role": "bell-keeper and lamp-trimmer of the Landing",
+      "personality": "ancient, silent, kind; his answers arrive minutes after the questions, fully formed",
+      "voice": "long pauses; dry, funereal wit; a single sentence per hour, and each of them worth the wait",
+      "events": [],
+      "lines": [
+        {
+          "id": "ps01",
+          "text": "I rang the first bell of this temple at nine years old. I ring the last, I suspect, at a hundred and four. The rope alone among my possessions has not aged."
+        },
+        {
+          "id": "ps02",
+          "text": "A lamp must be trimmed at the exact moment before it smokes. Too soon, the flame is wasted. Too late, the room is dirty. A whole life, in a wick."
+        },
+        {
+          "id": "ps03",
+          "text": "The Warden was a pilgrim once. Carved from the likeness of the first cantor, who volunteered. The face on the statue is hers. She did not like it."
+        },
+        {
+          "id": "ps04",
+          "text": "The gargoyles are not alive. They are a habit the stone remembers. Break the habit and the stone is merely stone, and mourns."
+        },
+        {
+          "id": "ps05",
+          "text": "Stone hardens when it is afraid and softens when it is sorry. Watch the creature's face, not its wings. It tells you which."
+        },
+        {
+          "id": "ps06",
+          "text": "They told me the Sunsong could raise the dead. A drunk told me. Since then I have had reason to reconsider the drunk."
+        },
+        {
+          "id": "ps07",
+          "text": "Swordsman, a blade is a very short sentence. The gargoyles prefer long ones. Try a combination, and let the stone finish the thought.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ps08",
+          "text": "Caster, there is a lightning-rod on the transept, copper, old, still sound. Stand near it. It draws the bolt down your way and makes the work easier.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ps09",
+          "text": "Scout, the lamp-gallery along the north aisle is dry and looks down on the altar. No one but me has ever used it.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ps10",
+          "text": "Priest, a stoup stands at the nave door, dry for nine hundred years. A drop of Landing water would wake it. That would be a sight.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ps11",
+          "text": "Eilidh brings me a mug of tea at the second bell. Not a word from her, not a word from me. No better talk has passed my door."
+        },
+        {
+          "id": "ps12",
+          "text": "Ossik rows me to the chancel on the anniversary. I light a candle. He holds the boat steady and does not look. A good ferryman is mostly a kind of blindness."
+        },
+        {
+          "id": "ps13",
+          "text": "Marin drops brass on my doorstep at night and leaves without knocking. I hang it in the tower and it sings. I have a bell for every dive she has made."
+        },
+        {
+          "id": "ps14",
+          "text": "Corra visits at noon to report that the pike has grown since last week. I nod. It always grows. Her pike is the one honest growth I know."
+        },
+        {
+          "id": "ps15",
+          "text": "Wren asks every morning whether the bell will ever ring by itself. No, I say. But if it did? Then the temple would need no sexton. She looks very sad. I give her a sweet."
+        },
+        {
+          "id": "ps16",
+          "text": "Nettie sells me wicks at cost and slips in a candle at each new month. No reason offered. I have filed it as a tithe."
+        },
+        {
+          "id": "ps17",
+          "text": "Brom brews a tea of birch bark for my joints. It tastes of resin and wet dog. It works. I drink it every night and refuse to be grateful."
+        },
+        {
+          "id": "ps18",
+          "text": "A bell lies at the floor of the nave, bigger than any in the tower. When it rang nine hundred years ago the sun answered, so the legend goes. It has never reached my ears."
+        },
+        {
+          "id": "ps19",
+          "text": "The Warden sits where the first cantor died. Coincidence seems unlikely. It waits, I think, for someone to sing the line she left unfinished.",
+          "when": {
+            "flag": "talkedCantor",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "ps20",
+          "text": "Something grinds in the vestry, and the lamps flicker when it moves. A wall, I believe, that learned to walk. I trimmed the wicks short in its honour.",
+          "when": {
+            "notFlag": "livingwallDefeated"
+          }
+        },
+        {
+          "id": "ps21",
+          "text": "I rang the bell tonight and no gargoyle answered. Not one. I stood in the tower and tolled it twelve times, and every stroke fell into the silence like a coin down a well.",
+          "when": {
+            "flag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "ps22",
+          "text": "I let the lamps go dark for a moment this evening. Only a moment. I wanted to see what the nave looked like without them. It looked like a cathedral, finally.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        },
+        {
+          "id": "ps23",
+          "text": "You carry the mark, and the lamps lean toward you. They have not leaned so since the first cantor. A small compliment, made with great care.",
+          "when": {
+            "flag": "reachedLanding"
+          }
+        },
+        {
+          "id": "ps24",
+          "text": "Go, and come back, if you can. The bell will ring either way. But it will ring better for you.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        }
+      ]
+    },
+    "nettie_garth": {
+      "name": "Nettie Garth",
+      "role": "keeper of Netwick & Tackle",
+      "personality": "crisp, ink-fingered, secretly kind; keeps accounts to the half-farthing and gifts to the penny",
+      "voice": "ledger entries and tide-tables; prices are her love language",
+      "events": [
+        {
+          "id": "nettie_intro",
+          "when": {
+            "notFlag": "metNettie"
+          },
+          "set": [
+            "metNettie"
+          ],
+          "say": [
+            "Garth. Nettie Garth. This is Netwick & Tackle. Nets, line, hooks and a very honest line of tonics. If it floats, I sell it. If it sinks, I charge a small fee for the lesson.",
+            "The stock list hangs on the wall. Prices are final, except when they are not, and then they are final again. Three kings have bought my rope, and no customer has yet paid in a sunrise."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "ng01",
+          "text": "A ledger is a very small ocean with a very large number of fish in it. I keep mine dry, and I check it twice, and I never trust a column that adds up too quickly."
+        },
+        {
+          "id": "ng02",
+          "text": "Rune dust, stone salve, phoenix plumes, clear tea: the four pillars of a pilgrim's pack. I stock them, and recommend them, in that sequence."
+        },
+        {
+          "id": "ng03",
+          "text": "Net-twine is spun from nettle fibre and tarred with pine. It lasts ten years in a fresh lake, three in the nave. The salt is in the stone. I do not ask why."
+        },
+        {
+          "id": "ng04",
+          "text": "Hooks come in nine sizes. The smallest is for gudgeon, the biggest for a creature I know only by rumour. The biggest has never sold. It waits in the drawer, for Corra's sake."
+        },
+        {
+          "id": "ng05",
+          "text": "A gargoyle's chip makes a fine grindstone. I buy them at three coppers a pound and sell them to knife-sharpeners at five. It is a small, honest crime."
+        },
+        {
+          "id": "ng06",
+          "text": "I hold the Landing's accounts and the Landing's secrets. Both are safe. Both are very, very dry."
+        },
+        {
+          "id": "ng07",
+          "text": "Swordsman, there is a whetstone on the left shelf, fine and grey, from the nave itself. It puts an edge on a blade like a cold wind on a cheek.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ng08",
+          "text": "Caster, ink and vellum, in the drawer under the till. Both very dry, which is no small feat in this place. Take the vellum. It is thicker than it looks.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ng09",
+          "text": "Scout, waxed rope, thirty fathoms, a fine gift and a very sound line. The last one I sold is still holding a man up in a place I will not name.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ng10",
+          "text": "Priest, hymnals, two coppers each, bound in oilcloth. A damp hymn is a disgrace, and I will not have one in my shop.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ng11",
+          "text": "Eilidh buys tuning-forks by the half-dozen and loses them all by Tuesday. I have started to put a string on them. She has not noticed."
+        },
+        {
+          "id": "ng12",
+          "text": "Corra settles her line bills in fish, on Fridays, the best of the week. My cold-store is full and my cat is smug."
+        },
+        {
+          "id": "ng13",
+          "text": "Ossik buys pitch and rope and nothing besides. A discount has never once passed his lips. It is unnerving, and I offer him one regardless."
+        },
+        {
+          "id": "ng14",
+          "text": "Marin brings brass and bell-metal by the pound and takes her pay in a hot meal. She wins every deal. It is the only bargain I lose on purpose."
+        },
+        {
+          "id": "ng15",
+          "text": "Wren pinches a sweet each morning and drops a copper in the till each night. Neither of us has mentioned it. A very satisfactory arrangement."
+        },
+        {
+          "id": "ng16",
+          "text": "Pyle buys one wick a day and pays in coin, to the farthing. Not a word on either side, and the transaction takes four minutes. It is my favourite hour."
+        },
+        {
+          "id": "ng17",
+          "text": "Brom orders cider barrels and grumbles at the weight. Delivery is not on offer. He carries them himself. Stubbornest partnership of my career."
+        },
+        {
+          "id": "ng18",
+          "text": "A very tall man in a very long coat once bought a single hook from me, paid in gold, and walked into the nave. I never saw him again. The gold was warm. It is in the till, and it will not cool."
+        },
+        {
+          "id": "ng19",
+          "text": "Before the nave, buy cures. A gargoyle's song puts the whole party to sleep, and a sleeping party is a very cheap supper.",
+          "when": {
+            "flag": "talkedCantor",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "ng20",
+          "text": "A crate of hymnals came up the stair last night with no sender and no label. Inside, every page was blank. The cantor says it is a score, waiting for someone to write it.",
+          "when": {
+            "flag": "reachedLanding"
+          }
+        },
+        {
+          "id": "ng21",
+          "text": "Business has been odd since the singing stopped. Customers keep coming in and forgetting what they wanted. The quiet has made them thoughtful, and thoughtful people do not buy much.",
+          "when": {
+            "flag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "ng22",
+          "text": "I have added a new line of paper and pens. People want to write things down, now that the nave is silent. It is a very rare demand, and I am delighted.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        },
+        {
+          "id": "ng23",
+          "text": "A sort of wall moves in the vestry. Somebody saw it hauling a rock as big as a cart. Bring me a chip of it and the payment is hooks.",
+          "when": {
+            "notFlag": "livingwallDefeated"
+          }
+        },
+        {
+          "id": "ng24",
+          "text": "Fair seas and honest lines. The shop awaits your return, and so does the bill. I joke about the bill.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        }
+      ]
+    },
+    "brom_tidewell": {
+      "name": "Brom Tidewell",
+      "role": "keeper of the Tide Cup inn",
+      "personality": "bulky, genial, permanently damp; hums a drinking song whose second verse he has never remembered",
+      "voice": "casks, steam, tides and cider; gossip as a kind of weather report",
+      "events": [
+        {
+          "id": "brom_intro",
+          "when": {
+            "notFlag": "metBrom"
+          },
+          "set": [
+            "metBrom"
+          ],
+          "say": [
+            "Brom Tidewell, keeper of the Tide Cup. Two hundred a night, a bunk above the waterline and a mug of house cider to warm the bones. Never mind what is in it. Mostly apples.",
+            "The beds sway a little. That is the Landing. After the first night, you will sleep better rocking than still. After the second, you will not be able to sleep in a bed that does not move."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "bt01",
+          "text": "An inn on water has three rules: bail early, bail often and never trust a bunk that does not creak. A silent bed is a leak waiting to be introduced."
+        },
+        {
+          "id": "bt02",
+          "text": "The house cider is four parts apple, one part seaweed and a splash of whatever the choir left in the tun. It is an acquired taste and I acquired it in my twenties."
+        },
+        {
+          "id": "bt03",
+          "text": "The Tide Cup has nine bunks, two hammocks and an enormous cat who sleeps on the barrel-head. The cat is in charge. I only fill the mugs."
+        },
+        {
+          "id": "bt04",
+          "text": "A gargoyle's song reaches the bunks through the water. It is a hum you feel in the teeth. Some guests love it, some hate it, and nobody sleeps through it."
+        },
+        {
+          "id": "bt05",
+          "text": "A sleeping song ends in a yawn and a fall. A bucket of cold water stands by the door for guests who doze off upright."
+        },
+        {
+          "id": "bt06",
+          "text": "My mother kept an inn on a canal, and her mother before her kept one on a barge. I come from a long line of people who made soup in unstable conditions."
+        },
+        {
+          "id": "bt07",
+          "text": "Swordsman, the stern bunk is stout and wide, and the one bed in the house that bears armour without creaking. Sleep there and thank me at breakfast.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "bt08",
+          "text": "Caster, the hammock by the window gets the evening light. A mage who sleeps in the light dreams of colour, I have found. It is a very useful hobby.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "bt09",
+          "text": "Scout, there is a trapdoor in the floor of bunk six that opens to the water. A silent swimmer can reach the pillars in two minutes. I leave the bolt oiled.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "bt10",
+          "text": "Priest, would you say the grace tonight? No proper blessing has crossed the Tide Cup since the old cantor. A sentence will do. I supply the amen.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "bt11",
+          "text": "Eilidh drinks a thimble of the cider each evening and winces. A penance, she says, for something unnamed. I top her up."
+        },
+        {
+          "id": "bt12",
+          "text": "Corra brings me eels to smoke and takes the first rack for herself. The second goes to the cat, the third to me, and the fourth to the sea, for luck."
+        },
+        {
+          "id": "bt13",
+          "text": "Ossik takes the stern bunk and sleeps with one hand on the pole. I have never seen him lie down properly. It is a ferryman's rest, and a very odd one."
+        },
+        {
+          "id": "bt14",
+          "text": "Marin drips on the floor each night and I mop it each morning. We have never spoken of it. Nearest thing to a marriage I own."
+        },
+        {
+          "id": "bt15",
+          "text": "Wren creeps into the kitchen at midnight and sings quietly into the cider barrel. She believes I am unaware. The cider improves, and so do I."
+        },
+        {
+          "id": "bt16",
+          "text": "Pyle sits on the doorstep every dusk in a blanket and rings a tiny handbell. Why, I have never asked. It is the most dignified thing I know."
+        },
+        {
+          "id": "bt17",
+          "text": "Nettie sends me barrel after barrel at a price I cannot dispute. I have tried for eleven years. I am beginning to suspect she is cheating in my favour."
+        },
+        {
+          "id": "bt18",
+          "text": "A guest left a single pearl on the pillow once and vanished before dawn. Into the cider it went. For three years it has dissolved, and the cider is noticeably smoother."
+        },
+        {
+          "id": "bt19",
+          "text": "A rest before the nave is sound advice. The statues sing all night, and a rested hero hears the quiet beats between the notes. A tired one hears only noise.",
+          "when": {
+            "flag": "talkedCantor",
+            "notFlag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "bt20",
+          "text": "A wall wanders the transept vestry. Last night it stomped past the Tide Cup and the cider rippled in every mug. A hybrid, Pyle calls it. A nuisance, I call it.",
+          "when": {
+            "notFlag": "livingwallDefeated"
+          }
+        },
+        {
+          "id": "bt21",
+          "text": "The nave is silent and the cider tastes of nothing. I did not know that sound had a flavour until it was gone. I am pouring a mug for the choir, and a second for the quiet.",
+          "when": {
+            "flag": "wardenDefeated"
+          }
+        },
+        {
+          "id": "bt22",
+          "text": "I have started a new brew, a kind of hymn in a bottle. Apples, honey and a splash of the first rain. It is terrible. Everyone loves it.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        },
+        {
+          "id": "bt23",
+          "text": "Of all my guests, you alone asked for a south-side bunk. Everyone else wants the north, far from the transept. I like you already. Take bunk three.",
+          "when": {
+            "flag": "reachedLanding"
+          }
+        },
+        {
+          "id": "bt24",
+          "text": "Fair weather and a sound hull. The bunks will rock in your absence and the cider will wait. That is all I know of hospitality, and it has always been enough.",
+          "when": {
+            "flag": "reportedCantor"
+          }
+        }
+      ]
+    }
+  }
+}

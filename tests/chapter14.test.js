@@ -48,7 +48,7 @@ test('the west road: Orsolya hands over a pass that opens Lantern Hold to the Bl
 });
 
 test('Isolde: briefing hands over the postern key, report only after the Commander falls', () => {
-  assert.deepEqual(quests.main_ch14.steps.map((s) => s.flag), ['talkedIsolde', 'commanderDefeated', 'reportedIsolde']);
+  assert.deepEqual(quests.main_ch14.steps.map((s) => s.flag), ['talkedIsolde', 'commanderDefeated', 'reportedIsolde', 'reachedMourners']);
   const o = dlg.npcs.isolde_marrow, st = fresh();
   const ctx = () => ({ flags: st.flags, inventory: st.inventory, heroClass: 'warrior' });
   assert.equal(pickEvent(o.events, ctx(), st.eventsDone).id, 'isolde_intro');
@@ -145,7 +145,7 @@ test('the Enchanter quest: the Rune Wraith drops the stone, Tamsin trades it for
 
 test('maps: the camp, the keep, the chapel shrine and the shops are wired', () => {
   const c = map('ashfall_camp');
-  assert.deepEqual(c.doors.map((d) => d.to).sort(), ['ashfall_inn', 'ashfall_store', 'black_cliffs', 'keep_courtyard', 'runewright_hut']);
+  assert.deepEqual(c.doors.map((d) => d.to).sort(), ['ashfall_inn', 'ashfall_store', 'bier_road', 'black_cliffs', 'keep_courtyard', 'runewright_hut']);
   assert.ok(c.scenes.some((s) => s.id === 'arrive_ashfall'));
   assert.ok(map('ashfall_store').npcs.some((n) => n.shop === 'ashfall_store') && map('ashfall_inn').npcs.some((n) => n.inn));
   const tamsin = map('runewright_hut').npcs.find((n) => n.id === 'tamsin_orrel');

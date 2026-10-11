@@ -25,6 +25,7 @@ export class NpcMenu extends Phaser.Scene {
     if (this.npc.merchant) opts.push({ label: 'Browse wares', id: 'wares' });
     if (this.npc.forge) opts.push({ label: 'Forge', id: 'forge' });
     if (this.npc.runes) opts.push({ label: 'Rune table', id: 'runes' });
+    if (this.npc.brew) opts.push({ label: 'Alembic', id: 'brew' });
     if (this.npc.jobs) opts.push({ label: 'Jobs', id: 'jobs' });
     if (this.npc.inn) opts.push({ label: `Rest (${this.npc.inn.cost} gold)`, id: 'rest' });
     if (this.npc.companion) opts.push({ label: 'Ask to join us', id: 'recruit' });
@@ -61,6 +62,9 @@ export class NpcMenu extends Phaser.Scene {
     } else if (id === 'forge') {
       this.scene.stop();
       this.scene.launch('Forge', { keeper: this.def.name });
+    } else if (id === 'brew') {
+      this.scene.stop();
+      this.scene.launch('Brew', { keeper: this.def.name });
     } else if (id === 'runes') {
       this.scene.stop();
       this.scene.launch('RuneTable', { keeper: this.def.name });

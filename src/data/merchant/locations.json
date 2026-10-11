@@ -79,6 +79,54 @@
       "minChapter": 14,
       "name": "the Ashfall camp",
       "safe": true
+    },
+    {
+      "map": "mourners_rest",
+      "x": 16,
+      "y": 9,
+      "minChapter": 15,
+      "name": "the Mourners' Rest",
+      "safe": true
+    },
+    {
+      "map": "cinderlanding",
+      "x": 16,
+      "y": 9,
+      "minChapter": 16,
+      "name": "Cinderlanding",
+      "safe": true
+    },
+    {
+      "map": "pale_alms",
+      "x": 16,
+      "y": 9,
+      "minChapter": 17,
+      "name": "the Pale Alms",
+      "safe": true
+    },
+    {
+      "map": "nave_landing",
+      "x": 16,
+      "y": 9,
+      "minChapter": 18,
+      "name": "the Nave Landing",
+      "safe": true
+    },
+    {
+      "map": "kindle_rest",
+      "x": 16,
+      "y": 9,
+      "minChapter": 19,
+      "name": "Kindle Rest",
+      "safe": true
+    },
+    {
+      "map": "sun_landing",
+      "x": 16,
+      "y": 9,
+      "minChapter": 20,
+      "name": "the Last Lamp",
+      "safe": true
     }
   ]
 }

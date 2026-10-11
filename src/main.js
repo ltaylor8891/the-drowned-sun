@@ -15,6 +15,9 @@ import { MerchantShop } from './scenes/MerchantShop.js';
 import { RecruitPrompt } from './scenes/RecruitPrompt.js';
 import { Ascension } from './scenes/Ascension.js';
 import { RuneTable } from './scenes/RuneTable.js';
+import { Brew } from './scenes/Brew.js';
+import { Fishing } from './scenes/Fishing.js';
+import { Credits } from './scenes/Credits.js';
 import { Overworld } from './scenes/Overworld.js';
 import { BattleScene } from './scenes/Battle.js';
 
@@ -26,7 +29,7 @@ const game = new Phaser.Game({
   backgroundColor: '#000000',
   pixelArt: true,
   scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
-  scene: [Boot, Title, NewGame, Slots, PauseMenu, Options, NameHero, DebugMenu, NpcMenu, Shop, RecruitPrompt, Forge, MerchantShop, Shrine, Cook, Ascension, RuneTable, Overworld, BattleScene],
+  scene: [Boot, Title, NewGame, Slots, PauseMenu, Options, NameHero, DebugMenu, NpcMenu, Shop, RecruitPrompt, Forge, MerchantShop, Shrine, Cook, Ascension, RuneTable, Brew, Fishing, Credits, Overworld, BattleScene],
 });
 
 if (new URLSearchParams(location.search).has('dev')) window.__game = game;

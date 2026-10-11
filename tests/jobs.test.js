@@ -46,7 +46,8 @@ test('only two jobs can be active, locked ones cannot be taken, planned ones hav
   const st = mk();
   assert.equal(toggleJob(st, data, 'fisher').ok, false);
   st.flags.job_fisher_unlocked = true;
-  assert.equal(toggleJob(st, data, 'fisher').ok, false); // planned
+  const placeholder = { ...data, jobs: { ...data.jobs, fisher: { ...data.jobs.fisher, planned: true } } };
+  assert.equal(toggleJob(st, placeholder, 'fisher').ok, false); // a planned job has no work yet
   assert.ok(toggleJob(st, data, 'miner').ok);
   assert.ok(toggleJob(st, data, 'blacksmith').ok);
   assert.equal(toggleJob(st, data, 'miner').active, false); // toggling off

@@ -1,0 +1,69 @@
+{
+  "scenes": {
+    "sstair_enter": {
+      "when": { "notFlag": "sstairEntered" },
+      "lines": [
+        { "n": "", "t": "The golden door swings inward on a stair that climbs. After so many stairs going down, the climb feels like a held breath finally let out. The steps are black glass veined with gold, and the gold grows brighter with every flight, as if the stair remembered what it was built to carry." },
+        { "n": "", "t": "Everything that has ever hunted you waits on these steps. Demons from the Descent, vampires from the Court, gargoyles from the Choir, drakes and shades from the Hearth. Nyrrh has called in every debt. They do not speak. They have been told only that you are coming." }
+      ],
+      "set": ["sstairEntered"]
+    },
+    "arrive_throne": {
+      "when": { "notFlag": "reachedThrone" },
+      "lines": [
+        { "n": "", "t": "The stair opens onto a terrace of white stone, and for the first time since Brinewick you can see the sky. It is not a sky, exactly. It is a great black dome with one pale ring of light at its crown, the last rim of the sun, held shut like an eye." },
+        { "n": "", "t": "A single lamp burns on a post at the terrace's heart, tended by a figure in a gold-threaded coat. Beside the lamp, ridiculous and perfect, stands a row of beehives. The bees are awake. They drift toward the mark on your palm in a slow, humming cloud, and settle on your sleeve like a blessing." }
+      ],
+      "set": ["reachedThrone"],
+      "chapter": 20,
+      "autosave": true,
+      "banner": "Chapter 20: The Sun-Throne"
+    },
+    "sgal_enter": {
+      "when": { "notFlag": "sgalEntered" },
+      "lines": [
+        { "n": "", "t": "The Sun Gallery is a hall of portraits, a thousand years of kings and cantors and wardens, each framed in beaten gold. Every portrait has been turned to face the wall. Someone, long ago, could not bear to be watched while the light went out." },
+        { "n": "", "t": "At the far end the throne room's doors stand open a hand's breadth, and a red glow breathes through the gap, in and out, in and out. The demons in the hall do not look at it. They are the only things here that are afraid of what is inside." }
+      ],
+      "set": ["sgalEntered"]
+    },
+    "nyrrh_intro": {
+      "when": { "notFlag": "nyrrhSeen" },
+      "lines": [
+        { "n": "", "t": "The Sun-Throne stands at the summit of the world: a chair of white stone as tall as a house, under a dome that has been shut for nine hundred years. In the dome's centre hangs a cage of black iron, and in the cage, shrunk to the size of a fist, a small gold ember. The sun, drowned and kept." },
+        { "n": "", "t": "Nyrrh sits at the throne's foot with one hand cupped round a flame of his own, the way a man keeps a candle alive in a draught. He is taller than the Warden and thinner than the dragon, a long figure of dark horn and red glass, with a face as calm as a patient host's. A crown of unlit candles rings his brow." },
+        { "n": "Nyrrh", "t": "Light-bearer. Come in, and shut the door. The draught gets in. You have come such a very long way, up through all my rooms, and I have been rather proud of the rooms." },
+        { "n": "{hero}", "t": "Give back the sun, Nyrrh. I have the Sunsong. I know what it costs, and I am paying it." },
+        { "n": "Nyrrh", "t": "Do you? The old cantor knew, too, and she sang it, and I stood here and let the sun go, because I loved her, and I was a fool. Then the mark went to ash in her palm and the sun went out again because nobody could keep it lit. You see? The sun does not want to be asked. It wants to be kept." },
+        { "n": "Nyrrh", "t": "I kept it. For nine hundred years there has been a little warmth in the world, because of me. It was not much. It was never going to be much. But it was never going to be nothing. And you want to open the cage, and give the whole world a morning, and watch it burn out again in a year. I will not allow it. I am sorry. I find that I am a good deal sorrier than I expected." },
+        { "n": "{hero}", "t": "Then we do this the hard way. And afterwards you can tell me whether I was right to ask." }
+      ],
+      "set": ["nyrrhSeen"]
+    },
+    "nyrrh_down": {
+      "when": { "notFlag": "sunRisen" },
+      "lines": [
+        { "n": "", "t": "Nyrrh goes down on one knee, and the long red shadow that has followed him for nine centuries slides off his shoulders like a cloak. Under it he is smaller than he seemed, grey-eyed and tired, with a candle-burn on every finger. The crown of candles has all burned down to nothing." },
+        { "n": "Nyrrh", "t": "There. I can feel it already, the little warmth that was mine. It never was mine. It was only lent. I should have given it back a long time ago, and I could not make my hands do it." },
+        { "n": "Nyrrh", "t": "Go up the steps, light-bearer. The cage will open to the mark. Sing it well. I would rather like to hear it. Nobody has sung it to me since she did." },
+        { "n": "", "t": "You climb the white steps one at a time. The cage of black iron hangs at the top, and in it the tiny ember of the sun glows steadily, patiently, the way a hearth does at the end of a long night. The mark on your palm answers it, brightening until it hurts." },
+        { "n": "", "t": "You open the Sunsong. The score is old and stained and has only a single line, and the line is a single held note with no words. You breathe in. You offer the mark." },
+        { "n": "", "t": "The note rises. The mark pours out of your hand in a long thread of gold and the cage of black iron opens like a hand. The ember climbs. It climbs through the dome, through the crown of the world, through nine hundred years of dark, and the dome splits down the middle like an eggshell." },
+        { "n": "", "t": "Light comes down the steps, slowly, then all at once. It lies across the white stone and the black glass, across the faces of the portraits that someone turned to the wall. It lies across Nyrrh's upturned face, and he is crying, and he is smiling, and he does not look away." },
+        { "n": "", "t": "Your palm is empty. The mark is gone, entirely, the warm weight of it and the quiet knowing. You stand in the sun with your own two hands, and they are just hands, and they are shaking, and they are yours." },
+        { "n": "", "t": "Your first companion lays a hand on your shoulder, steady as a post. 'I took the first watch on the way up and never told you. I will take every watch that's left. Whatever the sword is for now, it is for us.'", "when": { "class": ["warrior"] } },
+        { "n": "", "t": "Your first companion lets out a breath that is half a laugh. 'Well. The sum came out. I never thought I would see the answer. I will want to write all of it down, every line, every error, just to be sure it was real.'", "when": { "class": ["mage"] } },
+        { "n": "", "t": "Your first companion squints up at the new sky and grins. 'I know a dozen roads I never dared walk because the dark was in the way. Come on. I will show you every one of them in daylight.'", "when": { "class": ["scout"] } },
+        { "n": "", "t": "Your first companion kneels, very quietly, in the first warm light. 'I have said that prayer ten thousand times to a roof. It is the first time I have ever said it to the sky. Thank you for letting me.'", "when": { "class": ["acolyte"] } },
+        { "n": "", "t": "Far below, the whole drowned kingdom wakes. In Brinewick the salt pans turn white and gold. In the Nave the thousand gargoyles sing one clean chord and stop. In Kindle Rest a child called Pip stands on the stair with a blanket and refuses to move. And at the Last Lamp, a beekeeper opens the hives for the first time in her life and finds that the bees have already left to find the flowers." },
+        { "n": "Maribel Hive", "t": "Fly, then. Go on. It is only the sun. It has been waiting to meet you for nine hundred years." },
+        { "n": "", "t": "You came up the stairs a bearer of a mark. You go down them a person, and the world goes down with you, into the morning. The Drowned Sun is drowned no longer." }
+      ],
+      "set": ["sunRisen", "chapter_20_done", "gameComplete"],
+      "gold": 20000,
+      "autosave": true,
+      "credits": true,
+      "banner": "The End"
+    }
+  }
+}

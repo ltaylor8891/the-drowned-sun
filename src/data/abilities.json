@@ -814,8 +814,12 @@
       {
         "type": "damage",
         "stat": "mag",
-        "power": 30,
-        "element": "light"
+        "power": 62
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.6
       }
     ]
   },
@@ -1832,12 +1836,12 @@
       {
         "type": "damage",
         "stat": "atk",
-        "mult": 1.2
+        "mult": 1.1
       },
       {
         "type": "status",
         "status": "poison",
-        "chance": 0.85
+        "chance": 0.5
       }
     ]
   },
@@ -1977,12 +1981,8 @@
       {
         "type": "damage",
         "stat": "atk",
-        "mult": 1.5
-      },
-      {
-        "type": "status",
-        "status": "defenseDown",
-        "chance": 0.4
+        "mult": 1.2,
+        "hits": 2
       }
     ]
   },
@@ -2891,7 +2891,7 @@
       {
         "type": "damage",
         "stat": "atk",
-        "mult": 0.85
+        "mult": 0.6
       }
     ]
   },
@@ -3408,6 +3408,1135 @@
         "type": "status",
         "status": "stun",
         "chance": 0.3
+      }
+    ]
+  },
+  "fire_breath": {
+    "name": "Fire Breath",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 46,
+        "element": "fire"
+      }
+    ]
+  },
+  "ash_breath": {
+    "name": "Ash Breath",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 58,
+        "element": "fire"
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.3
+      }
+    ]
+  },
+  "wing_buffet": {
+    "name": "Wing Buffet",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.3
+      }
+    ]
+  },
+  "lance_dive": {
+    "name": "Lance Dive",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 2.1
+      }
+    ]
+  },
+  "rally_whelps": {
+    "name": "Rally the Whelps",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "wyvern_whelp",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "gale_breath": {
+    "name": "Gale Breath",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 44,
+        "element": "fire"
+      },
+      {
+        "type": "status",
+        "status": "sleep",
+        "chance": 0.4
+      }
+    ]
+  },
+  "dusk_lance": {
+    "name": "Dusk Lance",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 70
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.3
+      }
+    ]
+  },
+  "pale_litany": {
+    "name": "Pale Litany",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 40
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.25
+      }
+    ]
+  },
+  "bier_call": {
+    "name": "Call the Bier",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "wyvern_whelp",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "mourning_veil": {
+    "name": "Mourning Veil",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "hellfire": {
+    "name": "Hellfire",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 40,
+        "element": "fire"
+      }
+    ]
+  },
+  "brimstone_bolt": {
+    "name": "Brimstone Bolt",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 80,
+        "element": "fire"
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.4
+      }
+    ]
+  },
+  "demon_cleave": {
+    "name": "Demon Cleave",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      }
+    ]
+  },
+  "infernal_pact": {
+    "name": "Infernal Pact",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      }
+    ]
+  },
+  "pit_roar": {
+    "name": "Pit Roar",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.8
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.3
+      }
+    ]
+  },
+  "imp_hex": {
+    "name": "Imp Hex",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 30
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.4
+      },
+      {
+        "type": "drainMp",
+        "amount": 30
+      }
+    ]
+  },
+  "spite_bolt": {
+    "name": "Spite Bolt",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 70,
+        "element": "dark"
+      }
+    ]
+  },
+  "mana_leech": {
+    "name": "Mana Leech",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 20
+      },
+      {
+        "type": "drainMp",
+        "amount": 45
+      }
+    ]
+  },
+  "ember_bite": {
+    "name": "Ember Bite",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.2
+      },
+      {
+        "type": "status",
+        "status": "poison",
+        "chance": 0.25
+      }
+    ]
+  },
+  "scorching_pounce": {
+    "name": "Scorching Pounce",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.8
+      }
+    ]
+  },
+  "pack_howl": {
+    "name": "Pack Howl",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "ember_hound",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "inferno_breath": {
+    "name": "Inferno Breath",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 48,
+        "element": "fire"
+      }
+    ]
+  },
+  "savage_rush": {
+    "name": "Savage Rush",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 2.2
+      },
+      {
+        "type": "status",
+        "status": "defenseDown",
+        "chance": 0.5
+      }
+    ]
+  },
+  "lord_frenzy": {
+    "name": "Lord's Frenzy",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "attackUp"
+      },
+      {
+        "type": "buffSelf",
+        "status": "haste"
+      }
+    ]
+  },
+  "leech_hex": {
+    "name": "Leech Hex",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 60
+      },
+      {
+        "type": "drainMp",
+        "amount": 40
+      },
+      {
+        "type": "drain",
+        "frac": 0.5
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.4
+      }
+    ]
+  },
+  "fang_bite": {
+    "name": "Fang Bite",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.2
+      },
+      {
+        "type": "drain",
+        "frac": 0.5
+      }
+    ]
+  },
+  "blood_charm": {
+    "name": "Blood Charm",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 30
+      },
+      {
+        "type": "status",
+        "status": "charm",
+        "chance": 0.35
+      }
+    ]
+  },
+  "crimson_kiss": {
+    "name": "Crimson Kiss",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 55
+      },
+      {
+        "type": "drain",
+        "frac": 0.6
+      },
+      {
+        "type": "status",
+        "status": "charm",
+        "chance": 0.2
+      }
+    ]
+  },
+  "sanguine_wave": {
+    "name": "Sanguine Wave",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 32
+      },
+      {
+        "type": "drain",
+        "frac": 0.3
+      }
+    ]
+  },
+  "bat_swarm": {
+    "name": "Bat Swarm",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.7
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.25
+      }
+    ]
+  },
+  "mist_form": {
+    "name": "Mist Form",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      },
+      {
+        "type": "buffSelf",
+        "status": "haste"
+      }
+    ]
+  },
+  "blood_waltz": {
+    "name": "Blood Waltz",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 40
+      },
+      {
+        "type": "status",
+        "status": "charm",
+        "chance": 0.3
+      }
+    ]
+  },
+  "call_bats": {
+    "name": "Call the Bats",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "dire_bat",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "eclipse_drain": {
+    "name": "Eclipse Drain",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 50
+      },
+      {
+        "type": "drain",
+        "frac": 0.5
+      }
+    ]
+  },
+  "blood_moon": {
+    "name": "Blood Moon",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 2.1
+      },
+      {
+        "type": "drain",
+        "frac": 0.6
+      }
+    ]
+  },
+  "rending_claws": {
+    "name": "Rending Claws",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.2,
+        "hits": 2
+      }
+    ]
+  },
+  "stone_fist": {
+    "name": "Stone Fist",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      }
+    ]
+  },
+  "warden_slam": {
+    "name": "Warden Slam",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.9
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.25
+      }
+    ]
+  },
+  "granite_skin": {
+    "name": "Granite Skin",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "buffSelf",
+        "status": "defenseUp"
+      }
+    ]
+  },
+  "call_choir": {
+    "name": "Call the Choir",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "chapel_gargoyle",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "shatter_wail": {
+    "name": "Shatter Wail",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 40
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.12
+      }
+    ]
+  },
+  "stone_song": {
+    "name": "Stone Song",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 16
+      },
+      {
+        "type": "status",
+        "status": "sleep",
+        "chance": 0.16
+      }
+    ]
+  },
+  "living_wall": {
+    "name": "Living Wall",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "absorb",
+        "hits": 1
+      }
+    ]
+  },
+  "grind_slam": {
+    "name": "Grind Slam",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.8
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.3
+      }
+    ]
+  },
+  "claw_rend": {
+    "name": "Claw Rend",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.1
+      }
+    ]
+  },
+  "flame_lick": {
+    "name": "Flame Lick",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 30,
+        "element": "fire"
+      }
+    ]
+  },
+  "drake_bite": {
+    "name": "Drake Bite",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.35
+      }
+    ]
+  },
+  "hearth_breath": {
+    "name": "Hearth Breath",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 30,
+        "element": "fire"
+      }
+    ]
+  },
+  "ash_wing": {
+    "name": "Ash Wing",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.7
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.25
+      }
+    ]
+  },
+  "elder_claw": {
+    "name": "Elder Claw",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      }
+    ]
+  },
+  "gather_fire": {
+    "name": "Gather Fire",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "charge"
+      }
+    ]
+  },
+  "hearth_blaze": {
+    "name": "Hearth Blaze",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 70,
+        "element": "fire"
+      }
+    ]
+  },
+  "call_whelps": {
+    "name": "Call the Brood",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "hearth_whelp",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "elder_roar": {
+    "name": "Elder Roar",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 28
+      },
+      {
+        "type": "status",
+        "status": "stun",
+        "chance": 0.12
+      }
+    ]
+  },
+  "shade_touch": {
+    "name": "Shade Touch",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 24,
+        "element": "dark"
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.25
+      }
+    ]
+  },
+  "hollow_touch": {
+    "name": "Hollow Touch",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 20,
+        "element": "dark"
+      },
+      {
+        "type": "drainMp",
+        "frac": 0.2
+      }
+    ]
+  },
+  "dread_wail": {
+    "name": "Dread Wail",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 22,
+        "element": "dark"
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.2
+      }
+    ]
+  },
+  "mimic": {
+    "name": "Mirror",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "Placeholder: a shade repeats the last spell it overheard instead (see battle.js).",
+    "effects": [
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0
+      }
+    ]
+  },
+  "infernal_breath": {
+    "name": "Infernal Breath",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 24,
+        "element": "fire"
+      },
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 20,
+        "element": "dark"
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.25
+      }
+    ]
+  },
+  "nyrrh_cleave": {
+    "name": "Cleave of Ruin",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 1.5
+      }
+    ]
+  },
+  "nyrrh_hellfire": {
+    "name": "Hellfire Rain",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 34,
+        "element": "fire"
+      }
+    ]
+  },
+  "dark_decree": {
+    "name": "Dark Decree",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 30,
+        "element": "dark"
+      },
+      {
+        "type": "status",
+        "status": "curse",
+        "chance": 0.5
+      }
+    ]
+  },
+  "call_imps": {
+    "name": "Call the Pit",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "summon",
+        "creature": "brimstone_imp",
+        "hpFrac": 1
+      }
+    ]
+  },
+  "eclipse_gather": {
+    "name": "Gather the Eclipse",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "self",
+    "desc": "",
+    "effects": [
+      {
+        "type": "charge"
+      }
+    ]
+  },
+  "sun_eater": {
+    "name": "Sun-Eater",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "mag",
+        "power": 80,
+        "element": "dark"
+      }
+    ]
+  },
+  "ruin": {
+    "name": "Ruin",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "allEnemies",
+    "desc": "",
+    "effects": [
+      {
+        "type": "damage",
+        "stat": "atk",
+        "mult": 0.9
+      },
+      {
+        "type": "status",
+        "status": "slow",
+        "chance": 0.25
+      }
+    ]
+  },
+  "mirror_drain": {
+    "name": "Mirror Drain",
+    "kind": "enemy",
+    "cost": 0,
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+      {
+        "type": "drainMp",
+        "frac": 0.25
       }
     ]
   }

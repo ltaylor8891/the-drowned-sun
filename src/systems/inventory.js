@@ -18,7 +18,7 @@ export function usable(inv, items) {
 // Applies a consumable to a unit-like { hp, maxHp, mp, maxMp, status? }. Returns { ok, hp, mp, text }.
 import { addStatus } from './statuses.js';
 
-export function applyItem(unit, item) {
+export function applyItem(unit, item, potency = 0) {
   if (item.status) { // e.g. Silver Oil: puts a status on the target
     if (unit.hp <= 0 || !addStatus(unit, item.status.id, item.status.turns)) return { ok: false, hp: 0, mp: 0, text: 'It would have no effect.' };
     return { ok: true, hp: 0, mp: 0, text: 'Their weapon gleams with silver.' };
@@ -30,8 +30,9 @@ export function applyItem(unit, item) {
     return { ok: true, hp: unit.hp, mp: 0, text: `Revived with ${unit.hp} HP.` };
   }
   if (unit.hp <= 0) return { ok: false, hp: 0, mp: 0, text: 'It would have no effect.' };
-  const hp = Math.max(0, Math.min(item.hp ?? 0, unit.maxHp - unit.hp));
-  const mp = Math.max(0, Math.min(item.mp ?? 0, unit.maxMp - unit.mp));
+  const boost = (n) => Math.round((n ?? 0) * (1 + potency));
+  const hp = Math.max(0, Math.min(boost(item.hp), unit.maxHp - unit.hp));
+  const mp = Math.max(0, Math.min(boost(item.mp), unit.maxMp - unit.mp));
   const cured = (item.cure ?? []).filter((s) => unit.status?.[s]);
   if (hp <= 0 && mp <= 0 && !cured.length) return { ok: false, hp: 0, mp: 0, text: 'It would have no effect.' };
   unit.hp += hp;

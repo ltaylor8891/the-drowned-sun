@@ -112,6 +112,20 @@ const painters = {
     for (let y = 0; y < 20; y += 6) { q(0, y, 20, 1, 0x4a2a7a); q(0, y + 1, 20, 1, g); const o = (y / 6) % 2 ? 5 : 0; q(o, y + 2, 1, 4, g); q(o + 10, y + 2, 1, 4, g); }
     q(0, 0, 20, 1, light(c, 0.3)); q(0, 19, 20, 1, dark(c, 0.6));
   },
+  'hellstone floor'(p, ox, oy, c, r) {
+    noise(p, ox, oy, c, r, 0.1, 0.3); const q = R(p, ox, oy);
+    for (let i = 0; i < 3; i++) { const x = 1 + Math.floor(r() * 14), y = 2 + Math.floor(r() * 15); q(x, y, 4, 1, 0x7a2a1a); q(x + 1, y, 2, 1, 0xd2581a); }
+    q(0, 0, 20, 1, dark(c, 0.4)); q(0, 0, 1, 20, dark(c, 0.3));
+  },
+  'hellstone wall'(p, ox, oy, c, r) {
+    noise(p, ox, oy, c, r, 0.1, 0.25); const q = R(p, ox, oy);
+    for (let y = 0; y < 20; y += 6) { q(0, y, 20, 1, 0x7a2a1a); q(0, y + 1, 20, 1, dark(c, 0.5)); const o = (y / 6) % 2 ? 4 : 0; q(o, y + 2, 1, 4, dark(c, 0.5)); q(o + 10, y + 2, 1, 4, dark(c, 0.5)); }
+    p.set(ox + 5, oy + 8, 0xd2581a); p.set(ox + 14, oy + 3, 0xd2581a); q(0, 19, 20, 1, dark(c, 0.6));
+  },
+  lava(p, ox, oy, c, r, x, y) {
+    noise(p, ox, oy, c, r, 0.12, 0.3); const q = R(p, ox, oy), off = hash(`${x},${y}`) % 7;
+    for (let k = 0; k < 3; k++) { const yy = 2 + k * 6, xx = (off + k * 4) % 12; q(xx, yy, 6, 1, 0xffd24a); q(xx + 1, yy + 1, 4, 1, 0xff8a2a); q((xx + 7) % 14, yy + 3, 3, 1, 0x8a2a0a); }
+  },
   statue(p, ox, oy, c, r) {
     painters['obsidian floor'](p, ox, oy, 0x2a2535, r);
     const q = R(p, ox, oy), d = dark(c, 0.35);
@@ -199,4 +213,5 @@ export const PROPS = {
   oreStone: (tier) => () => prop(18, 16, (p) => { const c = tier > 1 ? 0xd9a441 : 0xb7bcc6; p.ell(9, 10, 8, 6, 0x6a6a74).ell(8, 9, 6, 4, 0x8a8a96); for (const [x, y] of [[5, 8], [10, 6], [12, 11], [7, 12]]) { p.rect(x, y, 2, 2, c).set(x, y, 0xffffff); } p.shade(0.1, 0.2); }),
   oreDepleted: () => prop(18, 16, (p) => { p.ell(9, 10, 8, 6, 0x3c3f46).ell(8, 9, 6, 4, 0x4c4f56); p.shade(0.05, 0.2); }),
   save: () => PROPS.crystal(),
+  fishPost: () => prop(18, 22, (p) => { p.rect(8, 4, 3, 17, 0x6a4a2a).rect(8, 4, 1, 17, 0x8a6a3a); p.line(10, 6, 16, 12, 0xd8d0c0).line(16, 12, 16, 18, 0xd8d0c0); p.rect(15, 18, 3, 2, 0xc8c8d8); p.rect(4, 19, 11, 2, 0x4a3a28); p.shade(0.1, 0.2); }),
 };

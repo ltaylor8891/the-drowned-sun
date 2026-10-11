@@ -38,7 +38,7 @@ export function restore(state, data) {
 }
 
 export function summarize(data) {
-  return { name: data.heroName, cls: data.heroClass, level: partyOf(data)[0].level, chapter: data.chapter, savedAt: data.savedAt, playtime: data.playtime ?? 0 };
+  return { name: data.heroName, cls: data.heroClass, level: partyOf(data)[0].level, chapter: data.chapter, savedAt: data.savedAt, playtime: data.playtime ?? 0, complete: !!data.flags?.gameComplete };
 }
 
 export function formatPlaytime(seconds) {

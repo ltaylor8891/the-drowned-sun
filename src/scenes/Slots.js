@@ -35,7 +35,7 @@ export class Slots extends Phaser.Scene {
       const y = 100 + i * 128, s = this.sums[i], sel = i === this.index;
       const box = panel(this, 190, y, 900, 112);
       box.setStrokeStyle(sel ? 5 : 2, sel ? 0xffd76a : 0x6a7390);
-      const head = this.add.text(220, y + 12, slot === 0 ? 'Autosave' : `Slot ${slot}`, { ...FONT, fontSize: '24px', color: slot === 0 ? '#7fd8ff' : '#ffd76a' });
+      const head = this.add.text(220, y + 12, (slot === 0 ? 'Autosave' : `Slot ${slot}`) + (s?.complete ? '   ★ The sun has risen' : ''), { ...FONT, fontSize: '24px', color: slot === 0 ? '#7fd8ff' : '#ffd76a' });
       const body = this.add.text(220, y + 48, s
         ? `${s.name} the ${s.cls[0].toUpperCase() + s.cls.slice(1)}   Lv ${s.level}   Chapter ${s.chapter}\n${formatPlaytime(s.playtime)} played   ${new Date(s.savedAt).toLocaleString()}`
         : 'Empty', { ...FONT, fontSize: '21px', color: s ? '#ffffff' : '#6c7388', lineSpacing: 6 });

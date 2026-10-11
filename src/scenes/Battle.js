@@ -11,7 +11,7 @@ import { grantXp } from '../systems/levelling.js';
 import { usable } from '../systems/inventory.js';
 import { recordSeen, recordKills, rollDrops } from '../systems/bestiary.js';
 import { incapacitated } from '../systems/statuses.js';
-import { sfx } from '../systems/audio.js';
+import { sfx, music } from '../systems/audio.js';
 import { FONT, panel, ScrollMenu } from '../ui/widgets.js';
 import { makeHiPerson, heroLook, hiCreatureKey, creatureScale } from '../systems/sprites.js';
 
@@ -43,8 +43,9 @@ export class BattleScene extends Phaser.Scene {
     if (meal) for (const u of party) for (const m of meal.statuses) addStatus(u, m.status, m.turns);
     this.creatureData = cache.get('creatures');
     const enemies = buildEnemies(this.data0.creatures, this.creatureData);
+    music(enemies.some((e) => e.def0?.boss) ? 'boss' : 'battle');
     recordSeen(state, this.data0.creatures);
-    this.battle = new Battle({ party, enemies, abilities: this.abilities, statuses: this.statuses, items: this.items, creatures: this.creatureData, inventory: state.inventory, purse: state, noFlee: !!this.data0.noFlee });
+    this.battle = new Battle({ party, enemies, abilities: this.abilities, statuses: this.statuses, items: this.items, creatures: this.creatureData, inventory: state.inventory, purse: state, noFlee: !!this.data0.noFlee, potency: perkEffects(state, cache.get('jobs'), 'alchemist').potency ?? 0 });
 
     this.shown = new Map(); // unit -> hp currently displayed (events carry hpAfter so bars move step by step)
     this.views = new Map();

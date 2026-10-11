@@ -1,0 +1,54 @@
+{
+  "scenes": {
+    "hstair_enter": {
+      "when": { "notFlag": "hstairEntered" },
+      "lines": [
+        { "n": "", "t": "The iron door closes behind you, and the cold of the flooded nave goes with it. A stair of black stone drops away into a warm dark, and the warmth climbs to meet you: first a breath against the face, then a weight on the shoulders, then the smell of a forge that has been burning for nine hundred years." },
+        { "n": "", "t": "Far below, red light pulses against the walls in slow beats, like a heart under a blanket. Small shapes cross the glow, long-necked and winged, and between them drift stranger shapes that have no edges at all, only a gleam where a face might be." }
+      ],
+      "set": ["hstairEntered"]
+    },
+    "arrive_hearth": {
+      "when": { "notFlag": "reachedHearth" },
+      "lines": [
+        { "n": "", "t": "The stair ends in a cavern lit like a summer evening. Rope bridges, lava channels and cooking fires divide a camp of canvas and black stone, and every roof is stacked with banked embers in iron cradles. People move between them without hurry, as people do when they have lived beside something enormous for a very long time." },
+        { "n": "", "t": "A broad woman in a leather apron and a coat of scorched grey wool stands at the cavern's heart with a poker in one hand and a ladle in the other. She looks at the mark on your palm, then at your face, and sets both tools down very carefully, as if the next few minutes were a thing to be kept clean." }
+      ],
+      "set": ["reachedHearth"],
+      "chapter": 19,
+      "autosave": true,
+      "banner": "Chapter 19: The Dragon's Hearth"
+    },
+    "hhalls_enter": {
+      "when": { "notFlag": "hhallsEntered" },
+      "lines": [
+        { "n": "", "t": "The Hearth Halls are carved like a throat: long, ribbed and glowing. The drakes that nest here do not flee your lantern, because they have never needed to. The shades are another matter. They stand at the edges of the light with their faces turned toward you, and they are the only things in the halls that make no sound at all." },
+        { "n": "", "t": "You hear a spell of your own, murmured by a shade in the dark, a half-second before you cast it. Then you remember what Sera Quill told you at the camp: they do not learn, they only keep. Whatever is last said in their hearing, they will say back." }
+      ],
+      "set": ["hhallsEntered"]
+    },
+    "elder_intro": {
+      "when": { "notFlag": "elderSeen" },
+      "lines": [
+        { "n": "", "t": "The Elder Hearth is a hall the size of a harbour, and the fire in it is a single flame as tall as a tower, burning without fuel in a basin of fused glass. Curled around the basin like a cat around a stove lies a dragon so old that its scales have gone the colour of dark iron, with a fringe of white along each ridge." },
+        { "n": "Caldrith", "t": "A light-bearer. They come down here once in a generation, and always at the wrong moment, and always for the same question. Sit, if you can bear the heat. No? Then we shall do this standing." },
+        { "n": "{hero}", "t": "I am going to the Sun-Throne, Elder. Nyrrh holds the sun, and the Warden told me the Sunsong costs the singer everything. I need to know what is true before I climb." },
+        { "n": "Caldrith", "t": "You will have the truth. But the Hearth is mine to keep, and I cannot yield it to a stranger on a stranger's word. Show me that the mark has made you into someone who can hear what I have to say. Show me with your hands. I am sorry. I am too old to learn any other way of asking." }
+      ],
+      "set": ["elderSeen"]
+    },
+    "elder_down": {
+      "when": { "notFlag": "elderSceneDone" },
+      "lines": [
+        { "n": "", "t": "Caldrith lowers his great head to the glass and the tower of flame leans toward him, as a dog leans toward a hand. Embers fall from his ridges like snow. When he speaks again the roar has gone out of his voice and what remains is thin and dry and warm, the voice of a very old teacher at the end of a very long term." },
+        { "n": "Caldrith", "t": "There. The Hearth knows you, and I know you. Now the truth, as I promised. The Warden told you the vessel is spent when the Sunsong is sung, and the Warden was wrong, though not by much. Nine hundred years ago a cantor sang the line, and the sun's seed in her palm burned away, and she was left lying on the throne step as ordinary as bread." },
+        { "n": "Caldrith", "t": "The old priests wrote that she was spent. They meant the mark. They never asked her afterwards, because they were afraid of the answer. She lived another forty years, light-bearer. She kept bees." },
+        { "n": "{hero}", "t": "The mark is what is consumed. Not me." },
+        { "n": "Caldrith", "t": "The mark, and what the mark gave you: the warmth in the hand, the knowing of the sun. All the light the mark ever lent you is the price. The rest of you goes home. It is a smaller price than the world's. It is a larger price than it sounds." },
+        { "n": "Caldrith", "t": "Take this coal. It is the first fire, given freely, and it will not burn what loves it. Show it to Ashra Vell, and she will give you the last key. Then climb. Nyrrh will not wait, and neither, I think, will the sun." }
+      ],
+      "set": ["elderSceneDone"],
+      "gold": 5000
+    }
+  }
+}

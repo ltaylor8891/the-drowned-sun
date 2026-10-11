@@ -178,6 +178,21 @@
    "color": "0x7a7a88",
    "solid": true
   },
+  "u": {
+   "name": "hellstone floor",
+   "color": "0x3a2326",
+   "solid": false
+  },
+  "U": {
+   "name": "hellstone wall",
+   "color": "0x24141a",
+   "solid": true
+  },
+  "l": {
+   "name": "lava",
+   "color": "0xd2481a",
+   "solid": true
+  },
   "G": {
    "name": "glass",
    "color": "0x9ad8e0",
@@ -288,6 +303,18 @@
    "tx": 16,
    "ty": 1,
    "facing": "down"
+  },
+  {
+   "x": 0,
+   "y": 9,
+   "to": "bier_road",
+   "tx": 30,
+   "ty": 9,
+   "facing": "left",
+   "locked": true,
+   "id": "bier_road_open",
+   "key": "bier_seal",
+   "lockedText": "The west track is marked with a grey cross and a heap of old bier-poles. Warden-Captain Isolde Marrow keeps the seal that lets a traveller pass."
   },
   {
    "x": 31,

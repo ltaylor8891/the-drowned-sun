@@ -227,3 +227,47 @@ export function scrapeRune(st, data, items, itemId, runeId) {
   if (!st.runes[itemId].length) delete st.runes[itemId];
   return { ok: true, text: `${data.runes[runeId].name} is scraped out of ${items[itemId].name}.` };
 }
+
+// ---------- alchemy
+// Brewed potions are ordinary consumables; the job's `potency` perk makes every potion used in the party stronger (see applyItem).
+export const potency = (st, data) => perkEffects(st, data, 'alchemist').potency ?? 0;
+export function brewRecipes(st, data) {
+  if (!isActive(st, 'alchemist')) return [];
+  const level = jobProgress(st, data, 'alchemist').level;
+  return data.jobs.alchemist.recipes.filter((r) => r.level <= level);
+}
+export function brew(st, data, items, recipeId, rng = Math.random) {
+  if (!isActive(st, 'alchemist')) return { ok: false, text: 'You need to be working as an Alchemist.' };
+  const r = brewRecipes(st, data).find((x) => x.id === recipeId);
+  if (!r) return { ok: false, text: 'You do not know that recipe.' };
+  const cost = { gold: r.gold, items: r.items };
+  if (!affordable(st, cost)) return { ok: false, text: 'You lack the gold or ingredients.' };
+  const kept = rng() < (perkEffects(st, data, 'alchemist').thrift ?? 0);
+  st.gold -= r.gold;
+  if (!kept) for (const [id, n] of Object.entries(r.items)) remove(st.inventory, id, n);
+  add(st.inventory, recipeId);
+  const levelUp = gainJobXp(st, data, 'alchemist', 12 + r.level * 3);
+  return { ok: true, kept, levelUp, text: `You brew ${items[recipeId].name}.${kept ? ' The ingredients are left over!' : ''}` };
+}
+
+// ---------- fishing
+// data.fishing = { tables: { tableId: [{ id, weight, rare?, minLevel? }] }, flags }. A cast picks a fish; the timing game decides whether it is landed.
+export const fishZone = (st, data) => 0.2 + (perkEffects(st, data, 'fisher').zone ?? 0);
+export const fishRareBoost = (st, data) => 1 + (perkEffects(st, data, 'fisher').rareBoost ?? 0);
+export function pickFish(st, data, tableId, rng = Math.random) {
+  if (!isActive(st, 'fisher')) return null;
+  const level = jobProgress(st, data, 'fisher').level, boost = fishRareBoost(st, data);
+  const pool = (data.fishing.tables[tableId] ?? []).filter((f) => (f.minLevel ?? 1) <= level && !(f.once && st.flags[f.once]));
+  const weights = pool.map((f) => f.weight * (f.rare ? boost : 1));
+  let roll = rng() * weights.reduce((a, b) => a + b, 0);
+  for (let i = 0; i < pool.length; i++) { roll -= weights[i]; if (roll <= 0) return pool[i]; }
+  return pool.at(-1) ?? null;
+}
+// pos and zoneStart are fractions of the bar; the catch lands when the cursor is inside the zone.
+export const inZone = (pos, zoneStart, width) => pos >= zoneStart && pos <= zoneStart + width;
+export function landFish(st, data, items, fish) {
+  add(st.inventory, fish.id);
+  if (fish.flag) st.flags[fish.flag] = true;
+  const levelUp = gainJobXp(st, data, 'fisher', 8 + (fish.rare ? 20 : 0) + (fish.xp ?? 0));
+  return { ok: true, levelUp, text: `You land a ${items[fish.id].name}!` };
+}

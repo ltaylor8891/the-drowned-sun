@@ -19,7 +19,7 @@ export function makeUnit(def, side, id, creatureId = null) {
     atk: def.atk, def: def.def, mag: def.mag, spd: def.spd,
     weak: def.weak ?? [], resist: def.resist ?? [], immune: def.immune ?? [],
     immuneStatus: def.immuneStatus ?? [], statusResist: def.statusResist ?? {},
-    passive: def.passive ?? {}, type: def.type ?? null, counter: def.counter ?? null,
+    passive: def.passive ?? {}, type: def.type ?? null, counter: def.counter ?? null, airborne: def.airborne ?? null, undying: def.undying ?? null, stoneForm: !!def.stoneForm, stone: false, absorb: 0, mimic: !!def.mimic, copied: null, charging: false, chargeBreak: def.chargeBreak ?? 0.08, phases: def.phases ?? null, phaseIdx: 0,
     evade: def.evade ?? 0, crit: def.crit ?? 0.05, silverEdge: !!def.silverEdge, drain: def.drain ?? 0, weaponElement: def.weaponElement ?? null, traits: def.traits ?? [],
     skills: def.skills ?? [], spells: def.spells ?? [], ai: def.ai, color: def.color, size: def.size,
     xp: def.xp ?? 0, gold: def.gold ?? 0, loot: 0, splits: 0, def0: def,
@@ -32,7 +32,8 @@ export function buildEnemies(ids, creatures) {
 }
 
 export class Battle {
-  constructor({ party, enemies, abilities = {}, statuses = {}, items = {}, creatures = {}, inventory = {}, purse = { gold: 0 }, rng = Math.random, noFlee = false }) {
+  constructor({ party, enemies, abilities = {}, statuses = {}, items = {}, creatures = {}, inventory = {}, purse = { gold: 0 }, rng = Math.random, noFlee = false, potency = 0 }) {
+    this.potency = potency; // the Alchemist's boost to potions used
     Object.assign(this, { party, enemies, abilities, statuses, items, creatures, inventory, purse, rng, noFlee });
     this.round = 0;
     this.queue = [];
@@ -85,6 +86,10 @@ export class Battle {
 
   // Start-of-turn effects. Returns true if the unit loses its turn.
   startTurn(u, ev) {
+    if (u.stoneForm && alive(u)) { // gargoyles harden on one of their turns and stir on the next
+      u.stone = !u.stone;
+      ev.push({ text: u.stone ? `${u.name} hardens to stone.` : `${u.name} stirs and the stone cracks.`, target: u });
+    }
     if (has(u, 'regen') && alive(u) && u.hp < u.maxHp) {
       const a = Math.min(Math.max(1, Math.floor(u.maxHp * 0.08)), u.maxHp - u.hp);
       u.hp += a;
@@ -140,6 +145,9 @@ export class Battle {
     if (m.maxAllies != null && this.allies(actor).length - 1 >= m.maxAllies) return false;
     if (m.maxUses != null && (actor.uses?.[m.id] ?? 0) >= m.maxUses) return false;
     if (m.allyHpBelow != null && !this.allies(actor).some((u) => u.hp / u.maxHp < m.allyHpBelow)) return false;
+    if (m.needsCharge && !actor.charging) return false;
+    if (m.notCharging && actor.charging) return false;
+    if (m.id === 'mimic' || m.id === 'mirror_drain') { const c = this.abilities[actor.copied]; return !!c && this.candidates(actor, c).length > 0; }
     const ab = m.id === 'attack' ? null : this.abilities[m.id];
     if (ab && actor.mp < ab.cost) return false;
     if (ab && !this.candidates(actor, ab).length) return false;
@@ -150,11 +158,13 @@ export class Battle {
     const foes = this.foes(actor);
     if (!foes.length) return { type: 'defend' };
     if (has(actor, 'charm') || !actor.ai?.moves) return { type: 'attack', target: this.pick(foes) };
-    const moves = actor.ai.moves.filter((m) => this.moveAllowed(actor, m));
+    let moves = actor.ai.moves.filter((m) => this.moveAllowed(actor, m));
+    if (actor.charging && moves.some((m) => m.needsCharge)) moves = moves.filter((m) => m.needsCharge); // a gathered breath is always loosed
     if (!moves.length) return { type: 'attack', target: this.pick(foes) };
     let roll = this.rng() * moves.reduce((s, m) => s + m.w, 0);
     const m = moves.find((x) => (roll -= x.w) < 0) ?? moves[moves.length - 1];
     if (m.id === 'attack') return { type: 'attack', target: this.pick(foes) };
+    if (m.id === 'mimic' || m.id === 'mirror_drain') return { type: 'ability', id: actor.copied, target: this.targetsFor(actor, this.abilities[actor.copied])[0], echo: true, drain: m.id === 'mirror_drain' };
     return { type: 'ability', id: m.id, target: this.targetsFor(actor, this.abilities[m.id])[0] };
   }
 
@@ -162,11 +172,15 @@ export class Battle {
   resolve(actor, action) {
     const ev = [];
     actor.lastAct = action.type === 'ability' ? `ability:${action.id}` : action.type;
+    const wasCharging = actor.charging;
     switch (action.type) {
       case 'attack': this.doAttack(actor, action.target, ev); break;
       case 'ability':
         (actor.uses ??= {})[action.id] = (actor.uses[action.id] ?? 0) + 1;
-        this.doAbility(actor, this.abilities[action.id], action.target, ev);
+        this.castId = action.id;
+        if (action.echo) ev.push({ text: `${actor.name} mirrors the last spell!`, actor });
+        this.doAbility(actor, this.abilities[action.id], action.target, ev, !!action.echo);
+        if (action.drain && alive(actor) && action.target) this.doAbility(actor, this.abilities.mirror_drain, action.target, ev, true); // Mirror Drain: copy the spell, then drink the caster's MP
         break;
       case 'item': this.doItem(actor, action, ev); break;
       case 'defend':
@@ -176,6 +190,7 @@ export class Battle {
       case 'flee': this.doFlee(ev); break;
       default: throw new Error(`unknown action ${action.type}`);
     }
+    if (wasCharging) actor.charging = false; // the gathered breath is spent on the very next turn
     if (alive(actor)) this.endTurn(actor);
     return ev;
   }
@@ -192,7 +207,7 @@ export class Battle {
     const it = this.items[action.item];
     if ((this.inventory[action.item] ?? 0) < 1) { ev.push({ text: 'None left!' }); return; }
     const t = action.target ?? actor;
-    const r = applyItem(t, it);
+    const r = applyItem(t, it, this.potency);
     if (r.ok) removeItem(this.inventory, action.item); // a useless item wastes the turn but is kept
     ev.push({ text: `${actor.name} uses ${it.name}${t === actor ? '' : ` on ${t.name}`}. ${r.text}`, target: t, heal: r.hp || undefined, hpAfter: t.hp });
   }
@@ -205,8 +220,10 @@ export class Battle {
 
   // Physical hit on one target. Returns damage dealt (0 on miss/immune).
   physHit(actor, target, mult, ev, prefix) {
-    if (target.evade && this.rng() < target.evade) {
-      ev.push({ text: `${target.name} dodges!`, target, miss: true });
+    const air = target.airborne && !target.grounded;
+    const evade = air ? target.airborne.evade : target.evade;
+    if (evade && this.rng() < evade) {
+      ev.push({ text: air ? `${target.name} wheels out of reach!` : `${target.name} dodges!`, target, miss: true });
       return 0;
     }
     const silver = actor.silverEdge || has(actor, 'silvered');
@@ -233,6 +250,13 @@ export class Battle {
     }
     this.counterStrike(actor, target, d, ev);
     return d;
+  }
+
+  // An airborne enemy (the Wyvern Rider) dodges most weapon blows until lightning or its own wounds drag it down.
+  ground(target, ev, why) {
+    if (!target.airborne || target.grounded || target.hp <= 0) return;
+    target.grounded = true;
+    ev.push({ text: `${target.name} ${why}!`, target });
   }
 
   // Dark knights strike back at whoever just hurt them.
@@ -272,9 +296,12 @@ export class Battle {
     if (first && first.amount != null) first.text = first.text.replace(`${t.name} takes ${first.amount} damage.`, `${actor.name} attacks ${t.name} for ${first.amount}.`);
   }
 
-  doAbility(actor, ab, picked, ev) {
-    if (actor.mp < ab.cost) { ev.push({ text: `${actor.name} lacks the MP!` }); return; }
-    actor.mp -= ab.cost;
+  doAbility(actor, ab, picked, ev, free = false) {
+    if (!free && actor.mp < ab.cost) { ev.push({ text: `${actor.name} lacks the MP!` }); return; }
+    if (!free) actor.mp -= ab.cost;
+    if (actor.side === 'party' && ab.kind === 'spell' && !ab.effects.some((e) => e.type === 'revive')) { // shades remember the last spell cast
+      for (const u of this.enemies) if (alive(u) && u.mimic) u.copied = this.castId;
+    }
     let targets = this.targetsFor(actor, ab, picked);
     ev.push({ text: `${actor.name} ${ab.kind === 'spell' ? 'casts' : 'uses'} ${ab.name}!`, actor });
     if (ab.target === 'enemy' && targets.length === 1) targets = [this.redirect(actor, targets[0], ev)];
@@ -322,6 +349,23 @@ export class Battle {
             if (a > 0) ev.push({ text: `${actor.name} drains ${a} HP.`, target: actor, heal: a, hpAfter: actor.hp });
           }
           break;
+        case 'charge':
+          actor.charging = true;
+          ev.push({ text: `${actor.name} draws a vast breath. Hit it hard to break the charge!`, target: actor });
+          break;
+        case 'absorb':
+          actor.absorb = (actor.absorb ?? 0) + (e.hits ?? 1);
+          ev.push({ text: `${actor.name} raises a living wall!`, target: actor });
+          break;
+        case 'drainMp':
+          for (const t of targets.filter(alive)) {
+            const a = Math.min(e.amount ?? Math.floor(t.maxMp * e.frac), t.mp);
+            if (a <= 0) continue;
+            t.mp -= a;
+            actor.mp = Math.min(actor.maxMp || actor.mp + a, actor.mp + a);
+            ev.push({ text: `${actor.name} drains ${a} MP from ${t.name}.`, target: t });
+          }
+          break;
         case 'steal': {
           const t = targets[0];
           const amt = Math.min(this.purse.gold, 5 + Math.floor(this.rng() * 10));
@@ -363,6 +407,7 @@ export class Battle {
           const tag = em === 0 ? ' It has no effect!' : em > 1 ? ' Weakness!' : em < 1 ? ' Resisted.' : '';
           this.hurt(t, d, ev, `${t.name} takes ${d} damage.${tag}`, { phys: false });
           if (d > 0) this.sear(t, e.element, ev);
+          if (d > 0 && e.element === 'lightning') this.ground(t, ev, 'is struck from the sky');
         }
         if (d > 0) hit.add(t);
         total += d;
@@ -385,9 +430,34 @@ export class Battle {
 
   // Applies damage and handles knock-out, waking from sleep and splitting.
   hurt(target, d, ev, text, { phys = false } = {}) {
+    if (d > 0 && target.absorb > 0) { // a living wall swallows one whole blow
+      target.absorb -= 1;
+      ev.push({ text: `${target.name}'s wall absorbs the blow!`, target, amount: 0, hpAfter: target.hp });
+      return;
+    }
+    if (d > 0 && target.stoneForm && target.stone) { // stone form halves what gets through
+      const was = d;
+      d = Math.max(1, Math.floor(d / 2));
+      text = text.replace(new RegExp(`\\b${was}\\b`), String(d)).replace(/\.$/, ' (stone form)');
+    }
     target.hp = Math.max(0, target.hp - d);
     if (d > 0) removeStatus(target, 'sleep');
+    if (target.hp <= 0 && target.undying && !target.risen) { // the Chancellor does not die the first time
+      target.risen = true;
+      ev.push({ text, target, amount: d, hpAfter: 0 });
+      clearStatuses(target);
+      target.hp = Math.max(1, Math.floor(target.maxHp * target.undying.frac));
+      ev.push({ text: `${target.name} rises again, unbroken!`, target, heal: target.hp, hpAfter: target.hp });
+      return;
+    }
     ev.push({ text, target, amount: d, hpAfter: target.hp });
+    if (d > 0 && target.charging && target.hp > 0 && d >= target.maxHp * target.chargeBreak) { // a heavy blow breaks a gathered breath
+      target.charging = false;
+      addStatus(target, 'stun');
+      ev.push({ text: `${target.name}'s breath gutters out!`, target, status: 'stun' });
+    }
+    if (target.hp > 0 && target.phases) this.nextPhase(target, ev);
+    if (target.hp > 0 && target.airborne && !target.grounded && target.hp <= target.maxHp * target.airborne.groundAt) this.ground(target, ev, 'is wounded and plunges to earth');
     if (target.hp > 0 && target.traits.includes('enrage') && !target.enraged && target.hp <= target.maxHp / 2) { // below half health it flies into a rage for the rest of the fight
       target.enraged = true;
       addStatus(target, 'attackUp', 99);
@@ -398,6 +468,22 @@ export class Battle {
       clearStatuses(target);
       ev.push({ text: `${target.name} is defeated!`, target, down: true });
     } else if (phys && d > 0 && target.traits.includes('split')) this.trySplit(target, ev);
+  }
+
+  // A phased boss (Nyrrh) changes its whole behaviour as its health drops past each threshold.
+  nextPhase(target, ev) {
+    const ph = target.phases[target.phaseIdx];
+    if (!ph || target.hp / target.maxHp > ph.at) return;
+    target.phaseIdx += 1;
+    target.charging = false;
+    if (ph.ai) target.ai = ph.ai;
+    if (ph.mimic != null) target.mimic = ph.mimic;
+    for (const st of ph.buff ?? []) addStatus(target, st, 99);
+    if (ph.heal) {
+      const g = Math.min(Math.floor(target.maxHp * ph.heal), target.maxHp - target.hp);
+      target.hp += g;
+      ev.push({ text: ph.text, target, heal: g, hpAfter: target.hp, phase: target.phaseIdx });
+    } else ev.push({ text: ph.text, target, phase: target.phaseIdx });
   }
 
   // A summoner calls a minion (worth half XP, no gold or drops) if there is room.

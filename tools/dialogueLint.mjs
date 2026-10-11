@@ -38,6 +38,7 @@ export function collectSettableFlags() {
   for (const f of fs.readdirSync(path.join(root, 'dialogue'))) {
     for (const npc of Object.values(readJson(`dialogue/${f}`).npcs)) for (const e of npc.events ?? []) (e.set ?? []).forEach((x) => flags.add(x));
   }
+  for (const table of Object.values(readJson('jobs.json').fishing?.tables ?? {})) for (const f of table) if (f.flag) flags.add(f.flag); // set by landing a fish
   return flags;
 }
 

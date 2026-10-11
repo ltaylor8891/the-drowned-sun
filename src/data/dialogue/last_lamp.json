@@ -1,0 +1,631 @@
+{
+  "npcs": {
+    "kaer_solenne": {
+      "name": "Dawn-Warden Kaer Solenne",
+      "role": "last dawn-warden, keeper of the Last Lamp before the Sun-Throne",
+      "personality": "upright, gentle and stubbornly hopeful; has trimmed one lamp every night for forty years against a morning she was never promised",
+      "voice": "wicks, oil, vigils and first light; every sentence leans toward the east, even indoors",
+      "events": [
+        {
+          "id": "warden_intro",
+          "when": {
+            "notFlag": "talkedDawnWarden"
+          },
+          "set": [
+            "talkedDawnWarden"
+          ],
+          "say": [
+            "Solenne. Kaer Solenne, the last of the dawn-wardens, and this lamp is mine to tend. It has burned each night since the sun went out, on a single wick. I trimmed that wick for the first time at twelve. I mean to trim it for the final time very soon.",
+            "Past this terrace lies the Sun Gallery, and past the gallery lies the Sun-Throne, and on the Sun-Throne sits Nyrrh. He is not what the songs say. He is a very tired host with a very fixed idea. Do not be fooled into pity before the fight is done, and do not be fooled out of it afterwards.",
+            "Take whatever the stall and the inn will sell you. Take the bees' blessing, if Maribel will give it. Then go up and sing. The whole world has held its breath through nine centuries of night, and I would rather you did not keep it waiting past supper."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "ks01",
+          "text": "A lamp is not a light. A lamp is a promise that someone will come by to fill it. I have kept the promise forty years and not once been thanked. It is the best work in the world."
+        },
+        {
+          "id": "ks02",
+          "text": "The lamp holds three cups of oil. It has burned every night on three cups, and where the oil comes from is beyond me. I have stopped asking, in case it stops."
+        },
+        {
+          "id": "ks03",
+          "text": "My mother was a dawn-warden, and hers before her. We keep one family ritual. At the first grey of every morning we step outside and look east. Nothing ever comes. We look anyway."
+        },
+        {
+          "id": "ks04",
+          "text": "The wardens kept three watches: lamp, door and bell. Lamp watches the flame. Door watches the stair. Bell watches the sky. I have been all three for twenty years. I am not complaining. I am simply tired."
+        },
+        {
+          "id": "ks05",
+          "text": "Every dawn-warden swears one vow: no matter how dark it grows, we will not put the lamp out. Mine has been tested often. A draught comes up the stair like a hand, and I cup my palms around the wick and say the vow aloud."
+        },
+        {
+          "id": "ks06",
+          "text": "I keep a small clock by the lamp. It has said three o'clock for nine hundred years. I leave it, because every one of us in this family has needed something stopped at three."
+        },
+        {
+          "id": "ks07",
+          "text": "Swordsman, the demons on the stair fight with the long, slow courage of creatures who were promised a reward. Do not wait for them to tire. Meet each blow with a steadier one.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ks08",
+          "text": "Caster, the Demon Lord drinks other people's magic. When the room darkens and he stops to listen, spells will come back at you. Hold your best one in reserve for the moment he stops.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ks09",
+          "text": "Scout, a long march ends here. Take the quiet side of the gallery and keep the lamp-light behind you. Nyrrh sees a shadow as a signature.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ks10",
+          "text": "Priest, I have kept the evening office here since I was a girl, alone. If you will say it with me tonight, I shall count it the finest evening of my life.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ks11",
+          "text": "Odo sells me wicks and says nothing about the price. I leave coin on the counter and he pretends not to count it. We have a perfect friendship and have exchanged ninety words."
+        },
+        {
+          "id": "ks12",
+          "text": "Ilse tends the hurt who stagger up the stair. She is gentle and efficient and never once asks how they came to be hurt. She says the answer is always the same."
+        },
+        {
+          "id": "ks13",
+          "text": "Maribel keeps her bees on the terrace because they alone refuse to fear the dark. They sleep through nights that would drive a man mad."
+        },
+        {
+          "id": "ks14",
+          "text": "A traveller once brought me a seed from Brinewick, wrapped in a handkerchief. I pushed it into a crack in the terrace. It has not grown a leaf. I water it daily regardless."
+        },
+        {
+          "id": "ks15",
+          "text": "The demons on the stair never come up to the terrace. I have wondered why. I think the lamp reminds them of something they once were, and they cannot bear the memory."
+        },
+        {
+          "id": "ks16",
+          "text": "Folk call the sun a god. My mother called it a debt. Neither fits, I feel. It seems more a guest who stayed too long at the wrong house and was too polite to leave."
+        },
+        {
+          "id": "ks17",
+          "text": "When I was twelve I asked my mother what would happen if the lamp went out. She said, then you will have to light another. Such is the entire doctrine of the dawn-wardens."
+        },
+        {
+          "id": "ks18",
+          "text": "The Sun Gallery is hung with portraits. Every one has been turned to the wall. Some warden could not bear it. Turn a few round, if you can, on your way back down."
+        },
+        {
+          "id": "ks19",
+          "text": "You have heard the whole plan from me and you still look ready. That is rare. Most look as if they have just been given a bill. Go on, and go well.",
+          "when": {
+            "flag": "talkedDawnWarden",
+            "notFlag": "nyrrhDefeated"
+          }
+        },
+        {
+          "id": "ks20",
+          "text": "A mirror-thing hides in the little room of glass off the gallery. Half shade, half wraith, and it will take your best spell and hand it back with interest. I have never been brave enough to look inside.",
+          "when": {
+            "notFlag": "mirrorDefeated"
+          }
+        },
+        {
+          "id": "ks21",
+          "text": "I can hear the throne room from here, a long low sound like a bell under water. If it stops, I will know. If it rises, I will know that too.",
+          "when": {
+            "flag": "reachedThrone",
+            "notFlag": "nyrrhDefeated"
+          }
+        },
+        {
+          "id": "ks22",
+          "text": "The lamp is out, light-bearer. I put it out myself, this morning, with two fingers. Forty years, and it took one second, and no dark has ever pleased me more.",
+          "when": {
+            "flag": "sunRisen"
+          }
+        },
+        {
+          "id": "ks23",
+          "text": "You will have been given the speech by now. Do not take it too hard. The cost is real but the world is real too. Nobody has ever managed to carry both at once and not be changed.",
+          "when": {
+            "flag": "reachedThrone",
+            "notFlag": "talkedDawnWarden"
+          }
+        },
+        {
+          "id": "ks24",
+          "text": "When next you pass, there will be tea. Daylight tea. I have never brewed it and I am dreadfully nervous.",
+          "when": {
+            "flag": "sunRisen"
+          }
+        }
+      ]
+    },
+    "odo_brass": {
+      "name": "Odo Brass",
+      "role": "keeper of The Last Stall, the last shop in the world's last climb",
+      "personality": "dry, tidy and fatalistic; sells in a monotone and prices nothing above what it cost to carry up the stair",
+      "voice": "inventory, carriage costs and the weight of things; every sentence is a delivery note",
+      "events": [
+        {
+          "id": "odo_intro",
+          "when": {
+            "notFlag": "metOdo"
+          },
+          "set": [
+            "metOdo"
+          ],
+          "say": [
+            "Brass. Odo Brass. The Last Stall. Everything in this shop was carried up the stair on my back, and every price reflects it, which is to say the prices are rounded down. Buy what you need. Leave what you do not.",
+            "Past the terrace the shops give out. I have stocked for a siege, in case. Elixirs, plumes, ethers. If you are short on coin, take it on account. I am told the account will outlive us both."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "ob01",
+          "text": "Seven hundred and forty steps from the Hearth to this terrace. I know because I have counted them thirty times, with a sack."
+        },
+        {
+          "id": "ob02",
+          "text": "Weight is the only honest measure of cost. A thing that is heavy is dear. A thing that is light is cheap. Anyone who says otherwise has never climbed a stair."
+        },
+        {
+          "id": "ob03",
+          "text": "I stock the elixirs on the high shelf. They are the heaviest and the most useful. I rarely get to sell them. People try to save them for something worse."
+        },
+        {
+          "id": "ob04",
+          "text": "The last case of phoenix plumes came up in a crate marked fragile. I carried it eleven days. When I opened it, the plumes were warm. I kept that to myself."
+        },
+        {
+          "id": "ob05",
+          "text": "My stall has a roof, three shelves and a ledger. The ledger alone is truly mine. Everything else is in my care."
+        },
+        {
+          "id": "ob06",
+          "text": "I do not haggle. I post a price and I keep it. It saves a great deal of unpleasantness and has not cost me a single sale."
+        },
+        {
+          "id": "ob07",
+          "text": "Swordsman, a good sword is heavy in the hand and light in the ledger. I have a whetstone on the second shelf. It weighs a great deal and costs very little.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "ob08",
+          "text": "Caster, ethers are the lightest thing I stock per unit of use. A single vial is worth ten of anything else. Take as many as you can afford.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "ob09",
+          "text": "Scout, I have a coil of rope and a roll of waxed cloth, both of which weigh almost nothing. I recommend both. A scout with no rope is a hiker.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "ob10",
+          "text": "Priest, clear tea sits on the left. I find it works on the nerves of the faithful better than on their bodies. Two cups before a long climb.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "ob11",
+          "text": "Kaer buys her wicks from me by the dozen. I should like to say we are friends. The nearest I can say is that I would be sorry if she went."
+        },
+        {
+          "id": "ob12",
+          "text": "Ilse takes bandages and little else. She says healing is a matter of boiling and cutting. To my mind it is a matter of weight. We agree to differ."
+        },
+        {
+          "id": "ob13",
+          "text": "Maribel pays me in honey and I bring her wax. A perfectly balanced barter. We have each dined out on it for years."
+        },
+        {
+          "id": "ob14",
+          "text": "I came up here with a cart and three mules. The mules lasted to the Hearth. The cart lasted to the stair. I carried the rest, and I have never complained about it to anyone but you."
+        },
+        {
+          "id": "ob15",
+          "text": "A merchant I know sells goods on the roads, Tuesdays, Thursdays and Sundays. We have never met. I have always assumed he is lighter on his feet than I."
+        },
+        {
+          "id": "ob16",
+          "text": "Rune dust sells by the ounce. It is the lightest thing on my shelves and the most expensive. I find the two things are always related, in the end."
+        },
+        {
+          "id": "ob17",
+          "text": "Customers are rare up here. I have served nine in three years, and each of them was bound for something dreadful. I have grown fond of the dreadful sort."
+        },
+        {
+          "id": "ob18",
+          "text": "In my pocket I keep a small stone from the bottom of the stair. Of all I own, it alone was not carried up for sale. Some days it seems the sole possession I truly have."
+        },
+        {
+          "id": "ob19",
+          "text": "Buy anything you wish before the climb. Afterwards, if there is an afterwards, we shall tally accounts. I mark all debts to the light-bearer as paid in advance.",
+          "when": {
+            "flag": "talkedDawnWarden",
+            "notFlag": "nyrrhDefeated"
+          }
+        },
+        {
+          "id": "ob20",
+          "text": "A glassed-in chamber beside the gallery sells nothing and gives nothing. I once stepped in to shelter from rain and saw my own face looking back, ten years younger. I left at once.",
+          "when": {
+            "notFlag": "mirrorDefeated"
+          }
+        },
+        {
+          "id": "ob21",
+          "text": "I have packed up the better half of the stock. Should the climb end badly, I intend to carry the rest down the stair myself. Pessimism is my trade.",
+          "when": {
+            "flag": "reachedThrone",
+            "notFlag": "nyrrhDefeated"
+          }
+        },
+        {
+          "id": "ob22",
+          "text": "Light-bearer. The stall is open, and the shutters are off after nine shuttered years. The stair is lit. The stone, it turns out, has a pattern in it.",
+          "when": {
+            "flag": "sunRisen"
+          }
+        },
+        {
+          "id": "ob23",
+          "text": "You will want supplies. Every climber does. Take what you need and be sparing with the rest. The stair is long, and the last flight is the worst.",
+          "when": {
+            "flag": "reachedThrone",
+            "notFlag": "talkedDawnWarden"
+          }
+        },
+        {
+          "id": "ob24",
+          "text": "I mean to sell flowers, now, and seed, and kites. Everything the sun can raise or lift. The cart is being repainted.",
+          "when": {
+            "flag": "sunRisen"
+          }
+        }
+      ]
+    },
+    "ilse_morrow": {
+      "name": "Ilse Morrow",
+      "role": "field-surgeon and keeper of the cot-room on the Last Lamp terrace",
+      "personality": "calm, brisk and kind in a clinical way; makes jokes about death in a flat voice and weeps in private",
+      "voice": "dressings, splints, fevers and recovery times; reassures with numbers rather than words",
+      "events": [
+        {
+          "id": "ilse_intro",
+          "when": {
+            "notFlag": "metIlse"
+          },
+          "set": [
+            "metIlse"
+          ],
+          "say": [
+            "Morrow. Ilse Morrow. Cots are two hundred and fifty gold a night, which pays for the linen and the broth and my sleep. You will be warm, clean and dry. You will also be told, as a matter of routine, to stop doing whatever you were about to do. You will ignore this.",
+            "If you leave your wounds to me, they will mend. If you leave them to luck, they will fester, and luck is a poor surgeon. Rest here before the climb. You will not get another chance."
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "im01",
+          "text": "A good surgeon takes the pulse before the story. Stories can be rehearsed. A pulse is always honest."
+        },
+        {
+          "id": "im02",
+          "text": "I have set four hundred bones on this terrace. Nine were not worth the trouble, by their own account, and mended anyway."
+        },
+        {
+          "id": "im03",
+          "text": "Fever breaks at the third night. If it does not, I send for Kaer and we sit up together. We have never lost anyone on a vigil."
+        },
+        {
+          "id": "im04",
+          "text": "I boil everything. The cots, the linen, the water, the knives. A surgeon who does not boil has chosen to be a butcher."
+        },
+        {
+          "id": "im05",
+          "text": "Anyone who tells you that courage prevents infection is a liar or an idiot. Courage helps. Clean linen helps more."
+        },
+        {
+          "id": "im06",
+          "text": "I have the best broth in the world. It is mostly onion, and I am not sorry. Onion is the sovereign remedy and I will fight any priest who says otherwise."
+        },
+        {
+          "id": "im07",
+          "text": "Swordsman, your old scars have knit crooked. Stand straight and note which flank is weak. A wrong stance doubles the pain of a wound.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "im08",
+          "text": "Caster, I notice you press your temples when you talk. That is spell-strain. Eight hours of sleep and no spells. I know. I am a hypocrite as well.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "im09",
+          "text": "Scout, keep that ankle wrapped and do not argue. A scout with a bad ankle is a corpse with an alibi.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "im10",
+          "text": "Priest, might you sit with the dying tonight? I am not a praying woman. I can carry the sick. I cannot carry the last few minutes.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "im11",
+          "text": "Kaer sleeps on the terrace in a chair, to watch the lamp. I put a blanket round her at midnight. She says she is not cold. She is always cold."
+        },
+        {
+          "id": "im12",
+          "text": "Odo has the worst back in the world. He will not allow me an examination. He says a surgeon is a weight he cannot afford. I leave a poultice on his stall regardless."
+        },
+        {
+          "id": "im13",
+          "text": "Maribel's honey is the best antiseptic I have ever used. I told her. She asked if she could charge more. I told her yes."
+        },
+        {
+          "id": "im14",
+          "text": "The soldiers who staggered up here after the stair all say one thing once the bandage is tied. 'It is quiet up here.' I tell them, yes. That is the point."
+        },
+        {
+          "id": "im15",
+          "text": "I came up from the Choir with a satchel and a saw. I have still got the satchel. The saw I use on the weekend, on the bread."
+        },
+        {
+          "id": "im16",
+          "text": "I do not believe the sun cares. But I like to think it would, if it had a pulse. Everything with a pulse cares a little, in the end."
+        },
+        {
+          "id": "im17",
+          "text": "Whatever you do in the throne room, do it fast. The slow wounds are the worst. A swift cut is a mercy next to a bruise."
+        },
+        {
+          "id": "im18",
+          "text": "Every patient goes in my ledger. Name, wound, outcome. One column stays empty, headed 'afterwards'. It is the one I study most."
+        },
+        {
+          "id": "im19",
+          "text": "You are fit enough, I think. Not rested, but fit. Eat, drink, sleep an hour if you can. The last flight is a stiff one.",
+          "when": {
+            "flag": "talkedDawnWarden",
+            "notFlag": "nyrrhDefeated"
+          }
+        },
+        {
+          "id": "im20",
+          "text": "A chamber of glass lies off the gallery. I would not enter it without a good night's sleep behind me. Mirrors reflect more than faces when you are tired.",
+          "when": {
+            "notFlag": "mirrorDefeated"
+          }
+        },
+        {
+          "id": "im21",
+          "text": "I have laid out the cots, the bandages and every stitch I own. If you come down hurt, I shall have you stitched before you finish your sentence.",
+          "when": {
+            "flag": "reachedThrone",
+            "notFlag": "nyrrhDefeated"
+          }
+        },
+        {
+          "id": "im22",
+          "text": "Light-bearer. Show me the hand. No, the other one. Yes. Quite empty. Quite whole. No news could please me more than finding nothing to treat.",
+          "when": {
+            "flag": "sunRisen"
+          }
+        },
+        {
+          "id": "im23",
+          "text": "Whatever the hour, whatever the wound, you will find a cot here. That is my whole religion, and it has been sufficient.",
+          "when": {
+            "flag": "reachedThrone",
+            "notFlag": "talkedDawnWarden"
+          }
+        },
+        {
+          "id": "im24",
+          "text": "I am going to close the clinic for a month. Sit in the sun. See if it does anything for my back. I have my doubts, but I am willing to be wrong.",
+          "when": {
+            "flag": "sunRisen"
+          }
+        }
+      ]
+    },
+    "maribel_hive": {
+      "name": "Maribel Hive",
+      "role": "beekeeper of the Last Lamp, descendant of the first cantor",
+      "personality": "soft-spoken, stubborn and wry; speaks to her bees more than to people and listens to them more than to either",
+      "voice": "hives, swarms, nectar and the quiet business of flowers; says 'dear' to everyone, including the demons",
+      "events": [],
+      "lines": [
+        {
+          "id": "mh01",
+          "text": "Forty hives and not a flower within a thousand miles. They make honey from the dark. It tastes of nothing and everything, and I will brook no word against it."
+        },
+        {
+          "id": "mh02",
+          "text": "A bee does not know it is a bee. It knows the hive. When I first understood that, I understood my whole family."
+        },
+        {
+          "id": "mh03",
+          "text": "My grandmother's grandmother sang the Sunsong once. She kept bees afterwards, for forty years. She said bees were the nearest thing to the sun she could still touch."
+        },
+        {
+          "id": "mh04",
+          "text": "A swarm is a sort of hymn. Ten thousand creatures decide at once to leave and none look back. I have learned to bless them on their way out."
+        },
+        {
+          "id": "mh05",
+          "text": "The queen is not in charge. She is the reason they stay. That is not the same thing, and most rulers never learn the difference."
+        },
+        {
+          "id": "mh06",
+          "text": "I wash my hands in honey-water every evening. It is a family superstition, and it also happens to work. The best sort of superstition always does."
+        },
+        {
+          "id": "mh07",
+          "text": "Swordsman, a calm hand never gets stung. Stand still and let them sit on your sleeve. It is a good drill for the field as well.",
+          "when": {
+            "class": [
+              "warrior"
+            ]
+          }
+        },
+        {
+          "id": "mh08",
+          "text": "Caster, the bees can sense a spell as you sense a thunderstorm. They fretted all of yesterday. I think something is turning. I hope it is your doing.",
+          "when": {
+            "class": [
+              "mage"
+            ]
+          }
+        },
+        {
+          "id": "mh09",
+          "text": "Scout, bees fly straight lines to the flowers. Ask one for the shortest road to anywhere and it will go there. I have had hours of fun with that.",
+          "when": {
+            "class": [
+              "scout"
+            ]
+          }
+        },
+        {
+          "id": "mh10",
+          "text": "Priest, would you give the hives a blessing? My grandmother did, and I have not had the heart. I never learned the words, only the hum.",
+          "when": {
+            "class": [
+              "acolyte"
+            ]
+          }
+        },
+        {
+          "id": "mh11",
+          "text": "Kaer tends the lamp and I tend the hives. We have not talked about it, but I think we are the same sort of fool."
+        },
+        {
+          "id": "mh12",
+          "text": "Odo carries wax up the stair for me, a pound at a time. He will not take thanks. I leave him a jar of the dark honey every month. He says it is tolerable."
+        },
+        {
+          "id": "mh13",
+          "text": "Ilse puts a dab of honey on every wound she dresses. She insists it is not medicine. I call it the sun's own antiseptic. We have a pleasant standoff."
+        },
+        {
+          "id": "mh14",
+          "text": "A traveller once told me the bees in Brinewick still have their old queens. I cried an hour without knowing why. I wanted to meet them."
+        },
+        {
+          "id": "mh15",
+          "text": "Nyrrh comes to the hive wall on certain nights. He stands and listens. He does not speak, and neither do I. The bees are not afraid of him. I have often thought about that."
+        },
+        {
+          "id": "mh16",
+          "text": "The first cantor was not brave. She was only patient. Everything I have ever learned about courage began with that distinction."
+        },
+        {
+          "id": "mh17",
+          "text": "A hive keeps itself warm by trembling. All of them, together, tiny, all night. If the whole world could do that, I think it would never be cold again."
+        },
+        {
+          "id": "mh18",
+          "text": "I have a pot of seed on my windowsill, from a plant I have never seen. I water it each dawn. It has not sprouted. It will. A seed is a very stubborn kind of hope."
+        },
+        {
+          "id": "mh19",
+          "text": "Go in with a steady mind, dear, and come out whole. I will keep a jar of honey warm. It will be the only warm thing in the world, for the next few hours.",
+          "when": {
+            "flag": "talkedDawnWarden",
+            "notFlag": "nyrrhDefeated"
+          }
+        },
+        {
+          "id": "mh20",
+          "text": "A glass room sits off the gallery, dear. The bees will not go near it. A hive is a good judge of a place. I would take their advice, or at least their hum.",
+          "when": {
+            "notFlag": "mirrorDefeated"
+          }
+        },
+        {
+          "id": "mh21",
+          "text": "The bees have gone very quiet. All forty hives. That is either very good or very bad. I would rather you went and found out.",
+          "when": {
+            "flag": "reachedThrone",
+            "notFlag": "nyrrhDefeated"
+          }
+        },
+        {
+          "id": "mh22",
+          "text": "They have gone, dear. Every one. Out through the broken dome, in a long gold ribbon, toward whatever is blooming first. I opened the hives and stood back. I have never felt so happy to lose something.",
+          "when": {
+            "flag": "sunRisen"
+          }
+        },
+        {
+          "id": "mh23",
+          "text": "You smell of smoke and old stone, dear. Come and sit among the hives a minute. The bees will tidy the rest.",
+          "when": {
+            "flag": "reachedThrone",
+            "notFlag": "talkedDawnWarden"
+          }
+        },
+        {
+          "id": "mh24",
+          "text": "I mean to plant clover, and poppies, and foxglove along the whole terrace. They will take a year to bloom, and that is no trouble. I have always had patience for things that come back.",
+          "when": {
+            "flag": "sunRisen"
+          }
+        }
+      ]
+    }
+  }
+}

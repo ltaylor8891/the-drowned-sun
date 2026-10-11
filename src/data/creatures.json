@@ -5018,5 +5018,2293 @@
         "chance": 0.25
       }
     ]
+  },
+  "wyvern_whelp": {
+    "name": "Wyvern Whelp",
+    "type": "wyvern",
+    "hp": 600,
+    "mp": 0,
+    "atk": 58,
+    "def": 44,
+    "mag": 36,
+    "spd": 17,
+    "size": "medium",
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "xp": 1100,
+    "gold": 170,
+    "color": "0x7a5a4a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "tail_sting",
+          "w": 3
+        },
+        {
+          "id": "fire_breath",
+          "w": 2,
+          "notAfter": "fire_breath"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "wyvern_scale",
+        "chance": 0.3
+      }
+    ]
+  },
+  "bier_wyvern": {
+    "name": "Bier Wyvern",
+    "type": "wyvern",
+    "hp": 1100,
+    "mp": 0,
+    "atk": 68,
+    "def": 58,
+    "mag": 46,
+    "spd": 14,
+    "size": "large",
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "xp": 1800,
+    "gold": 280,
+    "color": "0x5a4a5a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "tail_sting",
+          "w": 3
+        },
+        {
+          "id": "wing_buffet",
+          "w": 2,
+          "notAfter": "wing_buffet"
+        },
+        {
+          "id": "fire_breath",
+          "w": 3,
+          "notAfter": "fire_breath"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "wyvern_scale",
+        "chance": 0.5
+      }
+    ]
+  },
+  "ashen_wyvern": {
+    "name": "Ashen Wyvern",
+    "type": "wyvern",
+    "hp": 950,
+    "mp": 0,
+    "atk": 62,
+    "def": 50,
+    "mag": 52,
+    "spd": 15,
+    "size": "large",
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "xp": 1700,
+    "gold": 270,
+    "color": "0x6a6a72",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "tail_sting",
+          "w": 2
+        },
+        {
+          "id": "ash_breath",
+          "w": 4,
+          "notAfter": "ash_breath"
+        },
+        {
+          "id": "wing_buffet",
+          "w": 2,
+          "notAfter": "wing_buffet"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "wyvern_scale",
+        "chance": 0.5
+      }
+    ]
+  },
+  "wyvern_rider": {
+    "name": "The Wyvern Rider",
+    "type": "wyvern",
+    "hp": 3700,
+    "mp": 0,
+    "atk": 90,
+    "def": 52,
+    "mag": 40,
+    "spd": 20,
+    "size": "large",
+    "boss": true,
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "airborne": {
+      "evade": 0.6,
+      "groundAt": 0.5
+    },
+    "immuneStatus": [
+      "sleep",
+      "charm"
+    ],
+    "xp": 8200,
+    "gold": 2600,
+    "color": "0x4a5a6a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "lance_dive",
+          "w": 3,
+          "notAfter": "lance_dive"
+        },
+        {
+          "id": "fire_breath",
+          "w": 3,
+          "notAfter": "fire_breath"
+        },
+        {
+          "id": "wing_buffet",
+          "w": 2,
+          "notAfter": "wing_buffet"
+        },
+        {
+          "id": "rally_whelps",
+          "w": 3,
+          "maxAllies": 2,
+          "notAfter": "rally_whelps"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "wyvern_scale",
+        "chance": 1
+      }
+    ]
+  },
+  "pale_chancellor": {
+    "name": "The Pale Chancellor",
+    "type": "darkknight",
+    "hp": 2100,
+    "mp": 0,
+    "atk": 58,
+    "def": 56,
+    "mag": 46,
+    "spd": 16,
+    "size": "large",
+    "boss": true,
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "dark"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "petrify",
+      "curse"
+    ],
+    "undying": {
+      "frac": 0.5
+    },
+    "xp": 14000,
+    "gold": 5000,
+    "color": "0xc8c8d8",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "dusk_lance",
+          "w": 4,
+          "notAfter": "dusk_lance"
+        },
+        {
+          "id": "pale_litany",
+          "w": 3,
+          "notAfter": "pale_litany"
+        },
+        {
+          "id": "bier_call",
+          "w": 3,
+          "maxAllies": 1,
+          "notAfter": "bier_call"
+        },
+        {
+          "id": "mourning_veil",
+          "w": 2,
+          "notAfter": "mourning_veil",
+          "maxUses": 2
+        },
+        {
+          "id": "shard_burst",
+          "w": 3,
+          "hpBelow": 0.5,
+          "maxUses": 1
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "dusk_shard",
+        "chance": 1
+      }
+    ]
+  },
+  "galewing": {
+    "name": "Galewing",
+    "type": "wyvern",
+    "hp": 2400,
+    "mp": 0,
+    "atk": 76,
+    "def": 54,
+    "mag": 56,
+    "spd": 21,
+    "size": "large",
+    "rare": true,
+    "hybrid": {
+      "main": "wyvern",
+      "parents": [
+        "wyvern",
+        "harpy"
+      ]
+    },
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "traits": [
+      "enrage"
+    ],
+    "xp": 10500,
+    "gold": 2000,
+    "color": "0x9a6aa8",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "gale_breath",
+          "w": 4,
+          "notAfter": "gale_breath"
+        },
+        {
+          "id": "wing_buffet",
+          "w": 2,
+          "notAfter": "wing_buffet"
+        },
+        {
+          "id": "tail_sting",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "galeforged_blade",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "windcaller_staff",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "skyreach_bow",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "gale_mace",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "galewing_mail",
+        "chance": 0.25
+      }
+    ]
+  },
+  "cinder_imp": {
+    "name": "Cinder Imp",
+    "type": "imp",
+    "hp": 650,
+    "mp": 0,
+    "atk": 54,
+    "def": 36,
+    "mag": 62,
+    "spd": 20,
+    "size": "small",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "xp": 1000,
+    "gold": 160,
+    "color": "0xc25a3a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "imp_hex",
+          "w": 3,
+          "notAfter": "imp_hex"
+        },
+        {
+          "id": "spite_bolt",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "imp_horn",
+        "chance": 0.35
+      }
+    ]
+  },
+  "hex_imp": {
+    "name": "Hex Imp",
+    "type": "imp",
+    "hp": 820,
+    "mp": 0,
+    "atk": 58,
+    "def": 40,
+    "mag": 58,
+    "spd": 19,
+    "size": "medium",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "xp": 1250,
+    "gold": 200,
+    "color": "0x8a3aa0",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "imp_hex",
+          "w": 3,
+          "notAfter": "imp_hex"
+        },
+        {
+          "id": "mana_leech",
+          "w": 3,
+          "notAfter": "mana_leech"
+        },
+        {
+          "id": "spite_bolt",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "imp_horn",
+        "chance": 0.4
+      }
+    ]
+  },
+  "brimstone_imp": {
+    "name": "Brimstone Imp",
+    "type": "imp",
+    "hp": 700,
+    "mp": 0,
+    "atk": 60,
+    "def": 44,
+    "mag": 62,
+    "spd": 18,
+    "size": "medium",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "xp": 1450,
+    "gold": 230,
+    "color": "0xd2a02a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "brimstone_bolt",
+          "w": 3,
+          "notAfter": "brimstone_bolt"
+        },
+        {
+          "id": "imp_hex",
+          "w": 2,
+          "notAfter": "imp_hex"
+        },
+        {
+          "id": "mana_leech",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "imp_horn",
+        "chance": 0.4
+      },
+      {
+        "item": "brimstone",
+        "chance": 0.25
+      }
+    ]
+  },
+  "lesser_demon": {
+    "name": "Lesser Demon",
+    "type": "demon",
+    "hp": 1050,
+    "mp": 0,
+    "atk": 76,
+    "def": 56,
+    "mag": 58,
+    "spd": 13,
+    "size": "large",
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "fire",
+      "dark",
+      "earth"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "poison"
+    ],
+    "xp": 1700,
+    "gold": 280,
+    "color": "0x8a2a2a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "demon_cleave",
+          "w": 3
+        },
+        {
+          "id": "hellfire",
+          "w": 2,
+          "notAfter": "hellfire"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "brimstone",
+        "chance": 0.4
+      }
+    ]
+  },
+  "flame_demon": {
+    "name": "Flame Demon",
+    "type": "demon",
+    "hp": 1000,
+    "mp": 0,
+    "atk": 72,
+    "def": 54,
+    "mag": 56,
+    "spd": 14,
+    "size": "large",
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "fire",
+      "dark",
+      "earth"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "poison"
+    ],
+    "xp": 1900,
+    "gold": 310,
+    "color": "0xd2582a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "hellfire",
+          "w": 3,
+          "notAfter": "hellfire"
+        },
+        {
+          "id": "brimstone_bolt",
+          "w": 3,
+          "notAfter": "brimstone_bolt"
+        },
+        {
+          "id": "infernal_pact",
+          "w": 1,
+          "notAfter": "infernal_pact",
+          "maxUses": 1
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "brimstone",
+        "chance": 0.5
+      }
+    ]
+  },
+  "pit_demon": {
+    "name": "Pit Demon",
+    "type": "demon",
+    "hp": 1900,
+    "mp": 0,
+    "atk": 88,
+    "def": 64,
+    "mag": 60,
+    "spd": 11,
+    "size": "large",
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "fire",
+      "dark",
+      "earth"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "poison"
+    ],
+    "xp": 2300,
+    "gold": 380,
+    "color": "0x4a1a2a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "demon_cleave",
+          "w": 3
+        },
+        {
+          "id": "pit_roar",
+          "w": 2,
+          "notAfter": "pit_roar"
+        },
+        {
+          "id": "infernal_pact",
+          "w": 2,
+          "notAfter": "infernal_pact",
+          "maxUses": 1
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "brimstone",
+        "chance": 0.6
+      }
+    ]
+  },
+  "ember_hound": {
+    "name": "Ember Hound",
+    "type": "hellhound",
+    "hp": 800,
+    "mp": 0,
+    "atk": 70,
+    "def": 42,
+    "mag": 36,
+    "spd": 19,
+    "size": "medium",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "traits": [
+      "pack"
+    ],
+    "xp": 1150,
+    "gold": 190,
+    "color": "0xc2481a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "ember_bite",
+          "w": 3
+        },
+        {
+          "id": "scorching_pounce",
+          "w": 1,
+          "notAfter": "scorching_pounce"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "ember_fang",
+        "chance": 0.35
+      }
+    ]
+  },
+  "hellhound": {
+    "name": "Hellhound",
+    "type": "hellhound",
+    "hp": 1200,
+    "mp": 0,
+    "atk": 82,
+    "def": 52,
+    "mag": 44,
+    "spd": 17,
+    "size": "large",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "traits": [
+      "pack"
+    ],
+    "xp": 1700,
+    "gold": 270,
+    "color": "0x7a1a1a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "ember_bite",
+          "w": 2
+        },
+        {
+          "id": "scorching_pounce",
+          "w": 3,
+          "notAfter": "scorching_pounce"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "ember_fang",
+        "chance": 0.45
+      }
+    ]
+  },
+  "cinder_hound": {
+    "name": "Cinder Hound",
+    "type": "hellhound",
+    "hp": 800,
+    "mp": 0,
+    "atk": 64,
+    "def": 46,
+    "mag": 40,
+    "spd": 18,
+    "size": "medium",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "traits": [
+      "pack"
+    ],
+    "xp": 1450,
+    "gold": 230,
+    "color": "0x5a4a4a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "ember_bite",
+          "w": 2
+        },
+        {
+          "id": "inferno_breath",
+          "w": 3,
+          "notAfter": "inferno_breath",
+          "maxUses": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "ember_fang",
+        "chance": 0.45
+      }
+    ]
+  },
+  "hellhound_packlord": {
+    "name": "Hellhound Pack-Lord",
+    "type": "hellhound",
+    "hp": 3600,
+    "mp": 0,
+    "atk": 90,
+    "def": 58,
+    "mag": 60,
+    "spd": 19,
+    "size": "large",
+    "boss": true,
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "traits": [
+      "enrage"
+    ],
+    "xp": 9800,
+    "gold": 3200,
+    "color": "0x3a0e0e",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "savage_rush",
+          "w": 3,
+          "notAfter": "savage_rush"
+        },
+        {
+          "id": "scorching_pounce",
+          "w": 2
+        },
+        {
+          "id": "inferno_breath",
+          "w": 3,
+          "notAfter": "inferno_breath"
+        },
+        {
+          "id": "pack_howl",
+          "w": 3,
+          "maxAllies": 2,
+          "notAfter": "pack_howl"
+        },
+        {
+          "id": "lord_frenzy",
+          "w": 5,
+          "hpBelow": 0.5,
+          "maxUses": 1
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "ember_fang",
+        "chance": 1
+      }
+    ]
+  },
+  "hexbat": {
+    "name": "Hexbat",
+    "type": "imp",
+    "hp": 3400,
+    "mp": 0,
+    "atk": 90,
+    "def": 52,
+    "mag": 92,
+    "spd": 22,
+    "size": "large",
+    "rare": true,
+    "hybrid": {
+      "main": "imp",
+      "parents": [
+        "imp",
+        "bat"
+      ]
+    },
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "curse"
+    ],
+    "traits": [
+      "enrage"
+    ],
+    "xp": 11000,
+    "gold": 2200,
+    "color": "0x5a2a7a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "leech_hex",
+          "w": 4,
+          "notAfter": "leech_hex"
+        },
+        {
+          "id": "spite_bolt",
+          "w": 2
+        },
+        {
+          "id": "mana_leech",
+          "w": 2,
+          "notAfter": "mana_leech"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "hexfang_blade",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "siphon_staff",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "nightwing_bow",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "hexward_mace",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "hexbat_hide",
+        "chance": 0.25
+      }
+    ]
+  },
+  "vampire_thrall": {
+    "name": "Vampire Thrall",
+    "type": "vampire",
+    "hp": 800,
+    "mp": 0,
+    "atk": 64,
+    "def": 44,
+    "mag": 46,
+    "spd": 17,
+    "size": "medium",
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "dark",
+      "ice"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "poison"
+    ],
+    "xp": 1500,
+    "gold": 220,
+    "color": "0x9a7a8a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "fang_bite",
+          "w": 3
+        },
+        {
+          "id": "blood_charm",
+          "w": 1,
+          "notAfter": "blood_charm"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "vampire_fang",
+        "chance": 0.3
+      }
+    ]
+  },
+  "vampire_noble": {
+    "name": "Vampire Noble",
+    "type": "vampire",
+    "hp": 800,
+    "mp": 0,
+    "atk": 54,
+    "def": 48,
+    "mag": 58,
+    "spd": 16,
+    "size": "large",
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "dark",
+      "ice"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "poison"
+    ],
+    "xp": 1900,
+    "gold": 300,
+    "color": "0x6a2a4a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "crimson_kiss",
+          "w": 3,
+          "notAfter": "crimson_kiss"
+        },
+        {
+          "id": "blood_charm",
+          "w": 3,
+          "notAfter": "blood_charm"
+        },
+        {
+          "id": "sanguine_wave",
+          "w": 2,
+          "notAfter": "sanguine_wave"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "vampire_fang",
+        "chance": 0.4
+      }
+    ]
+  },
+  "vampire_knight": {
+    "name": "Vampire Knight",
+    "type": "vampire",
+    "hp": 1200,
+    "mp": 0,
+    "atk": 74,
+    "def": 60,
+    "mag": 50,
+    "spd": 14,
+    "size": "large",
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "dark",
+      "ice"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "poison"
+    ],
+    "xp": 2200,
+    "gold": 340,
+    "color": "0x3a2a3a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "fang_bite",
+          "w": 3
+        },
+        {
+          "id": "bat_swarm",
+          "w": 2,
+          "notAfter": "bat_swarm"
+        },
+        {
+          "id": "mist_form",
+          "w": 1,
+          "notAfter": "mist_form",
+          "maxUses": 1
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "vampire_fang",
+        "chance": 0.4
+      }
+    ]
+  },
+  "vampire_countess": {
+    "name": "The Vampire Countess",
+    "type": "vampire",
+    "hp": 2300,
+    "mp": 0,
+    "atk": 62,
+    "def": 54,
+    "mag": 62,
+    "spd": 18,
+    "size": "large",
+    "boss": true,
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "dark",
+      "ice"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "poison"
+    ],
+    "traits": [
+      "enrage"
+    ],
+    "xp": 11500,
+    "gold": 3600,
+    "color": "0xc23a5a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "crimson_kiss",
+          "w": 4,
+          "notAfter": "crimson_kiss"
+        },
+        {
+          "id": "blood_waltz",
+          "w": 3,
+          "notAfter": "blood_waltz"
+        },
+        {
+          "id": "call_bats",
+          "w": 3,
+          "maxAllies": 2,
+          "notAfter": "call_bats"
+        },
+        {
+          "id": "mist_form",
+          "w": 2,
+          "notAfter": "mist_form",
+          "maxUses": 2
+        },
+        {
+          "id": "eclipse_drain",
+          "w": 6,
+          "hpBelow": 0.5,
+          "maxUses": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "choir_key",
+        "chance": 1
+      }
+    ]
+  },
+  "bloodmoon_stalker": {
+    "name": "Bloodmoon Stalker",
+    "type": "vampire",
+    "hp": 3600,
+    "mp": 0,
+    "atk": 104,
+    "def": 56,
+    "mag": 66,
+    "spd": 22,
+    "size": "large",
+    "rare": true,
+    "hybrid": {
+      "main": "vampire",
+      "parents": [
+        "vampire",
+        "werewolf"
+      ]
+    },
+    "weak": [
+      "light",
+      "silver"
+    ],
+    "resist": [
+      "dark"
+    ],
+    "immuneStatus": [
+      "charm",
+      "sleep",
+      "poison"
+    ],
+    "traits": [
+      "enrage"
+    ],
+    "xp": 12500,
+    "gold": 2400,
+    "color": "0x7a2030",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "blood_moon",
+          "w": 4,
+          "notAfter": "blood_moon"
+        },
+        {
+          "id": "rending_claws",
+          "w": 3
+        },
+        {
+          "id": "fang_bite",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "crimson_fang_blade",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "bloodtide_staff",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "scarlet_bow",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "crimson_mace",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "bloodsilk_mail",
+        "chance": 0.25
+      }
+    ]
+  },
+  "chapel_gargoyle": {
+    "name": "Chapel Gargoyle",
+    "type": "gargoyle",
+    "hp": 800,
+    "mp": 0,
+    "atk": 66,
+    "def": 54,
+    "mag": 30,
+    "spd": 15,
+    "size": "medium",
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "earth",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "stoneForm": true,
+    "xp": 1700,
+    "gold": 240,
+    "color": "0x7a8088",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "stone_fist",
+          "w": 3
+        },
+        {
+          "id": "talon_rake",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "gargoyle_chip",
+        "chance": 0.3
+      }
+    ]
+  },
+  "choir_gargoyle": {
+    "name": "Choir Gargoyle",
+    "type": "gargoyle",
+    "hp": 800,
+    "mp": 0,
+    "atk": 54,
+    "def": 58,
+    "mag": 44,
+    "spd": 14,
+    "size": "large",
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "earth",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "stoneForm": true,
+    "xp": 2100,
+    "gold": 310,
+    "color": "0x6a7a90",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "stone_song",
+          "w": 3,
+          "notAfter": "stone_song"
+        },
+        {
+          "id": "shatter_wail",
+          "w": 2,
+          "notAfter": "shatter_wail"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "gargoyle_chip",
+        "chance": 0.4
+      }
+    ]
+  },
+  "bell_gargoyle": {
+    "name": "Bell Gargoyle",
+    "type": "gargoyle",
+    "hp": 1400,
+    "mp": 0,
+    "atk": 82,
+    "def": 66,
+    "mag": 40,
+    "spd": 11,
+    "size": "large",
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "earth",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "stoneForm": true,
+    "xp": 2500,
+    "gold": 380,
+    "color": "0x5a5a66",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "stone_fist",
+          "w": 3
+        },
+        {
+          "id": "warden_slam",
+          "w": 2,
+          "notAfter": "warden_slam"
+        },
+        {
+          "id": "granite_skin",
+          "w": 1,
+          "notAfter": "granite_skin",
+          "maxUses": 1
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "gargoyle_chip",
+        "chance": 0.5
+      }
+    ]
+  },
+  "gargoyle_warden": {
+    "name": "The Gargoyle Warden",
+    "type": "gargoyle",
+    "hp": 3300,
+    "mp": 0,
+    "atk": 86,
+    "def": 68,
+    "mag": 62,
+    "spd": 12,
+    "size": "large",
+    "boss": true,
+    "weak": [
+      "lightning"
+    ],
+    "resist": [
+      "earth",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "stoneForm": true,
+    "traits": [
+      "enrage"
+    ],
+    "xp": 12500,
+    "gold": 4000,
+    "color": "0x3a3e50",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "stone_fist",
+          "w": 3
+        },
+        {
+          "id": "warden_slam",
+          "w": 3,
+          "notAfter": "warden_slam"
+        },
+        {
+          "id": "granite_skin",
+          "w": 2,
+          "notAfter": "granite_skin",
+          "maxUses": 2
+        },
+        {
+          "id": "call_choir",
+          "w": 3,
+          "maxAllies": 2,
+          "notAfter": "call_choir"
+        },
+        {
+          "id": "shatter_wail",
+          "w": 6,
+          "hpBelow": 0.5,
+          "maxUses": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "hearth_scroll",
+        "chance": 1
+      }
+    ]
+  },
+  "livingwall": {
+    "name": "Living Wall",
+    "type": "gargoyle",
+    "hp": 3600,
+    "mp": 0,
+    "atk": 96,
+    "def": 78,
+    "mag": 50,
+    "spd": 13,
+    "size": "large",
+    "rare": true,
+    "hybrid": {
+      "main": "gargoyle",
+      "parents": [
+        "gargoyle",
+        "golem"
+      ]
+    },
+    "weak": [
+      "lightning",
+      "earth"
+    ],
+    "resist": [
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "stoneForm": true,
+    "traits": [
+      "enrage"
+    ],
+    "xp": 13500,
+    "gold": 2600,
+    "color": "0x8a8478",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "grind_slam",
+          "w": 3
+        },
+        {
+          "id": "living_wall",
+          "w": 3,
+          "notAfter": "living_wall"
+        },
+        {
+          "id": "talon_rake",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "gravelhewn_blade",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "resonant_staff",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "stonehawk_bow",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "choirstone_mace",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "gargoylehide_mail",
+        "chance": 0.25
+      }
+    ]
+  },
+  "hearth_whelp": {
+    "name": "Hearth Whelp",
+    "type": "dragon",
+    "hp": 750,
+    "mp": 0,
+    "atk": 62,
+    "def": 48,
+    "mag": 54,
+    "spd": 18,
+    "size": "medium",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "xp": 1800,
+    "gold": 250,
+    "color": "0xc0502a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 2
+        },
+        {
+          "id": "claw_rend",
+          "w": 3
+        },
+        {
+          "id": "flame_lick",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "dragon_scale",
+        "chance": 0.3
+      }
+    ]
+  },
+  "hearth_drake": {
+    "name": "Hearth Drake",
+    "type": "dragon",
+    "hp": 1250,
+    "mp": 0,
+    "atk": 74,
+    "def": 62,
+    "mag": 56,
+    "spd": 14,
+    "size": "large",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire",
+      "earth"
+    ],
+    "immuneStatus": [
+      "poison"
+    ],
+    "xp": 2700,
+    "gold": 410,
+    "color": "0xa83a2a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "drake_bite",
+          "w": 3
+        },
+        {
+          "id": "hearth_breath",
+          "w": 3,
+          "notAfter": "hearth_breath"
+        },
+        {
+          "id": "tail_sweep",
+          "w": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "dragon_scale",
+        "chance": 0.4
+      }
+    ]
+  },
+  "cinder_wyrm": {
+    "name": "Cinder Wyrm",
+    "type": "dragon",
+    "hp": 1600,
+    "mp": 0,
+    "atk": 80,
+    "def": 66,
+    "mag": 60,
+    "spd": 13,
+    "size": "large",
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire",
+      "earth"
+    ],
+    "immuneStatus": [
+      "poison",
+      "charm"
+    ],
+    "xp": 3500,
+    "gold": 560,
+    "color": "0x6a2a22",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "drake_bite",
+          "w": 3
+        },
+        {
+          "id": "hearth_breath",
+          "w": 3,
+          "notAfter": "hearth_breath"
+        },
+        {
+          "id": "ash_wing",
+          "w": 2,
+          "notAfter": "ash_wing"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "dragon_scale",
+        "chance": 0.6
+      }
+    ]
+  },
+  "dim_shade": {
+    "name": "Dim Shade",
+    "type": "shade",
+    "hp": 600,
+    "mp": 0,
+    "atk": 40,
+    "def": 30,
+    "mag": 54,
+    "spd": 17,
+    "size": "medium",
+    "weak": [
+      "light",
+      "fire"
+    ],
+    "resist": [
+      "physical",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "mimic": true,
+    "xp": 1700,
+    "gold": 230,
+    "color": "0x5a5a7a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "shade_touch",
+          "w": 3
+        },
+        {
+          "id": "mimic",
+          "w": 3
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "shade_cloth",
+        "chance": 0.35
+      }
+    ]
+  },
+  "hearth_shade": {
+    "name": "Hearth Shade",
+    "type": "shade",
+    "hp": 780,
+    "mp": 0,
+    "atk": 46,
+    "def": 36,
+    "mag": 50,
+    "spd": 16,
+    "size": "large",
+    "weak": [
+      "light",
+      "fire"
+    ],
+    "resist": [
+      "physical",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "mimic": true,
+    "xp": 2500,
+    "gold": 350,
+    "color": "0x4a4a70",
+    "ai": {
+      "moves": [
+        {
+          "id": "shade_touch",
+          "w": 2
+        },
+        {
+          "id": "hollow_touch",
+          "w": 2
+        },
+        {
+          "id": "mimic",
+          "w": 3
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "shade_cloth",
+        "chance": 0.45
+      }
+    ]
+  },
+  "dread_shade": {
+    "name": "Dread Shade",
+    "type": "shade",
+    "hp": 1300,
+    "mp": 0,
+    "atk": 54,
+    "def": 40,
+    "mag": 70,
+    "spd": 15,
+    "size": "large",
+    "weak": [
+      "light",
+      "fire"
+    ],
+    "resist": [
+      "physical",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "mimic": true,
+    "xp": 3200,
+    "gold": 480,
+    "color": "0x302848",
+    "ai": {
+      "moves": [
+        {
+          "id": "hollow_touch",
+          "w": 3
+        },
+        {
+          "id": "dread_wail",
+          "w": 2,
+          "notAfter": "dread_wail"
+        },
+        {
+          "id": "mimic",
+          "w": 4
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "shade_cloth",
+        "chance": 0.6
+      }
+    ]
+  },
+  "elder_dragon": {
+    "name": "Caldrith, the Elder Dragon",
+    "type": "dragon",
+    "hp": 5000,
+    "mp": 0,
+    "atk": 100,
+    "def": 64,
+    "mag": 74,
+    "spd": 14,
+    "size": "large",
+    "boss": true,
+    "weak": [
+      "ice"
+    ],
+    "resist": [
+      "fire",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "traits": [
+      "enrage"
+    ],
+    "xp": 14000,
+    "gold": 4400,
+    "color": "0x8a2a1a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "elder_claw",
+          "w": 3
+        },
+        {
+          "id": "ash_wing",
+          "w": 2,
+          "notAfter": "ash_wing"
+        },
+        {
+          "id": "gather_fire",
+          "w": 3,
+          "notCharging": true,
+          "notAfter": "gather_fire"
+        },
+        {
+          "id": "hearth_blaze",
+          "w": 100,
+          "needsCharge": true
+        },
+        {
+          "id": "call_whelps",
+          "w": 2,
+          "maxAllies": 2,
+          "notAfter": "call_whelps"
+        },
+        {
+          "id": "elder_roar",
+          "w": 6,
+          "hpBelow": 0.5,
+          "maxUses": 2
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "caldrith_ember",
+        "chance": 1
+      }
+    ]
+  },
+  "infernal_wyrm": {
+    "name": "Infernal Wyrm",
+    "type": "dragon",
+    "hp": 2800,
+    "mp": 0,
+    "atk": 80,
+    "def": 70,
+    "mag": 70,
+    "spd": 15,
+    "size": "large",
+    "rare": true,
+    "hybrid": {
+      "main": "dragon",
+      "parents": [
+        "dragon",
+        "demon"
+      ]
+    },
+    "weak": [
+      "ice",
+      "light"
+    ],
+    "resist": [
+      "fire",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "charm",
+      "sleep"
+    ],
+    "traits": [
+      "enrage"
+    ],
+    "xp": 15000,
+    "gold": 2900,
+    "color": "0x6a1a4a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "drake_bite",
+          "w": 2
+        },
+        {
+          "id": "infernal_breath",
+          "w": 4,
+          "notAfter": "infernal_breath"
+        },
+        {
+          "id": "tail_sweep",
+          "w": 2
+        },
+        {
+          "id": "ash_wing",
+          "w": 2,
+          "notAfter": "ash_wing"
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "wyrmfang_blade",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "emberglass_staff",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "drakewing_bow",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "scalebound_mace",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "wyrmscale_mail",
+        "chance": 0.25
+      }
+    ]
+  },
+  "nyrrh": {
+    "name": "Nyrrh, the Demon Lord",
+    "type": "demon",
+    "hp": 5600,
+    "mp": 0,
+    "atk": 90,
+    "def": 70,
+    "mag": 72,
+    "spd": 17,
+    "size": "large",
+    "boss": true,
+    "weak": [
+      "light"
+    ],
+    "resist": [
+      "fire",
+      "dark"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "chargeBreak": 0.035,
+    "xp": 40000,
+    "gold": 20000,
+    "color": "0x3a0a1a",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "nyrrh_cleave",
+          "w": 3
+        },
+        {
+          "id": "nyrrh_hellfire",
+          "w": 3,
+          "notAfter": "nyrrh_hellfire"
+        },
+        {
+          "id": "dark_decree",
+          "w": 2
+        },
+        {
+          "id": "call_imps",
+          "w": 2,
+          "maxAllies": 2,
+          "notAfter": "call_imps"
+        }
+      ]
+    },
+    "phases": [
+      {
+        "at": 0.66,
+        "text": "Nyrrh tears the sun-seed from the sky and swallows it. The throne room goes dark. The Eclipse begins!",
+        "heal": 0.05,
+        "mimic": true,
+        "buff": [
+          "attackUp"
+        ],
+        "ai": {
+          "moves": [
+            {
+              "id": "nyrrh_cleave",
+              "w": 2
+            },
+            {
+              "id": "dark_decree",
+              "w": 2
+            },
+            {
+              "id": "mimic",
+              "w": 4
+            },
+            {
+              "id": "eclipse_gather",
+              "w": 3,
+              "notCharging": true,
+              "notAfter": "eclipse_gather"
+            },
+            {
+              "id": "sun_eater",
+              "w": 100,
+              "needsCharge": true
+            }
+          ]
+        }
+      },
+      {
+        "at": 0.33,
+        "text": "Nyrrh howls and the shadow around him bursts. Nyrrh Unbound moves like a thought!",
+        "buff": [
+          "attackUp",
+          "haste"
+        ],
+        "mimic": false,
+        "ai": {
+          "moves": [
+            {
+              "id": "nyrrh_cleave",
+              "w": 3
+            },
+            {
+              "id": "nyrrh_hellfire",
+              "w": 3,
+              "notAfter": "nyrrh_hellfire"
+            },
+            {
+              "id": "ruin",
+              "w": 3,
+              "notAfter": "ruin"
+            },
+            {
+              "id": "eclipse_gather",
+              "w": 3,
+              "notCharging": true,
+              "notAfter": "eclipse_gather"
+            },
+            {
+              "id": "sun_eater",
+              "w": 100,
+              "needsCharge": true
+            }
+          ]
+        }
+      }
+    ],
+    "drops": [
+      {
+        "item": "sunstone",
+        "chance": 1
+      }
+    ]
+  },
+  "mirror_wraith": {
+    "name": "Mirror Wraith",
+    "type": "shade",
+    "hp": 3400,
+    "mp": 0,
+    "atk": 70,
+    "def": 44,
+    "mag": 96,
+    "spd": 17,
+    "size": "large",
+    "rare": true,
+    "mimic": true,
+    "hybrid": {
+      "main": "shade",
+      "parents": [
+        "shade",
+        "wraith"
+      ]
+    },
+    "weak": [
+      "light",
+      "fire"
+    ],
+    "resist": [
+      "physical",
+      "dark",
+      "ice"
+    ],
+    "immuneStatus": [
+      "poison",
+      "sleep",
+      "charm"
+    ],
+    "traits": [
+      "enrage"
+    ],
+    "xp": 16000,
+    "gold": 3000,
+    "color": "0x9aa8d0",
+    "ai": {
+      "moves": [
+        {
+          "id": "attack",
+          "w": 1
+        },
+        {
+          "id": "shade_touch",
+          "w": 2
+        },
+        {
+          "id": "hollow_touch",
+          "w": 2
+        },
+        {
+          "id": "mirror_drain",
+          "w": 5
+        }
+      ]
+    },
+    "drops": [
+      {
+        "item": "silverglass_blade",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "lookingglass_staff",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "veilglass_bow",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "mirrorbound_mace",
+        "chance": 0.35,
+        "firstKill": true
+      },
+      {
+        "item": "shadeweave_mail",
+        "chance": 0.25
+      }
+    ]
   }
 }
